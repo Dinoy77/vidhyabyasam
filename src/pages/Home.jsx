@@ -1,16 +1,18 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import Hero from '../components/Hero';
 import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
 import Footer from '../components/Footer';
 import { colleges, regions, courseFilters, typeFilters } from '../data/colleges';
 
-export default function Home() {
+export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
   const [activeCourse, setActiveCourse] = useState('All Courses');
   const [activeType, setActiveType] = useState('All Types');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('rating');
+  const [currentPage, setCurrentPage] = useState(1);
+  const COLLEGES_PER_PAGE = 12;
 
   const filtered = useMemo(() => {
     let result = colleges;
@@ -21,7 +23,10 @@ export default function Home() {
 
     if (activeCourse !== 'All Courses') {
       result = result.filter(c =>
-        c.courses.some(course => course.toLowerCase().includes(activeCourse.toLowerCase()))
+        c.courses.some(course =>
+          course.toLowerCase().includes(activeCourse.toLowerCase()) ||
+          activeCourse.toLowerCase().includes(course.toLowerCase())
+        )
       );
     }
 
@@ -47,10 +52,27 @@ export default function Home() {
 
     return [...result].sort((a, b) =>
       sortBy === 'rating' ? b.rating - a.rating :
-      sortBy === 'reviews' ? b.reviews - a.reviews :
-      a.name.localeCompare(b.name)
+        sortBy === 'reviews' ? b.reviews - a.reviews :
+          a.name.localeCompare(b.name)
     );
   }, [activeRegion, activeCourse, activeType, searchQuery, sortBy]);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeRegion, activeCourse, activeType, searchQuery, sortBy]);
+
+  useEffect(() => {
+    if (selectedCourse) {
+      setActiveCourse(selectedCourse);
+      setCurrentPage(1);
+    }
+  }, [selectedCourse, courseSelectCount]);
+
+  const totalPages = Math.ceil(filtered.length / COLLEGES_PER_PAGE);
+  const paginated = filtered.slice(
+    (currentPage - 1) * COLLEGES_PER_PAGE,
+    currentPage * COLLEGES_PER_PAGE
+  );
 
   return (
     <div>
@@ -141,11 +163,80 @@ export default function Home() {
 
         {/* Grid */}
         {filtered.length > 0 ? (
-          <div style={styles.grid}>
-            {filtered.map((college, i) => (
-              <CollegeCard key={college.id} college={college} delay={i * 60} />
-            ))}
-          </div>
+          <>
+            <div style={styles.grid}>
+              {paginated.map((college, i) => (
+                <CollegeCard key={college.id} college={college} delay={Math.min(i * 60, 400)} />
+              ))}
+            </div>
+
+            {totalPages > 1 && (
+              <div style={styles.pagination}>
+                <button
+                  style={{ ...styles.pageBtn, opacity: currentPage === 1 ? 0.4 : 1 }}
+                  disabled={currentPage === 1}
+                  onClick={() => {
+                    setCurrentPage(p => p - 1);
+                    document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  ← Prev
+                </button>
+
+                <div style={styles.pageNumbers}>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter(page =>
+                      page === 1 ||
+                      page === totalPages ||
+                      Math.abs(page - currentPage) <= 1
+                    )
+                    .reduce((acc, page, idx, arr) => {
+                      if (idx > 0 && page - arr[idx - 1] > 1) acc.push('...');
+                      acc.push(page);
+                      return acc;
+                    }, [])
+                    .map((item, i) =>
+                      item === '...' ? (
+                        <span key={`dot-${i}`} style={styles.pageDots}>...</span>
+                      ) : (
+                        <button
+                          key={item}
+                          style={{
+                            ...styles.pageNum,
+                            background: currentPage === item ? 'var(--accent)' : '#fff',
+                            color: currentPage === item ? '#fff' : 'var(--deep)',
+                            borderColor: currentPage === item ? 'var(--accent)' : 'var(--border)',
+                            fontWeight: currentPage === item ? 700 : 500,
+                          }}
+                          onClick={() => {
+                            setCurrentPage(item);
+                            document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          {item}
+                        </button>
+                      )
+                    )
+                  }
+                </div>
+
+                <button
+                  style={{ ...styles.pageBtn, opacity: currentPage === totalPages ? 0.4 : 1 }}
+                  disabled={currentPage === totalPages}
+                  onClick={() => {
+                    setCurrentPage(p => p + 1);
+                    document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Next →
+                </button>
+              </div>
+            )}
+
+            <p style={styles.pageInfo}>
+              Showing {((currentPage - 1) * COLLEGES_PER_PAGE) + 1}–{Math.min(currentPage * COLLEGES_PER_PAGE, filtered.length)} of {filtered.length} colleges
+            </p>
+          </>
         ) : (
           <div style={styles.empty}>
             <div style={{ fontSize: '56px' }}>🔍</div>
@@ -215,4 +306,27 @@ const styles = {
     background: 'var(--accent)', color: '#fff', border: 'none',
     cursor: 'pointer', fontSize: '14px', marginTop: '8px',
   },
+
+pagination: {
+    display: 'flex', justifyContent: 'center', alignItems: 'center',
+    gap: '12px', marginTop: '40px', flexWrap: 'wrap',
+  },
+  pageBtn: {
+    padding: '10px 20px', borderRadius: '10px', fontSize: '14px', fontWeight: 600,
+    background: '#fff', border: '1.5px solid var(--border)',
+    cursor: 'pointer', color: 'var(--deep)', transition: 'all 0.2s',
+  },
+  pageNumbers: { display: 'flex', gap: '6px', alignItems: 'center', flexWrap: 'wrap' },
+  pageNum: {
+    width: '40px', height: '40px', borderRadius: '10px', fontSize: '14px',
+    border: '1.5px solid', cursor: 'pointer', transition: 'all 0.2s',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+  },
+  pageDots: { fontSize: '14px', color: 'var(--muted)', padding: '0 4px' },
+  pageInfo: {
+    textAlign: 'center', color: 'var(--muted)', fontSize: '13px', marginTop: '12px',
+  },
+  
 };
+
+

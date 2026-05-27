@@ -5484,6 +5484,24 @@ export const colleges = [
 
 export const regions = ['All', 'Kerala', 'Bangalore', 'Tamil Nadu'];
 
-export const courseFilters = ["All Courses", "B.Pharm", "M.Pharm", "D.Pharm", "Pharm.D", "B.Sc Nursing", "M.Sc Nursing", "GNM", "ANM", "MBBS", "MD", "B.Tech", "MBA", "BDS", "MDS"];
+export const courseFilters = [
+  'All Courses',
+  'B.Pharm',
+  'D.Pharm',
+  'M.Pharm',
+  'Pharm.D',
+  'B.Sc Nursing',
+  'M.Sc Nursing',
+  'GNM',
+  'ANM',
+  'Post Basic B.Sc Nursing',
+  'BPT',
+  'BHA',
+  'MLT',
+  'MBBS',
+  'BAMS',
+  'Paramedical',
+  'Allied Health Sciences',
+];
 
 export const typeFilters = ['All Types', 'Government', 'Private'];
