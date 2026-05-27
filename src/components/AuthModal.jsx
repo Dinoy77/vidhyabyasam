@@ -87,7 +87,7 @@ export default function AuthModal({ mode, onClose, onSwitch }) {
 
         {/* Header */}
         <div style={s.header}>
-          <div style={s.logoMini}>🎓 Vidhyabyasam</div>
+          <div style={s.logoMini}>🎓 Vidyabhyasam</div>
           <button style={s.closeBtn} onClick={onClose}>✕</button>
         </div>
 
@@ -193,7 +193,7 @@ export default function AuthModal({ mode, onClose, onSwitch }) {
               </div>
               <div style={s.stepItem}>
                 <span style={s.stepNum}>2</span>
-                <span>Find the email from Vidhyabyasam</span>
+                <span>Find the email from Vidyabhyasam</span>
               </div>
               <div style={s.stepItem}>
                 <span style={s.stepNum}>3</span>

@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div style={styles.bottom}>
-        <p>© 2024 Vidhyabyasam. All rights reserved.</p>
+        <p>© 2024 Vidyabhyasam. All rights reserved.</p>
         <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
           Built for People Who are Ambitious about Future
         </p>
