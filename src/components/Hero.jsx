@@ -97,8 +97,8 @@ function NewsTicker() {
 }
 
 const slides = [
-  null,
   '/images/students1.jpg',
+  null,
 ];
 
 export default function Hero({ onSearch }) {
@@ -124,25 +124,28 @@ export default function Hero({ onSearch }) {
     <section style={styles.hero}>
       {/* Background slideshow */}
       <div style={styles.slidesWrap}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(160deg, #0D1117 0%, #1a2a4a 50%, #0D1117 100%)',
-          opacity: currentSlide === 0 ? 1 : 0,
-          transition: 'opacity 1.5s ease',
-        }} />
-        {slides.slice(1).map((src, i) => (
-          <img
-            key={src}
-            src={src}
-            alt="students"
-            style={{
+        {slides.map((src, i) => (
+          src === null ? (
+            <div key="dark" style={{
               position: 'absolute', inset: 0,
-              width: '100%', height: '100%',
-              objectFit: 'cover',
-              opacity: currentSlide === i + 1 ? 1 : 0,
+              background: 'linear-gradient(160deg, #0D1117 0%, #1a2a4a 50%, #0D1117 100%)',
+              opacity: currentSlide === i ? 1 : 0,
               transition: 'opacity 1.5s ease',
-            }}
-          />
+            }} />
+          ) : (
+            <img
+              key={src}
+              src={src}
+              alt="students"
+              style={{
+                position: 'absolute', inset: 0,
+                width: '100%', height: '100%',
+                objectFit: 'cover',
+                opacity: currentSlide === i ? 1 : 0,
+                transition: 'opacity 1.5s ease',
+              }}
+            />
+          )
         ))}
         <div style={styles.slideOverlay} />
       </div>
