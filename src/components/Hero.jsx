@@ -22,7 +22,7 @@ export default function Hero({ onSearch }) {
         <div style={styles.badge}>🇮🇳 South India's #1 College Discovery Platform</div>
 
         <h1 style={styles.heading}>
-          Find Your Perfect<br />
+          Find Your Perfec<br />
           <span style={styles.highlight}>College</span> in Soth India
         </h1>
 
