@@ -23,7 +23,7 @@ export default function Navbar({ onCourseSelect = () => {} }) {
       <nav style={styles.nav}>
         <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => navigate('/')}>
           <span style={styles.logoIcon}>🎓</span>
-          <span style={styles.logoText}>Vidhya<span style={{ color: 'var(--accent)' }}>byasam</span></span>
+          <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
 
         <div style={styles.navLinks} className="hide-mobile">
