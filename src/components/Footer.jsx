@@ -5,7 +5,7 @@ export default function Footer() {
     <footer style={styles.footer}>
       <div style={styles.inner}>
         <div style={styles.brand}>
-          <div style={styles.logo}>🎓 EduPath <span style={{ color: 'var(--accent)' }}>India</span></div>
+          <div style={styles.logo}>🎓 Vidhya<span style={{ color: 'var(--accent)' }}>byasam</span></div>
           <p style={styles.tagline}>
             Helping students find their dream colleges<br />across South India since 2024.
           </p>
@@ -39,9 +39,9 @@ export default function Footer() {
       </div>
 
       <div style={styles.bottom}>
-        <p>© 2024 EduPath India. All rights reserved.</p>
+        <p>© 2024 Vidhyabyasam. All rights reserved.</p>
         <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
-          Made with ❤️ for students across South India
+          Built for People Who are Ambitious about Future
         </p>
       </div>
     </footer>
