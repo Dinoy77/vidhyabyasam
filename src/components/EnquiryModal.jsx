@@ -1,12 +1,41 @@
 import React, { useState } from 'react';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
+import { useAuth } from '../context/AuthContext';
 
 export default function EnquiryModal({ college, onClose }) {
+  const { user } = useAuth();
   const [form, setForm] = useState({ phone: '', course: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  // Use logged in user details
+  const userName = user?.name || '';
+  const userEmail = user?.email || '';
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      await addDoc(collection(db, 'enquiries'), {
+        name: userName,
+        email: userEmail,
+        phone: form.phone,
+        message: form.message || '',
+        course: form.course || '',
+        collegeName: college.name,
+        collegeId: college.id,
+        collegeRegion: college.region,
+        userId: user?.email || 'guest',
+        referenceId: `VB-${college.id}-${Date.now()}`,
+        createdAt: serverTimestamp(),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Enquiry save failed:', err);
+      setSubmitted(true);
+    }
+    setLoading(false);
   };
 
   if (submitted) {
@@ -72,7 +101,9 @@ export default function EnquiryModal({ college, onClose }) {
                 placeholder="Ask about admission, fees, hostel..."
                 value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} />
             </div>
-            <button type="submit" style={styles.submitBtn}>📨 Send My Enquiry</button>
+            <button type="submit" style={styles.submitBtn} disabled={loading}>
+              {loading ? '⏳ Submitting...' : '🚀 Submit Enquiry'}
+            </button>
           </form>
           <p style={styles.disclaimer}>🔒 Your information is safe with us.</p>
         </div>
