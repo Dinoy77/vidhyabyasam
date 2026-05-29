@@ -7,7 +7,7 @@ export default function Footer() {
         <div style={styles.brand}>
           <div style={styles.logo}>🎓 Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></div>
           <p style={styles.tagline}>
-            Helping students find their dream colleges<br />across South India since 2024.
+            Helping students find their dream colleges<br />across South India since 2026.
           </p>
           <div style={styles.social}>
             {['📘', '🐦', '📸', '▶️'].map((icon, i) => (
@@ -39,7 +39,7 @@ export default function Footer() {
       </div>
 
       <div style={styles.bottom}>
-        <p>© 2024 Vidyabhyasam. All rights reserved.</p>
+        <p>© 2026 Vidyabhyasam. All rights reserved.</p>
         <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
           Built for People Who are Ambitious about Future
         </p>

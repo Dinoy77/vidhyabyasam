@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const newsItems = [
   {
     id: 1, icon: '📝', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
-    title: 'KEAM 2024 Registration Open', date: 'Deadline: Mar 15',
-    description: 'Kerala Engineering Architecture Medical (KEAM) 2024 registration is now open. Students seeking admission to Engineering and Pharmacy courses in Kerala must apply before the deadline.',
+    title: 'KEAM 2026 Registration Open', date: 'Deadline: Mar 15',
+    description: 'Kerala Engineering Architecture Medical (KEAM) 2026 registration is now open. Students seeking admission to Engineering and Pharmacy courses in Kerala must apply before the deadline.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Mathematics/Biology',
     applyLink: 'https://cee.kerala.gov.in',
     courses: ['B.Pharm', 'M.Pharm', 'B.Tech'],
@@ -13,8 +13,8 @@ const newsItems = [
   },
   {
     id: 2, icon: '🏥', color: '#DC2626', bg: '#FFF0F0', tag: 'Exam Alert',
-    title: 'NEET UG 2024 — Apply Now', date: 'Deadline: Mar 9',
-    description: 'National Eligibility cum Entrance Test (NEET UG) 2024 applications are now live. This is the gateway for MBBS, BDS, and AYUSH admissions across India.',
+    title: 'NEET UG 2026 — Apply Now', date: 'Deadline: Mar 9',
+    description: 'National Eligibility cum Entrance Test (NEET UG) 2026 applications are now live. This is the gateway for MBBS, BDS, and AYUSH admissions across India.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50%',
     applyLink: 'https://neet.nta.nic.in',
     courses: ['MBBS', 'BDS', 'BAMS'],
@@ -22,8 +22,8 @@ const newsItems = [
   },
   {
     id: 3, icon: '🎓', color: '#7C3AED', bg: '#F5F0FF', tag: 'Admission',
-    title: 'KCET 2024 Applications Live', date: 'Deadline: Mar 20',
-    description: 'Karnataka Common Entrance Test (KCET) 2024 applications are live for Engineering, Pharmacy, and other professional courses in Karnataka colleges.',
+    title: 'KCET 2026 Applications Live', date: 'Deadline: Mar 20',
+    description: 'Karnataka Common Entrance Test (KCET) 2026 applications are live for Engineering, Pharmacy, and other professional courses in Karnataka colleges.',
     eligibility: 'Passed 10+2 with relevant subjects from Karnataka',
     applyLink: 'https://kea.kar.nic.in',
     courses: ['B.Pharm', 'B.Tech', 'MBBS'],
@@ -31,8 +31,8 @@ const newsItems = [
   },
   {
     id: 4, icon: '💊', color: '#059669', bg: '#ECFDF5', tag: 'Results',
-    title: 'GPAT 2024 Results Declared', date: 'Today',
-    description: 'Graduate Pharmacy Aptitude Test (GPAT) 2024 results have been officially declared by NTA. Candidates can now check their scores and ranks on the official portal.',
+    title: 'GPAT 2026 Results Declared', date: 'Today',
+    description: 'Graduate Pharmacy Aptitude Test (GPAT) 2026 results have been officially declared by NTA. Candidates can now check their scores and ranks on the official portal.',
     eligibility: 'B.Pharm graduates',
     applyLink: 'https://gpat.nta.nic.in',
     courses: ['M.Pharm'],
@@ -40,8 +40,8 @@ const newsItems = [
   },
   {
     id: 5, icon: '📋', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission',
-    title: 'TANCET 2024 Notification Released', date: 'Deadline: Feb 28',
-    description: 'Tamil Nadu Common Entrance Test (TANCET) 2024 official notification has been released for MBA, MCA, M.Tech, M.Arch and M.Plan admissions in Tamil Nadu.',
+    title: 'TANCET 2026 Notification Released', date: 'Deadline: Feb 28',
+    description: 'Tamil Nadu Common Entrance Test (TANCET) 2026 official notification has been released for MBA, MCA, M.Tech, M.Arch and M.Plan admissions in Tamil Nadu.',
     eligibility: 'Relevant undergraduate degree with minimum 50%',
     applyLink: 'https://www.annauniv.edu/tancet',
     courses: ['MBA', 'MCA', 'M.Tech'],
@@ -49,8 +49,8 @@ const newsItems = [
   },
   {
     id: 6, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'News',
-    title: 'Kerala Pharmacy Admissions 2024', date: '2 days ago',
-    description: 'Kerala University of Health Sciences has announced centralized allotment process for B.Pharm and D.Pharm admissions 2024 across all pharmacy colleges in Kerala.',
+    title: 'Kerala Pharmacy Admissions 2026', date: '2 days ago',
+    description: 'Kerala University of Health Sciences has announced centralized allotment process for B.Pharm and D.Pharm admissions 2026 across all pharmacy colleges in Kerala.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Biology/Mathematics',
     applyLink: 'https://kuhs.ac.in',
     courses: ['B.Pharm', 'D.Pharm'],
@@ -67,8 +67,8 @@ const newsItems = [
   },
   {
     id: 8, icon: '🔬', color: '#7C3AED', bg: '#F5F0FF', tag: 'News',
-    title: 'New Allied Health Courses 2024', date: '3 days ago',
-    description: 'Several colleges in Bangalore and Tamil Nadu are introducing new Allied Health Science specializations for 2024. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
+    title: 'New Allied Health Courses 2026', date: '3 days ago',
+    description: 'Several colleges in Bangalore and Tamil Nadu are introducing new Allied Health Science specializations for 2026. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
     eligibility: 'Passed 10+2 with Science subjects',
     applyLink: '#',
     courses: ['MLT', 'BPT', 'BHA'],
