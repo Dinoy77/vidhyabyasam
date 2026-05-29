@@ -1,17 +1,82 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const newsItems = [
-  { id: 1, icon: '📝', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert', title: 'KEAM 2024 Registration Open', date: 'Deadline: Mar 15' },
-  { id: 2, icon: '🏥', color: '#DC2626', bg: '#FFF0F0', tag: 'Exam Alert', title: 'NEET UG 2024 — Apply Now', date: 'Deadline: Mar 9' },
-  { id: 3, icon: '🎓', color: '#7C3AED', bg: '#F5F0FF', tag: 'Admission', title: 'KCET 2024 Applications Live', date: 'Deadline: Mar 20' },
-  { id: 4, icon: '💊', color: '#059669', bg: '#ECFDF5', tag: 'Results', title: 'GPAT 2024 Results Declared', date: 'Today' },
-  { id: 5, icon: '📋', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission', title: 'TANCET 2024 Notification Released', date: 'Deadline: Feb 28' },
-  { id: 6, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'News', title: 'Kerala Pharmacy Admissions 2024', date: '2 days ago' },
-  { id: 7, icon: '🏆', color: '#F5A623', bg: '#FFFBEB', tag: 'Scholarship', title: 'National Merit Scholarship Open', date: 'Deadline: Apr 1' },
-  { id: 8, icon: '🔬', color: '#7C3AED', bg: '#F5F0FF', tag: 'News', title: 'New Allied Health Courses 2024', date: '3 days ago' },
+  {
+    id: 1, icon: '📝', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
+    title: 'KEAM 2024 Registration Open', date: 'Deadline: Mar 15',
+    description: 'Kerala Engineering Architecture Medical (KEAM) 2024 registration is now open. Students seeking admission to Engineering and Pharmacy courses in Kerala must apply before the deadline.',
+    eligibility: 'Passed 10+2 with Physics, Chemistry and Mathematics/Biology',
+    applyLink: 'https://cee.kerala.gov.in',
+    courses: ['B.Pharm', 'M.Pharm', 'B.Tech'],
+    state: 'Kerala',
+  },
+  {
+    id: 2, icon: '🏥', color: '#DC2626', bg: '#FFF0F0', tag: 'Exam Alert',
+    title: 'NEET UG 2024 — Apply Now', date: 'Deadline: Mar 9',
+    description: 'National Eligibility cum Entrance Test (NEET UG) 2024 applications are now live. This is the gateway for MBBS, BDS, and AYUSH admissions across India.',
+    eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50%',
+    applyLink: 'https://neet.nta.nic.in',
+    courses: ['MBBS', 'BDS', 'BAMS'],
+    state: 'All India',
+  },
+  {
+    id: 3, icon: '🎓', color: '#7C3AED', bg: '#F5F0FF', tag: 'Admission',
+    title: 'KCET 2024 Applications Live', date: 'Deadline: Mar 20',
+    description: 'Karnataka Common Entrance Test (KCET) 2024 applications are live for Engineering, Pharmacy, and other professional courses in Karnataka colleges.',
+    eligibility: 'Passed 10+2 with relevant subjects from Karnataka',
+    applyLink: 'https://kea.kar.nic.in',
+    courses: ['B.Pharm', 'B.Tech', 'MBBS'],
+    state: 'Karnataka',
+  },
+  {
+    id: 4, icon: '💊', color: '#059669', bg: '#ECFDF5', tag: 'Results',
+    title: 'GPAT 2024 Results Declared', date: 'Today',
+    description: 'Graduate Pharmacy Aptitude Test (GPAT) 2024 results have been officially declared by NTA. Candidates can now check their scores and ranks on the official portal.',
+    eligibility: 'B.Pharm graduates',
+    applyLink: 'https://gpat.nta.nic.in',
+    courses: ['M.Pharm'],
+    state: 'All India',
+  },
+  {
+    id: 5, icon: '📋', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission',
+    title: 'TANCET 2024 Notification Released', date: 'Deadline: Feb 28',
+    description: 'Tamil Nadu Common Entrance Test (TANCET) 2024 official notification has been released for MBA, MCA, M.Tech, M.Arch and M.Plan admissions in Tamil Nadu.',
+    eligibility: 'Relevant undergraduate degree with minimum 50%',
+    applyLink: 'https://www.annauniv.edu/tancet',
+    courses: ['MBA', 'MCA', 'M.Tech'],
+    state: 'Tamil Nadu',
+  },
+  {
+    id: 6, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'News',
+    title: 'Kerala Pharmacy Admissions 2024', date: '2 days ago',
+    description: 'Kerala University of Health Sciences has announced centralized allotment process for B.Pharm and D.Pharm admissions 2024 across all pharmacy colleges in Kerala.',
+    eligibility: 'Passed 10+2 with Physics, Chemistry and Biology/Mathematics',
+    applyLink: 'https://kuhs.ac.in',
+    courses: ['B.Pharm', 'D.Pharm'],
+    state: 'Kerala',
+  },
+  {
+    id: 7, icon: '🏆', color: '#F5A623', bg: '#FFFBEB', tag: 'Scholarship',
+    title: 'National Merit Scholarship Open', date: 'Deadline: Apr 1',
+    description: 'National Merit Scholarship applications are open for health science students. Students pursuing medical, pharmacy, and nursing courses can apply for up to ₹50,000 per year.',
+    eligibility: 'Students with above 80% in 10+2 and enrolled in health science courses',
+    applyLink: 'https://scholarships.gov.in',
+    courses: ['B.Pharm', 'B.Sc Nursing', 'MBBS', 'BPT'],
+    state: 'All India',
+  },
+  {
+    id: 8, icon: '🔬', color: '#7C3AED', bg: '#F5F0FF', tag: 'News',
+    title: 'New Allied Health Courses 2024', date: '3 days ago',
+    description: 'Several colleges in Bangalore and Tamil Nadu are introducing new Allied Health Science specializations for 2024. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
+    eligibility: 'Passed 10+2 with Science subjects',
+    applyLink: '#',
+    courses: ['MLT', 'BPT', 'BHA'],
+    state: 'Bangalore & Tamil Nadu',
+  },
 ];
 
-function NewsTicker() {
+function NewsTicker({ onViewDetails }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [fade, setFade] = useState(true);
@@ -30,8 +95,14 @@ function NewsTicker() {
 
   const current = newsItems[activeIndex];
 
+  const goTo = (i) => {
+    setFade(false);
+    setTimeout(() => { setActiveIndex(i); setFade(true); }, 200);
+  };
+
   return (
-    <div style={ns.box}
+    <div
+      style={ns.box}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -44,20 +115,39 @@ function NewsTicker() {
         <span style={ns.count}>{activeIndex + 1}/{newsItems.length}</span>
       </div>
 
-      {/* Featured */}
+      {/* Full featured card */}
       <div style={{
         ...ns.featured,
         opacity: fade ? 1 : 0,
         transform: fade ? 'translateY(0)' : 'translateY(6px)',
         transition: 'opacity 0.3s ease, transform 0.3s ease',
+        flex: 1,
       }}>
+        {/* Tag + emoji banner */}
         <div style={{ ...ns.featuredBg, background: current.bg }}>
-          <span style={{ ...ns.tagPill, background: current.color }}>{current.icon} {current.tag}</span>
+          <span style={{ ...ns.tagPill, background: current.color }}>
+            {current.icon} {current.tag}
+          </span>
           <span style={ns.bigEmoji}>{current.icon}</span>
         </div>
+
+        {/* Content */}
         <div style={ns.featuredBody}>
-          <p style={{ ...ns.featuredTitle, color: current.color }}>{current.title}</p>
+          <p style={{ ...ns.featuredTitle, color: current.color, fontSize: '15px' }}>
+            {current.title}
+          </p>
           <p style={ns.featuredDate}>🗓 {current.date}</p>
+
+          {/* View Details button */}
+          <button
+            style={{
+              ...ns.enquireBtn,
+              background: current.color,
+            }}
+            onClick={() => onViewDetails(current)}
+          >
+            👁 View Details
+          </button>
         </div>
       </div>
 
@@ -68,29 +158,21 @@ function NewsTicker() {
             ...ns.dot,
             background: i === activeIndex ? current.color : 'rgba(255,255,255,0.3)',
             width: i === activeIndex ? '18px' : '6px',
-          }} onClick={() => { setFade(false); setTimeout(() => { setActiveIndex(i); setFade(true); }, 200); }} />
+          }} onClick={() => goTo(i)} />
         ))}
       </div>
 
-      {/* List */}
-      <div style={ns.list}>
-        {newsItems.map((item, i) => (
-          <button key={item.id} style={{
-            ...ns.listItem,
-            background: i === activeIndex ? 'rgba(255,255,255,0.12)' : 'transparent',
-            borderLeft: `3px solid ${i === activeIndex ? item.color : 'transparent'}`,
-          }}
-            onClick={() => { setFade(false); setTimeout(() => { setActiveIndex(i); setFade(true); }, 200); }}
-          >
-            <span style={ns.listIcon}>{item.icon}</span>
-            <div style={ns.listInfo}>
-              <p style={{ ...ns.listTitle, color: i === activeIndex ? '#fff' : 'rgba(255,255,255,0.75)' }}>
-                {item.title}
-              </p>
-              <p style={ns.listDate}>{item.date}</p>
-            </div>
-          </button>
-        ))}
+      {/* Nav arrows */}
+      <div style={ns.arrows}>
+        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex - 1 + newsItems.length) % newsItems.length)}>
+          ←
+        </button>
+        <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>
+          {activeIndex + 1} of {newsItems.length}
+        </span>
+        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex + 1) % newsItems.length)}>
+          →
+        </button>
       </div>
     </div>
   );
@@ -101,9 +183,11 @@ const slides = [
   null,
 ];
 
+
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -208,7 +292,7 @@ export default function Hero({ onSearch }) {
 
         {/* Right — news sidebar */}
         <div style={styles.right}>
-          <NewsTicker />
+          <NewsTicker onViewDetails={(item) => navigate(`/news/${item.id}`)} />
         </div>
       </div>
       {/* Quote bar */}
@@ -217,6 +301,7 @@ export default function Hero({ onSearch }) {
         <span style={styles.quoteText}>Support · Guidance · Genuinity</span>
         <span style={styles.quoteDot} />
       </div>
+
 
       {/* Slide indicators */}
       <div style={styles.slideIndicators}>
@@ -285,20 +370,37 @@ const ns = {
     transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
   },
 
-  list: { display: 'flex', flexDirection: 'column', maxHeight: '220px', overflowY: 'auto' },
-  listItem: {
-    display: 'flex', alignItems: 'center', gap: '8px',
-    padding: '8px 12px', cursor: 'pointer',
-    background: 'none', border: 'none',
-    borderLeft: '3px solid transparent',
-    textAlign: 'left', transition: 'all 0.2s',
+  enquireBtn: {
+    marginTop: '14px',
+    padding: '10px 16px',
+    borderRadius: '10px',
+    border: 'none',
+    color: '#fff',
+    fontSize: '12px',
+    fontWeight: 700,
+    cursor: 'pointer',
+    width: '100%',
+    textAlign: 'center',
     fontFamily: 'DM Sans, sans-serif',
-    borderBottom: '1px solid rgba(255,255,255,0.06)',
+    letterSpacing: '0.3px',
   },
-  listIcon: { fontSize: '16px', flexShrink: 0 },
-  listInfo: { flex: 1, minWidth: 0 },
-  listTitle: { fontSize: '11px', fontWeight: 600, lineHeight: 1.3, marginBottom: '1px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' },
-  listDate: { fontSize: '10px', color: 'rgba(255,255,255,0.35)', fontWeight: 500 },
+  arrows: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '8px 14px',
+    borderTop: '1px solid rgba(255,255,255,0.08)',
+  },
+  arrowBtn: {
+    background: 'rgba(255,255,255,0.1)',
+    border: '1px solid rgba(255,255,255,0.2)',
+    color: '#fff',
+    width: '28px', height: '28px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    fontSize: '14px',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+  },
 };
 
 const styles = {

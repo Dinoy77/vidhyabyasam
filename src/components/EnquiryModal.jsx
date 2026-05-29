@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from '../context/AuthContext';
+import AuthModal from './AuthModal';
 
 export default function EnquiryModal({ college, onClose }) {
   const { user } = useAuth();
@@ -12,6 +13,7 @@ export default function EnquiryModal({ college, onClose }) {
   const userEmail = user?.email || '';
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showAuth, setShowAuth] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +39,52 @@ export default function EnquiryModal({ college, onClose }) {
     }
     setLoading(false);
   };
+
+if (!user) {
+    return (
+      <>
+        <div style={styles.overlay} onClick={onClose}>
+          <div style={styles.modal} onClick={e => e.stopPropagation()} className="animate-fadeUp">
+            <div style={styles.header}>
+              <div>
+                <div style={styles.tag}>📍 {college.city}, {college.region}</div>
+                <h2 style={styles.collegeName}>{college.name}</h2>
+              </div>
+              <button style={styles.closeBtn} onClick={onClose}>✕</button>
+            </div>
+            <div style={{ padding: '40px 24px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+              <div style={{ fontSize: '52px' }}>🔐</div>
+              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px', margin: 0 }}>
+                Login Required
+              </h3>
+              <p style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: 1.6, margin: 0 }}>
+                Please log in or create an account to send an enquiry to <strong>{college.name}</strong>
+              </p>
+              <button
+                style={{ ...styles.submitBtn, width: '100%', marginTop: '8px' }}
+                onClick={() => setShowAuth(true)}
+              >
+                🔓 Log In to Enquire
+              </button>
+              <button
+                style={{ background: 'none', border: 'none', color: 'var(--muted)', fontSize: '13px', cursor: 'pointer' }}
+                onClick={onClose}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+        {showAuth && (
+          <AuthModal
+            mode="login"
+            onClose={() => setShowAuth(false)}
+            onSwitch={(m) => {}}
+          />
+        )}
+      </>
+    );
+  }
 
   if (submitted) {
     return (

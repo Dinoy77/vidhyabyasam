@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CollegeDetail from './pages/CollegeDetail';
+import NewsDetail from './pages/NewsDetail';
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -24,6 +25,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home selectedCourse={selectedCourse} courseSelectCount={courseSelectCount} />} />
             <Route path="/college/:id" element={<CollegeDetail />} />
+            <Route path="/news/:id" element={<NewsDetail />} />
           </Routes>
         </main>
       </AuthProvider>
