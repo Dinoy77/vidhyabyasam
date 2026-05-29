@@ -5,7 +5,7 @@ export default function Footer() {
     <footer style={styles.footer}>
       <div style={styles.inner}>
         <div style={styles.brand}>
-          <div style={styles.logo}>🎓 Vidhya<span style={{ color: 'var(--accent)' }}>byasam</span></div>
+          <div style={styles.logo}>🎓 Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></div>
           <p style={styles.tagline}>
             Helping students find their dream colleges<br />across South India since 2024.
           </p>
