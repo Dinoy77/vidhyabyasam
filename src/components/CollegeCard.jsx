@@ -44,7 +44,10 @@ export default function CollegeCard({ college, delay = 0 }) {
         onClick={handleCardClick}
       >
         <div style={styles.imgWrapper}>
-          <img src={college.image} alt={college.name} style={styles.img} />
+          <img src={college.image} alt={college.name} onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg';
+          }} style={styles.img} />
           <div style={{ ...styles.regionBadge, background: rc.bg, color: rc.text }}>
             <span style={{ ...styles.dot, background: rc.dot }} />
             {college.region}
