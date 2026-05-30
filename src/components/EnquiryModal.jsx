@@ -3,6 +3,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
+import emailjs from '@emailjs/browser';
 
 export default function EnquiryModal({ college, onClose }) {
   const { user } = useAuth();
@@ -15,10 +16,13 @@ export default function EnquiryModal({ college, onClose }) {
   const [loading, setLoading] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
+      const referenceId = `VB-${college.id}-${Date.now()}`;
+
+      // Save to Firestore
       await addDoc(collection(db, 'enquiries'), {
         name: userName,
         email: userEmail,
@@ -29,12 +33,29 @@ export default function EnquiryModal({ college, onClose }) {
         collegeId: college.id,
         collegeRegion: college.region,
         userId: user?.email || 'guest',
-        referenceId: `VB-${college.id}-${Date.now()}`,
+        referenceId: referenceId,
         createdAt: serverTimestamp(),
       });
+
+      // Send email alert
+      await emailjs.send(
+        'service_07w9omg',
+        'template_b73az9b',
+        {
+          from_name: userName || 'Unknown',
+          from_email: userEmail || 'Unknown',
+          phone: form.phone,
+          college_name: college.name,
+          course: form.course,
+          message: form.message || 'No message',
+          reference_id: referenceId,
+        },
+        'QABaJcbFeXOGi0-5m'
+      );
+
       setSubmitted(true);
     } catch (err) {
-      console.error('Enquiry save failed:', err);
+      console.error('Enquiry failed:', err);
       setSubmitted(true);
     }
     setLoading(false);

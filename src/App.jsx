@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CollegeDetail from './pages/CollegeDetail';
 import NewsDetail from './pages/NewsDetail';
+import WhatsAppButton from './components/WhatsAppButton';
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/news/:id" element={<NewsDetail />} />
           </Routes>
         </main>
+         <WhatsAppButton />
       </AuthProvider>
     </BrowserRouter>
   );
