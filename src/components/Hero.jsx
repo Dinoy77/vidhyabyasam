@@ -180,6 +180,8 @@ function NewsTicker({ onViewDetails }) {
 
 const slides = [
   '/images/students1.jpg',
+  '/images/students2.jpg',
+  '/images/students3.jpg',
   null,
 ];
 
