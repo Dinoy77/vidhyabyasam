@@ -37,8 +37,8 @@ export default function CollegeDetail() {
     );
   }
 
-  const regionColor = college.region === 'Kerala' ? '#1B6CA8' : college.region === 'Bangalore' ? '#7C3AED' : '#DC2626';
-  const regionBg = college.region === 'Kerala' ? '#EBF5FF' : college.region === 'Bangalore' ? '#F5F0FF' : '#FFF0F0';
+  const regionColor = college.region === 'Kerala' ? '#1B6CA8' : college.region === 'Karnataka' ? '#7C3AED' : '#DC2626';
+  const regionBg = college.region === 'Kerala' ? '#EBF5FF' : college.region === 'Karnataka' ? '#F5F0FF' : '#FFF0F0';
 
   const handleEnquiry = () => {
     if (user) setShowEnquiry(true);

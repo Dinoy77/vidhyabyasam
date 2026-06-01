@@ -1639,7 +1639,7 @@ export const colleges = [
   },
   {
     id: 79,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Manipal',
     district: 'Udupi',
@@ -1660,7 +1660,7 @@ export const colleges = [
   },
   {
     id: 80,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -1681,7 +1681,7 @@ export const colleges = [
   },
   {
     id: 81,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -1702,7 +1702,7 @@ export const colleges = [
   },
   {
     id: 82,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1723,7 +1723,7 @@ export const colleges = [
   },
   {
     id: 83,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1744,7 +1744,7 @@ export const colleges = [
   },
   {
     id: 84,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1765,7 +1765,7 @@ export const colleges = [
   },
   {
     id: 85,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1786,7 +1786,7 @@ export const colleges = [
   },
   {
     id: 86,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1807,7 +1807,7 @@ export const colleges = [
   },
   {
     id: 87,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1828,7 +1828,7 @@ export const colleges = [
   },
   {
     id: 88,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -1849,7 +1849,7 @@ export const colleges = [
   },
   {
     id: 89,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -1870,7 +1870,7 @@ export const colleges = [
   },
   {
     id: 90,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -1891,7 +1891,7 @@ export const colleges = [
   },
   {
     id: 91,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mandya',
     district: 'Mandya',
@@ -1912,7 +1912,7 @@ export const colleges = [
   },
   {
     id: 92,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -1933,7 +1933,7 @@ export const colleges = [
   },
   {
     id: 93,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -1954,7 +1954,7 @@ export const colleges = [
   },
   {
     id: 94,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hubli',
     district: 'Dharwad',
@@ -1975,7 +1975,7 @@ export const colleges = [
   },
   {
     id: 95,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -1996,7 +1996,7 @@ export const colleges = [
   },
   {
     id: 96,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Gulbarga',
     district: 'Kalaburagi',
@@ -2017,7 +2017,7 @@ export const colleges = [
   },
   {
     id: 97,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -2038,7 +2038,7 @@ export const colleges = [
   },
   {
     id: 98,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -2059,7 +2059,7 @@ export const colleges = [
   },
   {
     id: 99,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2080,7 +2080,7 @@ export const colleges = [
   },
   {
     id: 100,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2101,7 +2101,7 @@ export const colleges = [
   },
   {
     id: 101,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2122,7 +2122,7 @@ export const colleges = [
   },
   {
     id: 102,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2143,7 +2143,7 @@ export const colleges = [
   },
   {
     id: 103,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2164,7 +2164,7 @@ export const colleges = [
   },
   {
     id: 104,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2185,7 +2185,7 @@ export const colleges = [
   },
   {
     id: 105,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2206,7 +2206,7 @@ export const colleges = [
   },
   {
     id: 106,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2227,7 +2227,7 @@ export const colleges = [
   },
   {
     id: 107,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kolar',
     district: 'Kolar',
@@ -2248,7 +2248,7 @@ export const colleges = [
   },
   {
     id: 108,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Shimoga',
     district: 'Shivamogga',
@@ -2269,7 +2269,7 @@ export const colleges = [
   },
   {
     id: 109,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumkur',
     district: 'Tumakuru',
@@ -2290,7 +2290,7 @@ export const colleges = [
   },
   {
     id: 110,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -2311,7 +2311,7 @@ export const colleges = [
   },
   {
     id: 111,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -2332,7 +2332,7 @@ export const colleges = [
   },
   {
     id: 112,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2353,7 +2353,7 @@ export const colleges = [
   },
   {
     id: 113,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangalore',
     district: 'Dakshina Kannada',
@@ -2374,7 +2374,7 @@ export const colleges = [
   },
   {
     id: 114,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumkur',
     district: 'Tumakuru',
@@ -2395,7 +2395,7 @@ export const colleges = [
   },
   {
     id: 115,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Rural',
@@ -2416,7 +2416,7 @@ export const colleges = [
   },
   {
     id: 116,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2437,7 +2437,7 @@ export const colleges = [
   },
   {
     id: 117,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Rural',
@@ -2458,7 +2458,7 @@ export const colleges = [
   },
   {
     id: 118,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2479,7 +2479,7 @@ export const colleges = [
   },
   {
     id: 119,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2500,7 +2500,7 @@ export const colleges = [
   },
   {
     id: 120,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2521,7 +2521,7 @@ export const colleges = [
   },
   {
     id: 121,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2542,7 +2542,7 @@ export const colleges = [
   },
   {
     id: 122,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2563,7 +2563,7 @@ export const colleges = [
   },
   {
     id: 123,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bangalore',
     district: 'Bangalore Urban',
@@ -2584,7 +2584,7 @@ export const colleges = [
   },
   {
     id: 124,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mandya',
     district: 'Mandya',
@@ -2605,7 +2605,7 @@ export const colleges = [
   },
   {
     id: 125,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -2626,7 +2626,7 @@ export const colleges = [
   },
   {
     id: 126,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -2647,7 +2647,7 @@ export const colleges = [
   },
   {
     id: 127,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Navanagara',
     district: 'Bagalkot',
@@ -2668,7 +2668,7 @@ export const colleges = [
   },
   {
     id: 128,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -2689,7 +2689,7 @@ export const colleges = [
   },
   {
     id: 129,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -2710,7 +2710,7 @@ export const colleges = [
   },
   {
     id: 130,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -2731,7 +2731,7 @@ export const colleges = [
   },
   {
     id: 131,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2752,7 +2752,7 @@ export const colleges = [
   },
   {
     id: 132,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2773,7 +2773,7 @@ export const colleges = [
   },
   {
     id: 133,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2794,7 +2794,7 @@ export const colleges = [
   },
   {
     id: 134,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2815,7 +2815,7 @@ export const colleges = [
   },
   {
     id: 135,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2836,7 +2836,7 @@ export const colleges = [
   },
   {
     id: 136,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2857,7 +2857,7 @@ export const colleges = [
   },
   {
     id: 137,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2878,7 +2878,7 @@ export const colleges = [
   },
   {
     id: 138,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2899,7 +2899,7 @@ export const colleges = [
   },
   {
     id: 139,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2920,7 +2920,7 @@ export const colleges = [
   },
   {
     id: 140,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -2941,7 +2941,7 @@ export const colleges = [
   },
   {
     id: 141,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -2962,7 +2962,7 @@ export const colleges = [
   },
   {
     id: 142,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -2983,7 +2983,7 @@ export const colleges = [
   },
   {
     id: 143,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -3004,7 +3004,7 @@ export const colleges = [
   },
   {
     id: 144,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -3025,7 +3025,7 @@ export const colleges = [
   },
   {
     id: 145,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -3046,7 +3046,7 @@ export const colleges = [
   },
   {
     id: 146,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3067,7 +3067,7 @@ export const colleges = [
   },
   {
     id: 147,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3088,7 +3088,7 @@ export const colleges = [
   },
   {
     id: 148,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3109,7 +3109,7 @@ export const colleges = [
   },
   {
     id: 149,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3130,7 +3130,7 @@ export const colleges = [
   },
   {
     id: 150,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3151,7 +3151,7 @@ export const colleges = [
   },
   {
     id: 151,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3172,7 +3172,7 @@ export const colleges = [
   },
   {
     id: 152,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3193,7 +3193,7 @@ export const colleges = [
   },
   {
     id: 153,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3214,7 +3214,7 @@ export const colleges = [
   },
   {
     id: 154,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3235,7 +3235,7 @@ export const colleges = [
   },
   {
     id: 155,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3256,7 +3256,7 @@ export const colleges = [
   },
   {
     id: 156,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3277,7 +3277,7 @@ export const colleges = [
   },
   {
     id: 157,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3298,7 +3298,7 @@ export const colleges = [
   },
   {
     id: 158,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3319,7 +3319,7 @@ export const colleges = [
   },
   {
     id: 159,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3340,7 +3340,7 @@ export const colleges = [
   },
   {
     id: 160,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3361,7 +3361,7 @@ export const colleges = [
   },
   {
     id: 161,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3382,7 +3382,7 @@ export const colleges = [
   },
   {
     id: 162,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3403,7 +3403,7 @@ export const colleges = [
   },
   {
     id: 163,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3424,7 +3424,7 @@ export const colleges = [
   },
   {
     id: 164,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3445,7 +3445,7 @@ export const colleges = [
   },
   {
     id: 165,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3466,7 +3466,7 @@ export const colleges = [
   },
   {
     id: 166,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3487,7 +3487,7 @@ export const colleges = [
   },
   {
     id: 167,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3508,7 +3508,7 @@ export const colleges = [
   },
   {
     id: 168,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3529,7 +3529,7 @@ export const colleges = [
   },
   {
     id: 169,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3550,7 +3550,7 @@ export const colleges = [
   },
   {
     id: 170,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3571,7 +3571,7 @@ export const colleges = [
   },
   {
     id: 171,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3592,7 +3592,7 @@ export const colleges = [
   },
   {
     id: 172,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3613,7 +3613,7 @@ export const colleges = [
   },
   {
     id: 173,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -3634,7 +3634,7 @@ export const colleges = [
   },
   {
     id: 174,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chamarajanagar',
     district: 'Chamarajanagar',
@@ -3655,7 +3655,7 @@ export const colleges = [
   },
   {
     id: 175,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -3676,7 +3676,7 @@ export const colleges = [
   },
   {
     id: 176,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -3697,7 +3697,7 @@ export const colleges = [
   },
   {
     id: 177,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -3718,7 +3718,7 @@ export const colleges = [
   },
   {
     id: 178,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -3739,7 +3739,7 @@ export const colleges = [
   },
   {
     id: 179,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -3760,7 +3760,7 @@ export const colleges = [
   },
   {
     id: 180,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -3781,7 +3781,7 @@ export const colleges = [
   },
   {
     id: 181,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -3802,7 +3802,7 @@ export const colleges = [
   },
   {
     id: 182,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -3823,7 +3823,7 @@ export const colleges = [
   },
   {
     id: 183,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -3844,7 +3844,7 @@ export const colleges = [
   },
   {
     id: 184,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -3865,7 +3865,7 @@ export const colleges = [
   },
   {
     id: 185,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -3886,7 +3886,7 @@ export const colleges = [
   },
   {
     id: 186,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -3907,7 +3907,7 @@ export const colleges = [
   },
   {
     id: 187,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -3928,7 +3928,7 @@ export const colleges = [
   },
   {
     id: 188,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -3949,7 +3949,7 @@ export const colleges = [
   },
   {
     id: 189,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -3970,7 +3970,7 @@ export const colleges = [
   },
   {
     id: 190,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chitradurga',
     district: 'Chitradurga',
@@ -3991,7 +3991,7 @@ export const colleges = [
   },
   {
     id: 191,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4012,7 +4012,7 @@ export const colleges = [
   },
   {
     id: 192,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4033,7 +4033,7 @@ export const colleges = [
   },
   {
     id: 193,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4054,7 +4054,7 @@ export const colleges = [
   },
   {
     id: 194,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4075,7 +4075,7 @@ export const colleges = [
   },
   {
     id: 195,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4096,7 +4096,7 @@ export const colleges = [
   },
   {
     id: 196,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4117,7 +4117,7 @@ export const colleges = [
   },
   {
     id: 197,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4138,7 +4138,7 @@ export const colleges = [
   },
   {
     id: 198,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4159,7 +4159,7 @@ export const colleges = [
   },
   {
     id: 199,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4180,7 +4180,7 @@ export const colleges = [
   },
   {
     id: 200,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4201,7 +4201,7 @@ export const colleges = [
   },
   {
     id: 201,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4222,7 +4222,7 @@ export const colleges = [
   },
   {
     id: 202,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4243,7 +4243,7 @@ export const colleges = [
   },
   {
     id: 203,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4264,7 +4264,7 @@ export const colleges = [
   },
   {
     id: 204,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4285,7 +4285,7 @@ export const colleges = [
   },
   {
     id: 205,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4306,7 +4306,7 @@ export const colleges = [
   },
   {
     id: 206,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4327,7 +4327,7 @@ export const colleges = [
   },
   {
     id: 207,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Moodbidri',
     district: 'Dakshina Kannada',
@@ -4348,7 +4348,7 @@ export const colleges = [
   },
   {
     id: 208,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -4369,7 +4369,7 @@ export const colleges = [
   },
   {
     id: 209,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4390,7 +4390,7 @@ export const colleges = [
   },
   {
     id: 210,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4411,7 +4411,7 @@ export const colleges = [
   },
   {
     id: 211,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4432,7 +4432,7 @@ export const colleges = [
   },
   {
     id: 212,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4453,7 +4453,7 @@ export const colleges = [
   },
   {
     id: 213,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4474,7 +4474,7 @@ export const colleges = [
   },
   {
     id: 214,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4495,7 +4495,7 @@ export const colleges = [
   },
   {
     id: 215,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4516,7 +4516,7 @@ export const colleges = [
   },
   {
     id: 216,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4537,7 +4537,7 @@ export const colleges = [
   },
   {
     id: 217,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4558,7 +4558,7 @@ export const colleges = [
   },
   {
     id: 218,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Davanagere',
     district: 'Davanagere',
@@ -4579,7 +4579,7 @@ export const colleges = [
   },
   {
     id: 219,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Dharwad',
     district: 'Dharwad',
@@ -4600,7 +4600,7 @@ export const colleges = [
   },
   {
     id: 220,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Dharwad',
     district: 'Dharwad',
@@ -4621,7 +4621,7 @@ export const colleges = [
   },
   {
     id: 221,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Dharwad',
     district: 'Dharwad',
@@ -4642,7 +4642,7 @@ export const colleges = [
   },
   {
     id: 222,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Dharwad',
     district: 'Dharwad',
@@ -4663,7 +4663,7 @@ export const colleges = [
   },
   {
     id: 223,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Gadag',
     district: 'Gadag',
@@ -4684,7 +4684,7 @@ export const colleges = [
   },
   {
     id: 224,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4705,7 +4705,7 @@ export const colleges = [
   },
   {
     id: 225,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4726,7 +4726,7 @@ export const colleges = [
   },
   {
     id: 226,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4747,7 +4747,7 @@ export const colleges = [
   },
   {
     id: 227,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4768,7 +4768,7 @@ export const colleges = [
   },
   {
     id: 228,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4789,7 +4789,7 @@ export const colleges = [
   },
   {
     id: 229,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4810,7 +4810,7 @@ export const colleges = [
   },
   {
     id: 230,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4831,7 +4831,7 @@ export const colleges = [
   },
   {
     id: 231,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4852,7 +4852,7 @@ export const colleges = [
   },
   {
     id: 232,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4873,7 +4873,7 @@ export const colleges = [
   },
   {
     id: 233,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -4894,7 +4894,7 @@ export const colleges = [
   },
   {
     id: 234,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Haveri',
     district: 'Haveri',
@@ -4915,7 +4915,7 @@ export const colleges = [
   },
   {
     id: 235,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4936,7 +4936,7 @@ export const colleges = [
   },
   {
     id: 236,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4957,7 +4957,7 @@ export const colleges = [
   },
   {
     id: 237,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4978,7 +4978,7 @@ export const colleges = [
   },
   {
     id: 238,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -4999,7 +4999,7 @@ export const colleges = [
   },
   {
     id: 239,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -5020,7 +5020,7 @@ export const colleges = [
   },
   {
     id: 240,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hubballi',
     district: 'Dharwad',
@@ -5041,7 +5041,7 @@ export const colleges = [
   },
   {
     id: 241,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -5062,7 +5062,7 @@ export const colleges = [
   },
   {
     id: 242,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kolar',
     district: 'Kolar',
@@ -5083,7 +5083,7 @@ export const colleges = [
   },
   {
     id: 243,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kolar',
     district: 'Kolar',
@@ -5104,7 +5104,7 @@ export const colleges = [
   },
   {
     id: 244,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kolar',
     district: 'Kolar',
@@ -5125,7 +5125,7 @@ export const colleges = [
   },
   {
     id: 245,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -5146,7 +5146,7 @@ export const colleges = [
   },
   {
     id: 246,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -5167,7 +5167,7 @@ export const colleges = [
   },
   {
     id: 247,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Koppal',
     district: 'Koppal',
@@ -5188,7 +5188,7 @@ export const colleges = [
   },
   {
     id: 248,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -5209,7 +5209,7 @@ export const colleges = [
   },
   {
     id: 249,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Koppal',
     district: 'Koppal',
@@ -5230,7 +5230,7 @@ export const colleges = [
   },
   {
     id: 250,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mysuru',
     district: 'Mysuru',
@@ -5251,7 +5251,7 @@ export const colleges = [
   },
   {
     id: 251,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mysuru',
     district: 'Mysuru',
@@ -5272,7 +5272,7 @@ export const colleges = [
   },
   {
     id: 252,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumakuru',
     district: 'Tumakuru',
@@ -5293,7 +5293,7 @@ export const colleges = [
   },
   {
     id: 253,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumakuru',
     district: 'Tumakuru',
@@ -5314,7 +5314,7 @@ export const colleges = [
   },
   {
     id: 254,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -5335,7 +5335,7 @@ export const colleges = [
   },
   {
     id: 255,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumakuru',
     district: 'Tumakuru',
@@ -5356,7 +5356,7 @@ export const colleges = [
   },
   {
     id: 256,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -5377,7 +5377,7 @@ export const colleges = [
   },
   {
     id: 257,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumakuru',
     district: 'Tumakuru',
@@ -5398,7 +5398,7 @@ export const colleges = [
   },
   {
     id: 258,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Udupi',
     district: 'Udupi',
@@ -5419,7 +5419,7 @@ export const colleges = [
   },
   {
     id: 259,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Udupi',
     district: 'Udupi',
@@ -5440,7 +5440,7 @@ export const colleges = [
   },
   {
     id: 260,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Udupi',
     district: 'Udupi',
@@ -5461,7 +5461,7 @@ export const colleges = [
   },
   {
     id: 261,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7288,7 +7288,7 @@ export const colleges = [
   },
   {
     id: 348,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7309,7 +7309,7 @@ export const colleges = [
   },
   {
     id: 349,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mysuru',
     district: 'Mysuru',
@@ -7330,7 +7330,7 @@ export const colleges = [
   },
   {
     id: 350,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hubballi',
     district: 'Dharwad',
@@ -7351,7 +7351,7 @@ export const colleges = [
   },
   {
     id: 351,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Ballari',
     district: 'Ballari',
@@ -7372,7 +7372,7 @@ export const colleges = [
   },
   {
     id: 352,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mandya',
     district: 'Mandya',
@@ -7393,7 +7393,7 @@ export const colleges = [
   },
   {
     id: 353,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Hassan',
     district: 'Hassan',
@@ -7414,7 +7414,7 @@ export const colleges = [
   },
   {
     id: 354,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -7435,7 +7435,7 @@ export const colleges = [
   },
   {
     id: 355,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bidar',
     district: 'Bidar',
@@ -7456,7 +7456,7 @@ export const colleges = [
   },
   {
     id: 356,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Raichur',
     district: 'Raichur',
@@ -7477,7 +7477,7 @@ export const colleges = [
   },
   {
     id: 357,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Shivamogga',
     district: 'Shivamogga',
@@ -7498,7 +7498,7 @@ export const colleges = [
   },
   {
     id: 358,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -7519,7 +7519,7 @@ export const colleges = [
   },
   {
     id: 359,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7540,7 +7540,7 @@ export const colleges = [
   },
   {
     id: 360,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7561,7 +7561,7 @@ export const colleges = [
   },
   {
     id: 361,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Manipal',
     district: 'Udupi',
@@ -7582,7 +7582,7 @@ export const colleges = [
   },
   {
     id: 362,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7603,7 +7603,7 @@ export const colleges = [
   },
   {
     id: 363,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chamarajanagar',
     district: 'Chamarajanagar',
@@ -7624,7 +7624,7 @@ export const colleges = [
   },
   {
     id: 364,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Karwar',
     district: 'Uttara Kannada',
@@ -7645,7 +7645,7 @@ export const colleges = [
   },
   {
     id: 365,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Madikeri',
     district: 'Kodagu',
@@ -7666,7 +7666,7 @@ export const colleges = [
   },
   {
     id: 366,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkaballapur',
     district: 'Chikkaballapur',
@@ -7687,7 +7687,7 @@ export const colleges = [
   },
   {
     id: 367,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Chikkamagaluru',
     district: 'Chikkamagaluru',
@@ -7708,7 +7708,7 @@ export const colleges = [
   },
   {
     id: 368,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Haveri',
     district: 'Haveri',
@@ -7729,7 +7729,7 @@ export const colleges = [
   },
   {
     id: 369,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Yadgir',
     district: 'Yadgir',
@@ -7750,7 +7750,7 @@ export const colleges = [
   },
   {
     id: 370,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Koppal',
     district: 'Koppal',
@@ -7771,7 +7771,7 @@ export const colleges = [
   },
   {
     id: 371,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Gadag',
     district: 'Gadag',
@@ -7792,7 +7792,7 @@ export const colleges = [
   },
   {
     id: 372,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7813,7 +7813,7 @@ export const colleges = [
   },
   {
     id: 373,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -7834,7 +7834,7 @@ export const colleges = [
   },
   {
     id: 374,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mysuru',
     district: 'Mysuru',
@@ -7855,7 +7855,7 @@ export const colleges = [
   },
   {
     id: 375,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7876,7 +7876,7 @@ export const colleges = [
   },
   {
     id: 376,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Belagavi',
     district: 'Belagavi',
@@ -7897,7 +7897,7 @@ export const colleges = [
   },
   {
     id: 377,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7918,7 +7918,7 @@ export const colleges = [
   },
   {
     id: 378,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bengaluru',
     district: 'Bengaluru Urban',
@@ -7939,7 +7939,7 @@ export const colleges = [
   },
   {
     id: 379,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -7960,7 +7960,7 @@ export const colleges = [
   },
   {
     id: 380,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -7981,7 +7981,7 @@ export const colleges = [
   },
   {
     id: 381,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Mangaluru',
     district: 'Dakshina Kannada',
@@ -8002,7 +8002,7 @@ export const colleges = [
   },
   {
     id: 383,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Tumakuru',
     district: 'Tumakuru',
@@ -8023,7 +8023,7 @@ export const colleges = [
   },
   {
     id: 384,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Bagalkot',
     district: 'Bagalkot',
@@ -8044,7 +8044,7 @@ export const colleges = [
   },
   {
     id: 385,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kalaburagi',
     district: 'Kalaburagi',
@@ -8065,7 +8065,7 @@ export const colleges = [
   },
   {
     id: 386,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Raichur',
     district: 'Raichur',
@@ -8086,7 +8086,7 @@ export const colleges = [
   },
   {
     id: 387,
-    region: 'Bangalore',
+    region: 'Karnataka',
     state: 'Karnataka',
     city: 'Kolar',
     district: 'Kolar',
@@ -8107,7 +8107,7 @@ export const colleges = [
   },
 ];
 
-export const regions = ['All', 'Kerala', 'Bangalore', 'Tamil Nadu'];
+export const regions = ['All', 'Kerala', 'Karnataka', 'Tamil Nadu'];
 
 export const courseFilters = [
   'All Courses',

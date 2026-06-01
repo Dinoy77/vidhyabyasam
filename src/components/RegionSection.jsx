@@ -11,7 +11,7 @@ const regionData = [
     cities: 'TVM, Kochi, Kozhikode, Thrissur',
   },
   {
-    name: 'Bangalore',
+    name: 'Karnataka',
     emoji: '🏙',
     description: 'Silicon Valley of India',
     color: '#7C3AED',

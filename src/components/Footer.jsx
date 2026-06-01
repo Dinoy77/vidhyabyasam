@@ -19,7 +19,7 @@ export default function Footer() {
         <div style={styles.links}>
           {[
             {
-              title: 'Regions', items: ['Kerala Colleges', 'Bangalore Colleges', 'Tamil Nadu Colleges', 'All States']
+              title: 'Regions', items: ['Kerala Colleges', 'Karnataka Colleges', 'Tamil Nadu Colleges', 'All States']
             },
             {
               title: 'Courses', items: ['Engineering', 'Medical', 'MBA', 'Law', 'Arts & Science']

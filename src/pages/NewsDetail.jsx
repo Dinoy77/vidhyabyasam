@@ -62,10 +62,10 @@ const newsItems = [
   {
     id: 8, icon: '🔬', color: '#7C3AED', bg: '#F5F0FF', tag: 'News',
     title: 'New Allied Health Courses 2026', date: '3 days ago',
-    description: 'Several colleges in Bangalore and Tamil Nadu are introducing new Allied Health Science specializations for 2026. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
+    description: 'Several colleges in Karnataka and Tamil Nadu are introducing new Allied Health Science specializations for 2026. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
     eligibility: 'Passed 10+2 with Science subjects',
     courses: ['MLT', 'BPT', 'BHA'],
-    state: 'Bangalore & Tamil Nadu',
+    state: 'Karanataka & Tamil Nadu',
   },
 ];
 
