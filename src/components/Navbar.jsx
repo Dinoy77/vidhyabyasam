@@ -36,7 +36,6 @@ export default function Navbar({ onCourseSelect = () => {} }) {
               Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
             </span>
           </div>
-          <a href="#" style={styles.link}>Exams</a>
         </div>
 
         <div style={styles.navRight}>
@@ -127,7 +126,6 @@ export default function Navbar({ onCourseSelect = () => {} }) {
               </div>
             )}
           </div>
-          <a href="#" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Exams</a>
         </div>
       )}
 
