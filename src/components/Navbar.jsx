@@ -7,7 +7,7 @@ const courseCategories = [
   { title: 'Pharmacy', icon: '💊', color: '#1B6CA8', courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] },
   { title: 'Nursing', icon: '🩺', color: '#059669', courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] },
   { title: 'Allied Health', icon: '🏥', color: '#7C3AED', courses: ['BPT', 'BHA', 'MLT', 'BAMS'] },
-  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'Paramedical', 'Allied Health Sciences'] },
+  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'Paramedical'] },
 ];
 
 export default function Navbar({ onCourseSelect = () => {} }) {

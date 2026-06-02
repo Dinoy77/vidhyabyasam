@@ -10,9 +10,31 @@ export default function Footer() {
             Helping students find their dream colleges<br />across South India since 2026.
           </p>
           <div style={styles.social}>
-            {['📘', '🐦', '📸', '▶️'].map((icon, i) => (
-              <button key={i} style={styles.socialIcon}>{icon}</button>
-            ))}
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/profile.php?id=61590390937659"
+              target="_blank"
+              rel="noreferrer"
+              style={styles.socialLink}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/vidyabhyasam360/"
+              target="_blank"
+              rel="noreferrer"
+              style={styles.socialLink}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -36,15 +58,15 @@ export default function Footer() {
             </div>
           ))}
         </div>
-      </div>
+      </div >
 
-      <div style={styles.bottom}>
-        <p>© 2026 Vidyabhyasam. All rights reserved.</p>
-        <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
-          Built for People Who are Ambitious about Future
-        </p>
-      </div>
-    </footer>
+    <div style={styles.bottom}>
+      <p>© 2026 Vidyabhyasam. All rights reserved.</p>
+      <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
+        Built for People Who are Ambitious about Future
+      </p>
+    </div>
+    </footer >
   );
 }
 
@@ -68,6 +90,13 @@ const styles = {
     background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)',
     cursor: 'pointer', fontSize: '14px',
     display: 'flex', alignItems: 'center', justifyContent: 'center',
+  },
+  socialLink: {
+    width: '36px', height: '36px', borderRadius: '8px',
+    background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)',
+    cursor: 'pointer', fontSize: '14px',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    textDecoration: 'none',
   },
   links: { flex: 3, display: 'flex', gap: '48px', justifyContent: 'flex-end' },
   col: { display: 'flex', flexDirection: 'column', gap: '10px' },
