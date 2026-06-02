@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
@@ -25,17 +25,41 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   
-  // Desktop & Mobile Dropdown States
+  // Desktop Hover States
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [articlesOpen, setArticlesOpen] = useState(false);
+  
+  // Timers to prevent immediate closing (The Fix!)
+  const coursesTimeout = useRef(null);
+  const articlesTimeout = useRef(null);
   const navigate = useNavigate();
 
   // Articles Menu State
   const articleCategories = dropDownData ? Object.keys(dropDownData) : [];
   const [activeArticleCat, setActiveArticleCat] = useState(articleCategories[0] || "");
 
-  // Helper to make article links URL-friendly
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+
+  // --- HOVER DELAY HANDLERS ---
+  const handleCoursesEnter = () => {
+    clearTimeout(coursesTimeout.current);
+    setCoursesOpen(true);
+    setArticlesOpen(false); // Close articles if courses opens
+  };
+
+  const handleCoursesLeave = () => {
+    coursesTimeout.current = setTimeout(() => setCoursesOpen(false), 200); // 200ms delay
+  };
+
+  const handleArticlesEnter = () => {
+    clearTimeout(articlesTimeout.current);
+    setArticlesOpen(true);
+    setCoursesOpen(false); // Close courses if articles opens
+  };
+
+  const handleArticlesLeave = () => {
+    articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200); // 200ms delay
+  };
 
   return (
     <>
@@ -51,8 +75,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           
           {/* Courses Trigger */}
           <div style={styles.dropdownWrapper}
-            onMouseEnter={() => setCoursesOpen(true)}
-            onMouseLeave={() => setCoursesOpen(false)}>
+            onMouseEnter={handleCoursesEnter}
+            onMouseLeave={handleCoursesLeave}>
             <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: coursesOpen ? 'var(--accent)' : 'var(--muted)' }}>
               Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
             </span>
@@ -60,8 +84,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
 
           {/* Articles Trigger */}
           <div style={styles.dropdownWrapper}
-            onMouseEnter={() => setArticlesOpen(true)}
-            onMouseLeave={() => setArticlesOpen(false)}>
+            onMouseEnter={handleArticlesEnter}
+            onMouseLeave={handleArticlesLeave}>
             <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: articlesOpen ? 'var(--accent)' : 'var(--muted)' }}>
               Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
             </span>
@@ -103,8 +127,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {/* Desktop Courses Mega Menu */}
         {coursesOpen && (
           <div style={styles.megaMenuBackdrop}
-            onMouseEnter={() => setCoursesOpen(true)}
-            onMouseLeave={() => setCoursesOpen(false)}>
+            onMouseEnter={handleCoursesEnter}
+            onMouseLeave={handleCoursesLeave}>
             <div style={styles.megaMenu}>
               {courseCategories.map(cat => (
                 <div key={cat.title} style={{
@@ -142,8 +166,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {/* Desktop Articles Mega Menu */}
         {articlesOpen && (
           <div style={styles.megaMenuBackdrop}
-            onMouseEnter={() => setArticlesOpen(true)}
-            onMouseLeave={() => setArticlesOpen(false)}>
+            onMouseEnter={handleArticlesEnter}
+            onMouseLeave={handleArticlesLeave}>
             <div style={styles.articlesMegaMenu}>
               
               <div style={styles.menuLeft}>
@@ -168,11 +192,15 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     {dropDownData[activeArticleCat].map((article, idx) => (
                       <a 
                         key={idx} 
-                        href={`/articles/${createSlug(article)}`} 
+                        href="/" 
                         style={styles.articleLink}
                         onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
                         onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
-                        onClick={() => setArticlesOpen(false)}
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevents a hard page reload
+                          setArticlesOpen(false);
+                          navigate('/');
+                        }}
                       >
                         {article}
                       </a>
@@ -219,7 +247,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             )}
           </div>
 
-          {/* Articles Mobile (Clean Accordion Style) */}
+          {/* Articles Mobile */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setArticlesOpen(!articlesOpen)}>
               <span>Articles</span>
@@ -230,7 +258,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                 {articleCategories.map(category => (
                   <div key={category} style={styles.mobileAccordionBlock}>
                     
-                    {/* Tappable Category Header */}
                     <div 
                       style={{
                         ...styles.mobileAccordionHeader,
@@ -250,15 +277,19 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                       </span>
                     </div>
 
-                    {/* Expandable Article Links */}
                     {activeArticleCat === category && (
                       <div style={styles.mobileAccordionContent}>
                         {dropDownData[category].map(article => (
                           <a 
                             key={article} 
-                            href={`/articles/${createSlug(article)}`} 
+                            href="/" 
                             style={styles.mobileAccordionLink}
-                            onClick={() => { setArticlesOpen(false); setMenuOpen(false); }}
+                            onClick={(e) => { 
+                              e.preventDefault(); // Prevents a hard page reload
+                              setArticlesOpen(false); 
+                              setMenuOpen(false); 
+                              navigate('/');
+                            }}
                           >
                             {article}
                           </a>
@@ -271,7 +302,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               </div>
             )}
           </div>
-
         </div>
       )}
 
@@ -293,7 +323,7 @@ const styles = {
   logo: { display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'Playfair Display, serif', fontSize: '20px', fontWeight: 900 },
   logoIcon: { fontSize: '22px' },
   logoText: { letterSpacing: '-0.5px' },
-  navLinks: { display: 'flex', gap: '32px', alignItems: 'center', textDecoration: 'none' },
+  navLinks: { display: 'flex', gap: '32px', alignItems: 'center', textDecoration: 'none', height: '100%' },
   link: { fontSize: '14px', fontWeight: 500, color: 'var(--muted)', textDecoration: 'none' },
   navRight: { display: 'flex', gap: '10px', alignItems: 'center' },
   loginBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 500, background: 'transparent', border: '1.5px solid var(--deep)', color: 'var(--deep)' },
@@ -313,11 +343,12 @@ const styles = {
   mobileCatHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   mobileCatTitle: { fontSize: '13px', fontWeight: 700, color: '#fff' },
   mobileCourseItem: { width: '100%', textAlign: 'left', padding: '9px 14px', fontSize: '13px', fontWeight: 500, background: '#fff', border: 'none', borderTop: '1px solid var(--border)', cursor: 'pointer', color: 'var(--deep)', fontFamily: 'DM Sans, sans-serif' },
-  dropdownWrapper: { position: 'relative', paddingBottom: '20px', marginBottom: '-20px' },
-  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '10px', background: 'transparent' },
+  
+  dropdownWrapper: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px', padding: '0 4px' },
+  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
   
   // Desktop Courses Mega Menu
-  megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
+  megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
@@ -326,7 +357,7 @@ const styles = {
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
 
   // Desktop Articles Mega Menu Styles
-  articlesMegaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '760px', maxWidth: '95vw' },
+  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '760px', maxWidth: '95vw' },
   menuLeft: { width: '40%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)' },
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '14px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 500 },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
@@ -336,7 +367,7 @@ const styles = {
   articleLink: { textDecoration: 'none', color: 'var(--deep)', fontSize: '14px', transition: 'color 0.2s', lineHeight: '1.4', fontWeight: 500 },
   emptyState: { color: 'var(--muted)', fontSize: '14px', fontStyle: 'italic' },
 
-  // NEW: Mobile Articles Accordion Styles
+  // Mobile Articles Accordion Styles
   mobileAccordionBlock: { background: '#fff', borderRadius: '8px', border: '1px solid var(--border)', marginBottom: '8px', overflow: 'hidden' },
   mobileAccordionHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', cursor: 'pointer', background: '#fff' },
   mobileAccordionContent: { display: 'flex', flexDirection: 'column', background: 'var(--cream, #fafaf9)' },
