@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import CollegeDetail from './pages/CollegeDetail';
 import NewsDetail from './pages/NewsDetail';
 import WhatsAppButton from './components/WhatsAppButton';
+import ChatBot from './components/ChatBot';
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -30,6 +31,7 @@ export default function App() {
           </Routes>
         </main>
          <WhatsAppButton />
+         <ChatBot />
       </AuthProvider>
     </BrowserRouter>
   );

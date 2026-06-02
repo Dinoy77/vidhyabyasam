@@ -251,7 +251,7 @@ export default function Hero({ onSearch }) {
           </h1>
 
           <p style={styles.sub}>
-            Explore 386+ colleges across Kerala, Karnataka & Tamil Nadu.
+            Explore 489+ colleges across Kerala, Karnataka & Tamil Nadu.
             Compare, enquire, and start your dream career.
           </p>
 
@@ -279,7 +279,7 @@ export default function Hero({ onSearch }) {
 
           <div style={styles.stats}>
             {[
-              { num: '386+', label: 'Colleges' },
+              { num: '489+', label: 'Colleges' },
               { num: '3', label: 'States' },
               { num: '50K+', label: 'Helped' },
               { num: '20+', label: 'Courses' },
