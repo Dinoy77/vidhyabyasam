@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
+// Ensure this path exactly matches your data file
+import { dropDownData } from '../data/dropDownData';
 
 const courseCategories = [
   { title: 'Pharmacy', icon: '💊', color: '#1B6CA8', courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] },
@@ -22,8 +24,18 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   const [showAuth, setShowAuth] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  // Desktop & Mobile Dropdown States
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const [articlesOpen, setArticlesOpen] = useState(false);
   const navigate = useNavigate();
+
+  // Articles Menu State
+  const articleCategories = dropDownData ? Object.keys(dropDownData) : [];
+  const [activeArticleCat, setActiveArticleCat] = useState(articleCategories[0] || "");
+
+  // Helper to make article links URL-friendly
+  const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
   return (
     <>
@@ -36,11 +48,22 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         <div style={styles.navLinks} className="hide-mobile">
           <a href="#colleges" style={styles.link}>Colleges</a>
           <a href="#regions" style={styles.link}>By Region</a>
+          
+          {/* Courses Trigger */}
           <div style={styles.dropdownWrapper}
             onMouseEnter={() => setCoursesOpen(true)}
             onMouseLeave={() => setCoursesOpen(false)}>
             <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: coursesOpen ? 'var(--accent)' : 'var(--muted)' }}>
               Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
+            </span>
+          </div>
+
+          {/* Articles Trigger */}
+          <div style={styles.dropdownWrapper}
+            onMouseEnter={() => setArticlesOpen(true)}
+            onMouseLeave={() => setArticlesOpen(false)}>
+            <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: articlesOpen ? 'var(--accent)' : 'var(--muted)' }}>
+              Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
             </span>
           </div>
         </div>
@@ -77,6 +100,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           </button>
         </div>
 
+        {/* Desktop Courses Mega Menu */}
         {coursesOpen && (
           <div style={styles.megaMenuBackdrop}
             onMouseEnter={() => setCoursesOpen(true)}
@@ -114,12 +138,62 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             </div>
           </div>
         )}
+
+        {/* Desktop Articles Mega Menu */}
+        {articlesOpen && (
+          <div style={styles.megaMenuBackdrop}
+            onMouseEnter={() => setArticlesOpen(true)}
+            onMouseLeave={() => setArticlesOpen(false)}>
+            <div style={styles.articlesMegaMenu}>
+              
+              <div style={styles.menuLeft}>
+                {articleCategories.map((category) => (
+                  <div
+                    key={category}
+                    style={{
+                      ...styles.categoryItem,
+                      ...(activeArticleCat === category ? styles.activeCategory : {})
+                    }}
+                    onMouseEnter={() => setActiveArticleCat(category)}
+                  >
+                    <span>{category}</span>
+                    <span style={{ ...styles.arrow, color: activeArticleCat === category ? 'var(--accent)' : '#ccc' }}>›</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={styles.menuRight}>
+                {dropDownData[activeArticleCat]?.length > 0 ? (
+                  <div style={styles.linksGrid}>
+                    {dropDownData[activeArticleCat].map((article, idx) => (
+                      <a 
+                        key={idx} 
+                        href={`/articles/${createSlug(article)}`} 
+                        style={styles.articleLink}
+                        onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
+                        onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
+                        onClick={() => setArticlesOpen(false)}
+                      >
+                        {article}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <p style={styles.emptyState}>No articles found.</p>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
+      {/* Mobile Menu */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
           <a href="#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>
           <a href="#regions" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>By Region</a>
+          
+          {/* Courses Mobile */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setCoursesOpen(!coursesOpen)}>
               <span>Courses</span>
@@ -144,6 +218,60 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               </div>
             )}
           </div>
+
+          {/* Articles Mobile (Clean Accordion Style) */}
+          <div>
+            <button style={styles.mobileLinkBtn} onClick={() => setArticlesOpen(!articlesOpen)}>
+              <span>Articles</span>
+              <span style={{ fontSize: '11px' }}>{articlesOpen ? '▴' : '▾'}</span>
+            </button>
+            {articlesOpen && (
+              <div style={styles.mobileCoursesPanel}>
+                {articleCategories.map(category => (
+                  <div key={category} style={styles.mobileAccordionBlock}>
+                    
+                    {/* Tappable Category Header */}
+                    <div 
+                      style={{
+                        ...styles.mobileAccordionHeader,
+                        borderBottom: activeArticleCat === category ? '1px solid var(--border)' : 'none',
+                      }}
+                      onClick={() => setActiveArticleCat(activeArticleCat === category ? "" : category)}
+                    >
+                      <span style={{ 
+                        fontSize: '13px', 
+                        fontWeight: activeArticleCat === category ? 700 : 600,
+                        color: activeArticleCat === category ? 'var(--accent)' : 'var(--deep)'
+                      }}>
+                        {category}
+                      </span>
+                      <span style={{ color: 'var(--muted)', fontSize: '16px' }}>
+                        {activeArticleCat === category ? '▾' : '›'}
+                      </span>
+                    </div>
+
+                    {/* Expandable Article Links */}
+                    {activeArticleCat === category && (
+                      <div style={styles.mobileAccordionContent}>
+                        {dropDownData[category].map(article => (
+                          <a 
+                            key={article} 
+                            href={`/articles/${createSlug(article)}`} 
+                            style={styles.mobileAccordionLink}
+                            onClick={() => { setArticlesOpen(false); setMenuOpen(false); }}
+                          >
+                            {article}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
         </div>
       )}
 
@@ -165,8 +293,8 @@ const styles = {
   logo: { display: 'flex', alignItems: 'center', gap: '6px', fontFamily: 'Playfair Display, serif', fontSize: '20px', fontWeight: 900 },
   logoIcon: { fontSize: '22px' },
   logoText: { letterSpacing: '-0.5px' },
-  navLinks: { display: 'flex', gap: '32px', alignItems: 'center' },
-  link: { fontSize: '14px', fontWeight: 500, color: 'var(--muted)' },
+  navLinks: { display: 'flex', gap: '32px', alignItems: 'center', textDecoration: 'none' },
+  link: { fontSize: '14px', fontWeight: 500, color: 'var(--muted)', textDecoration: 'none' },
   navRight: { display: 'flex', gap: '10px', alignItems: 'center' },
   loginBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 500, background: 'transparent', border: '1.5px solid var(--deep)', color: 'var(--deep)' },
   signupBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: 'var(--accent)', color: '#fff', border: 'none' },
@@ -177,21 +305,40 @@ const styles = {
   dropdownUser: { display: 'flex', flexDirection: 'column', gap: '2px', padding: '4px 8px', fontSize: '14px' },
   dropdownItem: { width: '100%', textAlign: 'left', background: 'none', border: 'none', padding: '8px', borderRadius: '8px', fontSize: '14px', cursor: 'pointer', color: 'var(--accent)', fontWeight: 500 },
   hamburger: { background: 'none', border: '1.5px solid var(--border)', borderRadius: '8px', width: '36px', height: '36px', fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginLeft: '4px' },
-  mobileMenu: { position: 'fixed', top: '110px', left: 0, right: 0, zIndex: 998, background: '#fff', borderBottom: '1px solid var(--border)', display: 'flex', flexDirection: 'column', padding: '8px 0', boxShadow: '0 8px 20px rgba(0,0,0,0.08)' },
-  mobileLink: { padding: '14px 24px', fontSize: '15px', fontWeight: 500, color: 'var(--deep)', borderBottom: '1px solid var(--border)', display: 'block' },
+  mobileMenu: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 998, background: '#fff', borderBottom: '1px solid var(--border)', display: 'flex', flexDirection: 'column', padding: '8px 0', boxShadow: '0 8px 20px rgba(0,0,0,0.08)' },
+  mobileLink: { padding: '14px 24px', fontSize: '15px', fontWeight: 500, color: 'var(--deep)', borderBottom: '1px solid var(--border)', display: 'block', textDecoration: 'none' },
   mobileLinkBtn: { width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 24px', fontSize: '15px', fontWeight: 500, color: 'var(--deep)', borderBottom: '1px solid var(--border)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' },
-  mobileCoursesPanel: { background: 'var(--cream)', borderBottom: '1px solid var(--border)', padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '60vh', overflowY: 'auto' },
+  mobileCoursesPanel: { background: 'var(--cream, #fafaf9)', borderBottom: '1px solid var(--border)', padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '65vh', overflowY: 'auto' },
   mobileCatBlock: { borderRadius: '10px', overflow: 'hidden', border: '1px solid var(--border)' },
-  mobileCatHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 12px' },
-  mobileCatTitle: { fontSize: '12px', fontWeight: 700, color: '#fff' },
+  mobileCatHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
+  mobileCatTitle: { fontSize: '13px', fontWeight: 700, color: '#fff' },
   mobileCourseItem: { width: '100%', textAlign: 'left', padding: '9px 14px', fontSize: '13px', fontWeight: 500, background: '#fff', border: 'none', borderTop: '1px solid var(--border)', cursor: 'pointer', color: 'var(--deep)', fontFamily: 'DM Sans, sans-serif' },
   dropdownWrapper: { position: 'relative', paddingBottom: '20px', marginBottom: '-20px' },
-  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
- megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
+  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '10px', background: 'transparent' },
+  
+  // Desktop Courses Mega Menu
+  megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
   megaColTitle: { fontSize: '12px', fontWeight: 700, color: '#fff', letterSpacing: '0.5px' },
   megaColItems: { display: 'flex', flexDirection: 'column', padding: '6px', gap: '2px' },
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
+
+  // Desktop Articles Mega Menu Styles
+  articlesMegaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '760px', maxWidth: '95vw' },
+  menuLeft: { width: '40%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)' },
+  categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '14px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 500 },
+  activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
+  arrow: { fontSize: '18px', fontWeight: 'bold' },
+  menuRight: { width: '60%', background: 'var(--cream, #fafaf9)', padding: '24px' },
+  linksGrid: { display: 'flex', flexDirection: 'column', gap: '14px' },
+  articleLink: { textDecoration: 'none', color: 'var(--deep)', fontSize: '14px', transition: 'color 0.2s', lineHeight: '1.4', fontWeight: 500 },
+  emptyState: { color: 'var(--muted)', fontSize: '14px', fontStyle: 'italic' },
+
+  // NEW: Mobile Articles Accordion Styles
+  mobileAccordionBlock: { background: '#fff', borderRadius: '8px', border: '1px solid var(--border)', marginBottom: '8px', overflow: 'hidden' },
+  mobileAccordionHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', cursor: 'pointer', background: '#fff' },
+  mobileAccordionContent: { display: 'flex', flexDirection: 'column', background: 'var(--cream, #fafaf9)' },
+  mobileAccordionLink: { padding: '10px 16px 10px 24px', fontSize: '13px', color: '#555', textDecoration: 'none', borderBottom: '1px solid #f0f0f0', display: 'block', lineHeight: 1.4 },
 };
