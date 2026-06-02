@@ -6,11 +6,18 @@ import AuthModal from './AuthModal';
 const courseCategories = [
   { title: 'Pharmacy', icon: '💊', color: '#1B6CA8', courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] },
   { title: 'Nursing', icon: '🩺', color: '#059669', courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] },
-  { title: 'Allied Health', icon: '🏥', color: '#7C3AED', courses: ['BPT', 'BHA', 'MLT', 'BAMS'] },
-  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'Paramedical'] },
+  {
+    title: 'Allied Health', icon: '🏥', color: '#7C3AED', courses: [
+      'BPT', 'BHA', 'MLT', 'BAMS',
+      'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT',
+      'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT',
+      'B.Sc CPT', 'B.Sc NST', 'B.Sc Optometry', 'B.Optom', 'DPT',
+    ]
+  },
+  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] },
 ];
 
-export default function Navbar({ onCourseSelect = () => {} }) {
+export default function Navbar({ onCourseSelect = () => { } }) {
   const { user, logout } = useAuth();
   const [showAuth, setShowAuth] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -76,14 +83,25 @@ export default function Navbar({ onCourseSelect = () => {} }) {
             onMouseLeave={() => setCoursesOpen(false)}>
             <div style={styles.megaMenu}>
               {courseCategories.map(cat => (
-                <div key={cat.title} style={styles.megaCol}>
+                <div key={cat.title} style={{
+                  ...styles.megaCol,
+                  flex: cat.title === 'Allied Health' ? 2 : 1,
+                }}>
                   <div style={{ ...styles.megaColHeader, background: cat.color }}>
                     <span style={styles.megaColIcon}>{cat.icon}</span>
                     <span style={styles.megaColTitle}>{cat.title}</span>
                   </div>
-                  <div style={styles.megaColItems}>
+                  <div style={{
+                    ...styles.megaColItems,
+                    flexDirection: cat.title === 'Allied Health' ? 'row' : 'column',
+                    flexWrap: cat.title === 'Allied Health' ? 'wrap' : 'nowrap',
+                  }}>
                     {cat.courses.map(course => (
-                      <button key={course} style={styles.megaItem}
+                      <button key={course}
+                        style={{
+                          ...styles.megaItem,
+                          width: cat.title === 'Allied Health' ? 'calc(50% - 4px)' : '100%',
+                        }}
                         onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'}
                         onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                         onClick={() => { onCourseSelect(course); setCoursesOpen(false); }}>
@@ -169,7 +187,7 @@ const styles = {
   mobileCourseItem: { width: '100%', textAlign: 'left', padding: '9px 14px', fontSize: '13px', fontWeight: 500, background: '#fff', border: 'none', borderTop: '1px solid var(--border)', cursor: 'pointer', color: 'var(--deep)', fontFamily: 'DM Sans, sans-serif' },
   dropdownWrapper: { position: 'relative', paddingBottom: '20px', marginBottom: '-20px' },
   megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
-  megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '760px', maxWidth: '95vw' },
+ megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
