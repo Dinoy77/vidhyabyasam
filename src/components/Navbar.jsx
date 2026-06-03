@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
-// Ensure this path exactly matches your data file
 import { dropDownData } from '../data/dropDownData';
 
 const courseCategories = [
@@ -19,61 +18,119 @@ const courseCategories = [
   { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] },
 ];
 
+// FIXED: Exact mapping to match your dropDownData text strings to the App.jsx routes
+const articleRouteMap = {
+  // Top Ranked Colleges
+  "Top Medical Colleges in India": "/articles/TopIndianMedicalColleges",
+  "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges", // Fallback if South specific route doesn't exist
+  "Top Government Medical Colleges": "/articles/TopGovtMedicalColleges",
+  "Top Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
+  "Top Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
+  "Top Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
+  
+  // Just in case these older string names are still in your data:
+  "Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
+  "Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
+  "Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
+
+  // Course Guides
+  "MBBS (Bachelor of Medicine, Bachelor of Surgery)": "/articles/MbbsCourseGuide",
+  "BDS (Bachelor of Dental Surgery)": "/articles/BdsCourseGuide",
+  "BAMS (Ayurvedic Medicine)": "/articles/BamsCourseGuide",
+  "BSc Nursing": "/articles/BscNursingCourseGuide",
+  "B.Pharm (Pharmacy)": "/articles/BPharmCourseGuide",
+
+  // Exam Guides
+  "NEET UG": "/articles/NeetUgGuide",
+  "NEET PG": "/articles/NeetPgGuide",
+  "INI CET": "/articles/IniCetGuide",
+  "FMGE": "/articles/FmgeGuide",
+  "AIIMS Nursing Exam": "/articles/AiimsNursingGuide"
+};
+
 export default function Navbar({ onCourseSelect = () => { } }) {
   const { user, logout } = useAuth();
   const [showAuth, setShowAuth] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   
-  // Desktop Hover States
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [articlesOpen, setArticlesOpen] = useState(false);
   
-  // Timers to prevent immediate closing (The Fix!)
+  const navRef = useRef(null);
   const coursesTimeout = useRef(null);
   const articlesTimeout = useRef(null);
   const navigate = useNavigate();
 
-  // Articles Menu State
   const articleCategories = dropDownData ? Object.keys(dropDownData) : [];
   const [activeArticleCat, setActiveArticleCat] = useState(articleCategories[0] || "");
 
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
-  // --- HOVER DELAY HANDLERS ---
+  // --- FIXED: CLICK & TOUCH OUTSIDE LOGIC ---
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setCoursesOpen(false);
+        setArticlesOpen(false);
+        setShowDropdown(false);
+        setMenuOpen(false); // Ensures mobile menu also closes
+      }
+    };
+
+    // Added touchstart so it instantly recognizes taps on mobile devices
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, []);
+
   const handleCoursesEnter = () => {
     clearTimeout(coursesTimeout.current);
     setCoursesOpen(true);
-    setArticlesOpen(false); // Close articles if courses opens
+    setArticlesOpen(false); 
   };
 
   const handleCoursesLeave = () => {
-    coursesTimeout.current = setTimeout(() => setCoursesOpen(false), 200); // 200ms delay
+    coursesTimeout.current = setTimeout(() => setCoursesOpen(false), 200); 
   };
 
   const handleArticlesEnter = () => {
     clearTimeout(articlesTimeout.current);
     setArticlesOpen(true);
-    setCoursesOpen(false); // Close courses if articles opens
+    setCoursesOpen(false); 
   };
 
   const handleArticlesLeave = () => {
-    articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200); // 200ms delay
+    articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200); 
+  };
+
+  // --- ARTICLE CLICK ROUTING ---
+  const handleArticleClick = (e, articleName) => {
+    e.preventDefault();
+    setArticlesOpen(false);
+    setMenuOpen(false);
+
+    // Look up the exact route from our dictionary
+    const targetRoute = articleRouteMap[articleName] || `/articles/${createSlug(articleName)}`;
+    navigate(targetRoute);
   };
 
   return (
     <>
-      <nav style={styles.nav}>
+      <nav style={styles.nav} ref={navRef}>
         <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => navigate('/')}>
           <span style={styles.logoIcon}>🎓</span>
           <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
 
         <div style={styles.navLinks} className="hide-mobile">
-          <a href="#colleges" style={styles.link}>Colleges</a>
-          <a href="#regions" style={styles.link}>By Region</a>
+          <a href="/#colleges" style={styles.link} onClick={() => navigate('/')}>Colleges</a>
+          <a href="/#regions" style={styles.link} onClick={() => navigate('/')}>By Region</a>
           
-          {/* Courses Trigger */}
           <div style={styles.dropdownWrapper}
             onMouseEnter={handleCoursesEnter}
             onMouseLeave={handleCoursesLeave}>
@@ -82,7 +139,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             </span>
           </div>
 
-          {/* Articles Trigger */}
           <div style={styles.dropdownWrapper}
             onMouseEnter={handleArticlesEnter}
             onMouseLeave={handleArticlesLeave}>
@@ -128,7 +184,11 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {coursesOpen && (
           <div style={styles.megaMenuBackdrop}
             onMouseEnter={handleCoursesEnter}
-            onMouseLeave={handleCoursesLeave}>
+            onMouseLeave={handleCoursesLeave}
+            onClick={(e) => {
+              // Close if clicking the invisible backdrop outside the white menu box
+              if(e.target === e.currentTarget) setCoursesOpen(false);
+            }}>
             <div style={styles.megaMenu}>
               {courseCategories.map(cat => (
                 <div key={cat.title} style={{
@@ -152,7 +212,11 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         }}
                         onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'}
                         onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-                        onClick={() => { onCourseSelect(course); setCoursesOpen(false); }}>
+                        onClick={() => { 
+                          onCourseSelect(course); 
+                          setCoursesOpen(false); 
+                          navigate('/'); 
+                        }}>
                         {course}
                       </button>
                     ))}
@@ -167,7 +231,11 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {articlesOpen && (
           <div style={styles.megaMenuBackdrop}
             onMouseEnter={handleArticlesEnter}
-            onMouseLeave={handleArticlesLeave}>
+            onMouseLeave={handleArticlesLeave}
+            onClick={(e) => {
+              // Close if clicking the invisible backdrop outside the white menu box
+              if(e.target === e.currentTarget) setArticlesOpen(false);
+            }}>
             <div style={styles.articlesMegaMenu}>
               
               <div style={styles.menuLeft}>
@@ -196,11 +264,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         style={styles.articleLink}
                         onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
                         onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
-                        onClick={(e) => {
-                          e.preventDefault(); // Prevents a hard page reload
-                          setArticlesOpen(false);
-                          navigate('/');
-                        }}
+                        onClick={(e) => handleArticleClick(e, article)}
                       >
                         {article}
                       </a>
@@ -215,13 +279,12 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         )}
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu. */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
-          <a href="#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>
-          <a href="#regions" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>By Region</a>
+          <a href="/#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>
+          <a href="/#regions" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>By Region</a>
           
-          {/* Courses Mobile */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setCoursesOpen(!coursesOpen)}>
               <span>Courses</span>
@@ -237,7 +300,12 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     </div>
                     {cat.courses.map(course => (
                       <button key={course} style={styles.mobileCourseItem}
-                        onClick={() => { onCourseSelect(course); setCoursesOpen(false); setMenuOpen(false); }}>
+                        onClick={() => { 
+                          onCourseSelect(course); 
+                          setCoursesOpen(false); 
+                          setMenuOpen(false); 
+                          navigate('/'); 
+                        }}>
                         {course}
                       </button>
                     ))}
@@ -247,7 +315,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             )}
           </div>
 
-          {/* Articles Mobile */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setArticlesOpen(!articlesOpen)}>
               <span>Articles</span>
@@ -284,12 +351,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                             key={article} 
                             href="/" 
                             style={styles.mobileAccordionLink}
-                            onClick={(e) => { 
-                              e.preventDefault(); // Prevents a hard page reload
-                              setArticlesOpen(false); 
-                              setMenuOpen(false); 
-                              navigate('/');
-                            }}
+                            onClick={(e) => handleArticleClick(e, article)}
                           >
                             {article}
                           </a>
@@ -335,7 +397,7 @@ const styles = {
   dropdownUser: { display: 'flex', flexDirection: 'column', gap: '2px', padding: '4px 8px', fontSize: '14px' },
   dropdownItem: { width: '100%', textAlign: 'left', background: 'none', border: 'none', padding: '8px', borderRadius: '8px', fontSize: '14px', cursor: 'pointer', color: 'var(--accent)', fontWeight: 500 },
   hamburger: { background: 'none', border: '1.5px solid var(--border)', borderRadius: '8px', width: '36px', height: '36px', fontSize: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginLeft: '4px' },
-  mobileMenu: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 998, background: '#fff', borderBottom: '1px solid var(--border)', display: 'flex', flexDirection: 'column', padding: '8px 0', boxShadow: '0 8px 20px rgba(0,0,0,0.08)' },
+  mobileMenu: { position: 'absolute', top: '64px', left: 0, right: 0, zIndex: 998, background: '#fff', borderBottom: '1px solid var(--border)', display: 'flex', flexDirection: 'column', padding: '8px 0', boxShadow: '0 8px 20px rgba(0,0,0,0.08)' },
   mobileLink: { padding: '14px 24px', fontSize: '15px', fontWeight: 500, color: 'var(--deep)', borderBottom: '1px solid var(--border)', display: 'block', textDecoration: 'none' },
   mobileLinkBtn: { width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 24px', fontSize: '15px', fontWeight: 500, color: 'var(--deep)', borderBottom: '1px solid var(--border)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' },
   mobileCoursesPanel: { background: 'var(--cream, #fafaf9)', borderBottom: '1px solid var(--border)', padding: '12px', display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '65vh', overflowY: 'auto' },
@@ -345,10 +407,10 @@ const styles = {
   mobileCourseItem: { width: '100%', textAlign: 'left', padding: '9px 14px', fontSize: '13px', fontWeight: 500, background: '#fff', border: 'none', borderTop: '1px solid var(--border)', cursor: 'pointer', color: 'var(--deep)', fontFamily: 'DM Sans, sans-serif' },
   
   dropdownWrapper: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px', padding: '0 4px' },
-  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
+  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, height: '100vh', zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
   
   // Desktop Courses Mega Menu
-  megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw' },
+  megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
@@ -357,7 +419,7 @@ const styles = {
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
 
   // Desktop Articles Mega Menu Styles
-  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '760px', maxWidth: '95vw' },
+  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '760px', maxWidth: '95vw', height: 'fit-content' },
   menuLeft: { width: '40%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)' },
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '14px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 500 },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },

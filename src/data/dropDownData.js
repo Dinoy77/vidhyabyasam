@@ -1,6 +1,6 @@
 export const dropDownData = {
   "Top Ranked Medical Colleges": [
-    "Top Medical Colleges in India",
+    "Top Medical Colleges in South India",
     "Top Government Medical Colleges",
     "Top Medical Colleges in Karnataka",
     "Top Medical Colleges in Tamil Nadu",
