@@ -297,6 +297,27 @@ export default function Hero({ onSearch }) {
           <NewsTicker onViewDetails={(item) => navigate(`/news/${item.id}`)} />
         </div>
       </div>
+
+      {/* News Scroll Bar */}
+      <div id="news" style={ns2.bar}>
+        <div style={ns2.label}>
+          <span style={ns2.dot} />
+          <span style={ns2.labelText}>Latest News</span>
+        </div>
+        <div style={ns2.track}>
+          <div className="news-scroll">
+            {[...newsItems, ...newsItems].map((item, i) => (
+              <span key={i} style={ns2.item}
+                onClick={() => navigate(`/news/${item.id}`)}>
+                <span style={ns2.tag}>{item.icon} {item.tag}</span>
+                <span style={ns2.title}>{item.title}</span>
+                <span style={ns2.sep}>•</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Quote bar */}
       <div style={styles.quoteBar}>
         <span style={styles.quoteDot} />
@@ -511,4 +532,44 @@ const styles = {
   stat: { display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2px' },
   statNum: { fontSize: 'clamp(20px,3vw,28px)', fontFamily: 'Playfair Display, serif', color: '#fff' },
   statLabel: { fontSize: '11px', color: 'rgba(255,255,255,0.5)', letterSpacing: '1px', textTransform: 'uppercase' },
+};
+const ns2 = {
+  bar: {
+    position: 'absolute', top: '10px', left: '50%',
+    transform: 'translateX(-50%)',
+    zIndex: 10, display: 'flex', alignItems: 'center',
+    height: '60px',
+    width: '80%', maxWidth: '900px',
+    background: 'rgba(255,255,255,0.08)',
+    backdropFilter: 'blur(10px)',
+    borderRadius: '12px',
+    border: '1px solid rgba(255,255,255,0.15)',
+    overflow: 'hidden',
+  },
+  label: {
+    display: 'flex', alignItems: 'center', gap: '6px',
+    background: 'var(--accent)', padding: '0 16px',
+    height: '100%', flexShrink: 0,
+  },
+  dot: {
+    width: '7px', height: '7px', borderRadius: '50%',
+    background: '#fff', flexShrink: 0,
+    boxShadow: '0 0 0 2px rgba(255,255,255,0.3)',
+  },
+  labelText: {
+    fontSize: '11px', fontWeight: 700, color: '#fff',
+    whiteSpace: 'nowrap', letterSpacing: '0.5px', textTransform: 'uppercase',
+  },
+  track: {
+    flex: 1, overflow: 'hidden', height: '100%',
+    display: 'flex', alignItems: 'center',
+  },
+  item: {
+    display: 'inline-flex', alignItems: 'center',
+    gap: '8px', padding: '0 24px',
+    whiteSpace: 'nowrap', cursor: 'pointer',
+  },
+  tag: { fontSize: '11px', fontWeight: 700, color: '#F5A623' },
+  title: { fontSize: '12px', color: 'rgba(255,255,255,0.85)', fontWeight: 500 },
+  sep: { color: 'rgba(255,255,255,0.3)', fontSize: '14px', marginLeft: '8px' },
 };
