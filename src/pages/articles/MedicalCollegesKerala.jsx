@@ -108,7 +108,7 @@ export default function MedicalCollegesKerala() {
           ))}
         </div>
 
-        {/* --- PAGINATION UI --- */}
+        {/* --- PAGINATION UI ---. */}
         {totalPages > 1 && (
           <div style={styles.paginationContainer}>
             <button 

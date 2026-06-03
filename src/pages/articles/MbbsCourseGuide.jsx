@@ -129,7 +129,7 @@ export default function MbbsCourseGuide() {
           </div>
         </section>
 
-        {/* Fees and Cost Breakdown */}
+        {/* Fees and Cost Breakdown. */}
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>Fee Structure Trends</h2>
           <p style={styles.paragraph}>

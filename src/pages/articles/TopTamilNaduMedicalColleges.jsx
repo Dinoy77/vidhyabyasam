@@ -31,7 +31,7 @@ export default function TopTamilNaduMedicalColleges() {
         <div style={styles.listContainer}>
           {top10TamilNaduColleges.map((college, index) => (
             <article key={college.id} style={styles.card}>
-              {/* Image & Rank Section */}
+              {/* Image & Rank Section. */}
               <div style={styles.imageBox}>
                 <div style={styles.rankRibbon}>
                   <span style={styles.rankHash}>#</span>

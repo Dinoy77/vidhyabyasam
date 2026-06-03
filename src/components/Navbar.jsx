@@ -279,7 +279,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         )}
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu. */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
           <a href="/#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>

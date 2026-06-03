@@ -111,7 +111,7 @@ export default function MedicalCollegesKarnataka() {
           ))}
         </div>
 
-        {/* --- NEW PAGINATION UI --- */}
+        {/* --- NEW PAGINATION UI ---. */}
         {totalPages > 1 && (
           <div style={styles.paginationContainer}>
             <button 

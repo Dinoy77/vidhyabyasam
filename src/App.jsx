@@ -25,7 +25,7 @@ import BamsCourseGuide from './pages/articles/BamsCourseGuide';
 import BscNursingCourseGuide from './pages/articles/BscNursingCourseGuide';
 import BPharmCourseGuide from './pages/articles/BPharmCourseGuide';
 
-// Exam Guide Imports
+// Exam Guide Imports.
 import NeetUgGuide from './pages/articles/NeetUgGuide';
 import NeetPgGuide from './pages/articles/NeetPgGuide';
 import IniCetGuide from './pages/articles/IniCetGuide';

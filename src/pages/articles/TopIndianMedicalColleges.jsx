@@ -98,7 +98,7 @@ export default function TopSouthIndianMedicalColleges() {
                   </div>
                 </div>
 
-                {/* Program Scope Tags */}
+                {/* Program Scope Tags. */}
                 <div style={styles.tagSection}>
                   <span style={styles.tagHeading}>Available Tracks:</span>
                   <div style={styles.tagWrapper}>

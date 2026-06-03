@@ -71,7 +71,7 @@ export default function NeetPgGuide() {
   );
 }
 
-// Ensure the styles object from the first file is pasted here identically.
+// Ensure the styles object from the first file is pasted here identically..
 const styles = {
   pageContainer: { backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'DM Sans, sans-serif' },
   heroHeader: { backgroundColor: '#f8fafc', padding: '60px 24px 40px', borderBottom: '1px solid #e2e8f0', textAlign: 'center' },

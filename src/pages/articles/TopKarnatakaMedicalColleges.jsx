@@ -45,7 +45,7 @@ export default function TopKarnatakaMedicalColleges() {
                 />
               </div>
 
-              {/* Content Section */}
+              {/* Content Section. */}
               <div style={styles.contentBox}>
                 <h2 style={styles.collegeName}>{college.name}</h2>
                 <p style={styles.location}>📍 {college.city}, {college.state}</p>

@@ -9,7 +9,7 @@ export default function TopKeralaMedicalColleges() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Filter and sort the data for the article
+  // Filter and sort the data for the article.
   const top10Colleges = useMemo(() => {
     return colleges
       .filter(c => c.state === 'Kerala' && c.courses.includes('MBBS'))

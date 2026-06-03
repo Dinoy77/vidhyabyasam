@@ -106,7 +106,7 @@ export default function BdsCourseGuide() {
     </div>
   );
 }
-
+//.
 const styles = {
   pageContainer: { backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'DM Sans, sans-serif' },
   heroHeader: { backgroundColor: '#f8fafc', padding: '60px 24px 40px', borderBottom: '1px solid #e2e8f0', textAlign: 'center' },
