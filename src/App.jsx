@@ -14,9 +14,8 @@ import TopTamilNaduMedicalColleges from './pages/articles/TopTamilNaduMedicalCol
 import TopKarnatakaMedicalColleges from './pages/articles/TopKarnatakaMedicalColleges';
 import TopIndianMedicalColleges from './pages/articles/TopIndianMedicalColleges';
 import TopGovtMedicalColleges from './pages/articles/TopGovtMedicalColleges';
-import MedicalCollegesKarnataka from './pages/articles/MedicalCollegesKarnataka';
-import MedicalCollegesKerala from './pages/articles/MedicalCollegesKerala';
-import MedicalCollegesTamilNadu from './pages/articles/MedicalCollegesTamilNadu';
+import TopIndianEngineeringColleges from './pages/articles/TopIndianEngineeringColleges';
+import EngineeringCollegesKerala from './pages/articles/EngineeringCollegesKerala';
 
 // Course Guide Imports
 import MbbsCourseGuide from './pages/articles/MbbsCourseGuide';
@@ -59,9 +58,8 @@ export default function App() {
             <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />            
             <Route path="/articles/TopIndianMedicalColleges" element={<TopIndianMedicalColleges />} />
             <Route path="/articles/TopGovtMedicalColleges" element={<TopGovtMedicalColleges />} />
-            <Route path="/articles/MedicalCollegesKarnataka" element={<MedicalCollegesKarnataka />} />
-            <Route path="/articles/MedicalCollegesKerala" element={<MedicalCollegesKerala />} />
-            <Route path="/articles/MedicalCollegesTamilNadu" element={<MedicalCollegesTamilNadu />} />
+            <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
+            <Route path="/articles/EngineeringCollegesKerala" element={<EngineeringCollegesKerala />} />
             
             {/* Course Guide Routes */}
             <Route path="/articles/MbbsCourseGuide" element={<MbbsCourseGuide />} />

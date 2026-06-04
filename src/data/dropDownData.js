@@ -6,12 +6,25 @@ export const dropDownData = {
     "Top Medical Colleges in Tamil Nadu",
     "Top Medical Colleges in Kerala",
   ],
+  "Top Ranked Engineering Colleges": [
+    "Top Engineering Colleges in South India",
+    "Top Engineering Colleges in Kerala",
+    "Top Engineering Colleges in Karnataka",
+    "Top Engineering Colleges in Tamil Nadu"
+  ],
   "Popular Medical Courses": [
     "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
     "BDS (Bachelor of Dental Surgery)",
     "BAMS (Ayurvedic Medicine)",
     "BSc Nursing",
     "B.Pharm (Pharmacy)",
+  ],
+  "Popular Engineering & IT Courses": [
+    "B.Tech (Bachelor of Technology)",
+    "M.Tech (Master of Technology)",
+    "BCA (Bachelor of Computer Applications)",
+    "MCA (Master of Computer Applications)",
+    "B.Arch (Bachelor of Architecture)"
   ],
   "Medical Exams": [
     "NEET UG",
@@ -20,9 +33,12 @@ export const dropDownData = {
     "FMGE",
     "AIIMS Nursing Exam"
   ],
-  "Colleges By Location": [
-    "Medical Colleges in Karnataka",
-    "Medical Colleges in Kerala",
-    "Medical Colleges in Tamil Nadu",
+  "Engineering Entrance Exams": [
+    "JEE Main",
+    "JEE Advanced",
+    "GATE",
+    "KEAM",
+    "KCET",
+    "COMEDK"
   ],
 };

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { colleges } from '../data/colleges';
+
+// 1. Import both datasets
+import { colleges as medicalColleges } from '../data/colleges';
+import { engineering_colleges as engineeringColleges } from '../data/engineering_colleges';
+
 import EnquiryModal from '../components/EnquiryModal';
 import AuthModal from '../components/AuthModal';
 
@@ -25,7 +29,17 @@ export default function CollegeDetail() {
   const [showAuth, setShowAuth] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
 
-  const college = colleges.find(c => c.id === parseInt(id));
+  // 2. Safely add 10000 to all engineering IDs to match Home.jsx
+  const safeEngineeringColleges = engineeringColleges.map(college => ({
+    ...college,
+    id: parseInt(college.id) + 10000
+  }));
+
+  // Combine the datasets into one unified array
+  const allColleges = [...medicalColleges, ...safeEngineeringColleges];
+
+  // 3. Search the combined array for the correct ID using .toString()
+  const college = allColleges.find(c => c.id.toString() === id.toString());
 
   if (!college) {
     return (
@@ -37,8 +51,10 @@ export default function CollegeDetail() {
     );
   }
 
-  const regionColor = college.region === 'Kerala' ? '#1B6CA8' : college.region === 'Karnataka' ? '#7C3AED' : '#DC2626';
-  const regionBg = college.region === 'Kerala' ? '#EBF5FF' : college.region === 'Karnataka' ? '#F5F0FF' : '#FFF0F0';
+  // Safely grab region (fallback to state if region isn't defined)
+  const displayRegion = college.region || college.state || 'Unknown Region';
+  const regionColor = displayRegion === 'Kerala' ? '#1B6CA8' : displayRegion === 'Karnataka' ? '#7C3AED' : '#DC2626';
+  const regionBg = displayRegion === 'Kerala' ? '#EBF5FF' : displayRegion === 'Karnataka' ? '#F5F0FF' : '#FFF0F0';
 
   const handleEnquiry = () => {
     if (user) setShowEnquiry(true);
@@ -62,17 +78,26 @@ export default function CollegeDetail() {
           )}
         </div>
       </div>
-      <div style={s.sideCard}>
-        <div style={s.sideCardPad}>
-          <h4 style={s.sideSubTitle}>🏷 Accreditations</h4>
-          <div style={s.tagsWrap}>{college.tags.map(t => <span key={t} style={s.tag}>{t}</span>)}</div>
+      
+      {/* Safely check if tags exist before mapping */}
+      {college.tags && college.tags.length > 0 && (
+        <div style={s.sideCard}>
+          <div style={s.sideCardPad}>
+            <h4 style={s.sideSubTitle}>🏷 Accreditations</h4>
+            <div style={s.tagsWrap}>{college.tags.map(t => <span key={t} style={s.tag}>{t}</span>)}</div>
+          </div>
         </div>
-      </div>
+      )}
+
       <div style={s.sideCard}>
         <div style={s.sideCardPad}>
           <h4 style={s.sideSubTitle}>📍 Location</h4>
           <div style={s.locationRows}>
-            {[{ label: 'City', value: college.city }, { label: 'District', value: college.district || 'N/A' }, { label: 'State', value: college.state || college.region }].map(l => (
+            {[
+              { label: 'City', value: college.city || 'N/A' }, 
+              { label: 'District', value: college.district || 'N/A' }, 
+              { label: 'State', value: college.state || displayRegion }
+            ].map(l => (
               <div key={l.label} style={s.locationRow}>
                 <span style={s.locationLabel}>{l.label}</span>
                 <span style={s.locationValue}>{l.value}</span>
@@ -88,21 +113,31 @@ export default function CollegeDetail() {
     <>
       <div style={s.page}>
         <div style={{ ...s.heroBanner, height: isMobile ? '220px' : '360px' }}>
-          <img src={college.image} alt={college.name} style={s.heroImg} />
+          <img 
+            src={college.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80'} 
+            alt={college.name} 
+            style={s.heroImg} 
+            onError={(e) => {
+              e.target.onerror = null; // Prevent infinite loop
+              e.target.src = 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80';
+            }}
+          />
           <div style={s.heroOverlay} />
           <div style={{ ...s.heroContent, padding: isMobile ? '14px 16px' : '32px 40px' }}>
             <button style={s.backBtnHero} onClick={() => navigate('/')}>← Back</button>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                <span style={{ ...s.regionPill, background: regionBg, color: regionColor }}>📍 {college.city}, {college.region}</span>
-                <span style={s.typePill}>{college.type}</span>
+                <span style={{ ...s.regionPill, background: regionBg, color: regionColor }}>📍 {college.city || 'Location'}, {displayRegion}</span>
+                <span style={s.typePill}>{college.type || 'Institution'}</span>
               </div>
               <h1 style={{ ...s.heroTitle, fontSize: isMobile ? '18px' : '34px' }}>{college.name}</h1>
               <div style={s.heroMeta}>
-                <span style={s.metaItem}>⭐ {college.rating}</span>
+                <span style={s.metaItem}>⭐ {college.rating || 'N/A'}</span>
                 <span style={s.metaDot}>•</span>
-                <span style={s.metaItem}>👥 {college.reviews?.toLocaleString()}</span>
-                {!isMobile && <><span style={s.metaDot}>•</span><span style={s.metaItem}>🏛 Est. {college.established}</span></>}
+                <span style={s.metaItem}>👥 {college.reviews ? college.reviews.toLocaleString() : '0'}</span>
+                {!isMobile && college.established && (
+                  <><span style={s.metaDot}>•</span><span style={s.metaItem}>🏛 Est. {college.established}</span></>
+                )}
               </div>
             </div>
           </div>
@@ -112,7 +147,7 @@ export default function CollegeDetail() {
           <div style={{ ...s.actionBarInner, padding: isMobile ? '10px 16px' : '12px 40px' }}>
             <div style={s.feesInfo}>
               <span style={s.feesLabel}>Annual Fees</span>
-              <strong style={{ ...s.feesVal, fontSize: isMobile ? '16px' : '22px' }}>{college.fees}</strong>
+              <strong style={{ ...s.feesVal, fontSize: isMobile ? '16px' : '22px' }}>{college.fees || 'Contact for details'}</strong>
             </div>
             <button style={{ ...s.enquireBtn, padding: isMobile ? '9px 16px' : '12px 28px', fontSize: isMobile ? '12px' : '14px' }} onClick={handleEnquiry}>
               📨 {user ? 'Enquire Now' : '🔒 Login to Enquire'}
@@ -133,10 +168,17 @@ export default function CollegeDetail() {
             {activeTab === 'overview' && (
               <div style={s.tabContent}>
                 <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px' }}>About {college.name}</h2>
-                <p style={{ ...s.description, fontSize: isMobile ? '13px' : '15px' }}>{college.description}</p>
+                <p style={{ ...s.description, fontSize: isMobile ? '13px' : '15px' }}>{college.description || 'No description available for this institution.'}</p>
                 <h3 style={{ ...s.subTitle, fontSize: isMobile ? '16px' : '18px' }}>Quick Facts</h3>
                 <div style={{ ...s.factsGrid, gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(3, 1fr)' }}>
-                  {[{ icon: '📅', label: 'Established', value: college.established || 'N/A' }, { icon: '🏛', label: 'Type', value: college.type }, { icon: '📍', label: 'City', value: college.city }, { icon: '🗺', label: 'District', value: college.district || 'N/A' }, { icon: '🔗', label: 'Affiliation', value: college.affiliation || 'N/A' }, { icon: '✅', label: 'Approval', value: college.approval || 'N/A' }].map(f => (
+                  {[
+                    { icon: '📅', label: 'Established', value: college.established || 'N/A' }, 
+                    { icon: '🏛', label: 'Type', value: college.type || 'N/A' }, 
+                    { icon: '📍', label: 'City', value: college.city || 'N/A' }, 
+                    { icon: '🗺', label: 'District', value: college.district || 'N/A' }, 
+                    { icon: '🔗', label: 'Affiliation', value: college.affiliation || 'N/A' }, 
+                    { icon: '✅', label: 'Approval', value: college.approval || 'N/A' }
+                  ].map(f => (
                     <div key={f.label} style={{ ...s.factCard, padding: isMobile ? '10px' : '14px', gap: isMobile ? '8px' : '12px' }}>
                       <span style={{ fontSize: isMobile ? '18px' : '22px' }}>{f.icon}</span>
                       <div style={{ minWidth: 0 }}>
@@ -153,14 +195,15 @@ export default function CollegeDetail() {
             {activeTab === 'courses' && (
               <div style={s.tabContent}>
                 <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px' }}>Courses Offered</h2>
-                <p style={{ color: 'var(--muted)', fontSize: '13px', marginBottom: '8px' }}>{college.courses.length} courses available</p>
+                <p style={{ color: 'var(--muted)', fontSize: '13px', marginBottom: '8px' }}>{(college.courses || []).length} courses available</p>
                 <div style={s.coursesList}>
-                  {college.courses.map((course, i) => (
+                  {/* Safely map over courses if they exist */}
+                  {(college.courses || []).map((course, i) => (
                     <div key={i} style={{ ...s.courseItem, borderLeft: `3px solid ${regionColor}`, padding: isMobile ? '10px 12px' : '14px 16px' }}>
                       <span style={{ ...s.courseIcon, background: regionBg, color: regionColor, width: isMobile ? '30px' : '36px', height: isMobile ? '30px' : '36px', fontSize: isMobile ? '14px' : '16px' }}>🎓</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <p style={{ ...s.courseName, fontSize: isMobile ? '12px' : '14px' }}>{course}</p>
-                        <p style={s.courseFees}>{college.fees} per year</p>
+                        <p style={s.courseFees}>{college.fees || 'Contact for fees'} per year</p>
                       </div>
                       <button style={{ ...s.courseEnquireBtn, background: regionColor, padding: isMobile ? '5px 10px' : '7px 14px', fontSize: isMobile ? '11px' : '12px' }} onClick={handleEnquiry}>Enquire</button>
                     </div>
@@ -173,7 +216,20 @@ export default function CollegeDetail() {
               <div style={s.tabContent}>
                 <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px' }}>College Details</h2>
                 <div style={s.detailsList}>
-                  {[{ label: 'Full Name', value: college.name }, { label: 'Region', value: college.region }, { label: 'State', value: college.state || 'N/A' }, { label: 'City', value: college.city }, { label: 'District', value: college.district || 'N/A' }, { label: 'College Type', value: college.type }, { label: 'Established', value: college.established || 'N/A' }, { label: 'Affiliation', value: college.affiliation || 'N/A' }, { label: 'Approval', value: college.approval || 'N/A' }, { label: 'Annual Fees', value: college.fees }, { label: 'Rating', value: `⭐ ${college.rating} / 5` }, { label: 'Reviews', value: `${college.reviews?.toLocaleString()} reviews` }].map((d, i) => (
+                  {[
+                    { label: 'Full Name', value: college.name }, 
+                    { label: 'Region', value: displayRegion }, 
+                    { label: 'State', value: college.state || 'N/A' }, 
+                    { label: 'City', value: college.city || 'N/A' }, 
+                    { label: 'District', value: college.district || 'N/A' }, 
+                    { label: 'College Type', value: college.type || 'N/A' }, 
+                    { label: 'Established', value: college.established || 'N/A' }, 
+                    { label: 'Affiliation', value: college.affiliation || 'N/A' }, 
+                    { label: 'Approval', value: college.approval || 'N/A' }, 
+                    { label: 'Annual Fees', value: college.fees || 'N/A' }, 
+                    { label: 'Rating', value: `⭐ ${college.rating || 'N/A'} / 5` }, 
+                    { label: 'Reviews', value: `${college.reviews ? college.reviews.toLocaleString() : '0'} reviews` }
+                  ].map((d, i) => (
                     <div key={d.label} style={{ ...s.detailRow, background: i % 2 === 0 ? '#fff' : '#FAFAFA', padding: isMobile ? '10px 14px' : '14px 18px', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '2px' : '16px' }}>
                       <span style={{ ...s.detailLabel, fontSize: isMobile ? '11px' : '13px' }}>{d.label}</span>
                       <span style={{ ...s.detailValue, fontSize: '13px', textAlign: isMobile ? 'left' : 'right', fontWeight: isMobile ? 700 : 600 }}>{d.value}</span>
@@ -197,7 +253,12 @@ export default function CollegeDetail() {
 }
 
 const s = {
-  page: { minHeight: '100vh', background: 'var(--cream)', paddingBottom: '60px' },
+  page: { 
+    paddingTop: '64px', // FIX: Prevents content from going under the fixed Navbar on load
+    minHeight: '100vh', 
+    background: 'var(--cream)', 
+    paddingBottom: '60px' 
+  },
   notFound: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh', gap: '16px', textAlign: 'center', padding: '24px' },
   backBtn: { padding: '12px 28px', borderRadius: '10px', background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '14px' },
   heroBanner: { position: 'relative', overflow: 'hidden' },
@@ -211,7 +272,17 @@ const s = {
   heroMeta: { display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' },
   metaItem: { fontSize: '12px', color: 'rgba(255,255,255,0.85)', fontWeight: 500 },
   metaDot: { color: 'rgba(255,255,255,0.4)', fontSize: '10px' },
-  actionBar: { background: '#fff', borderBottom: '1px solid var(--border)', position: 'sticky', top: '110px', zIndex: 100, boxShadow: '0 2px 12px rgba(0,0,0,0.06)' },
+  
+  // FIX: Action Bar now sticks accurately under the 64px tall Navbar
+  actionBar: { 
+    background: '#fff', 
+    borderBottom: '1px solid var(--border)', 
+    position: 'sticky', 
+    top: '64px', 
+    zIndex: 90, 
+    boxShadow: '0 2px 12px rgba(0,0,0,0.06)' 
+  },
+  
   actionBarInner: { maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', flexWrap: 'wrap' },
   feesInfo: { display: 'flex', flexDirection: 'column', gap: '1px' },
   feesLabel: { fontSize: '10px', color: 'var(--muted)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.5px' },

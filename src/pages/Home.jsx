@@ -3,7 +3,10 @@ import Hero from '../components/Hero';
 import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
 import Footer from '../components/Footer';
-import { colleges, regions, courseFilters, typeFilters } from '../data/colleges';
+
+// 1. Import both datasets and all filters
+import { colleges as medicalColleges, regions, courseFilters, typeFilters } from '../data/colleges';
+import { engineering_colleges as engineeringColleges } from '../data/engineering_colleges';
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -14,8 +17,18 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   const [currentPage, setCurrentPage] = useState(1);
   const COLLEGES_PER_PAGE = 12;
 
+  // 2. Safely process engineering IDs and combine both lists globally
+  const allColleges = useMemo(() => {
+    const safeEngineeringColleges = engineeringColleges.map(college => ({
+      ...college,
+      id: college.id + 10000 // Prevent ID clashes with medical colleges
+    }));
+    return [...medicalColleges, ...safeEngineeringColleges];
+  }, []);
+
+  // 3. Filter against the combined 'allColleges' array
   const filtered = useMemo(() => {
-    let result = colleges;
+    let result = allColleges;
 
     if (activeRegion !== 'All') {
       result = result.filter(c => c.region === activeRegion);
@@ -23,7 +36,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
 
     if (activeCourse !== 'All Courses') {
       result = result.filter(c =>
-        c.courses.some(course =>
+        c.courses && c.courses.some(course =>
           course.toLowerCase().includes(activeCourse.toLowerCase()) ||
           activeCourse.toLowerCase().includes(course.toLowerCase())
         )
@@ -31,31 +44,37 @@ export default function Home({ selectedCourse, courseSelectCount }) {
     }
 
     if (activeType !== 'All Types') {
-      result = result.filter(c => c.type.toLowerCase().includes(activeType.toLowerCase().replace('all types', '')));
+      result = result.filter(c => c.type && c.type.toLowerCase().includes(activeType.toLowerCase().replace('all types', '')));
     }
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(c =>
         c.name.toLowerCase().includes(q) ||
-        c.city.toLowerCase().includes(q) ||
-        c.district?.toLowerCase().includes(q) ||
-        c.region.toLowerCase().includes(q) ||
-        c.state?.toLowerCase().includes(q) ||
-        c.courses.some(course => course.toLowerCase().includes(q)) ||
-        c.type.toLowerCase().includes(q) ||
-        c.approval?.toLowerCase().includes(q) ||
-        c.affiliation?.toLowerCase().includes(q) ||
-        c.tags.some(t => t.toLowerCase().includes(q))
+        (c.city && c.city.toLowerCase().includes(q)) ||
+        (c.district && c.district.toLowerCase().includes(q)) ||
+        (c.region && c.region.toLowerCase().includes(q)) ||
+        (c.state && c.state.toLowerCase().includes(q)) ||
+        (c.courses && c.courses.some(course => course.toLowerCase().includes(q))) ||
+        (c.type && c.type.toLowerCase().includes(q)) ||
+        (c.approval && c.approval.toLowerCase().includes(q)) ||
+        (c.affiliation && c.affiliation.toLowerCase().includes(q)) ||
+        (c.tags && c.tags.some(t => t.toLowerCase().includes(q)))
       );
     }
 
-    return [...result].sort((a, b) =>
-      sortBy === 'rating' ? b.rating - a.rating :
-        sortBy === 'reviews' ? b.reviews - a.reviews :
-          a.name.localeCompare(b.name)
-    );
-  }, [activeRegion, activeCourse, activeType, searchQuery, sortBy]);
+    return [...result].sort((a, b) => {
+      // Add safe fallback sorting for colleges missing rating or reviews
+      const ratingA = a.rating || 0;
+      const ratingB = b.rating || 0;
+      const reviewsA = a.reviews || 0;
+      const reviewsB = b.reviews || 0;
+
+      return sortBy === 'rating' ? ratingB - ratingA :
+             sortBy === 'reviews' ? reviewsB - reviewsA :
+             a.name.localeCompare(b.name);
+    });
+  }, [activeRegion, activeCourse, activeType, searchQuery, sortBy, allColleges]);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -328,5 +347,3 @@ pagination: {
   },
   
 };
-
-
