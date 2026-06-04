@@ -10256,24 +10256,44 @@ export const regions = ['All', 'Kerala', 'Karnataka', 'Tamil Nadu'];
 
 export const courseFilters = [
   'All Courses',
+  
+  // --- ENGINEERING & IT (Newly Added) ---
+  'B.Tech',
+  'M.Tech',
+  'B.E',
+  'M.E',
+  'BCA',
+  'MCA',
+  'B.Arch',
+  'M.Arch',
+  'Diploma in Engineering',
+
+  // --- MEDICAL & DENTAL ---
+  'MBBS',
+  'BDS',
+  'BAMS',
+  'MD',
+  'MS',
+  'DM',
+  
+  // --- PHARMACY ---
   'B.Pharm',
   'D.Pharm',
   'M.Pharm',
   'Pharm.D',
+  
+  // --- NURSING ---
   'B.Sc Nursing',
   'M.Sc Nursing',
   'GNM',
   'ANM',
   'Post Basic B.Sc Nursing',
+  
+  // --- ALLIED HEALTH & PARAMEDICAL ---
   'BPT',
+  'DPT',
   'BHA',
   'MLT',
-  'MBBS',
-  'MD',
-  'MS',
-  'DM',
-  'BAMS',
-  'BDS',
   'Paramedical',
   'Allied Health Sciences',
   'B.Sc MLT',
@@ -10287,7 +10307,7 @@ export const courseFilters = [
   'B.Sc CPT',
   'B.Sc NST',
   'B.Sc Optometry',
-  'B.Optom',
-  'DPT',
+  'B.Optom'
 ];
+
 export const typeFilters = ['All Types', 'Government', 'Private'];

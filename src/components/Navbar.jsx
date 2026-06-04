@@ -5,47 +5,86 @@ import AuthModal from './AuthModal';
 import { dropDownData } from '../data/dropDownData';
 
 const courseCategories = [
-  { title: 'Pharmacy', icon: '💊', color: '#1B6CA8', courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] },
-  { title: 'Nursing', icon: '🩺', color: '#059669', courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] },
+  { 
+    title: 'Pharmacy', 
+    icon: '💊', 
+    color: '#1B6CA8', 
+    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] 
+  },
+  { 
+    title: 'Nursing', 
+    icon: '🩺', 
+    color: '#059669', 
+    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] 
+  },
   {
-    title: 'Allied Health', icon: '🏥', color: '#7C3AED', courses: [
+    title: 'Allied Health', 
+    icon: '🏥', 
+    color: '#7C3AED', 
+    courses: [
       'BPT', 'BHA', 'MLT', 'BAMS',
       'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT',
       'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT',
       'B.Sc CPT', 'B.Sc NST', 'B.Sc Optometry', 'B.Optom', 'DPT',
     ]
   },
-  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] },
+  { 
+    title: 'Medical', 
+    icon: '🔬', 
+    color: '#DC2626', 
+    courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] 
+  },
+  { 
+    title: 'Engineering & IT', 
+    icon: '⚙️', 
+    color: '#EA580C', 
+    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'] 
+  }
 ];
 
-// FIXED: Exact mapping to match your dropDownData text strings to the App.jsx routes
 const articleRouteMap = {
-  // Top Ranked Colleges
+  // Top Ranked Medical Colleges
   "Top Medical Colleges in India": "/articles/TopIndianMedicalColleges",
-  "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges", // Fallback if South specific route doesn't exist
+  "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges", 
   "Top Government Medical Colleges": "/articles/TopGovtMedicalColleges",
   "Top Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
   "Top Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
   "Top Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
   
-  // Just in case these older string names are still in your data:
-  "Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
-  "Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
-  "Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
+  // Top Ranked Engineering Colleges
+  "Top Engineering Colleges in South India": "/articles/TopIndianEngineeringColleges",
+  "Top Engineering Colleges in Kerala": "/articles/EngineeringCollegesKerala",
+  "Top Engineering Colleges in Karnataka": "/articles/EngineeringCollegesKarnataka",
+  "Top Engineering Colleges in Tamil Nadu": "/articles/EngineeringCollegesTamilNadu",
 
-  // Course Guides
+  // Medical Course Guides
   "MBBS (Bachelor of Medicine, Bachelor of Surgery)": "/articles/MbbsCourseGuide",
   "BDS (Bachelor of Dental Surgery)": "/articles/BdsCourseGuide",
   "BAMS (Ayurvedic Medicine)": "/articles/BamsCourseGuide",
   "BSc Nursing": "/articles/BscNursingCourseGuide",
   "B.Pharm (Pharmacy)": "/articles/BPharmCourseGuide",
 
-  // Exam Guides
+  // Engineering & IT Course Guides
+  "B.Tech (Bachelor of Technology)": "/articles/BTechCourseGuide",
+  "M.Tech (Master of Technology)": "/articles/MTechCourseGuide",
+  "BCA (Bachelor of Computer Applications)": "/articles/BcaCourseGuide",
+  "MCA (Master of Computer Applications)": "/articles/McaCourseGuide",
+  "B.Arch (Bachelor of Architecture)": "/articles/BArchCourseGuide",
+
+  // Medical Exam Guides
   "NEET UG": "/articles/NeetUgGuide",
   "NEET PG": "/articles/NeetPgGuide",
   "INI CET": "/articles/IniCetGuide",
   "FMGE": "/articles/FmgeGuide",
-  "AIIMS Nursing Exam": "/articles/AiimsNursingGuide"
+  "AIIMS Nursing Exam": "/articles/AiimsNursingGuide",
+
+  // Engineering Exam Guides
+  "JEE Main": "/articles/JeeMainGuide",
+  "JEE Advanced": "/articles/JeeAdvancedGuide",
+  "GATE": "/articles/GateGuide",
+  "KEAM": "/articles/KeamGuide",
+  "KCET": "/articles/KcetGuide",
+  "COMEDK": "/articles/ComedkGuide"
 };
 
 export default function Navbar({ onCourseSelect = () => { } }) {
@@ -67,18 +106,16 @@ export default function Navbar({ onCourseSelect = () => { } }) {
 
   const createSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 
-  // --- FIXED: CLICK & TOUCH OUTSIDE LOGIC ---
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setCoursesOpen(false);
         setArticlesOpen(false);
         setShowDropdown(false);
-        setMenuOpen(false); // Ensures mobile menu also closes
+        setMenuOpen(false); 
       }
     };
 
-    // Added touchstart so it instantly recognizes taps on mobile devices
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
     
@@ -108,13 +145,11 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200); 
   };
 
-  // --- ARTICLE CLICK ROUTING ---
   const handleArticleClick = (e, articleName) => {
     e.preventDefault();
     setArticlesOpen(false);
     setMenuOpen(false);
 
-    // Look up the exact route from our dictionary
     const targetRoute = articleRouteMap[articleName] || `/articles/${createSlug(articleName)}`;
     navigate(targetRoute);
   };
@@ -186,7 +221,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             onMouseEnter={handleCoursesEnter}
             onMouseLeave={handleCoursesLeave}
             onClick={(e) => {
-              // Close if clicking the invisible backdrop outside the white menu box
               if(e.target === e.currentTarget) setCoursesOpen(false);
             }}>
             <div style={styles.megaMenu}>
@@ -233,7 +267,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             onMouseEnter={handleArticlesEnter}
             onMouseLeave={handleArticlesLeave}
             onClick={(e) => {
-              // Close if clicking the invisible backdrop outside the white menu box
               if(e.target === e.currentTarget) setArticlesOpen(false);
             }}>
             <div style={styles.articlesMegaMenu}>
@@ -279,7 +312,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         )}
       </nav>
 
-      {/* Mobile Menu. */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
           <a href="/#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>
