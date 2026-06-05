@@ -9,6 +9,48 @@ import { engineering_colleges as engineeringColleges } from '../data/engineering
 import EnquiryModal from '../components/EnquiryModal';
 import AuthModal from '../components/AuthModal';
 
+const courseCategories = {
+  Medical: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma'],
+  Pharmacy: ['B.Pharm', 'D.Pharm', 'M.Pharm', 'Pharm.D'],
+  Nursing: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing', 'Ph.D Nursing'],
+  Allied: ['BPT', 'DPT', 'MLT', 'BHA', 'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT',
+    'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT', 'B.Sc CPT', 'B.Sc NST',
+    'B.Sc Optometry', 'B.Optom', 'Paramedical', 'Allied Health Sciences'],
+  Engineering: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'],
+};
+
+const categoryColors = {
+  Medical: { bg: '#FAECE7', color: '#712B13' },
+  Pharmacy: { bg: '#EBF5FF', color: '#0C447C' },
+  Nursing: { bg: '#E1F5EE', color: '#085041' },
+  Allied: { bg: '#F5F0FF', color: '#3C3489' },
+  Engineering: { bg: '#FFFBEB', color: '#633806' },
+  Other: { bg: '#F3F4F6', color: '#374151' },
+};
+
+function groupCourses(courses = []) {
+  const grouped = {};
+  courses.forEach(course => {
+    let placed = false;
+    for (const [cat, list] of Object.entries(courseCategories)) {
+      if (list.some(c =>
+        course.toLowerCase().includes(c.toLowerCase()) ||
+        c.toLowerCase().includes(course.toLowerCase())
+      )) {
+        if (!grouped[cat]) grouped[cat] = [];
+        grouped[cat].push(course);
+        placed = true;
+        break;
+      }
+    }
+    if (!placed) {
+      if (!grouped['Other']) grouped['Other'] = [];
+      grouped['Other'].push(course);
+    }
+  });
+  return grouped;
+}
+
 function useWindowWidth() {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -78,7 +120,7 @@ export default function CollegeDetail() {
           )}
         </div>
       </div>
-      
+
       {/* Safely check if tags exist before mapping */}
       {college.tags && college.tags.length > 0 && (
         <div style={s.sideCard}>
@@ -94,8 +136,8 @@ export default function CollegeDetail() {
           <h4 style={s.sideSubTitle}>📍 Location</h4>
           <div style={s.locationRows}>
             {[
-              { label: 'City', value: college.city || 'N/A' }, 
-              { label: 'District', value: college.district || 'N/A' }, 
+              { label: 'City', value: college.city || 'N/A' },
+              { label: 'District', value: college.district || 'N/A' },
               { label: 'State', value: college.state || displayRegion }
             ].map(l => (
               <div key={l.label} style={s.locationRow}>
@@ -113,10 +155,10 @@ export default function CollegeDetail() {
     <>
       <div style={s.page}>
         <div style={{ ...s.heroBanner, height: isMobile ? '220px' : '360px' }}>
-          <img 
-            src={college.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80'} 
-            alt={college.name} 
-            style={s.heroImg} 
+          <img
+            src={college.image || 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80'}
+            alt={college.name}
+            style={s.heroImg}
             onError={(e) => {
               e.target.onerror = null; // Prevent infinite loop
               e.target.src = 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80';
@@ -172,11 +214,11 @@ export default function CollegeDetail() {
                 <h3 style={{ ...s.subTitle, fontSize: isMobile ? '16px' : '18px' }}>Quick Facts</h3>
                 <div style={{ ...s.factsGrid, gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(3, 1fr)' }}>
                   {[
-                    { icon: '📅', label: 'Established', value: college.established || 'N/A' }, 
-                    { icon: '🏛', label: 'Type', value: college.type || 'N/A' }, 
-                    { icon: '📍', label: 'City', value: college.city || 'N/A' }, 
-                    { icon: '🗺', label: 'District', value: college.district || 'N/A' }, 
-                    { icon: '🔗', label: 'Affiliation', value: college.affiliation || 'N/A' }, 
+                    { icon: '📅', label: 'Established', value: college.established || 'N/A' },
+                    { icon: '🏛', label: 'Type', value: college.type || 'N/A' },
+                    { icon: '📍', label: 'City', value: college.city || 'N/A' },
+                    { icon: '🗺', label: 'District', value: college.district || 'N/A' },
+                    { icon: '🔗', label: 'Affiliation', value: college.affiliation || 'N/A' },
                     { icon: '✅', label: 'Approval', value: college.approval || 'N/A' }
                   ].map(f => (
                     <div key={f.label} style={{ ...s.factCard, padding: isMobile ? '10px' : '14px', gap: isMobile ? '8px' : '12px' }}>
@@ -194,21 +236,49 @@ export default function CollegeDetail() {
 
             {activeTab === 'courses' && (
               <div style={s.tabContent}>
-                <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px' }}>Courses Offered</h2>
-                <p style={{ color: 'var(--muted)', fontSize: '13px', marginBottom: '8px' }}>{(college.courses || []).length} courses available</p>
-                <div style={s.coursesList}>
-                  {/* Safely map over courses if they exist */}
-                  {(college.courses || []).map((course, i) => (
-                    <div key={i} style={{ ...s.courseItem, borderLeft: `3px solid ${regionColor}`, padding: isMobile ? '10px 12px' : '14px 16px' }}>
-                      <span style={{ ...s.courseIcon, background: regionBg, color: regionColor, width: isMobile ? '30px' : '36px', height: isMobile ? '30px' : '36px', fontSize: isMobile ? '14px' : '16px' }}>🎓</span>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <p style={{ ...s.courseName, fontSize: isMobile ? '12px' : '14px' }}>{course}</p>
-                        <p style={s.courseFees}>{college.fees || 'Contact for fees'} per year</p>
-                      </div>
-                      <button style={{ ...s.courseEnquireBtn, background: regionColor, padding: isMobile ? '5px 10px' : '7px 14px', fontSize: isMobile ? '11px' : '12px' }} onClick={handleEnquiry}>Enquire</button>
-                    </div>
-                  ))}
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+                  <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px', marginBottom: 0 }}>Courses Offered</h2>
+                  <span style={{ fontSize: '12px', color: 'var(--muted)', fontWeight: 600 }}>
+                    {(college.courses || []).length} course{(college.courses || []).length !== 1 ? 's' : ''}
+                  </span>
                 </div>
+                <p style={{ color: 'var(--muted)', fontSize: '13px', marginTop: '-8px' }}>
+                  All programs available at {college.name}
+                </p>
+                {(() => {
+                  const grouped = groupCourses(college.courses || []);
+                  return (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                      {Object.entries(grouped).map(([cat, list]) => {
+                        const clr = categoryColors[cat] || categoryColors.Other;
+                        return (
+                          <div key={cat} style={{ background: '#fff', borderRadius: '14px', border: '1px solid var(--border)', padding: isMobile ? '14px' : '18px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                              <div style={{ width: '4px', height: '18px', borderRadius: '2px', background: clr.color }} />
+                              <p style={{ fontSize: '12px', fontWeight: 700, color: clr.color, textTransform: 'uppercase', letterSpacing: '0.7px', margin: 0 }}>{cat}</p>
+                              <span style={{ fontSize: '11px', color: 'var(--muted)', marginLeft: 'auto' }}>
+                                {list.length} program{list.length !== 1 ? 's' : ''}
+                              </span>
+                            </div>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                              {list.map(course => (
+                                <div key={course} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: clr.bg, borderRadius: '10px', padding: '8px 14px' }}>
+                                  <span style={{ fontSize: isMobile ? '12px' : '13px', fontWeight: 600, color: clr.color }}>{course}</span>
+                                  <button
+                                    style={{ fontSize: '11px', fontWeight: 700, background: clr.color, color: '#fff', border: 'none', borderRadius: '6px', padding: '3px 8px', cursor: 'pointer' }}
+                                    onClick={handleEnquiry}
+                                  >
+                                    Enquire
+                                  </button>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                })()}
               </div>
             )}
 
@@ -217,17 +287,17 @@ export default function CollegeDetail() {
                 <h2 style={{ ...s.sectionTitle, fontSize: isMobile ? '20px' : '26px' }}>College Details</h2>
                 <div style={s.detailsList}>
                   {[
-                    { label: 'Full Name', value: college.name }, 
-                    { label: 'Region', value: displayRegion }, 
-                    { label: 'State', value: college.state || 'N/A' }, 
-                    { label: 'City', value: college.city || 'N/A' }, 
-                    { label: 'District', value: college.district || 'N/A' }, 
-                    { label: 'College Type', value: college.type || 'N/A' }, 
-                    { label: 'Established', value: college.established || 'N/A' }, 
-                    { label: 'Affiliation', value: college.affiliation || 'N/A' }, 
-                    { label: 'Approval', value: college.approval || 'N/A' }, 
-                    { label: 'Annual Fees', value: college.fees || 'N/A' }, 
-                    { label: 'Rating', value: `⭐ ${college.rating || 'N/A'} / 5` }, 
+                    { label: 'Full Name', value: college.name },
+                    { label: 'Region', value: displayRegion },
+                    { label: 'State', value: college.state || 'N/A' },
+                    { label: 'City', value: college.city || 'N/A' },
+                    { label: 'District', value: college.district || 'N/A' },
+                    { label: 'College Type', value: college.type || 'N/A' },
+                    { label: 'Established', value: college.established || 'N/A' },
+                    { label: 'Affiliation', value: college.affiliation || 'N/A' },
+                    { label: 'Approval', value: college.approval || 'N/A' },
+                    { label: 'Annual Fees', value: college.fees || 'N/A' },
+                    { label: 'Rating', value: `⭐ ${college.rating || 'N/A'} / 5` },
                     { label: 'Reviews', value: `${college.reviews ? college.reviews.toLocaleString() : '0'} reviews` }
                   ].map((d, i) => (
                     <div key={d.label} style={{ ...s.detailRow, background: i % 2 === 0 ? '#fff' : '#FAFAFA', padding: isMobile ? '10px 14px' : '14px 18px', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? '2px' : '16px' }}>
@@ -253,11 +323,11 @@ export default function CollegeDetail() {
 }
 
 const s = {
-  page: { 
+  page: {
     paddingTop: '64px', // FIX: Prevents content from going under the fixed Navbar on load
-    minHeight: '100vh', 
-    background: 'var(--cream)', 
-    paddingBottom: '60px' 
+    minHeight: '100vh',
+    background: 'var(--cream)',
+    paddingBottom: '60px'
   },
   notFound: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '80vh', gap: '16px', textAlign: 'center', padding: '24px' },
   backBtn: { padding: '12px 28px', borderRadius: '10px', background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '14px' },
@@ -272,17 +342,17 @@ const s = {
   heroMeta: { display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' },
   metaItem: { fontSize: '12px', color: 'rgba(255,255,255,0.85)', fontWeight: 500 },
   metaDot: { color: 'rgba(255,255,255,0.4)', fontSize: '10px' },
-  
+
   // FIX: Action Bar now sticks accurately under the 64px tall Navbar
-  actionBar: { 
-    background: '#fff', 
-    borderBottom: '1px solid var(--border)', 
-    position: 'sticky', 
-    top: '64px', 
-    zIndex: 90, 
-    boxShadow: '0 2px 12px rgba(0,0,0,0.06)' 
+  actionBar: {
+    background: '#fff',
+    borderBottom: '1px solid var(--border)',
+    position: 'sticky',
+    top: '64px',
+    zIndex: 90,
+    boxShadow: '0 2px 12px rgba(0,0,0,0.06)'
   },
-  
+
   actionBarInner: { maxWidth: '1100px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', flexWrap: 'wrap' },
   feesInfo: { display: 'flex', flexDirection: 'column', gap: '1px' },
   feesLabel: { fontSize: '10px', color: 'var(--muted)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.5px' },

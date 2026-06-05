@@ -86,7 +86,7 @@ export default function ChatBot() {
                 from: 'bot',
                 text: match
                     ? match.answer
-                    : 'I\'m not sure about that. Please try one of the quick questions below, or contact us directly via WhatsApp! 😊',
+                    : '__whatsapp__',
             },
         ]);
     };
@@ -156,7 +156,26 @@ export default function ChatBot() {
                                         borderBottomRightRadius: msg.from === 'user' ? '4px' : '12px',
                                         borderBottomLeftRadius: msg.from === 'bot' ? '4px' : '12px',
                                     }}>
-                                        {msg.text}
+                                        {msg.text === '__whatsapp__' ? (
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                                <span>I'm not sure about that. For other questions, our team is available on WhatsApp! 😊</span>
+                                                <a
+                                                    href="https://wa.me/919037755265"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{
+                                                        display: 'inline-flex', alignItems: 'center', gap: '7px',
+                                                        background: '#25D366', color: '#fff',
+                                                        padding: '8px 14px', borderRadius: '10px',
+                                                        fontSize: '12px', fontWeight: 700,
+                                                        textDecoration: 'none', marginTop: '2px',
+                                                        width: 'fit-content',
+                                                    }}
+                                                >
+                                                    <span style={{ fontSize: '16px' }}>💬</span> Chat on WhatsApp
+                                                </a>
+                                            </div>
+                                        ) : msg.text}
                                     </div>
                                 </div>
 

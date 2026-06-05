@@ -5,6 +5,7 @@ const newsItems = [
   {
     id: 1, icon: '📝', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
     title: 'KEAM 2026 Registration Open', date: 'Deadline: Mar 15',
+    image: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&q=80',
     description: 'Kerala Engineering Architecture Medical (KEAM) 2026 registration is now open. Students seeking admission to Engineering and Pharmacy courses in Kerala must apply before the deadline.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Mathematics/Biology',
     applyLink: 'https://cee.kerala.gov.in',
@@ -14,6 +15,7 @@ const newsItems = [
   {
     id: 2, icon: '🏥', color: '#DC2626', bg: '#FFF0F0', tag: 'Exam Alert',
     title: 'NEET UG 2026 — Apply Now', date: 'Deadline: Mar 9',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80',
     description: 'National Eligibility cum Entrance Test (NEET UG) 2026 applications are now live. This is the gateway for MBBS, BDS, and AYUSH admissions across India.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50%',
     applyLink: 'https://neet.nta.nic.in',
@@ -23,6 +25,7 @@ const newsItems = [
   {
     id: 3, icon: '🎓', color: '#7C3AED', bg: '#F5F0FF', tag: 'Admission',
     title: 'KCET 2026 Applications Live', date: 'Deadline: Mar 20',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80',
     description: 'Karnataka Common Entrance Test (KCET) 2026 applications are live for Engineering, Pharmacy, and other professional courses in Karnataka colleges.',
     eligibility: 'Passed 10+2 with relevant subjects from Karnataka',
     applyLink: 'https://kea.kar.nic.in',
@@ -32,6 +35,7 @@ const newsItems = [
   {
     id: 4, icon: '💊', color: '#059669', bg: '#ECFDF5', tag: 'Results',
     title: 'GPAT 2026 Results Declared', date: 'Today',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80',
     description: 'Graduate Pharmacy Aptitude Test (GPAT) 2026 results have been officially declared by NTA. Candidates can now check their scores and ranks on the official portal.',
     eligibility: 'B.Pharm graduates',
     applyLink: 'https://gpat.nta.nic.in',
@@ -41,6 +45,7 @@ const newsItems = [
   {
     id: 5, icon: '📋', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission',
     title: 'TANCET 2026 Notification Released', date: 'Deadline: Feb 28',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80',
     description: 'Tamil Nadu Common Entrance Test (TANCET) 2026 official notification has been released for MBA, MCA, M.Tech, M.Arch and M.Plan admissions in Tamil Nadu.',
     eligibility: 'Relevant undergraduate degree with minimum 50%',
     applyLink: 'https://www.annauniv.edu/tancet',
@@ -50,6 +55,7 @@ const newsItems = [
   {
     id: 6, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'News',
     title: 'Kerala Pharmacy Admissions 2026', date: '2 days ago',
+    image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&q=80',
     description: 'Kerala University of Health Sciences has announced centralized allotment process for B.Pharm and D.Pharm admissions 2026 across all pharmacy colleges in Kerala.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Biology/Mathematics',
     applyLink: 'https://kuhs.ac.in',
@@ -59,6 +65,7 @@ const newsItems = [
   {
     id: 7, icon: '🏆', color: '#F5A623', bg: '#FFFBEB', tag: 'Scholarship',
     title: 'National Merit Scholarship Open', date: 'Deadline: Apr 1',
+    image: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=400&q=80',
     description: 'National Merit Scholarship applications are open for health science students. Students pursuing medical, pharmacy, and nursing courses can apply for up to ₹50,000 per year.',
     eligibility: 'Students with above 80% in 10+2 and enrolled in health science courses',
     applyLink: 'https://scholarships.gov.in',
@@ -68,6 +75,7 @@ const newsItems = [
   {
     id: 8, icon: '🔬', color: '#7C3AED', bg: '#F5F0FF', tag: 'News',
     title: 'New Allied Health Courses 2026', date: '3 days ago',
+    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=400&q=80',
     description: 'Several colleges in Karnataka and Tamil Nadu are introducing new Allied Health Science specializations for 2026. These include Medical Lab Technology, Cardiac Care, and Neuroscience Technology.',
     eligibility: 'Passed 10+2 with Science subjects',
     applyLink: '#',
@@ -75,6 +83,98 @@ const newsItems = [
     state: 'Karnataka & Tamil Nadu',
   },
 ];
+
+function NewsScrollBar({ navigate }) {
+  const [current, setCurrent] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setAnimating(true);
+      setTimeout(() => {
+        setCurrent(i => (i + 1) % newsItems.length);
+        setAnimating(false);
+      }, 400);
+    }, 4000);
+    return () => clearInterval(t);
+  }, []);
+
+  const item = newsItems[current];
+
+
+  return (
+    <div id="news" style={ns2.bar} onClick={() => navigate(`/news/${item.id}`)}>
+
+      {/* Background image with overlay */}
+      <img
+        src={item.image}
+        alt=""
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          objectFit: 'cover',
+          opacity: animating ? 0 : 0.15,
+          transition: 'opacity 0.4s ease',
+          zIndex: 0,
+        }}
+      />
+
+      {/* Left label */}
+      <div style={{ ...ns2.label, zIndex: 1 }}>
+        <span style={ns2.dot} />
+        <span style={ns2.labelText}>🔔 LIVE</span>
+      </div>
+
+      {/* Left image */}
+      <div style={{ ...ns2.imgBox, zIndex: 1 }}>
+        <img
+          src={item.image}
+          alt={item.title}
+          style={{
+            width: '100%', height: '100%',
+            objectFit: 'cover',
+            opacity: animating ? 0 : 1,
+            transition: 'opacity 0.4s ease',
+          }}
+          onError={e => { e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg'; }}
+        />
+      </div>
+
+      {/* Content */}
+      <div style={{
+        ...ns2.content, zIndex: 1,
+        opacity: animating ? 0 : 1,
+        transform: animating ? 'translateY(-8px)' : 'translateY(0)',
+        transition: 'all 0.4s ease',
+      }}>
+        <span style={{ ...ns2.tagPill, background: item.color }}>
+          {item.icon} {item.tag}
+        </span>
+        <div style={ns2.textBlock}>
+          <span style={ns2.title}>{item.title}</span>
+          <span style={ns2.desc}>{item.description.slice(0, 80)}...</span>
+        </div>
+        <span style={ns2.date}>🗓 {item.date}</span>
+      </div>
+
+      {/* Right — Read more */}
+      <div style={{ ...ns2.readMore, zIndex: 1 }}>
+        <span style={ns2.readMoreText}>Read →</span>
+      </div>
+
+      {/* Progress dots */}
+      <div style={ns2.dotsWrapper}>
+        {newsItems.map((_, i) => (
+          <span key={i} style={{
+            ...ns2.progressDot,
+            background: i === current ? '#fff' : 'rgba(255,255,255,0.3)',
+            width: i === current ? '16px' : '5px',
+          }} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function NewsTicker({ onViewDetails }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -123,12 +223,31 @@ function NewsTicker({ onViewDetails }) {
         transition: 'opacity 0.3s ease, transform 0.3s ease',
         flex: 1,
       }}>
-        {/* Tag + emoji banner */}
-        <div style={{ ...ns.featuredBg, background: current.bg }}>
-          <span style={{ ...ns.tagPill, background: current.color }}>
+        {/* Image banner with tag overlay */}
+        <div style={{ ...ns.featuredBg, background: current.bg, position: 'relative', overflow: 'hidden', minHeight: '160px', padding: 0 }}>
+          <img
+            src={current.image}
+            alt={current.title}
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover',
+              opacity: fade ? 1 : 0,
+              transition: 'opacity 0.3s ease',
+            }}
+            onError={e => { e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg'; }}
+          />
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 100%)',
+          }} />
+          <span style={{
+            ...ns.tagPill,
+            background: current.color,
+            position: 'absolute', top: '10px', left: '10px', zIndex: 1,
+          }}>
             {current.icon} {current.tag}
           </span>
-          <span style={ns.bigEmoji}>{current.icon}</span>
         </div>
 
         {/* Content */}
@@ -299,24 +418,7 @@ export default function Hero({ onSearch }) {
       </div>
 
       {/* News Scroll Bar */}
-      <div id="news" style={ns2.bar}>
-        <div style={ns2.label}>
-          <span style={ns2.dot} />
-          <span style={ns2.labelText}>Latest News</span>
-        </div>
-        <div style={ns2.track}>
-          <div className="news-scroll">
-            {[...newsItems, ...newsItems].map((item, i) => (
-              <span key={i} style={ns2.item}
-                onClick={() => navigate(`/news/${item.id}`)}>
-                <span style={ns2.tag}>{item.icon} {item.tag}</span>
-                <span style={ns2.title}>{item.title}</span>
-                <span style={ns2.sep}>•</span>
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
+      <NewsScrollBar navigate={navigate} />
 
       {/* Quote bar */}
       <div style={styles.quoteBar}>
@@ -351,6 +453,7 @@ const ns = {
     border: '1px solid rgba(255,255,255,0.15)',
     borderRadius: '16px', overflow: 'hidden',
     display: 'flex', flexDirection: 'column',
+    minHeight: '420px',
   },
   header: {
     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -368,10 +471,10 @@ const ns = {
 
   featured: { display: 'flex', flexDirection: 'column' },
   featuredBg: {
-    padding: '12px 14px', minHeight: '60px',
-    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-    position: 'relative',
-  },
+  minHeight: '160px',
+  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+  position: 'relative',
+},
   tagPill: {
     fontSize: '10px', fontWeight: 700, color: '#fff',
     padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.5px',
@@ -475,7 +578,7 @@ const styles = {
   },
   right: {
     width: '100%',
-    maxWidth: 'clamp(260px,28vw,320px)',
+    maxWidth: 'clamp(300px,32vw,380px)',
     flexShrink: 0,
   },
 
@@ -535,41 +638,89 @@ const styles = {
 };
 const ns2 = {
   bar: {
-    position: 'absolute', top: '10px', left: '50%',
+    position: 'absolute', top: '8px', left: '50%',
     transform: 'translateX(-50%)',
     zIndex: 10, display: 'flex', alignItems: 'center',
-    height: '60px',
-    width: '80%', maxWidth: '900px',
-    background: 'rgba(255,255,255,0.08)',
-    backdropFilter: 'blur(10px)',
-    borderRadius: '12px',
+    height: '116px',
+    width: '96%', maxWidth: '1160px',
+    background: 'linear-gradient(135deg, rgba(13,17,23,0.96), rgba(26,42,74,0.96))',
+    backdropFilter: 'blur(20px)',
+    borderRadius: '18px',
     border: '1px solid rgba(255,255,255,0.15)',
+    boxShadow: '0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,71,10,0.2)',
+    cursor: 'pointer',
     overflow: 'hidden',
+    gap: '0',
   },
   label: {
-    display: 'flex', alignItems: 'center', gap: '6px',
-    background: 'var(--accent)', padding: '0 16px',
+    display: 'flex', flexDirection: 'column', alignItems: 'center',
+    justifyContent: 'center', gap: '4px',
+    background: 'var(--accent)', padding: '0 20px',
     height: '100%', flexShrink: 0,
+    borderRight: '1px solid rgba(255,255,255,0.1)',
+    minWidth: '80px',
   },
   dot: {
-    width: '7px', height: '7px', borderRadius: '50%',
-    background: '#fff', flexShrink: 0,
-    boxShadow: '0 0 0 2px rgba(255,255,255,0.3)',
+    width: '8px', height: '8px', borderRadius: '50%',
+    background: '#4ADE80', flexShrink: 0,
+    boxShadow: '0 0 0 3px rgba(74,222,128,0.3)',
+    animation: 'pulse 2s infinite',
   },
   labelText: {
+    fontSize: '10px', fontWeight: 800, color: '#fff',
+    whiteSpace: 'nowrap', letterSpacing: '1px',
+  },
+  imgBox: {
+    width: '120px', height: '100%',
+    flexShrink: 0, overflow: 'hidden',
+    borderRight: '1px solid rgba(255,255,255,0.1)',
+  },
+  content: {
+    flex: 1, display: 'flex', alignItems: 'center',
+    gap: '14px', padding: '0 24px', overflow: 'hidden',
+  },
+  tagPill: {
     fontSize: '11px', fontWeight: 700, color: '#fff',
-    whiteSpace: 'nowrap', letterSpacing: '0.5px', textTransform: 'uppercase',
+    padding: '5px 14px', borderRadius: '20px',
+    whiteSpace: 'nowrap', flexShrink: 0,
+    boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
   },
-  track: {
-    flex: 1, overflow: 'hidden', height: '100%',
+  textBlock: {
+    display: 'flex', flexDirection: 'column', gap: '3px',
+    flex: 1, overflow: 'hidden',
+  },
+  title: {
+    fontSize: '15px', color: '#fff', fontWeight: 700,
+    whiteSpace: 'nowrap', overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  desc: {
+    fontSize: '12px', color: 'rgba(255,255,255,0.55)',
+    whiteSpace: 'nowrap', overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  date: {
+    fontSize: '11px', color: 'rgba(255,255,255,0.5)',
+    whiteSpace: 'nowrap', flexShrink: 0,
+  },
+  readMore: {
+    padding: '0 24px', height: '100%',
     display: 'flex', alignItems: 'center',
+    borderLeft: '1px solid rgba(255,255,255,0.1)',
+    flexShrink: 0, background: 'rgba(232,71,10,0.15)',
   },
-  item: {
-    display: 'inline-flex', alignItems: 'center',
-    gap: '8px', padding: '0 24px',
-    whiteSpace: 'nowrap', cursor: 'pointer',
+  readMoreText: {
+    fontSize: '13px', fontWeight: 700, color: 'var(--accent)',
+    whiteSpace: 'nowrap',
   },
-  tag: { fontSize: '11px', fontWeight: 700, color: '#F5A623' },
-  title: { fontSize: '12px', color: 'rgba(255,255,255,0.85)', fontWeight: 500 },
-  sep: { color: 'rgba(255,255,255,0.3)', fontSize: '14px', marginLeft: '8px' },
+  dotsWrapper: {
+    position: 'absolute', bottom: '7px', left: '50%',
+    transform: 'translateX(-50%)',
+    display: 'flex', gap: '4px', alignItems: 'center',
+    zIndex: 2,
+  },
+  progressDot: {
+    height: '3px', borderRadius: '2px',
+    transition: 'all 0.3s ease',
+  },
 };

@@ -305,7 +305,7 @@ export const colleges = [
     established: 2004,
     rating: 5.2,
     reviews: 472,
-    courses: ['B.Pharm'],
+    courses: ['B.Pharm','M.Pharm', 'Pharm.D', 'D.Pharm'],
     fees: '₹90K - ₹1.5L per year',
     image: 'https://i.postimg.cc/sxLcq7TN/image.png',
     approval: 'PCI',
