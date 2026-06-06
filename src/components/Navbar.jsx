@@ -42,49 +42,69 @@ const courseCategories = [
   }
 ];
 
-const articleRouteMap = {
+export const articleRouteMap = {
   // Top Ranked Medical Colleges
-  "Top Medical Colleges in India": "/articles/TopIndianMedicalColleges",
   "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges", 
   "Top Government Medical Colleges": "/articles/TopGovtMedicalColleges",
   "Top Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
   "Top Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
   "Top Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
+  "Top Private Medical Colleges in South India": "/articles/TopPrivateMedicalColleges",
   
   // Top Ranked Engineering Colleges
   "Top Engineering Colleges in South India": "/articles/TopIndianEngineeringColleges",
   "Top Engineering Colleges in Kerala": "/articles/EngineeringCollegesKerala",
   "Top Engineering Colleges in Karnataka": "/articles/EngineeringCollegesKarnataka",
   "Top Engineering Colleges in Tamil Nadu": "/articles/EngineeringCollegesTamilNadu",
+  "Best Engineering Colleges for Computer Science": "/articles/BestCSEngineeringColleges",
 
-  // Medical Course Guides
+  // Popular Medical Courses
   "MBBS (Bachelor of Medicine, Bachelor of Surgery)": "/articles/MbbsCourseGuide",
   "BDS (Bachelor of Dental Surgery)": "/articles/BdsCourseGuide",
   "BAMS (Ayurvedic Medicine)": "/articles/BamsCourseGuide",
+  "BHMS Course Guide": "/articles/BhmsCourseGuide",
   "BSc Nursing": "/articles/BscNursingCourseGuide",
   "B.Pharm (Pharmacy)": "/articles/BPharmCourseGuide",
+  "Pharm D Course Details": "/articles/PharmDCourseGuide",
+  "B.Pharm vs Pharm D": "/articles/BPharmVsPharmD",
 
-  // Engineering & IT Course Guides
+  // Popular Engineering & IT Courses
   "B.Tech (Bachelor of Technology)": "/articles/BTechCourseGuide",
   "M.Tech (Master of Technology)": "/articles/MTechCourseGuide",
   "BCA (Bachelor of Computer Applications)": "/articles/BcaCourseGuide",
   "MCA (Master of Computer Applications)": "/articles/McaCourseGuide",
   "B.Arch (Bachelor of Architecture)": "/articles/BArchCourseGuide",
+  "Artificial Intelligence Engineering": "/articles/AiEngineeringGuide",
+  "Data Science Engineering": "/articles/DataScienceEngineeringGuide",
+  "Cyber Security Engineering": "/articles/CyberSecurityEngineeringGuide",
+  "Top Emerging Engineering Courses": "/articles/TopEmergingEngineeringCourses",
 
-  // Medical Exam Guides
+  // Medical Exams
   "NEET UG": "/articles/NeetUgGuide",
   "NEET PG": "/articles/NeetPgGuide",
   "INI CET": "/articles/IniCetGuide",
   "FMGE": "/articles/FmgeGuide",
   "AIIMS Nursing Exam": "/articles/AiimsNursingGuide",
 
-  // Engineering Exam Guides
+  // Engineering Entrance Exams
   "JEE Main": "/articles/JeeMainGuide",
   "JEE Advanced": "/articles/JeeAdvancedGuide",
   "GATE": "/articles/GateGuide",
   "KEAM": "/articles/KeamGuide",
   "KCET": "/articles/KcetGuide",
-  "COMEDK": "/articles/ComedkGuide"
+  "COMEDK": "/articles/ComedkGuide",
+
+  // Admission Guides
+  "MBBS Admission 2026": "/articles/MbbsAdmission2026",
+  "Engineering Admission 2026": "/articles/EngineeringAdmission2026",
+  "Pharmacy Admission 2026": "/articles/PharmacyAdmission2026",
+  "Nursing Admission 2026": "/articles/NursingAdmission2026",
+  "KEAM Counselling Guide": "/articles/KeamCounsellingGuide",
+  "NEET Counselling Guide": "/articles/NeetCounsellingGuide",
+  "MCC Counselling Guide": "/articles/MccCounsellingGuide",
+
+  // Transit / Location Guides
+  "Top Colleges Near Major Airports and Railway Stations": "/articles/CollegesNearAirports",
 };
 
 export default function Navbar({ onCourseSelect = () => { } }) {

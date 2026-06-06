@@ -16,6 +16,8 @@ import TopIndianMedicalColleges from './pages/articles/TopIndianMedicalColleges'
 import TopGovtMedicalColleges from './pages/articles/TopGovtMedicalColleges';
 import TopIndianEngineeringColleges from './pages/articles/TopIndianEngineeringColleges';
 import EngineeringCollegesKerala from './pages/articles/EngineeringCollegesKerala';
+import EngineeringCollegesTamilNadu from './pages/articles/EngineeringCollegesTamilNadu';
+import TopPrivateMedicalColleges from './pages/articles/TopPrivateMedicalColleges';
 
 // Course Guide Imports
 import MbbsCourseGuide from './pages/articles/MbbsCourseGuide';
@@ -30,6 +32,8 @@ import NeetPgGuide from './pages/articles/NeetPgGuide';
 import IniCetGuide from './pages/articles/IniCetGuide';
 import FmgeGuide from './pages/articles/FmgeGuide';
 import AiimsNursingGuide from './pages/articles/AiimsNursingGuide';
+import CollegesNearAirports from './pages/articles/CollegesNearAirports';
+import BestCSEngineeringColleges from './pages/articles/BestCSEngineeringColleges';
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -60,7 +64,10 @@ export default function App() {
             <Route path="/articles/TopGovtMedicalColleges" element={<TopGovtMedicalColleges />} />
             <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
             <Route path="/articles/EngineeringCollegesKerala" element={<EngineeringCollegesKerala />} />
-            
+            <Route path="/articles/EngineeringCollegesTamilNadu" element={<EngineeringCollegesTamilNadu />} />
+            <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
+            <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
+
             {/* Course Guide Routes */}
             <Route path="/articles/MbbsCourseGuide" element={<MbbsCourseGuide />} />
             <Route path="/articles/BdsCourseGuide" element={<BdsCourseGuide />} />
@@ -74,6 +81,8 @@ export default function App() {
             <Route path="/articles/IniCetGuide" element={<IniCetGuide />} />
             <Route path="/articles/FmgeGuide" element={<FmgeGuide />} />
             <Route path="/articles/AiimsNursingGuide" element={<AiimsNursingGuide />} />
+
+            <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
           </Routes>
         </main>
         

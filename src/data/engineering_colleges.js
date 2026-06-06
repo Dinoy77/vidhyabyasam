@@ -1,4 +1,4 @@
-export const engineering_colleges = [
+const raw_data  = [
   {
     "id": 1,
     "region": "Kerala",
@@ -4847,7 +4847,9 @@ export const engineering_colleges = [
     "affiliation": "Anna University",
     "color": "#2E4053"
   }
-
-
-
 ]
+
+export const engineering_colleges = raw_data.map(college => ({
+  ...college,
+  id: `eng-${college.id}` // Automatically turns 1 into "eng-1"
+}));

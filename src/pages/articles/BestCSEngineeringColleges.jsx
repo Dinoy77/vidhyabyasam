@@ -1,22 +1,47 @@
 import React, { useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // <-- Added Link import
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { engineering_colleges } from '../../data/engineering_colleges';
 
-export default function EngineeringCollegesKerala() {
+export default function BestCSEngineeringColleges() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Filter for the top engineering colleges specifically in Kerala
-  const topTenList = useMemo(() => {
+  // Filter for the top Computer Science colleges in South India
+  const topCSColleges = useMemo(() => {
+    const southIndianStates = ['Tamil Nadu', 'Karnataka', 'Kerala'];
+    
     return engineering_colleges
-      // 1. Filter out only colleges located in Kerala
-      .filter(c => c.state === 'Kerala')
-      // 2. Sort them by highest rating first. If ratings are tied, sort by most reviews
+      .filter(c => {
+        // 1. Must be in South India
+        const isSouthIndia = southIndianStates.includes(c.state);
+        
+        // 2. Must offer Computer Science / IT related courses
+        const hasCS = (c.courses || []).some(course => {
+        const normalizedCourse = course.toLowerCase();
+        return (
+            normalizedCourse.includes('computer') || 
+            normalizedCourse.includes('cse') || 
+            normalizedCourse.includes('software') || 
+            normalizedCourse.includes('information tech') ||
+            normalizedCourse.includes('artificial intelligence') ||
+            normalizedCourse === 'b.tech' ||
+            normalizedCourse === 'm.tech' ||
+            normalizedCourse === 'b.arch' ||
+            normalizedCourse === 'm.arch' ||
+            normalizedCourse === 'mca' ||
+            normalizedCourse === 'mba' ||
+            normalizedCourse === 'ph.d'
+        );
+        });
+
+        return isSouthIndia && hasCS;
+      })
+      // 3. Sort by highest rating first, then by most reviews
       .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews))
-      // 3. Take only the top 10 results
+      // 4. Take the top 10
       .slice(0, 10);
   }, []);
 
@@ -26,20 +51,20 @@ export default function EngineeringCollegesKerala() {
 
       <header style={styles.heroHeader}>
         <div style={styles.heroContent}>
-          <span style={styles.eyebrow}>The Elite 10</span>
-          <h1 style={styles.mainTitle}>Top 10 Engineering Colleges in Kerala</h1>
-          <p style={styles.subtitle}>Our definitive list of the premier technical institutions in God's Own Country.</p>
+          <span style={styles.eyebrow}>CSE Elite Rankings</span>
+          <h1 style={styles.mainTitle}>Best Engineering Colleges for Computer Science in South India</h1>
+          <p style={styles.subtitle}>Your guide to the most prestigious institutions for CSE, AI, and IT.</p>
           <div style={styles.divider}></div>
           <p style={styles.introText}>
-            Kerala is home to some of the most scenic and academically rigorous engineering institutions in India. From prestigious government colleges to highly-rated private universities, explore the top 10 destinations for pursuing your B.Tech and M.Tech degrees based on verified ratings, infrastructure, and placement records.
+            Computer Science Engineering (CSE) remains the most sought-after branch in India, offering direct pathways to FAANG companies and global tech startups. South India, being the undisputed IT hub of the country, hosts the finest institutions for this domain. Here are the top 10 colleges for CSE based on academic rigor, coding culture, and dream-tier placement packages.
           </p>
         </div>
       </header>
 
       <main style={styles.mainContent}>
         <div style={styles.listContainer}>
-          {topTenList.length > 0 ? (
-            topTenList.map((college, index) => (
+          {topCSColleges.length > 0 ? (
+            topCSColleges.map((college, index) => (
               <article key={college.id} style={styles.card}>
                 
                 {/* Left Column: Image Area */}
@@ -49,12 +74,12 @@ export default function EngineeringCollegesKerala() {
                     <span style={styles.rankNum}>{index + 1}</span>
                   </div>
                   <img 
-                    src={college.image || 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080'} 
+                    src={college.image || 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80'} 
                     alt={college.name} 
                     style={styles.image}
                     onError={(e) => {
                       e.target.onerror = null;
-                      e.target.src = 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080';
+                      e.target.src = 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80'; // Tech/Coding fallback image
                     }}
                   />
                   <div style={styles.typeBadge}>{college.type || "Engineering College"}</div>
@@ -64,7 +89,7 @@ export default function EngineeringCollegesKerala() {
                 <div style={styles.contentBox}>
                   <div style={styles.contentHeader}>
                     <div>
-                      {/* --- Added Link Wrapper Here --- */}
+                      {/* --- Clickable Link to College Detail Page --- */}
                       <Link to={`/college/${college.id}`} style={styles.collegeLink}>
                         <h2 style={styles.collegeName}>{college.name}</h2>
                       </Link>
@@ -94,16 +119,24 @@ export default function EngineeringCollegesKerala() {
                     </div>
                     <div style={styles.dataItem}>
                       <span style={styles.dataLabel}>Affiliation</span>
-                      <span style={styles.dataValue}>{college.affiliation || "KTU"}</span>
+                      <span style={styles.dataValue}>{college.affiliation || "N/A"}</span>
                     </div>
                   </div>
 
                   {/* Program Scope Tags */}
                   {college.courses && college.courses.length > 0 && (
                     <div style={styles.tagSection}>
-                      <span style={styles.tagHeading}>Top Courses:</span>
+                      <span style={styles.tagHeading}>Tech Branches:</span>
                       <div style={styles.tagWrapper}>
-                        {college.courses.slice(0, 5).map(course => (
+                        {/* We prioritize showing courses that contain computer/AI terms first */}
+                        {college.courses
+                          .sort((a, b) => {
+                            const aIsTech = a.toLowerCase().includes('computer') || a.toLowerCase().includes('ai');
+                            const bIsTech = b.toLowerCase().includes('computer') || b.toLowerCase().includes('ai');
+                            return (bIsTech === true) - (aIsTech === true);
+                          })
+                          .slice(0, 5)
+                          .map(course => (
                           <span key={course} style={styles.coursePill}>{course}</span>
                         ))}
                       </div>
@@ -115,7 +148,7 @@ export default function EngineeringCollegesKerala() {
             ))
           ) : (
             <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
-              <p>No engineering colleges found for Kerala in the database.</p>
+              <p>No Computer Science engineering colleges found matching the criteria.</p>
             </div>
           )}
         </div>
@@ -127,7 +160,7 @@ export default function EngineeringCollegesKerala() {
 
 const styles = {
   pageContainer: {
-    backgroundColor: '#f3f4f6', 
+    backgroundColor: '#f8fafc', 
     minHeight: '100vh',
     fontFamily: 'DM Sans, sans-serif',
   },
@@ -144,8 +177,8 @@ const styles = {
   eyebrow: {
     display: 'inline-block',
     padding: '6px 14px',
-    backgroundColor: '#f0fdf4',
-    color: '#16a34a',
+    backgroundColor: '#e0e7ff', // Tech Indigo background
+    color: '#4f46e5', // Deep Indigo text
     borderRadius: '20px',
     fontSize: '13px',
     fontWeight: '700',
@@ -170,7 +203,7 @@ const styles = {
   divider: {
     width: '60px',
     height: '4px',
-    backgroundColor: '#16a34a',
+    backgroundColor: '#4f46e5', // Tech Indigo
     margin: '0 auto 30px',
     borderRadius: '2px',
   },
@@ -212,7 +245,7 @@ const styles = {
     position: 'absolute',
     top: '20px',
     left: '0',
-    backgroundColor: 'var(--deep, #0f172a)',
+    backgroundColor: '#312e81', // Very dark indigo
     color: '#fff',
     padding: '8px 20px 8px 16px',
     borderTopRightRadius: '30px',
@@ -268,7 +301,7 @@ const styles = {
   collegeName: {
     fontSize: '24px',
     fontWeight: '800',
-    color: '#1e3a8a', // Using green to match the engineering theme eyebrow
+    color: '#1e3a8a', // Tech Indigo to match theme
     marginBottom: '8px',
     lineHeight: '1.25',
     transition: 'color 0.2s ease',
