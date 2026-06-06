@@ -1,4 +1,4 @@
-export const colleges = [
+const raw_data = [
   {
     id: 1,
     region: 'Kerala',
@@ -10250,7 +10250,10 @@ export const colleges = [
   }
 ];
 
-
+export const colleges = raw_data.map(college => ({
+  ...college,
+  id: `med-${college.id}`
+}));
 
 export const regions = ['All', 'Kerala', 'Karnataka', 'Tamil Nadu'];
 
