@@ -1,4 +1,5 @@
 import React, { useMemo, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { engineering_colleges } from '../../data/engineering_colleges';
@@ -11,15 +12,12 @@ export default function EngineeringCollegesTamilNadu() {
   // Filter, Sort, and Slice the Top 10 Tamil Nadu Engineering Colleges
   const topTamilNaduColleges = useMemo(() => {
     return engineering_colleges
+      // 1. Filter out only colleges located in Tamil Nadu
       .filter(c => c.region === 'Tamil Nadu' || c.state === 'Tamil Nadu')
-      .sort((a, b) => {
-        const ratingA = a.rating || 0;
-        const ratingB = b.rating || 0;
-        const reviewsA = a.reviews || 0;
-        const reviewsB = b.reviews || 0;
-        return ratingB - ratingA || reviewsB - reviewsA;
-      })
-      .slice(0, 10); // Enforce the Top 10 limit
+      // 2. Sort them by highest rating first. If ratings are tied, sort by most reviews
+      .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews))
+      // 3. Take only the top 10 results
+      .slice(0, 10);
   }, []);
 
   return (
@@ -70,12 +68,15 @@ export default function EngineeringCollegesTamilNadu() {
                 <div style={styles.contentBox}>
                   <div style={styles.contentHeader}>
                     <div>
-                      <h2 style={styles.collegeName}>{college.name}</h2>
+                      {/* --- Added Link Wrapper Here --- */}
+                      <Link to={`/college/${college.id}`} style={styles.collegeLink}>
+                        <h2 style={styles.collegeName}>{college.name}</h2>
+                      </Link>
                       <p style={styles.location}>📍 {college.city || 'Tamil Nadu'}, India</p>
                     </div>
                     <div style={styles.ratingBlock}>
-                      <div style={styles.ratingScore}>⭐ {college.rating ? college.rating.toFixed(1) : 'N/A'}</div>
-                      <div style={styles.reviewCount}>{college.reviews ? college.reviews.toLocaleString() : '0'} Reviews</div>
+                      <div style={styles.ratingScore}>⭐ {Number(college.rating || 0).toFixed(1)}</div>
+                      <div style={styles.reviewCount}>{college.reviews || 0} Reviews</div>
                     </div>
                   </div>
 
@@ -155,7 +156,8 @@ const styles = {
   typeBadge: { position: 'absolute', bottom: '16px', left: '16px', backgroundColor: 'rgba(255,255,255,0.95)', color: '#0f172a', padding: '6px 12px', borderRadius: '8px', fontSize: '12px', fontWeight: '700', backdropFilter: 'blur(4px)' },
   contentBox: { flex: '2 1 400px', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'center' },
   contentHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '20px', flexWrap: 'wrap', marginBottom: '20px' },
-  collegeName: { fontSize: '24px', fontWeight: '800', color: '#0f172a', marginBottom: '8px', lineHeight: '1.25' },
+  collegeLink: { textDecoration: 'none', color: 'inherit', cursor: 'pointer' },
+  collegeName: { fontSize: '24px', fontWeight: '800', color: '#1e3a8a', marginBottom: '8px', lineHeight: '1.25', transition: 'color 0.2s ease' },
   location: { fontSize: '14px', color: '#64748b', fontWeight: '500' },
   ratingBlock: { backgroundColor: '#fffbeb', border: '1px solid #fef3c7', padding: '8px 16px', borderRadius: '12px', textAlign: 'center' },
   ratingScore: { fontSize: '18px', fontWeight: '800', color: '#d97706' },
