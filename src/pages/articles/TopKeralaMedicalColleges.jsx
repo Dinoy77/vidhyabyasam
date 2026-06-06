@@ -1,4 +1,5 @@
 import React, { useMemo, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // <-- Added for detail page routing
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { colleges } from '../../data/colleges';
@@ -13,7 +14,7 @@ export default function TopKeralaMedicalColleges() {
   const top10Colleges = useMemo(() => {
     return colleges
       .filter(c => c.state === 'Kerala' && c.courses.includes('MBBS'))
-      .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews)
+      .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0) || Number(b.reviews || 0) - Number(a.reviews || 0))
       .slice(0, 10);
   }, []);
 
@@ -41,78 +42,93 @@ export default function TopKeralaMedicalColleges() {
       {/* List Section */}
       <main style={styles.mainContent}>
         <div style={styles.listContainer}>
-          {top10Colleges.map((college, index) => (
-            <article key={college.id} style={styles.card}>
-              
-              {/* Image & Rank Section */}
-              <div style={styles.imageBox}>
-                <div style={styles.rankRibbon}>
-                  <span style={styles.rankHash}>#</span>
-                  <span style={styles.rankNum}>{index + 1}</span>
-                </div>
-                <img 
-                  src={college.image} 
-                  alt={college.name} 
-                  style={styles.image}
-                  onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'; 
-                  }}
-                />
-                <div style={styles.typeBadge}>{college.type}</div>
-              </div>
-
-              {/* Content Section */}
-              <div style={styles.contentBox}>
-                <div style={styles.contentHeader}>
-                  <div>
-                    <h2 style={styles.collegeName}>{college.name}</h2>
-                    <p style={styles.location}>📍 {college.city}, {college.district}</p>
+          {top10Colleges.length > 0 ? (
+            top10Colleges.map((college, index) => (
+              <article key={college.id} style={styles.card}>
+                
+                {/* Left Column: Image Area */}
+                <div style={styles.imageBox}>
+                  <div style={styles.rankRibbon}>
+                    <span style={styles.rankHash}>#</span>
+                    <span style={styles.rankNum}>{index + 1}</span>
                   </div>
-                  <div style={styles.ratingBlock}>
-                    <div style={styles.ratingScore}>
-                      ⭐ {college.rating.toFixed(1)}
+                  <img 
+                    src={college.image && college.image.length > 5 ? college.image : 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'} 
+                    alt={college.name} 
+                    style={styles.image}
+                    onError={(e) => {
+                      e.target.onerror = null; 
+                      e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80';
+                    }}
+                  />
+                  <div style={styles.typeBadge}>{college.type || 'Medical Institute'}</div>
+                </div>
+
+                {/* Right Column: Content Section */}
+                <div style={styles.contentBox}>
+                  <div style={styles.contentHeader}>
+                    <div>
+                      {/* --- Added Link Wrapper Here --- */}
+                      <Link to={`/college/${college.id}`} style={styles.collegeLink}>
+                        <h2 style={styles.collegeName}>{college.name}</h2>
+                      </Link>
+                      <p style={styles.location}>📍 {college.city}, Kerala</p>
                     </div>
-                    <div style={styles.reviewCount}>
-                      {college.reviews} Reviews
+                    <div style={styles.ratingBlock}>
+                      <div style={styles.ratingScore}>
+                        ⭐ {Number(college.rating || 0).toFixed(1)}
+                      </div>
+                      <div style={styles.reviewCount}>
+                        {college.reviews || 0} Reviews
+                      </div>
                     </div>
                   </div>
+
+                  <p style={styles.description}>
+                    {college.description || `Recognized for exceptional clinical exposure and outstanding faculty, ${college.name} provides an elite medical training environment in Kerala.`}
+                  </p>
+
+                  {/* Structured Data Matrix */}
+                  <div style={styles.dataGrid}>
+                    <div style={styles.dataItem}>
+                      <span style={styles.dataLabel}>Established</span>
+                      <span style={styles.dataValue}>{college.established || "N/A"}</span>
+                    </div>
+                    <div style={styles.dataItem}>
+                      <span style={styles.dataLabel}>First-Year Fees</span>
+                      <span style={styles.dataValue}>{college.fees || "Contact Admissions"}</span>
+                    </div>
+                    <div style={styles.dataItem}>
+                      <span style={styles.dataLabel}>Approvals</span>
+                      <span style={styles.dataValue}>{college.approval || "NMC / Govt"}</span>
+                    </div>
+                    <div style={styles.dataItem}>
+                      <span style={styles.dataLabel}>Affiliation</span>
+                      <span style={styles.dataValue}>{college.affiliation || "KUHS"}</span>
+                    </div>
+                  </div>
+
+                  {/* Program Scope Tags Section */}
+                  {college.courses && college.courses.length > 0 && (
+                    <div style={styles.tagSection}>
+                      <span style={styles.tagHeading}>Programs Offered:</span>
+                      <div style={styles.tagWrapper}>
+                        {college.courses.slice(0, 6).map(course => (
+                          <span key={course} style={styles.coursePill}>{course}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                 </div>
-
-                <p style={styles.description}>{college.description}</p>
-
-                {/* Data Grid */}
-                <div style={styles.dataGrid}>
-                  <div style={styles.dataItem}>
-                    <span style={styles.dataLabel}>Estd. Year</span>
-                    <span style={styles.dataValue}>{college.established}</span>
-                  </div>
-                  <div style={styles.dataItem}>
-                    <span style={styles.dataLabel}>First-Year Fees</span>
-                    <span style={styles.dataValue}>{college.fees}</span>
-                  </div>
-                  <div style={styles.dataItem}>
-                    <span style={styles.dataLabel}>Approvals</span>
-                    <span style={styles.dataValue}>{college.approval}</span>
-                  </div>
-                  <div style={styles.dataItem}>
-                    <span style={styles.dataLabel}>Affiliation</span>
-                    <span style={styles.dataValue}>{college.affiliation}</span>
-                  </div>
-                </div>
-
-                {/* Tags Section */}
-                <div style={styles.tagSection}>
-                  <span style={styles.tagHeading}>Programs Offered:</span>
-                  <div style={styles.tagWrapper}>
-                    {college.courses.map(course => (
-                      <span key={course} style={styles.coursePill}>{course}</span>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
-            </article>
-          ))}
+              </article>
+            ))
+          ) : (
+            <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
+              <h2>No medical colleges discovered matching the criteria in Kerala.</h2>
+              <p>Verify your data model schema setup to make sure parameters line up correctly.</p>
+            </div>
+          )}
         </div>
       </main>
 
@@ -123,7 +139,7 @@ export default function TopKeralaMedicalColleges() {
 
 const styles = {
   pageContainer: {
-    backgroundColor: '#f3f4f6', // Slightly cooler, modern light gray
+    backgroundColor: '#f3f4f6', 
     minHeight: '100vh',
     fontFamily: 'DM Sans, sans-serif',
   },
@@ -168,7 +184,7 @@ const styles = {
   divider: {
     width: '60px',
     height: '4px',
-    backgroundColor: 'var(--accent)',
+    backgroundColor: '#e11d48',
     margin: '0 auto 30px',
     borderRadius: '2px',
   },
@@ -193,7 +209,7 @@ const styles = {
   /* Card Styles */
   card: {
     display: 'flex',
-    flexWrap: 'wrap', // Natural responsiveness
+    flexWrap: 'wrap', 
     backgroundColor: '#fff',
     borderRadius: '20px',
     overflow: 'hidden',
@@ -203,7 +219,7 @@ const styles = {
   
   /* Left Side: Image */
   imageBox: {
-    flex: '1 1 340px', // Shrinks and grows, base width 340px
+    flex: '1 1 340px', 
     position: 'relative',
     minHeight: '280px',
   },
@@ -216,7 +232,7 @@ const styles = {
     position: 'absolute',
     top: '20px',
     left: '0',
-    backgroundColor: 'var(--deep)',
+    backgroundColor: 'var(--deep, #0f172a)',
     color: '#fff',
     padding: '8px 20px 8px 16px',
     borderTopRightRadius: '30px',
@@ -224,6 +240,7 @@ const styles = {
     display: 'flex',
     alignItems: 'baseline',
     boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+    zIndex: 10,
   },
   rankHash: {
     fontSize: '16px',
@@ -251,7 +268,7 @@ const styles = {
 
   /* Right Side: Content */
   contentBox: {
-    flex: '2 1 400px', // Takes remaining space, min 400px before wrapping
+    flex: '2 1 400px', 
     padding: '32px',
     display: 'flex',
     flexDirection: 'column',
@@ -265,12 +282,18 @@ const styles = {
     flexWrap: 'wrap',
     marginBottom: '16px',
   },
+  collegeLink: { 
+    textDecoration: 'none', 
+    color: 'inherit', 
+    cursor: 'pointer' 
+  },
   collegeName: {
     fontSize: '26px',
     fontWeight: '800',
-    color: '#0f172a',
+    color: '#1e3a8a',
     marginBottom: '8px',
     lineHeight: '1.2',
+    transition: 'color 0.2s ease',
   },
   location: {
     fontSize: '14px',

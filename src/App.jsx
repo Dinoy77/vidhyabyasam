@@ -26,6 +26,17 @@ import BamsCourseGuide from './pages/articles/BamsCourseGuide';
 import BscNursingCourseGuide from './pages/articles/BscNursingCourseGuide';
 import BPharmCourseGuide from './pages/articles/BPharmCourseGuide';
 
+import BTechCourseGuide from './components/BTechCourseGuide';
+import MTechCourseGuide from './components/MTechCourseGuide';
+import BcaCourseGuide from './components/BcaCourseGuide';
+import McaCourseGuide from './components/McaCourseGuide';
+import BArchCourseGuide from './components/BArchCourseGuide';
+import AiEngineeringGuide from './components/AiEngineeringGuide';
+import DataScienceEngineeringGuide from './components/DataScienceEngineeringGuide';
+import CyberSecurityEngineeringGuide from './components/CyberSecurityEngineeringGuide';
+import TopEmergingEngineeringCourses from './components/TopEmergingEngineeringCourses';
+
+
 // Exam Guide Imports.
 import NeetUgGuide from './pages/articles/NeetUgGuide';
 import NeetPgGuide from './pages/articles/NeetPgGuide';
@@ -34,6 +45,14 @@ import FmgeGuide from './pages/articles/FmgeGuide';
 import AiimsNursingGuide from './pages/articles/AiimsNursingGuide';
 import CollegesNearAirports from './pages/articles/CollegesNearAirports';
 import BestCSEngineeringColleges from './pages/articles/BestCSEngineeringColleges';
+import CourseGuideLayout from './pages/articles/CourseGuideLayout';
+
+import JeeMainGuide from './components/JeeMainGuide';
+import JeeAdvancedGuide from './components/JeeAdvancedGuide';
+import GateGuide from './components/GateGuide';
+import KeamGuide from './components/KeamGuide';
+import KcetGuide from './components/KcetGuide';
+import ComedkGuide from './components/ComedkGuide';
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -81,6 +100,25 @@ export default function App() {
             <Route path="/articles/IniCetGuide" element={<IniCetGuide />} />
             <Route path="/articles/FmgeGuide" element={<FmgeGuide />} />
             <Route path="/articles/AiimsNursingGuide" element={<AiimsNursingGuide />} />
+
+            <Route path="/articles/JeeMainGuide" element={<JeeMainGuide />} />
+            <Route path="/articles/JeeAdvancedGuide" element={<JeeAdvancedGuide />} />
+            <Route path="/articles/GateGuide" element={<GateGuide />} />
+            <Route path="/articles/KeamGuide" element={<KeamGuide />} />
+            <Route path="/articles/KcetGuide" element={<KcetGuide />} />
+            <Route path="/articles/ComedkGuide" element={<ComedkGuide />} />
+
+
+            {/* Engineering & IT Course Guide Routes */}
+            <Route path="/articles/BTechCourseGuide" element={<BTechCourseGuide />} />
+            <Route path="/articles/MTechCourseGuide" element={<MTechCourseGuide />} />
+            <Route path="/articles/BcaCourseGuide" element={<BcaCourseGuide />} />
+            <Route path="/articles/McaCourseGuide" element={<McaCourseGuide />} />
+            <Route path="/articles/BArchCourseGuide" element={<BArchCourseGuide />} />
+            <Route path="/articles/AiEngineeringGuide" element={<AiEngineeringGuide />} />
+            <Route path="/articles/DataScienceEngineeringGuide" element={<DataScienceEngineeringGuide />} />
+            <Route path="/articles/CyberSecurityEngineeringGuide" element={<CyberSecurityEngineeringGuide />} />
+            <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
 
             <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
           </Routes>
