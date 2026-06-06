@@ -7,6 +7,8 @@ import CollegeDetail from './pages/CollegeDetail';
 import NewsDetail from './pages/NewsDetail';
 import WhatsAppButton from './components/WhatsAppButton';
 import ChatBot from './components/ChatBot';
+import ScrollToTop from './components/ScrollToTop';
+
 
 // Article Imports
 import TopKeralaMedicalColleges from './pages/articles/TopKeralaMedicalColleges';
@@ -126,6 +128,7 @@ export default function App() {
         
         <WhatsAppButton />
         <ChatBot />
+        <ScrollToTop />
       </AuthProvider>
     </BrowserRouter>
   );
