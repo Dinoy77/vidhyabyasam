@@ -2,21 +2,24 @@ import React, { useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // <-- Added Link import
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { engineering_colleges } from '../../data/engineering_colleges';
+import { colleges } from '../../data/colleges';
 
-export default function EngineeringCollegesKerala() {
+export default function TopPrivateMedicalColleges() {
+  // Scroll to top when article loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Filter for the top engineering colleges specifically in Kerala
-  const topTenList = useMemo(() => {
-    return engineering_colleges
-      // 1. Filter out only colleges located in Kerala
-      .filter(c => c.state === 'Kerala')
-      // 2. Sort them by highest rating first. If ratings are tied, sort by most reviews
-      .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews))
-      // 3. Take only the top 10 results
+  // Filter and sort the data for private medical colleges in South Indian states.
+  const top10Colleges = useMemo(() => {
+    const southIndianStates = ['Kerala', 'Karnataka', 'Tamil Nadu', 'Andhra Pradesh', 'Telangana'];
+    return colleges
+      .filter(c => 
+        southIndianStates.includes(c.state) && 
+        c.type?.toLowerCase().includes('private') && 
+        c.courses.includes('MBBS')
+      )
+      .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews)
       .slice(0, 10);
   }, []);
 
@@ -24,102 +27,110 @@ export default function EngineeringCollegesKerala() {
     <div style={styles.pageContainer}>
       <Navbar />
 
+      {/* Hero Header Section */}
       <header style={styles.heroHeader}>
         <div style={styles.heroContent}>
-          <span style={styles.eyebrow}>The Elite 10</span>
-          <h1 style={styles.mainTitle}>Top 10 Engineering Colleges in Kerala</h1>
-          <p style={styles.subtitle}>Our definitive list of the premier technical institutions in God's Own Country.</p>
+          <span style={styles.eyebrow}>Premium Rankings</span>
+          <h1 style={styles.mainTitle}>
+            The Top 10 Private Medical Colleges in South India
+          </h1>
+          <p style={styles.subtitle}>
+            Based on clinical infrastructure, student reviews, and global academic reputations.
+          </p>
           <div style={styles.divider}></div>
           <p style={styles.introText}>
-            Kerala is home to some of the most scenic and academically rigorous engineering institutions in India. From prestigious government colleges to highly-rated private universities, explore the top 10 destinations for pursuing your B.Tech and M.Tech degrees based on verified ratings, infrastructure, and placement records.
+            South India boasts some of the country's finest private healthcare and medical research institutions. Offering unparalleled laboratory technology, heavy patient footfall for clinical training, and state-of-the-art campus setups, these institutions represent elite choices for pursuing an MBBS degree. Find the perfect private college to jumpstart your career in medicine.
           </p>
         </div>
       </header>
 
+      {/* List Section */}
       <main style={styles.mainContent}>
         <div style={styles.listContainer}>
-          {topTenList.length > 0 ? (
-            topTenList.map((college, index) => (
+          {top10Colleges.length > 0 ? (
+            top10Colleges.map((college, index) => (
               <article key={college.id} style={styles.card}>
                 
-                {/* Left Column: Image Area */}
+                {/* Image & Rank Section */}
                 <div style={styles.imageBox}>
                   <div style={styles.rankRibbon}>
                     <span style={styles.rankHash}>#</span>
                     <span style={styles.rankNum}>{index + 1}</span>
                   </div>
                   <img 
-                    src={college.image || 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080'} 
+                    src={college.image} 
                     alt={college.name} 
                     style={styles.image}
                     onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080';
+                      e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'; 
                     }}
                   />
-                  <div style={styles.typeBadge}>{college.type || "Engineering College"}</div>
+                  <div style={styles.typeBadge}>{college.type}</div>
                 </div>
 
-                {/* Right Column: Detailed Context */}
+                {/* Content Section */}
                 <div style={styles.contentBox}>
                   <div style={styles.contentHeader}>
                     <div>
-                      {/* --- Added Link Wrapper Here --- */}
+                      {/* --- Added the Link wrapper here --- */}
                       <Link to={`/college/${college.id}`} style={styles.collegeLink}>
                         <h2 style={styles.collegeName}>{college.name}</h2>
                       </Link>
                       <p style={styles.location}>📍 {college.city}, {college.state}</p>
                     </div>
                     <div style={styles.ratingBlock}>
-                      <div style={styles.ratingScore}>⭐ {Number(college.rating || 0).toFixed(1)}</div>
-                      <div style={styles.reviewCount}>{college.reviews || 0} Reviews</div>
+                      <div style={styles.ratingScore}>
+                        ⭐ {college.rating.toFixed(1)}
+                      </div>
+                      <div style={styles.reviewCount}>
+                        {college.reviews} Reviews
+                      </div>
                     </div>
                   </div>
 
                   <p style={styles.description}>{college.description}</p>
 
-                  {/* Structured Matrix */}
+                  {/* Data Grid */}
                   <div style={styles.dataGrid}>
                     <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Established</span>
-                      <span style={styles.dataValue}>{college.established || "N/A"}</span>
+                      <span style={styles.dataLabel}>Estd. Year</span>
+                      <span style={styles.dataValue}>{college.established}</span>
                     </div>
                     <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Annual Fees</span>
-                      <span style={styles.dataValue}>{college.fees || "Contact for details"}</span>
+                      <span style={styles.dataLabel}>First-Year Fees</span>
+                      <span style={styles.dataValue}>{college.fees}</span>
                     </div>
                     <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Approval</span>
-                      <span style={styles.dataValue}>{college.approval || "AICTE"}</span>
+                      <span style={styles.dataLabel}>Approvals</span>
+                      <span style={styles.dataValue}>{college.approval}</span>
                     </div>
                     <div style={styles.dataItem}>
                       <span style={styles.dataLabel}>Affiliation</span>
-                      <span style={styles.dataValue}>{college.affiliation || "KTU"}</span>
+                      <span style={styles.dataValue}>{college.affiliation}</span>
                     </div>
                   </div>
 
-                  {/* Program Scope Tags */}
-                  {college.courses && college.courses.length > 0 && (
-                    <div style={styles.tagSection}>
-                      <span style={styles.tagHeading}>Top Courses:</span>
-                      <div style={styles.tagWrapper}>
-                        {college.courses.slice(0, 5).map(course => (
-                          <span key={course} style={styles.coursePill}>{course}</span>
-                        ))}
-                      </div>
+                  {/* Tags Section */}
+                  <div style={styles.tagSection}>
+                    <span style={styles.tagHeading}>Programs Offered:</span>
+                    <div style={styles.tagWrapper}>
+                      {college.courses.map(course => (
+                        <span key={course} style={styles.coursePill}>{course}</span>
+                      ))}
                     </div>
-                  )}
+                  </div>
 
                 </div>
               </article>
             ))
           ) : (
-            <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
-              <p>No engineering colleges found for Kerala in the database.</p>
+            <div style={styles.noResults}>
+              <p>No matching private medical colleges found in South India.</p>
             </div>
           )}
         </div>
       </main>
+
       <Footer />
     </div>
   );
@@ -131,6 +142,8 @@ const styles = {
     minHeight: '100vh',
     fontFamily: 'DM Sans, sans-serif',
   },
+  
+  /* Header Styles */
   heroHeader: {
     backgroundColor: '#fff',
     padding: '80px 24px 60px',
@@ -144,8 +157,8 @@ const styles = {
   eyebrow: {
     display: 'inline-block',
     padding: '6px 14px',
-    backgroundColor: '#f0fdf4',
-    color: '#16a34a',
+    backgroundColor: '#eff6ff',
+    color: '#2563eb',
     borderRadius: '20px',
     fontSize: '13px',
     fontWeight: '700',
@@ -157,7 +170,7 @@ const styles = {
     fontFamily: 'Playfair Display, serif',
     fontSize: '44px',
     color: '#0f172a',
-    lineHeight: '1.15',
+    lineHeight: '1.2',
     marginBottom: '16px',
     fontWeight: '800',
   },
@@ -170,7 +183,7 @@ const styles = {
   divider: {
     width: '60px',
     height: '4px',
-    backgroundColor: '#16a34a',
+    backgroundColor: '#2563eb', 
     margin: '0 auto 30px',
     borderRadius: '2px',
   },
@@ -179,6 +192,8 @@ const styles = {
     lineHeight: '1.8',
     color: '#475569',
   },
+
+  /* Main List Styles */
   mainContent: {
     maxWidth: '1000px',
     margin: '0 auto',
@@ -189,6 +204,8 @@ const styles = {
     flexDirection: 'column',
     gap: '40px',
   },
+  
+  /* Card Styles */
   card: {
     display: 'flex',
     flexWrap: 'wrap', 
@@ -198,6 +215,8 @@ const styles = {
     boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
     border: '1px solid #f1f5f9',
   },
+  
+  /* Left Side: Image */
   imageBox: {
     flex: '1 1 340px', 
     position: 'relative',
@@ -212,7 +231,7 @@ const styles = {
     position: 'absolute',
     top: '20px',
     left: '0',
-    backgroundColor: 'var(--deep, #0f172a)',
+    backgroundColor: '#1e3a8a', 
     color: '#fff',
     padding: '8px 20px 8px 16px',
     borderTopRightRadius: '30px',
@@ -220,7 +239,6 @@ const styles = {
     display: 'flex',
     alignItems: 'baseline',
     boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-    zIndex: 10,
   },
   rankHash: {
     fontSize: '16px',
@@ -245,6 +263,8 @@ const styles = {
     fontWeight: '700',
     backdropFilter: 'blur(4px)',
   },
+
+  /* Right Side: Content */
   contentBox: {
     flex: '2 1 400px', 
     padding: '32px',
@@ -260,15 +280,17 @@ const styles = {
     flexWrap: 'wrap',
     marginBottom: '16px',
   },
+  
+  /* --- Added Link Styles --- */
   collegeLink: {
-    textDecoration: 'none',
+    textDecoration: 'none', // Removes default underline
     color: 'inherit',
     cursor: 'pointer',
   },
   collegeName: {
     fontSize: '24px',
     fontWeight: '800',
-    color: '#1e3a8a', // Using green to match the engineering theme eyebrow
+    color: '#1e3a8a', // Deep blue to indicate it's clickable
     marginBottom: '8px',
     lineHeight: '1.25',
     transition: 'color 0.2s ease',
@@ -303,6 +325,8 @@ const styles = {
     color: '#475569',
     marginBottom: '24px',
   },
+  
+  /* Details Grid */
   dataGrid: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -331,6 +355,8 @@ const styles = {
     color: '#0f172a',
     fontWeight: '700',
   },
+
+  /* Tags */
   tagSection: {
     display: 'flex',
     alignItems: 'center',
@@ -356,4 +382,12 @@ const styles = {
     fontWeight: '600',
     color: '#0f172a',
   },
+  noResults: {
+    textAlign: 'center',
+    padding: '40px',
+    color: '#64748b',
+    backgroundColor: '#fff',
+    borderRadius: '20px',
+    border: '1px solid #f1f5f9',
+  }
 };

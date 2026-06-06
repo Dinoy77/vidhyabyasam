@@ -1,22 +1,23 @@
 import React, { useMemo, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // <-- Added Link import
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { colleges } from '../../data/colleges';
 
-export default function TopSouthIndianMedicalColleges() {
+export default function TopIndianMedicalColleges() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   // Filter and extract only the top South Indian Medical colleges present in your dataset
   const southIndianGiants = useMemo(() => {
-    // Exact IDs matching the premium South Indian MBBS colleges in your dataset
-    const targetIds = [301, 299, 361, 362, 303, 263, 307, 308, 372, 306];
+    // We added the "med-" prefix to match your newly updated colleges.js data structure!
+    const targetIds = ['med-301', 'med-299', 'med-361', 'med-362', 'med-303', 'med-263', 'med-307', 'med-308', 'med-372', 'med-306'];
     
     return colleges
       .filter(c => targetIds.includes(c.id))
       // Sort them dynamically by rating, then by review count
-      .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+      .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews));
   }, []);
 
   return (
@@ -57,6 +58,7 @@ export default function TopSouthIndianMedicalColleges() {
                   alt={college.name} 
                   style={styles.image}
                   onError={(e) => {
+                    e.target.onerror = null;
                     e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80'; 
                   }}
                 />
@@ -67,11 +69,14 @@ export default function TopSouthIndianMedicalColleges() {
               <div style={styles.contentBox}>
                 <div style={styles.contentHeader}>
                   <div>
-                    <h2 style={styles.collegeName}>{college.name}</h2>
+                    {/* --- Added Link Wrapper Here --- */}
+                    <Link to={`/college/${college.id}`} style={styles.collegeLink}>
+                      <h2 style={styles.collegeName}>{college.name}</h2>
+                    </Link>
                     <p style={styles.location}>📍 {college.city}, {college.state}</p>
                   </div>
                   <div style={styles.ratingBlock}>
-                    <div style={styles.ratingScore}>⭐ {college.rating.toFixed(1)}</div>
+                    <div style={styles.ratingScore}>⭐ {Number(college.rating).toFixed(1)}</div>
                     <div style={styles.reviewCount}>{college.reviews} Reviews</div>
                   </div>
                 </div>
@@ -102,7 +107,7 @@ export default function TopSouthIndianMedicalColleges() {
                 <div style={styles.tagSection}>
                   <span style={styles.tagHeading}>Available Tracks:</span>
                   <div style={styles.tagWrapper}>
-                    {college.courses.map(course => (
+                    {college.courses.slice(0, 6).map(course => (
                       <span key={course} style={styles.coursePill}>{course}</span>
                     ))}
                   </div>
@@ -138,8 +143,8 @@ const styles = {
   eyebrow: {
     display: 'inline-block',
     padding: '6px 14px',
-    backgroundColor: '#f0fdf4',
-    color: '#16a34a',
+    backgroundColor: '#fff1f2', // Soft red/rose background for medical theme
+    color: '#e11d48',
     borderRadius: '20px',
     fontSize: '13px',
     fontWeight: '700',
@@ -164,7 +169,7 @@ const styles = {
   divider: {
     width: '60px',
     height: '4px',
-    backgroundColor: 'var(--accent, #e11d48)',
+    backgroundColor: '#e11d48',
     margin: '0 auto 30px',
     borderRadius: '2px',
   },
@@ -206,7 +211,7 @@ const styles = {
     position: 'absolute',
     top: '20px',
     left: '0',
-    backgroundColor: 'var(--deep, #0f172a)',
+    backgroundColor: '#0f172a',
     color: '#fff',
     padding: '8px 20px 8px 16px',
     borderTopRightRadius: '30px',
@@ -254,12 +259,20 @@ const styles = {
     flexWrap: 'wrap',
     marginBottom: '16px',
   },
+  
+  /* --- Added the collegeLink style --- */
+  collegeLink: {
+    textDecoration: 'none',
+    color: 'inherit',
+    cursor: 'pointer',
+  },
   collegeName: {
     fontSize: '24px',
     fontWeight: '800',
-    color: '#0f172a',
+    color: '#1e3a8a',  // Matches the red theme
     marginBottom: '8px',
     lineHeight: '1.25',
+    transition: 'color 0.2s ease',
   },
   location: {
     fontSize: '14px',

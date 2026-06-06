@@ -71,17 +71,8 @@ export default function CollegeDetail() {
   const [showAuth, setShowAuth] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
 
-  // 2. Safely add 10000 to all engineering IDs to match Home.jsx
-  const safeEngineeringColleges = engineeringColleges.map(college => ({
-    ...college,
-    id: parseInt(college.id) + 10000
-  }));
-
-  // Combine the datasets into one unified array
-  const allColleges = [...medicalColleges, ...safeEngineeringColleges];
-
-  // 3. Search the combined array for the correct ID using .toString()
-  const college = allColleges.find(c => c.id.toString() === id.toString());
+  const allColleges = [...medicalColleges, ...engineeringColleges];
+  const college = allColleges.find(c => String(c.id) === String(id));
 
   if (!college) {
     return (
