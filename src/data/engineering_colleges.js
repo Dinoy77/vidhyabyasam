@@ -13,7 +13,7 @@ const raw_data  = [
     "reviews": 560,
     "courses": ["B.Tech", "M.Tech", "B.Arch", "M.Arch", "MCA", "MBA", "Ph.D"],
     "fees": "₹21.4K - ₹85.6K per year",
-    "image": "https://i.postimg.cc/placeholder1.png",
+    "image": "https://i.postimg.cc/pr6y0tC4/p58.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "AICTE", "NBA", "KTU"],
     "description": "College of Engineering Trivandrum (CET) is the first engineering college in Kerala, established in 1939. It consistently ranks as the top engineering institution in the state, offering a wide range of undergraduate, postgraduate, and doctoral programs.",
@@ -34,7 +34,7 @@ const raw_data  = [
     "reviews": 564,
     "courses": ["B.Tech", "M.Tech", "B.Arch", "M.Plan", "MCA", "MBA", "M.Sc", "Ph.D"],
     "fees": "₹1.25L - ₹6.63L total fees",
-    "image": "https://i.postimg.cc/placeholder2.png",
+    "image": "https://i.postimg.cc/G9nn37mD/NIT-calicut-1024x576.webp",
     "approval": "UGC, AICTE, NBA",
     "tags": ["NIT", "Public", "Institute of National Importance"],
     "description": "National Institute of Technology Calicut is a premier public technical university and an institute of national importance established in 1961. It is ranked highly nationwide for engineering and features top-tier placements.",
@@ -55,7 +55,7 @@ const raw_data  = [
     "reviews": 180,
     "courses": ["B.Tech", "M.Tech", "Ph.D"],
     "fees": "₹40K - ₹75K per year",
-    "image": "https://i.postimg.cc/placeholder3.png",
+    "image": "https://i.postimg.cc/CLCxBkpZ/Image-1770811570265.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "IHRD", "NBA", "KTU"],
     "description": "Established in 1989, Model Engineering College is a beacon of excellence managed by IHRD. Located in Kochi, it is known for its research-oriented approach and excellent placement records.",
@@ -76,7 +76,7 @@ const raw_data  = [
     "reviews": 210,
     "courses": ["B.Tech", "M.Tech", "B.Arch", "M.Arch", "MCA", "Ph.D"],
     "fees": "₹82.5K per year",
-    "image": "https://i.postimg.cc/placeholder_tkm.png",
+    "image": "https://i.postimg.cc/Nfbwv4wy/Thangal-Kunju-Musaliar-College-of-Engineering-Kollam-Kerala.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Aided", "AICTE", "NBA", "KTU"],
     "description": "Founded in 1958, TKM College of Engineering in Kollam is the first government-aided engineering institution in Kerala. It maintains a high state ranking for academics and industry exposure.",
@@ -97,7 +97,7 @@ const raw_data  = [
     "reviews": 161,
     "courses": ["B.Tech", "M.Tech", "B.Arch", "MCA", "Ph.D"],
     "fees": "₹81.88K total fees",
-    "image": "https://i.postimg.cc/placeholder_gect.png",
+    "image": "https://i.postimg.cc/R0kkLpcS/Gec-thrissur.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "AICTE", "NBA", "KTU"],
     "description": "Government Engineering College, Thrissur, established in 1957, is renowned for its academic excellence, vibrant campus life, and strong research programs.",
@@ -116,9 +116,9 @@ const raw_data  = [
     "established": 1993,
     "rating": 3.8,
     "reviews": 140,
-    "courses": ["B.Tech", "M.Tech", "MCA"],
+    "courses": ["B.Tech", "MCA"],
     "fees": "₹78.75K per year",
-    "image": "https://i.postimg.cc/placeholder_cec.png",
+    "image": "https://i.postimg.cc/vHYphV68/pic1-01-1-scaled-qowqedk1mypg5wipr33hu67gkidaz41rw3f0gxl5xc.jpg",
     "approval": "AICTE",
     "tags": ["Government", "IHRD", "AICTE", "KTU"],
     "description": "College of Engineering, Chengannur provides a well-rounded technical education with active placement programs and is managed by IHRD.",
@@ -139,7 +139,7 @@ const raw_data  = [
     "reviews": 94,
     "courses": ["B.Tech", "M.Tech", "B.Arch", "MCA"],
     "fees": "₹22K per year",
-    "image": "https://i.postimg.cc/placeholder_rit.png",
+    "image": "https://i.postimg.cc/vmYgHX4q/mainblock.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "AICTE", "NBA", "KTU"],
     "description": "Rajiv Gandhi Institute of Technology, established in 1991, is a premier government institution known for its well-equipped laboratories and practical learning emphasis.",
@@ -160,7 +160,7 @@ const raw_data  = [
     "reviews": 104,
     "courses": ["B.Tech", "M.Tech", "Ph.D"],
     "fees": "₹75K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_rset.png",
+    "image": "https://i.postimg.cc/FsSPXbkL/010.png",
     "approval": "AICTE, NBA, NAAC A",
     "tags": ["Private", "Autonomous", "AICTE", "NBA"],
     "description": "Ranked among the best private engineering colleges in Kerala, RSET is known for its modern infrastructure, autonomous status, and excellent tech placements.",
@@ -181,7 +181,7 @@ const raw_data  = [
     "reviews": 98,
     "courses": ["B.Tech", "M.Tech", "Ph.D"],
     "fees": "₹11.98K per year",
-    "image": "https://i.postimg.cc/placeholder_nss.png",
+    "image": "https://i.postimg.cc/mrLV90X0/5.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Aided", "AICTE", "NBA", "KTU"],
     "description": "NSS College of Engineering is a highly reputed aided institution established in 1960. It features excellent faculty and consistently high state rankings.",
@@ -202,7 +202,7 @@ const raw_data  = [
     "reviews": 120,
     "courses": ["B.Tech", "M.Tech", "MCA"],
     "fees": "₹1.34L per year",
-    "image": "https://i.postimg.cc/placeholder_ajce.png",
+    "image": "https://i.postimg.cc/ZYGcH9sR/1280px-Amal-Jyothi-College-of-Engineering-Kanjirappally-Campus-DSC-9464-jpg-utm-source-www-wikidata.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": ["Private", "AICTE", "NBA", "KTU"],
     "description": "Amal Jyothi College of Engineering is a top-ranked private self-financing institution, offering a highly rated campus environment and strong industry linkage.",
@@ -223,7 +223,7 @@ const raw_data  = [
     "reviews": 110,
     "courses": ["B.Tech", "M.Tech", "Ph.D"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_gcek.png",
+    "image": "https://i.postimg.cc/XJTwsh81/Government-College-of-Engineering-Kannur.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "AICTE", "NBA", "KTU"],
     "description": "Established in 1986, Government College of Engineering Kannur offers excellent faculty and infrastructure in northern Kerala.",
@@ -244,7 +244,7 @@ const raw_data  = [
     "reviews": 125,
     "courses": ["B.Tech", "M.Tech"],
     "fees": "₹35K - ₹60K per year",
-    "image": "https://i.postimg.cc/placeholder_gecbh.png",
+    "image": "https://i.postimg.cc/fbPXbF6W/b70449a9-8c80-46b8-927d-2bf48863750d-1587992687.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government", "AICTE", "NBA", "KTU"],
     "description": "GEC Barton Hill is a prominent government institution established in 1999 in Thiruvananthapuram, noted for strong technical education standards.",
@@ -265,7 +265,7 @@ const raw_data  = [
     "reviews": 95,
     "courses": ["B.Tech", "M.Tech"],
     "fees": "₹1.36L per year",
-    "image": "https://i.postimg.cc/placeholder_mits.png",
+    "image": "https://i.postimg.cc/hP0dmhkv/about-1.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Private", "AICTE", "NBA", "KTU"],
     "description": "MITS is a highly regarded private institution in Ernakulam known for its robust placements and strong academic scores.",
@@ -286,7 +286,7 @@ const raw_data  = [
     "reviews": 135,
     "courses": ["B.Tech", "M.Tech", "MCA"],
     "fees": "₹96.75K per year",
-    "image": "https://i.postimg.cc/placeholder_scms.png",
+    "image": "https://i.postimg.cc/rsNK5YYv/sset-1.webp",
     "approval": "AICTE, NAAC",
     "tags": ["Private", "AICTE", "KTU"],
     "description": "SCMS School of Engineering and Technology is one of the leading self-financing colleges in Ernakulam, consistently ranked highly for infrastructure and academics.",
@@ -307,7 +307,7 @@ const raw_data  = [
     "reviews": 85,
     "courses": ["B.Tech", "M.Tech"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_lbs.png",
+    "image": "https://i.postimg.cc/dQ5FTY59/img09.jpg",
     "approval": "AICTE, NBA",
     "tags": ["Government Trust", "AICTE", "KTU"],
     "description": "LBS College of Engineering is one of the top engineering colleges in northern Kerala, focusing on industry-relevant skills and robust technical training.",
@@ -333,7 +333,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "INR 1.5 to INR 3 lakhs",
-    "image": "https://i.postimg.cc/placeholder_mace.png",
+    "image": "https://i.postimg.cc/05XgyCNh/MAIN-BLOCK-1-1024x576.jpg",
     "approval": "UGC, NBA, NAAC A+",
     "tags": [
       "Aided",
@@ -364,7 +364,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.5 Lakh - ₹6 Lakh",
-    "image": "https://i.postimg.cc/placeholder_fisat.png",
+    "image": "https://i.postimg.cc/90rn7vfb/campus-e1658400251315.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -393,7 +393,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "Rs 1.93 lakhs - Rs 4.04 lakhs",
-    "image": "https://i.postimg.cc/placeholder_sctce.png",
+    "image": "https://i.postimg.cc/Z5rDpPT9/sree-chitra-thirunal-1024x686.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Government Sponsored",
@@ -424,7 +424,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹ 4.02 L - ₹ 5.02 L",
-    "image": "https://i.postimg.cc/placeholder_saintgits.png",
+    "image": "https://i.postimg.cc/vmPRx7z7/DJI-0861-scaled.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -454,7 +454,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_vast.png",
+    "image": "https://i.postimg.cc/htgNCZZ2/448293294-album-3.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -484,7 +484,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹34.6K per year",
-    "image": "https://i.postimg.cc/placeholder_gecskp.png",
+    "image": "https://i.postimg.cc/5NWr0kVK/488926487b19517d3354acd2fb85efaecover3.jpg",
     "approval": "AICTE",
     "tags": [
       "Government",
@@ -513,7 +513,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_lbsitw.png",
+    "image": "https://i.postimg.cc/VkLDrxHD/lbs-institute-of-technology-for-women-thiruvananthapuram-272328.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Government Trust",
@@ -542,7 +542,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹60K per year",
-    "image": "https://i.postimg.cc/placeholder_gecw.png",
+    "image": "https://i.postimg.cc/Jzn54bGY/government-engineering-college-wayanad-349341.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Government",
@@ -571,7 +571,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹60K per year",
-    "image": "https://i.postimg.cc/placeholder_geci.png",
+    "image": "https://i.postimg.cc/cLrfN0zS/inner.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Government",
@@ -602,7 +602,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.6 Lakhs - ₹5.81 Lakhs",
-    "image": "https://i.postimg.cc/placeholder_mesce.png",
+    "image": "https://i.postimg.cc/bJ8Gdhmf/1.jpg",
     "approval": "AICTE, CoA",
     "tags": [
       "Private",
@@ -632,7 +632,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_mbcet.png",
+    "image": "https://i.postimg.cc/7LP3QSyV/2-768x576.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -662,7 +662,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_vjcet.png",
+    "image": "https://i.postimg.cc/s21BhmzX/Viswajyothi-College-of-Engineering-and-Technology-1518493365-0.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -691,7 +691,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹75K - ₹1.15L per year",
-    "image": "https://i.postimg.cc/placeholder_jecc.png",
+    "image": "https://i.postimg.cc/mgpkB9HM/2606b47181f073b7f4f7592760540399.avif",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -721,7 +721,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_tist.png",
+    "image": "https://i.postimg.cc/C1sVLy2f/Image-1769084311088.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -750,7 +750,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_asiet.png",
+    "image": "https://i.postimg.cc/KjpwRmD8/27afb8cf-14dd-47c5-98f1-f0da8688cce3-1587905015.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -778,7 +778,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cep.png",
+    "image": "https://i.postimg.cc/DytpDjjV/me.png",
     "approval": "AICTE, NBA",
     "tags": [
       "Government Sponsored",
@@ -806,7 +806,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cek.png",
+    "image": "https://i.postimg.cc/L6R3Zcb9/Cek-New.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -834,7 +834,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_vjec.png",
+    "image": "https://i.postimg.cc/YCL029z7/vimal-jyothi-engineering-college-kannur-283531.webp",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -865,7 +865,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_sngce.png",
+    "image": "https://i.postimg.cc/PqhC6H1J/SNGCE-college.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -892,7 +892,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_marian.png",
+    "image": "https://i.postimg.cc/mrHGF1PM/marian-engineering-college-mec-kazhakuttom-thiruvananthapuram-52099.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -920,7 +920,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹87.96K per year",
-    "image": "https://i.postimg.cc/placeholder_geck.png",
+    "image": "https://i.postimg.cc/ZKsk7x3t/Slide5-o-LQDWYI.jpg",
     "approval": "AICTE, UGC",
     "tags": [
       "Government",
@@ -950,7 +950,7 @@ const raw_data  = [
       "BMS"
     ],
     "fees": "₹1.60L total fees",
-    "image": "https://i.postimg.cc/placeholder_cea.png",
+    "image": "https://i.postimg.cc/JnrPC9CW/Cea-building.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -978,7 +978,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_ceal.png",
+    "image": "https://i.postimg.cc/76htTpsh/college-of-engineering-attingal-thiruvananthapuram-274688.webp",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -1007,7 +1007,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cecherthala.png",
+    "image": "https://i.postimg.cc/TPpHKzHL/whatsapp-image-2025-08-09-at-10-58-53-am-2.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -1035,7 +1035,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cekidangoor.png",
+    "image": "https://i.postimg.cc/8kHBVyZC/Mainblock-new.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -1063,7 +1063,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_mea.png",
+    "image": "https://i.postimg.cc/pdJynShn/edba8967989889a54a4d586c19e46d8f.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -1093,7 +1093,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_icet.png",
+    "image": "https://i.postimg.cc/PJTxyscV/about-image.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1120,7 +1120,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_ukf.png",
+    "image": "https://i.postimg.cc/brmzRG1Q/ukf-college-of-engineering-technology-kollam-282857.webp",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1148,7 +1148,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_sbce.png",
+    "image": "https://i.postimg.cc/SNZ6nDYj/300520810-527499595884944-7803220744373304424-n-jpg-stp-c341-0-1365-1365a-dst-jpg-tt6-cstp-mx1365x13.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -1177,7 +1177,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_mcet.png",
+    "image": "https://i.postimg.cc/mr3hHgpH/493875361-1251931956935083-8230696781808438031-n-jpg-stp-dst-jpg-tt6-cstp-mx2048x1152-ctp-s960x960.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1201,7 +1201,7 @@ const raw_data  = [
     "reviews": 110,
     "courses": ["B.Tech", "M.Tech", "MBA"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cethalassery.png",
+    "image": "https://i.postimg.cc/9XkXz9Xv/tly-thalassery.jpg",
     "approval": "AICTE",
     "tags": ["Government Sponsored", "CAPE", "KTU"],
     "description": "Established under the Co-operative Academy of Professional Education (CAPE) by the Government of Kerala, CE Thalassery provides a broad range of engineering disciplines and has a prominent standing in the Malabar region.",
@@ -1222,7 +1222,7 @@ const raw_data  = [
     "reviews": 132,
     "courses": ["B.Tech", "M.Tech", "Ph.D"],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_sahrdaya.png",
+    "image": "https://i.postimg.cc/v85M8Nj4/sahrdaya-college-of-engineering-technology-thrissur-321826.webp",
     "approval": "AICTE, NBA, NAAC B++",
     "tags": ["Private", "NBA", "NAAC", "KTU"],
     "description": "Sahrdaya College of Engineering & Technology, located in Kodakara, is recognized for its strong emphasis on biomedical and biotechnology engineering alongside traditional courses, maintaining excellent placement records.",
@@ -1243,7 +1243,7 @@ const raw_data  = [
     "reviews": 85,
     "courses": ["B.Tech"],
     "fees": "₹75K - ₹1L per year",
-    "image": "https://i.postimg.cc/placeholder_christ.png",
+    "image": "https://i.postimg.cc/4Nn5bDgv/Background-Image-1768821343213.jpg",
     "approval": "AICTE, NAAC",
     "tags": ["Private", "AICTE", "KTU"],
     "description": "Despite being a relatively new institution, Christ College of Engineering has rapidly gained prominence for its high academic pass percentages and disciplined, student-focused learning environment.",
@@ -1264,7 +1264,7 @@ const raw_data  = [
     "reviews": 60,
     "courses": ["B.Tech"],
     "fees": "₹64K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_ahalia.png",
+    "image": "https://i.postimg.cc/YCCzqTX9/76aa6655adee0b15c8c61013c44cfdd3.jpg",
     "approval": "AICTE",
     "tags": ["Private", "AICTE", "KTU"],
     "description": "Ahalia School of Engineering and Technology is part of the integrated Ahalia Health, Heritage & Knowledge Village. It offers modern infrastructure and focuses heavily on experiential technical learning.",
@@ -1285,7 +1285,7 @@ const raw_data  = [
     "reviews": 105,
     "courses": ["B.Tech", "MCA", "Diploma"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cev.png",
+    "image": "https://i.postimg.cc/KjQ368hY/vda-vadakara.jpg",
     "approval": "AICTE",
     "tags": ["Government Sponsored", "CAPE", "KTU"],
     "description": "Managed by CAPE under the Government of Kerala, College of Engineering Vadakara is known for its well-structured curriculum, experienced faculty, and strong industry collaborations in the IT and electronics sectors.",
@@ -1306,7 +1306,7 @@ const raw_data  = [
     "reviews": 112,
     "courses": ["B.Tech"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cem.png",
+    "image": "https://i.postimg.cc/4xbfxFSd/college-of-engineering-munnar-idukki-274667.webp",
     "approval": "AICTE",
     "tags": ["Government Sponsored", "KTU"],
     "description": "Located in the scenic hill station of Munnar, this institution provides an exceptional and serene environment for engineering studies, specializing in core tech subjects with government support.",
@@ -1327,7 +1327,7 @@ const raw_data  = [
     "reviews": 90,
     "courses": ["B.Tech", "M.Tech", "B.Arch"],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_kmea.png",
+    "image": "https://i.postimg.cc/GmQ452rJ/KMEA-Engineering-College-Img-3.jpg",
     "approval": "AICTE",
     "tags": ["Private", "Minority Institution", "KTU"],
     "description": "Established by the Kerala Muslim Educational Association, KMEA provides robust technical education in Ernakulam, with a dedicated campus for engineering and architecture.",
@@ -1348,7 +1348,7 @@ const raw_data  = [
     "reviews": 75,
     "courses": ["B.Tech", "M.Tech", "MCA", "MBA"],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_lmcst.png",
+    "image": "https://i.postimg.cc/6qZ3LVBm/lourdes-matha-college-of-science-technology-thiruvananthapuram-279479.webp",
     "approval": "AICTE",
     "tags": ["Private", "KTU"],
     "description": "LMCST is managed by the Archdiocese of Changanacherry and aims to provide quality education in technology and management, nestled in a peaceful campus away from the city bustles of Trivandrum.",
@@ -1369,7 +1369,7 @@ const raw_data  = [
     "reviews": 88,
     "courses": ["B.Tech"],
     "fees": "₹75K - ₹1.28L per year",
-    "image": "https://i.postimg.cc/placeholder_aisat.png",
+    "image": "https://i.postimg.cc/7Lbqn1V3/Image-1770808204526.jpg",
     "approval": "AICTE",
     "tags": ["Private", "KTU"],
     "description": "Situated in Kochi, AISAT is a newer yet rapidly growing institution known for its state-of-the-art technical campus and close ties with the industrial sector for practical student placements.",
@@ -1390,7 +1390,7 @@ const raw_data  = [
     "reviews": 45,
     "courses": ["B.Tech"],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cearanmula.png",
+    "image": "https://i.postimg.cc/VkCRr2yn/Image-1772265548674.jpg",
     "approval": "AICTE",
     "tags": ["Government Sponsored", "CAPE", "KTU"],
     "description": "Managed by CAPE, this institution is dedicated to advancing the technical educational prospects in the Pathanamthitta district, providing affordable and quality engineering studies.",
@@ -1415,7 +1415,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_mangalam.png",
+    "image": "https://i.postimg.cc/WbMyxD3Y/Image-1768308721105.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1444,7 +1444,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_sjcet.png",
+    "image": "https://i.postimg.cc/XNgFh4Ws/Sjc113-1.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -1472,7 +1472,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_tkmit.png",
+    "image": "https://i.postimg.cc/Qx2XJKzR/thangal-kunju-musaliar-institute-of-technology-kollam-344766.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1501,7 +1501,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_ncerc.png",
+    "image": "https://i.postimg.cc/LXJ9VkmT/abt-nehru.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1530,7 +1530,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_kmct.png",
+    "image": "https://i.postimg.cc/gknV619C/Image-1769254154397.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1556,7 +1556,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹75K - ₹1L per year",
-    "image": "https://i.postimg.cc/placeholder_carmel.png",
+    "image": "https://i.postimg.cc/MH8y2p38/5fe20d88c91a3be3f29609e23cd11c03.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1582,7 +1582,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_providence.png",
+    "image": "https://i.postimg.cc/vmrY28nP/providence-college-of-engineering-chengannur-110710.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1609,7 +1609,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_mbc.png",
+    "image": "https://i.postimg.cc/RVYw4dDR/664e3604496024ce0d69976cd61e3e33.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -1636,7 +1636,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_bmce.png",
+    "image": "https://i.postimg.cc/P5hvt7M3/7475cf3143c3ecb9c344bfd166dffb65.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1662,7 +1662,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_ekc.png",
+    "image": "https://i.postimg.cc/1X9bRs4b/Hostel-of-Eranad-Knowledge-City-Technical-Campus-Malappuram-Hostel.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1688,7 +1688,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_ace.png",
+    "image": "https://i.postimg.cc/5y0pk0XX/Image-1773153199876.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1716,7 +1716,7 @@ const raw_data  = [
       "Diploma"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_toms.png",
+    "image": "https://i.postimg.cc/gjZLJF5N/file-0000000054907208bf609ca08b9362d1-1.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1742,7 +1742,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_heera.png",
+    "image": "https://i.postimg.cc/DzzrhzQv/481957148-1063393912473991-1026682853133611860-n-jpg-stp-dst-jpg-tt6-cstp-mx2048x1365-ctp-s960x960.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1769,7 +1769,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_mets.png",
+    "image": "https://i.postimg.cc/Hn18rWMt/Image-1768828567070.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1797,7 +1797,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_sngist.png",
+    "image": "https://i.postimg.cc/Df57Jy1f/1418383464wa4.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1824,7 +1824,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_svnce.png",
+    "image": "https://i.postimg.cc/zfw9s0jY/82948b5a4414a901a475ba22ece1b4e5.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1850,7 +1850,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹65K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_alazhar.png",
+    "image": "https://i.postimg.cc/2y19Sw4Y/al-azhar-college-of-engineering-technology-thodupuzha-283884.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1877,7 +1877,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_stcet.png",
+    "image": "https://i.postimg.cc/xTrB1wFW/57e7badd-1038-4490-875c-3aa2080d1f46-1588676557.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1903,7 +1903,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_iiet.png",
+    "image": "https://i.postimg.cc/bJpsPVfr/indira-gandhi-institute-of-engineering-technology-for-women-kothamangalam-317089.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1927,10 +1927,13 @@ const raw_data  = [
     "reviews": 60,
     "courses": [
       "B.Tech",
-      "M.Tech"
+      "M.Tech",
+      "BCA",
+      "MCA",
+      "Ph.D"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_mbits.png",
+    "image": "https://i.postimg.cc/BvMG8m1B/Image-1773132584556.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
