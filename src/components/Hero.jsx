@@ -224,7 +224,7 @@ function NewsTicker({ onViewDetails }) {
         flex: 1,
       }}>
         {/* Image banner with tag overlay */}
-        <div style={{ ...ns.featuredBg, background: current.bg, position: 'relative', overflow: 'hidden', minHeight: '160px', padding: 0 }}>
+        <div style={{ ...ns.featuredBg, background: current.bg, position: 'relative', overflow: 'hidden', height: '220px', minHeight: 'unset', padding: 0 }}>
           <img
             src={current.image}
             alt={current.title}
@@ -252,17 +252,22 @@ function NewsTicker({ onViewDetails }) {
 
         {/* Content */}
         <div style={ns.featuredBody}>
-          <p style={{ ...ns.featuredTitle, color: current.color, fontSize: '15px' }}>
+          <p style={{ ...ns.featuredTitle, color: current.color, fontSize: '17px' }}>
             {current.title}
           </p>
           <p style={ns.featuredDate}>🗓 {current.date}</p>
-
-          {/* View Details button */}
+          <p style={{ fontSize: '13px', color: '#4B5563', lineHeight: 1.6, marginTop: '4px' }}>
+            {current.description.slice(0, 120)}...
+          </p>
+          <div style={{ display: 'flex', gap: '8px', marginTop: '4px', flexWrap: 'wrap' }}>
+            {current.courses.map(c => (
+              <span key={c} style={{ fontSize: '11px', background: '#F3F4F6', color: '#374151', padding: '3px 10px', borderRadius: '20px', border: '1px solid #E5E7EB' }}>
+                {c}
+              </span>
+            ))}
+          </div>
           <button
-            style={{
-              ...ns.enquireBtn,
-              background: current.color,
-            }}
+            style={{ ...ns.enquireBtn, background: current.color }}
             onClick={() => onViewDetails(current)}
           >
             👁 View Details
@@ -275,7 +280,7 @@ function NewsTicker({ onViewDetails }) {
         {newsItems.map((item, i) => (
           <button key={i} style={{
             ...ns.dot,
-            background: i === activeIndex ? current.color : 'rgba(255,255,255,0.3)',
+            background: i === activeIndex ? current.color : '#D1D5DB',
             width: i === activeIndex ? '18px' : '6px',
           }} onClick={() => goTo(i)} />
         ))}
@@ -286,7 +291,7 @@ function NewsTicker({ onViewDetails }) {
         <button style={ns.arrowBtn} onClick={() => goTo((activeIndex - 1 + newsItems.length) % newsItems.length)}>
           ←
         </button>
-        <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)' }}>
+        <span style={{ fontSize: '11px', color: '#6B7280' }}>
           {activeIndex + 1} of {newsItems.length}
         </span>
         <button style={ns.arrowBtn} onClick={() => goTo((activeIndex + 1) % newsItems.length)}>
@@ -418,7 +423,7 @@ export default function Hero({ onSearch }) {
       </div>
 
       {/* News Scroll Bar */}
-      <NewsScrollBar navigate={navigate} />
+      {/* <NewsScrollBar navigate={navigate} /> */}
 
       {/* Quote bar */}
       <div style={styles.quoteBar}>
@@ -448,53 +453,54 @@ export default function Hero({ onSearch }) {
 
 const ns = {
   box: {
-    background: 'rgba(255,255,255,0.07)',
+    background: 'rgba(255,255,255,0.95)',
     backdropFilter: 'blur(12px)',
-    border: '1px solid rgba(255,255,255,0.15)',
+    border: '1px solid rgba(255,255,255,0.3)',
     borderRadius: '16px', overflow: 'hidden',
     display: 'flex', flexDirection: 'column',
-    minHeight: '420px',
+    minHeight: '80vh',
   },
   header: {
-    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-    padding: '12px 14px',
-    borderBottom: '1px solid rgba(255,255,255,0.1)',
-  },
+  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+  padding: '12px 14px',
+  borderBottom: '1px solid #E5E7EB',
+},
   headerLeft: { display: 'flex', alignItems: 'center', gap: '8px' },
   liveDot: {
     width: '8px', height: '8px', borderRadius: '50%',
     background: '#4ADE80', boxShadow: '0 0 0 3px rgba(74,222,128,0.3)',
     animation: 'pulse 2s infinite', flexShrink: 0,
   },
-  headerTitle: { fontSize: '13px', fontWeight: 700, color: '#fff', fontFamily: 'Playfair Display, serif' },
-  count: { fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: 600 },
+  headerTitle: { fontSize: '13px', fontWeight: 700, color: '#0D1117', fontFamily: 'Playfair Display, serif' },
+  count: { fontSize: '11px', color: '#6B7280', fontWeight: 600 },
 
   featured: { display: 'flex', flexDirection: 'column' },
   featuredBg: {
-  minHeight: '160px',
-  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-  position: 'relative',
-},
+    minHeight: '320px',
+    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+    position: 'relative',
+  },
   tagPill: {
     fontSize: '10px', fontWeight: 700, color: '#fff',
     padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.5px',
   },
   bigEmoji: { fontSize: '32px', opacity: 0.3 },
-  featuredBody: { padding: '10px 14px 8px', display: 'flex', flexDirection: 'column', gap: '4px' },
-  featuredTitle: { fontSize: '13px', fontWeight: 700, lineHeight: 1.4 },
-  featuredDate: { fontSize: '11px', color: 'rgba(255,255,255,0.5)', fontWeight: 500 },
+  featuredBody: { padding: '16px 18px 12px', display: 'flex', flexDirection: 'column', gap: '8px' },
+  featuredTitle: { fontSize: '17px', fontWeight: 700, lineHeight: 1.4 },
+  featuredDate: { fontSize: '11px', color: '#6B7280', fontWeight: 500 },
 
   dots: {
     display: 'flex', gap: '4px', padding: '6px 14px',
-    borderTop: '1px solid rgba(255,255,255,0.08)',
-    borderBottom: '1px solid rgba(255,255,255,0.08)',
+    borderTop: '1px solid #E5E7EB',
+    borderBottom: '1px solid #E5E7EB',
     alignItems: 'center',
   },
   dot: {
-    height: '6px', borderRadius: '3px',
-    border: 'none', cursor: 'pointer',
-    transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
-  },
+  height: '6px', borderRadius: '3px',
+  border: 'none', cursor: 'pointer',
+  transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
+  background: '#D1D5DB',
+},
 
   enquireBtn: {
     marginTop: '14px',
@@ -515,12 +521,12 @@ const ns = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '8px 14px',
-    borderTop: '1px solid rgba(255,255,255,0.08)',
+    borderTop: '1px solid #E5E7EB',
   },
   arrowBtn: {
-    background: 'rgba(255,255,255,0.1)',
-    border: '1px solid rgba(255,255,255,0.2)',
-    color: '#fff',
+    background: '#F3F4F6',
+    border: '1px solid #E5E7EB',
+    color: '#374151',
     width: '28px', height: '28px',
     borderRadius: '50%',
     cursor: 'pointer',
@@ -580,6 +586,8 @@ const styles = {
     width: '100%',
     maxWidth: 'clamp(300px,32vw,380px)',
     flexShrink: 0,
+    alignSelf: 'flex-start',
+    marginTop: '-130px',
   },
 
   badge: {
