@@ -56,7 +56,6 @@ export default function NeetUgGuide() {
             </div>
           </div>
         </section>
-        //.
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>Eligibility Criteria</h2>
           <ul style={styles.list}>
