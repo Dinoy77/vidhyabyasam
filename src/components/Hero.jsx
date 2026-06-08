@@ -313,6 +313,14 @@ const slides = [
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showNewsPopup, setShowNewsPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowNewsPopup(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -422,8 +430,116 @@ export default function Hero({ onSearch }) {
         </div>
       </div>
 
-      {/* News Scroll Bar */}
-      {/* <NewsScrollBar navigate={navigate} /> */}
+      {/* News Popup — shows only on first visit */}
+      {/* News Popup Ad Box */}
+      {showNewsPopup && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 2000,
+          background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: '16px',
+        }} onClick={() => setShowNewsPopup(false)}>
+
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              width: '100%', maxWidth: '480px',
+              background: '#fff',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 24px 80px rgba(0,0,0,0.35)',
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setShowNewsPopup(false)}
+              style={{
+                position: 'absolute', top: '12px', right: '12px', zIndex: 10,
+                width: '30px', height: '30px', borderRadius: '50%',
+                background: 'rgba(0,0,0,0.4)', border: 'none', cursor: 'pointer',
+                fontSize: '14px', fontWeight: 700, color: '#fff',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+              }}
+            >✕</button>
+
+            {/* Top image with overlay */}
+            <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80"
+                alt="Latest Updates"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: 'linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.7))',
+              }} />
+              <div style={{
+                position: 'absolute', bottom: '14px', left: '16px',
+                display: 'flex', alignItems: 'center', gap: '8px',
+              }}>
+                <span style={{
+                  width: '8px', height: '8px', borderRadius: '50%',
+                  background: '#4ADE80', display: 'inline-block',
+                  boxShadow: '0 0 0 3px rgba(74,222,128,0.3)',
+                }} />
+                <span style={{ color: '#fff', fontSize: '13px', fontWeight: 700, letterSpacing: '1px' }}>
+                  🔔 LATEST UPDATES
+                </span>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div style={{ padding: '20px 24px 24px' }}>
+              <p style={{ fontSize: '11px', color: '#6B7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
+                📢 Exam & Admission Alerts
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>
+                {newsItems.slice(0, 4).map(item => (
+                  <div
+                    key={item.id}
+                    onClick={() => { navigate(`/news/${item.id}`); setShowNewsPopup(false); }}
+                    style={{
+                      display: 'flex', alignItems: 'center', gap: '12px',
+                      padding: '10px 12px', borderRadius: '10px',
+                      background: item.bg, cursor: 'pointer',
+                      border: `1px solid ${item.color}22`,
+                      transition: 'transform 0.15s',
+                    }}
+                  >
+                    <span style={{ fontSize: '20px', flexShrink: 0 }}>{item.icon}</span>
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <p style={{ fontSize: '13px', fontWeight: 700, color: '#1f2937', marginBottom: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        {item.title}
+                      </p>
+                      <p style={{ fontSize: '11px', color: item.color, fontWeight: 600 }}>
+                        🗓 {item.date}
+                      </p>
+                    </div>
+                    <span style={{ fontSize: '12px', color: item.color, fontWeight: 700, flexShrink: 0 }}>→</span>
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={() => setShowNewsPopup(false)}
+                style={{
+                  width: '100%', padding: '12px',
+                  borderRadius: '10px', border: 'none',
+                  background: 'linear-gradient(135deg, #1B6CA8, #0d4f80)',
+                  color: '#fff', fontSize: '14px', fontWeight: 700,
+                  cursor: 'pointer', letterSpacing: '0.3px',
+                }}
+              >
+                Explore Colleges →
+              </button>
+              <p style={{ textAlign: 'center', fontSize: '11px', color: '#9CA3AF', marginTop: '10px', cursor: 'pointer' }}
+                onClick={() => setShowNewsPopup(false)}>
+                Skip for now
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Quote bar */}
       <div style={styles.quoteBar}>
@@ -461,10 +577,10 @@ const ns = {
     minHeight: '80vh',
   },
   header: {
-  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-  padding: '12px 14px',
-  borderBottom: '1px solid #E5E7EB',
-},
+    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+    padding: '12px 14px',
+    borderBottom: '1px solid #E5E7EB',
+  },
   headerLeft: { display: 'flex', alignItems: 'center', gap: '8px' },
   liveDot: {
     width: '8px', height: '8px', borderRadius: '50%',
@@ -496,11 +612,11 @@ const ns = {
     alignItems: 'center',
   },
   dot: {
-  height: '6px', borderRadius: '3px',
-  border: 'none', cursor: 'pointer',
-  transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
-  background: '#D1D5DB',
-},
+    height: '6px', borderRadius: '3px',
+    border: 'none', cursor: 'pointer',
+    transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
+    background: '#D1D5DB',
+  },
 
   enquireBtn: {
     marginTop: '14px',

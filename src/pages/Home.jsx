@@ -21,7 +21,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   const allColleges = useMemo(() => {
     const safeEngineeringColleges = engineeringColleges.map(college => ({
       ...college,
-      id: college.id + 10000 // Prevent ID clashes with medical colleges
+      id: college.id  // Prevent ID clashes with medical colleges
     }));
     return [...medicalColleges, ...safeEngineeringColleges];
   }, []);
