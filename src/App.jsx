@@ -56,6 +56,10 @@ import KeamGuide from './components/KeamGuide';
 import KcetGuide from './components/KcetGuide';
 import ComedkGuide from './components/ComedkGuide';
 
+import BlogArticle from './pages/BlogArticle';
+import BlogList from './pages/BlogList';
+
+
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
   const [courseSelectCount, setCourseSelectCount] = useState(0);
@@ -123,6 +127,10 @@ export default function App() {
             <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
 
             <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
+
+            {/* Blogs Routes */}
+            <Route path="/blog/:slug" element={<BlogArticle />} />
+            <Route path="/blog" element={<BlogList />} />
           </Routes>
         </main>
         

@@ -94,15 +94,6 @@ export const articleRouteMap = {
   "KCET": "/articles/KcetGuide",
   "COMEDK": "/articles/ComedkGuide",
 
-  // Admission Guides
-  "MBBS Admission 2026": "/articles/MbbsAdmission2026",
-  "Engineering Admission 2026": "/articles/EngineeringAdmission2026",
-  "Pharmacy Admission 2026": "/articles/PharmacyAdmission2026",
-  "Nursing Admission 2026": "/articles/NursingAdmission2026",
-  "KEAM Counselling Guide": "/articles/KeamCounsellingGuide",
-  "NEET Counselling Guide": "/articles/NeetCounsellingGuide",
-  "MCC Counselling Guide": "/articles/MccCounsellingGuide",
-
   // Transit / Location Guides
   "Top Colleges Near Major Airports and Railway Stations": "/articles/CollegesNearAirports",
 };
@@ -201,6 +192,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
             </span>
           </div>
+
+          <span style={{...styles.link, cursor: 'pointer'}} onClick={() => navigate('/blog')}>Blogs</span>
         </div>
 
         <div style={styles.navRight}>
@@ -335,8 +328,19 @@ export default function Navbar({ onCourseSelect = () => { } }) {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
-          <a href="/#colleges" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>Colleges</a>
-          <a href="/#regions" style={styles.mobileLink} onClick={() => setMenuOpen(false)}>By Region</a>
+          <span style={{...styles.mobileLink, cursor: 'pointer'}} onClick={() => { setMenuOpen(false); navigate('/'); }}>Colleges</span>
+          <span style={{...styles.mobileLink, cursor: 'pointer'}} onClick={() => { setMenuOpen(false); navigate('/'); }}>By Region</span>
+          
+          {/* ---> NEW MOBILE BLOGS LINK ADDED HERE <--- */}
+          <span 
+            style={{...styles.mobileLink, cursor: 'pointer'}} 
+            onClick={() => { 
+              setMenuOpen(false); 
+              navigate('/blog'); 
+            }}
+          >
+            Blogs
+          </span>
           
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setCoursesOpen(!coursesOpen)}>
