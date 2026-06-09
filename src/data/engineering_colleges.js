@@ -1959,7 +1959,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_trinity.png",
+    "image": "https://i.postimg.cc/RZwSJvvR/Image-1771408226857.png",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -1987,7 +1987,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_riet.png",
+    "image": "https://i.postimg.cc/wvr8br6z/0d0685f459ea79fecd23926e0249e23e.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2016,7 +2016,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹60K - ₹1L per year",
-    "image": "https://i.postimg.cc/placeholder_snit.png",
+    "image": "https://i.postimg.cc/JnHMm8Ym/abut-img-2.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2045,7 +2045,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹65K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_mzce.png",
+    "image": "https://i.postimg.cc/WpMc7XBv/campus-View-of-Mount-Zion-College-of-Engineering-Pathanamthitta-Campus-View.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2074,7 +2074,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹70K - ₹1L per year",
-    "image": "https://i.postimg.cc/placeholder_musaliar.png",
+    "image": "https://i.postimg.cc/nVKNmMmp/77b037960549872853c538c1c8589206.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2101,7 +2101,7 @@ const raw_data  = [
       "Diploma"
     ],
     "fees": "₹55K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_issat.png",
+    "image": "https://i.postimg.cc/hvG8hCxh/car3-3.png",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2128,7 +2128,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹65K - ₹95K per year",
-    "image": "https://i.postimg.cc/placeholder_rcet.png",
+    "image": "https://i.postimg.cc/1tmwYWvG/23d70fe36240f34b38360fde6aa56835.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2155,7 +2155,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_thejus.png",
+    "image": "https://i.postimg.cc/52kkqCpY/63f70e503ef6e111c8b7dfcd88ddd19c.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2182,7 +2182,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_universal.png",
+    "image": "https://i.postimg.cc/D02gKv5R/Universal-Engineering-College.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2208,7 +2208,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_malabar.png",
+    "image": "https://i.postimg.cc/8zqmzBtR/Image-1768819766167.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2235,7 +2235,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹65K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_vasttc.png",
+    "image": "https://i.postimg.cc/BQ5jK5SH/1804578149-album-3.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2262,7 +2262,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_vvit.png",
+    "image": "https://i.postimg.cc/W3kkfhrz/42e7ffbe6c81306f341df7e6602e9814.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2290,7 +2290,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹65K - ₹95K per year",
-    "image": "https://i.postimg.cc/placeholder_awh.png",
+    "image": "https://i.postimg.cc/1598DWWN/single.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2316,7 +2316,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_mdit.png",
+    "image": "https://i.postimg.cc/65yXsnTx/07-1637304209.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2342,7 +2342,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cetrikaripur.png",
+    "image": "https://i.postimg.cc/65yXsnTx/07-1637304209.webp",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -2371,7 +2371,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹45K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_cusat.png",
+    "image": "https://i.postimg.cc/3w6Lv0YJ/office2.jpg",
     "approval": "AICTE, UGC, NAAC",
     "tags": [
       "Public",
@@ -2400,7 +2400,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_jcet.png",
+    "image": "https://i.postimg.cc/rsKdBs7H/4c97ffd23ce4ee26cc0df517215fbe96.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2427,7 +2427,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_simat.png",
+    "image": "https://i.postimg.cc/nryLNk4T/7b45b50df7ead043ba03edb514851ac0.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2454,7 +2454,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹65K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_vkcet.png",
+    "image": "https://i.postimg.cc/PqVv21RY/Image-1773214626737.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2481,7 +2481,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_ycet.png",
+    "image": "https://i.postimg.cc/SNGsgWX4/Campus-View-of-Younus-Institute-of-Technology-Kollam-Campus-View.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2508,7 +2508,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cepathanapuram.png",
+    "image": "https://i.postimg.cc/7YPDYj6C/pec-pathanapuram.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -2535,7 +2535,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cekottarakkara.png",
+    "image": "https://i.postimg.cc/KjJ6Mvzv/814867d3b0e8e4f1213eb1596ac92f3f.jpg",
     "approval": "AICTE",
     "tags": [
       "Government Sponsored",
@@ -2562,7 +2562,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_prs.png",
+    "image": "https://i.postimg.cc/qvxm54Sg/b5dafc91d721af995166a53e8189f72b.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2588,7 +2588,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_johncox.png",
+    "image": "https://i.postimg.cc/rpYNBmJR/about.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2614,7 +2614,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_alameen.png",
+    "image": "https://i.postimg.cc/KvFBsB2s/alaeen-ban1-1900x662-1.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2640,7 +2640,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_holygrace.png",
+    "image": "https://i.postimg.cc/FH6fmJMv/Campus-View-of-Holy-Grace-Academy-of-Engineering-Mala-Campus-View.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2666,7 +2666,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_mitkannur.png",
+    "image": "https://i.postimg.cc/hP6gtbtL/malabar-institute-of-technology-kannur-325257.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2692,7 +2692,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_nmit.png",
+    "image": "https://i.postimg.cc/qvwPCsJk/a5699bfc158e735f655010887a2e9152.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2719,7 +2719,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_sngcekannur.png",
+    "image": "https://i.postimg.cc/mDyg5d7B/banner.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -2746,7 +2746,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹65K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_stist.png",
+    "image": "https://i.postimg.cc/j5dpRvB9/st-thomas-institute-for-science-technology-thiruvananthapuram-281846.webp",
     "approval": "AICTE, NAAC",
     "tags": [
       "Private",
@@ -2777,7 +2777,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2L - ₹2.5L per year",
-    "image": "https://i.postimg.cc/placeholder_iitm.png",
+    "image": "https://i.postimg.cc/Cx0YWCLp/Image-1737376381677.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "IIT",
@@ -2810,7 +2810,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹1.7L per year",
-    "image": "https://i.postimg.cc/placeholder_nitt.png",
+    "image": "https://i.postimg.cc/76GpCbYn/Image-1737445588458.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "NIT",
@@ -2841,7 +2841,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹50K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_ceg.png",
+    "image": "https://i.postimg.cc/jjGMFctf/fe055ed560b1f6eb939a0edff29cfff7.jpg",
     "approval": "AICTE, UGC",
     "tags": [
       "Public",
@@ -2872,7 +2872,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.98L - ₹2.5L per year",
-    "image": "https://i.postimg.cc/placeholder_vit.png",
+    "image": "https://i.postimg.cc/zXtSQ7kL/Background-Image-1741610417907.png",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -2902,7 +2902,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.5L - ₹4L per year",
-    "image": "https://i.postimg.cc/placeholder_srm.png",
+    "image": "https://i.postimg.cc/Y2XW29LT/232-997-1664172145.jpg",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -2933,7 +2933,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹60K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_psg.png",
+    "image": "https://i.postimg.cc/43538L6Z/Background-Image-1770982903349.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Autonomous",
@@ -2961,7 +2961,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹1.5L - ₹2L per year",
-    "image": "https://i.postimg.cc/placeholder_ssn.png",
+    "image": "https://i.postimg.cc/sXJmnrXP/c02b2e031217590ae9d382bd36a231b9.jpg",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -2991,7 +2991,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.67L - ₹2L per year",
-    "image": "https://i.postimg.cc/placeholder_sastra.png",
+    "image": "https://i.postimg.cc/g2vZyKrV/Background-Image-1772179585607.jpg",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -3021,7 +3021,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹45K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_cit.png",
+    "image": "https://i.postimg.cc/8zVFCr43/coimbatore-institute-of-technology-coimbatore-242291.webp",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Aided",
@@ -3051,7 +3051,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹50K - ₹90K per year",
-    "image": "https://i.postimg.cc/placeholder_tce.png",
+    "image": "https://i.postimg.cc/6TxQTDr1/Background-Image-1720445373124.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Aided",
@@ -3080,7 +3080,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹50K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_mitchennai.png",
+    "image": "https://i.postimg.cc/dQkjfp0B/mit-front.jpg",
     "approval": "AICTE, UGC",
     "tags": [
       "Public",
@@ -3109,7 +3109,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2L - ₹3.5L per year",
-    "image": "https://i.postimg.cc/placeholder_amrita_cbe.png",
+    "image": "https://i.postimg.cc/7ZV37yBn/amrita-vishwa-vidyapeetham-coimbatore-364758.webp",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -3139,7 +3139,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.5L - ₹2L per year",
-    "image": "https://i.postimg.cc/placeholder_kct.png",
+    "image": "https://i.postimg.cc/BZK2pFhY/df76d4ff36f2730067940b6b3e853981.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3167,7 +3167,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_svce.png",
+    "image": "https://i.postimg.cc/CK5qqnBQ/5c262cf624b8a3020d721ea4d0230656.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -3196,7 +3196,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹20K - ₹45K per year",
-    "image": "https://i.postimg.cc/placeholder_gct.png",
+    "image": "https://i.postimg.cc/XqbqQrq6/gctcollge.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Government",
@@ -3225,7 +3225,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_skcet.png",
+    "image": "https://i.postimg.cc/HsSW7ZwD/Library-page-image.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3254,7 +3254,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.1L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_rec.png",
+    "image": "https://i.postimg.cc/brDgHFZ5/rajalakshmi-engineering-college-chennai-348260.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4849,6 +4849,1645 @@ const raw_data  = [
     "description": "Sethu Institute of Technology is a prominent minority institution near Madurai, widely known for its rigorous academic structure and excellent placement training support.",
     "affiliation": "Anna University",
     "color": "#2E4053"
+  },
+   {
+    "id": 176,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Thenhipalam",
+    "district": "Malappuram",
+    "name": "Calicut University Institute of Engineering Technology",
+    "short": "CUIET",
+    "type": "Public University Department",
+    "established": 2001,
+    "rating": 3.8,
+    "reviews": 125,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹35K - ₹65K per year",
+    "image": "https://i.postimg.cc/placeholder_cuiet.png",
+    "approval": "AICTE",
+    "tags": [
+      "Public",
+      "University Campus",
+      "AICTE"
+    ],
+    "description": "Managed directly by the University of Calicut, CUIET is situated on the main university campus. It offers core B.Tech programs with strong academic backing and access to extensive university resources.",
+    "affiliation": "University of Calicut",
+    "color": "#1B4F72"
+  },
+  {
+    "id": 177,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Tavanur",
+    "district": "Malappuram",
+    "name": "Kelappaji College of Agricultural Engineering & Technology",
+    "short": "KCAET",
+    "type": "Government",
+    "established": 1985,
+    "rating": 4.3,
+    "reviews": 140,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹20K - ₹45K per year",
+    "image": "https://i.postimg.cc/placeholder_kcaet.png",
+    "approval": "ICAR, AICTE",
+    "tags": [
+      "Government",
+      "Agricultural Engineering",
+      "KAU"
+    ],
+    "description": "A premier constituent college of Kerala Agricultural University, KCAET specializes uniquely in Agricultural Engineering and Food Engineering, boasting excellent research facilities and government backing.",
+    "affiliation": "Kerala Agricultural University",
+    "color": "#27AE60"
+  },
+  {
+    "id": 178,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Valanchery",
+    "district": "Malappuram",
+    "name": "MGM College of Engineering and Pharmaceutical Sciences",
+    "short": "MGM Valanchery",
+    "type": "Private",
+    "established": 2015,
+    "rating": 3.5,
+    "reviews": 45,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹60K - ₹85K per year",
+    "image": "https://i.postimg.cc/placeholder_mgm.png",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "Located in Valanchery, this institution provides modern facilities and a growing reputation for delivering accessible technical and pharmaceutical education in the Malappuram district.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#8E44AD"
+  },
+  {
+    "id": 179,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Valanchery",
+    "district": "Malappuram",
+    "name": "Cochin College of Engineering and Technology",
+    "short": "CCET Valanchery",
+    "type": "Private",
+    "established": 2012,
+    "rating": 3.4,
+    "reviews": 50,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹55K - ₹80K per year",
+    "image": "https://i.postimg.cc/placeholder_ccetv.png",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "Cochin College of Engineering and Technology in Valanchery is dedicated to providing practical technical education with a focus on core engineering principles and rural empowerment.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#D35400"
+  },
+   {
+    "id": 180,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Thiruvananthapuram",
+    "district": "Thiruvananthapuram",
+    "name": "Indian Institute of Space Science and Technology",
+    "short": "IIST",
+    "type": "Public Deemed University",
+    "established": 2007,
+    "rating": 4.6,
+    "reviews": 320,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹1.5L - ₹3L per year",
+    "image": "https://placehold.co/800x600/003366/FFFFFF.png?text=IIST+Trivandrum",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "Institute of National Importance",
+      "Space Science",
+      "Government Supported"
+    ],
+    "description": "IIST is a premier institute in Asia dedicated exclusively to the study and research of outer space. It operates directly under the Department of Space, Government of India.",
+    "affiliation": "Autonomous",
+    "color": "#003366"
+  },
+  {
+    "id": 181,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Kollam",
+    "district": "Kollam",
+    "name": "Bishop Jerome Institute",
+    "short": "BJI",
+    "type": "Private",
+    "established": 2010,
+    "rating": 3.7,
+    "reviews": 85,
+    "courses": [
+      "B.Tech",
+      "B.Arch",
+      "MBA"
+    ],
+    "fees": "₹75K - ₹1.1L per year",
+    "image": "https://placehold.co/800x600/6C3483/FFFFFF.png?text=BJI+Kollam",
+    "approval": "AICTE, CoA",
+    "tags": [
+      "Private",
+      "KTU",
+      "Catholic Management"
+    ],
+    "description": "Managed by the Catholic Diocese of Quilon, Bishop Jerome Institute integrates engineering, architecture, and management studies in a modern campus located in the heart of Kollam city.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#6C3483"
+  },
+  {
+    "id": 182,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Kallooppara",
+    "district": "Pathanamthitta",
+    "name": "College of Engineering Kallooppara",
+    "short": "CEKPR",
+    "type": "Government Sponsored",
+    "established": 1999,
+    "rating": 3.8,
+    "reviews": 110,
+    "courses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "fees": "₹35K - ₹65K per year",
+    "image": "https://placehold.co/800x600/17A589/FFFFFF.png?text=CE+Kallooppara",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Government Sponsored",
+      "IHRD",
+      "KTU"
+    ],
+    "description": "Managed by the Institute of Human Resources Development (IHRD), CE Kallooppara offers a serene campus environment and is highly regarded for its Computer Science and Cyber Security programs.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#17A589"
+  },
+  {
+    "id": 183,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Pulincunnoo",
+    "district": "Alappuzha",
+    "name": "Cochin University College of Engineering Kuttanad",
+    "short": "CUCEK",
+    "type": "Public University Department",
+    "established": 1999,
+    "rating": 3.8,
+    "reviews": 150,
+    "courses": [
+      "B.Tech",
+      "MCA"
+    ],
+    "fees": "₹45K - ₹85K per year",
+    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=CUCEK+Alappuzha",
+    "approval": "AICTE",
+    "tags": [
+      "Public",
+      "University Campus",
+      "CUSAT"
+    ],
+    "description": "A premier constituent college of CUSAT, CUCEK is located in the scenic backwaters of Kuttanad. It offers a unique environment for engineering studies backed by a massive university network.",
+    "affiliation": "Cochin University of Science and Technology",
+    "color": "#1B4F72"
+  },
+  {
+    "id": 184,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Pala",
+    "district": "Kottayam",
+    "name": "Indian Institute of Information Technology Kottayam",
+    "short": "IIIT Kottayam",
+    "type": "Public-Private Partnership",
+    "established": 2015,
+    "rating": 4.3,
+    "reviews": 190,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹2.2L - ₹2.8L per year",
+    "image": "https://placehold.co/800x600/E67E22/FFFFFF.png?text=IIIT+Kottayam",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "IIIT",
+      "Institute of National Importance",
+      "PPP Model"
+    ],
+    "description": "IIIT Kottayam is an Institute of National Importance offering world-class technical education in IT and computer science, supported by the MoE and state government partners.",
+    "affiliation": "Autonomous",
+    "color": "#E67E22"
+  },
+  {
+    "id": 185,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Thodupuzha",
+    "district": "Idukki",
+    "name": "University College of Engineering, Thodupuzha",
+    "short": "UCE Thodupuzha",
+    "type": "Public University Managed",
+    "established": 1996,
+    "rating": 3.6,
+    "reviews": 85,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹40K - ₹70K per year",
+    "image": "https://placehold.co/800x600/2874A6/FFFFFF.png?text=UCE+Thodupuzha",
+    "approval": "AICTE",
+    "tags": [
+      "University Managed",
+      "CPAS",
+      "KTU"
+    ],
+    "description": "Managed by the Centre for Professional and Advanced Studies (CPAS), UCE Thodupuzha provides solid engineering fundamentals with the direct backing of a robust educational framework.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#2874A6"
+  },
+  {
+    "id": 186,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Maliankara",
+    "district": "Ernakulam",
+    "name": "SNM Institute of Management and Technology",
+    "short": "SNMIMT",
+    "type": "Private",
+    "established": 2002,
+    "rating": 3.6,
+    "reviews": 60,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹60K - ₹85K per year",
+    "image": "https://placehold.co/800x600/B9770E/FFFFFF.png?text=SNMIMT+Ernakulam",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "SNMIMT focuses on imparting value-based technical education guided by the principles of Sree Narayana Guru, providing excellent infrastructure for rural students in Ernakulam.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#B9770E"
+  },
+  {
+    "id": 187,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Chittilappilly",
+    "district": "Thrissur",
+    "name": "IES College of Engineering",
+    "short": "IESCE",
+    "type": "Private",
+    "established": 2003,
+    "rating": 3.7,
+    "reviews": 88,
+    "courses": [
+      "B.Tech",
+      "M.Tech"
+    ],
+    "fees": "₹65K - ₹90K per year",
+    "image": "https://placehold.co/800x600/2E4053/FFFFFF.png?text=IESCE+Thrissur",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "Managed by the Ideal Educational Society, IESCE features a sprawling eco-friendly campus and emphasizes industry-institute interaction to enhance student employability.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#2E4053"
+  },
+  {
+    "id": 188,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Palakkad",
+    "district": "Palakkad",
+    "name": "Indian Institute of Technology Palakkad",
+    "short": "IIT Palakkad",
+    "type": "Public",
+    "established": 2015,
+    "rating": 4.5,
+    "reviews": 110,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MS",
+      "Ph.D"
+    ],
+    "fees": "₹2.2L - ₹2.5L per year",
+    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=IIT+Palakkad",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "IIT",
+      "Institute of National Importance",
+      "Public"
+    ],
+    "description": "IIT Palakkad is part of the premier network of Indian Institutes of Technology. Nestled near the Western Ghats, it is known for rigorous academics, top-tier research, and exceptional global placements.",
+    "affiliation": "Autonomous",
+    "color": "#800000"
+  },
+  {
+    "id": 189,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Mukkam",
+    "district": "Kozhikode",
+    "name": "KMCT College of Engineering for Women",
+    "short": "KMCTCEW",
+    "type": "Private",
+    "established": 2009,
+    "rating": 3.6,
+    "reviews": 45,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹60K - ₹85K per year",
+    "image": "https://placehold.co/800x600/AF601A/FFFFFF.png?text=KMCT+Women+Kozhikode",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "Women's College",
+      "KTU"
+    ],
+    "description": "A sister concern of KMCT College of Engineering, this institution focuses exclusively on empowering women through high-quality technical education and leadership development.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#AF601A"
+  },
+  {
+    "id": 190,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Mattanur",
+    "district": "Kannur",
+    "name": "St. Thomas College of Engineering and Technology",
+    "short": "STM",
+    "type": "Private",
+    "established": 2014,
+    "rating": 3.7,
+    "reviews": 55,
+    "courses": [
+      "B.Tech"
+    ],
+    "fees": "₹60K - ₹85K per year",
+    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=STM+Kannur",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "Located in Sivapuram near Mattanur, STM is dedicated to providing standard engineering education with well-equipped labs to meet the industrial demands of northern Kerala.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#D35400"
+  },
+  {
+    "id": 191,
+    "region": "Kerala",
+    "state": "Kerala",
+    "city": "Kanhangad",
+    "district": "Kasaragod",
+    "name": "Sadguru Swamy Nithyananda Institute of Technology",
+    "short": "SSNIT",
+    "type": "Private",
+    "established": 2010,
+    "rating": 3.5,
+    "reviews": 40,
+    "courses": [
+      "B.Tech",
+      "Diploma"
+    ],
+    "fees": "₹55K - ₹80K per year",
+    "image": "https://placehold.co/800x600/1E8449/FFFFFF.png?text=SSNIT+Kasaragod",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "KTU"
+    ],
+    "description": "SSNIT is situated in Kanhangad and focuses on fostering practical technical skills, aiming to uplift the educational and technological landscape of Kasaragod district.",
+    "affiliation": "APJ Abdul Kalam Technological University",
+    "color": "#1E8449"
+  },
+
+  {
+    "id": 201,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mangalore",
+    "district": "Dakshina Kannada",
+    "name": "National Institute of Technology Karnataka",
+    "short": "NITK Surathkal",
+    "type": "Public",
+    "established": 1960,
+    "rating": 4.7,
+    "reviews": 920,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA",
+      "MBA",
+      "Ph.D"
+    ],
+    "fees": "₹1.67L - ₹2L per year",
+    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=NITK+Surathkal",
+    "approval": "UGC, AICTE, NBA",
+    "tags": [
+      "NIT",
+      "Institute of National Importance",
+      "Public"
+    ],
+    "description": "NITK Surathkal is one of the premier technical institutes in India. Located on the shores of the Arabian Sea (featuring its own private beach), it is celebrated for stellar placements, extensive research facilities, and highly competitive admissions.",
+    "affiliation": "Autonomous",
+    "color": "#1B4F72"
+  },
+  {
+    "id": 202,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Indian Institute of Science",
+    "short": "IISc Bangalore",
+    "type": "Public Deemed University",
+    "established": 1909,
+    "rating": 4.9,
+    "reviews": 850,
+    "courses": [
+      "B.Tech",
+      "B.Sc (Research)",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹50K - ₹1L per year",
+    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=IISc+Bangalore",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "Institute of National Importance",
+      "Premier Research Institute",
+      "NIRF #1 University"
+    ],
+    "description": "The absolute pinnacle of science and engineering research in India. Founded by Jamsetji Tata, it offers highly selective B.Tech programs (like Mathematics and Computing) alongside its world-renowned postgraduate research programs.",
+    "affiliation": "Deemed to be University",
+    "color": "#800000"
+  },
+  {
+    "id": 203,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "International Institute of Information Technology Bangalore",
+    "short": "IIIT Bangalore",
+    "type": "Public-Private Partnership",
+    "established": 1999,
+    "rating": 4.6,
+    "reviews": 430,
+    "courses": [
+      "Integrated M.Tech",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹3.5L - ₹4L per year",
+    "image": "https://placehold.co/800x600/003366/FFFFFF.png?text=IIIT+Bangalore",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "IIIT",
+      "PPP Model",
+      "IT Focus"
+    ],
+    "description": "A premier institute heavily focused on Computer Science and Electronics. Known for its integrated M.Tech programs, strict academic rigor, and massive median salary packages that rival top IITs.",
+    "affiliation": "Deemed to be University",
+    "color": "#003366"
+  },
+  {
+    "id": 204,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Dharwad",
+    "district": "Dharwad",
+    "name": "Indian Institute of Technology Dharwad",
+    "short": "IIT Dharwad",
+    "type": "Public",
+    "established": 2016,
+    "rating": 4.2,
+    "reviews": 150,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MS",
+      "Ph.D"
+    ],
+    "fees": "₹2L - ₹2.5L per year",
+    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=IIT+Dharwad",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "IIT",
+      "Institute of National Importance",
+      "Public"
+    ],
+    "description": "A rapidly growing new-generation IIT established in 2016. It offers exceptional infrastructural development, a highly qualified faculty body mentored by IIT Bombay, and the coveted IIT brand value.",
+    "affiliation": "Autonomous",
+    "color": "#D35400"
+  },
+  {
+    "id": 205,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "R.V. College of Engineering",
+    "short": "RVCE",
+    "type": "Private Autonomous",
+    "established": 1963,
+    "rating": 4.5,
+    "reviews": 1150,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA"
+    ],
+    "fees": "₹3.3L - ₹11L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/0D47A1/FFFFFF.png?text=RVCE+Bangalore",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "VTU"
+    ],
+    "description": "Widely considered the most sought-after private engineering college in Karnataka. It boasts a massive alumni network of founders and high-end placements that consistently rival top national institutes.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#0D47A1"
+  },
+  {
+    "id": 206,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "BMS College of Engineering",
+    "short": "BMSCE",
+    "type": "Private Aided Autonomous",
+    "established": 1946,
+    "rating": 4.4,
+    "reviews": 980,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MBA",
+      "MCA",
+      "Ph.D"
+    ],
+    "fees": "₹2.5L - ₹9L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/17202A/FFFFFF.png?text=BMSCE+Bangalore",
+    "approval": "AICTE, NBA, NAAC A++",
+    "tags": [
+      "Private",
+      "Aided",
+      "Autonomous"
+    ],
+    "description": "India's first private engineering college. Situated in the heart of Bangalore, it combines historical strength, deep corporate relations, and an extensive network of highly successful alumni.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#17202A"
+  },
+  {
+    "id": 207,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "M.S. Ramaiah Institute of Technology",
+    "short": "MSRIT",
+    "type": "Private Autonomous",
+    "established": 1962,
+    "rating": 4.3,
+    "reviews": 890,
+    "courses": [
+      "B.E",
+      "B.Arch",
+      "M.Tech",
+      "MBA",
+      "MCA"
+    ],
+    "fees": "₹2L - ₹8.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/8E44AD/FFFFFF.png?text=MSRIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "VTU"
+    ],
+    "description": "Consistently ranking high nationally, MSRIT balances strict academic discipline with phenomenal corporate access across IT product firms, software services, and core manufacturing.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#8E44AD"
+  },
+  {
+    "id": 208,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "PES University",
+    "short": "PESU",
+    "type": "Private University",
+    "established": 1988,
+    "rating": 4.2,
+    "reviews": 760,
+    "courses": [
+      "B.Tech",
+      "B.Arch",
+      "M.Tech",
+      "MBA",
+      "MCA"
+    ],
+    "fees": "₹3.8L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/28527A/FFFFFF.png?text=PES+University",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "Private University",
+      "Strong Coding Culture"
+    ],
+    "description": "A modern, highly reputed private university (formerly PESIT) known for its rigorous, competitive curriculum, a very strong campus coding culture, and massive corporate placement drives.",
+    "affiliation": "Autonomous",
+    "color": "#28527A"
+  },
+  {
+    "id": 209,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Manipal",
+    "district": "Udupi",
+    "name": "Manipal Institute of Technology",
+    "short": "MIT Manipal",
+    "type": "Private Deemed University",
+    "established": 1957,
+    "rating": 4.4,
+    "reviews": 1250,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA",
+      "Ph.D"
+    ],
+    "fees": "₹4L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/E32636/FFFFFF.png?text=MIT+Manipal",
+    "approval": "UGC, AICTE, NBA",
+    "tags": [
+      "Private",
+      "Deemed University",
+      "MAHE"
+    ],
+    "description": "Located in the beautiful university town of Manipal, MIT offers world-class infrastructure, a vibrant, diverse campus life, and an extensive global alumni network (including Microsoft CEO Satya Nadella).",
+    "affiliation": "Manipal Academy of Higher Education",
+    "color": "#E32636"
+  },
+  {
+    "id": 210,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "University Visvesvaraya College of Engineering",
+    "short": "UVCE",
+    "type": "Government Autonomous",
+    "established": 1917,
+    "rating": 4.1,
+    "reviews": 420,
+    "courses": [
+      "B.E",
+      "B.Arch",
+      "M.E",
+      "Ph.D"
+    ],
+    "fees": "₹25K - ₹45K per year",
+    "image": "https://placehold.co/800x600/1E8449/FFFFFF.png?text=UVCE+Bangalore",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Government",
+      "Autonomous",
+      "Oldest Engineering College"
+    ],
+    "description": "Established by Sir M. Visvesvaraya in 1917, UVCE is the fifth oldest engineering college in India. It offers an incredible Return on Investment (ROI) due to heavily subsidized fees and prime tech placements in Bangalore.",
+    "affiliation": "Bangalore University",
+    "color": "#1E8449"
+  },
+   {
+    "id": 211,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "BMS Institute of Technology and Management",
+    "short": "BMSIT",
+    "type": "Private Autonomous",
+    "established": 2002,
+    "rating": 4.1,
+    "reviews": 540,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.5L - ₹7.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/3949AB/FFFFFF.png?text=BMSIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC A",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "BMS Group"
+    ],
+    "description": "A prominent sister institution to BMSCE, BMSIT located in Yelahanka has established a solid national footprint. It is widely recognized for its robust coding ecosystem, modern infrastructure, and excellent placement rates with prominent IT firms.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#3949AB"
+  },
+  {
+    "id": 212,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Bangalore Institute of Technology",
+    "short": "BIT Bangalore",
+    "type": "Private Autonomous",
+    "established": 1979,
+    "rating": 4.0,
+    "reviews": 680,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA",
+      "Ph.D"
+    ],
+    "fees": "₹2.2L - ₹7L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/1F618D/FFFFFF.png?text=BIT+Bangalore",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "VV Puram Campus"
+    ],
+    "description": "Established by the Rajya Vokkaligara Sangha, BIT is centrally located in Bangalore and remains a classic favorite for tech aspirants. It holds a legacy of strong tech placements and highly experienced core engineering faculty.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#1F618D"
+  },
+  {
+    "id": 213,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Dayananda Sagar College of Engineering",
+    "short": "DSCE",
+    "type": "Private Autonomous",
+    "established": 1979,
+    "rating": 4.1,
+    "reviews": 950,
+    "courses": [
+      "B.E",
+      "B.Arch",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.5L - ₹9.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=DSCE+Bangalore",
+    "approval": "AICTE, COA, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Massive Intakes"
+    ],
+    "description": "Sprawling across a scenic 23-acre campus in Kumaraswamy Layout, DSCE is famous for offering a vast selection of engineering branches. It acts as a massive placement hub in South Bangalore with strong mass recruitment connections.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#D35400"
+  },
+  {
+    "id": 214,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Sir M. Visvesvaraya Institute of Technology",
+    "short": "Sir MVIT",
+    "type": "Private Autonomous",
+    "established": 1986,
+    "rating": 3.9,
+    "reviews": 510,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2L - ₹6.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/117A65/FFFFFF.png?text=Sir+MVIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Sri Krishnadevaraya Trust"
+    ],
+    "description": "Named after the legendary visionary Sir M. Visvesvaraya, this institute is situated on a sprawling 133-acre campus near Air Force Station, Yelahanka. It is well-regarded for its peaceful campus culture and steady placement records.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#117A65"
+  },
+  {
+    "id": 215,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mysore",
+    "district": "Mysore",
+    "name": "The National Institute of Engineering",
+    "short": "NIE Mysore",
+    "type": "Private Aided Autonomous",
+    "established": 1946,
+    "rating": 4.2,
+    "reviews": 460,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA"
+    ],
+    "fees": "₹1.5L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=NIE+Mysore",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Aided",
+      "Autonomous",
+      "Heritage Institute"
+    ],
+    "description": "One of the oldest surviving engineering institutions in India. NIE Mysore balances magnificent institutional heritage with cutting-edge academic models, widely respected across core fields like Mechanical and Civil engineering.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#800000"
+  },
+  {
+    "id": 216,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Hubli",
+    "district": "Dharwad",
+    "name": "KLE Technological University",
+    "short": "KLE Tech",
+    "type": "Private University",
+    "established": 1947,
+    "rating": 4.3,
+    "reviews": 580,
+    "courses": [
+      "B.Tech",
+      "B.Arch",
+      "M.Tech",
+      "MBA",
+      "MCA"
+    ],
+    "fees": "₹2.2L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/7B1FA2/FFFFFF.png?text=KLE+Tech+Hubli",
+    "approval": "UGC, AICTE, NBA",
+    "tags": [
+      "Private University",
+      "North Karnataka Leader",
+      "BVBCET"
+    ],
+    "description": "Formerly known as B.V. Bhoomaraddi College of Engineering, KLE Tech is the crown jewel of North Karnataka. It is celebrated for pioneering a dynamic startup and product incubation culture directly on its campus.",
+    "affiliation": "Autonomous",
+    "color": "#7B1FA2"
+  },
+  {
+    "id": 217,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "New Horizon College of Engineering",
+    "short": "NHCE",
+    "type": "Private Autonomous",
+    "established": 2001,
+    "rating": 4.1,
+    "reviews": 620,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.5L - ₹8.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=NHCE+Bangalore",
+    "approval": "AICTE, NBA, NAAC A++",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "IT Corridor"
+    ],
+    "description": "Strategically placed right in the middle of Bangalore's key IT corridor on Outer Ring Road, NHCE boasts an exceptionally ultra-modern corporate infrastructure and exceptional strategic placement advantages with neighboring tech giants.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#1B4F72"
+  },
+  {
+    "id": 218,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mangalore",
+    "district": "Dakshina Kannada",
+    "name": "NMAM Institute of Technology",
+    "short": "NMAMIT Nitte",
+    "type": "Private Deemed University",
+    "established": 1986,
+    "rating": 4.2,
+    "reviews": 480,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.5L - ₹3.5L per year",
+    "image": "https://placehold.co/800x600/900C3F/FFFFFF.png?text=NMAMIT+Nitte",
+    "approval": "UGC, AICTE, NBA",
+    "tags": [
+      "Private",
+      "Deemed University",
+      "Nitte Campus"
+    ],
+    "description": "Situated in the serene environment of Nitte in Coastal Karnataka, this constituent college of Nitte University is top-ranked for structural excellence, strong academic discipline, and very vibrant industry linkages.",
+    "affiliation": "Nitte Deemed to be University",
+    "color": "#900C3F"
+  },
+  {
+    "id": 219,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "RNS Institute of Technology",
+    "short": "RNSIT",
+    "type": "Private Autonomous",
+    "established": 2001,
+    "rating": 4.1,
+    "reviews": 430,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.3L - ₹7.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/2C3E50/FFFFFF.png?text=RNSIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Industry 5.0"
+    ],
+    "description": "RNSIT has rapidly climbed the competitive charts in West Bangalore. Noted for its human-centric technical methodologies and robust student incubation wings, it delivers exceptionally high placements across premium IT frameworks.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#2C3E50"
+  },
+  {
+    "id": 220,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "MVJ College of Engineering",
+    "short": "MVJCE",
+    "type": "Private Autonomous",
+    "established": 1982,
+    "rating": 3.9,
+    "reviews": 570,
+    "courses": [
+      "B.E",
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹2.2L - ₹6.8L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/6C3483/FFFFFF.png?text=MVJCE+Bangalore",
+    "approval": "AICTE, NBA, NAAC",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Aeronautical Hub"
+    ],
+    "description": "Located in Whitefield, MVJCE is highly prominent for its dedicated focus on core Aeronautical and Aerospace disciplines along with computer streams, utilizing state-of-the-art specialized design labs.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#6C3483"
+  },
+   {
+    "id": 221,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Tumkur",
+    "district": "Tumkur",
+    "name": "Siddaganga Institute of Technology",
+    "short": "SIT Tumkur",
+    "type": "Private Autonomous",
+    "established": 1963,
+    "rating": 4.2,
+    "reviews": 710,
+    "courses": [
+      "B.E",
+      "B.Arch",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.8L - ₹5.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/154360/FFFFFF.png?text=SIT+Tumkur",
+    "approval": "AICTE, NBA, NAAC A++",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Sree Siddaganga Mutt"
+    ],
+    "description": "An esteemed institution with over six decades of academic heritage run by the Sree Siddaganga Educational Society. It is highly regarded for its disciplined campus environment, expansive research center, and strong placements across South India.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#154360"
+  },
+  {
+    "id": 222,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Nitte Meenakshi Institute of Technology",
+    "short": "NMIT Bangalore",
+    "type": "Private Autonomous",
+    "established": 2001,
+    "rating": 4.1,
+    "reviews": 650,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA",
+      "Ph.D"
+    ],
+    "fees": "₹2.5L - ₹8L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/78281F/FFFFFF.png?text=NMIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Nitte Group"
+    ],
+    "description": "Located in Yelahanka, NMIT is a highly progressive autonomous institution known for establishing unique center-of-excellence labs in Satellite Technology, Robotics, and IoT, leading to exceptional multi-industry tech recruitment.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#78281F"
+  },
+  {
+    "id": 223,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mysore",
+    "district": "Mysore",
+    "name": "JSS Science and Technology University",
+    "short": "JSS STU / SJCE",
+    "type": "Private University",
+    "established": 1963,
+    "rating": 4.3,
+    "reviews": 820,
+    "courses": [
+      "B.E",
+      "B.Tech",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.2L - ₹6L per year",
+    "image": "https://placehold.co/800x600/0E6251/FFFFFF.png?text=JSSSTU+Mysore",
+    "approval": "UGC, AICTE, NBA",
+    "tags": [
+      "Private University",
+      "Formerly SJCE",
+      "Mysore Pioneer"
+    ],
+    "description": "Formerly known as Sri Jayachamarajendra College of Engineering (SJCE), this landmark campus was converted into a state university. It holds an elite status for engineering education in Karnataka, featuring placements that rival Bangalore's top tier.",
+    "affiliation": "Autonomous",
+    "color": "#0E6251"
+  },
+  {
+    "id": 224,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Belgaum",
+    "district": "Belagavi",
+    "name": "KLS Gogte Institute of Technology",
+    "short": "GIT Belagavi",
+    "type": "Private Autonomous",
+    "established": 1979,
+    "rating": 4.1,
+    "reviews": 530,
+    "courses": [
+      "B.E",
+      "B.Arch",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.5L - ₹4L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/626567/FFFFFF.png?text=GIT+Belagavi",
+    "approval": "AICTE, COA, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Karnatak Law Society"
+    ],
+    "description": "The flagship technical institute of Western Karnataka, GIT Belagavi boasts a vast green campus and outstanding academic facilities. It serves as a vital corporate placement pool for industries spanning Goa, Maharashtra, and Karnataka.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#626567"
+  },
+  {
+    "id": 225,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Dharwad",
+    "district": "Dharwad",
+    "name": "SDM College of Engineering and Technology",
+    "short": "SDMCET",
+    "type": "Private Autonomous",
+    "established": 1979,
+    "rating": 4.1,
+    "reviews": 490,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹1.6L - ₹4.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/512E5F/FFFFFF.png?text=SDMCET+Dharwad",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "SDME Society"
+    ],
+    "description": "Managed by the highly respected Sri Dharmasthala Manjunatheshwara Educational Society, this autonomous college is a cornerstone of technical education in North Karnataka, praised for its ethics-focused learning structure.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#512E5F"
+  },
+  {
+    "id": 226,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Acharya Institute of Technology",
+    "short": "AIT Bangalore",
+    "type": "Private Autonomous",
+    "established": 2000,
+    "rating": 4.0,
+    "reviews": 740,
+    "courses": [
+      "B.E",
+      "B.Tech",
+      "M.Tech",
+      "MBA",
+      "MCA"
+    ],
+    "fees": "₹2L - ₹6.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/7E5109/FFFFFF.png?text=Acharya+AIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC B++",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "International Campus"
+    ],
+    "description": "Spanning a grand 120-acre unified campus in Soladevanahalli, Acharya is famous for its heavily diverse international student community and massive annual cultural festivals, coupled with well-structured corporate tech networks.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#7E5109"
+  },
+  {
+    "id": 227,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "CMR Institute of Technology",
+    "short": "CMRIT",
+    "type": "Private Autonomous",
+    "established": 2000,
+    "rating": 4.0,
+    "reviews": 590,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹2.2L - ₹7L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/1B2631/FFFFFF.png?text=CMRIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "ITPL Corridor"
+    ],
+    "description": "Perfectly situated near the ITPL hub in Whitefield, CMRIT specializes in delivering career-centric education. Its physical proximity to corporate entities guarantees excellent internship options and high placement volumes.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#1B2631"
+  },
+  {
+    "id": 228,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "REVA University",
+    "short": "REVA",
+    "type": "Private University",
+    "established": 2012,
+    "rating": 4.1,
+    "reviews": 1120,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "MCA",
+      "MBA",
+      "Ph.D"
+    ],
+    "fees": "₹2.5L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/7D6608/FFFFFF.png?text=REVA+University",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "Private University",
+      "Sprawling Infrastructure"
+    ],
+    "description": "REVA is a massive private university campus in North Bangalore known for its world-class modern architecture, tech-enabled smart classrooms, and comprehensive training tracks designed to meet global industry placement targets.",
+    "affiliation": "Autonomous",
+    "color": "#7D6608"
+  },
+  {
+    "id": 229,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bagalkot",
+    "district": "Bagalkot",
+    "name": "Basaveshwar Engineering College",
+    "short": "BEC Bagalkot",
+    "type": "Private Aided Autonomous",
+    "established": 1963,
+    "rating": 4.0,
+    "reviews": 380,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.2L - ₹3.5L per year",
+    "image": "https://placehold.co/800x600/145A32/FFFFFF.png?text=BEC+Bagalkot",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Aided",
+      "Autonomous",
+      "TEQIP Funded"
+    ],
+    "description": "A highly historic, TEQIP-funded institution in Northern Karnataka. BEC Bagalkot is recognized by world educational bodies for its rigorous engineering departments, well-equipped heavy machinery labs, and consistent regional placements.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#145A32"
+  },
+  {
+    "id": 230,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mangalore",
+    "district": "Dakshina Kannada",
+    "name": "St. Joseph Engineering College",
+    "short": "SJEC Mangaluru",
+    "type": "Private Autonomous",
+    "established": 2002,
+    "rating": 4.1,
+    "reviews": 410,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.8L - ₹4.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/4A235A/FFFFFF.png?text=SJEC+Mangaluru",
+    "approval": "AICTE, NBA, NAAC A+",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Coastal Hub"
+    ],
+    "description": "Located in Vamanjoor, SJEC is an autonomous premier institute in the coastal belt. It is well-regarded for its strict discipline, outstanding academic performance under VTU, and an highly supportive professional placement cell.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#4A235A"
+  },
+  {
+    "id": 231,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Nitte School of Architecture, Planning and Design",
+    "short": "NSAPD",
+    "type": "Private",
+    "established": 2016,
+    "rating": 4.0,
+    "reviews": 90,
+    "courses": [
+      "B.Arch",
+      "B.Plan",
+      "B.Tech (Infrastructure)"
+    ],
+    "fees": "₹2.5L - ₹6L per year",
+    "image": "https://placehold.co/800x600/114B5F/FFFFFF.png?text=NSAPD+Bangalore",
+    "approval": "AICTE, COA",
+    "tags": [
+      "Private",
+      "Architecture Focus",
+      "Nitte Group"
+    ],
+    "description": "A specialized constituent of the Nitte Education Trust in Yelahanka, focusing heavily on architectural engineering, sustainable urban design, and built-environment planning with state-of-the-art studio labs.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#114B5F"
+  },
+  {
+    "id": 232,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Mandya",
+    "district": "Mandya",
+    "name": "People's Education Society College of Engineering",
+    "short": "PESCE Mandya",
+    "type": "Private Aided Autonomous",
+    "established": 1962,
+    "rating": 4.0,
+    "reviews": 340,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.4L - ₹4.5L per year",
+    "image": "https://placehold.co/800x600/4A5759/FFFFFF.png?text=PESCE+Mandya",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Aided",
+      "Autonomous",
+      "TEQIP Funded"
+    ],
+    "description": "One of the earliest engineering initiatives in rural Karnataka, PESCE Mandya is a highly respected, government-aided institution known for major TEQIP research grants and strong foundational engineering disciplines.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#4A5759"
+  },
+  {
+    "id": 233,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Alliance College of Engineering and Design",
+    "short": "ACED Bangalore",
+    "type": "Private University",
+    "established": 2010,
+    "rating": 3.9,
+    "reviews": 280,
+    "courses": [
+      "B.Tech",
+      "M.Tech",
+      "Ph.D"
+    ],
+    "fees": "₹3L - ₹5L per year",
+    "image": "https://placehold.co/800x600/432818/FFFFFF.png?text=Alliance+ACED+Bangalore",
+    "approval": "UGC, AICTE",
+    "tags": [
+      "Private University",
+      "Global Corporate Edge"
+    ],
+    "description": "The engineering wing of Alliance University features a corporate-aligned tech infrastructure on Chandapura-Anekal Main Road, stressing global career paths, interdisciplinary electives, and structured tech internships.",
+    "affiliation": "Autonomous",
+    "color": "#432818"
+  },
+  {
+    "id": 234,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Hassan",
+    "district": "Hassan",
+    "name": "Malnad College of Engineering",
+    "short": "MCE Hassan",
+    "type": "Private Aided Autonomous",
+    "established": 1960,
+    "rating": 4.1,
+    "reviews": 410,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA"
+    ],
+    "fees": "₹1.3L - ₹4.2L per year",
+    "image": "https://placehold.co/800x600/582F0E/FFFFFF.png?text=MCE+Hassan",
+    "approval": "AICTE, NBA",
+    "tags": [
+      "Aided",
+      "Autonomous",
+      "Heritage Campus"
+    ],
+    "description": "MCE Hassan is a historic technical milestone in central Karnataka. Jointly supported by the government and the Malnad Technical Education Society, it is celebrated for its highly technical core research outputs and stellar alumni base.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#582F0E"
+  },
+  {
+    "id": 235,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Don Bosco Institute of Technology",
+    "short": "DBIT Bangalore",
+    "type": "Private",
+    "established": 2001,
+    "rating": 3.8,
+    "reviews": 460,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹2.2L - ₹6.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/2A2D34/FFFFFF.png?text=DBIT+Bangalore",
+    "approval": "AICTE, NBA, NAAC",
+    "tags": [
+      "Private",
+      "Mysore Road Hub"
+    ],
+    "description": "Situated over an expansive campus along Mysore Road, DBIT offers excellent training programs in emerging technologies like Artificial Intelligence and Data Science alongside solid industry-readiness training tracks.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#2A2D34"
+  },
+  {
+    "id": 236,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Sullia",
+    "district": "Dakshina Kannada",
+    "name": "KVG College of Engineering",
+    "short": "KVGCE",
+    "type": "Private",
+    "established": 1986,
+    "rating": 3.9,
+    "reviews": 210,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹1.6L - ₹4L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/3D348B/FFFFFF.png?text=KVGCE+Sullia",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "Academy of Liberal Education"
+    ],
+    "description": "One of the engineering landmarks in coastal Dakshina Kannada, KVGCE has spent decades catering to regional and national student bases with robust laboratory setups and highly focused software training models.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#3D348B"
+  },
+  {
+    "id": 237,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "East Point College of Engineering and Technology",
+    "short": "EPCET",
+    "type": "Private",
+    "established": 1998,
+    "rating": 3.9,
+    "reviews": 380,
+    "courses": [
+      "B.E",
+      "B.Tech",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹2L - ₹6L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/004B23/FFFFFF.png?text=EPCET+Bangalore",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "East Point Campus"
+    ],
+    "description": "Located within a massive multi-disciplinary educational campus in East Bangalore, EPCET delivers highly specialized cross-functional programs linking engineering disciplines with medical and computing systems.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#004B23"
+  },
+  {
+    "id": 238,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Davangere",
+    "district": "Davangere",
+    "name": "Bapuji Institute of Engineering and Technology",
+    "short": "BIET Davangere",
+    "type": "Private Autonomous",
+    "established": 1980,
+    "rating": 4.1,
+    "reviews": 390,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA"
+    ],
+    "fees": "₹1.6L - ₹4.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/370617/FFFFFF.png?text=BIET+Davangere",
+    "approval": "AICTE, NBA, NAAC A",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "Bapuji Educational Association"
+    ],
+    "description": "BIET Davangere has earned highly elite metrics over four decades for technical pedagogy. Its extensive regional industry networks make it a preferred educational choice throughout central and northern regions of the state.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#370617"
+  },
+  {
+    "id": 239,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Bangalore",
+    "district": "Bangalore Urban",
+    "name": "Sambhram Institute of Technology",
+    "short": "SaIT Bangalore",
+    "type": "Private",
+    "established": 2001,
+    "rating": 3.7,
+    "reviews": 320,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MBA"
+    ],
+    "fees": "₹1.8L - ₹5.5L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/240046/FFFFFF.png?text=SaIT+Bangalore",
+    "approval": "AICTE",
+    "tags": [
+      "Private",
+      "Sambhram Group"
+    ],
+    "description": "Set in a highly accessible urban environment in North Bangalore, SaIT provides multiple technical standard specializations with a dedicated emphasis on industrial soft-skill training and corporate drives.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#240046"
+  },
+  {
+    "id": 240,
+    "region": "Karnataka",
+    "state": "Karnataka",
+    "city": "Shimoga",
+    "district": "Shimoga",
+    "name": "Jawaharlal Nehru National College of Engineering",
+    "short": "JNNCE Shimoga",
+    "type": "Private Autonomous",
+    "established": 1980,
+    "rating": 4.1,
+    "reviews": 440,
+    "courses": [
+      "B.E",
+      "M.Tech",
+      "MCA",
+      "MBA",
+      "Ph.D"
+    ],
+    "fees": "₹1.7L - ₹4.8L per year (varies by quota)",
+    "image": "https://placehold.co/800x600/03045E/FFFFFF.png?text=JNNCE+Shimoga",
+    "approval": "AICTE, NBA, NAAC",
+    "tags": [
+      "Private",
+      "Autonomous",
+      "NES Shimoga"
+    ],
+    "description": "A premier autonomous center of tech excellence in the Malnad region. Run by the National Education Society, JNNCE features excellent infrastructure, fully updated computer domains, and deep academic linkages with software companies.",
+    "affiliation": "Visvesvaraya Technological University",
+    "color": "#03045E"
   }
 ]
 
