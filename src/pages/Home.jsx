@@ -64,15 +64,18 @@ export default function Home({ selectedCourse, courseSelectCount }) {
     }
 
     return [...result].sort((a, b) => {
-      // Add safe fallback sorting for colleges missing rating or reviews
+      // Always pin Kerala Academy of Pharmacy to the top
+      if (a.name === 'Kerala Academy of Pharmacy') return -1;
+      if (b.name === 'Kerala Academy of Pharmacy') return 1;
+
       const ratingA = a.rating || 0;
       const ratingB = b.rating || 0;
       const reviewsA = a.reviews || 0;
       const reviewsB = b.reviews || 0;
 
       return sortBy === 'rating' ? ratingB - ratingA :
-             sortBy === 'reviews' ? reviewsB - reviewsA :
-             a.name.localeCompare(b.name);
+        sortBy === 'reviews' ? reviewsB - reviewsA :
+          a.name.localeCompare(b.name);
     });
   }, [activeRegion, activeCourse, activeType, searchQuery, sortBy, allColleges]);
 
@@ -326,7 +329,7 @@ const styles = {
     cursor: 'pointer', fontSize: '14px', marginTop: '8px',
   },
 
-pagination: {
+  pagination: {
     display: 'flex', justifyContent: 'center', alignItems: 'center',
     gap: '12px', marginTop: '40px', flexWrap: 'wrap',
   },
@@ -345,5 +348,5 @@ pagination: {
   pageInfo: {
     textAlign: 'center', color: 'var(--muted)', fontSize: '13px', marginTop: '12px',
   },
-  
+
 };

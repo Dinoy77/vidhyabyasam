@@ -5,22 +5,22 @@ import AuthModal from './AuthModal';
 import { dropDownData } from '../data/dropDownData';
 
 const courseCategories = [
-  { 
-    title: 'Pharmacy', 
-    icon: '💊', 
-    color: '#1B6CA8', 
-    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] 
-  },
-  { 
-    title: 'Nursing', 
-    icon: '🩺', 
-    color: '#059669', 
-    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] 
+  {
+    title: 'Pharmacy',
+    icon: '💊',
+    color: '#1B6CA8',
+    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D']
   },
   {
-    title: 'Allied Health', 
-    icon: '🏥', 
-    color: '#7C3AED', 
+    title: 'Nursing',
+    icon: '🩺',
+    color: '#059669',
+    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing']
+  },
+  {
+    title: 'Allied Health',
+    icon: '🏥',
+    color: '#7C3AED',
     courses: [
       'BPT', 'BHA', 'MLT', 'BAMS',
       'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT',
@@ -28,29 +28,29 @@ const courseCategories = [
       'B.Sc CPT', 'B.Sc NST', 'B.Sc Optometry', 'B.Optom', 'DPT',
     ]
   },
-  { 
-    title: 'Medical', 
-    icon: '🔬', 
-    color: '#DC2626', 
-    courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] 
+  {
+    title: 'Medical',
+    icon: '🔬',
+    color: '#DC2626',
+    courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical']
   },
-  { 
-    title: 'Engineering & IT', 
-    icon: '⚙️', 
-    color: '#EA580C', 
-    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'] 
+  {
+    title: 'Engineering & IT',
+    icon: '⚙️',
+    color: '#EA580C',
+    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering']
   }
 ];
 
 export const articleRouteMap = {
   // Top Ranked Medical Colleges
-  "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges", 
+  "Top Medical Colleges in South India": "/articles/TopIndianMedicalColleges",
   "Top Government Medical Colleges": "/articles/TopGovtMedicalColleges",
   "Top Medical Colleges in Karnataka": "/articles/TopKarnatakaMedicalColleges",
   "Top Medical Colleges in Tamil Nadu": "/articles/TopTamilNaduMedicalColleges",
   "Top Medical Colleges in Kerala": "/articles/TopKeralaMedicalColleges",
   "Top Private Medical Colleges in South India": "/articles/TopPrivateMedicalColleges",
-  
+
   // Top Ranked Engineering Colleges
   "Top Engineering Colleges in South India": "/articles/TopIndianEngineeringColleges",
   "Top Engineering Colleges in Kerala": "/articles/EngineeringCollegesKerala",
@@ -103,10 +103,10 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   const [showAuth, setShowAuth] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  
+
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [articlesOpen, setArticlesOpen] = useState(false);
-  
+
   const navRef = useRef(null);
   const coursesTimeout = useRef(null);
   const articlesTimeout = useRef(null);
@@ -123,13 +123,13 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         setCoursesOpen(false);
         setArticlesOpen(false);
         setShowDropdown(false);
-        setMenuOpen(false); 
+        setMenuOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('touchstart', handleClickOutside);
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
@@ -139,21 +139,21 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   const handleCoursesEnter = () => {
     clearTimeout(coursesTimeout.current);
     setCoursesOpen(true);
-    setArticlesOpen(false); 
+    setArticlesOpen(false);
   };
 
   const handleCoursesLeave = () => {
-    coursesTimeout.current = setTimeout(() => setCoursesOpen(false), 200); 
+    coursesTimeout.current = setTimeout(() => setCoursesOpen(false), 200);
   };
 
   const handleArticlesEnter = () => {
     clearTimeout(articlesTimeout.current);
     setArticlesOpen(true);
-    setCoursesOpen(false); 
+    setCoursesOpen(false);
   };
 
   const handleArticlesLeave = () => {
-    articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200); 
+    articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200);
   };
 
   const handleArticleClick = (e, articleName) => {
@@ -169,14 +169,18 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     <>
       <nav style={styles.nav} ref={navRef}>
         <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => navigate('/')}>
-          <span style={styles.logoIcon}>🎓</span>
+          <img
+            src="/images/vidyabhyasam-logo.png"
+            alt="Vidyabhyasam"
+            style={{ height: '36px', width: 'auto', objectFit: 'contain' }}
+          />
           <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
 
         <div style={styles.navLinks} className="hide-mobile">
           <a href="/#colleges" style={styles.link} onClick={() => navigate('/')}>Colleges</a>
           <a href="/#regions" style={styles.link} onClick={() => navigate('/')}>By Region</a>
-          
+
           <div style={styles.dropdownWrapper}
             onMouseEnter={handleCoursesEnter}
             onMouseLeave={handleCoursesLeave}>
@@ -193,7 +197,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             </span>
           </div>
 
-          <span style={{...styles.link, cursor: 'pointer'}} onClick={() => navigate('/blog')}>Blogs</span>
+          <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => navigate('/blog')}>Blogs</span>
         </div>
 
         <div style={styles.navRight}>
@@ -234,7 +238,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             onMouseEnter={handleCoursesEnter}
             onMouseLeave={handleCoursesLeave}
             onClick={(e) => {
-              if(e.target === e.currentTarget) setCoursesOpen(false);
+              if (e.target === e.currentTarget) setCoursesOpen(false);
             }}>
             <div style={styles.megaMenu}>
               {courseCategories.map(cat => (
@@ -259,10 +263,10 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         }}
                         onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'}
                         onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
-                        onClick={() => { 
-                          onCourseSelect(course); 
-                          setCoursesOpen(false); 
-                          navigate('/'); 
+                        onClick={() => {
+                          onCourseSelect(course);
+                          setCoursesOpen(false);
+                          navigate('/');
                         }}>
                         {course}
                       </button>
@@ -280,10 +284,10 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             onMouseEnter={handleArticlesEnter}
             onMouseLeave={handleArticlesLeave}
             onClick={(e) => {
-              if(e.target === e.currentTarget) setArticlesOpen(false);
+              if (e.target === e.currentTarget) setArticlesOpen(false);
             }}>
             <div style={styles.articlesMegaMenu}>
-              
+
               <div style={styles.menuLeft}>
                 {articleCategories.map((category) => (
                   <div
@@ -304,9 +308,9 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                 {dropDownData[activeArticleCat]?.length > 0 ? (
                   <div style={styles.linksGrid}>
                     {dropDownData[activeArticleCat].map((article, idx) => (
-                      <a 
-                        key={idx} 
-                        href="/" 
+                      <a
+                        key={idx}
+                        href="/"
                         style={styles.articleLink}
                         onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
                         onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
@@ -328,20 +332,20 @@ export default function Navbar({ onCourseSelect = () => { } }) {
       {/* Mobile Menu */}
       {menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown hide-desktop">
-          <span style={{...styles.mobileLink, cursor: 'pointer'}} onClick={() => { setMenuOpen(false); navigate('/'); }}>Colleges</span>
-          <span style={{...styles.mobileLink, cursor: 'pointer'}} onClick={() => { setMenuOpen(false); navigate('/'); }}>By Region</span>
-          
+          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/'); }}>Colleges</span>
+          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/'); }}>By Region</span>
+
           {/* ---> NEW MOBILE BLOGS LINK ADDED HERE <--- */}
-          <span 
-            style={{...styles.mobileLink, cursor: 'pointer'}} 
-            onClick={() => { 
-              setMenuOpen(false); 
-              navigate('/blog'); 
+          <span
+            style={{ ...styles.mobileLink, cursor: 'pointer' }}
+            onClick={() => {
+              setMenuOpen(false);
+              navigate('/blog');
             }}
           >
             Blogs
           </span>
-          
+
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => setCoursesOpen(!coursesOpen)}>
               <span>Courses</span>
@@ -357,11 +361,11 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     </div>
                     {cat.courses.map(course => (
                       <button key={course} style={styles.mobileCourseItem}
-                        onClick={() => { 
-                          onCourseSelect(course); 
-                          setCoursesOpen(false); 
-                          setMenuOpen(false); 
-                          navigate('/'); 
+                        onClick={() => {
+                          onCourseSelect(course);
+                          setCoursesOpen(false);
+                          setMenuOpen(false);
+                          navigate('/');
                         }}>
                         {course}
                       </button>
@@ -381,16 +385,16 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               <div style={styles.mobileCoursesPanel}>
                 {articleCategories.map(category => (
                   <div key={category} style={styles.mobileAccordionBlock}>
-                    
-                    <div 
+
+                    <div
                       style={{
                         ...styles.mobileAccordionHeader,
                         borderBottom: activeArticleCat === category ? '1px solid var(--border)' : 'none',
                       }}
                       onClick={() => setActiveArticleCat(activeArticleCat === category ? "" : category)}
                     >
-                      <span style={{ 
-                        fontSize: '13px', 
+                      <span style={{
+                        fontSize: '13px',
                         fontWeight: activeArticleCat === category ? 700 : 600,
                         color: activeArticleCat === category ? 'var(--accent)' : 'var(--deep)'
                       }}>
@@ -404,9 +408,9 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     {activeArticleCat === category && (
                       <div style={styles.mobileAccordionContent}>
                         {dropDownData[category].map(article => (
-                          <a 
-                            key={article} 
-                            href="/" 
+                          <a
+                            key={article}
+                            href="/"
                             style={styles.mobileAccordionLink}
                             onClick={(e) => handleArticleClick(e, article)}
                           >
@@ -462,10 +466,10 @@ const styles = {
   mobileCatHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   mobileCatTitle: { fontSize: '13px', fontWeight: 700, color: '#fff' },
   mobileCourseItem: { width: '100%', textAlign: 'left', padding: '9px 14px', fontSize: '13px', fontWeight: 500, background: '#fff', border: 'none', borderTop: '1px solid var(--border)', cursor: 'pointer', color: 'var(--deep)', fontFamily: 'DM Sans, sans-serif' },
-  
+
   dropdownWrapper: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px', padding: '0 4px' },
   megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, height: '100vh', zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
-  
+
   // Desktop Courses Mega Menu
   megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },

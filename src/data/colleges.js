@@ -51,7 +51,7 @@ const raw_data = [
     short: 'Kerala Academy of Ph',
     type: 'Private',
     established: 2020,
-    rating: 4.0,
+    rating: 4.7,
     reviews: 196,
     courses: ['B.Pharm', 'D.Pharm'],
     fees: '₹80K - ₹1.5L per year',
