@@ -3283,7 +3283,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹2L per year",
-    "image": "https://i.postimg.cc/placeholder_bit.png",
+    "image": "https://i.postimg.cc/50FgNd9J/Visitor-Information-Image.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -3315,7 +3315,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1L - ₹1.6L per year",
-    "image": "https://i.postimg.cc/placeholder_kec.png",
+    "image": "https://i.postimg.cc/yYTPNTK9/Kongu-Engineering-College-Erode.webp",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -3344,7 +3344,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1.2L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_mepco.png",
+    "image": "https://i.postimg.cc/jjDQZ07f/Background-Image-1771842599100.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3375,7 +3375,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹2.5L per year",
-    "image": "https://i.postimg.cc/placeholder_sathyabama.png",
+    "image": "https://i.postimg.cc/L5PN8dDK/Background-Image-1766489486063.jpg",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -3405,7 +3405,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2L - ₹2.8L per year",
-    "image": "https://i.postimg.cc/placeholder_karunya.png",
+    "image": "https://i.postimg.cc/ncYGRGwB/Background-Image-1771675928517.jpg",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -3435,7 +3435,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.8L - ₹2.5L per year",
-    "image": "https://i.postimg.cc/placeholder_hits.png",
+    "image": "https://i.postimg.cc/15HDc5f6/2-6500e92341.jpg",
     "approval": "UGC, AICTE, NAAC A",
     "tags": [
       "Private",
@@ -3464,7 +3464,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.3L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_stjosephs.png",
+    "image": "https://i.postimg.cc/tC2VnSMx/Background-Image-1766671793005.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -3492,7 +3492,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹1.5L - ₹2L per year",
-    "image": "https://i.postimg.cc/placeholder_citchennai.png",
+    "image": "https://i.postimg.cc/W3LDcQdt/Background-Image-1766581690329.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -3521,7 +3521,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1.2L - ₹1.7L per year",
-    "image": "https://i.postimg.cc/placeholder_rmk.png",
+    "image": "https://i.postimg.cc/g2xrXYRG/head-img.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -3547,10 +3547,12 @@ const raw_data  = [
     "courses": [
       "B.Tech",
       "M.Tech",
-      "MBA"
+      "MBA",
+      "MCA",
+      "Ph.D"
     ],
     "fees": "₹1.3L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_easwari.png",
+    "image": "https://i.postimg.cc/zDdJnsqH/Background-Image-1766573155638.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3579,7 +3581,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹2.2L per year",
-    "image": "https://i.postimg.cc/placeholder_veltech.png",
+    "image": "https://i.postimg.cc/nzR6Dtqp/veltechinstitute-cover-e-1781676000-v-beta-t-b-Ydo-Dug-Y-qt1c-S3Ita3JJse-S-VSa-YHQS-Wj-h-Yjij-Y.jpg",
     "approval": "UGC, AICTE, NAAC A++",
     "tags": [
       "Private",
@@ -3608,7 +3610,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_saveetha.png",
+    "image": "https://i.postimg.cc/Y99PkyZx/2-96.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3637,7 +3639,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_srec.png",
+    "image": "https://i.postimg.cc/2SxmSM9h/sri-ramakrishna-engineering-college-coimbatore-217778.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -3668,7 +3670,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹55K - ₹2.2L per year",
-    "image": "https://i.postimg.cc/placeholder_sona.png",
+    "image": "https://i.postimg.cc/CLGpc9gG/Sona-College-of-Technology-Salem.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
     "Private",
@@ -3698,7 +3700,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_sairam.png",
+    "image": "https://i.postimg.cc/9QLSShNY/Background-Image-1765609322993.png",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
     "Private",
@@ -3729,7 +3731,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹80K - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_mce.png",
+    "image": "https://i.postimg.cc/rwZnj9Kz/meenakshi-college-of-engineering-chennai-272559.webp",
     "approval": "AICTE, NAAC",
     "tags": [
     "Private",
@@ -3758,7 +3760,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹1L - ₹1.6L per year",
-    "image": "https://i.postimg.cc/placeholder_vec.png",
+    "image": "https://i.postimg.cc/sDVTRLWp/velammal-engineering-college-chennai-256479.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
     "Private",
@@ -3788,7 +3790,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_panimalar.png",
+    "image": "https://i.postimg.cc/KvqDh8xg/Background-Image-1766732580198.jpg",
     "approval": "AICTE, NBA",
     "tags": [
     "Private",
@@ -3817,7 +3819,7 @@ const raw_data  = [
     "M.E"
     ],
     "fees": "₹1L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_rmd.png",
+    "image": "https://i.postimg.cc/PfKm15LF/fa100350e6507c336caf12b5cba59beb.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
     "Private",
@@ -3847,7 +3849,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹20K - ₹45K per year",
-    "image": "https://i.postimg.cc/placeholder_acgcet.png",
+    "image": "https://i.postimg.cc/508X91Gp/alagappa-chettiar-government-college-of-engineering-technology-karaikudi-cover-e-1781683200-v-beta-t.jpg",
     "approval": "AICTE, NBA",
     "tags": [
     "Government",
@@ -3876,7 +3878,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹20K - ₹40K per year",
-    "image": "https://i.postimg.cc/placeholder_tpgit.png",
+    "image": "https://i.postimg.cc/MHdKXGY0/Background-Image-1719512121267.jpg",
     "approval": "AICTE",
     "tags": [
     "Government",
@@ -3904,7 +3906,7 @@ const raw_data  = [
     "Ph.D"
     ],
     "fees": "₹25K - ₹45K per year",
-    "image": "https://i.postimg.cc/placeholder_gcesalem.png",
+    "image": "https://i.postimg.cc/QdWhZmvR/Background-Image-1766060639114.jpg",
     "approval": "AICTE, NBA",
     "tags": [
     "Government",
@@ -3934,7 +3936,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹80K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_saranathan.png",
+    "image": "https://i.postimg.cc/C1x2SLzg/Background-Image-1769589731497.png",
     "approval": "AICTE, NBA",
     "tags": [
     "Private",
@@ -3964,7 +3966,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_klnce.png",
+    "image": "https://i.postimg.cc/7ZD8j4MS/Background-Image-1721314913964.png",
     "approval": "AICTE, NBA",
     "tags": [
     "Private",
@@ -3992,7 +3994,7 @@ const raw_data  = [
     "B.Tech"
     ],
     "fees": "₹80K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_ramco.png",
+    "image": "https://i.postimg.cc/L6XFSSnG/RIT-main-building-740x357.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
     "Private",
@@ -4022,7 +4024,7 @@ const raw_data  = [
     "MCA"
     ],
     "fees": "₹90K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_mkce.png",
+    "image": "https://i.postimg.cc/fTkpFvPL/m-kumarasamy-clg-of-eng-935.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
     "Private",
@@ -4052,7 +4054,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_kiot.png",
+    "image": "https://i.postimg.cc/wMrfHSrM/KIOT-Top-View.jpg",
     "approval": "AICTE, NAAC",
     "tags": [
     "Private",
@@ -4081,7 +4083,7 @@ const raw_data  = [
     "MBA"
     ],
     "fees": "₹1L - ₹1.6L per year",
-    "image": "https://i.postimg.cc/placeholder_skct.png",
+    "image": "https://i.postimg.cc/Yqm8YDVY/Sri-Krishna-College-of-Technology-Campus-3-1.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
     "Private",
@@ -4112,7 +4114,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹85K - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_nec_kovilpatti.png",
+    "image": "https://i.postimg.cc/Qdm6d9w0/Campus-View-of-National-Engineering-College-Kovilpatti-Campus-View.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4144,7 +4146,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.3L per year",
-    "image": "https://i.postimg.cc/placeholder_ksrct.png",
+    "image": "https://i.postimg.cc/zf9fQj5c/Campus-1-1.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4175,7 +4177,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1L - ₹1.6L per year",
-    "image": "https://i.postimg.cc/placeholder_hicet.png",
+    "image": "https://i.postimg.cc/SQGyLq20/hindusthan-college-of-engineering-technology-coimbatore-215934.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4206,7 +4208,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹85K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_psna.png",
+    "image": "https://i.postimg.cc/hvv379QX/PSNA-College-of-Engineering-Technologye.jpg",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -4235,7 +4237,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹90K - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_mcet_pollachi.png",
+    "image": "https://i.postimg.cc/TPBGt3fx/video-bg.jpg",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -4267,7 +4269,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹70K - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_ace_hosur.png",
+    "image": "https://i.postimg.cc/prq61s8w/29908076a908d95be5211a4fb2c01705.jpg",
     "approval": "AICTE, CoA, NBA, NAAC",
     "tags": [
       "Private",
@@ -4296,7 +4298,7 @@ const raw_data  = [
       "M.E"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_kcg.png",
+    "image": "https://i.postimg.cc/QCwpt5rT/College-Photo-1.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -4324,7 +4326,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹1.1L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_sjit.png",
+    "image": "https://i.postimg.cc/zvsg5rnc/5-66.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -4354,7 +4356,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹85K - ₹1.3L per year",
-    "image": "https://i.postimg.cc/placeholder_krce.png",
+    "image": "https://i.postimg.cc/MXkvgJRx/Background-Image-1718283945599.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4385,7 +4387,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹90K - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_snsct.png",
+    "image": "https://i.postimg.cc/MXkvgJRx/Background-Image-1718283945599.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -4413,7 +4415,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹85K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_velammal_itech.png",
+    "image": "https://i.postimg.cc/7LQ7XcB2/about.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -4443,7 +4445,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_mahendra.png",
+    "image": "https://i.postimg.cc/x11c75NL/mahendra-engineering-college-namakkal-275434.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4474,7 +4476,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹80K - ₹1.3L per year",
-    "image": "https://i.postimg.cc/placeholder_paavai.png",
+    "image": "https://i.postimg.cc/hG7PW5Dg/paavai-engineering-college-autonomous-namakkal-282704.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4504,7 +4506,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.1L - ₹1.6L per year",
-    "image": "https://i.postimg.cc/placeholder_kpriet.png",
+    "image": "https://i.postimg.cc/fbQ1y27L/03.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4533,7 +4535,7 @@ const raw_data  = [
       "M.E"
     ],
     "fees": "₹1.2L - ₹1.8L per year",
-    "image": "https://i.postimg.cc/placeholder_sece.png",
+    "image": "https://i.postimg.cc/TPWm70Bw/sri-eshwar-college-of-engineering-coimbatore-273559.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4563,7 +4565,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹90K - ₹1.4L per year",
-    "image": "https://i.postimg.cc/placeholder_jce.png",
+    "image": "https://i.postimg.cc/x8jB3Xqk/Jerusalem-College-Of-Engineering-1517547790-1.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4593,7 +4595,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹85K - ₹1.3L per year",
-    "image": "https://i.postimg.cc/placeholder_kcet.png",
+    "image": "https://i.postimg.cc/tg0fmS7r/c2fad033e7ff55d703b1dfc55870ceea.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4623,7 +4625,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_valliammai.png",
+    "image": "https://i.postimg.cc/pTWsggvC/srm-valliammai-engineering-college-kanchipuram-256341.webp",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4654,7 +4656,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹2.5L per year",
-    "image": "https://i.postimg.cc/placeholder_crescent.png",
+    "image": "https://i.postimg.cc/Y9DzT0br/B-S-Abdur-Rahman-Crescent-Institute-Of-Science-A.webp",
     "approval": "UGC, AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -4685,7 +4687,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.2L - ₹1.5L per year",
-    "image": "https://i.postimg.cc/placeholder_kare.png",
+    "image": "https://i.postimg.cc/7Lm3Tbv9/kalasalingam-academy-of-research-and-education-srivilliputtur-featured.jpg",
     "approval": "UGC, AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4716,7 +4718,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹80K - ₹1.2L per year",
-    "image": "https://i.postimg.cc/placeholder_saec.png",
+    "image": "https://i.postimg.cc/8zbKtpQ5/Image-1766660404949.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4747,7 +4749,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_muthayammal.png",
+    "image": "https://i.postimg.cc/TYVC3dwx/55571b0a268c6613e50c1253d8a6a407.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4778,7 +4780,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹70K - ₹1.1L per year",
-    "image": "https://i.postimg.cc/placeholder_nandha.png",
+    "image": "https://i.postimg.cc/LswzVwXq/Image-1768902218487.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -4809,7 +4811,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹65K - ₹1L per year",
-    "image": "https://i.postimg.cc/placeholder_excel.png",
+    "image": "https://i.postimg.cc/tTFVNg8j/excel-group-of-institutions-namakkal.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -4839,7 +4841,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹80K - ₹1.3L per year",
-    "image": "https://i.postimg.cc/placeholder_sethu.png",
+    "image": "https://i.postimg.cc/G2PHs5s8/d86925ef-a5db-49e8-a689-1c95933eaf23.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -4866,7 +4868,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://i.postimg.cc/placeholder_cuiet.png",
+    "image": "https://i.postimg.cc/6pj9FNCT/Background-Image-1772272185894.jpg",
     "approval": "AICTE",
     "tags": [
       "Public",
@@ -4895,7 +4897,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹20K - ₹45K per year",
-    "image": "https://i.postimg.cc/placeholder_kcaet.png",
+    "image": "https://i.postimg.cc/W1KBMpMX/6af9699988a745ec2e3d31f55fee776b.jpg",
     "approval": "ICAR, AICTE",
     "tags": [
       "Government",
@@ -4922,7 +4924,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://i.postimg.cc/placeholder_mgm.png",
+    "image": "https://i.postimg.cc/Kv8ww3fd/Background-Image-1721127617623.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -4948,7 +4950,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://i.postimg.cc/placeholder_ccetv.png",
+    "image": "https://i.postimg.cc/Bv9hSj5v/cochin-college-of-engineering-technology-ccet-malappuram-57211.webp",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -4976,7 +4978,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.5L - ₹3L per year",
-    "image": "https://placehold.co/800x600/003366/FFFFFF.png?text=IIST+Trivandrum",
+    "image": "https://i.postimg.cc/PqQMd2r5/indian-institute-of-space-science-and-technology-thiruvananthapuram.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "Institute of National Importance",
@@ -5005,7 +5007,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹75K - ₹1.1L per year",
-    "image": "https://placehold.co/800x600/6C3483/FFFFFF.png?text=BJI+Kollam",
+    "image": "https://i.postimg.cc/C5GPXD6F/Background-Image-1769777756575.jpg",
     "approval": "AICTE, CoA",
     "tags": [
       "Private",
@@ -5033,7 +5035,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹35K - ₹65K per year",
-    "image": "https://placehold.co/800x600/17A589/FFFFFF.png?text=CE+Kallooppara",
+    "image": "https://i.postimg.cc/63RY4nKY/Background-Image-1720791025962.png",
     "approval": "AICTE, NBA",
     "tags": [
       "Government Sponsored",
@@ -5061,7 +5063,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹45K - ₹85K per year",
-    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=CUCEK+Alappuzha",
+    "image": "https://i.postimg.cc/NMwRVVhj/Campus-view-of-Cochin-University-College-of-Engineering-Kuttanad-Campus-view.jpg",
     "approval": "AICTE",
     "tags": [
       "Public",
@@ -5090,7 +5092,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.2L - ₹2.8L per year",
-    "image": "https://placehold.co/800x600/E67E22/FFFFFF.png?text=IIIT+Kottayam",
+    "image": "https://i.postimg.cc/3xsG46wx/Background-Image-1720000590460.png",
     "approval": "UGC, AICTE",
     "tags": [
       "IIIT",
@@ -5117,7 +5119,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹40K - ₹70K per year",
-    "image": "https://placehold.co/800x600/2874A6/FFFFFF.png?text=UCE+Thodupuzha",
+    "image": "https://i.postimg.cc/xT7Jh7Mk/university-college-of-engineering-mahatma-gandhi-university-uce-thodupuzha-105365.webp",
     "approval": "AICTE",
     "tags": [
       "University Managed",
