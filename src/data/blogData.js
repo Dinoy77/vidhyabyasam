@@ -224,7 +224,7 @@ export const blogArticles = {
       title: "Find Your Tech Campus", 
       description: "Discover the top-rated institutions in South India offering cutting-edge AI and Data Science programs.", 
       buttonText: "View Top CS Colleges", 
-      link: "/colleges/cs-engineering" 
+      link: "/colleges/BestCSEngineeringColleges" 
     }
   },
 
@@ -278,7 +278,7 @@ export const blogArticles = {
       title: "Explore Medical Campuses", 
       description: "Find institutions across South India that offer top-tier Pharmacy and Allied Health science programs.", 
       buttonText: "View Medical Colleges", 
-      link: "/medical-colleges" 
+      link: "/articles/BPharmCourseGuide" 
     }
   },
   "hackathons-secret-to-placements": {
@@ -304,7 +304,7 @@ export const blogArticles = {
       title: "Find Colleges with Great Coding Cultures", 
       description: "Want to join a campus where innovation thrives? Check out our list of the best engineering colleges for Computer Science.", 
       buttonText: "Explore CS Campuses", 
-      link: "/colleges/cs-engineering" 
+      link: "/articles/BestCSEngineeringColleges" 
     }
   },
 
@@ -332,7 +332,7 @@ export const blogArticles = {
       title: "Ready to Build the Future?", 
       description: "Discover top institutions offering B.Tech specializations in AI, Robotics, and Cybersecurity.", 
       buttonText: "View Specialized Colleges", 
-      link: "/colleges/engineering" 
+      link: "/articles/BestCSEngineeringColleges" 
     }
   },
 
