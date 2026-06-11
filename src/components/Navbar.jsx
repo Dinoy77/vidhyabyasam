@@ -168,7 +168,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   return (
     <>
       <nav style={styles.nav} ref={navRef}>
-        <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => navigate('/')}>
+        <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <img
             src="/images/vidyabhyasam-logo.png"
             alt="Vidyabhyasam"

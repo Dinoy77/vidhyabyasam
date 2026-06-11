@@ -11,7 +11,7 @@ import AuthModal from '../components/AuthModal';
 
 const courseCategories = {
   Medical: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma'],
-  Pharmacy: ['B.Pharm', 'D.Pharm', 'M.Pharm', 'Pharm.D'],
+  Pharmacy: ['B.Pharm', 'D.Pharm', 'M.Pharm', 'Pharm.D','Ph.D'],
   Nursing: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing', 'Ph.D Nursing'],
   Allied: ['BPT', 'DPT', 'MLT', 'BHA', 'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT',
     'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT', 'B.Sc CPT', 'B.Sc NST',
