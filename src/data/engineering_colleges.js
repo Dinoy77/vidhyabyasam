@@ -5146,7 +5146,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://placehold.co/800x600/B9770E/FFFFFF.png?text=SNMIMT+Ernakulam",
+    "image": "https://i.postimg.cc/gkY3T4kn/Background-Image-1769079620920.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -5173,7 +5173,7 @@ const raw_data  = [
       "M.Tech"
     ],
     "fees": "₹65K - ₹90K per year",
-    "image": "https://placehold.co/800x600/2E4053/FFFFFF.png?text=IESCE+Thrissur",
+    "image": "https://i.postimg.cc/c448mHXw/3c4a5a40350b28a60d95aae6e09d846b.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -5202,7 +5202,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.2L - ₹2.5L per year",
-    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=IIT+Palakkad",
+    "image": "https://i.postimg.cc/PJfN23zN/A1.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "IIT",
@@ -5229,7 +5229,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://placehold.co/800x600/AF601A/FFFFFF.png?text=KMCT+Women+Kozhikode",
+    "image": "https://i.postimg.cc/NFPGbgj3/Background-Image-1721318840146.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -5256,7 +5256,7 @@ const raw_data  = [
       "B.Tech"
     ],
     "fees": "₹60K - ₹85K per year",
-    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=STM+Kannur",
+    "image": "https://i.postimg.cc/rFBMpZ08/Background-Image-1770105262447.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -5283,7 +5283,7 @@ const raw_data  = [
       "Diploma"
     ],
     "fees": "₹55K - ₹80K per year",
-    "image": "https://placehold.co/800x600/1E8449/FFFFFF.png?text=SSNIT+Kasaragod",
+    "image": "https://i.postimg.cc/q7LTjkmn/Background-Image-1770638675535.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -5293,7 +5293,6 @@ const raw_data  = [
     "affiliation": "APJ Abdul Kalam Technological University",
     "color": "#1E8449"
   },
-
   {
     "id": 201,
     "region": "Karnataka",
@@ -5314,7 +5313,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.67L - ₹2L per year",
-    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=NITK+Surathkal",
+    "image": "https://i.postimg.cc/BvqW8rq4/Background-Image-1744360344656.jpg",
     "approval": "UGC, AICTE, NBA",
     "tags": [
       "NIT",
@@ -5344,7 +5343,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹50K - ₹1L per year",
-    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=IISc+Bangalore",
+    "image": "https://i.postimg.cc/zD9GLG4m/iisc-banner-desktop-1920x1080.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "Institute of National Importance",
@@ -5373,7 +5372,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹3.5L - ₹4L per year",
-    "image": "https://placehold.co/800x600/003366/FFFFFF.png?text=IIIT+Bangalore",
+    "image": "https://i.postimg.cc/CKjj22Dq/international-institute-of-information-technology-bangalore-213010.webp",
     "approval": "UGC, AICTE",
     "tags": [
       "IIIT",
@@ -5403,7 +5402,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2L - ₹2.5L per year",
-    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=IIT+Dharwad",
+    "image": "https://i.postimg.cc/Qdc9NTtX/banner-01.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "IIT",
@@ -5432,7 +5431,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹3.3L - ₹11L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/0D47A1/FFFFFF.png?text=RVCE+Bangalore",
+    "image": "https://i.postimg.cc/0yGj11tT/RV-college.png",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -5463,7 +5462,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.5L - ₹9L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/17202A/FFFFFF.png?text=BMSCE+Bangalore",
+    "image": "https://i.postimg.cc/wjkNcNdW/bms-college-of-engineering-bangalore-361118.webp",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
