@@ -19,6 +19,7 @@ import TopGovtMedicalColleges from './pages/articles/TopGovtMedicalColleges';
 import TopIndianEngineeringColleges from './pages/articles/TopIndianEngineeringColleges';
 import EngineeringCollegesKerala from './pages/articles/EngineeringCollegesKerala';
 import EngineeringCollegesTamilNadu from './pages/articles/EngineeringCollegesTamilNadu';
+import EngineeringCollegesKarnataka from './pages/articles/EngineeringCollegesKarnataka';
 import TopPrivateMedicalColleges from './pages/articles/TopPrivateMedicalColleges';
 
 // Course Guide Imports
@@ -90,6 +91,7 @@ export default function App() {
             <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
             <Route path="/articles/EngineeringCollegesKerala" element={<EngineeringCollegesKerala />} />
             <Route path="/articles/EngineeringCollegesTamilNadu" element={<EngineeringCollegesTamilNadu />} />
+            <Route path="/articles/EngineeringCollegesKarnataka" element={<EngineeringCollegesKarnataka />} />
             <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
             <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
 
