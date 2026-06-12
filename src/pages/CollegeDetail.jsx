@@ -103,7 +103,7 @@ export default function CollegeDetail() {
         </div>
         <div style={s.sideCardBody}>
           <p style={s.sideCardText}>Interested in <strong>{college.name}</strong>? The admissions team will reach out within 24–48 hours.</p>
-          <button style={{ ...s.enquireBtn, width: '100%', justifyContent: 'center' }} onClick={handleEnquiry}>
+          <button style={{ ...s.enquireBtn, width: '100%', justifyContent: 'center', height: '40px' }} onClick={handleEnquiry}>
             📨 {user ? 'Enquire Now' : '🔒 Login to Enquire'}
           </button>
           {!user && (

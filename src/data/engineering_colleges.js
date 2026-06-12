@@ -5493,7 +5493,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹2L - ₹8.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/8E44AD/FFFFFF.png?text=MSRIT+Bangalore",
+    "image": "https://i.postimg.cc/Zq9b51HV/b71e0189cff99a0632ff7b09b5ed94ce.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -5524,7 +5524,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹3.8L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/28527A/FFFFFF.png?text=PES+University",
+    "image": "https://i.postimg.cc/hvZZv3p0/bae349c6-e766-4549-9c89-3ebdfb1f1688-1584681394.jpg",
     "approval": "UGC, AICTE",
     "tags": [
       "Private University",
@@ -5553,7 +5553,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹4L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/E32636/FFFFFF.png?text=MIT+Manipal",
+    "image": "https://i.postimg.cc/yNhfcNLH/manipal-university-bangalore-365050.webp",
     "approval": "UGC, AICTE, NBA",
     "tags": [
       "Private",
@@ -5583,7 +5583,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹25K - ₹45K per year",
-    "image": "https://placehold.co/800x600/1E8449/FFFFFF.png?text=UVCE+Bangalore",
+    "image": "https://i.postimg.cc/KjWQx389/university-visvesvaraya-college-of-engineering-bangalore-214759.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Government",
@@ -5613,7 +5613,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.5L - ₹7.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/3949AB/FFFFFF.png?text=BMSIT+Bangalore",
+    "image": "https://i.postimg.cc/MTKYBmc9/Image-1741710486498.png",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -5644,7 +5644,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.2L - ₹7L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/1F618D/FFFFFF.png?text=BIT+Bangalore",
+    "image": "https://www.collegebatch.com/static/clg-gallery/bangalore-institute-of-technology-bangalore-361840.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -5675,7 +5675,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.5L - ₹9.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/D35400/FFFFFF.png?text=DSCE+Bangalore",
+    "image": "https://i.postimg.cc/W3FwSbnp/a51e01d2a93cb68e7d92f089a0046589.jpg",
     "approval": "AICTE, COA, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -5705,7 +5705,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2L - ₹6.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/117A65/FFFFFF.png?text=Sir+MVIT+Bangalore",
+    "image": "https://i.postimg.cc/y60FNGr6/Background-Image-1770461902862.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -5734,7 +5734,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1.5L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/800000/FFFFFF.png?text=NIE+Mysore",
+    "image": "https://i.postimg.cc/4yGHtJ2B/Background-Image-1720196375394.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Aided",
@@ -5765,7 +5765,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹2.2L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/7B1FA2/FFFFFF.png?text=KLE+Tech+Hubli",
+    "image": "https://i.postimg.cc/tgPgzK6p/Campus-Building-View-of-KLE-Technological-University-Hubli-Campus-View.jpg",
     "approval": "UGC, AICTE, NBA",
     "tags": [
       "Private University",
@@ -5795,7 +5795,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.5L - ₹8.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/1B4F72/FFFFFF.png?text=NHCE+Bangalore",
+    "image": "https://i.postimg.cc/XvwV59Rm/new-horizon-college-of-engineering-bangalore-363460.webp",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -5825,7 +5825,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.5L - ₹3.5L per year",
-    "image": "https://placehold.co/800x600/900C3F/FFFFFF.png?text=NMAMIT+Nitte",
+    "image": "https://i.postimg.cc/Xvcbq4Fp/nmam-institute-of-technology-udupi-364692.webp",
     "approval": "UGC, AICTE, NBA",
     "tags": [
       "Private",
@@ -5855,7 +5855,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.3L - ₹7.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/2C3E50/FFFFFF.png?text=RNSIT+Bangalore",
+    "image": "https://i.postimg.cc/Qx2GqHJx/Background-Image-1770462597140.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -5885,7 +5885,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.2L - ₹6.8L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/6C3483/FFFFFF.png?text=MVJCE+Bangalore",
+    "image": "https://i.postimg.cc/Mp74btTq/a0120ebc9903a21280c665f787ee407a.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -5916,7 +5916,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.8L - ₹5.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/154360/FFFFFF.png?text=SIT+Tumkur",
+    "image": "https://i.postimg.cc/3wJTkzZz/siddaganga-institute-of-technology-tumkur-256002.webp",
     "approval": "AICTE, NBA, NAAC A++",
     "tags": [
       "Private",
@@ -5947,7 +5947,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.5L - ₹8L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/78281F/FFFFFF.png?text=NMIT+Bangalore",
+    "image": "https://i.postimg.cc/N0VzQnCH/Background-Image-1770447672162.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -5978,7 +5978,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.2L - ₹6L per year",
-    "image": "https://placehold.co/800x600/0E6251/FFFFFF.png?text=JSSSTU+Mysore",
+    "image": "https://i.postimg.cc/6QsZwLL3/Background-Image-1770882749172.png",
     "approval": "UGC, AICTE, NBA",
     "tags": [
       "Private University",
@@ -6009,7 +6009,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.5L - ₹4L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/626567/FFFFFF.png?text=GIT+Belagavi",
+    "image": "https://i.postimg.cc/k5F2Crg0/kls-gogte-institute-of-technology-belgaum-274772.webp",
     "approval": "AICTE, COA, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -6038,7 +6038,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.6L - ₹4.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/512E5F/FFFFFF.png?text=SDMCET+Dharwad",
+    "image": "https://i.postimg.cc/fbKRFx88/sdm-college-of-engineering-technology-dharwad-273260.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Private",
@@ -6069,7 +6069,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹2L - ₹6.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/7E5109/FFFFFF.png?text=Acharya+AIT+Bangalore",
+    "image": "https://i.postimg.cc/Y96Z838M/Background-Image-1770459919018.jpg",
     "approval": "AICTE, NBA, NAAC B++",
     "tags": [
       "Private",
@@ -6099,7 +6099,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.2L - ₹7L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/1B2631/FFFFFF.png?text=CMRIT+Bangalore",
+    "image": "https://i.postimg.cc/3NLLbbG0/Background-Image-1766834168000.jpg",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -6130,7 +6130,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹2.5L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/7D6608/FFFFFF.png?text=REVA+University",
+    "image": "https://i.postimg.cc/B6SB9B4X/about-reva-1.png",
     "approval": "UGC, AICTE",
     "tags": [
       "Private University",
@@ -6159,7 +6159,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.2L - ₹3.5L per year",
-    "image": "https://placehold.co/800x600/145A32/FFFFFF.png?text=BEC+Bagalkot",
+    "image": "https://i.postimg.cc/XJ1dMMsk/basaveshwar-engineering-college-bagalkot-254805.webp",
     "approval": "AICTE, NBA",
     "tags": [
       "Aided",
@@ -6189,7 +6189,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.8L - ₹4.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/4A235A/FFFFFF.png?text=SJEC+Mangaluru",
+    "image": "https://i.postimg.cc/vT9r5qzd/st-joseph-engineering-college-mangalore-273767.webp",
     "approval": "AICTE, NBA, NAAC A+",
     "tags": [
       "Private",
@@ -6218,7 +6218,7 @@ const raw_data  = [
       "B.Tech (Infrastructure)"
     ],
     "fees": "₹2.5L - ₹6L per year",
-    "image": "https://placehold.co/800x600/114B5F/FFFFFF.png?text=NSAPD+Bangalore",
+    "image": "https://i.postimg.cc/5NdGTDDX/nitte-school-of-architecture-planning-design-bangalore-362705.webp",
     "approval": "AICTE, COA",
     "tags": [
       "Private",
@@ -6248,7 +6248,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.4L - ₹4.5L per year",
-    "image": "https://placehold.co/800x600/4A5759/FFFFFF.png?text=PESCE+Mandya",
+    "image": "https://i.postimg.cc/BQRvrZ46/Pesce-college.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Aided",
@@ -6277,7 +6277,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹3L - ₹5L per year",
-    "image": "https://placehold.co/800x600/432818/FFFFFF.png?text=Alliance+ACED+Bangalore",
+    "image": "https://i.postimg.cc/vHxYtRf6/alliance-college-of-engineering-design-bangalore-226216.webp",
     "approval": "UGC, AICTE",
     "tags": [
       "Private University",
@@ -6305,7 +6305,7 @@ const raw_data  = [
       "MCA"
     ],
     "fees": "₹1.3L - ₹4.2L per year",
-    "image": "https://placehold.co/800x600/582F0E/FFFFFF.png?text=MCE+Hassan",
+    "image": "https://i.postimg.cc/xjGTdXB6/Background-Image-1770113386246.jpg",
     "approval": "AICTE, NBA",
     "tags": [
       "Aided",
@@ -6334,7 +6334,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2.2L - ₹6.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/2A2D34/FFFFFF.png?text=DBIT+Bangalore",
+    "image": "https://i.postimg.cc/9Mhj9jkp/1749885519-row-44.jpg",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
@@ -6362,7 +6362,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.6L - ₹4L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/3D348B/FFFFFF.png?text=KVGCE+Sullia",
+    "image": "https://i.postimg.cc/638c07G9/Campus-View-of-KVG-College-of-Engineering-Sullia-Campus-View.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
