@@ -6391,7 +6391,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹2L - ₹6L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/004B23/FFFFFF.png?text=EPCET+Bangalore",
+    "image": "https://i.postimg.cc/c4ZsvxBt/128c6775b6544bd1cf9a38cd27586620.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -6420,7 +6420,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.6L - ₹4.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/370617/FFFFFF.png?text=BIET+Davangere",
+    "image": "https://i.postimg.cc/LXHTqZ5D/Background-Image-1721402588842.jpg",
     "approval": "AICTE, NBA, NAAC A",
     "tags": [
       "Private",
@@ -6449,7 +6449,7 @@ const raw_data  = [
       "MBA"
     ],
     "fees": "₹1.8L - ₹5.5L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/240046/FFFFFF.png?text=SaIT+Bangalore",
+    "image": "https://i.postimg.cc/7Z0MmNTm/Background-Image-1770462651145.jpg",
     "approval": "AICTE",
     "tags": [
       "Private",
@@ -6479,7 +6479,7 @@ const raw_data  = [
       "Ph.D"
     ],
     "fees": "₹1.7L - ₹4.8L per year (varies by quota)",
-    "image": "https://placehold.co/800x600/03045E/FFFFFF.png?text=JNNCE+Shimoga",
+    "image": "https://i.postimg.cc/52BLwNh0/jawaharlal-nehru-national-college-of-engineering-shimoga-271819.webp",
     "approval": "AICTE, NBA, NAAC",
     "tags": [
       "Private",
