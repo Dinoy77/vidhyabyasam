@@ -4,6 +4,24 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { blogArticles } from '../data/blogData'; 
 
+// --- CUSTOM HOOK FOR RESPONSIVENESS ---
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, [matches, query]);
+
+  return matches;
+}
+// --------------------------------------
+
 const allBlogsArray = Object.keys(blogArticles).map(slug => ({
   slug, 
   ...blogArticles[slug] 
@@ -17,6 +35,9 @@ export default function BlogList() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(1);
   const ITEMS_PER_PAGE = 9;
+  
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const styles = getStyles(isMobile);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,7 +66,7 @@ export default function BlogList() {
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
-    window.scrollTo({ top: 400, behavior: 'smooth' });
+    window.scrollTo({ top: isMobile ? 300 : 400, behavior: 'smooth' });
   };
 
   return (
@@ -124,7 +145,7 @@ export default function BlogList() {
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
                 >
-                  ← Previous
+                  ← Prev
                 </button>
                 <span style={styles.pageIndicator}>
                   Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong>
@@ -154,34 +175,212 @@ export default function BlogList() {
   );
 }
 
-const styles = {
-  pageContainer: { backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'DM Sans, sans-serif' },
-  heroHeader: { backgroundColor: '#f8fafc', padding: '80px 24px 60px', textAlign: 'center', borderBottom: '1px solid #e2e8f0' },
-  heroContent: { maxWidth: '800px', margin: '0 auto' },
-  categoryBadge: { display: 'inline-block', padding: '6px 14px', backgroundColor: '#eff6ff', color: '#2563eb', borderRadius: '20px', fontSize: '13px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px' },
-  mainTitle: { fontFamily: 'Playfair Display, serif', fontSize: '44px', color: '#0f172a', lineHeight: '1.2', marginBottom: '16px', fontWeight: '800' },
-  subtitle: { fontSize: '18px', color: '#64748b', fontWeight: '500', marginBottom: '30px' },
-  searchContainer: { maxWidth: '600px', margin: '0 auto 24px' },
-  searchInput: { width: '100%', padding: '16px 24px', fontSize: '16px', borderRadius: '50px', border: '2px solid #e2e8f0', outline: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'all 0.3s ease' },
-  pillWrapper: { display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' },
-  filterPill: { fontFamily: 'DM Sans, sans-serif',padding: '8px 18px', backgroundColor: '#fff', color: '#334155', border: '1px solid #cbd5e1', borderRadius: '30px', fontSize: '14px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.2s ease' },
-  activePill: { backgroundColor: '#2563eb', color: '#ffffff', border: '1px solid #2563eb' },
-  mainContent: { maxWidth: '1200px', margin: '0 auto', padding: '60px 24px' },
-  blogGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '40px' },
-  blogCard: { backgroundColor: '#fff', borderRadius: '16px', overflow: 'hidden', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', transition: 'box-shadow 0.3s ease' },
-  imageBox: { position: 'relative', height: '240px', display: 'block' },
-  blogImage: { width: '100%', height: '100%', objectFit: 'cover' },
-  imageBadge: { position: 'absolute', top: '16px', left: '16px', backgroundColor: 'rgba(255,255,255,0.95)', color: '#2563eb', padding: '6px 12px', borderRadius: '8px', fontSize: '12px', fontWeight: '700', backdropFilter: 'blur(4px)' },
-  cardContent: { padding: '24px', display: 'flex', flexDirection: 'column', flexGrow: 1 },
-  metaData: { display: 'flex', alignItems: 'center', gap: '12px', fontSize: '13px', color: '#64748b', fontWeight: '600', marginBottom: '12px' },
+// ---------------- Dynamic Responsive Styles ---------------- //
+const getStyles = (isMobile) => ({
+  pageContainer: { 
+    backgroundColor: '#fff', 
+    minHeight: '100vh', 
+    fontFamily: 'DM Sans, sans-serif' 
+  },
+  heroHeader: { 
+    backgroundColor: '#f8fafc', 
+    // Increased top padding to account for fixed navbar
+    padding: isMobile ? '100px 16px 40px' : '120px 24px 60px', 
+    textAlign: 'center', 
+    borderBottom: '1px solid #e2e8f0' 
+  },
+  heroContent: { 
+    maxWidth: '800px', 
+    margin: '0 auto' 
+  },
+  categoryBadge: { 
+    display: 'inline-block', 
+    padding: '6px 14px', 
+    backgroundColor: '#eff6ff', 
+    color: '#2563eb', 
+    borderRadius: '20px', 
+    fontSize: '13px', 
+    fontWeight: '700', 
+    textTransform: 'uppercase', 
+    letterSpacing: '1px', 
+    marginBottom: '20px' 
+  },
+  mainTitle: { 
+    fontFamily: 'Playfair Display, serif', 
+    fontSize: isMobile ? '32px' : '44px', 
+    color: '#0f172a', 
+    lineHeight: '1.2', 
+    marginBottom: '16px', 
+    fontWeight: '800' 
+  },
+  subtitle: { 
+    fontSize: isMobile ? '16px' : '18px', 
+    color: '#64748b', 
+    fontWeight: '500', 
+    marginBottom: '30px',
+    padding: isMobile ? '0 10px' : '0'
+  },
+  searchContainer: { 
+    maxWidth: '600px', 
+    margin: '0 auto 24px' 
+  },
+  searchInput: { 
+    width: '100%', 
+    boxSizing: 'border-box',
+    padding: isMobile ? '14px 20px' : '16px 24px', 
+    fontSize: '16px', 
+    borderRadius: '50px', 
+    border: '2px solid #e2e8f0', 
+    outline: 'none', 
+    boxShadow: '0 4px 12px rgba(0,0,0,0.03)', 
+    transition: 'all 0.3s ease' 
+  },
+  pillWrapper: { 
+    display: 'flex', 
+    flexWrap: 'wrap', 
+    justifyContent: 'center', 
+    gap: '10px' 
+  },
+  filterPill: { 
+    fontFamily: 'DM Sans, sans-serif',
+    padding: isMobile ? '6px 14px' : '8px 18px', 
+    backgroundColor: '#fff', 
+    color: '#334155', 
+    border: '1px solid #cbd5e1', 
+    borderRadius: '30px', 
+    fontSize: isMobile ? '13px' : '14px', 
+    fontWeight: '600', 
+    cursor: 'pointer', 
+    transition: 'all 0.2s ease',
+    whiteSpace: 'nowrap'
+  },
+  activePill: { 
+    backgroundColor: '#2563eb', 
+    color: '#ffffff', 
+    border: '1px solid #2563eb' 
+  },
+  mainContent: { 
+    maxWidth: '1200px', 
+    margin: '0 auto', 
+    padding: isMobile ? '40px 16px' : '60px 24px' 
+  },
+  blogGrid: { 
+    display: 'grid', 
+    gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fill, minmax(340px, 1fr))', 
+    gap: isMobile ? '24px' : '40px' 
+  },
+  blogCard: { 
+    backgroundColor: '#fff', 
+    borderRadius: '16px', 
+    overflow: 'hidden', 
+    border: '1px solid #e2e8f0', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    transition: 'box-shadow 0.3s ease' 
+  },
+  imageBox: { 
+    position: 'relative', 
+    height: isMobile ? '200px' : '240px', 
+    display: 'block' 
+  },
+  blogImage: { 
+    width: '100%', 
+    height: '100%', 
+    objectFit: 'cover' 
+  },
+  imageBadge: { 
+    position: 'absolute', 
+    top: '16px', 
+    left: '16px', 
+    backgroundColor: 'rgba(255,255,255,0.95)', 
+    color: '#2563eb', 
+    padding: '6px 12px', 
+    borderRadius: '8px', 
+    fontSize: '12px', 
+    fontWeight: '700', 
+    backdropFilter: 'blur(4px)' 
+  },
+  cardContent: { 
+    padding: isMobile ? '20px' : '24px', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    flexGrow: 1 
+  },
+  metaData: { 
+    display: 'flex', 
+    alignItems: 'center', 
+    gap: '12px', 
+    fontSize: '13px', 
+    color: '#64748b', 
+    fontWeight: '600', 
+    marginBottom: '12px' 
+  },
   dot: { color: '#cbd5e1' },
-  blogLink: { textDecoration: 'none', color: 'inherit', flexGrow: 1 },
-  blogTitle: { fontFamily: 'Playfair Display, serif', fontSize: '22px', fontWeight: '800', color: '#0f172a', lineHeight: '1.3', marginBottom: '16px' },
-  readMoreBtn: { display: 'inline-block', fontSize: '14px', fontWeight: '700', color: '#2563eb', textDecoration: 'none', marginTop: 'auto' },
-  noResults: { textAlign: 'center', padding: '60px', color: '#64748b', backgroundColor: '#f8fafc', borderRadius: '16px', border: '1px solid #e2e8f0' },
-  clearBtn: { marginTop: '16px', padding: '10px 20px', borderRadius: '8px', backgroundColor: '#0f172a', color: '#fff', border: 'none', fontWeight: '600', cursor: 'pointer' },
-  paginationContainer: { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '24px', marginTop: '40px', paddingTop: '30px', borderTop: '1px solid #e2e8f0' },
-  pageBtn: { padding: '10px 20px', borderRadius: '8px', backgroundColor: '#2563eb', color: '#fff', border: 'none', fontSize: '14px', fontWeight: '700', cursor: 'pointer' },
-  pageBtnDisabled: { backgroundColor: '#cbd5e1', cursor: 'not-allowed' },
-  pageIndicator: { fontSize: '15px', color: '#475569', fontWeight: '500' }
-};
+  blogLink: { 
+    textDecoration: 'none', 
+    color: 'inherit', 
+    flexGrow: 1 
+  },
+  blogTitle: { 
+    fontFamily: 'Playfair Display, serif', 
+    fontSize: isMobile ? '20px' : '22px', 
+    fontWeight: '800', 
+    color: '#0f172a', 
+    lineHeight: '1.3', 
+    marginBottom: '16px' 
+  },
+  readMoreBtn: { 
+    display: 'inline-block', 
+    fontSize: '14px', 
+    fontWeight: '700', 
+    color: '#2563eb', 
+    textDecoration: 'none', 
+    marginTop: 'auto' 
+  },
+  noResults: { 
+    textAlign: 'center', 
+    padding: isMobile ? '40px 20px' : '60px', 
+    color: '#64748b', 
+    backgroundColor: '#f8fafc', 
+    borderRadius: '16px', 
+    border: '1px solid #e2e8f0' 
+  },
+  clearBtn: { 
+    marginTop: '16px', 
+    padding: '10px 20px', 
+    borderRadius: '8px', 
+    backgroundColor: '#0f172a', 
+    color: '#fff', 
+    border: 'none', 
+    fontWeight: '600', 
+    cursor: 'pointer' 
+  },
+  paginationContainer: { 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    gap: isMobile ? '12px' : '24px', 
+    marginTop: isMobile ? '30px' : '40px', 
+    paddingTop: '30px', 
+    borderTop: '1px solid #e2e8f0' 
+  },
+  pageBtn: { 
+    padding: isMobile ? '8px 16px' : '10px 20px', 
+    borderRadius: '8px', 
+    backgroundColor: '#2563eb', 
+    color: '#fff', 
+    border: 'none', 
+    fontSize: '14px', 
+    fontWeight: '700', 
+    cursor: 'pointer' 
+  },
+  pageBtnDisabled: { 
+    backgroundColor: '#cbd5e1', 
+    cursor: 'not-allowed' 
+  },
+  pageIndicator: { 
+    fontSize: isMobile ? '14px' : '15px', 
+    color: '#475569', 
+    fontWeight: '500' 
+  }
+});
