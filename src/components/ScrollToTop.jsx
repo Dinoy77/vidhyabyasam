@@ -2,24 +2,33 @@ import React, { useState, useEffect } from 'react';
 
 export default function ScrollToTop() {
     const [visible, setVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 768 : false);
 
     useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
         const handleScroll = () => {
             setVisible(window.scrollY > 400);
         };
+
+        window.addEventListener('resize', handleResize);
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
-    if (!visible) return null;
+    // Return null if not visible OR if on mobile
+    if (!visible || isMobile) return null;
 
     return (
         <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={{
                 position: 'fixed',
-                bottom: '160px',
-                right: '38px',
+                bottom: '30px',
+                right: '28px',
                 zIndex: 1000,
                 width: '44px',
                 height: '44px',
@@ -32,7 +41,6 @@ export default function ScrollToTop() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 transition: 'transform 0.2s, box-shadow 0.2s',
-                opacity: visible ? 1 : 0,
             }}
             onMouseEnter={e => {
                 e.currentTarget.style.transform = 'scale(1.1)';
@@ -48,11 +56,11 @@ export default function ScrollToTop() {
                 <polyline points="18 11 12 5 6 11" />
                 <polyline points="18 18 12 12 6 18" />
                 <style>{`
-    @keyframes blink {
-      0%, 100% { opacity: 1; transform: translateY(0); }
-      50% { opacity: 0.4; transform: translateY(-3px); }
-    }
-  `}</style>
+                  @keyframes blink {
+                    0%, 100% { opacity: 1; transform: translateY(0); }
+                    50% { opacity: 0.4; transform: translateY(-3px); }
+                  }
+                `}</style>
             </svg>
         </button>
     );

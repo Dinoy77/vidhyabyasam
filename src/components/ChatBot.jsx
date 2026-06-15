@@ -47,6 +47,15 @@ export default function ChatBot() {
     const [input, setInput] = useState('');
     const [showFaqs, setShowFaqs] = useState(true);
     const bottomRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(
+      typeof window !== 'undefined' ? window.innerWidth < 768 : false
+    );
+  
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useEffect(() => {
         if (open && messages.length > 1) {
@@ -97,12 +106,23 @@ export default function ChatBot() {
             <button
                 onClick={() => setOpen(!open)}
                 style={{
-                    position: 'fixed', bottom: '92px', right: '28px', zIndex: 1000,
-                    width: '56px', height: '56px', borderRadius: '50%',
+                    position: 'fixed',
+                    zIndex: 1000,
+                    bottom: isMobile ? '124px' : '160px', 
+                    right: isMobile ? '16px' : '24px',
+                    width: isMobile ? '44px' : '60px',  
+                    height: isMobile ? '44px' : '60px',
+                    borderRadius: '50%',
                     background: 'linear-gradient(135deg, #1B6CA8, #0d4f80)',
-                    border: 'none', cursor: 'pointer', boxShadow: '0 4px 16px rgba(27,108,168,0.4)',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '22px', transition: 'transform 0.2s',
+                    color: '#fff',
+                    border: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: isMobile ? '20px' : '28px', 
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                    cursor: 'pointer',
+                    transition: 'transform 0.2s ease'
                 }}
                 onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.1)'}
                 onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
@@ -114,8 +134,12 @@ export default function ChatBot() {
             {/* Chat Window */}
             {open && (
                 <div style={{
-                    position: 'fixed', bottom: '160px', right: '28px', zIndex: 1000,
-                    width: '320px', maxHeight: '480px',
+                    position: 'fixed', 
+                    bottom: isMobile ? '180px' : '230px', 
+                    right: isMobile ? '16px' : '28px', 
+                    zIndex: 1000,
+                    width: isMobile ? 'calc(100vw - 32px)' : '320px', 
+                    maxHeight: isMobile ? '50vh' : '480px',
                     background: '#fff', borderRadius: '16px',
                     boxShadow: '0 8px 40px rgba(0,0,0,0.18)',
                     border: '1px solid #e5e7eb',
