@@ -5,10 +5,31 @@ import Footer from '../components/Footer';
 import EnquiryModal from '../components/EnquiryModal';
 import { blogArticles } from '../data/blogData';
 
+// --- CUSTOM HOOK FOR RESPONSIVENESS ---
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, [matches, query]);
+
+  return matches;
+}
+// --------------------------------------
+
 export default function BlogArticle() {
   const { slug } = useParams();
   const article = blogArticles[slug];
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const styles = getStyles(isMobile);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,7 +75,6 @@ export default function BlogArticle() {
     image: item.image,
     link: `/blog/${item.slug}` // Standardized routing
   }));
-
 
   const generalEnquiryContext = {
     id: "general-blog-enquiry",
@@ -161,42 +181,238 @@ export default function BlogArticle() {
   );
 }
 
-const styles = {
-  pageContainer: { backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'DM Sans, sans-serif' },
-  layoutWrapper: { maxWidth: '1200px', margin: '0 auto', padding: '40px 24px', display: 'flex', gap: '40px', flexWrap: 'wrap', alignItems: 'flex-start' },
-  mainContent: { flex: '1 1 700px', backgroundColor: '#fff', padding: '40px' },
-  sidebar: { flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: '30px', position: 'sticky', top: '100px' },
-  header: { textAlign: 'center', marginBottom: '40px' },
-  categoryBadge: { display: 'inline-block', padding: '6px 14px', backgroundColor: '#fff', color: '#2563eb', borderRadius: '20px', fontSize: '13px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px' },
-  title: { fontFamily: 'Playfair Display, serif', fontSize: '38px', color: '#0f172a', lineHeight: '1.2', marginBottom: '20px', fontWeight: '800' },
-  metaData: { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px', color: '#64748b', fontSize: '14px', fontWeight: '500', flexWrap: 'wrap' },
+// ---------------- Dynamic Responsive Styles ---------------- //
+const getStyles = (isMobile) => ({
+  pageContainer: { 
+    backgroundColor: '#fff', 
+    minHeight: '100vh', 
+    fontFamily: 'DM Sans, sans-serif' 
+  },
+  layoutWrapper: { 
+    maxWidth: '1200px', 
+    margin: '0 auto', 
+    padding: isMobile ? '80px 16px 40px 16px' : '100px 24px 40px 24px', 
+    display: 'flex', 
+    gap: isMobile ? '32px' : '40px', 
+    flexDirection: isMobile ? 'column' : 'row', 
+    alignItems: 'flex-start' 
+  },
+  mainContent: { 
+    flex: '1 1 100%', 
+    width: '100%', 
+    backgroundColor: '#fff', 
+    padding: isMobile ? '0' : '20px 40px 40px 0' 
+  },
+  sidebar: { 
+    flex: isMobile ? '1 1 100%' : '0 0 340px', 
+    width: '100%', 
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: '30px', 
+    position: isMobile ? 'static' : 'sticky', 
+    top: '100px' 
+  },
+  header: { 
+    textAlign: 'center', 
+    marginBottom: isMobile ? '24px' : '40px' 
+  },
+  categoryBadge: { 
+    display: 'inline-block', 
+    padding: '6px 14px', 
+    backgroundColor: '#eff6ff', 
+    color: '#2563eb', 
+    borderRadius: '20px', 
+    fontSize: '12px', 
+    fontWeight: '700', 
+    textTransform: 'uppercase', 
+    letterSpacing: '1px', 
+    marginBottom: '16px' 
+  },
+  title: { 
+    fontFamily: 'Playfair Display, serif', 
+    fontSize: isMobile ? '28px' : '38px', 
+    color: '#0f172a', 
+    lineHeight: '1.2', 
+    marginBottom: '20px', 
+    fontWeight: '800' 
+  },
+  metaData: { 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    gap: '12px', 
+    color: '#64748b', 
+    fontSize: isMobile ? '13px' : '14px', 
+    fontWeight: '500', 
+    flexWrap: 'wrap' 
+  },
   dot: { color: '#cbd5e1' },
   author: { color: '#0f172a', fontWeight: '600' },
-  imageWrapper: { width: '100%', height: '400px', borderRadius: '16px', overflow: 'hidden', marginBottom: '40px' },
+  imageWrapper: { 
+    width: '100%', 
+    height: isMobile ? '240px' : '400px', 
+    borderRadius: '16px', 
+    overflow: 'hidden', 
+    marginBottom: isMobile ? '24px' : '40px' 
+  },
   image: { width: '100%', height: '100%', objectFit: 'cover' },
-  contentBody: { fontSize: '17px', color: '#334155', lineHeight: '1.8' },
+  contentBody: { 
+    fontSize: isMobile ? '16px' : '17px', 
+    color: '#334155', 
+    lineHeight: '1.8' 
+  },
   section: { marginBottom: '32px' },
-  heading: { fontSize: '24px', fontWeight: '700', color: '#0f172a', marginBottom: '16px', marginTop: '40px' },
+  heading: { 
+    fontSize: isMobile ? '20px' : '24px', 
+    fontWeight: '700', 
+    color: '#0f172a', 
+    marginBottom: '16px', 
+    marginTop: '40px' 
+  },
   paragraph: { marginBottom: '16px' },
   list: { paddingLeft: '24px', marginBottom: '16px' },
   listItem: { marginBottom: '12px' },
-  ctaBox: { backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '16px', padding: '32px', textAlign: 'center', marginTop: '40px' },
-  ctaTitle: { fontSize: '22px', fontWeight: '800', color: '#166534', marginBottom: '12px' },
-  ctaText: { fontSize: '16px', color: '#15803d', marginBottom: '24px' },
-  ctaButtonGroup: { display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' },
-  ctaButton: { display: 'inline-block', backgroundColor: '#16a34a', color: '#fff', padding: '12px 28px', borderRadius: '8px', fontWeight: '700', textDecoration: 'none', transition: 'background-color 0.2s' },
-  ctaEnquireButton: { backgroundColor: '#fff', color: '#16a34a', border: '2px solid #16a34a', padding: '10px 28px', borderRadius: '8px', fontSize: '16px', fontWeight: '700', cursor: 'pointer', transition: 'all 0.2s' },
-  promoWidget: { backgroundImage: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(37, 99, 235, 0.75) 100%), url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80")', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '16px', padding: '40px 24px', textAlign: 'center', color: '#fff', boxShadow: '0 15px 30px rgba(37, 99, 235, 0.25)', border: '1px solid rgba(255, 255, 255, 0.1)' },
-  promoIcon: { marginBottom: '16px', display: 'flex', justifyContent: 'center', alignItems: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.4))' },
-  promoTitle: { fontSize: '22px', fontWeight: '800', marginBottom: '12px', lineHeight: '1.2', textShadow: '0 2px 4px rgba(0,0,0,0.5)' },
-  promoText: { fontSize: '15px', opacity: '0.95', marginBottom: '28px', lineHeight: '1.6', textShadow: '0 1px 2px rgba(0,0,0,0.5)' },
-  promoButton: { backgroundColor: '#fff', color: '#1e3a8a', width: '100%', border: 'none', padding: '14px', borderRadius: '8px', fontSize: '16px', fontWeight: '800', cursor: 'pointer', boxShadow: '0 4px 15px rgba(0,0,0,0.2)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' },
-  widgetBox: { backgroundColor: '#fff', padding: '24px', borderRadius: '16px', border: '1px solid #e2e8f0', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' },
-  widgetTitle: { fontSize: '18px', fontWeight: '800', color: '#0f172a', marginBottom: '20px', borderBottom: '2px solid #f1f5f9', paddingBottom: '12px' },
-  relatedList: { display: 'flex', flexDirection: 'column', gap: '16px' },
-  relatedItem: { display: 'flex', gap: '12px', textDecoration: 'none', alignItems: 'center' },
-  relatedImage: { width: '70px', height: '70px', borderRadius: '10px', objectFit: 'cover' },
-  relatedContent: { display: 'flex', flexDirection: 'column', gap: '4px' },
-  relatedTitle: { fontSize: '14px', fontWeight: '700', color: '#1e293b', lineHeight: '1.4' },
-  readMore: { fontSize: '12px', fontWeight: '700', color: '#3b82f6' },
-};
+  ctaBox: { 
+    backgroundColor: '#f0fdf4', 
+    border: '1px solid #bbf7d0', 
+    borderRadius: '16px', 
+    padding: isMobile ? '24px 16px' : '32px', 
+    textAlign: 'center', 
+    marginTop: '40px' 
+  },
+  ctaTitle: { 
+    fontSize: isMobile ? '20px' : '22px', 
+    fontWeight: '800', 
+    color: '#166534', 
+    marginBottom: '12px' 
+  },
+  ctaText: { 
+    fontSize: isMobile ? '15px' : '16px', 
+    color: '#15803d', 
+    marginBottom: '24px' 
+  },
+  ctaButtonGroup: { 
+    display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row', 
+    justifyContent: 'center', 
+    gap: '16px' 
+  },
+  ctaButton: { 
+    display: 'block', 
+    backgroundColor: '#16a34a', 
+    color: '#fff', 
+    padding: '12px 28px', 
+    borderRadius: '8px', 
+    fontWeight: '700', 
+    textDecoration: 'none', 
+    transition: 'background-color 0.2s',
+    width: isMobile ? '100%' : 'auto',
+    boxSizing: 'border-box'
+  },
+  ctaEnquireButton: { 
+    backgroundColor: '#fff', 
+    color: '#16a34a', 
+    border: '2px solid #16a34a', 
+    padding: '10px 28px', 
+    borderRadius: '8px', 
+    fontSize: '16px', 
+    fontWeight: '700', 
+    cursor: 'pointer', 
+    transition: 'all 0.2s',
+    width: isMobile ? '100%' : 'auto',
+    boxSizing: 'border-box'
+  },
+  promoWidget: { 
+    backgroundImage: 'linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(37, 99, 235, 0.75) 100%), url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80")', 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    borderRadius: '16px', 
+    padding: '40px 24px', 
+    textAlign: 'center', 
+    color: '#fff', 
+    boxShadow: '0 15px 30px rgba(37, 99, 235, 0.25)', 
+    border: '1px solid rgba(255, 255, 255, 0.1)' 
+  },
+  promoIcon: { 
+    marginBottom: '16px', 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.4))' 
+  },
+  promoTitle: { 
+    fontSize: '22px', 
+    fontWeight: '800', 
+    marginBottom: '12px', 
+    lineHeight: '1.2', 
+    textShadow: '0 2px 4px rgba(0,0,0,0.5)' 
+  },
+  promoText: { 
+    fontSize: '15px', 
+    opacity: '0.95', 
+    marginBottom: '28px', 
+    lineHeight: '1.6', 
+    textShadow: '0 1px 2px rgba(0,0,0,0.5)' 
+  },
+  promoButton: { 
+    backgroundColor: '#fff', 
+    color: '#1e3a8a', 
+    width: '100%', 
+    border: 'none', 
+    padding: '14px', 
+    borderRadius: '8px', 
+    fontSize: '16px', 
+    fontWeight: '800', 
+    cursor: 'pointer', 
+    boxShadow: '0 4px 15px rgba(0,0,0,0.2)', 
+    transition: 'transform 0.2s ease, box-shadow 0.2s ease' 
+  },
+  widgetBox: { 
+    backgroundColor: '#fff', 
+    padding: '24px', 
+    borderRadius: '16px', 
+    border: '1px solid #e2e8f0', 
+    boxShadow: '0 4px 6px -1px rgba(0,0,0,0.02)' 
+  },
+  widgetTitle: { 
+    fontSize: '18px', 
+    fontWeight: '800', 
+    color: '#0f172a', 
+    marginBottom: '20px', 
+    borderBottom: '2px solid #f1f5f9', 
+    paddingBottom: '12px' 
+  },
+  relatedList: { 
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: '16px' 
+  },
+  relatedItem: { 
+    display: 'flex', 
+    gap: '12px', 
+    textDecoration: 'none', 
+    alignItems: 'center' 
+  },
+  relatedImage: { 
+    width: '70px', 
+    height: '70px', 
+    borderRadius: '10px', 
+    objectFit: 'cover' 
+  },
+  relatedContent: { 
+    display: 'flex', 
+    flexDirection: 'column', 
+    gap: '4px' 
+  },
+  relatedTitle: { 
+    fontSize: '14px', 
+    fontWeight: '700', 
+    color: '#1e293b', 
+    lineHeight: '1.4' 
+  },
+  readMore: { 
+    fontSize: '12px', 
+    fontWeight: '700', 
+    color: '#3b82f6' 
+  },
+});
