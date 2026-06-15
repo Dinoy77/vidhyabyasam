@@ -39,7 +39,7 @@ export default function Footer() {
               onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
               onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#0D1117">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
               </svg>
             </a>
@@ -53,10 +53,10 @@ export default function Footer() {
               onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
               onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.08)'}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D1117" strokeWidth="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                 <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none" />
+                <circle cx="17.5" cy="6.5" r="1" fill="#0D1117" stroke="none" />
               </svg>
             </a>
           </div>
@@ -86,7 +86,7 @@ export default function Footer() {
 
       <div style={styles.bottom}>
         <p style={{ margin: 0 }}>© 2026 Developed & Maintained by KFS Innovations Pvt Ltd</p>
-        <p style={{ margin: 0, color: 'rgba(255,255,255,0.3)', fontSize: '12px' }}>
+        <p style={{ margin: 0, color: 'rgba(0,0,0,0.35)', fontSize: '12px' }}>
           Built for People Who are Ambitious about Future
         </p>
       </div>
@@ -97,7 +97,8 @@ export default function Footer() {
 // ---------------- Dynamic Responsive Styles ---------------- //
 const getStyles = (isMobile, isTablet) => ({
   footer: {
-    background: '#0D1117', color: '#fff',
+    background: '#f0e8dc', color: '#0D1117',
+    borderTop: '2px solid var(--accent)',
     padding: isMobile ? '40px 20px 24px' : '60px 48px 24px',
     marginTop: isMobile ? '40px' : '80px',
     boxSizing: 'border-box',
@@ -106,53 +107,53 @@ const getStyles = (isMobile, isTablet) => ({
   },
   inner: {
     maxWidth: '1200px', margin: '0 auto',
-    display: 'flex', 
+    display: 'flex',
     flexDirection: isTablet ? 'column' : 'row', // Stacks vertically on smaller screens
-    gap: isMobile ? '40px' : '60px', 
+    gap: isMobile ? '40px' : '60px',
     paddingBottom: '40px',
-    borderBottom: '1px solid rgba(255,255,255,0.1)',
+    borderBottom: '1px solid rgba(0,0,0,0.08)',
   },
-  brand: { 
+  brand: {
     flex: 1.2, display: 'flex', flexDirection: 'column', gap: '16px',
     alignItems: isTablet ? 'center' : 'flex-start',
     textAlign: isTablet ? 'center' : 'left'
   },
   logo: { fontFamily: 'Playfair Display, serif', fontSize: '24px', fontWeight: 900 },
-  tagline: { color: 'rgba(255,255,255,0.5)', fontSize: '14px', lineHeight: 1.7, margin: 0 },
+  tagline: { color: 'rgba(0,0,0,0.5)', fontSize: '14px', lineHeight: 1.7, margin: 0 },
   social: { display: 'flex', gap: '12px' },
   socialLink: {
     width: '36px', height: '36px', borderRadius: '8px',
-    background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.1)',
+    background: 'rgba(0,0,0,0.06)', border: '1px solid rgba(0,0,0,0.1)',
     cursor: 'pointer', fontSize: '14px',
     display: 'flex', alignItems: 'center', justifyContent: 'center',
     textDecoration: 'none', transition: 'background 0.2s ease',
   },
-  links: { 
-    flex: 3, display: 'flex', gap: '48px', 
+  links: {
+    flex: 3, display: 'flex', gap: '48px',
     justifyContent: isTablet ? 'space-between' : 'flex-end',
     flexWrap: 'wrap' // Allows columns to wrap neatly on mobile
   },
-  col: { 
+  col: {
     display: 'flex', flexDirection: 'column', gap: '10px',
     minWidth: isMobile ? '120px' : 'auto' // Prevents squishing on mobile
   },
-  colTitle: { 
-    fontSize: '12px', fontWeight: 700, letterSpacing: '1px', 
-    textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', 
-    marginBottom: '4px', margin: 0 
+  colTitle: {
+    fontSize: '12px', fontWeight: 700, letterSpacing: '1px',
+    textTransform: 'uppercase', color: 'rgba(0,0,0,0.5)',
+    marginBottom: '4px', margin: 0
   },
-  link: { 
-    fontSize: '14px', color: 'rgba(255,255,255,0.7)', 
-    textDecoration: 'none', transition: 'color 0.2s', cursor: 'pointer' 
+  link: {
+    fontSize: '14px', color: 'rgba(0,0,0,0.65)',
+    textDecoration: 'none', transition: 'color 0.2s', cursor: 'pointer'
   },
   bottom: {
     maxWidth: '1200px', margin: '24px auto 0',
-    display: 'flex', 
+    display: 'flex',
     flexDirection: isMobile ? 'column' : 'row', // Stack text vertically on mobile
-    justifyContent: isMobile ? 'center' : 'space-between', 
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
     gap: isMobile ? '12px' : '0',
-    fontSize: '13px', color: 'rgba(255,255,255,0.5)',
+    fontSize: '13px', color: 'rgba(0,0,0,0.5)',
     textAlign: isMobile ? 'center' : 'left'
   },
 });
