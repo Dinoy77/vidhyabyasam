@@ -173,6 +173,20 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     articlesTimeout.current = setTimeout(() => setArticlesOpen(false), 200);
   };
 
+  // Helper to scroll to a specific section by ID
+  const scrollToSection = (sectionId) => {
+    setMenuOpen(false);
+    if (window.location.pathname !== '/') {
+      navigate('/');
+      // Timeout ensures the home page has time to render before scrolling
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 150);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   // Fixed Navigation Handler
   const handleArticleClick = (e, articleName) => {
     e.preventDefault();
@@ -206,8 +220,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {/* Desktop Links */}
         {!isTablet && (
           <div style={styles.navLinks}>
-            <span style={styles.link} onClick={() => navigate('/')}>Colleges</span>
-            <span style={styles.link} onClick={() => navigate('/')}>By Region</span>
+            <span style={{...styles.link, cursor: 'pointer'}} onClick={() => scrollToSection('colleges')}>Colleges</span>
+            <span style={{...styles.link, cursor: 'pointer'}} onClick={() => scrollToSection('regions')}>By Region</span>
 
             <div style={styles.dropdownWrapper}
               onMouseEnter={handleCoursesEnter}
@@ -376,8 +390,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             </div>
           )}
 
-          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/'); }}>Colleges</span>
-          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/'); }}>By Region</span>
+          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('colleges')}>Colleges</span>
+          <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('regions')}>By Region</span>
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/blog'); }}>Blogs</span>
 
           {/* Mobile Courses Accordion */}
