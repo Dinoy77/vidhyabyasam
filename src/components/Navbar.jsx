@@ -378,7 +378,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         )}
       </nav>
 
-      {/* Mobile/Tablet Drawer Menu */}
+      {/* Mobile/Tablet Drawer Menu. */}
       {isTablet && menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown">
           
