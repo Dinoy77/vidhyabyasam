@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+// --- CUSTOM HOOK FOR RESPONSIVENESS ---
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => setMatches(media.matches);
+    media.addEventListener('change', listener);
+    return () => media.removeEventListener('change', listener);
+  }, [matches, query]);
+
+  return matches;
+}
+// --------------------------------------
+
 const newsItems = [
   {
     id: 1, icon: '🎓', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
@@ -84,6 +102,7 @@ const newsItems = [
 function NewsScrollBar({ navigate }) {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
+  const isMobile = useMediaQuery('(max-width: 768px)'); // Hook call
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -98,85 +117,112 @@ function NewsScrollBar({ navigate }) {
 
   const item = newsItems[current];
 
+  // return (
+  //   <div 
+  //     id="news" 
+  //     style={{ 
+  //       ...ns2.bar, 
+  //       ...(isMobile ? { height: 'auto', minHeight: '84px', padding: '12px 0' } : {}) 
+  //     }} 
+  //     onClick={() => navigate(`/news/${item.id}`)}
+  //   >
+  //     {/* Background image with overlay */}
+  //     <img
+  //       src={item.image}
+  //       alt=""
+  //       style={{
+  //         position: 'absolute', inset: 0,
+  //         width: '100%', height: '100%',
+  //         objectFit: 'cover',
+  //         opacity: animating ? 0 : 0.15,
+  //         transition: 'opacity 0.4s ease',
+  //         zIndex: 0,
+  //       }}
+  //     />
 
-  return (
-    <div id="news" style={ns2.bar} onClick={() => navigate(`/news/${item.id}`)}>
+  //     {/* Left label */}
+  //     <div style={{ 
+  //       ...ns2.label, 
+  //       zIndex: 1,
+  //       ...(isMobile ? { padding: '0 12px', minWidth: '50px' } : {}) 
+  //     }}>
+  //       <span style={ns2.dot} />
+  //       {!isMobile && <span style={ns2.labelText}>🔔 LIVE</span>}
+  //     </div>
 
-      {/* Background image with overlay */}
-      <img
-        src={item.image}
-        alt=""
-        style={{
-          position: 'absolute', inset: 0,
-          width: '100%', height: '100%',
-          objectFit: 'cover',
-          opacity: animating ? 0 : 0.15,
-          transition: 'opacity 0.4s ease',
-          zIndex: 0,
-        }}
-      />
+  //     {/* Left image - Hidden on mobile to save space */}
+  //     {!isMobile && (
+  //       <div style={{ ...ns2.imgBox, zIndex: 1 }}>
+  //         <img
+  //           src={item.image}
+  //           alt={item.title}
+  //           style={{
+  //             width: '100%', height: '100%',
+  //             objectFit: 'cover',
+  //             opacity: animating ? 0 : 1,
+  //             transition: 'opacity 0.4s ease',
+  //           }}
+  //           onError={e => { e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg'; }}
+  //         />
+  //       </div>
+  //     )}
 
-      {/* Left label */}
-      <div style={{ ...ns2.label, zIndex: 1 }}>
-        <span style={ns2.dot} />
-        <span style={ns2.labelText}>🔔 LIVE</span>
-      </div>
+  //     {/* Content */}
+  //     <div style={{
+  //       ...ns2.content, zIndex: 1,
+  //       opacity: animating ? 0 : 1,
+  //       transform: animating ? 'translateY(-8px)' : 'translateY(0)',
+  //       transition: 'all 0.4s ease',
+  //       ...(isMobile ? { 
+  //         flexDirection: 'column', 
+  //         alignItems: 'flex-start', 
+  //         gap: '6px', 
+  //         padding: '0 16px',
+  //         justifyContent: 'center'
+  //       } : {})
+  //     }}>
+  //       <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
+  //         <span style={{ ...ns2.tagPill, background: item.color }}>
+  //           {item.icon} {item.tag}
+  //         </span>
+  //         {isMobile && <span style={ns2.date}>🗓 {item.date}</span>}
+  //       </div>
+  //       <div style={{ ...ns2.textBlock, ...(isMobile ? { width: '100%' } : {}) }}>
+  //         <span style={ns2.title}>{item.title}</span>
+  //         <span style={ns2.desc}>{item.description.slice(0, 80)}...</span>
+  //       </div>
+  //       {!isMobile && <span style={ns2.date}>🗓 {item.date}</span>}
+  //     </div>
 
-      {/* Left image */}
-      <div style={{ ...ns2.imgBox, zIndex: 1 }}>
-        <img
-          src={item.image}
-          alt={item.title}
-          style={{
-            width: '100%', height: '100%',
-            objectFit: 'cover',
-            opacity: animating ? 0 : 1,
-            transition: 'opacity 0.4s ease',
-          }}
-          onError={e => { e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg'; }}
-        />
-      </div>
+  //     {/* Right — Read more - Hidden on Mobile */}
+  //     {!isMobile && (
+  //       <div style={{ ...ns2.readMore, zIndex: 1 }}>
+  //         <span style={ns2.readMoreText}>Read →</span>
+  //       </div>
+  //     )}
 
-      {/* Content */}
-      <div style={{
-        ...ns2.content, zIndex: 1,
-        opacity: animating ? 0 : 1,
-        transform: animating ? 'translateY(-8px)' : 'translateY(0)',
-        transition: 'all 0.4s ease',
-      }}>
-        <span style={{ ...ns2.tagPill, background: item.color }}>
-          {item.icon} {item.tag}
-        </span>
-        <div style={ns2.textBlock}>
-          <span style={ns2.title}>{item.title}</span>
-          <span style={ns2.desc}>{item.description.slice(0, 80)}...</span>
-        </div>
-        <span style={ns2.date}>🗓 {item.date}</span>
-      </div>
-
-      {/* Right — Read more */}
-      <div style={{ ...ns2.readMore, zIndex: 1 }}>
-        <span style={ns2.readMoreText}>Read →</span>
-      </div>
-
-      {/* Progress dots */}
-      <div style={ns2.dotsWrapper}>
-        {newsItems.map((_, i) => (
-          <span key={i} style={{
-            ...ns2.progressDot,
-            background: i === current ? '#fff' : 'rgba(255,255,255,0.3)',
-            width: i === current ? '16px' : '5px',
-          }} />
-        ))}
-      </div>
-    </div>
-  );
+  //     {/* Progress dots */}
+  //     <div style={{ 
+  //       ...ns2.dotsWrapper,
+  //       ...(isMobile ? { bottom: '4px' } : {}) 
+  //     }}>
+  //       {newsItems.map((_, i) => (
+  //         <span key={i} style={{
+  //           ...ns2.progressDot,
+  //           background: i === current ? '#fff' : 'rgba(255,255,255,0.3)',
+  //           width: i === current ? '16px' : '5px',
+  //         }} />
+  //       ))}
+  //     </div>
+  //   </div>
+  // );
 }
 
 function NewsTicker({ onViewDetails }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [fade, setFade] = useState(true);
+  const isMobile = useMediaQuery('(max-width: 768px)'); // Hook call
 
   useEffect(() => {
     if (isPaused) return;
@@ -199,7 +245,10 @@ function NewsTicker({ onViewDetails }) {
 
   return (
     <div
-      style={ns.box}
+      style={{ 
+        ...ns.box, 
+        ...(isMobile ? { minHeight: 'auto' } : {}) 
+      }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -221,7 +270,15 @@ function NewsTicker({ onViewDetails }) {
         flex: 1,
       }}>
         {/* Image banner with tag overlay */}
-        <div style={{ ...ns.featuredBg, background: current.bg, position: 'relative', overflow: 'hidden', height: '220px', minHeight: 'unset', padding: 0 }}>
+        <div style={{ 
+          ...ns.featuredBg, 
+          background: current.bg, 
+          position: 'relative', 
+          overflow: 'hidden', 
+          height: isMobile ? '160px' : '220px', 
+          minHeight: 'unset', 
+          padding: 0 
+        }}>
           <img
             src={current.image}
             alt={current.title}
@@ -306,11 +363,13 @@ const slides = [
   null,
 ];
 
-
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNewsPopup, setShowNewsPopup] = useState(false);
+  
+  const isMobile = useMediaQuery('(max-width: 900px)'); // Hook call for flex wrap point
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -318,7 +377,6 @@ export default function Hero({ onSearch }) {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -336,7 +394,14 @@ export default function Hero({ onSearch }) {
   const quickLinks = ['B.Pharm', 'M.Pharm', 'Nursing', 'GNM', 'Government'];
 
   return (
-    <section style={styles.hero}>
+    <section style={{ 
+      ...styles.hero,
+      ...(isMobile ? { padding: '30px 16px 80px 16px', minHeight: 'auto' } : {}) 
+    }}>
+      
+      {/* Includes the new responsive top bar */}
+      <NewsScrollBar navigate={navigate} />
+
       {/* Background slideshow */}
       <div style={styles.slidesWrap}>
         {slides.map((src, i) => (
@@ -368,7 +433,10 @@ export default function Hero({ onSearch }) {
       <div style={styles.bgCircle1} />
       <div style={styles.bgCircle2} />
 
-      <div style={styles.inner}>
+      <div style={{
+        ...styles.inner,
+        ...(isMobile ? { flexDirection: 'column' } : {})
+      }}>
         {/* Left — search content */}
         <div style={styles.left}>
           <div style={styles.badge}>🇮🇳 South India's #1 College Discovery Platform</div>
@@ -380,11 +448,14 @@ export default function Hero({ onSearch }) {
           </h1>
 
           <p style={styles.sub}>
-            Explore 489+ colleges across Kerala, Karnataka & Tamil Nadu.
+            Explore 800+ colleges across Kerala, Karnataka & Tamil Nadu.
             Compare, enquire, and start your dream career.
           </p>
 
-          <form style={styles.searchBox} onSubmit={handleSearch}>
+          <form style={{ 
+            ...styles.searchBox,
+            ...(isMobile ? { maxWidth: '100%' } : {}) 
+          }} onSubmit={handleSearch}>
             <span style={styles.searchIcon}>🔍</span>
             <input
               style={styles.searchInput}
@@ -406,9 +477,9 @@ export default function Hero({ onSearch }) {
             ))}
           </div>
 
-          <div style={styles.stats}>
+          <div style={{ ...styles.stats, ...(isMobile ? { marginTop: '20px' } : {}) }}>
             {[
-              { num: '489+', label: 'Colleges' },
+              { num: '800+', label: 'Colleges' },
               { num: '3', label: 'States' },
               { num: '50K+', label: 'Helped' },
               { num: '20+', label: 'Courses' },
@@ -422,13 +493,15 @@ export default function Hero({ onSearch }) {
         </div>
 
         {/* Right — news sidebar */}
-        <div style={styles.right}>
+        <div style={{
+          ...styles.right,
+          ...(isMobile ? { marginTop: '32px', maxWidth: '100%', width: '100%' } : {})
+        }}>
           <NewsTicker onViewDetails={(item) => navigate(`/news/${item.id}`)} />
         </div>
       </div>
 
-      {/* News Popup — shows only on first visit */}
-      {/* News Popup Ad Box */}
+      {/* News Popup — unchanged */}
       {showNewsPopup && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 2000,
@@ -448,7 +521,6 @@ export default function Hero({ onSearch }) {
               boxShadow: '0 24px 80px rgba(0,0,0,0.35)',
             }}
           >
-            {/* Close button */}
             <button
               onClick={() => setShowNewsPopup(false)}
               style={{
@@ -460,7 +532,6 @@ export default function Hero({ onSearch }) {
               }}
             >✕</button>
 
-            {/* Top image with overlay */}
             <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
               <img
                 src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80"
@@ -486,7 +557,6 @@ export default function Hero({ onSearch }) {
               </div>
             </div>
 
-            {/* Content */}
             <div style={{ padding: '20px 24px 24px' }}>
               <p style={{ fontSize: '11px', color: '#6B7280', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.8px', marginBottom: '8px' }}>
                 📢 Exam & Admission Alerts
@@ -538,16 +608,17 @@ export default function Hero({ onSearch }) {
         </div>
       )}
 
-      {/* Quote bar */}
-      <div style={styles.quoteBar}>
-        <span style={styles.quoteDot} />
-        <span style={styles.quoteText}>Support · Guidance · Genuinity</span>
-        <span style={styles.quoteDot} />
-      </div>
-
+      {/* Hide on mobile to save vertical real estate, or just keep it */}
+      {!isMobile && (
+        <div style={styles.quoteBar}>
+          <span style={styles.quoteDot} />
+          <span style={styles.quoteText}>Support · Guidance · Genuinity</span>
+          <span style={styles.quoteDot} />
+        </div>
+      )}
 
       {/* Slide indicators */}
-      <div style={styles.slideIndicators}>
+      <div style={{ ...styles.slideIndicators, ...(isMobile ? { bottom: '20px' } : {}) }}>
         {slides.map((_, i) => (
           <button
             key={i}
@@ -563,6 +634,10 @@ export default function Hero({ onSearch }) {
     </section>
   );
 }
+
+// -----------------------------------------------------
+// STYLES OBJECTS (Untouched to respect desktop layout)
+// -----------------------------------------------------
 
 const ns = {
   box: {

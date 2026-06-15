@@ -17,6 +17,19 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   const [currentPage, setCurrentPage] = useState(1);
   const COLLEGES_PER_PAGE = 12;
 
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const isMobile = windowWidth < 768;
+
+  // Handle window resize for responsive inline styles
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Get dynamic styles based on screen width
+  const styles = getStyles(isMobile);
+
   // 2. Safely process engineering IDs and combine both lists globally
   const allColleges = useMemo(() => {
     const safeEngineeringColleges = engineeringColleges.map(college => ({
@@ -105,7 +118,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
       {/* College Listings */}
       <section id="colleges" style={styles.section}>
         <div style={styles.sectionHeader}>
-          <div>
+          <div style={{ marginBottom: isMobile ? '16px' : '0' }}>
             <h2 style={styles.sectionTitle}>
               {activeRegion === 'All' ? 'All Colleges' : `${activeRegion} Colleges`}
             </h2>
@@ -210,7 +223,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
                     .filter(page =>
                       page === 1 ||
                       page === totalPages ||
-                      Math.abs(page - currentPage) <= 1
+                      Math.abs(page - currentPage) <= (isMobile ? 0 : 1) // Show fewer pages on mobile
                     )
                     .reduce((acc, page, idx, arr) => {
                       if (idx > 0 && page - arr[idx - 1] > 1) acc.push('...');
@@ -263,7 +276,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
           <div style={styles.empty}>
             <div style={{ fontSize: '56px' }}>🔍</div>
             <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '22px' }}>No colleges found</h3>
-            <p style={{ color: 'var(--muted)' }}>Try adjusting your filters or search query</p>
+            <p style={{ color: 'var(--muted)', textAlign: 'center' }}>Try adjusting your filters or search query</p>
             <button
               style={styles.resetBtn}
               onClick={() => {
@@ -284,31 +297,56 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   );
 }
 
-const styles = {
-  section: { padding: '40px 48px 60px', maxWidth: '1200px', margin: '0 auto' },
-  sectionHeader: {
-    display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end',
-    marginBottom: '24px',
+// Converted to a function to accept dynamic responsive state
+const getStyles = (isMobile) => ({
+  section: { 
+    padding: isMobile ? '24px 16px 40px' : '40px 48px 60px', 
+    maxWidth: '1200px', 
+    margin: '0 auto',
+    width: '100%',
+    boxSizing: 'border-box'
   },
-  sectionTitle: { fontFamily: 'Playfair Display, serif', fontSize: '32px' },
+  sectionHeader: {
+    display: 'flex', 
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'space-between', 
+    alignItems: isMobile ? 'flex-start' : 'flex-end',
+    marginBottom: '24px',
+    width: '100%'
+  },
+  sectionTitle: { 
+    fontFamily: 'Playfair Display, serif', 
+    fontSize: clamp('24px', '5vw', '32px') 
+  },
   sectionSub: { color: 'var(--muted)', fontSize: '14px', marginTop: '4px' },
-  sortRow: { display: 'flex', alignItems: 'center', gap: '10px' },
+  sortRow: { 
+    display: 'flex', 
+    alignItems: 'center', 
+    gap: '10px',
+    width: isMobile ? '100%' : 'auto',
+    justifyContent: isMobile ? 'space-between' : 'flex-start',
+    marginTop: isMobile ? '12px' : '0'
+  },
   sortLabel: { fontSize: '13px', color: 'var(--muted)', fontWeight: 500 },
   select: {
     padding: '8px 14px', borderRadius: '8px', border: '1.5px solid var(--border)',
     fontSize: '13px', fontFamily: 'DM Sans, sans-serif', background: '#fff',
-    cursor: 'pointer',
+    cursor: 'pointer', flex: isMobile ? 1 : 'none'
   },
   filters: {
-    display: 'flex', flexDirection: 'column', gap: '12px',
-    background: '#fff', borderRadius: '12px', padding: '20px',
+    display: 'flex', flexDirection: 'column', gap: '16px',
+    background: '#fff', borderRadius: '12px', 
+    padding: isMobile ? '16px' : '20px',
     border: '1px solid var(--border)', marginBottom: '32px',
     boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
   },
-  filterGroup: { display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' },
+  filterGroup: { 
+    display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' 
+  },
   filterLabel: {
     fontSize: '12px', fontWeight: 700, color: 'var(--muted)',
-    textTransform: 'uppercase', letterSpacing: '0.8px', minWidth: '60px',
+    textTransform: 'uppercase', letterSpacing: '0.8px', 
+    minWidth: '60px', width: isMobile ? '100%' : 'auto'
   },
   filterChip: {
     padding: '5px 14px', borderRadius: '20px', fontSize: '12px', fontWeight: 500,
@@ -316,11 +354,12 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-    gap: '24px',
+    // fluid grid that adapts down to mobile devices natively
+    gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
+    gap: isMobile ? '16px' : '24px',
   },
   empty: {
-    textAlign: 'center', padding: '80px 24px',
+    textAlign: 'center', padding: isMobile ? '40px 16px' : '80px 24px',
     display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px',
   },
   resetBtn: {
@@ -328,19 +367,22 @@ const styles = {
     background: 'var(--accent)', color: '#fff', border: 'none',
     cursor: 'pointer', fontSize: '14px', marginTop: '8px',
   },
-
   pagination: {
     display: 'flex', justifyContent: 'center', alignItems: 'center',
-    gap: '12px', marginTop: '40px', flexWrap: 'wrap',
+    gap: isMobile ? '8px' : '12px', 
+    marginTop: '40px', flexWrap: 'wrap',
   },
   pageBtn: {
-    padding: '10px 20px', borderRadius: '10px', fontSize: '14px', fontWeight: 600,
+    padding: isMobile ? '8px 12px' : '10px 20px', 
+    borderRadius: '10px', fontSize: isMobile ? '13px' : '14px', fontWeight: 600,
     background: '#fff', border: '1.5px solid var(--border)',
     cursor: 'pointer', color: 'var(--deep)', transition: 'all 0.2s',
   },
   pageNumbers: { display: 'flex', gap: '6px', alignItems: 'center', flexWrap: 'wrap' },
   pageNum: {
-    width: '40px', height: '40px', borderRadius: '10px', fontSize: '14px',
+    width: isMobile ? '34px' : '40px', 
+    height: isMobile ? '34px' : '40px', 
+    borderRadius: '10px', fontSize: isMobile ? '13px' : '14px',
     border: '1.5px solid', cursor: 'pointer', transition: 'all 0.2s',
     display: 'flex', alignItems: 'center', justifyContent: 'center',
   },
@@ -348,5 +390,6 @@ const styles = {
   pageInfo: {
     textAlign: 'center', color: 'var(--muted)', fontSize: '13px', marginTop: '12px',
   },
+});
 
-};
+const clamp = (min, pref, max) => `clamp(${min}, ${pref}, ${max})`;
