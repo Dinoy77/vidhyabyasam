@@ -1,7 +1,8 @@
 import React, { useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // <-- Added for detail page routing
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO'; // <-- IMPORT THE SEO COMPONENT
 import { colleges } from '../../data/colleges';
 
 export default function TopGovtMedicalColleges() {
@@ -17,12 +18,44 @@ export default function TopGovtMedicalColleges() {
         c.type === 'Government' && 
         c.courses.includes('MBBS')
       )
-      .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews))
+      .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0) || Number(b.reviews || 0) - Number(a.reviews || 0))
       .slice(0, 10);
   }, []);
 
+  // --- Generate Structured Data (JSON-LD) for Google ---
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": top10GovtColleges.map((college, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "CollegeOrUniversity",
+        "name": college.name,
+        "url": `https://www.vidyabhyasam.com/college/${college.id}`,
+        "image": college.image || 'https://www.vidyabhyasam.com/default-medical.jpg',
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": college.city,
+          "addressRegion": college.state,
+          "addressCountry": "IN"
+        }
+      }
+    }))
+  };
+
   return (
     <div style={styles.pageContainer}>
+      
+      {/* Inject SEO Metadata & Schema */}
+      <SEO 
+        title="Top 10 Govt Medical Colleges in South India (2026 Rankings)"
+        description="Discover the premier government medical institutions across South India offering MBBS. Compare subsidized fees, hospital affiliations, and verified reviews."
+        keywords="top govt medical colleges south india, best government mbbs colleges, kerala karnataka tamil nadu govt medical, neet 2026 public colleges"
+        url="/articles/TopGovtMedicalColleges"
+        schemaData={schema}
+      />
+
       <Navbar />
 
       {/* Editorial Header */}
@@ -53,7 +86,8 @@ export default function TopGovtMedicalColleges() {
                   </div>
                   <img 
                     src={college.image && college.image.length > 5 ? college.image : 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80'} 
-                    alt={college.name} 
+                    alt={`${college.name} campus view`} // SEO: Descriptive alt text
+                    loading={index === 0 ? "eager" : "lazy"} // SEO: Lazy load images below the fold
                     style={styles.image}
                     onError={(e) => {
                       e.target.onerror = null; 
@@ -67,8 +101,7 @@ export default function TopGovtMedicalColleges() {
                 <div style={styles.contentBox}>
                   <div style={styles.contentHeader}>
                     <div>
-                      {/* --- Added Link Wrapper Here --- */}
-                      <Link to={`/college/${college.id}`} style={styles.collegeLink}>
+                      <Link to={`/college/${college.id}`} style={styles.collegeLink} title={`View details for ${college.name}`}>
                         <h2 style={styles.collegeName}>{college.name}</h2>
                       </Link>
                       <p style={styles.location}>📍 {college.city}, {college.state}</p>
@@ -151,7 +184,7 @@ const styles = {
   ratingScore: { fontSize: '18px', fontWeight: '800', color: '#d97706' },
   reviewCount: { fontSize: '11px', color: '#b45309', fontWeight: '600', marginTop: '2px', textTransform: 'uppercase' },
   explanationSection: { marginBottom: '24px' },
-  sectionHeading: { fontSize: '15px', fontWeight: '700', color: '#0f172a', marginBottom: '#8px' },
+  sectionHeading: { fontSize: '15px', fontWeight: '700', color: '#0f172a', marginBottom: '8px' },
   description: { fontSize: '15px', lineHeight: '1.7', color: '#475569' },
   dataGrid: { display: 'flex', flexWrap: 'wrap', gap: '20px', padding: '20px', backgroundColor: '#f8fafc', borderRadius: '12px', marginBottom: '24px' },
   dataItem: { display: 'flex', flexDirection: 'column', gap: '4px', minWidth: '120px', flex: '1' },
