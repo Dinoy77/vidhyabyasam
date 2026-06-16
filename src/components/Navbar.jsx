@@ -140,16 +140,117 @@ export default function Navbar({ onCourseSelect = () => { } }) {
             <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => scrollToSection('colleges')}>Colleges</span>
             <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => scrollToSection('regions')}>By Region</span>
 
-            <div style={styles.dropdownWrapper} onMouseEnter={handleCoursesEnter} onMouseLeave={handleCoursesLeave}>
-              <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: coursesOpen ? 'var(--accent)' : 'var(--muted)' }}>
-                Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
-              </span>
+            {/* Courses Dropdown Group */}
+            <div style={styles.dropdownGroup} onMouseEnter={handleCoursesEnter} onMouseLeave={handleCoursesLeave}>
+              <div style={styles.dropdownTrigger}>
+                <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: coursesOpen ? 'var(--accent)' : 'var(--muted)' }}>
+                  Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
+                </span>
+              </div>
+              
+              {coursesOpen && (
+                <div style={styles.megaMenuWrapper}>
+                  <div style={styles.megaMenu}>
+                    {courseCategories.map(cat => (
+                      <div key={cat.title} style={{ ...styles.megaCol, flex: cat.title === 'Allied Health' ? 2 : 1 }}>
+                        <div style={{ ...styles.megaColHeader, background: cat.color }}>
+                          <span style={styles.megaColIcon}>{cat.icon}</span><span style={styles.megaColTitle}>{cat.title}</span>
+                        </div>
+                        <div style={{ ...styles.megaColItems, flexDirection: cat.title === 'Allied Health' ? 'row' : 'column', flexWrap: cat.title === 'Allied Health' ? 'wrap' : 'nowrap' }}>
+                          {cat.courses.map(course => (
+                            <button key={course} style={{ ...styles.megaItem, width: cat.title === 'Allied Health' ? 'calc(50% - 4px)' : '100%' }} onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'} onMouseLeave={e => e.currentTarget.style.background = 'transparent'} onClick={() => handleCourseClick(course)}>
+                              {course}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
-            <div style={styles.dropdownWrapper} onMouseEnter={handleArticlesEnter} onMouseLeave={handleArticlesLeave}>
-              <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: articlesOpen ? 'var(--accent)' : 'var(--muted)' }}>
-                Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
-              </span>
+            {/* Articles Dropdown Group */}
+            <div style={styles.dropdownGroup} onMouseEnter={handleArticlesEnter} onMouseLeave={handleArticlesLeave}>
+              <div style={styles.dropdownTrigger}>
+                <span style={{ ...styles.link, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', color: articlesOpen ? 'var(--accent)' : 'var(--muted)' }}>
+                  Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
+                </span>
+              </div>
+              
+              {articlesOpen && (
+                <div style={styles.megaMenuWrapper}>
+                  <div style={styles.articlesMegaMenu}>
+                    {/* Column 1: Categories Panel */}
+                    <div style={styles.menuLeft}>
+                      {articleCategories.map((category) => (
+                        <div
+                          key={category}
+                          style={{ ...styles.categoryItem, ...(activeArticleCat === category ? styles.activeCategory : {}) }}
+                          onMouseEnter={() => {
+                            setActiveArticleCat(category);
+                            setActiveSubItem("");
+                          }}
+                        >
+                          <span>{category}</span>
+                          <span style={{ ...styles.arrow, color: activeArticleCat === category ? 'var(--accent)' : '#ccc' }}>›</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Column 2: Sub-items Panel */}
+                    <div style={styles.menuMiddle}>
+                      {dropDownData[activeArticleCat]?.map((subItem) => {
+                        const hasThirdTier = !!thirdHierarchyData[subItem];
+                        return (
+                          <div
+                            key={subItem}
+                            style={{ ...styles.subCategoryItem, ...(activeSubItem === subItem ? styles.activeSubCategory : {}) }}
+                            onMouseEnter={() => setActiveSubItem(subItem)}
+                            onClick={(e) => !hasThirdTier && handleArticleClick(e, subItem)}
+                          >
+                            <span>{subItem}</span>
+                            {hasThirdTier && <span style={styles.subArrow}>›</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Column 3: Fixed Context Panel */}
+                    <div style={styles.menuRight}>
+                      {thirdHierarchyData[activeSubItem] ? (
+                        <div style={styles.linksGrid}>
+                          <p style={styles.tier3Heading}>Filter By Top Cities</p>
+                          {thirdHierarchyData[activeSubItem].map((cityArticle, idx) => (
+                            <div
+                              key={idx}
+                              style={styles.articleLink}
+                              onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
+                              onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
+                              onClick={(e) => handleArticleClick(e, cityArticle)}
+                            >
+                              {cityArticle}
+                            </div>
+                          ))}
+                        </div>
+                      ) : activeSubItem ? (
+                        <div style={styles.overviewState}>
+                          <p style={styles.tier3Heading}>Article Overview</p>
+                          <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
+                          <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
+                          <button style={styles.overviewBtn} onClick={(e) => handleArticleClick(e, activeSubItem)}>Read Article →</button>
+                        </div>
+                      ) : (
+                        <div style={styles.overviewState}>
+                          <p style={styles.tier3Heading}>Category Overview</p>
+                          <h4 style={styles.overviewTitle}>{activeArticleCat}</h4>
+                          <p style={styles.overviewText}>Explore our expertly curated guides, institutional rankings, and admission resources for this section.</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => navigate('/blog')}>Blogs</span>
@@ -182,108 +283,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           )}
           {isTablet && <button style={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? '✕' : '☰'}</button>}
         </div>
-
-        {/* Desktop Courses Mega Menu */}
-        {!isTablet && coursesOpen && (
-          <div style={styles.megaMenuBackdrop} onMouseEnter={handleCoursesEnter} onMouseLeave={handleCoursesLeave}>
-            <div style={styles.megaMenu}>
-              {courseCategories.map(cat => (
-                <div key={cat.title} style={{ ...styles.megaCol, flex: cat.title === 'Allied Health' ? 2 : 1 }}>
-                  <div style={{ ...styles.megaColHeader, background: cat.color }}>
-                    <span style={styles.megaColIcon}>{cat.icon}</span><span style={styles.megaColTitle}>{cat.title}</span>
-                  </div>
-                  <div style={{ ...styles.megaColItems, flexDirection: cat.title === 'Allied Health' ? 'row' : 'column', flexWrap: cat.title === 'Allied Health' ? 'wrap' : 'nowrap' }}>
-                    {cat.courses.map(course => (
-                      <button key={course} style={{ ...styles.megaItem, width: cat.title === 'Allied Health' ? 'calc(50% - 4px)' : '100%' }} onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'} onMouseLeave={e => e.currentTarget.style.background = 'transparent'} onClick={() => handleCourseClick(course)}>
-                        {course}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Premium Fixed 3-Tier Articles Mega Menu Layout */}
-        {!isTablet && articlesOpen && (
-          <div style={styles.megaMenuBackdrop} onMouseEnter={handleArticlesEnter} onMouseLeave={handleArticlesLeave}>
-            <div style={styles.articlesMegaMenu}>
-              
-              {/* Column 1: Categories Panel */}
-              <div style={styles.menuLeft}>
-                {articleCategories.map((category) => (
-                  <div
-                    key={category}
-                    style={{ ...styles.categoryItem, ...(activeArticleCat === category ? styles.activeCategory : {}) }}
-                    onMouseEnter={() => {
-                      setActiveArticleCat(category);
-                      setActiveSubItem(""); // CRITICAL: Resets 3rd column when moving back to Left side
-                    }}
-                  >
-                    <span>{category}</span>
-                    <span style={{ ...styles.arrow, color: activeArticleCat === category ? 'var(--accent)' : '#ccc' }}>›</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Column 2: Sub-items Panel */}
-              <div style={styles.menuMiddle}>
-                {dropDownData[activeArticleCat]?.map((subItem) => {
-                  const hasThirdTier = !!thirdHierarchyData[subItem];
-                  return (
-                    <div
-                      key={subItem}
-                      style={{ ...styles.subCategoryItem, ...(activeSubItem === subItem ? styles.activeSubCategory : {}) }}
-                      onMouseEnter={() => setActiveSubItem(subItem)}
-                      onClick={(e) => !hasThirdTier && handleArticleClick(e, subItem)}
-                    >
-                      <span>{subItem}</span>
-                      {hasThirdTier && <span style={styles.subArrow}>›</span>}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* Column 3: Fixed Context Panel */}
-              <div style={styles.menuRight}>
-                {thirdHierarchyData[activeSubItem] ? (
-                  // IF SUB-ITEM HAS CITIES -> Show City Links
-                  <div style={styles.linksGrid}>
-                    <p style={styles.tier3Heading}>Filter By Top Cities</p>
-                    {thirdHierarchyData[activeSubItem].map((cityArticle, idx) => (
-                      <div
-                        key={idx}
-                        style={styles.articleLink}
-                        onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
-                        onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
-                        onClick={(e) => handleArticleClick(e, cityArticle)}
-                      >
-                        {cityArticle}
-                      </div>
-                    ))}
-                  </div>
-                ) : activeSubItem ? (
-                  // IF SUB-ITEM HAS NO CITIES -> Show Article Card
-                  <div style={styles.overviewState}>
-                    <p style={styles.tier3Heading}>Article Overview</p>
-                    <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
-                    <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
-                    <button style={styles.overviewBtn} onClick={(e) => handleArticleClick(e, activeSubItem)}>Read Article →</button>
-                  </div>
-                ) : (
-                  // DEFAULT VIEW -> Show Category Summary
-                  <div style={styles.overviewState}>
-                    <p style={styles.tier3Heading}>Category Overview</p>
-                    <h4 style={styles.overviewTitle}>{activeArticleCat}</h4>
-                    <p style={styles.overviewText}>Explore our expertly curated guides, institutional rankings, and admission resources for this section.</p>
-                  </div>
-                )}
-              </div>
-
-            </div>
-          </div>
-        )}
       </nav>
 
       {/* Mobile Drawer */}
@@ -403,9 +402,14 @@ const getStyles = (isMobile, isTablet) => ({
   mobileAccordionLink: { padding: '12px 16px 12px 24px', fontSize: '13px', color: '#444', textDecoration: 'none', borderBottom: '1px solid #f0f0f0', display: 'block', lineHeight: 1.4, fontWeight: 500 },
   mobileTier3Link: { padding: '10px 16px 10px 40px', fontSize: '12px', color: '#666', borderBottom: '1px dashed #f0f0f0', cursor: 'pointer', fontWeight: 500 },
 
-  dropdownWrapper: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px', padding: '0 4px' },
-  megaMenuBackdrop: { position: 'fixed', top: '64px', left: 0, right: 0, height: '100vh', zIndex: 1999, display: 'flex', justifyContent: 'center', paddingTop: '0px', background: 'transparent' },
-  megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
+  // Updated Structure: Group wrapper to trap hover events correctly
+  dropdownGroup: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px' },
+  dropdownTrigger: { display: 'flex', alignItems: 'center', height: '100%', padding: '0 4px' },
+
+  // Positioning the Mega Menu accurately beneath the nav items
+  megaMenuWrapper: { position: 'absolute', top: '64px', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 1999 },
+  
+  megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
@@ -413,31 +417,22 @@ const getStyles = (isMobile, isTablet) => ({
   megaColItems: { display: 'flex', flexDirection: 'column', padding: '6px', gap: '2px' },
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
 
-  /* FIXED 3-COLUMN LAYOUT STYLES - DYNAMIC HEIGHT */
-  articlesMegaMenu: { 
-    background: '#fff', borderRadius: '0 0 20px 24px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', borderTop: 'none', display: 'flex', overflow: 'hidden', zIndex: 2000, 
-    width: '1080px', // FIXED WIDTH
-    maxWidth: '96vw', 
-    height: 'fit-content', // NO FIXED HEIGHT
-    minHeight: '350px' 
-  },
-  
-  menuLeft: { width: '30%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', paddingBottom: '12px' }, // REMOVED overflowY
+  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 20px 20px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '1080px', maxWidth: '96vw', height: 'fit-content', minHeight: '350px' },
+  menuLeft: { width: '30%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', paddingBottom: '12px' },
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 600, borderBottom: '1px solid #FAF9F5' },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
   arrow: { fontSize: '16px', fontWeight: 'bold' },
   
-  menuMiddle: { width: '35%', background: '#FCFBF7', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', padding: '10px 0 12px 0' }, // REMOVED overflowY
+  menuMiddle: { width: '35%', background: '#FCFBF7', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', padding: '10px 0 12px 0' },
   subCategoryItem: { padding: '12px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', fontWeight: 500, borderRadius: '6px', margin: '2px 8px', transition: 'all 0.15s' },
   activeSubCategory: { backgroundColor: '#fff', color: 'var(--accent)', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', fontWeight: 700 },
   subArrow: { fontSize: '14px', color: 'var(--accent)' },
 
-  menuRight: { width: '35%', background: 'var(--cream, #fafaf9)', padding: '24px' }, // REMOVED overflowY
+  menuRight: { width: '35%', background: 'var(--cream, #fafaf9)', padding: '24px' },
   linksGrid: { display: 'flex', flexDirection: 'column', gap: '10px' },
   tier3Heading: { fontSize: '11px', fontWeight: 800, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px', borderBottom: '1px solid var(--border)', paddingBottom: '6px' },
   articleLink: { fontSize: '13px', color: 'var(--deep)', fontWeight: 600, cursor: 'pointer', padding: '8px 12px', borderRadius: '6px', transition: 'background 0.2s', lineHeight: '1.4' },
 
-  // New Overview Card Styles
   overviewState: { display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', height: '100%', padding: '0 10px' },
   overviewIcon: { fontSize: '28px', marginBottom: '16px', background: '#fff', width: '56px', height: '56px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '12px', border: '1px solid var(--border)', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' },
   overviewTitle: { fontSize: '18px', fontWeight: 800, color: 'var(--deep)', marginBottom: '12px', lineHeight: 1.3 },
