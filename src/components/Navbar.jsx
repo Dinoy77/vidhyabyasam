@@ -127,11 +127,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     <>
       <nav style={styles.nav} ref={navRef}>
         <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <img
-            src="/images/logo.png"
-            alt="Vidyabhyasam"
-            style={{ height: isMobile ? '36px' : '48px', width: 'auto', objectFit: 'contain' }}
-          />
+          <img src="/images/vidyabhyasam-logo.png" alt="Vidyabhyasam" style={{ height: isMobile ? '36px' : '48px', width: 'auto', objectFit: 'contain' }} onError={(e) => { e.target.style.display = 'none'; }} />
           <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
 
@@ -189,7 +185,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                           style={{ ...styles.categoryItem, ...(activeArticleCat === category ? styles.activeCategory : {}) }}
                           onMouseEnter={() => {
                             setActiveArticleCat(category);
-                            setActiveSubItem("");
+                            setActiveSubItem(""); // CRITICAL: Resets 3rd column when moving back to Left side
                           }}
                         >
                           <span>{category}</span>
@@ -235,6 +231,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         </div>
                       ) : activeSubItem ? (
                         <div style={styles.overviewState}>
+                          <div style={styles.overviewIcon}>📚</div>
                           <p style={styles.tier3Heading}>Article Overview</p>
                           <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
                           <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
@@ -242,6 +239,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         </div>
                       ) : (
                         <div style={styles.overviewState}>
+                          <div style={styles.overviewIcon}>✨</div>
                           <p style={styles.tier3Heading}>Category Overview</p>
                           <h4 style={styles.overviewTitle}>{activeArticleCat}</h4>
                           <p style={styles.overviewText}>Explore our expertly curated guides, institutional rankings, and admission resources for this section.</p>
