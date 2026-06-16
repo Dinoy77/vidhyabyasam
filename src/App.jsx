@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // <-- 1. IMPORT HELMET PROVIDER
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -8,7 +9,6 @@ import NewsDetail from './pages/NewsDetail';
 import WhatsAppButton from './components/WhatsAppButton';
 import ChatBot from './components/ChatBot';
 import ScrollToTop from './components/ScrollToTop';
-
 
 // Article Imports
 import TopKeralaMedicalColleges from './pages/articles/TopKeralaMedicalColleges';
@@ -39,7 +39,6 @@ import DataScienceEngineeringGuide from './components/DataScienceEngineeringGuid
 import CyberSecurityEngineeringGuide from './components/CyberSecurityEngineeringGuide';
 import TopEmergingEngineeringCourses from './components/TopEmergingEngineeringCourses';
 
-
 // Exam Guide Imports.
 import NeetUgGuide from './pages/articles/NeetUgGuide';
 import NeetPgGuide from './pages/articles/NeetPgGuide';
@@ -60,86 +59,87 @@ import ComedkGuide from './components/ComedkGuide';
 import BlogArticle from './pages/BlogArticle';
 import BlogList from './pages/BlogList';
 
-
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
   const [courseSelectCount, setCourseSelectCount] = useState(0);
 
   return (
-    <BrowserRouter>
-      <AuthProvider>
-        <Navbar onCourseSelect={(course) => {
-          setSelectedCourse(course);
-          setCourseSelectCount(c => c + 1);
-          setTimeout(() => {
-            document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        }} />
+    // 2. WRAP THE ENTIRE APP IN HELMETPROVIDER
+    <HelmetProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <Navbar onCourseSelect={(course) => {
+            setSelectedCourse(course);
+            setCourseSelectCount(c => c + 1);
+            setTimeout(() => {
+              document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+          }} />
 
-        <main style={{ paddingTop: '60px' }}>
-          <Routes>
-            <Route path="/" element={<Home selectedCourse={selectedCourse} courseSelectCount={courseSelectCount} />} />
-            <Route path="/college/:id" element={<CollegeDetail />} />
-            <Route path="/news/:id" element={<NewsDetail />} />
-            
-            {/* Top Colleges Routes */}
-            <Route path="/articles/TopKeralaMedicalColleges" element={<TopKeralaMedicalColleges />} />
-            <Route path="/articles/TopTamilNaduMedicalColleges" element={<TopTamilNaduMedicalColleges />} />
-            <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />            
-            <Route path="/articles/TopIndianMedicalColleges" element={<TopIndianMedicalColleges />} />
-            <Route path="/articles/TopGovtMedicalColleges" element={<TopGovtMedicalColleges />} />
-            <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
-            <Route path="/articles/EngineeringCollegesKerala" element={<EngineeringCollegesKerala />} />
-            <Route path="/articles/EngineeringCollegesTamilNadu" element={<EngineeringCollegesTamilNadu />} />
-            <Route path="/articles/EngineeringCollegesKarnataka" element={<EngineeringCollegesKarnataka />} />
-            <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
-            <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
+          <main style={{ paddingTop: '60px' }}>
+            <Routes>
+              <Route path="/" element={<Home selectedCourse={selectedCourse} courseSelectCount={courseSelectCount} />} />
+              <Route path="/college/:id" element={<CollegeDetail />} />
+              <Route path="/news/:id" element={<NewsDetail />} />
+              
+              {/* Top Colleges Routes */}
+              <Route path="/articles/TopKeralaMedicalColleges" element={<TopKeralaMedicalColleges />} />
+              <Route path="/articles/TopTamilNaduMedicalColleges" element={<TopTamilNaduMedicalColleges />} />
+              <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />            
+              <Route path="/articles/TopIndianMedicalColleges" element={<TopIndianMedicalColleges />} />
+              <Route path="/articles/TopGovtMedicalColleges" element={<TopGovtMedicalColleges />} />
+              <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
+              <Route path="/articles/EngineeringCollegesKerala" element={<EngineeringCollegesKerala />} />
+              <Route path="/articles/EngineeringCollegesTamilNadu" element={<EngineeringCollegesTamilNadu />} />
+              <Route path="/articles/EngineeringCollegesKarnataka" element={<EngineeringCollegesKarnataka />} />
+              <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
+              <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
 
-            {/* Course Guide Routes */}
-            <Route path="/articles/MbbsCourseGuide" element={<MbbsCourseGuide />} />
-            <Route path="/articles/BdsCourseGuide" element={<BdsCourseGuide />} />
-            <Route path="/articles/BamsCourseGuide" element={<BamsCourseGuide />} />
-            <Route path="/articles/BscNursingCourseGuide" element={<BscNursingCourseGuide />} />
-            <Route path="/articles/BPharmCourseGuide" element={<BPharmCourseGuide />} />
+              {/* Course Guide Routes */}
+              <Route path="/articles/MbbsCourseGuide" element={<MbbsCourseGuide />} />
+              <Route path="/articles/BdsCourseGuide" element={<BdsCourseGuide />} />
+              <Route path="/articles/BamsCourseGuide" element={<BamsCourseGuide />} />
+              <Route path="/articles/BscNursingCourseGuide" element={<BscNursingCourseGuide />} />
+              <Route path="/articles/BPharmCourseGuide" element={<BPharmCourseGuide />} />
 
-            {/* Exam Guide Routes */}
-            <Route path="/articles/NeetUgGuide" element={<NeetUgGuide />} />
-            <Route path="/articles/NeetPgGuide" element={<NeetPgGuide />} />
-            <Route path="/articles/IniCetGuide" element={<IniCetGuide />} />
-            <Route path="/articles/FmgeGuide" element={<FmgeGuide />} />
-            <Route path="/articles/AiimsNursingGuide" element={<AiimsNursingGuide />} />
+              {/* Exam Guide Routes */}
+              <Route path="/articles/NeetUgGuide" element={<NeetUgGuide />} />
+              <Route path="/articles/NeetPgGuide" element={<NeetPgGuide />} />
+              <Route path="/articles/IniCetGuide" element={<IniCetGuide />} />
+              <Route path="/articles/FmgeGuide" element={<FmgeGuide />} />
+              <Route path="/articles/AiimsNursingGuide" element={<AiimsNursingGuide />} />
 
-            <Route path="/articles/JeeMainGuide" element={<JeeMainGuide />} />
-            <Route path="/articles/JeeAdvancedGuide" element={<JeeAdvancedGuide />} />
-            <Route path="/articles/GateGuide" element={<GateGuide />} />
-            <Route path="/articles/KeamGuide" element={<KeamGuide />} />
-            <Route path="/articles/KcetGuide" element={<KcetGuide />} />
-            <Route path="/articles/ComedkGuide" element={<ComedkGuide />} />
+              <Route path="/articles/JeeMainGuide" element={<JeeMainGuide />} />
+              <Route path="/articles/JeeAdvancedGuide" element={<JeeAdvancedGuide />} />
+              <Route path="/articles/GateGuide" element={<GateGuide />} />
+              <Route path="/articles/KeamGuide" element={<KeamGuide />} />
+              <Route path="/articles/KcetGuide" element={<KcetGuide />} />
+              <Route path="/articles/ComedkGuide" element={<ComedkGuide />} />
 
+              {/* Engineering & IT Course Guide Routes */}
+              <Route path="/articles/BTechCourseGuide" element={<BTechCourseGuide />} />
+              <Route path="/articles/MTechCourseGuide" element={<MTechCourseGuide />} />
+              <Route path="/articles/BcaCourseGuide" element={<BcaCourseGuide />} />
+              <Route path="/articles/McaCourseGuide" element={<McaCourseGuide />} />
+              <Route path="/articles/BArchCourseGuide" element={<BArchCourseGuide />} />
+              <Route path="/articles/AiEngineeringGuide" element={<AiEngineeringGuide />} />
+              <Route path="/articles/DataScienceEngineeringGuide" element={<DataScienceEngineeringGuide />} />
+              <Route path="/articles/CyberSecurityEngineeringGuide" element={<CyberSecurityEngineeringGuide />} />
+              <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
 
-            {/* Engineering & IT Course Guide Routes */}
-            <Route path="/articles/BTechCourseGuide" element={<BTechCourseGuide />} />
-            <Route path="/articles/MTechCourseGuide" element={<MTechCourseGuide />} />
-            <Route path="/articles/BcaCourseGuide" element={<BcaCourseGuide />} />
-            <Route path="/articles/McaCourseGuide" element={<McaCourseGuide />} />
-            <Route path="/articles/BArchCourseGuide" element={<BArchCourseGuide />} />
-            <Route path="/articles/AiEngineeringGuide" element={<AiEngineeringGuide />} />
-            <Route path="/articles/DataScienceEngineeringGuide" element={<DataScienceEngineeringGuide />} />
-            <Route path="/articles/CyberSecurityEngineeringGuide" element={<CyberSecurityEngineeringGuide />} />
-            <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
+              <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
 
-            <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
-
-            {/* Blogs Routes */}
-            <Route path="/blog/:slug" element={<BlogArticle />} />
-            <Route path="/blog" element={<BlogList />} />
-          </Routes>
-        </main>
-        
-        <WhatsAppButton />
-        <ChatBot />
-        <ScrollToTop />
-      </AuthProvider>
-    </BrowserRouter>
+              {/* Blogs Routes */}
+              <Route path="/blog/:slug" element={<BlogArticle />} />
+              <Route path="/blog" element={<BlogList />} />
+            </Routes>
+          </main>
+          
+          <WhatsAppButton />
+          <ChatBot />
+          <ScrollToTop />
+        </AuthProvider>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
