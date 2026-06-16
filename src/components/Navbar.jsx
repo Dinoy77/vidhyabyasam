@@ -127,7 +127,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     <>
       <nav style={styles.nav} ref={navRef}>
         <div style={{ ...styles.logo, cursor: 'pointer' }} onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <img src="/images/vidyabhyasam-logo.png" alt="Vidyabhyasam" style={{ height: isMobile ? '36px' : '48px', width: 'auto', objectFit: 'contain' }} onError={(e) => { e.target.style.display = 'none'; }} />
+          <img src="/images/logo.png" alt="Vidyabhyasam" style={{ height: isMobile ? '36px' : '48px', width: 'auto', objectFit: 'contain' }} onError={(e) => { e.target.style.display = 'none'; }} />
           <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
 
@@ -230,8 +230,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                           ))}
                         </div>
                       ) : activeSubItem ? (
-                        <div style={styles.overviewState}>
-                          <div style={styles.overviewIcon}>📚</div>
+                        <div style={styles.overviewState}> 
                           <p style={styles.tier3Heading}>Article Overview</p>
                           <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
                           <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
@@ -239,7 +238,6 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         </div>
                       ) : (
                         <div style={styles.overviewState}>
-                          <div style={styles.overviewIcon}>✨</div>
                           <p style={styles.tier3Heading}>Category Overview</p>
                           <h4 style={styles.overviewTitle}>{activeArticleCat}</h4>
                           <p style={styles.overviewText}>Explore our expertly curated guides, institutional rankings, and admission resources for this section.</p>
@@ -405,7 +403,7 @@ const getStyles = (isMobile, isTablet) => ({
   dropdownTrigger: { display: 'flex', alignItems: 'center', height: '100%', padding: '0 4px' },
 
   // Positioning the Mega Menu accurately beneath the nav items
-  megaMenuWrapper: { position: 'absolute', top: '64px', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 1999, paddingTop: '10px' },
+  megaMenuWrapper: { position: 'absolute', top: '64px', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 1999 },
   
   megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
@@ -415,7 +413,7 @@ const getStyles = (isMobile, isTablet) => ({
   megaColItems: { display: 'flex', flexDirection: 'column', padding: '6px', gap: '2px' },
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
 
-  articlesMegaMenu: { background: '#fff', borderRadius: '20px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '1080px', maxWidth: '96vw', height: 'fit-content', minHeight: '350px' },
+  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 20px 20px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '1080px', maxWidth: '96vw', height: 'fit-content', minHeight: '350px' },
   menuLeft: { width: '30%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', paddingBottom: '12px' },
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 600, borderBottom: '1px solid #FAF9F5' },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
