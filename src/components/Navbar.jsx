@@ -116,7 +116,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
   // Desktop active states
   const articleCategories = dropDownData ? Object.keys(dropDownData) : [];
   const [activeArticleCat, setActiveArticleCat] = useState(articleCategories[0] || "");
-  
+
   // Mobile accordion active states
   const [mobileActiveCourseCat, setMobileActiveCourseCat] = useState("");
   const [mobileActiveArticleCat, setMobileActiveArticleCat] = useState("");
@@ -212,7 +212,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           <img
             src="/images/vidyabhyasam-logo.png"
             alt="Vidyabhyasam"
-            style={{ height: isMobile ? '28px' : '36px', width: 'auto', objectFit: 'contain' }}
+            style={{ height: isMobile ? '36px' : '48px', width: 'auto', objectFit: 'contain' }}
           />
           <span style={styles.logoText}>Vidya<span style={{ color: 'var(--accent)' }}>bhyasam</span></span>
         </div>
@@ -220,8 +220,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         {/* Desktop Links */}
         {!isTablet && (
           <div style={styles.navLinks}>
-            <span style={{...styles.link, cursor: 'pointer'}} onClick={() => scrollToSection('colleges')}>Colleges</span>
-            <span style={{...styles.link, cursor: 'pointer'}} onClick={() => scrollToSection('regions')}>By Region</span>
+            <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => scrollToSection('colleges')}>Colleges</span>
+            <span style={{ ...styles.link, cursor: 'pointer' }} onClick={() => scrollToSection('regions')}>By Region</span>
 
             <div style={styles.dropdownWrapper}
               onMouseEnter={handleCoursesEnter}
@@ -248,15 +248,15 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           {user ? (
             <div style={{ position: 'relative' }}>
               {/* Profile Avatar Button */}
-              <button 
-                style={isTablet ? styles.avatarBtnMobile : styles.avatarBtn} 
+              <button
+                style={isTablet ? styles.avatarBtnMobile : styles.avatarBtn}
                 onClick={() => setShowDropdown(!showDropdown)}
               >
                 <span style={styles.avatarCircle}>{user.avatar}</span>
                 {!isTablet && <span style={styles.userName}>{user.name.split(' ')[0]}</span>}
                 {!isTablet && <span>▾</span>}
               </button>
-              
+
               {showDropdown && (
                 <div style={styles.dropdown} className="animate-slideDown">
                   <div style={styles.dropdownUser}>
@@ -279,7 +279,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               </>
             )
           )}
-          
+
           {/* Hamburger Menu Icon */}
           {isTablet && (
             <button style={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
@@ -360,7 +360,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     {dropDownData[activeArticleCat].map((article, idx) => (
                       <div
                         key={idx}
-                        style={{...styles.articleLink, cursor: 'pointer'}}
+                        style={{ ...styles.articleLink, cursor: 'pointer' }}
                         onMouseEnter={e => e.currentTarget.style.color = 'var(--accent)'}
                         onMouseLeave={e => e.currentTarget.style.color = 'var(--deep)'}
                         onClick={(e) => handleArticleClick(e, article)}
@@ -381,7 +381,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
       {/* Mobile/Tablet Drawer Menu. */}
       {isTablet && menuOpen && (
         <div style={styles.mobileMenu} className="animate-slideDown">
-          
+
           {/* Mobile Auth Buttons inside Drawer */}
           {!user && (
             <div style={styles.mobileAuthRow}>
@@ -397,24 +397,24 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           {/* Mobile Courses Accordion */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => {
-                setCoursesOpen(!coursesOpen);
-                if (!coursesOpen) setArticlesOpen(false); 
+              setCoursesOpen(!coursesOpen);
+              if (!coursesOpen) setArticlesOpen(false);
             }}>
               <span>Courses</span>
               <span style={{ fontSize: '11px' }}>{coursesOpen ? '▴' : '▾'}</span>
             </button>
-            
+
             {coursesOpen && (
               <div style={styles.mobilePanel}>
                 {courseCategories.map(cat => (
                   <div key={cat.title} style={styles.mobileAccordionBlock}>
-                    <div 
+                    <div
                       style={styles.mobileAccordionHeader}
                       onClick={() => setMobileActiveCourseCat(mobileActiveCourseCat === cat.title ? "" : cat.title)}
                     >
-                      <span style={{ 
-                        fontSize: '14px', 
-                        fontWeight: mobileActiveCourseCat === cat.title ? 700 : 600, 
+                      <span style={{
+                        fontSize: '14px',
+                        fontWeight: mobileActiveCourseCat === cat.title ? 700 : 600,
                         color: mobileActiveCourseCat === cat.title ? 'var(--accent)' : 'var(--deep)',
                         display: 'flex', alignItems: 'center', gap: '8px'
                       }}>
@@ -444,13 +444,13 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           {/* Mobile Articles Accordion */}
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => {
-                setArticlesOpen(!articlesOpen);
-                if (!articlesOpen) setCoursesOpen(false);
+              setArticlesOpen(!articlesOpen);
+              if (!articlesOpen) setCoursesOpen(false);
             }}>
               <span>Articles</span>
               <span style={{ fontSize: '11px' }}>{articlesOpen ? '▴' : '▾'}</span>
             </button>
-            
+
             {articlesOpen && (
               <div style={styles.mobilePanel}>
                 {articleCategories.map(category => (
@@ -460,7 +460,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                       onClick={() => setMobileActiveArticleCat(mobileActiveArticleCat === category ? "" : category)}
                     >
                       <span style={{
-                        fontSize: '14px', 
+                        fontSize: '14px',
                         fontWeight: mobileActiveArticleCat === category ? 700 : 600,
                         color: mobileActiveArticleCat === category ? 'var(--accent)' : 'var(--deep)'
                       }}>
@@ -476,7 +476,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                         {dropDownData[category].map(article => (
                           <div
                             key={article}
-                            style={{...styles.mobileAccordionLink, cursor: 'pointer'}}
+                            style={{ ...styles.mobileAccordionLink, cursor: 'pointer' }}
                             onClick={(e) => handleArticleClick(e, article)}
                           >
                             {article}
@@ -489,7 +489,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
               </div>
             )}
           </div>
-          
+
         </div>
       )}
 
@@ -506,59 +506,59 @@ const getStyles = (isMobile, isTablet) => ({
     position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
     width: '100vw', maxWidth: '100vw', boxSizing: 'border-box',
     display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    padding: isMobile ? '0 16px' : '0 24px', 
+    padding: isMobile ? '0 16px' : '0 24px',
     height: isMobile ? '60px' : '64px',
     background: 'rgba(255,248,240,0.97)', backdropFilter: 'blur(10px)',
     borderBottom: '1px solid var(--border)', boxShadow: '0 2px 20px rgba(0,0,0,0.06)',
   },
-  logo: { 
-    display: 'flex', alignItems: 'center', gap: '6px', 
-    fontFamily: 'Playfair Display, serif', 
-    fontSize: isMobile ? '18px' : '20px', fontWeight: 900, flexShrink: 1, minWidth: 0
+  logo: {
+    display: 'flex', alignItems: 'center', gap: '6px',
+    fontFamily: 'Playfair Display, serif',
+    fontSize: isMobile ? '20px' : '24px', fontWeight: 900, flexShrink: 1, minWidth: 0
   },
   logoText: { letterSpacing: '-0.5px' },
-  
-  navLinks: { 
-    display: 'flex', gap: '32px', alignItems: 'center', textDecoration: 'none', height: '100%' 
+
+  navLinks: {
+    display: 'flex', gap: '32px', alignItems: 'center', textDecoration: 'none', height: '100%'
   },
   link: { fontSize: '14px', fontWeight: 500, color: 'var(--muted)', textDecoration: 'none' },
-  
+
   navRight: { display: 'flex', gap: '10px', alignItems: 'center', flexShrink: 0 },
   loginBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 500, background: 'transparent', border: '1.5px solid var(--deep)', color: 'var(--deep)', cursor: 'pointer' },
   signupBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer' },
-  
+
   avatarBtn: { display: 'flex', alignItems: 'center', gap: '8px', background: 'transparent', border: '1.5px solid var(--border)', borderRadius: '40px', padding: '5px 12px 5px 5px', fontSize: '13px', fontWeight: 500, cursor: 'pointer' },
-  
+
   // Custom Mobile Avatar button - No border, No name, No arrow
   avatarBtnMobile: { display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', padding: 0, margin: 0, cursor: 'pointer', outline: 'none' },
-  
+
   avatarCircle: { width: '32px', height: '32px', borderRadius: '50%', background: 'var(--accent)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 700 },
   userName: { fontWeight: 600 },
-  
+
   dropdown: { position: 'absolute', top: isMobile ? '50px' : '42px', right: isMobile ? '40px' : '0', background: '#fff', borderRadius: '12px', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '1px solid var(--border)', padding: '12px', minWidth: '190px', zIndex: 100 },
   dropdownUser: { display: 'flex', flexDirection: 'column', gap: '2px', padding: '4px 8px', fontSize: '14px' },
   dropdownItem: { width: '100%', textAlign: 'left', background: 'none', border: 'none', padding: '8px', borderRadius: '8px', fontSize: '14px', cursor: 'pointer', color: 'var(--accent)', fontWeight: 500 },
-  
+
   hamburger: { background: '#fff', border: '1.5px solid var(--border)', borderRadius: '8px', width: '38px', minWidth: '38px', height: '38px', minHeight: '38px', fontSize: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginLeft: isMobile ? '4px' : '8px', flexShrink: 0, color: 'var(--deep)', padding: 0 },
-  
+
   // Mobile / Tablet Drawer Menu
-  mobileMenu: { 
-    position: 'fixed', top: isMobile ? '60px' : '64px', left: 0, right: 0, zIndex: 998, 
+  mobileMenu: {
+    position: 'fixed', top: isMobile ? '60px' : '64px', left: 0, right: 0, zIndex: 998,
     width: '100vw', maxWidth: '100vw', boxSizing: 'border-box',
-    background: '#fff', borderBottom: '1px solid var(--border)', 
-    display: 'flex', flexDirection: 'column', padding: '0 0 40px 0', 
+    background: '#fff', borderBottom: '1px solid var(--border)',
+    display: 'flex', flexDirection: 'column', padding: '0 0 40px 0',
     boxShadow: '0 8px 20px rgba(0,0,0,0.08)',
     maxHeight: 'calc(100dvh - 60px)', overflowY: 'auto', WebkitOverflowScrolling: 'touch'
   },
   mobileAuthRow: { display: 'flex', gap: '12px', padding: '16px 24px', borderBottom: '1px solid var(--border)', background: 'var(--cream, #fafaf9)' },
   mobileLoginBtn: { flex: 1, padding: '12px', borderRadius: '8px', border: '1.5px solid var(--accent)', color: 'var(--accent)', background: 'transparent', fontWeight: 700, fontSize: '14px', cursor: 'pointer' },
   mobileSignupBtn: { flex: 1, padding: '12px', borderRadius: '8px', border: 'none', color: '#fff', background: 'var(--accent)', fontWeight: 700, fontSize: '14px', cursor: 'pointer' },
-  
+
   mobileLink: { padding: '16px 24px', fontSize: '15px', fontWeight: 600, color: 'var(--deep)', borderBottom: '1px solid var(--border)', display: 'block', textDecoration: 'none' },
   mobileLinkBtn: { width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 24px', fontSize: '15px', fontWeight: 600, color: 'var(--deep)', borderBottom: '1px solid var(--border)', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', textAlign: 'left' },
-  
+
   mobilePanel: { background: 'var(--cream, #fafaf9)', padding: '16px 24px', display: 'flex', flexDirection: 'column', gap: '12px', borderBottom: '1px solid var(--border)' },
-  
+
   mobileAccordionBlock: { background: '#fff', borderRadius: '10px', border: '1px solid var(--border)', overflow: 'hidden', boxShadow: '0 2px 4px rgba(0,0,0,0.02)' },
   mobileAccordionHeader: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px 16px', cursor: 'pointer', background: '#fff' },
   mobileAccordionContent: { display: 'flex', flexDirection: 'column', background: 'var(--cream, #fafaf9)', borderTop: '1px solid #f0f0f0' },
