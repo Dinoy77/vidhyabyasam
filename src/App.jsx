@@ -21,6 +21,10 @@ import EngineeringCollegesKerala from './pages/articles/EngineeringCollegesKeral
 import EngineeringCollegesTamilNadu from './pages/articles/EngineeringCollegesTamilNadu';
 import EngineeringCollegesKarnataka from './pages/articles/EngineeringCollegesKarnataka';
 import TopPrivateMedicalColleges from './pages/articles/TopPrivateMedicalColleges';
+import BestCSEngineeringColleges from './pages/articles/BestCSEngineeringColleges';
+
+// --- NEW: Unified Layout for Nursing Colleges ---
+import NursingCollegesLayout from './pages/articles/NursingCollegesLayout';
 
 // Course Guide Imports
 import MbbsCourseGuide from './pages/articles/MbbsCourseGuide';
@@ -46,7 +50,6 @@ import IniCetGuide from './pages/articles/IniCetGuide';
 import FmgeGuide from './pages/articles/FmgeGuide';
 import AiimsNursingGuide from './pages/articles/AiimsNursingGuide';
 import CollegesNearAirports from './pages/articles/CollegesNearAirports';
-import BestCSEngineeringColleges from './pages/articles/BestCSEngineeringColleges';
 import CourseGuideLayout from './pages/articles/CourseGuideLayout';
 
 import JeeMainGuide from './components/JeeMainGuide';
@@ -58,6 +61,15 @@ import ComedkGuide from './components/ComedkGuide';
 
 import BlogArticle from './pages/BlogArticle';
 import BlogList from './pages/BlogList';
+
+// Array of all dynamic nursing routes
+const nursingRoutes = [
+  "TopNursingSouthIndia", "TopGovtNursingColleges", "NursingCollegesKarnataka",
+  "NursingCollegesTamilNadu", "NursingCollegesKerala", "TopPrivateNursingSouthIndia",
+  "NursingCollegesBangalore", "NursingCollegesMysore", "NursingCollegesMangalore",
+  "NursingCollegesKochi", "NursingCollegesTrivandrum", "NursingCollegesCalicut",
+  "NursingCollegesChennai", "NursingCollegesCoimbatore", "NursingCollegesSalem"
+];
 
 export default function App() {
   const [selectedCourse, setSelectedCourse] = useState('All Courses');
@@ -94,6 +106,15 @@ export default function App() {
               <Route path="/articles/EngineeringCollegesKarnataka" element={<EngineeringCollegesKarnataka />} />
               <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
               <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
+
+              {/* --- NEW: Dynamic Nursing Routes Mapped Here --- */}
+              {nursingRoutes.map(pathKey => (
+                <Route 
+                  key={pathKey} 
+                  path={`/articles/${pathKey}`} 
+                  element={<NursingCollegesLayout pageKey={pathKey} />} 
+                />
+              ))}
 
               {/* Course Guide Routes */}
               <Route path="/articles/MbbsCourseGuide" element={<MbbsCourseGuide />} />
