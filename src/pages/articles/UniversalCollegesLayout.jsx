@@ -3,89 +3,109 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
-import { colleges } from '../../data/colleges';
-import { nursingPageConfig } from '../../data/nursingPageData';
 
-export default function NursingCollegesLayout({ pageKey }) {
+// IMPORT BOTH DATA SOURCES
+import { colleges } from '../../data/colleges';
+import { engineering_colleges } from '../../data/engineering_colleges'; 
+
+import { collegePageConfig, nearbyPlacesMap, getDomainKeywords } from '../../data/collegePageData'; 
+
+export default function UniversalCollegesLayout({ pageKey }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pageKey]);
 
-  const config = nursingPageConfig[pageKey];
+  const config = collegePageConfig[pageKey];
 
-  // 1. Dynamic Filter Logic with Hardcoded Overrides
   const filteredColleges = useMemo(() => {
     if (!config) return [];
 
-    // --- CASE A: Hardcoded Sequence for Karnataka State ---
+    const allColleges = [...(colleges || []), ...(engineering_colleges || [])];
+
+    // --- CASE A: Hardcoded Override (Karnataka State Nursing) ---
     if (pageKey === 'NursingCollegesKarnataka') {
-      // Replace these IDs with your exact ordered list of college IDs
       const karnatakaCustomIds = [
         "med-378", "med-106", "med-105", "med-490", "med-374", 
         "med-379", "med-112", "med-491", "med-492", "med-115", 
         "med-387", "med-493", "med-494", "med-495", "med-496", 
-        "med-497", "med-498", "med-381"]
+        "med-497", "med-498", "med-381"
+      ];
       return karnatakaCustomIds
-        .map(id => colleges.find(c => c.id === id))
-        .filter(Boolean); // Safety filter out if any ID isn't found
+        .map(id => allColleges.find(c => c.id === id))
+        .filter(Boolean);
     }
 
-    // --- CASE B: Hardcoded Sequence for Bangalore City ---
+    // --- CASE B: Hardcoded Override (Bangalore City Nursing) ---
     if (pageKey === 'NursingCollegesBangalore') {
-      // Replace these IDs with your exact ordered list of Bangalore college IDs
-      const bangaloreCustomIds = [601, 602, 603, 604, 605, 606, 607, 608, 609, 610]; 
-      
+      const bangaloreCustomIds = [
+        "med-378", "med-106", "med-105", "med-377","med-117", "med-492","med-493", "med-494", "med-495", "med-496", 
+        "med-497", "med-498", "med-499", "med-115", "med-123"
+      ];
       return bangaloreCustomIds
-        .map(id => colleges.find(c => c.id === id))
-        .filter(Boolean); // Safety filter out if any ID isn't found
+        .map(id => allColleges.find(c => c.id === id))
+        .filter(Boolean);
     }
 
-    // --- STANDARD CASE: Dynamic Filter for All Other Pages ---
+    // --- STANDARD COMPREHENSIVE FILTER ---
     const southStates = ['Kerala', 'Karnataka', 'Tamil Nadu'];
+    const domainKeywords = getDomainKeywords(config.filters?.domain);
+    const targetCity = config.filters?.city;
+    const allowedPlaces = targetCity ? (nearbyPlacesMap[targetCity] || [targetCity]) : [];
 
-    return colleges
+    return allColleges
       .filter(c => {
-        // Must offer a nursing course
-        const isNursing = c.courses?.some(course => course.toLowerCase().includes('nursing'));
-        if (!isNursing) return false;
+        // 1. Dynamic Domain & Sibling Course Verification
+        const offersDomainCourse = c.courses?.some(course => {
+          if (typeof course !== 'string') return false;
+          const courseLower = course.toLowerCase();
+          return domainKeywords.some(keyword => courseLower.includes(keyword.toLowerCase()));
+        });
+        
+        if (!offersDomainCourse) return false;
 
-        // Apply config filters dynamically safely
+        // 2. Global Level Constraints
         if (config.filters?.isSouthIndia && !southStates.includes(c.state)) return false;
         if (config.filters?.state && c.state !== config.filters.state) return false;
-        if (config.filters?.city && c.city !== config.filters.city) return false;
         if (config.filters?.type && c.type !== config.filters.type) return false;
+
+        // 3. Proximity Geofilter Engine
+        if (targetCity) {
+          const collegeCityLower = c.city?.toLowerCase();
+          const matchesNearby = allowedPlaces.some(place => place.toLowerCase() === collegeCityLower);
+          if (!matchesNearby) return false;
+        }
 
         return true;
       })
       .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0) || Number(b.reviews || 0) - Number(a.reviews || 0))
-      .slice(0, 10); // Standard top 10 limit
+      .slice(0, 12); 
   }, [pageKey, config]);
 
-  // 2. Generate Schema for SEO
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": filteredColleges.map((college, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@type": "CollegeOrUniversity",
-        "name": college.name,
-        "url": `https://www.vidyabhyasam.com/college/${college.id}`
-      }
-    }))
-  };
-
   if (!config) return <div style={{ padding: '100px', textAlign: 'center' }}>Page Configuration Not Found.</div>;
+
+  const domainStr = config.filters?.domain || 'College';
+  const domainKeywords = getDomainKeywords(config.filters?.domain);
 
   return (
     <div style={styles.pageContainer}>
       <SEO 
         title={config.seoTitle}
         description={config.introText}
-        keywords="top nursing colleges, bsc nursing admission, msc nursing colleges"
+        keywords={`top ${domainStr.toLowerCase()} colleges, allied courses, admissions 2026, best institutes in ${config.filters?.city || config.filters?.state || 'South India'}`}
         url={`/articles/${pageKey}`}
-        schemaData={schema}
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": filteredColleges.map((college, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "CollegeOrUniversity",
+              "name": college.name,
+              "url": `https://www.vidyabhyasam.com/college/${college.id}`
+            }
+          }))
+        }}
       />
 
       <Navbar />
@@ -120,7 +140,7 @@ export default function NursingCollegesLayout({ pageKey }) {
                       e.target.src = 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?w=800&q=80';
                     }}
                   />
-                  <div style={styles.typeBadge}>{college.type || 'Nursing Institute'}</div>
+                  <div style={styles.typeBadge}>{college.type || `${domainStr} / Allied Campus`}</div>
                 </div>
 
                 <div style={styles.contentBox}>
@@ -137,7 +157,9 @@ export default function NursingCollegesLayout({ pageKey }) {
                     </div>
                   </div>
 
-                  <p style={styles.description}>{college.description || `A premier institution offering top-tier clinical exposure and nursing degrees in ${college.city}.`}</p>
+                  <p style={styles.description}>
+                    {college.description || `A premier institution offering top-tier training in ${domainStr.toLowerCase()} and relevant professional streams within ${college.city}.`}
+                  </p>
 
                   <div style={styles.dataGrid}>
                     <div style={styles.dataItem}>
@@ -150,20 +172,27 @@ export default function NursingCollegesLayout({ pageKey }) {
                     </div>
                     <div style={styles.dataItem}>
                       <span style={styles.dataLabel}>Approval</span>
-                      <span style={styles.dataValue}>{college.approval || "INC"}</span>
+                      <span style={styles.dataValue}>{college.approval || "UGC / AICTE / INC / NMC"}</span>
                     </div>
                     <div style={styles.dataItem}>
                       <span style={styles.dataLabel}>Affiliation</span>
-                      <span style={styles.dataValue}>{college.affiliation || "State Health Uni"}</span>
+                      <span style={styles.dataValue}>{college.affiliation || "State University System"}</span>
                     </div>
                   </div>
 
                   {college.courses && college.courses.length > 0 && (
                     <div style={styles.tagSection}>
-                      <span style={styles.tagHeading}>Top Courses:</span>
+                      <span style={styles.tagHeading}>Top Programs:</span>
                       <div style={styles.tagWrapper}>
-                        {college.courses.filter(c => c.toLowerCase().includes('nursing')).slice(0, 4).map(course => (
-                          <span key={course} style={styles.coursePill}>{course}</span>
+                        {college.courses
+                          .filter(course => {
+                            if (typeof course !== 'string') return false;
+                            const courseLower = course.toLowerCase();
+                            return domainKeywords.some(kw => courseLower.includes(kw.toLowerCase()));
+                          })
+                          .slice(0, 4)
+                          .map(course => (
+                            <span key={course} style={styles.coursePill}>{course}</span>
                         ))}
                       </div>
                     </div>
@@ -173,8 +202,7 @@ export default function NursingCollegesLayout({ pageKey }) {
             ))
           ) : (
             <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
-              <h2>No nursing colleges matched this region.</h2>
-              <p>Ensure your `colleges.js` data file includes 'Nursing' inside the `courses` array for these locations.</p>
+              <h2>No relevant institutions matched this sector region.</h2>
             </div>
           )}
         </div>
