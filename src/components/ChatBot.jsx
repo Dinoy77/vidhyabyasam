@@ -2,36 +2,28 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const faqs = [
     {
-        question: '🎓 How do I find a college?',
-        answer: 'Use the search bar on the home page or filter by Region, Course, or Type. You can also browse by Kerala, Karnataka, or Tamil Nadu.',
+        question: '📍 Which state do you belong to?',
+        answer: 'We cover colleges across Kerala, Tamil Nadu, and Karnataka. Tell us your state and we will help you find the best colleges near you!',
     },
     {
-        question: '💊 Which pharmacy colleges are best?',
-        answer: 'Top pharmacy colleges include Amrita School of Pharmacy (Kochi), Manipal College of Pharmaceutical Sciences, and JSS College of Pharmacy (Ooty). Use the Pharmacy filter to see all options.',
+        question: '💭 What is in your mind?',
+        answer: 'We are here to help! Whether you are confused about courses, colleges, fees or admissions — just ask us anything and we will guide you.',
     },
     {
-        question: '🩺 Show me nursing colleges in Kerala',
-        answer: 'We have 100+ nursing colleges in Kerala! Click "By Region" → select Kerala, then filter by B.Sc Nursing or GNM to see all options.',
+        question: '📚 Which course are you looking for?',
+        answer: 'We have colleges for MBBS, B.Pharm, M.Pharm, B.Sc Nursing, GNM, BPT, B.Tech, BCA and many more. Tell us your preferred course and we will filter the best options for you!',
     },
     {
-        question: '🏥 What is Allied Health Sciences?',
-        answer: 'Allied Health includes courses like B.Sc MLT, B.Sc Optometry, B.Sc CT, BPT, DPT and more. These are paramedical courses alongside MBBS/Nursing.',
+        question: '🗺️ Which state colleges are you interested in?',
+        answer: 'We have 800+ colleges across Kerala, Karnataka and Tamil Nadu. Click "By Region" on the home page to filter colleges by your preferred state.',
     },
     {
-        question: '🔬 MBBS colleges in Tamil Nadu?',
-        answer: 'We have 49 MBBS colleges in Tamil Nadu including CMC Vellore, Madras Medical College, SRM Medical College and more. Filter by Tamil Nadu + MBBS to see all.',
-    },
-    {
-        question: '💰 What are the fees?',
-        answer: 'Fees vary by college and course. Government colleges range from ₹10K–₹65K/year. Private colleges range from ₹80K–₹25L/year. Check each college card for exact fees.',
+        question: '🔬 Have you qualified NEET?',
+        answer: 'If you have qualified NEET, you are eligible for MBBS, BDS, BAMS, BHMS and other medical courses. We can help you find the best medical colleges based on your NEET score and state preference.',
     },
     {
         question: '📋 How do I apply / enquire?',
         answer: 'Click on any college card → click "Send Enquiry" button → fill your details. Our team will contact you within 24 hours!',
-    },
-    {
-        question: '📍 Which states are covered?',
-        answer: 'We cover colleges across Kerala, Tamil Nadu, and Karnataka with 489+ colleges listed and growing!',
     },
     {
         question: '📞 Contact Vidyabhyasam',

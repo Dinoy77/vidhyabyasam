@@ -245,9 +245,9 @@ function NewsTicker({ onViewDetails }) {
 
   return (
     <div
-      style={{ 
-        ...ns.box, 
-        ...(isMobile ? { minHeight: 'auto' } : {}) 
+      style={{
+        ...ns.box,
+        ...(isMobile ? { minHeight: 'auto' } : {})
       }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -270,14 +270,14 @@ function NewsTicker({ onViewDetails }) {
         flex: 1,
       }}>
         {/* Image banner with tag overlay */}
-        <div style={{ 
-          ...ns.featuredBg, 
-          background: current.bg, 
-          position: 'relative', 
-          overflow: 'hidden', 
-          height: isMobile ? '160px' : '220px', 
-          minHeight: 'unset', 
-          padding: 0 
+        <div style={{
+          ...ns.featuredBg,
+          background: current.bg,
+          position: 'relative',
+          overflow: 'hidden',
+          height: isMobile ? '160px' : '220px',
+          minHeight: 'unset',
+          padding: 0
         }}>
           <img
             src={current.image}
@@ -367,7 +367,7 @@ export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNewsPopup, setShowNewsPopup] = useState(false);
-  
+
   const isMobile = useMediaQuery('(max-width: 900px)'); // Hook call for flex wrap point
   const navigate = useNavigate();
 
@@ -394,11 +394,11 @@ export default function Hero({ onSearch }) {
   const quickLinks = ['B.Pharm', 'M.Pharm', 'Nursing', 'GNM', 'Government'];
 
   return (
-    <section style={{ 
+    <section style={{
       ...styles.hero,
-      ...(isMobile ? { padding: '30px 16px 80px 16px', minHeight: 'auto' } : {}) 
+      ...(isMobile ? { padding: '30px 16px 80px 16px', minHeight: 'auto' } : {})
     }}>
-      
+
       {/* Includes the new responsive top bar */}
       <NewsScrollBar navigate={navigate} />
 
@@ -452,9 +452,9 @@ export default function Hero({ onSearch }) {
             Compare, enquire, and start your dream career.
           </p>
 
-          <form style={{ 
+          <form style={{
             ...styles.searchBox,
-            ...(isMobile ? { maxWidth: '100%' } : {}) 
+            ...(isMobile ? { maxWidth: '100%' } : {})
           }} onSubmit={handleSearch}>
             <span style={styles.searchIcon}>🔍</span>
             <input
@@ -732,7 +732,7 @@ const styles = {
   slidesWrap: { position: 'absolute', inset: 0, zIndex: 0, overflow: 'hidden' },
   slideOverlay: {
     position: 'absolute', inset: 0,
-    background: 'linear-gradient(160deg, rgba(13,17,23,0.88) 0%, rgba(13,17,23,0.7) 50%, rgba(13,17,23,0.88) 100%)',
+    background: 'linear-gradient(160deg, rgba(13,17,23,0.76) 0%, rgba(13,17,23,0.58) 50%, rgba(13,17,23,0.76) 100%)',
     zIndex: 1,
   },
   quoteBar: {
