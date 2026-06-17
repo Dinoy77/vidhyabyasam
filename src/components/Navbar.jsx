@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import LoanPopup from './LoanPopup';
+import LoanEnquiryModal from './LoanEnquiryModal';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
@@ -16,39 +18,39 @@ function useResponsive() {
 }
 
 const courseCategories = [
-  { 
-    title: 'Pharmacy', 
-    icon: '💊', 
-    color: '#1B6CA8', 
-    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D', 'Ph.D'] 
+  {
+    title: 'Pharmacy',
+    icon: '💊',
+    color: '#1B6CA8',
+    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D', 'Ph.D']
   },
-  { 
-    title: 'Nursing', 
-    icon: '🩺', 
-    color: '#059669', 
-    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing', 'Ph.D Nursing'] 
+  {
+    title: 'Nursing',
+    icon: '🩺',
+    color: '#059669',
+    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing', 'Ph.D Nursing']
   },
-  { 
-    title: 'Allied Health', 
-    icon: '🏥', 
-    color: '#7C3AED', 
+  {
+    title: 'Allied Health',
+    icon: '🏥',
+    color: '#7C3AED',
     courses: [
       'BPT', 'DPT', 'BHA', 'Paramedical', 'Allied Health Sciences', 'B.Sc AHS',
-      'B.Sc MLT', 'B.Sc RIT', 'B.Sc OTAT', 'B.Sc DT', 'B.Sc RT', 'B.Sc CT', 
+      'B.Sc MLT', 'B.Sc RIT', 'B.Sc OTAT', 'B.Sc DT', 'B.Sc RT', 'B.Sc CT',
       'B.Sc CVT', 'B.Sc CPT', 'B.Sc CCT', 'B.Optom', 'B.Sc NEPT', 'B.Sc PA', 'B.Sc NST'
-    ] 
+    ]
   },
-  { 
-    title: 'Medical', 
-    icon: '🔬', 
-    color: '#DC2626', 
-    courses: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma'] 
+  {
+    title: 'Medical',
+    icon: '🔬',
+    color: '#DC2626',
+    courses: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma']
   },
-  { 
-    title: 'Engineering & IT', 
-    icon: '⚙️', 
-    color: '#EA580C', 
-    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'] 
+  {
+    title: 'Engineering & IT',
+    icon: '⚙️',
+    color: '#EA580C',
+    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering']
   }
 ];
 
@@ -60,6 +62,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
 
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [articlesOpen, setArticlesOpen] = useState(false);
+  const [showLoanPopup, setShowLoanPopup] = useState(false);
+  const [showLoanEnquiry, setShowLoanEnquiry] = useState(false);
 
   const navRef = useRef(null);
   const coursesTimeout = useRef(null);
@@ -172,7 +176,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                   Courses <span style={{ fontSize: '10px' }}>{coursesOpen ? '▴' : '▾'}</span>
                 </span>
               </div>
-              
+
               {coursesOpen && (
                 <div style={styles.megaMenuWrapper}>
                   <div style={styles.megaMenu}>
@@ -202,7 +206,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                   Articles <span style={{ fontSize: '10px' }}>{articlesOpen ? '▴' : '▾'}</span>
                 </span>
               </div>
-              
+
               {articlesOpen && (
                 <div style={styles.megaMenuWrapper}>
                   <div style={styles.articlesMegaMenu}>
@@ -259,7 +263,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                           ))}
                         </div>
                       ) : activeSubItem ? (
-                        <div style={styles.overviewState}> 
+                        <div style={styles.overviewState}>
                           <p style={styles.tier3Heading}>Article Overview</p>
                           <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
                           <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
@@ -283,6 +287,20 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         )}
 
         <div style={styles.navRight}>
+          {/* Edu Loan button — only on desktop */}
+          {!isTablet && (
+            <button
+              onClick={() => setShowLoanPopup(true)}
+              style={{
+                padding: '7px 14px', borderRadius: '8px', fontSize: '13px',
+                fontWeight: 600, background: '#fff',
+                border: '1.5px solid #1B6CA8', color: '#1B6CA8',
+                cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px',
+              }}
+            >
+              🏦 Edu Loan
+            </button>
+          )}
           {user ? (
             <div style={{ position: 'relative' }}>
               <button style={isTablet ? styles.avatarBtnMobile : styles.avatarBtn} onClick={() => setShowDropdown(!showDropdown)}>
@@ -322,7 +340,10 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('colleges')}>Colleges</span>
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('regions')}>By Region</span>
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/blog'); }}>Blogs</span>
-          
+          <span style={{ ...styles.mobileLink, cursor: 'pointer', color: '#1B6CA8' }} onClick={() => { setMenuOpen(false); setShowLoanPopup(true); }}>
+            🏦 Educational Loan
+          </span>
+
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => { setCoursesOpen(!coursesOpen); if (!coursesOpen) setArticlesOpen(false); }}>
               <span>Courses</span><span style={{ fontSize: '11px' }}>{coursesOpen ? '▴' : '▾'}</span>
@@ -368,15 +389,15 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                             <div key={subItem} style={{ borderBottom: '1px solid #f9f9f9' }}>
                               {/* SPLIT MOBILE LOGIC: Text Navigates, Arrow Opens Accordion */}
                               <div style={{ ...styles.mobileAccordionLink, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <span 
+                                <span
                                   style={{ flex: 1, cursor: 'pointer' }}
                                   onClick={(e) => handleArticleClick(e, subItem)}
                                 >
                                   {subItem}
                                 </span>
                                 {hasThirdTier && (
-                                  <span 
-                                    style={{ fontSize: '11px', color: '#999', padding: '5px 10px', cursor: 'pointer' }} 
+                                  <span
+                                    style={{ fontSize: '11px', color: '#999', padding: '5px 10px', cursor: 'pointer' }}
                                     onClick={(e) => {
                                       e.stopPropagation();
                                       setMobileActiveSubItem(mobileActiveSubItem === subItem ? "" : subItem);
@@ -407,6 +428,16 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         </div>
       )}
       {showAuth && <AuthModal mode={showAuth} onClose={() => setShowAuth(false)} onSwitch={m => setShowAuth(m)} />}
+
+      {showLoanPopup && (
+        <LoanPopup
+          onClose={() => setShowLoanPopup(false)}
+          onEnquire={() => { setShowLoanPopup(false); setTimeout(() => setShowLoanEnquiry(true), 100); }}
+        />
+      )}
+      {showLoanEnquiry && (
+        <LoanEnquiryModal onClose={() => setShowLoanEnquiry(false)} />
+      )}
     </>
   );
 }
@@ -429,7 +460,7 @@ const getStyles = (isMobile, isTablet) => ({
   dropdownUser: { display: 'flex', flexDirection: 'column', gap: '2px', padding: '4px 8px', fontSize: '14px' },
   dropdownItem: { width: '100%', textAlign: 'left', background: 'none', border: 'none', padding: '8px', borderRadius: '8px', fontSize: '14px', cursor: 'pointer', color: 'var(--accent)', fontWeight: 500 },
   hamburger: { background: '#fff', border: '1.5px solid var(--border)', borderRadius: '8px', width: '38px', minWidth: '38px', height: '38px', minHeight: '38px', fontSize: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', marginLeft: isMobile ? '4px' : '8px', flexShrink: 0, color: 'var(--deep)', padding: 0 },
-  
+
   mobileMenu: { position: 'fixed', top: isMobile ? '60px' : '64px', left: 0, right: 0, zIndex: 998, width: '100vw', maxWidth: '100vw', boxSizing: 'border-box', background: '#fff', borderBottom: '1px solid var(--border)', display: 'flex', flexDirection: 'column', padding: '0 0 40px 0', boxShadow: '0 8px 20px rgba(0,0,0,0.08)', maxHeight: 'calc(100dvh - 60px)', overflowY: 'auto', WebkitOverflowScrolling: 'touch' },
   mobileAuthRow: { display: 'flex', gap: '12px', padding: '16px 24px', borderBottom: '1px solid var(--border)', background: 'var(--cream, #fafaf9)' },
   mobileLoginBtn: { flex: 1, padding: '12px', borderRadius: '8px', border: '1.5px solid var(--accent)', color: 'var(--accent)', background: 'transparent', fontWeight: 700, fontSize: '14px', cursor: 'pointer' },
@@ -448,7 +479,7 @@ const getStyles = (isMobile, isTablet) => ({
   dropdownTrigger: { display: 'flex', alignItems: 'center', height: '100%', padding: '0 4px' },
 
   megaMenuWrapper: { position: 'absolute', top: '64px', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 1999 },
-  
+
   megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
@@ -462,7 +493,7 @@ const getStyles = (isMobile, isTablet) => ({
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 600, borderBottom: '1px solid #FAF9F5' },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
   arrow: { fontSize: '16px', fontWeight: 'bold' },
-  
+
   menuMiddle: { width: '35%', background: '#FCFBF7', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', padding: '10px 0 12px 0' },
   subCategoryItem: { padding: '12px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', fontWeight: 500, borderRadius: '6px', margin: '2px 8px', transition: 'all 0.15s' },
   activeSubCategory: { backgroundColor: '#fff', color: 'var(--accent)', boxShadow: '0 2px 8px rgba(0,0,0,0.04)', fontWeight: 700 },

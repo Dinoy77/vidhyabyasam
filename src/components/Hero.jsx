@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LoanPopup from './LoanPopup';
+import LoanEnquiryModal from './LoanEnquiryModal';
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -367,6 +369,8 @@ export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNewsPopup, setShowNewsPopup] = useState(false);
+  const [showLoanPopup, setShowLoanPopup] = useState(false);
+  const [showEnquiry, setShowEnquiry] = useState(false);
 
   const isMobile = useMediaQuery('(max-width: 900px)'); // Hook call for flex wrap point
   const navigate = useNavigate();
@@ -508,7 +512,7 @@ export default function Hero({ onSearch }) {
           background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px',
-        }} onClick={() => setShowNewsPopup(false)}>
+        }} onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
 
           <div
             onClick={e => e.stopPropagation()}
@@ -522,7 +526,7 @@ export default function Hero({ onSearch }) {
             }}
           >
             <button
-              onClick={() => setShowNewsPopup(false)}
+              onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}
               style={{
                 position: 'absolute', top: '12px', right: '12px', zIndex: 10,
                 width: '30px', height: '30px', borderRadius: '50%',
@@ -588,7 +592,7 @@ export default function Hero({ onSearch }) {
                 ))}
               </div>
               <button
-                onClick={() => setShowNewsPopup(false)}
+                onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}
                 style={{
                   width: '100%', padding: '12px',
                   borderRadius: '10px', border: 'none',
@@ -600,12 +604,22 @@ export default function Hero({ onSearch }) {
                 Explore Colleges →
               </button>
               <p style={{ textAlign: 'center', fontSize: '11px', color: '#9CA3AF', marginTop: '10px', cursor: 'pointer' }}
-                onClick={() => setShowNewsPopup(false)}>
+                onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
                 Skip for now
               </p>
             </div>
           </div>
         </div>
+      )}
+      {showLoanPopup && (
+        <LoanPopup
+          onClose={() => setShowLoanPopup(false)}
+          onEnquire={() => { setShowLoanPopup(false); setTimeout(() => setShowEnquiry(true), 100); }}
+        />
+      )}
+
+      {showEnquiry && (
+        <LoanEnquiryModal onClose={() => setShowEnquiry(false)} />
       )}
 
       {/* Hide on mobile to save vertical real estate, or just keep it */}
