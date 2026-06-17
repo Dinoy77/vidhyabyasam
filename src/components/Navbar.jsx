@@ -16,11 +16,40 @@ function useResponsive() {
 }
 
 const courseCategories = [
-  { title: 'Pharmacy', icon: '💊', color: '#1B6CA8', courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D'] },
-  { title: 'Nursing', icon: '🩺', color: '#059669', courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing'] },
-  { title: 'Allied Health', icon: '🏥', color: '#7C3AED', courses: ['BPT', 'BHA', 'MLT', 'BAMS', 'B.Sc MLT', 'B.Sc RIT', 'B.Sc CT', 'B.Sc OTAT', 'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT', 'B.Sc CPT', 'B.Sc NST', 'B.Sc Optometry', 'B.Optom', 'DPT'] },
-  { title: 'Medical', icon: '🔬', color: '#DC2626', courses: ['MBBS', 'MD', 'MS', 'DM', 'Paramedical'] },
-  { title: 'Engineering & IT', icon: '⚙️', color: '#EA580C', courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'] }
+  { 
+    title: 'Pharmacy', 
+    icon: '💊', 
+    color: '#1B6CA8', 
+    courses: ['B.Pharm', 'M.Pharm', 'D.Pharm', 'Pharm.D', 'Ph.D'] 
+  },
+  { 
+    title: 'Nursing', 
+    icon: '🩺', 
+    color: '#059669', 
+    courses: ['B.Sc Nursing', 'M.Sc Nursing', 'GNM', 'ANM', 'Post Basic B.Sc Nursing', 'Ph.D Nursing'] 
+  },
+  { 
+    title: 'Allied Health', 
+    icon: '🏥', 
+    color: '#7C3AED', 
+    courses: [
+      'BPT', 'DPT', 'BHA', 'Paramedical', 'Allied Health Sciences', 'B.Sc AHS',
+      'B.Sc MLT', 'B.Sc RIT', 'B.Sc OTAT', 'B.Sc DT', 'B.Sc RT', 'B.Sc CT', 
+      'B.Sc CVT', 'B.Sc CPT', 'B.Sc CCT', 'B.Optom', 'B.Sc NEPT', 'B.Sc PA', 'B.Sc NST'
+    ] 
+  },
+  { 
+    title: 'Medical', 
+    icon: '🔬', 
+    color: '#DC2626', 
+    courses: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma'] 
+  },
+  { 
+    title: 'Engineering & IT', 
+    icon: '⚙️', 
+    color: '#EA580C', 
+    courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'] 
+  }
 ];
 
 export default function Navbar({ onCourseSelect = () => { } }) {
@@ -203,7 +232,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                             key={subItem}
                             style={{ ...styles.subCategoryItem, ...(activeSubItem === subItem ? styles.activeSubCategory : {}) }}
                             onMouseEnter={() => setActiveSubItem(subItem)}
-                            onClick={(e) => !hasThirdTier && handleArticleClick(e, subItem)}
+                            onClick={(e) => handleArticleClick(e, subItem)} // REMOVED the !hasThirdTier restriction!
                           >
                             <span>{subItem}</span>
                             {hasThirdTier && <span style={styles.subArrow}>›</span>}
@@ -337,8 +366,25 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                           const hasThirdTier = !!thirdHierarchyData[subItem];
                           return (
                             <div key={subItem} style={{ borderBottom: '1px solid #f9f9f9' }}>
-                              <div style={{ ...styles.mobileAccordionLink, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} onClick={(e) => hasThirdTier ? setMobileActiveSubItem(mobileActiveSubItem === subItem ? "" : subItem) : handleArticleClick(e, subItem)}>
-                                <span>{subItem}</span>{hasThirdTier && <span style={{ fontSize: '11px', color: '#999' }}>{mobileActiveSubItem === subItem ? '▼' : '▶'}</span>}
+                              {/* SPLIT MOBILE LOGIC: Text Navigates, Arrow Opens Accordion */}
+                              <div style={{ ...styles.mobileAccordionLink, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                <span 
+                                  style={{ flex: 1, cursor: 'pointer' }}
+                                  onClick={(e) => handleArticleClick(e, subItem)}
+                                >
+                                  {subItem}
+                                </span>
+                                {hasThirdTier && (
+                                  <span 
+                                    style={{ fontSize: '11px', color: '#999', padding: '5px 10px', cursor: 'pointer' }} 
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      setMobileActiveSubItem(mobileActiveSubItem === subItem ? "" : subItem);
+                                    }}
+                                  >
+                                    {mobileActiveSubItem === subItem ? '▼' : '▶'}
+                                  </span>
+                                )}
                               </div>
                               {hasThirdTier && mobileActiveSubItem === subItem && (
                                 <div style={{ background: '#fcfbf7', paddingLeft: '12px' }}>
@@ -398,14 +444,12 @@ const getStyles = (isMobile, isTablet) => ({
   mobileAccordionLink: { padding: '12px 16px 12px 24px', fontSize: '13px', color: '#444', textDecoration: 'none', borderBottom: '1px solid #f0f0f0', display: 'block', lineHeight: 1.4, fontWeight: 500 },
   mobileTier3Link: { padding: '10px 16px 10px 40px', fontSize: '12px', color: '#666', borderBottom: '1px dashed #f0f0f0', cursor: 'pointer', fontWeight: 500 },
 
-  // Updated Structure: Group wrapper to trap hover events correctly
   dropdownGroup: { position: 'relative', display: 'flex', alignItems: 'center', height: '64px' },
   dropdownTrigger: { display: 'flex', alignItems: 'center', height: '100%', padding: '0 4px' },
 
-  // Positioning the Mega Menu accurately beneath the nav items
   megaMenuWrapper: { position: 'absolute', top: '64px', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 1999 },
   
-  megaMenu: { background: '#fff', borderRadius: '16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
+  megaMenu: { background: '#fff', borderRadius: '0 0 16px 16px', boxShadow: '0 20px 60px rgba(0,0,0,0.15)', border: '1px solid var(--border)', borderTop: 'none', padding: '12px', display: 'flex', gap: '8px', zIndex: 2000, width: '960px', maxWidth: '95vw', height: 'fit-content' },
   megaCol: { flex: 1, borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' },
   megaColHeader: { display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px' },
   megaColIcon: { fontSize: '16px' },
@@ -413,7 +457,7 @@ const getStyles = (isMobile, isTablet) => ({
   megaColItems: { display: 'flex', flexDirection: 'column', padding: '6px', gap: '2px' },
   megaItem: { textAlign: 'left', background: 'transparent', border: 'none', padding: '7px 10px', borderRadius: '8px', fontSize: '12px', fontWeight: 500, color: 'var(--deep)', cursor: 'pointer', transition: 'background 0.15s', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.4 },
 
-  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 20px 20px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '1080px', maxWidth: '96vw', height: 'fit-content', minHeight: '350px' },
+  articlesMegaMenu: { background: '#fff', borderRadius: '0 0 20px 20px', boxShadow: '0 30px 70px rgba(0,0,0,0.18)', border: '1px solid var(--border)', borderTop: 'none', display: 'flex', overflow: 'hidden', zIndex: 2000, width: '1080px', maxWidth: '96vw', height: 'fit-content', minHeight: '350px' },
   menuLeft: { width: '30%', background: '#fff', display: 'flex', flexDirection: 'column', borderRight: '1px solid var(--border)', paddingBottom: '12px' },
   categoryItem: { padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer', fontSize: '13px', color: 'var(--deep)', transition: 'background 0.2s', fontWeight: 600, borderBottom: '1px solid #FAF9F5' },
   activeCategory: { color: 'var(--accent)', backgroundColor: 'var(--cream, #fafaf9)', fontWeight: 700 },
