@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async'; // <-- 1. IMPORT HELMET PROVIDER
+import { HelmetProvider } from 'react-helmet-async';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -10,7 +10,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import ChatBot from './components/ChatBot';
 import ScrollToTop from './components/ScrollToTop';
 
-// Article Imports
+// Article Imports (Static)
 import TopKeralaMedicalColleges from './pages/articles/TopKeralaMedicalColleges';
 import TopTamilNaduMedicalColleges from './pages/articles/TopTamilNaduMedicalColleges';
 import TopKarnatakaMedicalColleges from './pages/articles/TopKarnatakaMedicalColleges';
@@ -23,8 +23,8 @@ import EngineeringCollegesKarnataka from './pages/articles/EngineeringCollegesKa
 import TopPrivateMedicalColleges from './pages/articles/TopPrivateMedicalColleges';
 import BestCSEngineeringColleges from './pages/articles/BestCSEngineeringColleges';
 
-// --- NEW: Unified Layout for Nursing Colleges ---
-import NursingCollegesLayout from './pages/articles/NursingCollegesLayout';
+// --- NEW: Unified Layout for All Colleges ---
+import UniversalCollegesLayout from './pages/articles/UniversalCollegesLayout';
 
 // Course Guide Imports
 import MbbsCourseGuide from './pages/articles/MbbsCourseGuide';
@@ -62,13 +62,24 @@ import ComedkGuide from './components/ComedkGuide';
 import BlogArticle from './pages/BlogArticle';
 import BlogList from './pages/BlogList';
 
-// Array of all dynamic nursing routes
-const nursingRoutes = [
-  "TopNursingSouthIndia", "TopGovtNursingColleges", "NursingCollegesKarnataka",
-  "NursingCollegesTamilNadu", "NursingCollegesKerala", "TopPrivateNursingSouthIndia",
-  "NursingCollegesBangalore", "NursingCollegesMysore", "NursingCollegesMangalore",
+// Array of all dynamic routes configured in collegePageData.js
+const dynamicCollegeRoutes = [
+  // --- NURSING ---
+  "TopNursingSouthIndia", "TopGovtNursingColleges", "TopPrivateNursingSouthIndia",
+  "NursingCollegesKerala", "NursingCollegesKarnataka", "NursingCollegesTamilNadu", 
   "NursingCollegesKochi", "NursingCollegesTrivandrum", "NursingCollegesCalicut",
-  "NursingCollegesChennai", "NursingCollegesCoimbatore", "NursingCollegesSalem"
+  "NursingCollegesBangalore", "NursingCollegesMysore", "NursingCollegesMangalore",
+  "NursingCollegesChennai", "NursingCollegesCoimbatore", "NursingCollegesSalem",
+  
+  // --- MEDICAL ---
+  "MedicalCollegesBangalore", "MedicalCollegesMysore", "MedicalCollegesMangalore",
+  "MedicalCollegesKochi", "MedicalCollegesTrivandrum", "MedicalCollegesCalicut",
+  "MedicalCollegesChennai", "MedicalCollegesCoimbatore", "MedicalCollegesSalem",
+  
+  // --- ENGINEERING ---
+  "EngineeringCollegesBangalore", "EngineeringCollegesMysore", "EngineeringCollegesMangalore",
+  "EngineeringCollegesKochi", "EngineeringCollegesTrivandrum", "EngineeringCollegesCalicut",
+  "EngineeringCollegesChennai", "EngineeringCollegesCoimbatore", "EngineeringCollegesSalem"
 ];
 
 export default function App() {
@@ -76,7 +87,6 @@ export default function App() {
   const [courseSelectCount, setCourseSelectCount] = useState(0);
 
   return (
-    // 2. WRAP THE ENTIRE APP IN HELMETPROVIDER
     <HelmetProvider>
       <BrowserRouter>
         <AuthProvider>
@@ -94,7 +104,7 @@ export default function App() {
               <Route path="/college/:id" element={<CollegeDetail />} />
               <Route path="/news/:id" element={<NewsDetail />} />
               
-              {/* Top Colleges Routes */}
+              {/* Top Colleges Routes (Static Legacy) */}
               <Route path="/articles/TopKeralaMedicalColleges" element={<TopKeralaMedicalColleges />} />
               <Route path="/articles/TopTamilNaduMedicalColleges" element={<TopTamilNaduMedicalColleges />} />
               <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />            
@@ -107,12 +117,12 @@ export default function App() {
               <Route path="/articles/TopPrivateMedicalColleges" element={<TopPrivateMedicalColleges />} />
               <Route path="/articles/BestCSEngineeringColleges" element={<BestCSEngineeringColleges />} />
 
-              {/* --- NEW: Dynamic Nursing Routes Mapped Here --- */}
-              {nursingRoutes.map(pathKey => (
+              {/* --- NEW: Dynamic Universal Routes Mapped Here --- */}
+              {dynamicCollegeRoutes.map(pathKey => (
                 <Route 
                   key={pathKey} 
                   path={`/articles/${pathKey}`} 
-                  element={<NursingCollegesLayout pageKey={pathKey} />} 
+                  element={<UniversalCollegesLayout pageKey={pathKey} />} 
                 />
               ))}
 
