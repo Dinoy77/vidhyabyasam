@@ -48,7 +48,7 @@ const newsItems = [
     id: 3, icon: '🏛️', color: '#059669', bg: '#ECFDF5', tag: 'Counselling',
     title: 'JoSAA 2026 — Round 1 Seat Allotment on June 13',
     date: 'Allotment: Jun 13',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80',
+    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=80',
     description: 'JoSAA 2026 counselling registration started June 2 and choice filling is now closed. Round 1 seat allotment for IITs, NITs, IIITs and GFTIs will be announced on June 13. Round 2 on June 30, Round 3 on July 3. Total 5 rounds. Final round for IITs closes July 21, 2026.',
     eligibility: 'JEE Main 2026 or JEE Advanced 2026 qualified candidates',
     applyLink: 'https://www.josaa.nic.in',
