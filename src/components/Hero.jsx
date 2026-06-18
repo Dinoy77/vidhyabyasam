@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { articleRouteMap } from '../data/dropDownData';
+import { blogArticles } from '../data/blogData';
 import LoanPopup from './LoanPopup';
 import LoanEnquiryModal from './LoanEnquiryModal';
 
@@ -475,10 +476,15 @@ export default function Hero({ onSearch }) {
                   setQuery(val);
                   onSearch(val);
                   if (val.trim().length > 2) {
-                    const matches = Object.keys(articleRouteMap).filter(title =>
-                      title.toLowerCase().includes(val.toLowerCase())
-                    );
-                    setArticleSuggestions(matches);
+                    const articleMatches = Object.keys(articleRouteMap)
+                      .filter(title => title.toLowerCase().includes(val.toLowerCase()))
+                      .map(title => ({ title, route: articleRouteMap[title], type: 'article' }));
+
+                    const blogMatches = Object.entries(blogArticles)
+                      .filter(([slug, data]) => data.title.toLowerCase().includes(val.toLowerCase()))
+                      .map(([slug, data]) => ({ title: data.title, route: `/blog/${slug}`, type: 'blog' }));
+
+                    setArticleSuggestions([...articleMatches, ...blogMatches]);
                   } else {
                     setArticleSuggestions([]);
                   }
@@ -498,13 +504,13 @@ export default function Hero({ onSearch }) {
                 WebkitOverflowScrolling: 'touch',
               }}>
                 <p style={{ fontSize: '11px', fontWeight: 700, color: '#6B7280', padding: '8px 14px 4px', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                  📄 Articles
+                  📄 Articles & Blogs
                 </p>
-                {articleSuggestions.map((title) => (
+                {articleSuggestions.map((item, idx) => (
                   <div
-                    key={title}
+                    key={idx}
                     onClick={() => {
-                      navigate(articleRouteMap[title]);
+                      navigate(item.route);
                       setArticleSuggestions([]);
                       setQuery('');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -518,7 +524,7 @@ export default function Hero({ onSearch }) {
                     onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'}
                     onMouseLeave={e => e.currentTarget.style.background = '#fff'}
                   >
-                    🔗 {title}
+                    {item.type === 'blog' ? '📝' : '🔗'} {item.title}
                   </div>
                 ))}
               </div>
