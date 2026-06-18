@@ -4,6 +4,7 @@ import LoanEnquiryModal from './LoanEnquiryModal';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
+import { FiDownload } from 'react-icons/fi';
 // Make sure this points to your newly separated data file
 import { dropDownData, thirdHierarchyData, articleRouteMap } from '../data/dropDownData';
 
@@ -139,11 +140,39 @@ export default function Navbar({ onCourseSelect = () => { } }) {
     }
   };
 
-  const handleArticleClick = (e, articleName) => {
+  const handleArticleClick = (e, itemName) => {
     e.preventDefault();
+
+    // 1. Intercept the specific dropdown item
+    if (itemName === "List of INC Approved Nursing Colleges") {
+      
+      // 2. Auth Check: If not logged in, show the login modal and stop
+      if (!user) {
+        setShowAuth('login');
+        setMenuOpen(false); // Optional: closes mobile menu so modal is visible
+        return; 
+      }
+
+      // 3. Download Logic: If logged in, trigger the PDF download
+      const pdfUrl = '../../public/pdf/INC_Approved_Nursing_Colleges_2026.pdf';
+      
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'INC_Approved_Nursing_Colleges_2026.pdf'; // The name the file saves as
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Close the dropdown menus after downloading
+      setArticlesOpen(false);
+      setMenuOpen(false);
+      return;
+    }
+
+    // 4. Default Routing for all other normal articles
     setArticlesOpen(false);
     setMenuOpen(false);
-    const targetRoute = articleRouteMap[articleName] || `/articles/${createSlug(articleName)}`;
+    const targetRoute = articleRouteMap[itemName] || `/articles/${createSlug(itemName)}`;
     navigate(targetRoute);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -231,6 +260,8 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                     <div style={styles.menuMiddle}>
                       {dropDownData[activeArticleCat]?.map((subItem) => {
                         const hasThirdTier = !!thirdHierarchyData[subItem];
+                        const isDownload = subItem === "List of INC Approved Nursing Colleges";
+                        
                         return (
                           <div
                             key={subItem}
@@ -238,7 +269,15 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                             onMouseEnter={() => setActiveSubItem(subItem)}
                             onClick={(e) => handleArticleClick(e, subItem)} // REMOVED the !hasThirdTier restriction!
                           >
-                            <span>{subItem}</span>
+                            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                              {subItem}
+                              {/* Inject Download Icon conditionally */}
+                              {isDownload && (
+                                <span title="Download PDF" style={{ display: 'flex', alignItems: 'center', color: 'var(--accent)', marginLeft: '4px' }}>
+                                  <FiDownload size={15} strokeWidth={2.5} />
+                                </span>
+                              )}
+                            </span>
                             {hasThirdTier && <span style={styles.subArrow}>›</span>}
                           </div>
                         );
@@ -267,7 +306,15 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                           <p style={styles.tier3Heading}>Article Overview</p>
                           <h4 style={styles.overviewTitle}>{activeSubItem}</h4>
                           <p style={styles.overviewText}>Read our comprehensive guide, including detailed rankings, fee structures, and placement records.</p>
-                          <button style={styles.overviewBtn} onClick={(e) => handleArticleClick(e, activeSubItem)}>Read Article →</button>
+                          <button style={styles.overviewBtn} onClick={(e) => handleArticleClick(e, activeSubItem)}>
+                            {activeSubItem === "List of INC Approved Nursing Colleges" ? (
+                              <span style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'center' }}>
+                                Download PDF <FiDownload size={16} strokeWidth={2.5} />
+                              </span>
+                            ) : (
+                              "Read Article →"
+                            )}
+                          </button>
                         </div>
                       ) : (
                         <div style={styles.overviewState}>
@@ -385,15 +432,23 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                       <div style={styles.mobileAccordionContent}>
                         {dropDownData[category].map(subItem => {
                           const hasThirdTier = !!thirdHierarchyData[subItem];
+                          const isDownload = subItem === "List of INC Approved Nursing Colleges";
+                          
                           return (
                             <div key={subItem} style={{ borderBottom: '1px solid #f9f9f9' }}>
                               {/* SPLIT MOBILE LOGIC: Text Navigates, Arrow Opens Accordion */}
                               <div style={{ ...styles.mobileAccordionLink, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span
-                                  style={{ flex: 1, cursor: 'pointer' }}
+                                  style={{ flex: 1, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' }}
                                   onClick={(e) => handleArticleClick(e, subItem)}
                                 >
                                   {subItem}
+                                  {/* Inject Download Icon conditionally for mobile */}
+                                  {isDownload && (
+                                    <span title="Download PDF" style={{ display: 'flex', alignItems: 'center', color: 'var(--accent)', marginLeft: '6px' }}>
+                                      <FiDownload size={15} strokeWidth={2.5} />
+                                    </span>
+                                  )}
                                 </span>
                                 {hasThirdTier && (
                                   <span

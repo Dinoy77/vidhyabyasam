@@ -20,7 +20,8 @@ export const dropDownData = {
     "Top Nursing Colleges in Tamil Nadu",
     "Top Nursing Colleges in Karnataka",
     "Top Government Nursing Colleges",
-    "Top Private Nursing Colleges in South India"
+    "Top Private Nursing Colleges in South India",
+    "List of INC Approved Nursing Colleges"
   ],
   "Popular Medical Courses": [
     "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
