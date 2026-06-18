@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { articleRouteMap } from '../data/dropDownData';
 import LoanPopup from './LoanPopup';
 import LoanEnquiryModal from './LoanEnquiryModal';
 
@@ -367,6 +368,7 @@ const slides = [
 
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
+  const [articleSuggestions, setArticleSuggestions] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNewsPopup, setShowNewsPopup] = useState(false);
   const [showLoanPopup, setShowLoanPopup] = useState(false);
@@ -456,20 +458,72 @@ export default function Hero({ onSearch }) {
             Compare, enquire, and start your dream career.
           </p>
 
-          <form style={{
-            ...styles.searchBox,
-            ...(isMobile ? { maxWidth: '100%' } : {})
-          }} onSubmit={handleSearch}>
-            <span style={styles.searchIcon}>🔍</span>
-            <input
-              style={styles.searchInput}
-              type="text"
-              placeholder="Search colleges, courses, cities..."
-              value={query}
-              onChange={e => { setQuery(e.target.value); onSearch(e.target.value); }}
-            />
-            <button type="submit" style={styles.searchBtn}>Search</button>
-          </form>
+          <div style={{ position: 'relative', width: '100%', maxWidth: isMobile ? '100%' : '500px', zIndex: 50 }}>
+            <form style={{
+              ...styles.searchBox,
+              ...(isMobile ? { maxWidth: '100%' } : {}),
+              maxWidth: '100%',
+            }} onSubmit={handleSearch}>
+              <span style={styles.searchIcon}>🔍</span>
+              <input
+                style={styles.searchInput}
+                type="text"
+                placeholder="Search colleges, courses, cities..."
+                value={query}
+                onChange={e => {
+                  const val = e.target.value;
+                  setQuery(val);
+                  onSearch(val);
+                  if (val.trim().length > 2) {
+                    const matches = Object.keys(articleRouteMap).filter(title =>
+                      title.toLowerCase().includes(val.toLowerCase())
+                    );
+                    setArticleSuggestions(matches);
+                  } else {
+                    setArticleSuggestions([]);
+                  }
+                }}
+              />
+              <button type="submit" style={styles.searchBtn}>Search</button>
+            </form>
+
+            {articleSuggestions.length > 0 && (
+              <div style={{
+                position: 'absolute', top: '100%', left: 0, right: 0,
+                background: '#fff', borderRadius: '12px', zIndex: 9999,
+                boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+                border: '1px solid var(--border)',
+                marginTop: '6px',
+                maxHeight: '160px', overflowY: 'auto',
+                WebkitOverflowScrolling: 'touch',
+              }}>
+                <p style={{ fontSize: '11px', fontWeight: 700, color: '#6B7280', padding: '8px 14px 4px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                  📄 Articles
+                </p>
+                {articleSuggestions.map((title) => (
+                  <div
+                    key={title}
+                    onClick={() => {
+                      navigate(articleRouteMap[title]);
+                      setArticleSuggestions([]);
+                      setQuery('');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    style={{
+                      padding: '10px 14px', cursor: 'pointer',
+                      fontSize: '13px', color: 'var(--deep)', fontWeight: 500,
+                      borderTop: '1px solid var(--border)',
+                      transition: 'background 0.15s',
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.background = '#FFF4EE'}
+                    onMouseLeave={e => e.currentTarget.style.background = '#fff'}
+                  >
+                    🔗 {title}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
           <div style={styles.quickLinks}>
             <span style={styles.quickLabel}>Popular:</span>
