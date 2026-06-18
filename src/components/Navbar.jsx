@@ -154,7 +154,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
       }
 
       // 3. Download Logic: If logged in, trigger the PDF download
-      const pdfUrl = '../../public/pdf/INC_Approved_Nursing_Colleges_2026.pdf';
+      const pdfUrl = '/pdf/INC_Approved_Nursing_Colleges_2026.pdf';
       
       const link = document.createElement('a');
       link.href = pdfUrl;
