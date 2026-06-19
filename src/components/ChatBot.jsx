@@ -27,7 +27,7 @@ const faqs = [
     },
     {
         question: '📞 Contact Vidyabhyasam',
-        answer: 'You can reach us via WhatsApp using the green button on the bottom right, or send an enquiry from any college page. Email: dinoymlo7@gmail.com',
+        answer: 'You can reach us via WhatsApp using the green button on the bottom right, or send an enquiry from any college page. Email: enquiry@vidyabhyasam.com',
     },
 ];
 
