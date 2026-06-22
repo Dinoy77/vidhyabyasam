@@ -23,12 +23,21 @@ function useMediaQuery(query) {
 }
 // --------------------------------------
 
+const curiousHeadlines = [
+  { p1: "Find Your Perfect ", highlight: "College", p2: " in South India" },
+  { p1: "Is ", highlight: "INC Approval", p2: " really required for Nursing?" },
+  { p1: "Can Plus Two marks alone secure a ", highlight: "Merit Seat?", p2: "" },
+  { p1: "Which degree holds more value: ", highlight: "B.E or B.Tech?", p2: "" },
+  { p1: "Do autonomous colleges offer better ", highlight: "Placements?", p2: "" },
+  { p1: "Will your college degree let you ", highlight: "Work Abroad?", p2: "" },
+];
+
 const newsItems = [
   {
     id: 1, icon: '🎓', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
     title: 'KEAM 2026 — Plus Two Marks Entry Extended to June 14',
     date: 'Rank List: Jun 20',
-    image: 'https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&q=80',
+    image: 'https://images.indianexpress.com/2024/05/7_555d15.jpg?w=1200',
     description: 'CEE Kerala has extended the Plus Two marks submission deadline for KEAM 2026 Engineering Rank List preparation to June 14. KEAM 2026 exam results were declared on May 12. Engineering and Pharmacy Rank List will be published by June 20. CAP Counselling registration expected in July 2026.',
     eligibility: 'Students who appeared for KEAM 2026 Engineering and Pharmacy entrance exam',
     applyLink: 'https://www.cee.kerala.gov.in',
@@ -103,10 +112,17 @@ const newsItems = [
   },
 ];
 
+const slides = [
+  '/images/students1.jpg',
+  '/images/students2.jpg',
+  '/images/students3.jpg',
+  null,
+];
+
 function NewsScrollBar({ navigate }) {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 768px)'); // Hook call
+  const isMobile = useMediaQuery('(max-width: 768px)'); 
 
   useEffect(() => {
     const t = setInterval(() => {
@@ -120,113 +136,13 @@ function NewsScrollBar({ navigate }) {
   }, []);
 
   const item = newsItems[current];
-
-  // return (
-  //   <div 
-  //     id="news" 
-  //     style={{ 
-  //       ...ns2.bar, 
-  //       ...(isMobile ? { height: 'auto', minHeight: '84px', padding: '12px 0' } : {}) 
-  //     }} 
-  //     onClick={() => navigate(`/news/${item.id}`)}
-  //   >
-  //     {/* Background image with overlay */}
-  //     <img
-  //       src={item.image}
-  //       alt=""
-  //       style={{
-  //         position: 'absolute', inset: 0,
-  //         width: '100%', height: '100%',
-  //         objectFit: 'cover',
-  //         opacity: animating ? 0 : 0.15,
-  //         transition: 'opacity 0.4s ease',
-  //         zIndex: 0,
-  //       }}
-  //     />
-
-  //     {/* Left label */}
-  //     <div style={{ 
-  //       ...ns2.label, 
-  //       zIndex: 1,
-  //       ...(isMobile ? { padding: '0 12px', minWidth: '50px' } : {}) 
-  //     }}>
-  //       <span style={ns2.dot} />
-  //       {!isMobile && <span style={ns2.labelText}>🔔 LIVE</span>}
-  //     </div>
-
-  //     {/* Left image - Hidden on mobile to save space */}
-  //     {!isMobile && (
-  //       <div style={{ ...ns2.imgBox, zIndex: 1 }}>
-  //         <img
-  //           src={item.image}
-  //           alt={item.title}
-  //           style={{
-  //             width: '100%', height: '100%',
-  //             objectFit: 'cover',
-  //             opacity: animating ? 0 : 1,
-  //             transition: 'opacity 0.4s ease',
-  //           }}
-  //           onError={e => { e.target.src = 'https://images.shiksha.ws/public/images/instHeaderDesktop.jpg'; }}
-  //         />
-  //       </div>
-  //     )}
-
-  //     {/* Content */}
-  //     <div style={{
-  //       ...ns2.content, zIndex: 1,
-  //       opacity: animating ? 0 : 1,
-  //       transform: animating ? 'translateY(-8px)' : 'translateY(0)',
-  //       transition: 'all 0.4s ease',
-  //       ...(isMobile ? { 
-  //         flexDirection: 'column', 
-  //         alignItems: 'flex-start', 
-  //         gap: '6px', 
-  //         padding: '0 16px',
-  //         justifyContent: 'center'
-  //       } : {})
-  //     }}>
-  //       <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center' }}>
-  //         <span style={{ ...ns2.tagPill, background: item.color }}>
-  //           {item.icon} {item.tag}
-  //         </span>
-  //         {isMobile && <span style={ns2.date}>🗓 {item.date}</span>}
-  //       </div>
-  //       <div style={{ ...ns2.textBlock, ...(isMobile ? { width: '100%' } : {}) }}>
-  //         <span style={ns2.title}>{item.title}</span>
-  //         <span style={ns2.desc}>{item.description.slice(0, 80)}...</span>
-  //       </div>
-  //       {!isMobile && <span style={ns2.date}>🗓 {item.date}</span>}
-  //     </div>
-
-  //     {/* Right — Read more - Hidden on Mobile */}
-  //     {!isMobile && (
-  //       <div style={{ ...ns2.readMore, zIndex: 1 }}>
-  //         <span style={ns2.readMoreText}>Read →</span>
-  //       </div>
-  //     )}
-
-  //     {/* Progress dots */}
-  //     <div style={{ 
-  //       ...ns2.dotsWrapper,
-  //       ...(isMobile ? { bottom: '4px' } : {}) 
-  //     }}>
-  //       {newsItems.map((_, i) => (
-  //         <span key={i} style={{
-  //           ...ns2.progressDot,
-  //           background: i === current ? '#fff' : 'rgba(255,255,255,0.3)',
-  //           width: i === current ? '16px' : '5px',
-  //         }} />
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
 }
 
 function NewsTicker({ onViewDetails }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [fade, setFade] = useState(true);
-  const isMobile = useMediaQuery('(max-width: 768px)'); // Hook call
+  const isMobile = useMediaQuery('(max-width: 768px)'); 
 
   useEffect(() => {
     if (isPaused) return;
@@ -256,7 +172,6 @@ function NewsTicker({ onViewDetails }) {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Header */}
       <div style={ns.header}>
         <div style={ns.headerLeft}>
           <span style={ns.liveDot} />
@@ -265,7 +180,6 @@ function NewsTicker({ onViewDetails }) {
         <span style={ns.count}>{activeIndex + 1}/{newsItems.length}</span>
       </div>
 
-      {/* Full featured card */}
       <div style={{
         ...ns.featured,
         opacity: fade ? 1 : 0,
@@ -273,7 +187,6 @@ function NewsTicker({ onViewDetails }) {
         transition: 'opacity 0.3s ease, transform 0.3s ease',
         flex: 1,
       }}>
-        {/* Image banner with tag overlay */}
         <div style={{
           ...ns.featuredBg,
           background: current.bg,
@@ -308,7 +221,6 @@ function NewsTicker({ onViewDetails }) {
           </span>
         </div>
 
-        {/* Content */}
         <div style={ns.featuredBody}>
           <p style={{ ...ns.featuredTitle, color: current.color, fontSize: '17px' }}>
             {current.title}
@@ -333,7 +245,6 @@ function NewsTicker({ onViewDetails }) {
         </div>
       </div>
 
-      {/* Dots */}
       <div style={ns.dots}>
         {newsItems.map((item, i) => (
           <button key={i} style={{
@@ -344,7 +255,6 @@ function NewsTicker({ onViewDetails }) {
         ))}
       </div>
 
-      {/* Nav arrows */}
       <div style={ns.arrows}>
         <button style={ns.arrowBtn} onClick={() => goTo((activeIndex - 1 + newsItems.length) % newsItems.length)}>
           ←
@@ -360,13 +270,6 @@ function NewsTicker({ onViewDetails }) {
   );
 }
 
-const slides = [
-  '/images/students1.jpg',
-  '/images/students2.jpg',
-  '/images/students3.jpg',
-  null,
-];
-
 export default function Hero({ onSearch }) {
   const [query, setQuery] = useState('');
   const [articleSuggestions, setArticleSuggestions] = useState([]);
@@ -375,8 +278,28 @@ export default function Hero({ onSearch }) {
   const [showLoanPopup, setShowLoanPopup] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
 
-  const isMobile = useMediaQuery('(max-width: 900px)'); // Hook call for flex wrap point
+  const isMobile = useMediaQuery('(max-width: 900px)'); 
   const navigate = useNavigate();
+
+  const [headlineIdx, setHeadlineIdx] = useState(0);
+  const [fadeHeadline, setFadeHeadline] = useState(true);
+
+  // --- UNIFIED MASTER CLOCK (Fires Text + Image at exact same millisecond) ---
+  useEffect(() => {
+    const masterTicker = setInterval(() => {
+      setFadeHeadline(false); 
+
+      setTimeout(() => {
+        setHeadlineIdx(prev => (prev + 1) % curiousHeadlines.length);
+        setCurrentSlide(prev => (prev + 1) % slides.length);
+        setFadeHeadline(true); 
+      }, 300);
+
+    }, 5000); 
+
+    return () => clearInterval(masterTicker);
+  }, []);
+  // -------------------------------------------------------------------------
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -385,12 +308,7 @@ export default function Hero({ onSearch }) {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const t = setInterval(() => {
-      setCurrentSlide(i => (i + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(t);
-  }, []);
+  const currentHeadline = curiousHeadlines[headlineIdx];
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -406,10 +324,8 @@ export default function Hero({ onSearch }) {
       ...(isMobile ? { padding: '30px 16px 80px 16px', minHeight: 'auto' } : {})
     }}>
 
-      {/* Includes the new responsive top bar */}
       <NewsScrollBar navigate={navigate} />
 
-      {/* Background slideshow */}
       <div style={styles.slidesWrap}>
         {slides.map((src, i) => (
           src === null ? (
@@ -444,14 +360,23 @@ export default function Hero({ onSearch }) {
         ...styles.inner,
         ...(isMobile ? { flexDirection: 'column' } : {})
       }}>
-        {/* Left — search content */}
         <div style={styles.left}>
           <div style={styles.badge}>🇮🇳 South India's #1 College Discovery Platform</div>
 
-          <h1 style={styles.heading}>
-            Find Your Perfect{' '}
-            <span style={styles.highlight}>College</span>
-            {' '}in South India
+          <h1 
+            style={{
+              ...styles.heading,
+              animation: 'none', 
+              opacity: fadeHeadline ? 1 : 0,
+              transform: fadeHeadline ? 'translateY(0)' : 'translateY(6px)',
+              transition: 'opacity 0.3s ease, transform 0.3s ease',
+              minHeight: isMobile ? '72px' : '128px', 
+              display: 'block'
+            }}
+          >
+            {currentHeadline.p1}
+            <span style={styles.highlight}>{currentHeadline.highlight}</span>
+            {currentHeadline.p2}
           </h1>
 
           <p style={styles.sub}>
@@ -556,7 +481,6 @@ export default function Hero({ onSearch }) {
           </div>
         </div>
 
-        {/* Right — news sidebar */}
         <div style={{
           ...styles.right,
           ...(isMobile ? { marginTop: '32px', maxWidth: '100%', width: '100%' } : {})
@@ -565,7 +489,6 @@ export default function Hero({ onSearch }) {
         </div>
       </div>
 
-      {/* News Popup — unchanged */}
       {showNewsPopup && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 2000,
@@ -598,7 +521,7 @@ export default function Hero({ onSearch }) {
 
             <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
               <img
-                src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80"
+                src="https://images.indianexpress.com/2024/07/keam-rank-list.jpg?w=1600"
                 alt="Latest Updates"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -682,7 +605,6 @@ export default function Hero({ onSearch }) {
         <LoanEnquiryModal onClose={() => setShowEnquiry(false)} />
       )}
 
-      {/* Hide on mobile to save vertical real estate, or just keep it */}
       {!isMobile && (
         <div style={styles.quoteBar}>
           <span style={styles.quoteDot} />
@@ -691,7 +613,6 @@ export default function Hero({ onSearch }) {
         </div>
       )}
 
-      {/* Slide indicators */}
       <div style={{ ...styles.slideIndicators, ...(isMobile ? { bottom: '20px' } : {}) }}>
         {slides.map((_, i) => (
           <button
@@ -710,7 +631,7 @@ export default function Hero({ onSearch }) {
 }
 
 // -----------------------------------------------------
-// STYLES OBJECTS (Untouched to respect desktop layout)
+// STYLES OBJECTS 
 // -----------------------------------------------------
 
 const ns = {
