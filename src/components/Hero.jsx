@@ -23,13 +23,56 @@ function useMediaQuery(query) {
 }
 // --------------------------------------
 
-const curiousHeadlines = [
-  { p1: "Find Your Perfect ", highlight: "College", p2: " in South India" },
-  { p1: "Is ", highlight: "INC Approval", p2: " really required for Nursing?" },
-  { p1: "Can Plus Two marks alone secure a ", highlight: "Merit Seat?", p2: "" },
-  { p1: "Which degree holds more value: ", highlight: "B.E or B.Tech?", p2: "" },
-  { p1: "Do autonomous colleges offer better ", highlight: "Placements?", p2: "" },
-  { p1: "Will your college degree let you ", highlight: "Work Abroad?", p2: "" },
+// --- LOCALIZED HEADLINES ---
+const localizedHeadlines = {
+  en: [
+    { p1: "Find Your Perfect ", highlight: "College", p2: " in South India" },
+    { p1: "Is ", highlight: "INC Approval", p2: " really required for Nursing?" },
+    { p1: "Can Plus Two marks alone secure a ", highlight: "Merit Seat?", p2: "" },
+    { p1: "Which degree holds more value: ", highlight: "B.E or B.Tech?", p2: "" },
+    { p1: "Do autonomous colleges offer better ", highlight: "Placements?", p2: "" },
+    { p1: "Will your college degree let you ", highlight: "Work Abroad?", p2: "" },
+  ],
+  ml: [
+    { p1: "ദക്ഷിണേന്ത്യയിലെ നിങ്ങളുടെ മികച്ച ", highlight: "കോളേജ്", p2: " കണ്ടെത്തുക" },
+    { p1: "നഴ്സിംഗിന് ", highlight: "INC അപ്രൂവൽ", p2: " ശരിക്കും ആവശ്യമുണ്ടോ?" },
+    { p1: "പ്ലസ് ടു മാർക്ക് മാത്രം വെച്ച് ഒരു ", highlight: "മെറിറ്റ് സീറ്റ്", p2: " നേടാൻ കഴിയുമോ?" },
+    { p1: "ഏത് ഡിഗ്രിക്കാണ് കൂടുതൽ മൂല്യം: ", highlight: "B.E ആണോ B.Tech ആണോ?", p2: "" },
+    { p1: "ഓട്ടോണമസ് കോളേജുകൾ മികച്ച ", highlight: "പ്ലേസ്‌മെന്റുകൾ", p2: " നൽകുന്നുണ്ടോ?" },
+    { p1: "നിങ്ങളുടെ കോളേജ് ഡിഗ്രി ", highlight: "വിദേശത്ത് ജോലി", p2: " ചെയ്യാൻ സഹായിക്കുമോ?" },
+  ],
+  ta: [
+    { p1: "தென்னிந்தியாவில் உங்கள் சிறந்த ", highlight: "கல்லூரியை", p2: " கண்டறியுங்கள்" },
+    { p1: "நர்சிங் படிக்க ", highlight: "INC அங்கீகாரம்", p2: " உண்மையிலேயே தேவையா?" },
+    { p1: "பிளஸ் டூ மதிப்பெண்கள் மட்டுமே ", highlight: "மெரிட் சீட்டை", p2: " பெற்றுத் தருமா?" },
+    { p1: "எந்த பட்டத்திற்கு அதிக மதிப்பு: ", highlight: "B.E அல்லது B.Tech?", p2: "" },
+    { p1: "தன்னாட்சி கல்லூரிகள் சிறந்த ", highlight: "வேலைவாய்ப்புகளை", p2: " வழங்குகின்றனவா?" },
+    { p1: "உங்கள் கல்லூரி பட்டம் உங்களை ", highlight: "வெளிநாட்டில் வேலை", p2: " செய்ய அனுமதிக்குமா?" },
+  ],
+  kn: [
+    { p1: "ದಕ್ಷಿಣ ಭಾರತದಲ್ಲಿ ನಿಮ್ಮ ಪರಿಪೂರ್ಣ ", highlight: "ಕಾಲೇಜನ್ನು", p2: " ಹುಡುಕಿ" },
+    { p1: "ನರ್ಸಿಂಗ್‌ಗೆ ", highlight: "INC ಅನುಮೋದನೆ", p2: " ನಿಜವಾಗಿಯೂ ಅಗತ್ಯವಿದೆಯೇ?" },
+    { p1: "ಪ್ಲಸ್ ಟು ಅಂಕಗಳು ಮಾತ್ರ ", highlight: "ಮೆರಿಟ್ ಸೀಟ್", p2: " ಪಡೆಯಲು ಸಾಧ್ಯವೇ?" },
+    { p1: "ಯಾವ ಪದವಿಗೆ ಹೆಚ್ಚು ಬೆಲೆ ಇದೆ: ", highlight: "B.E ಅಥವಾ B.Tech?", p2: "" },
+    { p1: "ಸ್ವಾಯತ್ತ ಕಾಲೇಜುಗಳು ಉತ್ತಮ ", highlight: "ಉದ್ಯೋಗಾವಕಾಶಗಳನ್ನು", p2: " ನೀಡುತ್ತವೆಯೇ?" },
+    { p1: "ನಿಮ್ಮ ಕಾಲೇಜು ಪದವಿ ನಿಮಗೆ ", highlight: "ವಿದೇಶದಲ್ಲಿ ಕೆಲಸ", p2: " ಮಾಡಲು ಅವಕಾಶ ನೀಡುತ್ತದೆಯೇ?" },
+  ],
+  hi: [
+    { p1: "दक्षिण भारत में अपना आदर्श ", highlight: "कॉलेज", p2: " खोजें" },
+    { p1: "क्या नर्सिंग के लिए ", highlight: "INC अप्रूवल", p2: " वास्तव में आवश्यक है?" },
+    { p1: "क्या केवल 12वीं के अंक एक ", highlight: "मेरिट सीट", p2: " सुरक्षित कर सकते हैं?" },
+    { p1: "किस डिग्री का अधिक महत्व है: ", highlight: "B.E या B.Tech?", p2: "" },
+    { p1: "क्या ऑटोनॉमस कॉलेज बेहतर ", highlight: "प्लेसमेंट", p2: " प्रदान करते हैं?" },
+    { p1: "क्या आपकी कॉलेज की डिग्री आपको ", highlight: "विदेश में काम", p2: " करने देगी?" },
+  ]
+};
+
+const languages = [
+  { code: 'en', label: 'English' },
+  { code: 'hi', label: 'हिंदी' },
+  { code: 'ml', label: 'മലയാളം' },
+  { code: 'ta', label: 'தமிழ்' },
+  { code: 'kn', label: 'ಕನ್ನಡ' }
 ];
 
 const newsItems = [
@@ -59,7 +102,7 @@ const newsItems = [
     id: 3, icon: '🏛️', color: '#059669', bg: '#ECFDF5', tag: 'Counselling',
     title: 'JoSAA 2026 — Round 1 Seat Allotment on June 13',
     date: 'Allotment: Jun 13',
-    image: 'https://images.unsplash.com/photo-1562774053-701939374585?w=400&q=80',
+    image: 'https://i.postimg.cc/cHcWyDch/iit-madras-launches-600-crore-deep-tech-fund-with-unicorn-india-ventures.jpg',
     description: 'JoSAA 2026 counselling registration started June 2 and choice filling is now closed. Round 1 seat allotment for IITs, NITs, IIITs and GFTIs will be announced on June 13. Round 2 on June 30, Round 3 on July 3. Total 5 rounds. Final round for IITs closes July 21, 2026.',
     eligibility: 'JEE Main 2026 or JEE Advanced 2026 qualified candidates',
     applyLink: 'https://www.josaa.nic.in',
@@ -136,6 +179,7 @@ function NewsScrollBar({ navigate }) {
   }, []);
 
   const item = newsItems[current];
+  return null; 
 }
 
 function NewsTicker({ onViewDetails }) {
@@ -278,19 +322,24 @@ export default function Hero({ onSearch }) {
   const [showLoanPopup, setShowLoanPopup] = useState(false);
   const [showEnquiry, setShowEnquiry] = useState(false);
 
+  // Language State
+  const [language, setLanguage] = useState('en');
+
   const isMobile = useMediaQuery('(max-width: 900px)'); 
   const navigate = useNavigate();
 
   const [headlineIdx, setHeadlineIdx] = useState(0);
   const [fadeHeadline, setFadeHeadline] = useState(true);
 
-  // --- UNIFIED MASTER CLOCK (Fires Text + Image at exact same millisecond) ---
+  const currentHeadlinesList = localizedHeadlines[language];
+
+  // --- UNIFIED MASTER CLOCK ---
   useEffect(() => {
     const masterTicker = setInterval(() => {
       setFadeHeadline(false); 
 
       setTimeout(() => {
-        setHeadlineIdx(prev => (prev + 1) % curiousHeadlines.length);
+        setHeadlineIdx(prev => (prev + 1) % currentHeadlinesList.length);
         setCurrentSlide(prev => (prev + 1) % slides.length);
         setFadeHeadline(true); 
       }, 300);
@@ -298,8 +347,12 @@ export default function Hero({ onSearch }) {
     }, 5000); 
 
     return () => clearInterval(masterTicker);
-  }, []);
+  }, [currentHeadlinesList.length]);
   // -------------------------------------------------------------------------
+
+  useEffect(() => {
+    setHeadlineIdx(0);
+  }, [language]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -308,7 +361,7 @@ export default function Hero({ onSearch }) {
     return () => clearTimeout(timer);
   }, []);
 
-  const currentHeadline = curiousHeadlines[headlineIdx];
+  const currentHeadline = currentHeadlinesList[headlineIdx];
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -321,6 +374,7 @@ export default function Hero({ onSearch }) {
   return (
     <section style={{
       ...styles.hero,
+      marginTop: isMobile ? '0px' : '-65px' ,
       ...(isMobile ? { padding: '30px 16px 80px 16px', minHeight: 'auto' } : {})
     }}>
 
@@ -358,9 +412,24 @@ export default function Hero({ onSearch }) {
 
       <div style={{
         ...styles.inner,
-        ...(isMobile ? { flexDirection: 'column' } : {})
+        flexDirection: isMobile ? 'column' : 'row'
       }}>
         <div style={styles.left}>
+          <div style={{ display: 'flex', gap: '8px', marginBottom: '1px', flexWrap: 'wrap', zIndex: 10 }}>
+            {languages.map(lang => (
+              <button
+                key={lang.code}
+                onClick={() => setLanguage(lang.code)}
+                style={{
+                  ...styles.langBtn,
+                  ...(language === lang.code ? styles.langBtnActive : {})
+                }}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
+
           <div style={styles.badge}>🇮🇳 South India's #1 College Discovery Platform</div>
 
           <h1 
@@ -370,7 +439,7 @@ export default function Hero({ onSearch }) {
               opacity: fadeHeadline ? 1 : 0,
               transform: fadeHeadline ? 'translateY(0)' : 'translateY(6px)',
               transition: 'opacity 0.3s ease, transform 0.3s ease',
-              minHeight: isMobile ? '72px' : '128px', 
+              minHeight: isMobile ? '80px' : '128px', 
               display: 'block'
             }}
           >
@@ -481,10 +550,7 @@ export default function Hero({ onSearch }) {
           </div>
         </div>
 
-        <div style={{
-          ...styles.right,
-          ...(isMobile ? { marginTop: '32px', maxWidth: '100%', width: '100%' } : {})
-        }}>
+        <div style={styles.right}>
           <NewsTicker onViewDetails={(item) => navigate(`/news/${item.id}`)} />
         </div>
       </div>
@@ -754,23 +820,33 @@ const styles = {
   bgCircle2: { position: 'absolute', bottom: '-80px', left: '-80px', width: 'clamp(160px,35vw,400px)', height: 'clamp(160px,35vw,400px)', borderRadius: '50%', background: 'radial-gradient(circle, rgba(27,108,168,0.2) 0%, transparent 70%)', zIndex: 2 },
 
   inner: {
-    position: 'relative', zIndex: 3,
-    display: 'flex', alignItems: 'center',
-    flexWrap: 'wrap',
-    gap: 'clamp(24px,4vw,60px)',
-    maxWidth: '1200px', width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: 'clamp(2rem, 5vw, 4rem)',
+    width: '100%',
+    maxWidth: '1280px',
+    margin: '0 auto',
+    position: 'relative',
+    zIndex: 3,
   },
-
   left: {
-    flex: 1, display: 'flex', flexDirection: 'column',
-    alignItems: 'flex-start', gap: '18px',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    flex: '1 1 55%',
+    gap: '1.25rem',
   },
   right: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: '1 1 40%',
     width: '100%',
-    maxWidth: 'clamp(300px,32vw,380px)',
-    flexShrink: 0,
-    alignSelf: 'flex-start',
-    marginTop: '-130px',
+    maxWidth: '380px',
   },
 
   badge: {
@@ -826,92 +902,19 @@ const styles = {
   stat: { display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '2px' },
   statNum: { fontSize: 'clamp(20px,3vw,28px)', fontFamily: 'Playfair Display, serif', color: '#fff' },
   statLabel: { fontSize: '11px', color: 'rgba(255,255,255,0.5)', letterSpacing: '1px', textTransform: 'uppercase' },
-};
-const ns2 = {
-  bar: {
-    position: 'absolute', top: '8px', left: '50%',
-    transform: 'translateX(-50%)',
-    zIndex: 10, display: 'flex', alignItems: 'center',
-    height: '116px',
-    width: '96%', maxWidth: '1160px',
-    background: 'linear-gradient(135deg, rgba(13,17,23,0.96), rgba(26,42,74,0.96))',
-    backdropFilter: 'blur(20px)',
-    borderRadius: '18px',
-    border: '1px solid rgba(255,255,255,0.15)',
-    boxShadow: '0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(232,71,10,0.2)',
-    cursor: 'pointer',
-    overflow: 'hidden',
-    gap: '0',
-  },
-  label: {
-    display: 'flex', flexDirection: 'column', alignItems: 'center',
-    justifyContent: 'center', gap: '4px',
-    background: 'var(--accent)', padding: '0 20px',
-    height: '100%', flexShrink: 0,
-    borderRight: '1px solid rgba(255,255,255,0.1)',
-    minWidth: '80px',
-  },
-  dot: {
-    width: '8px', height: '8px', borderRadius: '50%',
-    background: '#4ADE80', flexShrink: 0,
-    boxShadow: '0 0 0 3px rgba(74,222,128,0.3)',
-    animation: 'pulse 2s infinite',
-  },
-  labelText: {
-    fontSize: '10px', fontWeight: 800, color: '#fff',
-    whiteSpace: 'nowrap', letterSpacing: '1px',
-  },
-  imgBox: {
-    width: '120px', height: '100%',
-    flexShrink: 0, overflow: 'hidden',
-    borderRight: '1px solid rgba(255,255,255,0.1)',
-  },
-  content: {
-    flex: 1, display: 'flex', alignItems: 'center',
-    gap: '14px', padding: '0 24px', overflow: 'hidden',
-  },
-  tagPill: {
-    fontSize: '11px', fontWeight: 700, color: '#fff',
-    padding: '5px 14px', borderRadius: '20px',
-    whiteSpace: 'nowrap', flexShrink: 0,
-    boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-  },
-  textBlock: {
-    display: 'flex', flexDirection: 'column', gap: '3px',
-    flex: 1, overflow: 'hidden',
-  },
-  title: {
-    fontSize: '15px', color: '#fff', fontWeight: 700,
-    whiteSpace: 'nowrap', overflow: 'hidden',
-    textOverflow: 'ellipsis',
-  },
-  desc: {
-    fontSize: '12px', color: 'rgba(255,255,255,0.55)',
-    whiteSpace: 'nowrap', overflow: 'hidden',
-    textOverflow: 'ellipsis',
-  },
-  date: {
-    fontSize: '11px', color: 'rgba(255,255,255,0.5)',
-    whiteSpace: 'nowrap', flexShrink: 0,
-  },
-  readMore: {
-    padding: '0 24px', height: '100%',
-    display: 'flex', alignItems: 'center',
-    borderLeft: '1px solid rgba(255,255,255,0.1)',
-    flexShrink: 0, background: 'rgba(232,71,10,0.15)',
-  },
-  readMoreText: {
-    fontSize: '13px', fontWeight: 700, color: 'var(--accent)',
-    whiteSpace: 'nowrap',
-  },
-  dotsWrapper: {
-    position: 'absolute', bottom: '7px', left: '50%',
-    transform: 'translateX(-50%)',
-    display: 'flex', gap: '4px', alignItems: 'center',
-    zIndex: 2,
-  },
-  progressDot: {
-    height: '3px', borderRadius: '2px',
+
+  langBtn: {
+    background: 'rgba(255,255,255,0.1)',
+    border: '1px solid rgba(255,255,255,0.2)',
+    color: '#fff', padding: '4px 12px',
+    borderRadius: '20px', fontSize: '12px',
+    fontWeight: 600, cursor: 'pointer',
     transition: 'all 0.3s ease',
   },
+  langBtnActive: {
+    background: 'var(--accent)',
+    borderColor: 'var(--accent)',
+    color: '#fff',
+    boxShadow: '0 4px 12px rgba(232,71,10,0.4)',
+  }
 };
