@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { articleRouteMap } from '../data/dropDownData';
 import { blogArticles } from '../data/blogData';
-import LoanPopup from './LoanPopup';
-import LoanEnquiryModal from './LoanEnquiryModal';
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -150,7 +148,7 @@ const newsItems = [
     description: 'LBS Centre Kerala has opened admissions for B.Sc Nursing, Paramedical and allied health courses 2026-27. No entrance exam — selection is purely merit based on Plus Two marks. Covers B.Sc Nursing, GNM, D.Pharm, Health Inspector and Paramedical diploma programmes. Minimum 50% in PCB required. Kerala domicile required.',
     eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50% marks. Kerala domicile required',
     applyLink: 'https://www.lbscentre.in',
-    courses: ['B.Sc Nursing', 'GNM', 'D.Pharm', 'B.Pharm', 'Paramedical'],
+    courses: ['B.Sc Nursing', 'D.Pharm', 'B.Pharm', 'Paramedical'],
     state: 'Kerala',
   },
 ];
@@ -319,8 +317,6 @@ export default function Hero({ onSearch }) {
   const [articleSuggestions, setArticleSuggestions] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showNewsPopup, setShowNewsPopup] = useState(false);
-  const [showLoanPopup, setShowLoanPopup] = useState(false);
-  const [showEnquiry, setShowEnquiry] = useState(false);
 
   // Language State
   const [language, setLanguage] = useState('en');
@@ -561,7 +557,7 @@ export default function Hero({ onSearch }) {
           background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px',
-        }} onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
+        }} onClick={() => setShowNewsPopup(false)}>
 
           <div
             onClick={e => e.stopPropagation()}
@@ -660,16 +656,6 @@ export default function Hero({ onSearch }) {
           </div>
         </div>
       )}
-      {showLoanPopup && (
-        <LoanPopup
-          onClose={() => setShowLoanPopup(false)}
-          onEnquire={() => { setShowLoanPopup(false); setTimeout(() => setShowEnquiry(true), 100); }}
-        />
-      )}
-
-      {showEnquiry && (
-        <LoanEnquiryModal onClose={() => setShowEnquiry(false)} />
-      )}
 
       {!isMobile && (
         <div style={styles.quoteBar}>
@@ -707,7 +693,7 @@ const ns = {
     border: '1px solid rgba(255,255,255,0.3)',
     borderRadius: '16px', overflow: 'hidden',
     display: 'flex', flexDirection: 'column',
-    minHeight: '80vh',
+    minHeight: '70vh',
   },
   header: {
     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -725,21 +711,21 @@ const ns = {
 
   featured: { display: 'flex', flexDirection: 'column' },
   featuredBg: {
-    minHeight: '320px',
+    minHeight: '300px',
     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
     position: 'relative',
   },
   tagPill: {
     fontSize: '10px', fontWeight: 700, color: '#fff',
-    padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.5px',
+    padding: '3px 1px', borderRadius: '20px', letterSpacing: '0.5px',
   },
   bigEmoji: { fontSize: '32px', opacity: 0.3 },
-  featuredBody: { padding: '16px 18px 12px', display: 'flex', flexDirection: 'column', gap: '8px' },
+  featuredBody: { padding: '16px 18px 12px', display: 'flex', flexDirection: 'column', gap: '2px' },
   featuredTitle: { fontSize: '17px', fontWeight: 700, lineHeight: 1.4 },
   featuredDate: { fontSize: '11px', color: '#6B7280', fontWeight: 500 },
 
   dots: {
-    display: 'flex', gap: '4px', padding: '6px 14px',
+    display: 'flex', gap: '4px', padding: '2px 14px',
     borderTop: '1px solid #E5E7EB',
     borderBottom: '1px solid #E5E7EB',
     alignItems: 'center',
