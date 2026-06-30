@@ -1,4 +1,24 @@
 export const blogArticles = {
+  "mbbs-admission-india": {
+    category: "Admissions",
+    title: "How Can I Get MBBS Admission in India?",
+    author: "Admission Counsellor",
+    date: "June 29, 2026",
+    readTime: "3 Min Read",
+    image: "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    content: [
+      { text: "MBBS Admission is very much possible in India if you have a good NEET Score. After students write the NEET UG Exam, state-wise applications open for State Govt University Affiliated Medical Colleges and State Private Universities. Majorly, there are three categories of admissions in Medical Colleges (both Government and Private):" },
+      { heading: "1. Govt Quota", text: "The fees in this particular category will be very less. To secure admission under the Government Quota, students generally need to score above 650 Marks in the NEET UG Exam." },
+      { heading: "2. Management Quota", text: "Students who score between 400 to 600 Marks will be eligible to get Management Quota admissions. However, the fees in this category are significantly higher. It will be approximately ₹7 to ₹8 Lakhs per year in Kerala, and around ₹12 to ₹22 Lakhs per year in states like Karnataka, Tamil Nadu, and Maharashtra." },
+      { heading: "3. NRI Quota", text: "Students who completed their 10th or 12th Standard abroad, or whose parents (1st blood relative) are working in foreign countries, are eligible for the NRI Quota to secure admissions in this category." }
+    ],
+    cta: { 
+      title: "Need Help with MBBS Admissions?", 
+      description: "Confused about quotas, fee structures, and cutoffs? Explore top medical colleges and find the right match for your NEET score.", 
+      buttonText: "Explore Medical Colleges", 
+      link: "/articles/TopIndianMedicalColleges" 
+    }
+  },
   "study-in-germany": {
     category: "Global Education",
     title: "How to Study in Germany Without Tuition Fees: The 2026 Guide for Indian Students",
@@ -512,5 +532,5 @@ export const blogArticles = {
       buttonText: "Explore Top Campuses", 
       link: "/articles/EngineeringCollegesKerala" 
     }
-  }
+  },
 };

@@ -8,6 +8,9 @@ import { engineering_colleges as engineeringColleges } from '../data/engineering
 
 import EnquiryModal from '../components/EnquiryModal';
 import AuthModal from '../components/AuthModal';
+// Loan Components
+import LoanPopup from '../components/LoanPopup';
+import LoanEnquiryModal from '../components/LoanEnquiryModal';
 
 const courseCategories = {
   Medical: ['MBBS', 'BDS', 'BAMS', 'MD', 'MS', 'DM', 'M.Ch', 'PG Diploma'],
@@ -75,10 +78,15 @@ export default function CollegeDetail() {
   const [showAuth, setShowAuth] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
   const [showCollegePopup, setShowCollegePopup] = useState(false);
+  
+  // Loan States
+  const [showLoanPopup, setShowLoanPopup] = useState(false);
+  const [showLoanEnquiry, setShowLoanEnquiry] = useState(false);
 
   const allColleges = [...medicalColleges, ...engineeringColleges];
   const college = allColleges.find(c => String(c.id) === String(id));
 
+  // Auto popup for college details
   useEffect(() => {
     window.scrollTo(0, 0);
     const timer = setTimeout(() => setShowCollegePopup(true), 2000);
@@ -107,6 +115,39 @@ export default function CollegeDetail() {
 
   const SidebarCards = () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      
+      {/* LOAN BANNER MOVED TO SIDEBAR */}
+      <div style={{
+        background: 'linear-gradient(135deg, #996ae9, #6336a7)',
+        borderRadius: '14px', padding: '20px',
+        display: 'flex', flexDirection: 'column',
+        gap: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)'
+      }}>
+        <div>
+          <p style={{ fontSize: '11px', fontWeight: 700, color: '#DDD6FE', textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 4px' }}>
+            🎓 Education Loan
+          </p>
+          <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#fff', margin: 0, fontFamily: 'Playfair Display, serif' }}>
+            Need help funding your education?
+          </h3>
+          <p style={{ fontSize: '12px', color: '#DDD6FE', margin: '6px 0 0', lineHeight: 1.5 }}>
+            Check your eligibility and get instant approval for zero-interest education loans.
+          </p>
+        </div>
+        <button
+          onClick={() => setShowLoanPopup(true)}
+          style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
+            background: '#fff', color: '#a282d8',
+            padding: '10px 16px', borderRadius: '8px',
+            fontWeight: 800, fontSize: '13px', border: 'none', cursor: 'pointer',
+            width: '100%', transition: 'transform 0.2s'
+          }}
+        >
+          💰 Check Eligibility
+        </button>
+      </div>
+
       <div style={s.sideCard}>
         <div style={{ ...s.sideCardHeader, background: regionColor }}>
           <h3 style={s.sideCardTitle}>📨 Send Enquiry</h3>
@@ -219,7 +260,7 @@ export default function CollegeDetail() {
 
           {/* LEFT COLUMN - Tabs & Content */}
           <div style={s.leftCol}>
-
+            
             {/* TABS */}
             <div style={s.tabsWrapper}>
               <div style={s.tabs}>
@@ -465,8 +506,22 @@ export default function CollegeDetail() {
         </div>
       </div>
 
-     {showEnquiry && <EnquiryModal college={college} onClose={() => setShowEnquiry(false)} />}
+      {showEnquiry && <EnquiryModal college={college} onClose={() => setShowEnquiry(false)} />}
       {showAuth && <AuthModal mode={showAuth} onClose={() => setShowAuth(false)} onSwitch={m => setShowAuth(m)} />}
+
+      {/* Loan Popups */}
+      {showLoanPopup && (
+        <LoanPopup
+          onClose={() => setShowLoanPopup(false)}
+          onEnquire={() => { 
+            setShowLoanPopup(false); 
+            setTimeout(() => setShowLoanEnquiry(true), 100); 
+          }}
+        />
+      )}
+      {showLoanEnquiry && (
+        <LoanEnquiryModal onClose={() => setShowLoanEnquiry(false)} />
+      )}
 
       {/* College Popup Ad */}
       {showCollegePopup && (
@@ -475,7 +530,10 @@ export default function CollegeDetail() {
           background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           padding: '16px',
-        }} onClick={() => setShowCollegePopup(false)}>
+        }} 
+        // TRIGGER LOAN POPUP ON BACKGROUND CLICK
+        onClick={() => { setShowCollegePopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
+          
           <div
             onClick={e => e.stopPropagation()}
             style={{
@@ -486,7 +544,8 @@ export default function CollegeDetail() {
           >
             {/* Close button */}
             <button
-              onClick={() => setShowCollegePopup(false)}
+              // TRIGGER LOAN POPUP ON X CLICK
+              onClick={() => { setShowCollegePopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}
               style={{
                 position: 'absolute', top: '12px', right: '12px', zIndex: 10,
                 width: '30px', height: '30px', borderRadius: '50%',
@@ -545,7 +604,9 @@ export default function CollegeDetail() {
               <p style={{
                 textAlign: 'center', fontSize: '11px',
                 color: '#9CA3AF', cursor: 'pointer', margin: 0,
-              }} onClick={() => setShowCollegePopup(false)}>
+              }} 
+              // TRIGGER LOAN POPUP ON SKIP CLICK
+              onClick={() => { setShowCollegePopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
                 Skip for now
               </p>
             </div>
