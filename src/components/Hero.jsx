@@ -435,7 +435,7 @@ export default function Hero({ onSearch }) {
               opacity: fadeHeadline ? 1 : 0,
               transform: fadeHeadline ? 'translateY(0)' : 'translateY(6px)',
               transition: 'opacity 0.3s ease, transform 0.3s ease',
-              minHeight: isMobile ? '80px' : '128px', 
+              minHeight: isMobile ? '70px' : '128px', 
               display: 'block'
             }}
           >
@@ -843,7 +843,7 @@ const styles = {
   },
   heading: {
     fontFamily: 'Playfair Display, serif',
-    fontSize: 'clamp(28px, 5vw, 56px)', fontWeight: 900,
+    fontSize: 'clamp(26px, 5vw, 56px)', fontWeight: 900,
     color: '#fff', lineHeight: 1.15, letterSpacing: '-1px',
     animation: 'fadeUp 0.6s ease 0.1s both',
   },

@@ -1,7 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoanPopup({ onClose, onEnquire }) {
+    const navigate = useNavigate();
 
     return createPortal(
         <div style={{
@@ -89,9 +91,30 @@ export default function LoanPopup({ onClose, onEnquire }) {
                             ❌ No, Thanks
                         </button>
                     </div>
+
+                    {/* NEW: Explore Page Button */}
+                    <button
+                        onClick={() => {
+                            onClose();
+                            navigate('/articles/EducationLoanDetail');
+                        }}
+                        style={{
+                            width: '100%', padding: '14px',
+                            marginTop: '12px',
+                            borderRadius: '12px',
+                            border: '1.5px solid #1B6CA8',
+                            background: '#F0F9FF', color: '#1B6CA8',
+                            fontSize: '14px', fontWeight: 700,
+                            cursor: 'pointer', display: 'flex', 
+                            alignItems: 'center', justifyContent: 'center', gap: '8px'
+                        }}
+                    >
+                        📖 Explore Education Loan Details
+                    </button>
+
                     <p style={{
                         textAlign: 'center', fontSize: '11px',
-                        color: '#9CA3AF', marginTop: '14px', cursor: 'pointer',
+                        color: '#9CA3AF', marginTop: '16px', cursor: 'pointer',
                     }} onClick={onClose}>
                         Skip for now
                     </p>

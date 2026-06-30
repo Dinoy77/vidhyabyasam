@@ -62,6 +62,9 @@ import ComedkGuide from './components/ComedkGuide';
 import BlogArticle from './pages/BlogArticle';
 import BlogList from './pages/BlogList';
 
+import EducationLoanDetails from './pages/articles/EducationLoanDetails';
+
+
 // Array of all dynamic routes configured in collegePageData.js
 const dynamicCollegeRoutes = [
   // --- NURSING ---
@@ -159,6 +162,7 @@ export default function App() {
               <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
 
               <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
+              <Route path='/articles/EducationLoanDetail' element={<EducationLoanDetails/>} />
 
               {/* Blogs Routes */}
               <Route path="/blog/:slug" element={<BlogArticle />} />
