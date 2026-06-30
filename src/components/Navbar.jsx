@@ -337,7 +337,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           {/* Edu Loan button — only on desktop */}
           {!isTablet && (
             <button
-              onClick={() => setShowLoanPopup(true)}
+              onClick={() => navigate('/articles/EducationLoanDetail')}
               style={{
                 padding: '7px 14px', borderRadius: '8px', fontSize: '13px',
                 fontWeight: 600, background: '#fff',
@@ -387,7 +387,13 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('colleges')}>Colleges</span>
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => scrollToSection('regions')}>By Region</span>
           <span style={{ ...styles.mobileLink, cursor: 'pointer' }} onClick={() => { setMenuOpen(false); navigate('/blog'); }}>Blogs</span>
-          <span style={{ ...styles.mobileLink, cursor: 'pointer', color: '#1B6CA8' }} onClick={() => { setMenuOpen(false); setShowLoanPopup(true); }}>
+          <span 
+            style={{ ...styles.mobileLink, cursor: 'pointer', color: '#1B6CA8' }} 
+            onClick={() => { 
+              setMenuOpen(false); 
+              navigate('/articles/EducationLoanDetail'); 
+            }}
+          >
             🏦 Educational Loan
           </span>
 
