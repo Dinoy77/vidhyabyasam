@@ -75,15 +75,19 @@ const languages = [
 
 const newsItems = [
   {
-    id: 1, icon: '🎓', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Exam Alert',
-    title: 'KEAM 2026 — Plus Two Marks Entry Extended to June 14',
-    date: 'Rank List: Jun 20',
-    image: 'https://images.indianexpress.com/2024/05/7_555d15.jpg?w=1200',
-    description: 'CEE Kerala has extended the Plus Two marks submission deadline for KEAM 2026 Engineering Rank List preparation to June 14. KEAM 2026 exam results were declared on May 12. Engineering and Pharmacy Rank List will be published by June 20. CAP Counselling registration expected in July 2026.',
-    eligibility: 'Students who appeared for KEAM 2026 Engineering and Pharmacy entrance exam',
-    applyLink: 'https://www.cee.kerala.gov.in',
-    courses: ['B.Tech', 'B.Pharm', 'MBBS', 'B.Arch'],
-    state: 'Kerala',
+    "id": 1, 
+    "icon": "🎓", 
+    "color": "#1B6CA8", 
+    "bg": "#EBF5FF", 
+    "tag": "Exam Alert",
+    "title": "KEAM 2026 — Results Declared; Rank List on June 20",
+    "date": "Rank List: June 20",
+    "image": "https://images.indianexpress.com/2024/05/7_555d15.jpg?w=1200",
+    "description": "CEE Kerala declared the KEAM 2026 entrance exam results on May 12. Separate rank lists for Engineering and Pharmacy courses will be published on or before June 20, 2026. The final engineering score utilizes a 50:50 weightage combining the normalized KEAM score and final year board marks.",
+    "eligibility": "Candidates securing at least 10 normalized scores (SC/ST candidates must answer at least 1 question to qualify)",
+    "applyLink": "https://cee.kerala.gov.in",
+    "courses": ["B.Tech", "B.Pharm"],
+    "state": "Kerala"
   },
   {
     id: 2, icon: '⚖️', color: '#7C3AED', bg: '#F5F0FF', tag: 'Results',
