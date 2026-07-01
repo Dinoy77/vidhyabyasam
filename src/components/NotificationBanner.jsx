@@ -2,10 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 const notifications = [
   {
-    id: 1, type: 'exam', icon: '📝',
-    title: 'KEAM 2024 Registration Open',
-    message: 'Kerala Engineering Architecture Medical entrance registration closes on March 15, 2024.',
-    date: 'Deadline: Mar 15', color: '#1B6CA8', bg: '#EBF5FF', link: '#',
+    id: 1, 
+    type: "exam", 
+    icon: "📝",
+    title: "KEAM 2026 CAP Option Registration Live",
+    message: "The Centralised Allotment Process (CAP) option registration for Engineering and Pharmacy is active. Submit your college and course preferences before the fast-approaching deadline.",
+    date: "Deadline: July 4", 
+    color: "#1B6CA8", 
+    bg: "#EBF5FF", 
+    link: "https://cee.kerala.gov.in"
   },
   {
     id: 2, type: 'exam', icon: '🏥',
