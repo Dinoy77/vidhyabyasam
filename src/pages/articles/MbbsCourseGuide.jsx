@@ -1,14 +1,30 @@
 import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO'; // <-- Added SEO import
+import { seoConfigurations } from '../../data/seoData'; // <-- Added seoData import
 
 export default function MbbsCourseGuide() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Fetching directly from seoData.js
+  const pageSEO = seoConfigurations.mbbsCourseGuide;
+
   return (
     <div style={styles.pageContainer}>
+      {/* --- RENDER SEO COMPONENT HERE --- */}
+      {pageSEO && (
+        <SEO 
+          title={pageSEO.title}
+          description={pageSEO.description}
+          keywords={pageSEO.keywords}
+          url={pageSEO.url}
+          schemaData={pageSEO.schemaData}
+        />
+      )}
+
       <Navbar />
 
       {/* Article Hero Header */}
@@ -118,7 +134,6 @@ export default function MbbsCourseGuide() {
               <p style={styles.timelineDesc}>The final academic push covering core specialties: General Medicine, General Surgery, Pediatrics, and Obstetrics & Gynecology.</p>
             </div>
 
-            {/* FIXED: Replaced duplicate attributes by cleanly embedding changes into single style objects */}
             <div style={{ ...styles.timelineBlock, borderLeftColor: '#16a34a' }}>
               <div style={{ ...styles.timelineHeader, borderLeftColor: '#16a34a' }}>
                 <span style={{ ...styles.timelineBadge, backgroundColor: '#f0fdf4', color: '#16a34a' }}>Final</span>
@@ -129,7 +144,7 @@ export default function MbbsCourseGuide() {
           </div>
         </section>
 
-        {/* Fees and Cost Breakdown. */}
+        {/* Fees and Cost Breakdown */}
         <section style={styles.section}>
           <h2 style={styles.sectionTitle}>Fee Structure Trends</h2>
           <p style={styles.paragraph}>
@@ -158,7 +173,6 @@ export default function MbbsCourseGuide() {
             <li style={styles.listItem}><strong>Hospital Management:</strong> Transitioning into corporate healthcare administration with an MBA in Healthcare or Master of Hospital Administration (MHA).</li>
           </ul>
         </section>
-
       </main>
 
       <Footer />
