@@ -1,13 +1,18 @@
 import React, { useMemo, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // <-- Added for detail page routing
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO'; // <-- Added SEO import
+import { seoConfigurations } from '../../data/seoData'; // <-- Added seoData import
 import { colleges } from '../../data/colleges';
 
 export default function TopTamilNaduMedicalColleges() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Fetching directly from seoData.js
+  const pageSEO = seoConfigurations.topTamilNaduMedicalColleges;
 
   const top10TamilNaduColleges = useMemo(() => {
     return colleges
@@ -18,6 +23,17 @@ export default function TopTamilNaduMedicalColleges() {
 
   return (
     <div style={styles.pageContainer}>
+      {/* --- RENDER SEO COMPONENT HERE --- */}
+      {pageSEO && (
+        <SEO 
+          title={pageSEO.title}
+          description={pageSEO.description}
+          keywords={pageSEO.keywords}
+          url={pageSEO.url}
+          schemaData={pageSEO.schemaData}
+        />
+      )}
+
       <Navbar />
 
       {/* Editorial Header */}
@@ -62,7 +78,6 @@ export default function TopTamilNaduMedicalColleges() {
                 <div style={styles.contentBox}>
                   <div style={styles.contentHeader}>
                     <div>
-                      {/* --- Added Link Wrapper Here --- */}
                       <Link to={`/college/${college.id}`} style={styles.collegeLink}>
                         <h2 style={styles.collegeName}>{college.name}</h2>
                       </Link>

@@ -2,6 +2,8 @@ import React, { useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO';
+import { seoConfigurations } from '../../data/seoData'
 import { engineering_colleges } from '../../data/engineering_colleges';
 
 export default function TopIndianEngineeringColleges() {
@@ -9,25 +11,32 @@ export default function TopIndianEngineeringColleges() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Filter for the top premier engineering colleges in South India
+  // Fetching directly from seoData.js - no hardcoded fallbacks here!
+  const pageSEO = seoConfigurations.topIndianEngineeringColleges;
+
   const southIndianEngineeringGiants = useMemo(() => {
-    // Define South Indian states
     const southIndianStates = ['Tamil Nadu', 'Karnataka', 'Kerala'];
     
     return engineering_colleges
-      // 1. Filter out only colleges located in South India
       .filter(c => southIndianStates.includes(c.state))
-      // 2. Sort them by highest rating first. If ratings are tied, sort by most reviews
       .sort((a, b) => Number(b.rating) - Number(a.rating) || Number(b.reviews) - Number(a.reviews))
-      // 3. Take only the top 10 results
       .slice(0, 10);
   }, []);
 
   return (
     <div style={styles.pageContainer}>
+      {pageSEO && (
+        <SEO 
+          title={pageSEO.title}
+          description={pageSEO.description}
+          keywords={pageSEO.keywords}
+          url={pageSEO.url}
+          schemaData={pageSEO.schemaData}
+        />
+      )}
+
       <Navbar />
 
-      {/* Editorial Header */}
       <header style={styles.heroHeader}>
         <div style={styles.heroContent}>
           <span style={styles.eyebrow}>Zonal Rankings</span>
@@ -44,25 +53,20 @@ export default function TopIndianEngineeringColleges() {
         </div>
       </header>
 
-      {/* Premium Listicle Grid */}
       <main style={styles.mainContent}>
         <div style={styles.listContainer}>
           {southIndianEngineeringGiants.map((college, index) => (
             <article key={college.id} style={styles.card}>
               
-              {/* Left Column: Image Area */}
               <div style={styles.imageBox}>
                 <div style={styles.rankRibbon}>
                   <span style={styles.rankHash}>#</span>
                   <span style={styles.rankNum}>{index + 1}</span>
                 </div>
                 <img 
-                  // Use the college image, or fallback to a professional Engineering/Tech placeholder
                   src={college.image || 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080'} 
                   alt={college.name} 
                   style={styles.image}
-                  // This handler ensures that if the 'college.image' URL itself is broken, 
-                  // it will swap to the placeholder immediately.
                   onError={(e) => {
                     e.target.onerror = null; 
                     e.target.src = 'https://media.collegedekho.com/media/img/institute/crawled_images/None/Campus%20view%20of%20Kings%20Engineering%20College%20Sriperumbudur_Campus.jpeg?width=1080';
@@ -71,11 +75,9 @@ export default function TopIndianEngineeringColleges() {
                 <div style={styles.typeBadge}>{college.type}</div>
               </div>
 
-              {/* Right Column: Detailed Context */}
               <div style={styles.contentBox}>
                 <div style={styles.contentHeader}>
                   <div>
-                    {/* --- Added Link Wrapper Here --- */}
                     <Link to={`/college/${college.id}`} style={styles.collegeLink}>
                       <h2 style={styles.collegeName}>{college.name}</h2>
                     </Link>
@@ -89,7 +91,6 @@ export default function TopIndianEngineeringColleges() {
 
                 <p style={styles.description}>{college.description}</p>
 
-                {/* Structured Matrix */}
                 <div style={styles.dataGrid}>
                   <div style={styles.dataItem}>
                     <span style={styles.dataLabel}>Established</span>
@@ -109,7 +110,6 @@ export default function TopIndianEngineeringColleges() {
                   </div>
                 </div>
 
-                {/* Program Scope Tags */}
                 <div style={styles.tagSection}>
                   <span style={styles.tagHeading}>Top Courses:</span>
                   <div style={styles.tagWrapper}>
@@ -264,8 +264,6 @@ const styles = {
     flexWrap: 'wrap',
     marginBottom: '16px',
   },
-  
-  /* --- Added the collegeLink style --- */
   collegeLink: {
     textDecoration: 'none',
     color: 'inherit',
@@ -274,7 +272,7 @@ const styles = {
   collegeName: {
     fontSize: '24px',
     fontWeight: '800',
-    color: '#1e3a8a', // Matched to the green theme of the eyebrow banner
+    color: '#1e3a8a', 
     marginBottom: '8px',
     lineHeight: '1.25',
     transition: 'color 0.2s ease',

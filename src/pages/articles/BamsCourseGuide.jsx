@@ -1,14 +1,30 @@
 import React, { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import SEO from '../../components/SEO'; // <-- Added SEO import
+import { seoConfigurations } from '../../data/seoData'; // <-- Added seoData import
 
 export default function BamsCourseGuide() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  // Fetching directly from seoData.js
+  const pageSEO = seoConfigurations.bamsCourseGuide;
+
   return (
     <div style={styles.pageContainer}>
+      {/* --- RENDER SEO COMPONENT HERE --- */}
+      {pageSEO && (
+        <SEO 
+          title={pageSEO.title}
+          description={pageSEO.description}
+          keywords={pageSEO.keywords}
+          url={pageSEO.url}
+          schemaData={pageSEO.schemaData}
+        />
+      )}
+
       <Navbar />
 
       <header style={styles.heroHeader}>
