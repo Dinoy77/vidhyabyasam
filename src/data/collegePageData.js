@@ -33,12 +33,34 @@ export const getDomainKeywords = (domain) => {
         'nursing', 'b.sc nursing', 'm.sc nursing', 
         'post basic', 'gnm', 'anm', 'midwifery'          // Nursing Framework Extensions
       ];
+      case 'Management': 
+      return [
+        'mba', 'pgdm', 'mms', 'management', 'bba', 'business',
+        'marketing', 'human resources', 'operations', 'business analytics'
+      ];
     default: 
       return [];
   }
 };
 
 export const collegePageConfig = {
+
+  "TopIndianMBAColleges": {
+    eyebrow: "National Rankings",
+    title: "Top MBA Colleges in India",
+    subtitle: "Discover the premier business schools and management institutes nationwide.",
+    introText: "India houses some of the world's finest business schools, offering elite management education, global exposure, and unparalleled corporate placement opportunities. Explore the top-ranked institutions shaping tomorrow's business leaders.",
+    seoTitle: "Top MBA Colleges in India | 2026 Rankings, Fees & Placements",
+    filters: { domain: "Management" }
+  },
+  "TopSouthIndianMBAColleges": {
+    eyebrow: "Zonal Rankings",
+    title: "Top MBA Colleges in South India",
+    subtitle: "Navigate the elite business schools across the southern states.",
+    introText: "South India is a major economic and educational powerhouse, boasting top-tier management institutes that offer stellar academic curriculums, strong corporate linkages, and exceptional career outcomes.",
+    seoTitle: "Top MBA Colleges in South India | 2026 Rankings & Admissions",
+    filters: { isSouthIndia: true, domain: "Management" }
+  },
   // ==========================================
   //                NURSING
   // ==========================================

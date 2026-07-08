@@ -1,18 +1,24 @@
-import React, { useMemo, useEffect } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
 
-// IMPORT BOTH DATA SOURCES
+// IMPORT ALL THREE DATA SOURCES
 import { colleges } from '../../data/colleges';
 import { engineering_colleges } from '../../data/engineering_colleges'; 
+import { mba_colleges } from '../../data/MBAdata'; 
 
 import { collegePageConfig, nearbyPlacesMap, getDomainKeywords } from '../../data/collegePageData'; 
 
 export default function UniversalCollegesLayout({ pageKey }) {
+  // 1. Pagination State
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    setCurrentPage(1); // Reset to page 1 whenever the category/pageKey changes
   }, [pageKey]);
 
   const config = collegePageConfig[pageKey];
@@ -20,10 +26,8 @@ export default function UniversalCollegesLayout({ pageKey }) {
   const filteredColleges = useMemo(() => {
     if (!config) return [];
 
-    const allColleges = [...(colleges || []), ...(engineering_colleges || [])];
-
-    // --- CASE A: Hardcoded Override (Karnataka State Nursing) ---
     if (pageKey === 'NursingCollegesKarnataka') {
+      const allColleges = [...(colleges || []), ...(engineering_colleges || []), ...(mba_colleges || [])];
       const karnatakaCustomIds = [
         "med-378", "med-106", "med-105", "med-490", "med-374", 
         "med-379", "med-112", "med-491", "med-492", "med-115", 
@@ -35,10 +39,10 @@ export default function UniversalCollegesLayout({ pageKey }) {
         .filter(Boolean);
     }
 
-    // --- CASE B: Hardcoded Override (Bangalore City Nursing) ---
     if (pageKey === 'NursingCollegesBangalore') {
+      const allColleges = [...(colleges || []), ...(engineering_colleges || []), ...(mba_colleges || [])];
       const bangaloreCustomIds = [
-        "med-378", "med-106", "med-105", "med-377","med-117", "med-492","med-493", "med-494", "med-495", "med-496", 
+        "med-378", "med-106", "med-105", "med-377", "med-117", "med-492", "med-493", "med-494", "med-495", "med-496", 
         "med-497", "med-498", "med-499", "med-115", "med-123"
       ];
       return bangaloreCustomIds
@@ -46,7 +50,34 @@ export default function UniversalCollegesLayout({ pageKey }) {
         .filter(Boolean);
     }
 
-    // --- STANDARD COMPREHENSIVE FILTER ---
+    if (config.filters?.domain === 'Management') {
+      const southStates = ['Kerala', 'Karnataka', 'Tamil Nadu'];
+      const targetCity = config.filters?.city;
+      const allowedPlaces = targetCity ? (nearbyPlacesMap[targetCity] || [targetCity]) : [];
+
+      // Filter ONLY from mba_colleges to strictly maintain original file order
+      return (mba_colleges || []).filter(c => {
+        if (config.filters?.isSouthIndia && !southStates.includes(c.state)) return false;
+        if (config.filters?.state && c.state !== config.filters.state) return false;
+        if (config.filters?.type && c.type !== config.filters.type) return false;
+
+        if (targetCity) {
+          const collegeCityLower = c.city?.toLowerCase();
+          const matchesNearby = allowedPlaces.some(place => place.toLowerCase() === collegeCityLower);
+          if (!matchesNearby) return false;
+        }
+
+        return true;
+      });
+      // No slicing or sorting applied to Management so original file sequence remains intact
+    }
+
+    // --- STANDARD COMPREHENSIVE FILTER FOR OTHER DOMAINS ---
+    const allColleges = [
+      ...(colleges || []), 
+      ...(engineering_colleges || [])
+    ];
+    
     const southStates = ['Kerala', 'Karnataka', 'Tamil Nadu'];
     const domainKeywords = getDomainKeywords(config.filters?.domain);
     const targetCity = config.filters?.city;
@@ -54,7 +85,6 @@ export default function UniversalCollegesLayout({ pageKey }) {
 
     return allColleges
       .filter(c => {
-        // 1. Dynamic Domain & Sibling Course Verification
         const offersDomainCourse = c.courses?.some(course => {
           if (typeof course !== 'string') return false;
           const courseLower = course.toLowerCase();
@@ -63,12 +93,10 @@ export default function UniversalCollegesLayout({ pageKey }) {
         
         if (!offersDomainCourse) return false;
 
-        // 2. Global Level Constraints
         if (config.filters?.isSouthIndia && !southStates.includes(c.state)) return false;
         if (config.filters?.state && c.state !== config.filters.state) return false;
         if (config.filters?.type && c.type !== config.filters.type) return false;
 
-        // 3. Proximity Geofilter Engine
         if (targetCity) {
           const collegeCityLower = c.city?.toLowerCase();
           const matchesNearby = allowedPlaces.some(place => place.toLowerCase() === collegeCityLower);
@@ -77,9 +105,20 @@ export default function UniversalCollegesLayout({ pageKey }) {
 
         return true;
       })
-      .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0) || Number(b.reviews || 0) - Number(a.reviews || 0))
-      .slice(0, 12); 
+      .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0) || Number(b.reviews || 0) - Number(a.reviews || 0));
+      // Removed .slice(0, 12) so pagination can handle slicing naturally
   }, [pageKey, config]);
+
+  // 2. Pagination Calculation Logic
+  const totalPages = Math.ceil(filteredColleges.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentColleges = filteredColleges.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 350, behavior: 'smooth' }); // Smooth scroll back to top of the list
+  };
 
   if (!config) return <div style={{ padding: '100px', textAlign: 'center' }}>Page Configuration Not Found.</div>;
 
@@ -122,90 +161,137 @@ export default function UniversalCollegesLayout({ pageKey }) {
 
       <main style={styles.mainContent}>
         <div style={styles.listContainer}>
-          {filteredColleges.length > 0 ? (
-            filteredColleges.map((college, index) => (
-              <article key={college.id} style={styles.card}>
-                
-                <div style={styles.imageBox}>
-                  <div style={styles.rankRibbon}>
-                    <span style={styles.rankHash}>#</span>
-                    <span style={styles.rankNum}>{index + 1}</span>
-                  </div>
-                  <img 
-                    src={college.image || 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?w=800&q=80'} 
-                    alt={college.name} 
-                    style={styles.image}
-                    onError={(e) => {
-                      e.target.onerror = null; 
-                      e.target.src = 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?w=800&q=80';
-                    }}
-                  />
-                  <div style={styles.typeBadge}>{college.type || `${domainStr} / Allied Campus`}</div>
-                </div>
-
-                <div style={styles.contentBox}>
-                  <div style={styles.contentHeader}>
-                    <div>
-                      <Link to={`/college/${college.id}`} style={styles.collegeLink}>
-                        <h2 style={styles.collegeName}>{college.name}</h2>
-                      </Link>
-                      <p style={styles.location}>📍 {college.city}, {college.state}</p>
+          {currentColleges.length > 0 ? (
+            currentColleges.map((college, index) => {
+              // Calculate actual ranking number across pages (e.g. Page 2 starts at #11)
+              const actualRank = indexOfFirstItem + index + 1;
+              
+              return (
+                <article key={college.id} style={styles.card}>
+                  
+                  <div style={styles.imageBox}>
+                    <div style={styles.rankRibbon}>
+                      <span style={styles.rankHash}>#</span>
+                      <span style={styles.rankNum}>{actualRank}</span>
                     </div>
-                    <div style={styles.ratingBlock}>
-                      <div style={styles.ratingScore}>⭐ {Number(college.rating || 0).toFixed(1)}</div>
-                      <div style={styles.reviewCount}>{college.reviews || 0} Reviews</div>
-                    </div>
+                    <img 
+                      src={college.image || 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?w=800&q=80'} 
+                      alt={college.name} 
+                      style={styles.image}
+                      onError={(e) => {
+                        e.target.onerror = null; 
+                        e.target.src = 'https://images.unsplash.com/photo-1576091160550-2173ff9e5eb2?w=800&q=80';
+                      }}
+                    />
+                    <div style={styles.typeBadge}>{college.type || `${domainStr} / Allied Campus`}</div>
                   </div>
 
-                  <p style={styles.description}>
-                    {college.description || `A premier institution offering top-tier training in ${domainStr.toLowerCase()} and relevant professional streams within ${college.city}.`}
-                  </p>
-
-                  <div style={styles.dataGrid}>
-                    <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Established</span>
-                      <span style={styles.dataValue}>{college.established || "N/A"}</span>
-                    </div>
-                    <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Annual Fees</span>
-                      <span style={styles.dataValue}>{college.fees || "Contact College"}</span>
-                    </div>
-                    <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Approval</span>
-                      <span style={styles.dataValue}>{college.approval || "UGC / AICTE / INC / NMC"}</span>
-                    </div>
-                    <div style={styles.dataItem}>
-                      <span style={styles.dataLabel}>Affiliation</span>
-                      <span style={styles.dataValue}>{college.affiliation || "State University System"}</span>
-                    </div>
-                  </div>
-
-                  {college.courses && college.courses.length > 0 && (
-                    <div style={styles.tagSection}>
-                      <span style={styles.tagHeading}>Top Programs:</span>
-                      <div style={styles.tagWrapper}>
-                        {college.courses
-                          .filter(course => {
-                            if (typeof course !== 'string') return false;
-                            const courseLower = course.toLowerCase();
-                            return domainKeywords.some(kw => courseLower.includes(kw.toLowerCase()));
-                          })
-                          .slice(0, 4)
-                          .map(course => (
-                            <span key={course} style={styles.coursePill}>{course}</span>
-                        ))}
+                  <div style={styles.contentBox}>
+                    <div style={styles.contentHeader}>
+                      <div>
+                        <Link to={`/college/${college.id}`} style={styles.collegeLink}>
+                          <h2 style={styles.collegeName}>{college.name}</h2>
+                        </Link>
+                        <p style={styles.location}>📍 {college.city}, {college.state}</p>
+                      </div>
+                      <div style={styles.ratingBlock}>
+                        <div style={styles.ratingScore}>⭐ {Number(college.rating || 0).toFixed(1)}</div>
+                        <div style={styles.reviewCount}>{college.reviews || 0} Reviews</div>
                       </div>
                     </div>
-                  )}
-                </div>
-              </article>
-            ))
+
+                    <p style={styles.description}>
+                      {college.description || `A premier institution offering top-tier training in ${domainStr.toLowerCase()} and relevant professional streams within ${college.city}.`}
+                    </p>
+
+                    <div style={styles.dataGrid}>
+                      <div style={styles.dataItem}>
+                        <span style={styles.dataLabel}>Established</span>
+                        <span style={styles.dataValue}>{college.established || "N/A"}</span>
+                      </div>
+                      <div style={styles.dataItem}>
+                        <span style={styles.dataLabel}>Annual Fees</span>
+                        <span style={styles.dataValue}>{college.fees || "Contact College"}</span>
+                      </div>
+                      <div style={styles.dataItem}>
+                        <span style={styles.dataLabel}>Approval</span>
+                        <span style={styles.dataValue}>{college.approval || "UGC / AICTE / INC / NMC"}</span>
+                      </div>
+                      <div style={styles.dataItem}>
+                        <span style={styles.dataLabel}>Affiliation</span>
+                        <span style={styles.dataValue}>{college.affiliation || "State University System"}</span>
+                      </div>
+                    </div>
+
+                    {college.courses && college.courses.length > 0 && (
+                      <div style={styles.tagSection}>
+                        <span style={styles.tagHeading}>Top Programs:</span>
+                        <div style={styles.tagWrapper}>
+                          {college.courses
+                            .filter(course => {
+                              if (typeof course !== 'string') return false;
+                              const courseLower = course.toLowerCase();
+                              return domainKeywords.some(kw => courseLower.includes(kw.toLowerCase()));
+                            })
+                            .slice(0, 4)
+                            .map(course => (
+                              <span key={course} style={styles.coursePill}>{course}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </article>
+              );
+            })
           ) : (
             <div style={{ textAlign: 'center', padding: '40px', color: '#64748b' }}>
               <h2>No relevant institutions matched this sector region.</h2>
             </div>
           )}
         </div>
+
+        {/* 3. PAGINATION CONTROLS */}
+        {totalPages > 1 && (
+          <nav style={styles.paginationContainer}>
+            <button 
+              style={{
+                ...styles.pageButton, 
+                ...(currentPage === 1 ? styles.disabledButton : {})
+              }}
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              ← Previous
+            </button>
+
+            <div style={styles.pageNumbersWrapper}>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
+                <button
+                  key={number}
+                  style={{
+                    ...styles.pageButton,
+                    ...(currentPage === number ? styles.activePageButton : {})
+                  }}
+                  onClick={() => handlePageChange(number)}
+                >
+                  {number}
+                </button>
+              ))}
+            </div>
+
+            <button 
+              style={{
+                ...styles.pageButton, 
+                ...(currentPage === totalPages ? styles.disabledButton : {})
+              }}
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next →
+            </button>
+          </nav>
+        )}
       </main>
       <Footer />
     </div>
@@ -247,4 +333,11 @@ const styles = {
   tagHeading: { fontSize: '13px', fontWeight: '700', color: '#334155' },
   tagWrapper: { display: 'flex', gap: '8px', flexWrap: 'wrap' },
   coursePill: { padding: '6px 12px', backgroundColor: '#fff', border: '1px solid #cbd5e1', borderRadius: '20px', fontSize: '12px', fontWeight: '600', color: '#0f172a' },
+  
+  // New Pagination Styles
+  paginationContainer: { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px', marginTop: '60px', flexWrap: 'wrap' },
+  pageNumbersWrapper: { display: 'flex', gap: '8px' },
+  pageButton: { padding: '10px 18px', backgroundColor: '#fff', border: '1px solid #cbd5e1', borderRadius: '10px', fontSize: '14px', fontWeight: '700', color: '#0f172a', cursor: 'pointer', transition: 'all 0.2s ease', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' },
+  activePageButton: { backgroundColor: '#059669', color: '#fff', borderColor: '#059669', boxShadow: '0 4px 12px rgba(5, 150, 105, 0.3)' },
+  disabledButton: { backgroundColor: '#f1f5f9', color: '#94a3b8', borderColor: '#e2e8f0', cursor: 'not-allowed', boxShadow: 'none' }
 };

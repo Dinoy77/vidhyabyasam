@@ -575,7 +575,7 @@ export default function Hero({ onSearch }) {
             }}
           >
             <button
-              onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}
+              onClick={() => { setShowNewsPopup(false);}}
               style={{
                 position: 'absolute', top: '12px', right: '12px', zIndex: 10,
                 width: '30px', height: '30px', borderRadius: '50%',
@@ -641,7 +641,7 @@ export default function Hero({ onSearch }) {
                 ))}
               </div>
               <button
-                onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}
+                onClick={() => { setShowNewsPopup(false);}}
                 style={{
                   width: '100%', padding: '12px',
                   borderRadius: '10px', border: 'none',
@@ -653,7 +653,7 @@ export default function Hero({ onSearch }) {
                 Explore Colleges →
               </button>
               <p style={{ textAlign: 'center', fontSize: '11px', color: '#9CA3AF', marginTop: '10px', cursor: 'pointer' }}
-                onClick={() => { setShowNewsPopup(false); setTimeout(() => setShowLoanPopup(true), 500); }}>
+                onClick={() => { setShowNewsPopup(false); }}>
                 Skip for now
               </p>
             </div>

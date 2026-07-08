@@ -4,9 +4,10 @@ import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
 import Footer from '../components/Footer';
 
-// 1. Import both datasets and all filters
+// 1. Import all datasets and filters
 import { colleges as medicalColleges, regions, courseFilters, typeFilters } from '../data/colleges';
 import { engineering_colleges as engineeringColleges } from '../data/engineering_colleges';
+import { mba_colleges } from '../data/MBAdata';
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -30,40 +31,75 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   // Get dynamic styles based on screen width
   const styles = getStyles(isMobile);
 
-  // 2. Safely process engineering IDs and combine both lists globally
+  // 2. Safely process and normalize all datasets globally
   const allColleges = useMemo(() => {
-    const safeEngineeringColleges = engineeringColleges.map(college => ({
+    const safeEngineeringColleges = (engineeringColleges || []).map(college => ({
       ...college,
-      id: college.id  // Prevent ID clashes with medical colleges
+      id: college.id ? String(college.id) : `eng-${Math.random().toString(36).substr(2, 9)}`,
+      courses: Array.isArray(college.courses) ? college.courses : [],
+      tags: Array.isArray(college.tags) ? college.tags : []
     }));
-    return [...medicalColleges, ...safeEngineeringColleges];
+
+    const safeMbaColleges = (mba_colleges || []).map(college => ({
+      ...college,
+      id: college.id ? String(college.id) : `mba-${Math.random().toString(36).substr(2, 9)}`,
+      // Provide a fallback region so MBA colleges don't break location filters
+      region: college.region || college.state || college.city || 'Other',
+      courses: Array.isArray(college.courses) ? college.courses : ['MBA'],
+      tags: Array.isArray(college.tags) ? college.tags : []
+    }));
+
+    const safeMedicalColleges = (medicalColleges || []).map(college => ({
+      ...college,
+      courses: Array.isArray(college.courses) ? college.courses : [],
+      tags: Array.isArray(college.tags) ? college.tags : []
+    }));
+
+    return [...safeMedicalColleges, ...safeEngineeringColleges, ...safeMbaColleges];
   }, []);
 
-  // 3. Filter against the combined 'allColleges' array
+  // 3. Comprehensive Filter Engine (Upgraded for MBA/Management)
   const filtered = useMemo(() => {
     let result = allColleges;
 
+    // Region Filter (Checks region, state, and city to accommodate MBA data structures)
     if (activeRegion !== 'All') {
-      result = result.filter(c => c.region === activeRegion);
-    }
-
-    if (activeCourse !== 'All Courses') {
-      result = result.filter(c =>
-        c.courses && c.courses.some(course =>
-          course.toLowerCase().includes(activeCourse.toLowerCase()) ||
-          activeCourse.toLowerCase().includes(course.toLowerCase())
-        )
+      result = result.filter(c => 
+        c.region === activeRegion || 
+        c.state === activeRegion || 
+        c.city === activeRegion
       );
     }
 
-    if (activeType !== 'All Types') {
-      result = result.filter(c => c.type && c.type.toLowerCase().includes(activeType.toLowerCase().replace('all types', '')));
+    // Course Filter (With smart synonym matching for MBA / PGDM / MMS)
+    if (activeCourse !== 'All Courses') {
+      const queryLower = activeCourse.toLowerCase();
+      const managementKeywords = ['mba', 'pgdm', 'mms', 'management', 'business', 'bba'];
+      const isManagementFilter = managementKeywords.some(kw => queryLower.includes(kw));
+
+      result = result.filter(c =>
+        c.courses && c.courses.some(course => {
+          const courseLower = course.toLowerCase();
+          // If filtering for MBA/Management, include equivalent peer degrees
+          if (isManagementFilter && managementKeywords.some(kw => courseLower.includes(kw))) {
+            return true;
+          }
+          return courseLower.includes(queryLower) || queryLower.includes(courseLower);
+        })
+      );
     }
 
+    // Type Filter
+    if (activeType !== 'All Types') {
+      const targetType = activeType.toLowerCase().replace('all types', '').trim();
+      result = result.filter(c => c.type && c.type.toLowerCase().includes(targetType));
+    }
+
+    // Search Query Filter (Expanded to include Entrance Exams and Fees)
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(c =>
-        c.name.toLowerCase().includes(q) ||
+        (c.name && c.name.toLowerCase().includes(q)) ||
         (c.city && c.city.toLowerCase().includes(q)) ||
         (c.district && c.district.toLowerCase().includes(q)) ||
         (c.region && c.region.toLowerCase().includes(q)) ||
@@ -72,23 +108,26 @@ export default function Home({ selectedCourse, courseSelectCount }) {
         (c.type && c.type.toLowerCase().includes(q)) ||
         (c.approval && c.approval.toLowerCase().includes(q)) ||
         (c.affiliation && c.affiliation.toLowerCase().includes(q)) ||
-        (c.tags && c.tags.some(t => t.toLowerCase().includes(q)))
+        (c.tags && c.tags.some(t => t.toLowerCase().includes(q))) ||
+        (c.exam && c.exam.toLowerCase().includes(q)) || // MBA Entrance Exam Search (e.g., CAT, NMAT)
+        (c.fees && c.fees.toString().toLowerCase().includes(q))
       );
     }
 
+    // Sorting Engine
     return [...result].sort((a, b) => {
       // Always pin Kerala Academy of Pharmacy to the top
       if (a.name === 'Kerala Academy of Pharmacy') return -1;
       if (b.name === 'Kerala Academy of Pharmacy') return 1;
 
-      const ratingA = a.rating || 0;
-      const ratingB = b.rating || 0;
-      const reviewsA = a.reviews || 0;
-      const reviewsB = b.reviews || 0;
+      const ratingA = Number(a.rating || 0);
+      const ratingB = Number(b.rating || 0);
+      const reviewsA = Number(a.reviews || 0);
+      const reviewsB = Number(b.reviews || 0);
 
       return sortBy === 'rating' ? ratingB - ratingA :
         sortBy === 'reviews' ? reviewsB - reviewsA :
-          a.name.localeCompare(b.name);
+          (a.name || '').localeCompare(b.name || '');
     });
   }, [activeRegion, activeCourse, activeType, searchQuery, sortBy, allColleges]);
 
@@ -223,7 +262,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
                     .filter(page =>
                       page === 1 ||
                       page === totalPages ||
-                      Math.abs(page - currentPage) <= (isMobile ? 0 : 1) // Show fewer pages on mobile
+                      Math.abs(page - currentPage) <= (isMobile ? 0 : 1)
                     )
                     .reduce((acc, page, idx, arr) => {
                       if (idx > 0 && page - arr[idx - 1] > 1) acc.push('...');
@@ -297,7 +336,6 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   );
 }
 
-// Converted to a function to accept dynamic responsive state
 const getStyles = (isMobile) => ({
   section: { 
     padding: isMobile ? '24px 16px 40px' : '40px 48px 60px', 
@@ -354,7 +392,6 @@ const getStyles = (isMobile) => ({
   },
   grid: {
     display: 'grid',
-    // fluid grid that adapts down to mobile devices natively
     gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
     gap: isMobile ? '16px' : '24px',
   },
