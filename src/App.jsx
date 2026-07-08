@@ -82,7 +82,10 @@ const dynamicCollegeRoutes = [
   // --- ENGINEERING ---
   "EngineeringCollegesBangalore", "EngineeringCollegesMysore", "EngineeringCollegesMangalore",
   "EngineeringCollegesKochi", "EngineeringCollegesTrivandrum", "EngineeringCollegesCalicut",
-  "EngineeringCollegesChennai", "EngineeringCollegesCoimbatore", "EngineeringCollegesSalem"
+  "EngineeringCollegesChennai", "EngineeringCollegesCoimbatore", "EngineeringCollegesSalem",
+ 
+  //--- MBA ---
+  "TopIndianMBAColleges", "TopSouthIndianMBAColleges"
 ];
 
 export default function App() {

@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext';
 // 1. Import both datasets
 import { colleges as medicalColleges } from '../data/colleges';
 import { engineering_colleges as engineeringColleges } from '../data/engineering_colleges';
+import { mba_colleges } from '../data/MBAdata';
 
 import EnquiryModal from '../components/EnquiryModal';
 import AuthModal from '../components/AuthModal';
@@ -20,6 +21,7 @@ const courseCategories = {
     'B.Sc RT', 'B.Sc DT', 'B.Sc CCT', 'B.Sc CVT', 'B.Sc CPT', 'B.Sc NST',
     'B.Sc Optometry', 'B.Optom', 'Paramedical', 'Allied Health Sciences'],
   Engineering: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering'],
+  Management: ['MBA', 'PGDM', 'BBA', 'MMS', 'Executive MBA', 'Integrated MBA', 'PGDBA', 'Ph.D Management'],
 };
 
 const categoryColors = {
@@ -83,7 +85,7 @@ export default function CollegeDetail() {
   const [showLoanPopup, setShowLoanPopup] = useState(false);
   const [showLoanEnquiry, setShowLoanEnquiry] = useState(false);
 
-  const allColleges = [...medicalColleges, ...engineeringColleges];
+  const allColleges = [...medicalColleges, ...engineeringColleges, ...mba_colleges];
   const college = allColleges.find(c => String(c.id) === String(id));
 
   // Auto popup for college details

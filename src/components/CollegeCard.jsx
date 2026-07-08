@@ -8,6 +8,7 @@ const regionColors = {
   Kerala: { bg: '#EBF5FF', text: '#1B6CA8', dot: '#1B6CA8' },
   Karnataka: { bg: '#F5F0FF', text: '#7C3AED', dot: '#7C3AED' },
   'Tamil Nadu': { bg: '#FFF0F0', text: '#DC2626', dot: '#DC2626' },
+  Maharashtra : { bg: '#e8f7fb', text: '#33b59f', dot: '#33b59f' }
 };
 
 export default function CollegeCard({ college, delay = 0 }) {

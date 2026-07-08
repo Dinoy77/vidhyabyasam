@@ -11242,7 +11242,7 @@ export const colleges = raw_data.map(college => ({
   id: `med-${college.id}`
 }));
 
-export const regions = ['All', 'Kerala', 'Karnataka', 'Tamil Nadu'];
+export const regions = ['All', 'Kerala', 'Karnataka', 'Tamil Nadu', 'Maharashtra'];
 
 export const courseFilters = [
   'All Courses',
@@ -11257,6 +11257,16 @@ export const courseFilters = [
   'B.Arch',
   'M.Arch',
   'Diploma in Engineering',
+
+  // --- MANAGEMENT & BUSINESS ---
+  'MBA',
+  'PGDM',
+  'BBA',
+  'MMS',
+  'Executive MBA',
+  'Integrated MBA',
+  'PGDBA',
+  'Ph.D Management',
 
   // --- MEDICAL & DENTAL ---
   'MBBS',
@@ -11290,19 +11300,19 @@ export const courseFilters = [
   'Paramedical',
   'Allied Health Sciences',
   'B.Sc AHS',   // Allied Health Sciences (General)
-  'B.Sc MLT',  // Medical Laboratory Technology
-  'B.Sc RIT',  // Radiology & Imaging Technology
-  'B.Sc OTAT', // Operation Theatre & Anesthesia Technology
-  'B.Sc DT',   // Dialysis Technology
-  'B.Sc RT',   // Respiratory Therapy
-  'B.Sc CT',   // Cardiac Technology
-  'B.Sc CVT',  // Cardiovascular Technology
-  'B.Sc CPT',  // Perfusion Technology
-  'B.Sc CCT',  // Critical Care Technology
-  'B.Optom',   // Optometry
-  'B.Sc NEPT', // Neuro-electrophysiology
-  'B.Sc PA',   // Physician Assistant
-  'B.Sc NST'   // Neuro Science Technology
+  'B.Sc MLT',   // Medical Laboratory Technology
+  'B.Sc RIT',   // Radiology & Imaging Technology
+  'B.Sc OTAT',  // Operation Theatre & Anesthesia Technology
+  'B.Sc DT',    // Dialysis Technology
+  'B.Sc RT',    // Respiratory Therapy
+  'B.Sc CT',    // Cardiac Technology
+  'B.Sc CVT',   // Cardiovascular Technology
+  'B.Sc CPT',   // Perfusion Technology
+  'B.Sc CCT',   // Critical Care Technology
+  'B.Optom',    // Optometry
+  'B.Sc NEPT',  // Neuro-electrophysiology
+  'B.Sc PA',    // Physician Assistant
+  'B.Sc NST'    // Neuro Science Technology
 ];
 
 export const typeFilters = ['All Types', 'Government', 'Private'];

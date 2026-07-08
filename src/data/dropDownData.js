@@ -7,6 +7,10 @@ export const dropDownData = {
     "Top Government Medical Colleges",
     "Top Private Medical Colleges in South India",
   ],
+  "Top Ranked MBA Colleges": [
+    "Top MBA Colleges in India",
+    "Top MBA Colleges in South India",
+  ],
   "Top Ranked Engineering Colleges": [
     "Top Engineering Colleges in South India",
     "Top Engineering Colleges in Kerala",
@@ -94,6 +98,8 @@ export const articleRouteMap = {
   "Top Engineering Colleges in Karnataka": "/articles/EngineeringCollegesKarnataka",
   "Top Engineering Colleges in Tamil Nadu": "/articles/EngineeringCollegesTamilNadu",
   "Best Engineering Colleges for Computer Science": "/articles/BestCSEngineeringColleges",
+  "Top MBA Colleges in India" : "/articles/TopIndianMBAColleges",
+  "Top MBA Colleges in South India" : "/articles/TopSouthIndianMBAColleges",
   
   // Third Tier Routes
   "Top Medical Colleges in Bangalore": "/articles/MedicalCollegesBangalore",

@@ -52,9 +52,15 @@ const courseCategories = [
     icon: '⚙️',
     color: '#EA580C',
     courses: ['B.Tech', 'M.Tech', 'B.E', 'M.E', 'BCA', 'MCA', 'B.Arch', 'M.Arch', 'Diploma in Engineering']
+  },
+  // 🌟 NEW MANAGEMENT & MBA CATEGORY 🌟
+  {
+    title: 'Management & Business',
+    icon: '💼',
+    color: '#4F46E5',
+    courses: ['MBA', 'PGDM', 'BBA', 'MMS', 'Executive MBA', 'Integrated MBA', 'PGDBA', 'Ph.D Management']
   }
 ];
-
 export default function Navbar({ onCourseSelect = () => { } }) {
   const { user, logout } = useAuth();
   const [showAuth, setShowAuth] = useState(false);
