@@ -1,186 +1,161 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import EnquiryModal from '../components/EnquiryModal';
-
-const newsItems = [
-  {
-    "id": 1, 
-    "icon": "🎓", 
-    "color": "#1B6CA8", 
-    "bg": "#EBF5FF", 
-    "tag": "Exam Alert",
-    "title": "KEAM 2026 — Rank List Released; CAP Option Registration Open",
-    "date": "Option Entry: Till July 4",
-    "image": "https://images.unsplash.com/photo-1588072432836-e10032774350?w=400&q=80",
-    "description": "CEE Kerala officially released the KEAM 2026 final rank lists for Engineering and Pharmacy on June 27, incorporating the standardized Class 12 board marks. The Centralised Allotment Process (CAP) option registration window is now active, allowing qualified candidates to log in and submit their college and course preferences.",
-    "eligibility": "Candidates who scored at least 10 normalized marks in the entrance exam and completed the Plus Two marks verification",
-    "applyLink": "https://cee.kerala.gov.in",
-    "courses": ["B.Tech", "B.Pharm"],
-    "state": "Kerala"
-  },
-  {
-    id: 2, icon: '⚖️', color: '#7C3AED', bg: '#F5F0FF', tag: 'Results',
-    title: 'CLAT 2026 — Results Out, Counselling Open',
-    date: 'Counselling Live',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&q=80',
-    description: 'CLAT 2026 was conducted on December 7, 2025 in offline mode across 130+ centres. Results have been declared by the Consortium of National Law Universities. Counselling for BA LLB and BBA LLB admissions across 24 participating National Law Universities is now live.',
-    eligibility: 'Passed 10+2 with minimum 45% marks. Age limit: 20 years (22 for SC/ST)',
-    applyLink: 'https://www.consortiumofnlus.ac.in',
-    courses: ['BA LLB', 'BBA LLB', 'LLM'],
-    state: 'All India',
-  },
-  {
-    id: 3, icon: '🏛️', color: '#059669', bg: '#ECFDF5', tag: 'Counselling',
-    title: 'JoSAA 2026 — Round 1 Seat Allotment on June 13',
-    date: 'Allotment: Jun 13',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=80',
-    description: 'JoSAA 2026 counselling registration started June 2 and choice filling is now closed. Round 1 seat allotment for IITs, NITs, IIITs and GFTIs will be announced on June 13. Round 2 on June 30, Round 3 on July 3. Total 5 rounds. Final round for IITs closes July 21, 2026.',
-    eligibility: 'JEE Main 2026 or JEE Advanced 2026 qualified candidates',
-    applyLink: 'https://www.josaa.nic.in',
-    courses: ['B.Tech', 'B.E', 'B.Arch', 'B.Sc', 'Dual Degree'],
-    state: 'All India',
-  },
-  {
-    id: 4, icon: '📝', color: '#DC2626', bg: '#FFF0F0', tag: 'Urgent',
-    title: 'NEET UG 2026 — Re-Exam Announced, City Slip Live',
-    date: 'Re-Exam Soon',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80',
-    description: 'NTA has cancelled NEET UG 2026 and announced re-examination following paper leak allegations. No fresh registration required. Full application fee will be refunded to all candidates. City allotment slip for re-exam is now live on the NTA portal.',
-    eligibility: 'All candidates who registered for NEET UG 2026. Age: 17-25 years. 10+2 with PCB required',
-    applyLink: 'https://www.nta.ac.in',
-    courses: ['MBBS', 'BDS', 'BAMS', 'BHMS', 'BSMS'],
-    state: 'All India',
-  },
-  {
-    id: 5, icon: '🧠', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission',
-    title: 'NIMHANS 2026 — UG Admission Notification Out',
-    date: 'Apply Now',
-    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=400&q=80',
-    description: 'NIMHANS Bangalore UG Admission 2026 notification released on June 3, 2026. Courses in psychiatric nursing and allied health sciences are offered through NIMHANS own entrance examinations. Check official website for complete eligibility criteria and important dates.',
-    eligibility: 'Passed 10+2 with relevant Science subjects from a recognised board',
-    applyLink: 'https://www.nimhans.ac.in',
-    courses: ['B.Sc Nursing', 'Allied Health Sciences'],
-    state: 'Karnataka',
-  },
-  {
-    id: 6, icon: '🏗️', color: '#F5A623', bg: '#FFFBEB', tag: 'Exam Alert',
-    title: 'NATA 2026 — Phase 1 Result Expected June 15',
-    date: 'Result: Jun 15',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80',
-    description: 'NATA 2026 Phase 1 exams are being conducted every Friday and Saturday from April 4 to June 13, 2026. Phase 1 result expected on June 15, 2026. Phase 2 scheduled on August 7 and 8, 2026. Qualifying cutoff is 70 out of 200 marks. Results released within 7 days of each exam.',
-    eligibility: 'Passed 10+2 with Mathematics and minimum 50% aggregate marks',
-    applyLink: 'https://www.nata.ac.in',
-    courses: ['B.Arch'],
-    state: 'All India',
-  },
-  {
-    id: 7, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Admission',
-    title: 'LBS Kerala 2026 — Nursing & Paramedical Admissions Open',
-    date: 'Apply Now',
-    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80',
-    description: 'LBS Centre Kerala has opened admissions for B.Sc Nursing, Paramedical and allied health courses 2026-27. No entrance exam — selection is purely merit based on Plus Two marks. Covers B.Sc Nursing, GNM, D.Pharm, Health Inspector and Paramedical diploma programmes. Minimum 50% in PCB required. Kerala domicile required.',
-    eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50% marks. Kerala domicile required',
-    applyLink: 'https://www.lbscentre.in',
-    courses: ['B.Sc Nursing', 'GNM', 'D.Pharm', 'B.Pharm', 'Paramedical'],
-    state: 'Kerala',
-  },
-];
+import { getNewsById } from '../data/NewsData';
 
 export default function NewsDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [showEnquiry, setShowEnquiry] = useState(false);
+  const [copied, setCopied] = useState(false);
 
-  const news = newsItems.find(n => n.id === parseInt(id));
+  // Safely grab the up-to-date item from your external dataset
+  const news = getNewsById(id);
 
   if (!news) {
     return (
-      <div style={{ textAlign: 'center', padding: '100px 24px' }}>
-        <h2>Update not found</h2>
-        <button onClick={() => navigate('/')} style={s.backBtn}>← Go Back</button>
+      <div style={s.notFound}>
+        <h2 style={{ fontSize: '24px', marginBottom: '12px' }}>Update Not Found</h2>
+        <p style={{ color: '#64748B', marginBottom: '24px' }}>The news article or alert you are looking for has been removed or archived.</p>
+        <button onClick={() => navigate('/')} style={s.backBtnDark}>← Go Back to News Feed</button>
       </div>
     );
   }
 
+  // Handle Share / Copy Link
+  const handleShare = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
   return (
     <div style={s.page}>
 
-      {/* Header */}
+      {/* --- HERO HEADER --- */}
       <div style={{ ...s.header, background: `linear-gradient(135deg, ${news.color}, #0D1117)` }}>
         <div style={s.headerInner}>
-          <button style={s.backBtn} onClick={() => navigate(-1)}>← Back</button>
+          <div style={s.topNavRow}>
+            <button style={s.backBtn} onClick={() => navigate(-1)}>← Back to Feed</button>
+            <div style={s.shareBox}>
+              <button style={s.shareBtn} onClick={handleShare}>
+                {copied ? '✓ Link Copied' : '🔗 Share Update'}
+              </button>
+            </div>
+          </div>
+
           <div style={s.headerContent}>
             <span style={s.bigIcon}>{news.icon}</span>
             <div>
-              <span style={s.tagPill}>{news.tag}</span>
+              <div style={s.badgeRow}>
+                <span style={s.tagPill}>{news.tag}</span>
+                <span style={s.statePill}>📍 {news.state}</span>
+              </div>
               <h1 style={s.title}>{news.title}</h1>
-              <p style={s.date}>🗓 {news.date}</p>
+              <p style={s.date}>🗓 Last Updated / Target Date: <strong>{news.date}</strong></p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Quick chips */}
-      <div style={s.chipsRow}>
-        <div style={{ ...s.chip, background: news.bg, color: news.color }}>
-          📍 {news.state}
-        </div>
-        <div style={{ ...s.chip, background: '#F0FDF4', color: '#059669' }}>
-          📚 {news.courses.length} Courses
-        </div>
-        <div style={{ ...s.chip, background: '#FFF7ED', color: '#E8470A' }}>
-          🗓 {news.date}
+      {/* --- QUICK STATS / CHIP STRIP --- */}
+      <div style={s.chipsStrip}>
+        <div style={s.chipsInner}>
+          <div style={{ ...s.chip, background: news.bg, color: news.color }}>
+            🏢 Authority Region: <strong>{news.state}</strong>
+          </div>
+          <div style={{ ...s.chip, background: '#F0FDF4', color: '#059669' }}>
+            📚 Applicable Courses: <strong>{news.courses.length} Program(s)</strong>
+          </div>
+          <div style={{ ...s.chip, background: '#FFF7ED', color: '#E8470A' }}>
+            ⚡ Status: <strong>{news.tag}</strong>
+          </div>
+          {news.applyLink && (
+            <a 
+              href={news.applyLink} 
+              target="_blank" 
+              rel="noreferrer" 
+              style={{ ...s.chip, background: '#EFF6FF', color: '#2563EB', textDecoration: 'none' }}
+            >
+              🌐 Official Website ↗
+            </a>
+          )}
         </div>
       </div>
 
-      {/* Body */}
+      {/* --- MAIN CONTENT BODY --- */}
       <div style={s.body}>
 
-        {/* About */}
+        {/* 2. ABOUT / DESCRIPTION SECTION */}
         <div style={s.section}>
           <div style={{ ...s.sectionHeader, borderLeft: `4px solid ${news.color}` }}>
-            <h3 style={s.sectionTitle}>About this Update</h3>
+            <h3 style={s.sectionTitle}>Detailed Breakdown</h3>
           </div>
-          <p style={s.desc}>{news.description}</p>
+          <div style={s.descBox}>
+            <p style={s.descText}>{news.description}</p>
+          </div>
         </div>
 
-        {/* Eligibility */}
+        {/* 3. ELIGIBILITY CRITERIA */}
         <div style={s.section}>
           <div style={{ ...s.sectionHeader, borderLeft: `4px solid ${news.color}` }}>
-            <h3 style={s.sectionTitle}>Eligibility</h3>
+            <h3 style={s.sectionTitle}>Who is Eligible?</h3>
           </div>
           <div style={s.eligibilityBox}>
-            <span style={{ fontSize: '20px' }}>✅</span>
-            <p style={{ margin: 0, fontSize: '15px', color: 'var(--deep)', lineHeight: 1.6 }}>
-              {news.eligibility}
-            </p>
+            <span style={{ fontSize: '24px' }}>🛡️</span>
+            <div>
+              <h5 style={s.eligibilityHeading}>Required Criteria & Qualification</h5>
+              <p style={s.eligibilityText}>{news.eligibility}</p>
+            </div>
           </div>
         </div>
 
-        {/* Courses */}
+        {/* 4. RELEVANT COURSES GRID */}
         <div style={s.section}>
           <div style={{ ...s.sectionHeader, borderLeft: `4px solid ${news.color}` }}>
-            <h3 style={s.sectionTitle}>Relevant Courses</h3>
+            <h3 style={s.sectionTitle}>Applicable Programs ({news.courses.length})</h3>
           </div>
           <div style={s.coursesGrid}>
             {news.courses.map(c => (
-              <div key={c} style={{ ...s.courseCard, borderTop: `3px solid ${news.color}` }}>
-                <span style={{ fontSize: '24px' }}>📖</span>
-                <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--deep)' }}>{c}</span>
+              <div key={c} style={{ ...s.courseCard, borderTop: `4px solid ${news.color}` }}>
+                <span style={{ fontSize: '26px' }}>🎓</span>
+                <span style={s.courseName}>{c}</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Enquire button */}
-        <button
-          style={{ ...s.enquireBtn, background: news.color }}
-          onClick={() => setShowEnquiry(true)}
-        >
-          🎓 Enquire Now
-        </button>
+        {/* 5. NEXT STEPS / TIMELINE ADVICE */}
+        <div style={s.timelineBox}>
+          <h4 style={s.timelineTitle}>💡 Recommended Next Steps for Students</h4>
+          <ul style={s.timelineList}>
+            <li style={s.timelineItem}>
+              <strong>Verify Documents:</strong> Ensure your application number, roll number, and security pins are accessible.
+            </li>
+            <li style={s.timelineItem}>
+              <strong>Check Deadlines:</strong> Keep track of closing hours (typically 5:00 PM IST) for option freezing or fee payment.
+            </li>
+            <li style={s.timelineItem}>
+              <strong>Direct Advice:</strong> Still confused about which college option to freeze or float? Get personalized admission guidance below.
+            </li>
+          </ul>
+        </div>
 
-        <p style={s.disclaimer}>🔒 Your information is safe with us.</p>
+        {/* --- BOTTOM CALL TO ACTION --- */}
+        <div style={s.ctaContainer}>
+          <div style={s.ctaText}>
+            <h3 style={s.ctaHeading}>Need Personalized Counselling Support?</h3>
+            <p style={s.ctaSub}>Our academic advisors can help you navigate seat allotments, fee structures, and option registrations.</p>
+          </div>
+          <button
+            style={{ ...s.enquireBtn, background: news.color }}
+            onClick={() => setShowEnquiry(true)}
+          >
+            🎓 Speak with an Admission Counselor
+          </button>
+          <p style={s.disclaimer}>🔒 100% Free & Confidential Academic Guidance</p>
+        </div>
+
       </div>
 
       {/* Enquiry Modal */}
@@ -203,100 +178,333 @@ export default function NewsDetail() {
   );
 }
 
+// --- STYLES OBJECT ---
 const s = {
   page: {
     minHeight: '100vh',
-    background: '#fff',
-    paddingTop: '70px',
+    background: '#F8FAFC', // Soft modern slate gray background
+    paddingTop: '64px',
+    fontFamily: 'DM Sans, system-ui, -apple-system, sans-serif',
+    color: '#1E293B'
+  },
+  notFound: {
+    textAlign: 'center',
+    padding: '120px 24px',
+    maxWidth: '500px',
+    margin: '0 auto'
+  },
+  backBtnDark: {
+    background: '#0F172A',
+    color: '#fff',
+    border: 'none',
+    padding: '10px 20px',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    fontWeight: 600
   },
   header: {
     padding: '40px 0 50px',
+    color: '#fff',
+    boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
   },
   headerInner: {
-    maxWidth: '800px',
+    maxWidth: '860px',
     margin: '0 auto',
-    padding: '0 clamp(16px,4vw,48px)',
+    padding: '0 clamp(16px, 4vw, 32px)',
     display: 'flex',
     flexDirection: 'column',
-    gap: '20px',
+    gap: '24px'
+  },
+  topNavRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   backBtn: {
-    background: 'rgba(255,255,255,0.15)',
-    border: 'none', color: '#fff',
-    padding: '8px 18px', borderRadius: '20px',
-    cursor: 'pointer', fontSize: '13px', fontWeight: 600,
-    alignSelf: 'flex-start', fontFamily: 'DM Sans, sans-serif',
+    background: 'rgba(255, 255, 255, 0.15)',
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+    color: '#fff',
+    padding: '8px 16px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    fontSize: '13px',
+    fontWeight: 600,
+    transition: 'background 0.2s'
+  },
+  shareBox: {
+    display: 'flex',
+    gap: '10px'
+  },
+  shareBtn: {
+    background: 'rgba(0, 0, 0, 0.3)',
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+    color: '#fff',
+    padding: '6px 14px',
+    borderRadius: '20px',
+    cursor: 'pointer',
+    fontSize: '12px',
+    fontWeight: 600
   },
   headerContent: {
-    display: 'flex', gap: '20px', alignItems: 'flex-start',
+    display: 'flex',
+    gap: '20px',
+    alignItems: 'flex-start'
   },
-  bigIcon: { fontSize: '56px', flexShrink: 0 },
+  bigIcon: {
+    fontSize: '56px',
+    flexShrink: 0,
+    background: 'rgba(255, 255, 255, 0.1)',
+    padding: '12px',
+    borderRadius: '16px',
+    lineHeight: 1
+  },
+  badgeRow: {
+    display: 'flex',
+    gap: '8px',
+    flexWrap: 'wrap',
+    marginBottom: '10px'
+  },
   tagPill: {
-    display: 'inline-block',
-    background: 'rgba(255,255,255,0.2)',
-    color: '#fff', fontSize: '11px', fontWeight: 700,
-    padding: '4px 12px', borderRadius: '20px',
-    letterSpacing: '1px', textTransform: 'uppercase',
-    marginBottom: '10px',
+    background: 'rgba(255, 255, 255, 0.25)',
+    color: '#fff',
+    fontSize: '11px',
+    fontWeight: 800,
+    padding: '4px 12px',
+    borderRadius: '20px',
+    letterSpacing: '1px',
+    textTransform: 'uppercase'
+  },
+  statePill: {
+    background: 'rgba(0, 0, 0, 0.3)',
+    color: '#fff',
+    fontSize: '11px',
+    fontWeight: 700,
+    padding: '4px 12px',
+    borderRadius: '20px'
   },
   title: {
-    fontFamily: 'Playfair Display, serif',
-    fontSize: 'clamp(22px,4vw,36px)',
-    color: '#fff', margin: '0 0 8px', lineHeight: 1.2,
+    fontFamily: 'Playfair Display, Georgia, serif',
+    fontSize: 'clamp(24px, 4vw, 36px)',
+    color: '#fff',
+    margin: '0 0 10px',
+    lineHeight: 1.25,
+    fontWeight: 700
   },
-  date: { fontSize: '13px', color: 'rgba(255,255,255,0.7)', margin: 0 },
-
-  chipsRow: {
-    display: 'flex', gap: '10px', flexWrap: 'wrap',
-    maxWidth: '800px', margin: '0 auto',
-    padding: '20px clamp(16px,4vw,48px)',
-    borderBottom: '1px solid var(--border)',
+  date: {
+    fontSize: '14px',
+    color: 'rgba(255, 255, 255, 0.85)',
+    margin: 0
+  },
+  chipsStrip: {
+    background: '#fff',
+    borderBottom: '1px solid #E2E8F0',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+  },
+  chipsInner: {
+    maxWidth: '860px',
+    margin: '0 auto',
+    padding: '16px clamp(16px, 4vw, 32px)',
+    display: 'flex',
+    gap: '10px',
+    flexWrap: 'wrap',
+    alignItems: 'center'
   },
   chip: {
-    padding: '6px 16px', borderRadius: '20px',
-    fontSize: '13px', fontWeight: 600,
+    padding: '6px 14px',
+    borderRadius: '8px',
+    fontSize: '13px',
+    fontWeight: 500,
+    border: '1px solid rgba(0,0,0,0.05)'
   },
-
   body: {
-    maxWidth: '800px',
+    maxWidth: '860px',
     margin: '0 auto',
-    padding: '32px clamp(16px,4vw,48px)',
-    display: 'flex', flexDirection: 'column', gap: '32px',
+    padding: '32px clamp(16px, 4vw, 32px) 64px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '32px'
   },
-  section: { display: 'flex', flexDirection: 'column', gap: '14px' },
-  sectionHeader: { paddingLeft: '12px' },
+  portalBanner: {
+    background: '#FFFFFF',
+    border: '2px dashed',
+    borderRadius: '16px',
+    padding: '24px',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: '16px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
+  },
+  portalText: {
+    flex: '1 1 300px'
+  },
+  portalTitle: {
+    margin: '0 0 4px 0',
+    fontSize: '18px',
+    fontWeight: 700,
+    color: '#0F172A'
+  },
+  portalSub: {
+    margin: 0,
+    fontSize: '14px',
+    color: '#64748B',
+    lineHeight: 1.5
+  },
+  portalBtn: {
+    color: '#fff',
+    padding: '12px 24px',
+    borderRadius: '10px',
+    fontWeight: 700,
+    fontSize: '14px',
+    textDecoration: 'none',
+    textAlign: 'center',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
+    whiteSpace: 'nowrap'
+  },
+  section: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '14px'
+  },
+  sectionHeader: {
+    paddingLeft: '12px'
+  },
   sectionTitle: {
-    fontSize: '13px', fontWeight: 700, color: 'var(--deep)',
-    textTransform: 'uppercase', letterSpacing: '1px', margin: 0,
+    fontSize: '14px',
+    fontWeight: 800,
+    color: '#475569',
+    textTransform: 'uppercase',
+    letterSpacing: '1px',
+    margin: 0
   },
-  desc: {
-    fontSize: '15px', color: '#4B5563', lineHeight: 1.8, margin: 0,
-    background: 'var(--cream)', padding: '18px 20px',
-    borderRadius: '12px', border: '1px solid var(--border)',
+  descBox: {
+    background: '#FFFFFF',
+    padding: '24px',
+    borderRadius: '16px',
+    border: '1px solid #E2E8F0',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+  },
+  descText: {
+    fontSize: '16px',
+    color: '#334155',
+    lineHeight: 1.8,
+    margin: 0
   },
   eligibilityBox: {
-    display: 'flex', gap: '14px', alignItems: 'flex-start',
-    background: '#F0FDF4', border: '1px solid #BBF7D0',
-    borderRadius: '12px', padding: '16px 20px',
+    display: 'flex',
+    gap: '16px',
+    alignItems: 'flex-start',
+    background: '#FFFFFF',
+    border: '1px solid #E2E8F0',
+    borderLeft: '4px solid #10B981', // Green accent
+    borderRadius: '16px',
+    padding: '20px',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+  },
+  eligibilityHeading: {
+    margin: '0 0 6px 0',
+    fontSize: '15px',
+    fontWeight: 700,
+    color: '#0F172A'
+  },
+  eligibilityText: {
+    margin: 0,
+    fontSize: '15px',
+    color: '#475569',
+    lineHeight: 1.6
   },
   coursesGrid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
-    gap: '12px',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+    gap: '16px'
   },
   courseCard: {
-    display: 'flex', flexDirection: 'column', alignItems: 'center',
-    gap: '8px', padding: '20px 12px',
-    background: 'var(--cream)', borderRadius: '12px',
-    border: '1px solid var(--border)', textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
+    padding: '24px 16px',
+    background: '#FFFFFF',
+    borderRadius: '16px',
+    border: '1px solid #E2E8F0',
+    textAlign: 'center',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+  },
+  courseName: {
+    fontSize: '15px',
+    fontWeight: 700,
+    color: '#0F172A'
+  },
+  timelineBox: {
+    background: '#FEF3C7', // Soft warm amber
+    border: '1px solid #FDE68A',
+    borderRadius: '16px',
+    padding: '24px'
+  },
+  timelineTitle: {
+    margin: '0 0 12px 0',
+    fontSize: '16px',
+    fontWeight: 700,
+    color: '#92400E'
+  },
+  timelineList: {
+    margin: 0,
+    paddingLeft: '20px',
+    color: '#78350F',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '8px',
+    fontSize: '14px',
+    lineHeight: 1.6
+  },
+  timelineItem: {
+    marginBottom: '4px'
+  },
+  ctaContainer: {
+    background: '#0F172A', // Dark slate
+    color: '#fff',
+    borderRadius: '20px',
+    padding: '36px 24px',
+    textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '16px',
+    boxShadow: '0 10px 30px rgba(15, 23, 42, 0.15)'
+  },
+  ctaText: {
+    maxWidth: '500px'
+  },
+  ctaHeading: {
+    margin: '0 0 8px 0',
+    fontSize: '22px',
+    fontWeight: 700,
+    fontFamily: 'Playfair Display, Georgia, serif'
+  },
+  ctaSub: {
+    margin: 0,
+    fontSize: '14px',
+    color: '#94A3B8',
+    lineHeight: 1.6
   },
   enquireBtn: {
-    padding: '16px', borderRadius: '12px', border: 'none',
-    color: '#fff', fontSize: '16px', fontWeight: 700,
-    cursor: 'pointer', fontFamily: 'DM Sans, sans-serif',
-    width: '100%', textAlign: 'center',
+    padding: '16px 32px',
+    borderRadius: '12px',
+    border: 'none',
+    color: '#fff',
+    fontSize: '16px',
+    fontWeight: 700,
+    cursor: 'pointer',
+    width: '100%',
+    maxWidth: '380px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+    transition: 'transform 0.1s'
   },
   disclaimer: {
-    textAlign: 'center', color: 'var(--muted)', fontSize: '13px', margin: 0,
-  },
+    color: '#64748B',
+    fontSize: '13px',
+    margin: 0
+  }
 };

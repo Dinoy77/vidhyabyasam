@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { articleRouteMap } from '../data/dropDownData';
 import { blogArticles } from '../data/blogData';
+import { newsItems } from '../data/NewsData';
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -71,90 +72,6 @@ const languages = [
   { code: 'ml', label: 'മലയാളം' },
   { code: 'ta', label: 'தமிழ்' },
   { code: 'kn', label: 'ಕನ್ನಡ' }
-];
-
-const newsItems = [
-  {
-    "id": 1, 
-    "icon": "🎓", 
-    "color": "#1B6CA8", 
-    "bg": "#EBF5FF", 
-    "tag": "Exam Alert",
-    "title": "KEAM 2026 — Results Declared; Rank List on June 20",
-    "date": "Rank List: June 20",
-    "image": "https://images.indianexpress.com/2024/05/7_555d15.jpg?w=1200",
-    "description": "CEE Kerala declared the KEAM 2026 entrance exam results on May 12. Separate rank lists for Engineering and Pharmacy courses will be published on or before June 20, 2026. The final engineering score utilizes a 50:50 weightage combining the normalized KEAM score and final year board marks.",
-    "eligibility": "Candidates securing at least 10 normalized scores (SC/ST candidates must answer at least 1 question to qualify)",
-    "applyLink": "https://cee.kerala.gov.in",
-    "courses": ["B.Tech", "B.Pharm"],
-    "state": "Kerala"
-  },
-  {
-    id: 2, icon: '⚖️', color: '#7C3AED', bg: '#F5F0FF', tag: 'Results',
-    title: 'CLAT 2026 — Results Out, Counselling Open',
-    date: 'Counselling Live',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&q=80',
-    description: 'CLAT 2026 was conducted on December 7, 2025 in offline mode across 130+ centres. Results have been declared by the Consortium of National Law Universities. Counselling for BA LLB and BBA LLB admissions across 24 participating National Law Universities is now live.',
-    eligibility: 'Passed 10+2 with minimum 45% marks. Age limit: 20 years (22 for SC/ST)',
-    applyLink: 'https://www.consortiumofnlus.ac.in',
-    courses: ['BA LLB', 'BBA LLB', 'LLM'],
-    state: 'All India',
-  },
-  {
-    id: 3, icon: '🏛️', color: '#059669', bg: '#ECFDF5', tag: 'Counselling',
-    title: 'JoSAA 2026 — Round 1 Seat Allotment on June 13',
-    date: 'Allotment: Jun 13',
-    image: 'https://i.postimg.cc/cHcWyDch/iit-madras-launches-600-crore-deep-tech-fund-with-unicorn-india-ventures.jpg',
-    description: 'JoSAA 2026 counselling registration started June 2 and choice filling is now closed. Round 1 seat allotment for IITs, NITs, IIITs and GFTIs will be announced on June 13. Round 2 on June 30, Round 3 on July 3. Total 5 rounds. Final round for IITs closes July 21, 2026.',
-    eligibility: 'JEE Main 2026 or JEE Advanced 2026 qualified candidates',
-    applyLink: 'https://www.josaa.nic.in',
-    courses: ['B.Tech', 'B.E', 'B.Arch', 'B.Sc', 'Dual Degree'],
-    state: 'All India',
-  },
-  {
-    id: 4, icon: '📝', color: '#DC2626', bg: '#FFF0F0', tag: 'Urgent',
-    title: 'NEET UG 2026 — Re-Exam Announced, City Slip Live',
-    date: 'Re-Exam Soon',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80',
-    description: 'NTA has cancelled NEET UG 2026 and announced re-examination following paper leak allegations. No fresh registration required. Full application fee will be refunded to all candidates. City allotment slip for re-exam is now live on the NTA portal.',
-    eligibility: 'All candidates who registered for NEET UG 2026. Age: 17-25 years. 10+2 with PCB required',
-    applyLink: 'https://www.nta.ac.in',
-    courses: ['MBBS', 'BDS', 'BAMS', 'BHMS', 'BSMS'],
-    state: 'All India',
-  },
-  {
-    id: 5, icon: '🧠', color: '#E8470A', bg: '#FFF4EE', tag: 'Admission',
-    title: 'NIMHANS 2026 — UG Admission Notification Out',
-    date: 'Apply Now',
-    image: 'https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=400&q=80',
-    description: 'NIMHANS Bangalore UG Admission 2026 notification released on June 3, 2026. Courses in psychiatric nursing and allied health sciences are offered through NIMHANS own entrance examinations. Check official website for complete eligibility criteria and important dates.',
-    eligibility: 'Passed 10+2 with relevant Science subjects from a recognised board',
-    applyLink: 'https://www.nimhans.ac.in',
-    courses: ['B.Sc Nursing', 'Allied Health Sciences'],
-    state: 'Karnataka',
-  },
-  {
-    id: 6, icon: '🏗️', color: '#F5A623', bg: '#FFFBEB', tag: 'Exam Alert',
-    title: 'NATA 2026 — Phase 1 Result Expected June 15',
-    date: 'Result: Jun 15',
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&q=80',
-    description: 'NATA 2026 Phase 1 exams are being conducted every Friday and Saturday from April 4 to June 13, 2026. Phase 1 result expected on June 15, 2026. Phase 2 scheduled on August 7 and 8, 2026. Qualifying cutoff is 70 out of 200 marks. Results released within 7 days of each exam.',
-    eligibility: 'Passed 10+2 with Mathematics and minimum 50% aggregate marks',
-    applyLink: 'https://www.nata.ac.in',
-    courses: ['B.Arch'],
-    state: 'All India',
-  },
-  {
-    id: 7, icon: '🌴', color: '#1B6CA8', bg: '#EBF5FF', tag: 'Admission',
-    title: 'LBS Kerala 2026 — Nursing & Paramedical Admissions Open',
-    date: 'Apply Now',
-    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80',
-    description: 'LBS Centre Kerala has opened admissions for B.Sc Nursing, Paramedical and allied health courses 2026-27. No entrance exam — selection is purely merit based on Plus Two marks. Covers B.Sc Nursing, GNM, D.Pharm, Health Inspector and Paramedical diploma programmes. Minimum 50% in PCB required. Kerala domicile required.',
-    eligibility: 'Passed 10+2 with Physics, Chemistry and Biology with minimum 50% marks. Kerala domicile required',
-    applyLink: 'https://www.lbscentre.in',
-    courses: ['B.Sc Nursing', 'D.Pharm', 'B.Pharm', 'Paramedical'],
-    state: 'Kerala',
-  },
 ];
 
 const slides = [
