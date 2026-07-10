@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://vidyabhyasam.com/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- Articles & Guides -->
   <url>
     <loc>https://vidyabhyasam.com/articles/TopIndianMedicalColleges</loc>
     <changefreq>monthly</changefreq>
@@ -81,6 +83,53 @@
     <loc>https://vidyabhyasam.com/articles/AiimsNursingGuide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- News & Updates -->
+  <url>
+    <loc>https://vidyabhyasam.com/news/keam-2026-first-phase-seat-all</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/nimhans-2026-ug-admissions-pro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/lbs-kerala-2026-nursing-para</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kcet-2026-option-modification</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/comedk-uget-2026-round-1-mock</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/tnea-2026-round-1-choice-filli</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ap-eapcet-2026-phase-1-web-cou</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ts-eapcet-eamcet-2026-phase</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kerala-plus-two-say-2026-dhse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
