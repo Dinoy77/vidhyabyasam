@@ -108,7 +108,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home selectedCourse={selectedCourse} courseSelectCount={courseSelectCount} />} />
               <Route path="/college/:id" element={<CollegeDetail />} />
-              <Route path="/news/:id" element={<NewsDetail />} />
+              <Route path="/news/:slug" element={<NewsDetail />} />
               
               {/* Top Colleges Routes (Static Legacy) */}
               <Route path="/articles/TopKeralaMedicalColleges" element={<TopKeralaMedicalColleges />} />
