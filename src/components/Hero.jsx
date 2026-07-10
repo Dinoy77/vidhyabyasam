@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { articleRouteMap } from '../data/dropDownData';
 import { blogArticles } from '../data/blogData';
-import { newsItems } from '../data/NewsData';
+import { getLatestNewsFeed, generateSlug } from '../data/NewsData';
+
+// Fetch the sorted news array once to be used across the Hero components
+const latestNews = getLatestNewsFeed();
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -87,17 +90,18 @@ function NewsScrollBar({ navigate }) {
   const isMobile = useMediaQuery('(max-width: 768px)'); 
 
   useEffect(() => {
+    if (latestNews.length === 0) return;
     const t = setInterval(() => {
       setAnimating(true);
       setTimeout(() => {
-        setCurrent(i => (i + 1) % newsItems.length);
+        setCurrent(i => (i + 1) % latestNews.length);
         setAnimating(false);
       }, 400);
     }, 4000);
     return () => clearInterval(t);
   }, []);
 
-  const item = newsItems[current];
+  const item = latestNews[current];
   return null; 
 }
 
@@ -108,18 +112,20 @@ function NewsTicker({ onViewDetails }) {
   const isMobile = useMediaQuery('(max-width: 768px)'); 
 
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || latestNews.length === 0) return;
     const t = setInterval(() => {
       setFade(false);
       setTimeout(() => {
-        setActiveIndex(i => (i + 1) % newsItems.length);
+        setActiveIndex(i => (i + 1) % latestNews.length);
         setFade(true);
       }, 300);
     }, 3500);
     return () => clearInterval(t);
   }, [isPaused]);
 
-  const current = newsItems[activeIndex];
+  if (latestNews.length === 0) return null;
+
+  const current = latestNews[activeIndex];
 
   const goTo = (i) => {
     setFade(false);
@@ -140,7 +146,7 @@ function NewsTicker({ onViewDetails }) {
           <span style={ns.liveDot} />
           <span style={ns.headerTitle}>Latest Updates</span>
         </div>
-        <span style={ns.count}>{activeIndex + 1}/{newsItems.length}</span>
+        <span style={ns.count}>{activeIndex + 1}/{latestNews.length}</span>
       </div>
 
       <div style={{
@@ -209,7 +215,7 @@ function NewsTicker({ onViewDetails }) {
       </div>
 
       <div style={ns.dots}>
-        {newsItems.map((item, i) => (
+        {latestNews.map((item, i) => (
           <button key={i} style={{
             ...ns.dot,
             background: i === activeIndex ? current.color : '#D1D5DB',
@@ -219,13 +225,13 @@ function NewsTicker({ onViewDetails }) {
       </div>
 
       <div style={ns.arrows}>
-        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex - 1 + newsItems.length) % newsItems.length)}>
+        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex - 1 + latestNews.length) % latestNews.length)}>
           ←
         </button>
         <span style={{ fontSize: '11px', color: '#6B7280' }}>
-          {activeIndex + 1} of {newsItems.length}
+          {activeIndex + 1} of {latestNews.length}
         </span>
-        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex + 1) % newsItems.length)}>
+        <button style={ns.arrowBtn} onClick={() => goTo((activeIndex + 1) % latestNews.length)}>
           →
         </button>
       </div>
@@ -468,11 +474,11 @@ export default function Hero({ onSearch }) {
         </div>
 
         <div style={styles.right}>
-          <NewsTicker onViewDetails={(item) => navigate(`/news/${item.id}`)} />
+          <NewsTicker onViewDetails={(item) => navigate(`/news/${generateSlug(item.title)}`)} />
         </div>
       </div>
 
-      {showNewsPopup && (
+      {showNewsPopup && latestNews.length > 0 && (
         <div style={{
           position: 'fixed', inset: 0, zIndex: 2000,
           background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
@@ -532,10 +538,10 @@ export default function Hero({ onSearch }) {
                 📢 Exam & Admission Alerts
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>
-                {newsItems.slice(0, 4).map(item => (
+                {latestNews.slice(0, 4).map(item => (
                   <div
                     key={item.id}
-                    onClick={() => { navigate(`/news/${item.id}`); setShowNewsPopup(false); }}
+                    onClick={() => { navigate(`/news/${generateSlug(item.title)}`); setShowNewsPopup(false); }}
                     style={{
                       display: 'flex', alignItems: 'center', gap: '12px',
                       padding: '10px 12px', borderRadius: '10px',

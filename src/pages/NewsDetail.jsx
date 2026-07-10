@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import EnquiryModal from '../components/EnquiryModal';
-import { getNewsById } from '../data/NewsData';
+// IMPORT THE NEW SLUG HELPER
+import { getNewsBySlug } from '../data/NewsData'; 
 
 export default function NewsDetail() {
-  const { id } = useParams();
+  // 1. Grab 'slug' from the URL parameters instead of 'id'
+  const { slug } = useParams(); 
   const navigate = useNavigate();
   const [showEnquiry, setShowEnquiry] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  // Safely grab the up-to-date item from your external dataset
-  const news = getNewsById(id);
+  // 2. Fetch the news item using the slug
+  const news = getNewsBySlug(slug);
+
+  useEffect(() => {
+    if (news) {
+      document.title = `${news.title} | Vidyabhyasam Portal`;
+    } else {
+      document.title = "Update Not Found | Vidyabhyasam Portal";
+    }
+  }, [news]);
 
   if (!news) {
     return (
@@ -51,7 +61,22 @@ export default function NewsDetail() {
                 <span style={s.tagPill}>{news.tag}</span>
                 <span style={s.statePill}>📍 {news.state}</span>
               </div>
-              <h1 style={s.title}>{news.title}</h1>
+              
+              {/* Title is now a clickable link to the official portal */}
+              {news.applyLink ? (
+                <a 
+                  href={news.applyLink} 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  style={s.titleLink}
+                  title={`Visit ${news.applyLink}`}
+                >
+                  <h1 style={s.title}>{news.title} ↗</h1>
+                </a>
+              ) : (
+                <h1 style={s.title}>{news.title}</h1>
+              )}
+              
               <p style={s.date}>🗓 Last Updated / Target Date: <strong>{news.date}</strong></p>
             </div>
           </div>
@@ -182,7 +207,7 @@ export default function NewsDetail() {
 const s = {
   page: {
     minHeight: '100vh',
-    background: '#F8FAFC', // Soft modern slate gray background
+    background: '#F8FAFC',
     paddingTop: '64px',
     fontFamily: 'DM Sans, system-ui, -apple-system, sans-serif',
     color: '#1E293B'
@@ -282,13 +307,20 @@ const s = {
     padding: '4px 12px',
     borderRadius: '20px'
   },
+  titleLink: {
+    textDecoration: 'none',
+    color: 'inherit',
+    display: 'inline-block',
+    transition: 'opacity 0.2s',
+  },
   title: {
     fontFamily: 'Playfair Display, Georgia, serif',
     fontSize: 'clamp(24px, 4vw, 36px)',
     color: '#fff',
     margin: '0 0 10px',
     lineHeight: 1.25,
-    fontWeight: 700
+    fontWeight: 700,
+    cursor: 'pointer'
   },
   date: {
     fontSize: '14px',
@@ -397,7 +429,7 @@ const s = {
     alignItems: 'flex-start',
     background: '#FFFFFF',
     border: '1px solid #E2E8F0',
-    borderLeft: '4px solid #10B981', // Green accent
+    borderLeft: '4px solid #10B981', 
     borderRadius: '16px',
     padding: '20px',
     boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
@@ -438,7 +470,7 @@ const s = {
     color: '#0F172A'
   },
   timelineBox: {
-    background: '#FEF3C7', // Soft warm amber
+    background: '#FEF3C7', 
     border: '1px solid #FDE68A',
     borderRadius: '16px',
     padding: '24px'
@@ -463,7 +495,7 @@ const s = {
     marginBottom: '4px'
   },
   ctaContainer: {
-    background: '#0F172A', // Dark slate
+    background: '#0F172A', 
     color: '#fff',
     borderRadius: '20px',
     padding: '36px 24px',
