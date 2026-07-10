@@ -16,6 +16,7 @@ export const seoConfigurations = {
       }
     }
   },
+
   // Use this dynamically for individual college pages
   dynamicCollege: (collegeName, collegeId) => ({
     title: `${collegeName} - Admission, Fees, Courses & Rankings`,
@@ -29,6 +30,27 @@ export const seoConfigurations = {
       "url": `https://vidyabhyasam.com/college/${collegeId}`
     }
   }),
+
+  // Dynamic news configuration generator based on your slug implementation
+  dynamicNews: (newsItem, slug) => ({
+    title: `${newsItem.title} | Vidyabhyasam Education News`,
+    description: newsItem.description,
+    keywords: `${newsItem.title.toLowerCase()}, ${newsItem.state} education news, ${newsItem.state} admission updates, ${newsItem.courses.join(", ")}, admissions 2026, entrance exam latest news, counselling schedule 2026, seat allotment result, application form details, exam notification, higher education india, admission portal, Vidyabhyasam news`,
+    url: `/news/${slug}`,
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": newsItem.title,
+      "description": newsItem.description,
+      "datePublished": newsItem.publishedAt,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vidyabhyasam",
+        "url": "https://vidyabhyasam.com/"
+      }
+    }
+  }),
+
   topIndianMedicalColleges: {
     title: "Top Medical Colleges in India | Rankings, Fees & Admissions",
     description: "Explore the comprehensive list of the top medical colleges in India. Compare rankings, fee structures, facilities, and admission criteria for MBBS.",
@@ -41,6 +63,7 @@ export const seoConfigurations = {
       "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
     }
   },
+
   topKeralaMedicalColleges: {
     title: "Top Medical Colleges in Kerala | NEET Cutoffs & Rankings",
     description: "A complete guide to the best medical colleges in Kerala. Check out state rankings, fee structures, and NEET UG admission processes.",
@@ -53,6 +76,7 @@ export const seoConfigurations = {
       "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
     }
   },
+
   neetUgGuide: {
     title: "Ultimate NEET UG Guide | Exam Pattern, Syllabus & Tips",
     description: "Crack NEET UG with our comprehensive guide. Get details on the latest syllabus, exam pattern, eligibility, and expert preparation strategies.",
@@ -64,6 +88,7 @@ export const seoConfigurations = {
       "headline": "Ultimate NEET UG Guide"
     }
   },
+
   topKarnatakaMedicalColleges: {
     title: "Top Medical Colleges in Karnataka | Fees & Admissions",
     description: "Discover the top-ranked medical colleges in Karnataka. Find detailed information on MBBS fees, infrastructure, and KEA counseling.",
@@ -75,6 +100,7 @@ export const seoConfigurations = {
       "headline": "Top Medical Colleges in Karnataka"
     }
   },
+
   fmgeGuide: {
     title: "FMGE Preparation Guide | Exam Pattern & Best Strategies",
     description: "Your complete guide to clearing the Foreign Medical Graduates Examination (FMGE). Learn about the exam pattern, passing criteria, and study tips.",
@@ -86,6 +112,7 @@ export const seoConfigurations = {
       "headline": "FMGE Preparation Guide"
     }
   },
+
   topTamilNaduMedicalColleges: {
     title: "Top Medical Colleges in Tamil Nadu | Rankings & Fees",
     description: "Explore the highest-rated medical institutions in Tamil Nadu. View government and private college rankings, fees, and admission details.",
@@ -97,6 +124,7 @@ export const seoConfigurations = {
       "headline": "Top Medical Colleges in Tamil Nadu"
     }
   },
+
   mbbsCourseGuide: {
     title: "MBBS Course Guide | Eligibility, Fees, Syllabus & Scope",
     description: "Everything you need to know about the MBBS course in India. Learn about the curriculum, duration, career prospects, and post-graduation options.",
@@ -108,6 +136,7 @@ export const seoConfigurations = {
       "headline": "MBBS Course Guide"
     }
   },
+
   iniCetGuide: {
     title: "INI CET Complete Guide | Exam Pattern, Syllabus & Prep",
     description: "Master the INI CET for postgraduate medical admissions at AIIMS, JIPMER, PGIMER, and NIMHANS. Get exam dates, syllabus, and preparation tips.",
@@ -119,6 +148,7 @@ export const seoConfigurations = {
       "headline": "INI CET Complete Guide"
     }
   },
+
   bamsCourseGuide: {
     title: "BAMS Course Details | Ayurveda Admission, Fees & Career",
     description: "Comprehensive guide to Bachelor of Ayurvedic Medicine and Surgery (BAMS). Find out about eligibility, subjects, and scope of Ayurveda in India.",
@@ -130,6 +160,7 @@ export const seoConfigurations = {
       "headline": "BAMS Course Details"
     }
   },
+
   medicalCollegesKerala: {
     title: "Directory of Medical Colleges in Kerala | Govt & Private",
     description: "Browse our complete directory of all government and private medical colleges located in Kerala. Find contact details, fee structures, and seat matrix.",
@@ -141,6 +172,7 @@ export const seoConfigurations = {
       "name": "Medical Colleges in Kerala"
     }
   },
+
   medicalCollegesKarnataka: {
     title: "Directory of Medical Colleges in Karnataka | Govt & Private",
     description: "A complete list of medical colleges in Karnataka. Explore campus details, MBBS seat intake, and placement reviews for top institutions.",
@@ -152,6 +184,7 @@ export const seoConfigurations = {
       "name": "Medical Colleges in Karnataka"
     }
   },
+
   bscNursingCourseGuide: {
     title: "B.Sc Nursing Course Guide | Admission, Fees & Scope",
     description: "Discover the B.Sc Nursing course details. Learn about eligibility criteria, syllabus, top nursing colleges, and career opportunities in healthcare.",
@@ -163,6 +196,7 @@ export const seoConfigurations = {
       "headline": "B.Sc Nursing Course Guide"
     }
   },
+
   bPharmCourseGuide: {
     title: "B.Pharm Course Details | Syllabus, Admission & Career",
     description: "Complete guide to the Bachelor of Pharmacy (B.Pharm) program. Explore eligibility, subjects taught, top pharmacy colleges, and job prospects.",
@@ -174,6 +208,7 @@ export const seoConfigurations = {
       "headline": "B.Pharm Course Details"
     }
   },
+
   aiimsNursingGuide: {
     title: "AIIMS Nursing Entrance Exam Guide | Application & Syllabus",
     description: "Prepare for the AIIMS B.Sc and M.Sc Nursing entrance exams. Get the latest information on application dates, exam pattern, and preparation resources.",
@@ -185,6 +220,7 @@ export const seoConfigurations = {
       "headline": "AIIMS Nursing Entrance Exam Guide"
     }
   },
+
   topIndianEngineeringColleges: {
     title: "Top Elite Engineering Colleges in South India",
     description: "A definitive guide to the highest-rated technical institutions across the southern states.",
@@ -197,4 +233,131 @@ export const seoConfigurations = {
       "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
     }
   },
+
+  /* --- Individual Static News Item Configurations --- */
+  newsKeamFirstAllotment: {
+    title: "KEAM 2026 First Phase Seat Allotment Released - Check Memo & Details",
+    description: "CEE Kerala has officially published the First Phase Allotment List for Engineering and B.Pharm courses. Check your allotment memo, remit fees, and report to your assigned college.",
+    keywords: "keam 2026 first allotment list, cee kerala allotment link, how to check keam seat allotment, keam engineering allotment memo, cee.kerala.gov.in allotment 2026, keam option entry results, btech allotment kerala, keam first round result",
+    url: "/news/keam-2026-first-phase-seat-all",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "KEAM 2026 — First Phase Seat Allotment Released",
+      "datePublished": "2026-07-04",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsNimhansUgAdmissions: {
+    title: "NIMHANS 2026 UG Admissions: B.Sc Nursing & Allied Health Sciences",
+    description: "NIMHANS Bangalore UG Admissions for psychiatric nursing and allied health sciences are currently progressing toward the entrance exam phase. Download your admit card from the official portal.",
+    keywords: "nimhans bsc nursing admission 2026, nimhans ug entrance exam date, nimhans allied health sciences application, nimhans.ac.in ug admit card, psychiatric nursing bangalore, nimhans ug courses entry schedule",
+    url: "/news/nimhans-2026-ug-admissions-pro",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "NIMHANS 2026 — UG Admissions Progressing",
+      "datePublished": "2026-06-03",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsLbsKeralaNursingExtended: {
+    title: "LBS Kerala 2026: Nursing & Paramedical Application Deadline Extended",
+    description: "LBS Centre Kerala has extended the application window for B.Sc Nursing and Paramedical courses until July 10. Admission is purely merit-based on Plus Two results.",
+    keywords: "lbs kerala bsc nursing registration last date, lbs nursing paramedical application form 2026, lbs centre nursing merit list, lbscentre.in registration extended, kerala paramedical form date, gnm admission lbs kerala",
+    url: "/news/lbs-kerala-2026-nursing-param",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "LBS Kerala 2026 — Nursing & Paramedical Form Extended to July 10",
+      "datePublished": "2026-07-08",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsKcetRound1Allotment: {
+    title: "KCET 2026: Option Modification Closes; Round 1 Real Allotment on July 15",
+    description: "KEA Karnataka has closed the option entry editing window following the mock results. The final Round 1 real seat allotment results for B.Tech and B.Pharm will launch on July 15.",
+    keywords: "kcet 2026 round 1 allotment result date, kea karnataka mock allotment modification, kcet real seat allotment status, cetonline.karnataka.gov.in result 2026, kcet engineering option entry close, kea round 1 allotment",
+    url: "/news/kcet-2026-option-modification",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "KCET 2026 — Option Modification Closed; Round 1 Allotment on July 15",
+      "datePublished": "2026-07-09",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsComedkChoiceFilling: {
+    title: "COMEDK UGET 2026: Round 1 Mock Choice Filling Live on July 11",
+    description: "COMEDK has published the revised engineering seat matrix listing 24,626 available seats. Approved candidates can begin mock choice filling from July 11 to July 13.",
+    keywords: "comedk 2026 choice filling dates, comedk round 1 mock allotment, comedk engineering seat matrix, comedk.org counselling portal, comedk choice locking timeline, karnataka private engineering counseling",
+    url: "/news/comedk-uget-2026-round-1-mock",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "COMEDK UGET 2026 — Round 1 Mock Choice Filling Opens July 11",
+      "datePublished": "2026-07-07",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsTneaChoiceFilling: {
+    title: "TNEA 2026 Engineering Counselling: Round 1 Choice Filling Begins July 20",
+    description: "DOTE Tamil Nadu is triggering Round 1 choice filling on July 20 for top-ranked applicants (Ranks 1 to 37,976). Provisional allotments will issue on July 24.",
+    keywords: "tnea 2026 round 1 choice filling link, tnea online rank list, dote tamil nadu engineering seat allotment, tneaonline.org login, tamil nadu engineering counselling steps, tnea round 1 dates",
+    url: "/news/tnea-2026-round-1-choice-fill",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "TNEA 2026 — Round 1 Choice Filling Begins July 20",
+      "datePublished": "2026-07-01",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsApEapcetCounselling: {
+    title: "AP EAPCET 2026: Phase 1 Web Counselling Schedule & Option Entry Live",
+    description: "APSCHE has initiated Phase 1 web counselling for AP EAMCET qualifiers. Complete online processing fee payments, slot booking, and web options entry in mid-July.",
+    keywords: "ap eapcet 2026 web options date, ap eamcet phase 1 counselling schedule, apsche slot booking certificate verification, cets.apsche.ap.gov.in web options, andhra pradesh engineering counselling links",
+    url: "/news/ap-eapcet-2026-phase-1-web-co",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "AP EAPCET 2026 — Phase 1 Web Counselling Schedule Live",
+      "datePublished": "2026-07-05",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsTsEapcetAllotmentLive: {
+    title: "TS EAPCET (EAMCET) 2026: Phase 1 Seat Allotment Results Live Today",
+    description: "TGCHE is releasing the Phase 1 Seat Allotment results today, July 10, 2026. Log in to download your allocation memo, pay your tuition fee, and self-report.",
+    keywords: "ts eapcet 2026 phase 1 seat allotment results, tgche eamcet allotment list today, how to check ts eapcet allotment memo, tgeapcet.nic.in logging, telangana engineering first round allotment live",
+    url: "/news/ts-eapcet-eamcet-2026-phase",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "TS EAPCET (EAMCET) 2026 — Phase 1 Seat Allotment Result Live",
+      "datePublished": "2026-07-10",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  },
+
+  newsKeralaPlusTwoSayResult: {
+    title: "Kerala Plus Two SAY Result 2026: DHSE Improvement Results Expected Soon",
+    description: "DHSE Kerala is expected to declare the Higher Secondary SAY (Save A Year) and Improvement examination results soon. Check status updates at KITE Kerala.",
+    keywords: "kerala plus two say result 2026 date, dhse kerala improvement result expected link, results.kite.kerala.gov.in supplementary, plus two say exam result, dhse plus two improvement marksheet",
+    url: "/news/kerala-plus-two-say-2026-dhs",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Kerala Plus Two SAY 2026 — DHSE Improvement Result Expected Soon",
+      "datePublished": "2026-07-03",
+      "publisher": { "@type": "Organization", "name": "Vidyabhyasam" }
+    }
+  }
 };

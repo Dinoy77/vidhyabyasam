@@ -1,26 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import EnquiryModal from '../components/EnquiryModal';
-// IMPORT THE NEW SLUG HELPER
 import { getNewsBySlug } from '../data/NewsData'; 
+import { seoConfigurations } from '../data/seoData';
 
 export default function NewsDetail() {
-  // 1. Grab 'slug' from the URL parameters instead of 'id'
   const { slug } = useParams(); 
   const navigate = useNavigate();
   const [showEnquiry, setShowEnquiry] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  // 2. Fetch the news item using the slug
   const news = getNewsBySlug(slug);
 
+// Enhanced SEO Integration Effect
   useEffect(() => {
     if (news) {
-      document.title = `${news.title} | Vidyabhyasam Portal`;
-    } else {
-      document.title = "Update Not Found | Vidyabhyasam Portal";
+      const seoData = seoConfigurations.dynamicNews(news, slug);
+      document.title = seoData.title;
+
+      const setMetaTag = (name, content) => {
+        let element = document.querySelector(`meta[name="${name}"]`);
+        if (!element) {
+          element = document.createElement('meta');
+          element.setAttribute('name', name);
+          document.head.appendChild(element);
+        }
+        element.setAttribute('content', content);
+      };
+
+      setMetaTag('description', seoData.description);
+      setMetaTag('keywords', seoData.keywords);
+
+      let schemaScript = document.querySelector('#seo-schema-news');
+      if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        schemaScript.id = 'seo-schema-news';
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify(seoData.schemaData);
+
+      // ADD THIS CLEANUP FUNCTION
+      // This runs when the component unmounts (user leaves the page)
+      return () => {
+        if (schemaScript) schemaScript.remove();
+        
+        // Reset to your default Home SEO config
+        document.title = seoConfigurations.home.title;
+        setMetaTag('description', seoConfigurations.home.description);
+        setMetaTag('keywords', seoConfigurations.home.keywords);
+      };
     }
-  }, [news]);
+  }, [news, slug]);
 
   if (!news) {
     return (
