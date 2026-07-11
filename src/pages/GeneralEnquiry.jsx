@@ -31,10 +31,29 @@ export default function GeneralEnquiry() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.card}>
+      {/* 
+        Injecting a small style tag to handle mobile-first media overrides 
+        and fluid interactions without requiring a separate CSS file.
+      */}
+      <style>{`
+        @media (max-width: 480px) {
+          .responsive-card {
+            padding: 24px 16px !important;
+          }
+          .responsive-title {
+            font-size: 26px !important;
+          }
+        }
+        input:focus, select:focus, textarea:focus {
+          border-color: #2563eb !important;
+          background-color: #ffffff !important;
+        }
+      `}</style>
+
+      <div className="responsive-card" style={styles.card}>
         <div style={styles.header}>
           <span style={styles.badge}>Free Admission Guidance</span>
-          <h2 style={styles.title}>Enquire Now</h2>
+          <h2 className="responsive-title" style={styles.title}>Enquire Now</h2>
           <p style={styles.subtitle}>
             Fill out your details below and our expert counselors will reach out to guide your career path.
           </p>
@@ -53,7 +72,7 @@ export default function GeneralEnquiry() {
             />
           </div>
 
-          {/* 2. Direct Contact Grid (Priority 2: How to reach them fast?) */}
+          {/* 2. Direct Contact Grid */}
           <div style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Phone Number *</label>
@@ -79,7 +98,7 @@ export default function GeneralEnquiry() {
             </div>
           </div>
 
-          {/* 3. Demographics & Eligibility (Priority 3: Checking qualification criteria) */}
+          {/* 3. Demographics & Eligibility */}
           <div style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Age *</label>
@@ -106,7 +125,7 @@ export default function GeneralEnquiry() {
             </div>
           </div>
 
-          {/* 4. Intent (Priority 4: What program do they want?) */}
+          {/* 4. Intent */}
           <div style={styles.inputGroup}>
             <label style={styles.label}>Which course are you looking for? *</label>
             <input 
@@ -161,23 +180,27 @@ export default function GeneralEnquiry() {
 
 const styles = {
   container: {
-    padding: '40px 20px',
+    padding: '20px 12px', // Reduced horizontal padding for narrow frames
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: '100vh',
     fontFamily: 'DM Sans, sans-serif',
+    backgroundColor: '#f8fafc',
   },
   card: {
     backgroundColor: '#ffffff',
     borderRadius: '20px',
-    padding: '40px',
+    padding: '40px', // Overridden by media queries on small mobile screens
     maxWidth: '650px',
     width: '100%',
-    boxShadow: '0 20px 40px rgba(0, 0, 0, 0.08)',
-    border: '1px solid #f1f5f9',
+    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)',
+    border: '1px solid #e2e8f0',
+    boxSizing: 'border-box',
   },
   header: {
     textAlign: 'center',
-    marginBottom: '32px',
+    marginBottom: '28px',
   },
   badge: {
     display: 'inline-block',
@@ -185,7 +208,7 @@ const styles = {
     backgroundColor: '#eff6ff',
     color: '#2563eb',
     borderRadius: '20px',
-    fontSize: '12px',
+    fontSize: '11px',
     fontWeight: '700',
     textTransform: 'uppercase',
     letterSpacing: '1px',
@@ -193,15 +216,15 @@ const styles = {
   },
   title: {
     fontFamily: 'Playfair Display, serif',
-    fontSize: '32px',
+    fontSize: '32px', // Fluidly shifts downward on small screens via class
     color: '#0f172a',
     fontWeight: '800',
     margin: '0 0 8px 0',
   },
   subtitle: {
-    fontSize: '15px',
+    fontSize: '14px',
     color: '#64748b',
-    lineHeight: '1.6',
+    lineHeight: '1.5',
     margin: 0,
   },
   form: {
@@ -211,8 +234,8 @@ const styles = {
   },
   gridRow: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-    gap: '20px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', // Drops column count seamlessly down to 1 row layout
+    gap: '16px 20px',
   },
   inputGroup: {
     display: 'flex',
@@ -220,24 +243,26 @@ const styles = {
     gap: '6px',
   },
   label: {
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: '700',
-    color: '#334155',
+    color: '#475569',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
   },
   input: {
-    padding: '12px 16px',
+    padding: '12px 14px',
     borderRadius: '10px',
     border: '1px solid #cbd5e1',
     fontSize: '15px',
     color: '#0f172a',
     outline: 'none',
-    transition: 'border-color 0.2s ease',
     backgroundColor: '#f8fafc',
+    boxSizing: 'border-box',
+    width: '100%',
+    transition: 'all 0.2s ease',
   },
   select: {
-    padding: '12px 16px',
+    padding: '12px 14px',
     borderRadius: '10px',
     border: '1px solid #cbd5e1',
     fontSize: '15px',
@@ -245,9 +270,12 @@ const styles = {
     outline: 'none',
     backgroundColor: '#f8fafc',
     cursor: 'pointer',
+    boxSizing: 'border-box',
+    width: '100%',
+    transition: 'all 0.2s ease',
   },
   textarea: {
-    padding: '12px 16px',
+    padding: '12px 14px',
     borderRadius: '10px',
     border: '1px solid #cbd5e1',
     fontSize: '15px',
@@ -256,35 +284,40 @@ const styles = {
     backgroundColor: '#f8fafc',
     resize: 'vertical',
     fontFamily: 'inherit',
+    boxSizing: 'border-box',
+    width: '100%',
+    transition: 'all 0.2s ease',
   },
   submitButton: {
-    padding: '16px',
+    padding: '14px 16px',
     color: '#ffffff',
     border: 'none',
-    borderRadius: '12px',
-    fontSize: '16px',
+    borderRadius: '10px',
+    fontSize: '15px',
     fontWeight: '700',
-    transition: 'background-color 0.2s ease',
-    marginTop: '10px',
-    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+    transition: 'all 0.2s ease',
+    marginTop: '6px',
+    width: '100%',
+    boxShadow: '0 4px 12px rgba(37, 99, 235, 0.15)',
+    boxSizing: 'border-box',
   },
   successBox: {
-    padding: '14px',
+    padding: '12px 14px',
     backgroundColor: '#f0fdf4',
     border: '1px solid #bbf7d0',
     color: '#16a34a',
     borderRadius: '10px',
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: '600',
     textAlign: 'center',
   },
   errorBox: {
-    padding: '14px',
+    padding: '12px 14px',
     backgroundColor: '#fef2f2',
     border: '1px solid #fecaca',
     color: '#dc2626',
     borderRadius: '10px',
-    fontSize: '14px',
+    fontSize: '13px',
     fontWeight: '600',
     textAlign: 'center',
   },

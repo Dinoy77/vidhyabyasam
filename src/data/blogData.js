@@ -1,9 +1,47 @@
 export const blogArticles = {
+  "ap-icet-2026-phase-1-web-counselling-schedule-live": {
+      category: "Alerts & Notifications",
+      title: "AP ICET 2026 — MBA & MCA Phase 1 Counselling Schedule Expected Shortly",
+      author: "Vidyabhyasam Editorial",
+      date: "July 11, 2026",
+      readTime: "3 Min Read",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+      content: [
+        { text: "The State Council of Higher Education, Andhra Pradesh (APSCHE) is gearing up to release the comprehensive Phase 1 web counselling timeline for AP ICET 2026. This process will govern admissions to MBA and MCA programs across state universities and affiliated private colleges." },
+        { 
+          heading: "1. Expected Timeline & Registration", 
+          text: "According to preliminary trends, the online registration and processing fee payment window is expected to commence mid-July. Candidates should regularly monitor the official portal (cets.apsche.ap.gov.in) for the immediate release of the schedule." 
+        },
+        { 
+          heading: "2. Registration & Processing Fees", 
+          text: "To participate in the web counselling process, General/OBC candidates will be required to pay a processing fee of ₹1,200, while SC/ST/PwD candidates will have a reduced fee of ₹600. Payments must be completed online via net banking, credit, or debit cards to unlock the certificate verification steps." 
+        },
+        { 
+          heading: "3. Certificate Verification Process", 
+          text: "Most certificate verifications will be conducted online using previously uploaded data. However, candidates claiming special category reservations (such as NCC, Sports, CAP, or PwD) may be required to physically visit designated Helpline Centres (HLC) across the state for manual document checks." 
+        },
+        { 
+          heading: "4. Academic Eligibility Reminders", 
+          text: "To successfully clear the verification phase, MBA aspirants must hold a 3 or 4-year bachelor's degree with a minimum of 50% marks (45% for reserved categories). MCA aspirants must additionally have studied Mathematics at the 10+2 or graduation level." 
+        },
+        { 
+          heading: "5. Document Preparation Checklist", 
+          text: "While waiting for the schedule, compile your essential documents: AP ICET 2026 Rank Card, Hall Ticket, Degree certificates and consolidated mark sheets, 10th and 12th passing certificates, Transfer Certificate (TC), Income Certificate (if claiming fee reimbursement), and valid Caste/Category certificates." 
+        }
+      ],
+      cta: { 
+        title: "Need Help with AP ICET Admissions?", 
+        description: "Speak with our educational counselors to understand fee reimbursement eligibility and the best MBA/MCA colleges for your rank.", 
+        buttonText: "Get Counseling Support", 
+        link: "/GeneralEnquiry" 
+
+      }
+  },
   "keam-first-phase-allotment-guide": {
     category: "News & Updates",
     title: "KEAM First Phase Allotment Published: Next Steps & Last Rank Details Guide",
     author: "Vidyabhyasam Editorial",
-    date: "July 10, 2026",
+    date: "July 11, 2026",
     readTime: "4 Min Read",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
     content: [
@@ -38,6 +76,113 @@ export const blogArticles = {
       description: "Check the live news alert for the KEAM 2026 First Phase Seat Allotment, including direct portal links, official deadlines, and reporting steps.", 
       buttonText: "View News Alert", 
       link: "/news/keam-2026-first-phase-seat-all" 
+    }
+  },
+  "kerala-plus-two-say-2026-dhse-improvement-result-expected-soon": {
+    category: "News & Updates",
+    title: "Kerala Plus Two SAY Result 2026 — DHSE Compilation Finalizing",
+    author: "Vidyabhyasam Editorial",
+    date: "July 11, 2026",
+    readTime: "2 Min Read",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIoYBz6Z5AdfOWLkGWN3-hywVJf4XKkeYf0Hvxmf7tiCczWDcug0j_-3Th&s=10",
+    content: [
+      { text: "The Directorate of Higher Secondary Education (DHSE), Kerala, is currently in the final stages of data compilation for the Plus Two Save A Year (SAY) and Improvement examinations held earlier this month. The official results are expected to be declared imminently." },
+      { 
+        heading: "1. Exam Context & Timeline", 
+        text: "The supplementary and improvement examinations were successfully conducted across the state from June 29 to July 3, 2026. These exams provided a crucial second chance for students to clear failed subjects or improve their existing scores before undergraduate admission windows close." 
+      },
+      { 
+        heading: "2. Where to Check the Results", 
+        text: "Once the data compilation is finalized and officially signed off, the scorecards will be published live on the official Kerala results portal: results.kite.kerala.gov.in. Students should keep their roll numbers and date of birth details ready for quick access." 
+      },
+      { 
+        heading: "3. Impact on Degree Admissions", 
+        text: "The prompt release of the SAY results is vital for students seeking admission to BA, B.Sc, B.Com, and professional degree courses. Most universities in Kerala delay the final phases of their UG CAP (Centralised Allotment Process) to accommodate students passing through the SAY examinations." 
+      },
+      { 
+        heading: "4. How to Download Your Marksheet", 
+        text: "Upon declaration, visit the KITE Kerala portal, select 'DHSE SAY/IMP EXAM RESULTS - 2026', enter your register number, and click submit. You can download and print the provisional marksheet, which will be valid for immediate college admission procedures until the original hard copies arrive at your respective schools." 
+      }
+    ],
+    cta: { 
+      title: "Confused About Career Options?", 
+      description: "Finished your Plus Two and unsure what to do next? Connect with our expert advisors for free career counseling and college suggestions.", 
+      buttonText: "Book Free Counseling", 
+      link: "/GeneralEnquiry" 
+    }
+  },
+  "ts-eapcet-eamcet-2026-phase-1-seat-allotment-result-live": {
+    category: "Alerts & Notifications",
+    title: "TS EAPCET 2026 — Phase 1 Counselling Allotment Portal Live",
+    author: "Vidyabhyasam Editorial",
+    date: "July 11, 2026",
+    readTime: "3 Min Read",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
+    content: [
+      { text: "The Telangana Council of Higher Education (TGCHE) has officially launched the self-reporting dashboard following the release of the TS EAPCET (formerly EAMCET) 2026 Phase 1 Provisional Seat Allotment orders for Engineering and Pharmacy programs." },
+      { 
+        heading: "1. Self-Reporting is Mandatory", 
+        text: "Securing an allotment on the portal is only the first step. To legally claim the allotted seat, candidates must log into their dashboard at tgeapcet.nic.in, download their allotment memo, and complete the online 'Self-Reporting' process immediately." 
+      },
+      { 
+        heading: "2. Online Tuition Fee Payment", 
+        text: "Along with self-reporting, candidates must pay the designated tuition fee mentioned on their allotment order. This payment must be made online via credit card, debit card, or net banking. Failure to pay the fee and self-report before the specified deadline will result in the automatic cancellation of the seat." 
+      },
+      { 
+        heading: "3. Retaining Seats for Phase 2", 
+        text: "If you are generally satisfied with your Phase 1 seat but still want to try for a better college or branch in Phase 2, you must still pay the fee and self-report now. This secures your current seat as a backup while you participate in the next round of counselling." 
+      },
+      { 
+        heading: "4. Physical College Reporting", 
+        text: "At this stage, candidates are not required to physically visit their allotted engineering or pharmacy colleges. Physical reporting, submission of original certificates, and orientation procedures will only occur after the final phases of counselling are concluded." 
+      },
+      { 
+        heading: "5. Dealing with Payment Failures", 
+        text: "Due to heavy traffic, payment gateways may occasionally experience delays. If money is deducted from your account but the payment receipt is not generated, do not panic. Wait for a few hours and check your payment status on the portal before attempting a second transaction." 
+      }
+    ],
+    cta: { 
+      title: "Need Admission Guidance?", 
+      description: "Unsure whether to accept your Phase 1 seat or wait for Phase 2? Our expert counselors can help you analyze previous year cutoff trends.", 
+      buttonText: "Speak with an Expert", 
+      link: "/GeneralEnquiry" 
+    }
+  },
+  "comedk-uget-2026-round-1-mock-choice-filling-opens-july-11": {
+    category: "News & Updates",
+    title: "COMEDK UGET 2026 — Round 1 Mock Choice Filling Live Today",
+    author: "Vidyabhyasam Editorial",
+    date: "July 11, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "The Consortium of Medical, Engineering and Dental Colleges of Karnataka (COMEDK) has officially activated the web option entry portal for the Round 1 Mock Counselling today, July 11, 2026. This critical phase allows students to simulate their real allotment chances across top private engineering institutions in Karnataka." },
+      { 
+        heading: "1. The 48-Hour Option Entry Window", 
+        text: "The Mock Choice Filling link will remain active strictly until 4:00 PM on July 13, 2026. Candidates are advised not to wait until the final hour, as server loads typically spike. You can log into your dashboard at comedk.org to begin prioritizing your colleges and branches." 
+      },
+      { 
+        heading: "2. Revised Seat Matrix Breakdown", 
+        text: "Before filling out choices, candidates should review the newly published revised seat matrix. There are currently over 24,640 B.Tech and B.Arch seats available across participating institutes, with heavy concentrations in high-demand branches like Computer Science (CSE), Artificial Intelligence (AI), and Information Science (ISE)." 
+      },
+      { 
+        heading: "3. Eligibility to Participate", 
+        text: "This mock round is restricted exclusively to candidates holding a valid COMEDK UGET 2026 rank whose uploaded documents have been successfully verified. Your portal dashboard must display an 'Approved' document status to access the choice filling form." 
+      },
+      { 
+        heading: "4. Why the Mock Round is Essential", 
+        text: "The mock allotment acts as a trial run. It uses the choices you enter to show you an indicative seat based on your rank. While this mock allotment is not a guaranteed admission offer, it provides a realistic preview, allowing you to add, delete, or rearrange your preferences before locking them in for the real Round 1 allotment." 
+      },
+      { 
+        heading: "5. Best Practices for Choice Filling", 
+        text: "Always rank your choices in descending order of preference, placing your absolute dream college and branch at position number one. Do not arrange them based on what you think you will get; the algorithm will naturally trickle down your list until it finds a seat your rank qualifies for." 
+      }
+    ],
+    cta: { 
+      title: "Targeting Elite Colleges in Karnataka?", 
+      description: "Review our comprehensive directory of the best engineering colleges in South India to finalize your COMEDK preference list.", 
+      buttonText: "View Top Engineering Colleges", 
+      link: "/articles/TopIndianEngineeringColleges" 
     }
   },
   "neet-ug-2026-refund-alert": {
