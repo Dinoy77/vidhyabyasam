@@ -1,4 +1,144 @@
 export const blogArticles = {
+  "keam-first-phase-allotment-guide": {
+    category: "News & Updates",
+    title: "KEAM First Phase Allotment Published: Next Steps & Last Rank Details Guide",
+    author: "Vidyabhyasam Editorial",
+    date: "July 10, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
+    content: [
+      { text: "CEE Kerala has officially released the KEAM 2026 first phase allotment, covering B.Tech admissions for government, aided, and private engineering colleges. If you are participating in the KEAM counselling process, taking the right action before the upcoming deadlines is crucial to securing your seat." },
+      { 
+        heading: "1. Top Actions & Deadlines", 
+        text: "Log in to cee.kerala.gov.in to check your allotment memo. If you secured a seat, you must pay your acceptance fee online by the 12th (before 4:00 PM) to confirm it. Do not visit colleges right now; physical reporting happens only after Phase 2." 
+      },
+      { 
+        heading: "2. What If You Didn't Get an Allotment?", 
+        text: "Do nothing right now. Simply wait for the Phase 2 Option Confirmation window to open. Once it opens, log back in to confirm your saved options, and the CEE will consider you for the second round." 
+      },
+      { 
+        heading: "3. Special Categories & Fee Waivers", 
+        text: "Candidates under the Fee Waiver Scheme, SC/ST, OEC, Registered Fishermen, and related categories are fully exempt from tuition fees. However, if allotted, you must pay a ₹1000 Token Deposit by 4:00 PM on the 12th to secure the seat. This will be refunded later." 
+      },
+      { 
+        heading: "4. Phase 2 Prep & Opting Out", 
+        text: "Once Phase 2 opens, you must complete your 'Option Confirmation'. You can rearrange existing options, but cannot add brand-new ones. If you are unsatisfied with your allotment and want to skip to Phase 3, do not pay the fee by the 12th. You will lose your current seat and must forfeit a ₹2000 fee when Phase 3 vacancies are published." 
+      },
+      { 
+        heading: "5. Last Rank Details (CET Trivandrum - CSE Trend)", 
+        text: "Computer Science Engineering (CSE) remains the top choice in 2026. The Phase 1 closing ranks for CSE at College of Engineering Trivandrum (CET) are: State Merit (388), Muslim (477), Ezhava (664), Latin Catholic (970), EWS (1248), and SC (3757). Check the full LRD on the CEE homepage to estimate your chances." 
+      },
+      { 
+        heading: "6. B.Pharm & Medical Update", 
+        text: "B.Pharm allotments have not started yet and will be integrated into later phases. The Kerala Medical Rank list is still pending, meaning MBBS and BDS allotments will happen at a later date." 
+      }
+    ],
+    cta: { 
+      title: "Official KEAM Allotment Update", 
+      description: "Check the live news alert for the KEAM 2026 First Phase Seat Allotment, including direct portal links, official deadlines, and reporting steps.", 
+      buttonText: "View News Alert", 
+      link: "/news/keam-2026-first-phase-seat-all" 
+    }
+  },
+  "neet-ug-2026-refund-alert": {
+    category: "Alerts & Notifications",
+    title: "NEET UG 2026 Refund Alert: Final Deadline Extended — Don't Lose Your Exam Fee!",
+    author: "Vidyabhyasam Editorial",
+    date: "July 10, 2026",
+    readTime: "3 Min Read",
+    image: "https://images.news18.com/ibnlive/uploads/2023/05/neet-ug-2023-guidelines-168342853916x9.jpeg",
+    content: [
+      { text: "Following the official cancellation of the NEET (UG) 2026 exam previously held on May 3, the National Testing Agency (NTA) is actively refunding examination fees to all affected candidates. While over a million students have successfully claimed their refunds, a final window has been opened for those who have yet to update their bank details." },
+      { 
+        heading: "1. Urgent Deadline Notice", 
+        text: "Candidates must update and confirm their bank account details on the official portal strictly by July 14, 2026 (up to 11:50 P.M.). Missing this extended deadline could result in severe delays or complete failure in processing your exam fee refund." 
+      },
+      { 
+        heading: "2. How to Claim Your Refund", 
+        text: "Visit the official NTA registration portal at neet.nta.nic.in. Log in using your credentials and complete the mandatory two-factor authentication for maximum security. From your dashboard, click on the specific link titled 'Bank Account Details Confirmation / Updation'." 
+      },
+      { 
+        heading: "3. Pro Tip for Faster Processing", 
+        text: "When entering your bank information, the NTA highly recommends uploading a scanned copy of a cancelled cheque. This ensures absolute accuracy of your account information and prevents automated processing errors." 
+      },
+      { 
+        heading: "4. Official NTA Support Channels", 
+        text: "If you face technical difficulties accessing the portal or completing the two-factor authentication, contact the NTA immediately via their helpline at +91-11-40759000 or send an email to neetug2026@nta.ac.in." 
+      }
+    ],
+    cta: { 
+      title: "Preparing for the Next NEET UG?", 
+      description: "Don't let the cancellation slow you down. Check out our Ultimate NEET UG Guide for the latest syllabus, exam patterns, and expert preparation strategies.", 
+      buttonText: "Read NEET UG Guide", 
+      link: "/articles/NeetUgGuide" 
+    }
+  },
+  "kerala-mds-admission-2026-updates": {
+    category: "News & Updates",
+    title: "Kerala NEET MDS 2026: Profile Verification & Defect Rectification Window Open",
+    author: "Vidyabhyasam Editorial",
+    date: "July 10, 2026",
+    readTime: "3 Min Read",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+    content: [
+      { text: "The Commissioner for Entrance Examinations (CEE), Kerala, has officially commenced the admission process for Post Graduate Courses in Dental Surgery (MDS) for the 2026 academic year. Following the initial application phase, the portal is now open for critical candidate verifications." },
+      { 
+        heading: "1. Profile Verification & Defect Rectification", 
+        text: "As per the notification dated July 8, 2026, candidates who applied for Kerala MDS admissions can now log into the CEE portal to verify their profile details. If there are any defects or discrepancies in the uploaded documents (like Nativity, Category, or Academic certificates), they must be rectified online before the upcoming deadline." 
+      },
+      { 
+        heading: "2. How to Rectify Defects", 
+        text: "Log in to www.cee.kerala.gov.in using your MDS 2026 Application Number and Password. Navigate to the 'Memo Details' section to see if the CEE has flagged any of your uploaded documents. Upload the corrected, valid certificates directly through the portal. Do not send physical copies to the CEE office." 
+      },
+      { 
+        heading: "3. Upcoming State Merit List", 
+        text: "Once the defect rectification window closes, the CEE will publish the final State Merit List for MDS based on the NEET MDS 2026 scores. Only candidates whose documents are fully verified and approved will be included in this rank list for the Centralised Allotment Process (CAP)." 
+      },
+      { 
+        heading: "4. Management & NRI Quota", 
+        text: "Students seeking admission under the Management or NRI quotas in Self-Financing Dental Colleges must also ensure their category claims are approved in the portal. Failure to produce valid NRI sponsorship documents during this window will result in the claim being rejected." 
+      }
+    ],
+    cta: { 
+      title: "Looking for Top Dental Colleges?", 
+      description: "Explore the best government and private dental institutions in South India and check their fee structures before choice filling begins.", 
+      buttonText: "View Dental Colleges", 
+      link: "/articles/BdsCourseGuide" 
+    }
+  },
+  "kcet-2026-round-1-allotment-updates": {
+    category: "News & Updates",
+    title: "KCET 2026 Round 1 Real Seat Allotment on July 15: Post-Allotment Guide",
+    author: "Vidyabhyasam Editorial",
+    date: "July 10, 2026",
+    readTime: "3 Min Read",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM4dnws9C8QKT995NqtYmN7mwkurefv0geH-hyXvDMD9JqvgRlfke9ogA&s=10",
+    content: [
+      { text: "The Karnataka Examinations Authority (KEA) successfully concluded the option modification window on July 9. With the mock allotments already finalized, candidates are now awaiting the KCET 2026 Round 1 Real Seat Allotment results for B.Tech, B.Pharm, and Agriculture courses, officially scheduled for July 15." },
+      { 
+        heading: "1. Final Allotment Schedule", 
+        text: "The Round 1 real seat allotment results will be published on the KEA portal (cetonline.karnataka.gov.in) on July 15 after 11:00 AM. Unlike the mock allotment, the seat assigned in this round is real. Once allotted, candidates must make a mandatory choice regarding their seat." 
+      },
+      { 
+        heading: "2. Understanding Your Post-Allotment Choices", 
+        text: "Upon viewing your allotment, you must exercise one of four choices. Choice 1 (Freeze): You are satisfied and will pay the fee to join the college. Choice 2 (Float): You accept the seat but want to participate in Round 2 for higher options. Choice 3 (Reject & Upgrade): You reject the current seat but wish to participate in Round 2. Choice 4 (Withdraw): You are quitting the KCET counselling process entirely." 
+      },
+      { 
+        heading: "3. Class 12 Marks Revaluation Impact", 
+        text: "For CBSE and state board students who submitted their revised Class 12 marks directly to the KEA office between July 4 and July 6 following revaluations, your ranks have been updated via DigiLocker verification. Your Round 1 real allotment will reflect this updated, newly calculated rank." 
+      },
+      { 
+        heading: "4. Fee Payment & Reporting", 
+        text: "Candidates who select Choice 1 must download their admission order, pay the prescribed tuition fee online, and report to their allotted college before the deadline specified on their admission memo. Failure to report will result in the automatic cancellation of the seat." 
+      }
+    ],
+cta:{ 
+      title: "Need Help Understanding KCET Choices?", 
+      description: "Confused between Freeze, Float, and Slide? Check the live news alert for the KCET 2026 Round 1 Allotment schedule and option entry details.", 
+      buttonText: "View KCET News", 
+      link: "/news/kcet-2026-option-modification-closed-round-1-allotment-on-july-15" 
+    }
+  },
   "mbbs-admission-india": {
     category: "Admissions",
     title: "How Can I Get MBBS Admission in India?",
