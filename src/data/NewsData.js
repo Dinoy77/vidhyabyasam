@@ -186,7 +186,7 @@ export const newsItems = [
     title: "Kerala Plus Two SAY Result 2026 — DHSE Compilation Finalizing",
     date: "Declaration Imminent",
     publishedAt: "2026-07-11",
-    image: "https://images.unsplash.com/photo-1427504494785-319ce8372ac0?w=400&q=80",
+    image: "https://cf-images.assettype.com/tnm%2Fimport%2Fsites%2Fdefault%2Ffiles%2Fstudents-PTI-compressed.jpg?w=480&auto=format%2Ccompress&fit=max",
     description: "The Directorate of Higher Secondary Education, Kerala, is finalizing data compiling for the Plus Two SAY (Save A Year) / Improvement examinations. Scorecards will launch live shortly on the official Kite Kerala portal for institutional and individual lookup.",
     eligibility: "Higher Secondary candidates who attempted the SAY/Improvement rounds between June 29 and July 3",
     applyLink: "https://results.kite.kerala.gov.in",

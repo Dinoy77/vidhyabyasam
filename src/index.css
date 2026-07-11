@@ -52,6 +52,11 @@ input, select, textarea { font-family: 'DM Sans', sans-serif; outline: none; }
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  70% { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
 
 .animate-fadeUp { animation: fadeUp 0.6s ease forwards; }
 .animate-fadeIn { animation: fadeIn 0.4s ease forwards; }
