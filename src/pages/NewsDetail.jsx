@@ -12,7 +12,12 @@ export default function NewsDetail() {
 
   const news = getNewsBySlug(slug);
 
-// Enhanced SEO Integration Effect
+  // --- START FROM TOP ON PAGE LOAD ---
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
+  // Enhanced SEO Integration Effect
   useEffect(() => {
     if (news) {
       const seoData = seoConfigurations.dynamicNews(news, slug);
@@ -77,7 +82,7 @@ export default function NewsDetail() {
       <div style={{ ...s.header, background: `linear-gradient(135deg, ${news.color}, #0D1117)` }}>
         <div style={s.headerInner}>
           <div style={s.topNavRow}>
-            <button style={s.backBtn} onClick={() => navigate(-1)}>← Back to Feed</button>
+            <button style={s.backBtn} onClick={() => navigate('/news')}>← Back</button>
             <div style={s.shareBox}>
               <button style={s.shareBtn} onClick={handleShare}>
                 {copied ? '✓ Link Copied' : '🔗 Share Update'}

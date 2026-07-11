@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Hero from '../components/Hero';
+import LatestNewsGrid from '../components/LatestNewsGrid'; // <-- Imported new component
 import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
 import Footer from '../components/Footer';
@@ -8,6 +9,9 @@ import Footer from '../components/Footer';
 import { colleges as medicalColleges, regions, courseFilters, typeFilters } from '../data/colleges';
 import { engineering_colleges as engineeringColleges } from '../data/engineering_colleges';
 import { mba_colleges } from '../data/MBAdata';
+
+// Import your news helper function
+import { getLatestNewsFeed } from '../data/NewsData'; 
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -28,8 +32,12 @@ export default function Home({ selectedCourse, courseSelectCount }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Get dynamic styles based on screen width
   const styles = getStyles(isMobile);
+
+  // Grab the top 6 most recent news items for the grid
+  const latestNews = useMemo(() => {
+    return getLatestNewsFeed().slice(0, 6);
+  }, []);
 
   // 2. Safely process and normalize all datasets globally
   const allColleges = useMemo(() => {
@@ -43,7 +51,6 @@ export default function Home({ selectedCourse, courseSelectCount }) {
     const safeMbaColleges = (mba_colleges || []).map(college => ({
       ...college,
       id: college.id ? String(college.id) : `mba-${Math.random().toString(36).substr(2, 9)}`,
-      // Provide a fallback region so MBA colleges don't break location filters
       region: college.region || college.state || college.city || 'Other',
       courses: Array.isArray(college.courses) ? college.courses : ['MBA'],
       tags: Array.isArray(college.tags) ? college.tags : []
@@ -58,11 +65,10 @@ export default function Home({ selectedCourse, courseSelectCount }) {
     return [...safeMedicalColleges, ...safeEngineeringColleges, ...safeMbaColleges];
   }, []);
 
-  // 3. Comprehensive Filter Engine (Upgraded for MBA/Management)
+  // 3. Comprehensive Filter Engine
   const filtered = useMemo(() => {
     let result = allColleges;
 
-    // Region Filter (Checks region, state, and city to accommodate MBA data structures)
     if (activeRegion !== 'All') {
       result = result.filter(c => 
         c.region === activeRegion || 
@@ -71,7 +77,6 @@ export default function Home({ selectedCourse, courseSelectCount }) {
       );
     }
 
-    // Course Filter (With smart synonym matching for MBA / PGDM / MMS)
     if (activeCourse !== 'All Courses') {
       const queryLower = activeCourse.toLowerCase();
       const managementKeywords = ['mba', 'pgdm', 'mms', 'management', 'business', 'bba'];
@@ -80,7 +85,6 @@ export default function Home({ selectedCourse, courseSelectCount }) {
       result = result.filter(c =>
         c.courses && c.courses.some(course => {
           const courseLower = course.toLowerCase();
-          // If filtering for MBA/Management, include equivalent peer degrees
           if (isManagementFilter && managementKeywords.some(kw => courseLower.includes(kw))) {
             return true;
           }
@@ -89,13 +93,11 @@ export default function Home({ selectedCourse, courseSelectCount }) {
       );
     }
 
-    // Type Filter
     if (activeType !== 'All Types') {
       const targetType = activeType.toLowerCase().replace('all types', '').trim();
       result = result.filter(c => c.type && c.type.toLowerCase().includes(targetType));
     }
 
-    // Search Query Filter (Expanded to include Entrance Exams and Fees)
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(c =>
@@ -109,14 +111,12 @@ export default function Home({ selectedCourse, courseSelectCount }) {
         (c.approval && c.approval.toLowerCase().includes(q)) ||
         (c.affiliation && c.affiliation.toLowerCase().includes(q)) ||
         (c.tags && c.tags.some(t => t.toLowerCase().includes(q))) ||
-        (c.exam && c.exam.toLowerCase().includes(q)) || // MBA Entrance Exam Search (e.g., CAT, NMAT)
+        (c.exam && c.exam.toLowerCase().includes(q)) || 
         (c.fees && c.fees.toString().toLowerCase().includes(q))
       );
     }
 
-    // Sorting Engine
     return [...result].sort((a, b) => {
-      // Always pin Kerala Academy of Pharmacy to the top
       if (a.name === 'Kerala Academy of Pharmacy') return -1;
       if (b.name === 'Kerala Academy of Pharmacy') return 1;
 
@@ -149,8 +149,13 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   );
 
   return (
-    <div>
+    <div style={{ background: '#F8FAFC' }}>
       <Hero onSearch={setSearchQuery} />
+
+      {/* --- LATEST NEWS GRID SECTION --- */}
+      {latestNews.length > 0 && (
+        <LatestNewsGrid newsItems={latestNews} />
+      )}
 
       <RegionSection activeRegion={activeRegion} onRegionChange={setActiveRegion} />
 
@@ -338,7 +343,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
 
 const getStyles = (isMobile) => ({
   section: { 
-    padding: isMobile ? '24px 16px 40px' : '40px 48px 60px', 
+    padding: isMobile ? '24px 16px 40px' : '20px 48px 60px', 
     maxWidth: '1200px', 
     margin: '0 auto',
     width: '100%',
@@ -354,9 +359,11 @@ const getStyles = (isMobile) => ({
   },
   sectionTitle: { 
     fontFamily: 'Playfair Display, serif', 
-    fontSize: clamp('24px', '5vw', '32px') 
+    fontSize: clamp('24px', '5vw', '32px'),
+    margin: 0,
+    color: '#0F172A'
   },
-  sectionSub: { color: 'var(--muted)', fontSize: '14px', marginTop: '4px' },
+  sectionSub: { color: 'var(--muted)', fontSize: '14px', marginTop: '4px', marginBottom: 0 },
   sortRow: { 
     display: 'flex', 
     alignItems: 'center', 

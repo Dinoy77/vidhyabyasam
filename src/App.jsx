@@ -65,6 +65,7 @@ import BlogList from './pages/BlogList';
 import EducationLoanDetails from './pages/articles/EducationLoanDetails';
 import GeneralEnquiry from './pages/GeneralEnquiry';
 import WebinarRegistration from './components/WebinarRegistration';
+import NewsFeedPage from './pages/NewsFeedPage';
 
 // Array of all dynamic routes configured in collegePageData.js
 const dynamicCollegeRoutes = [
@@ -173,6 +174,7 @@ export default function App() {
               <Route path="/blog" element={<BlogList />} />
               <Route path="/GeneralEnquiry" element={<GeneralEnquiry/>} />
               <Route path="/WebinarRegistration" element={<WebinarRegistration/>} />
+              <Route path="/news" element={<NewsFeedPage />} />
             </Routes>
           </main>
           
