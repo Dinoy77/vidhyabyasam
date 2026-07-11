@@ -11,7 +11,6 @@ export default function WebinarRegistration() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Replace these with your actual EmailJS credentials
     const SERVICE_ID = 'service_enpvi1e';
     const TEMPLATE_ID = 'template_9f02k4e'; 
     const PUBLIC_KEY = '7Ok7ocBR25mQbYkBG';
@@ -32,7 +31,20 @@ export default function WebinarRegistration() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.card}>
+      {/* Dynamic responsive styles injection for mobile tweaks */}
+      <style>{`
+        @media (max-width: 480px) {
+          .webinar-card {
+            padding: 24px 16px !important;
+          }
+          .webinar-form-row {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+        }
+      `}</style>
+
+      <div className="webinar-card" style={styles.card}>
         <div style={styles.header}>
           <span style={styles.badge}>Live Masterclass</span>
           <h2 style={styles.title}>Webinar Registration</h2>
@@ -44,7 +56,7 @@ export default function WebinarRegistration() {
         <form ref={formRef} onSubmit={handleSubmit} style={styles.form}>
           
           {/* Row 1: Contact Basics */}
-          <div style={styles.gridRow}>
+          <div className="webinar-form-row" style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Full Name *</label>
               <input 
@@ -69,7 +81,7 @@ export default function WebinarRegistration() {
           </div>
 
           {/* Row 2: Phone & Age */}
-          <div style={styles.gridRow}>
+          <div className="webinar-form-row" style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Phone Number *</label>
               <input 
@@ -97,7 +109,7 @@ export default function WebinarRegistration() {
           </div>
 
           {/* Row 3: Academics */}
-          <div style={styles.gridRow}>
+          <div className="webinar-form-row" style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>Highest Education *</label>
               <select name="higher_education" required defaultValue="" style={styles.select}>
@@ -124,7 +136,7 @@ export default function WebinarRegistration() {
           </div>
 
           {/* Row 4: Demographics & Marketing */}
-          <div style={styles.gridRow}>
+          <div className="webinar-form-row" style={styles.gridRow}>
             <div style={styles.inputGroup}>
               <label style={styles.label}>City / Location *</label>
               <input 
@@ -193,10 +205,12 @@ export default function WebinarRegistration() {
 
 const styles = {
   container: {
-    padding: '40px 20px',
+    padding: 'clamp(16px, 5vw, 40px) 12px',
     display: 'flex',
     justifyContent: 'center',
     fontFamily: 'DM Sans, sans-serif',
+    boxSizing: 'border-box',
+    width: '100%',
   },
   card: {
     backgroundColor: '#ffffff',
@@ -206,6 +220,7 @@ const styles = {
     width: '100%',
     boxShadow: '0 20px 40px rgba(0, 0, 0, 0.08)',
     border: '1px solid #f1f5f9',
+    boxSizing: 'border-box',
   },
   header: {
     textAlign: 'center',
@@ -225,13 +240,14 @@ const styles = {
   },
   title: {
     fontFamily: 'Playfair Display, serif',
-    fontSize: '32px',
+    fontSize: 'clamp(24px, 4vw, 32px)', // Adapts text down on smaller displays
     color: '#0f172a',
     fontWeight: '800',
     margin: '0 0 8px 0',
+    lineHeight: '1.2'
   },
   subtitle: {
-    fontSize: '15px',
+    fontSize: 'clamp(13px, 3.5vw, 15px)',
     color: '#64748b',
     lineHeight: '1.6',
     margin: 0,
@@ -243,8 +259,9 @@ const styles = {
   },
   gridRow: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', // Standard dynamic multi-column wrapper
     gap: '20px',
+    width: '100%'
   },
   inputGroup: {
     display: 'flex',
@@ -252,7 +269,7 @@ const styles = {
     gap: '6px',
   },
   label: {
-    fontSize: '13px',
+    fontSize: '12px',
     fontWeight: '700',
     color: '#334155',
     textTransform: 'uppercase',
@@ -267,6 +284,8 @@ const styles = {
     outline: 'none',
     transition: 'border-color 0.2s ease',
     backgroundColor: '#f8fafc',
+    width: '100%',
+    boxSizing: 'border-box'
   },
   select: {
     padding: '12px 16px',
@@ -277,6 +296,8 @@ const styles = {
     outline: 'none',
     backgroundColor: '#f8fafc',
     cursor: 'pointer',
+    width: '100%',
+    boxSizing: 'border-box'
   },
   textarea: {
     padding: '12px 16px',
@@ -288,6 +309,8 @@ const styles = {
     backgroundColor: '#f8fafc',
     resize: 'vertical',
     fontFamily: 'inherit',
+    width: '100%',
+    boxSizing: 'border-box'
   },
   submitButton: {
     padding: '16px',
@@ -297,8 +320,10 @@ const styles = {
     fontSize: '16px',
     fontWeight: '700',
     transition: 'background-color 0.2s ease',
-    marginTop: '10px',
+    margin: '10px 0 0 0',
     boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)',
+    width: '100%',
+    boxSizing: 'border-box'
   },
   successBox: {
     padding: '14px',
@@ -309,6 +334,7 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     textAlign: 'center',
+    boxSizing: 'border-box'
   },
   errorBox: {
     padding: '14px',
@@ -319,5 +345,6 @@ const styles = {
     fontSize: '14px',
     fontWeight: '600',
     textAlign: 'center',
+    boxSizing: 'border-box'
   },
 };
