@@ -1,0 +1,40 @@
+name: Daily South Indian Education News Scraper
+
+on:
+  schedule:
+    # 30 minutes past the 2nd hour UTC = exactly 8:00 AM IST every day
+    - cron: '30 2 * * *'
+  workflow_dispatch: # Enables the manual "Run workflow" button in GitHub UI
+
+jobs:
+  scrape-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 # Upgraded to v4 for faster, secure checkouts
+
+      - name: Set up Python Environment
+        uses: actions/setup-python@v5 # Upgraded to v5 for stable setups
+        with:
+          python-version: '3.10'
+
+      - name: Install Required Python Libraries
+        run: |
+          pip install requests beautifulsoup4 lxml newspaper3k lxml_html_clean
+
+      - name: Execute Scraper Script
+        run: python scraper.py
+
+      - name: Commit and Push Updates to Codebase
+        run: |
+          git config --global user.name 'Vidyabhyasam NewsBot'
+          git config --global user.email 'bot@vidyabhyasam.portal'
+          git add src/data/NewsData.json
+          
+          # Clean check: Only commit and push if the file actually changed!
+          if ! git diff --cached --quiet; then
+            git commit -m "auto-update: daily south indian education updates [skip ci]"
+            git push
+          else
+            echo "No new unique updates found today. Codebase is up to date."
+          fi
