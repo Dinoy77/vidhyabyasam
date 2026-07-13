@@ -35,6 +35,16 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://vidyabhyasam.com/articles/TopIndianMBAColleges</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/articles/TopSouthIndianMBAColleges</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/articles/MbbsCourseGuide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -128,6 +138,36 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/kerala-plus-two-say-2026-dhse</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ap-icet-2026-counselling-notific</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/re-neet-2026-omr-sheet-pdf-live</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ugc-net-answer-key-2026-shortly</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/aibe-exam-result-2026-live-down</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/re-neet-2026-result-live-nta-ne</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kerala-plus-two-say-result-2026</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
