@@ -1,278 +1,7 @@
-export const newsItems = [
-  {
-    id: 1, 
-    icon: "🎓", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "Allotment Out",
-    title: "KEAM Engineering 2026 — First Phase Seat Allotment Released",
-    isNotification: true,
-    date: "Allotment Live",
-    publishedAt: "2026-07-04",
-    image: "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    description: "CEE Kerala has officially published the First Phase Allotment List for Engineering courses following the closure of option entry on July 4. Candidates must check their allotment memos, remit fees, and report to assigned colleges.",
-    eligibility: "Candidates included in the KEAM 2026 Rank List who registered options before July 4",
-    applyLink: "https://cee.kerala.gov.in",
-    courses: ["B.Tech", "B.Pharm"],
-    state: "Kerala"
-  },
-  {
-    id: 5, 
-    icon: "🧠", 
-    color: "#E8470A", 
-    bg: "#FFF4EE", 
-    tag: "Admission",
-    title: "NIMHANS 2026 — UG Admissions Progressing",
-    date: "Check Schedule",
-    publishedAt: "2026-06-03",
-    image: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?w=400&q=80",
-    description: "Following the release of the official notification in June, NIMHANS Bangalore UG Admissions for psychiatric nursing and allied health sciences are progressing toward the entrance examination phase. Check official portal for admit cards.",
-    eligibility: "Passed 10+2 with relevant Science subjects from a recognised board",
-    applyLink: "https://www.nimhans.ac.in",
-    courses: ["B.Sc Nursing", "Allied Health Sciences"],
-    state: "Karnataka"
-  },
-  {
-    id: 7, 
-    icon: "🌴", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "Extended Deadline",
-    title: "LBS Kerala 2026 — Nursing & Paramedical Form Extended to July 10",
-    date: "Apply Till: July 10",
-    publishedAt: "2026-07-08",
-    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&q=80",
-    description: "LBS Centre Kerala has extended the application submission deadline for B.Sc Nursing and Paramedical admissions to July 10. Selection is purely merit-based on Plus Two marks. Kerala domicile required.",
-    eligibility: "Passed 10+2 with Physics, Chemistry, and Biology with minimum 50% marks. Kerala domicile required",
-    applyLink: "https://www.lbscentre.in",
-    courses: ["B.Sc Nursing", "GNM", "D.Pharm", "B.Pharm"],
-    state: "Kerala"
-  },
-  {
-    id: 8, 
-    icon: "🖥️", 
-    color: "#E8470A", 
-    bg: "#FFF4EE", 
-    tag: "Option Entry",
-    title: "KCET 2026 — Option Modification Closed; Round 1 Allotment on July 15",
-    date: "Allotment: July 15",
-    publishedAt: "2026-07-09",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80",
-    description: "The Karnataka Examinations Authority (KEA) published the mock allotment results on July 6. The window for candidates to edit, add, or delete college preferences concluded on July 9. The final Round 1 real seat allotment results will be declared on July 15 after 11:00 AM.",
-    eligibility: "Candidates who completed document verification and hold a valid KCET 2026 rank",
-    applyLink: "https://cetonline.karnataka.gov.in/kea",
-    courses: ["B.Tech", "B.Arch", "B.Sc Agriculture", "B.Pharm"],
-    state: "Karnataka"
-  },
-  {
-    id: 15, 
-    icon: "🖥️", 
-    color: "#059669", 
-    bg: "#ECFDF5", 
-    tag: "Mock Round",
-    title: "COMEDK UGET 2026 — Round 1 Mock Choice Filling Opens July 11",
-    date: "Choice Filling: Jul 11-13",
-    publishedAt: "2026-07-07",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80",
-    description: "COMEDK published the revised engineering seat matrix on July 7, carrying 24,626 seats across participating colleges. The Round 1 Mock Choice filling window will be active from July 11 (9:00 AM) to July 13 (4:00 PM) for candidates whose document verification is approved.",
-    eligibility: "COMEDK UGET 2026 qualified candidates with 'Approved' document verification status",
-    applyLink: "https://www.comedk.org",
-    courses: ["B.Tech", "B.Arch"],
-    state: "Karnataka"
-  },
-  {
-    id: 18, 
-    icon: "🌴", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "Counselling",
-    title: "TNEA 2026 — Round 1 Choice Filling Begins July 20",
-    date: "Choice Filling: July 20",
-    publishedAt: "2026-07-01",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&q=80",
-    description: "Following the publication of the TNEA Rank List on July 1 and completion of certificate verification, DOTE Tamil Nadu will initiate Round 1 choice filling on July 20 for candidates ranked 1 to 37,976. Provisional seat allotment for Round 1 is expected on July 24.",
-    eligibility: "Tamil Nadu native candidates or eligible applicants in the official TNEA 2026 rank list",
-    applyLink: "https://www.tneaonline.org",
-    courses: ["B.E", "B.Tech"],
-    state: "Tamil Nadu"
-  },
-  {
-    id: 19, 
-    icon: "🏛️", 
-    color: "#F5A623", 
-    bg: "#FFFBEB", 
-    tag: "Registration Open",
-    title: "AP EAPCET 2026 — Phase 1 Web Counselling Schedule Live",
-    date: "Options Entry: Mid-July",
-    publishedAt: "2026-07-05",
-    image: "https://images.unsplash.com/photo-1560523159-4a9692d222ef?w=400&q=80",
-    description: "Following the declaration of EAMCET results, the State Council of Higher Education in Andhra Pradesh (APSCHE) is kicking off Phase 1 counselling. Candidates must complete online fee payment, slot booking for certificate verification, and web option entry throughout mid-July.",
-    eligibility: "AP EAPCET 2026 qualified candidates with valid intermediate marks",
-    applyLink: "https://cets.apsche.ap.gov.in",
-    courses: ["B.Tech", "B.Pharm", "B.Sc Agriculture"],
-    state: "Andhra Pradesh"
-  },
-  {
-    id: 29, 
-    icon: "🎓", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "Result Soon",
-    title: "Kerala Plus Two SAY 2026 — DHSE Improvement Result Expected Soon",
-    date: "Expected: July",
-    publishedAt: "2026-07-03",
-    image: "https://images.unsplash.com/photo-1427504494785-319ce8372ac0?w=400&q=80",
-    description: "The Directorate of Higher Secondary Education (DHSE), Kerala, is expected to declare the Kerala Plus Two SAY (Save A Year)/Improvement results soon, tentatively in July 2026. The supplementary exams were conducted from June 29 to July 3, 2026.",
-    eligibility: "Students who appeared for the SAY/Improvement examination to clear failed subjects or improve scores",
-    applyLink: "https://results.kite.kerala.gov.in",
-    courses: ["Plus Two (Science, Commerce, Humanities)"],
-    state: "Kerala"
-  },
-  {
-    id: 30, 
-    icon: "🖥️", 
-    color: "#059669", 
-    bg: "#ECFDF5", 
-    tag: "Mock Choice Filling",
-    title: "COMEDK UGET 2026 — Round 1 Mock Choice Filling Live Today",
-    date: "Active: July 11–13",
-    publishedAt: "2026-07-11",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80",
-    description: "The Consortium of Medical, Engineering and Dental Colleges of Karnataka has officially opened the web option entry link for the COMEDK 2026 Round 1 Mock Counselling today. Document-approved candidates can now log in to arrange and lock their college preferences.",
-    eligibility: "Candidates with an 'Approved' document verification status holding a valid COMEDK 2026 rank",
-    applyLink: "https://www.comedk.org",
-    courses: ["B.Tech", "B.Arch"],
-    state: "Karnataka"
-  },
-  {
-    id: 31, 
-    icon: "💼", 
-    color: "#7C3AED", 
-    bg: "#F5F0FF", 
-    tag: "Counselling Soon",
-    title: "AP ICET 2026 — MBA & MCA Counselling Schedule Expected Shortly",
-    date: "Notification Imminent",
-    publishedAt: "2026-07-11",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
-    description: "APSCHE is set to release the official Andhra Pradesh Integrated Common Entrance Test (AP ICET) 2026 web counselling schedule soon. The notification will outline web option dates, registration processing fee structures, and certificate verification protocols for state MBA and MCA college admissions.",
-    eligibility: "AP ICET 2026 qualifiers meeting the standard 50% graduation marks requirement (45% for reserved categories)",
-    applyLink: "https://cets.apsche.ap.gov.in",
-    courses: ["MBA", "MCA"],
-    state: "Andhra Pradesh"
-  },
-  {
-    id: 32, 
-    icon: "🎓", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "Result Tracker",
-    title: "Kerala Plus Two SAY Result 2026 — DHSE Compilation Finalizing",
-    date: "Declaration Imminent",
-    publishedAt: "2026-07-11",
-    image: "https://cf-images.assettype.com/tnm%2Fimport%2Fsites%2Fdefault%2Ffiles%2Fstudents-PTI-compressed.jpg?w=480&auto=format%2Ccompress&fit=max",
-    description: "The Directorate of Higher Secondary Education, Kerala, is finalizing data compiling for the Plus Two SAY (Save A Year) / Improvement examinations. Scorecards will launch live shortly on the official Kite Kerala portal for institutional and individual lookup.",
-    eligibility: "Higher Secondary candidates who attempted the SAY/Improvement rounds between June 29 and July 3",
-    applyLink: "https://results.kite.kerala.gov.in",
-    courses: ["Plus Two (Science)", "Plus Two (Commerce)", "Plus Two (Humanities)"],
-    state: "Kerala"
-  },
-  {
-    id: 34, 
-    icon: "💼", 
-    color: "#7C3AED", 
-    bg: "#F5F0FF", 
-    tag: "LIVE ALERT",
-    title: "AP ICET 2026 Counselling Notification (SOON) LIVE; Schedule, Registration, AP MBA Admission",
-    date: "Notification Imminent",
-    publishedAt: "2026-07-13",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
-    description: "The Andhra Pradesh State Council of Higher Education (APSCHE) is preparing to release the official web counselling schedule for AP ICET 2026. This notification will include dates for document verification, web option entry, and final seat allotments for MBA and MCA programs.",
-    eligibility: "Candidates who have qualified the AP ICET 2026 examination and meet the 50% graduation marks requirement (45% for reserved categories).",
-    applyLink: "https://cets.apsche.ap.gov.in",
-    courses: ["MBA", "MCA"],
-    state: "Andhra Pradesh"
-  },
-  {
-    id: 35, 
-    icon: "📝", 
-    color: "#DC2626", 
-    bg: "#FFF0F0", 
-    tag: "LIVE UPDATE",
-    title: "Re NEET 2026 OMR Sheet PDF Live; Final Answer Key Download Link Soon @neet.nta.nic.in; Check NTA Updates",
-    date: "Active: Answer Key Awaited",
-    publishedAt: "2026-07-13",
-    image: "https://images.indianexpress.com/2026/06/neet-ug-re-exam-nta-nmc.jpg?w=1200",
-    description: "The National Testing Agency (NTA) has made the Re-NEET 2026 OMR sheets live online. Candidates can now view their responses, with the official final answer key link expected to activate shortly on the official NTA NEET portal.",
-    eligibility: "Medical aspirants who appeared for the NTA Re-NEET UG 2026 examination.",
-    applyLink: "https://neet.nta.nic.in",
-    courses: ["MBBS", "BDS", "BAMS", "BSMS", "BUMS", "BHMS"],
-    state: "All India"
-  },
-  {
-    id: 36, 
-    icon: "🌐", 
-    color: "#2563EB", 
-    bg: "#EFF6FF", 
-    tag: "LIVE ALERTS",
-    title: "UGC NET Answer Key 2026 Shortly Live Updates: Check June Provisional Key PDF Download Link @ugcnet.nta.nic.in",
-    date: "Provisional Key Releasing",
-    publishedAt: "2026-07-13",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=80",
-    description: "The National Testing Agency (NTA) is on the verge of launching the provisional answer key for the UGC NET June 2026 examination. Aspirants will be able to download the answer key PDF and raise objections via the candidate dashboard.",
-    eligibility: "Candidates who wrote the UGC NET June 2026 sessions for Assistant Professor eligibility or JRF.",
-    applyLink: "https://ugcnet.nta.nic.in",
-    courses: ["Ph.D. Eligibility", "Junior Research Fellowship (JRF)"],
-    state: "All India"
-  },
-  {
-    id: 37, 
-    icon: "⚖️", 
-    color: "#059669", 
-    bg: "#ECFDF5", 
-    tag: "LIVE TRACKER",
-    title: "AIBE Exam Result 2026 Live: Download Link @allindiabarexamination.com, Check BCI CoP Certificate Updates",
-    date: "Results Releasing",
-    publishedAt: "2026-07-13",
-    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&q=80",
-    description: "The Bar Council of India (BCI) is updating the dashboard links for the All India Bar Examination (AIBE) results. Successful legal professionals will also be able to review updates regarding the physical and digital issuance of their Certificate of Practice (CoP).",
-    eligibility: "Law graduates who participated in the AIBE examination looking to acquire their practice certification.",
-    applyLink: "https://www.allindiabarexamination.com",
-    courses: ["LL.B.", "Integrated LL.B."],
-    state: "All India"
-  },
-  {
-    id: 38, 
-    icon: "📊", 
-    color: "#D97706", 
-    bg: "#FEF3C7", 
-    tag: "LIVE REPORT",
-    title: "Re NEET 2026 Result Live; NTA NEET UG 2026 Scorecard Download Link Soon @neet.nta.nic.in",
-    date: "Scorecards Imminent",
-    publishedAt: "2026-07-12",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&q=80",
-    description: "Official score tracking portals show that NTA is readying compilation lists for the Re-NEET UG 2026 results. The direct candidate link to view personal ranking scorecards is expected to launch shortly.",
-    eligibility: "Aspirants awaiting updated scores from the Re-NEET 2026 medical entrance test.",
-    applyLink: "https://neet.nta.nic.in",
-    courses: ["MBBS", "BDS"],
-    state: "All India"
-  },
-  {
-    id: 39, 
-    icon: "🎓", 
-    color: "#1B6CA8", 
-    bg: "#EBF5FF", 
-    tag: "LIVE UPDATE",
-    title: "Kerala Plus Two Say Result 2026 LIVE; Check +2 Say Exam Result 2026 Date @results.kite.kerala.gov.in",
-    date: "Results Expected Today",
-    publishedAt: "2026-07-12",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKm-ybMVlIOM1r4TPkTiy7ByX9fNRxbYZLu0A6h1dN_ycp_QKOvo5eIXj&s=10",
-    description: "The Directorate of Higher Secondary Education (DHSE), Kerala, is set to release the Plus Two Save A Year (SAY) and Improvement examination results. Students can check their updated scorecards directly on the official Kite Kerala portal once the link is activated.",
-    eligibility: "Kerala DHSE Higher Secondary students who appeared for the SAY or Improvement exams in 2026.",
-    applyLink: "https://results.kite.kerala.gov.in",
-    courses: ["Plus Two (Science)", "Plus Two (Commerce)", "Plus Two (Humanities)"],
-    state: "Kerala"
-  },
-];
+import newsJson from './NewsData.json';
+
+// Safe extraction with a fallback array to prevent UI mapping crashes
+export const newsItems = Array.isArray(newsJson) ? newsJson : [];
 
 export const getNewsById = (id) => {
   return newsItems.find((item) => item.id === Number(id));
@@ -283,15 +12,27 @@ export const getLatestNewsFeed = () => {
 };
 
 export const generateSlug = (title) => {
+  if (!title) return '';
   return title
     .toLowerCase()
-    .substring(0, 32) // Truncate to the first 50 characters
-    .replace(/[^a-z0-9]+/g, '-') // Replace special chars and spaces
-    .replace(/(^-|-$)+/g, '');   // Trim leading/trailing dashes
+    .substring(0, 32) // Preserves your exact 32-character truncation rule
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
 };
 
 export const getNewsBySlug = (slug) => {
   return newsItems.find((item) => generateSlug(item.title) === slug);
+};
+
+// Helper functions for state and tag filtering across your UI
+export const getAllStates = () => {
+  const states = newsItems.map((item) => item.state).filter(Boolean);
+  return ["All", ...new Set(states)];
+};
+
+export const getAllTags = () => {
+  const tags = newsItems.map((item) => item.tag).filter(Boolean);
+  return ["All", ...new Set(tags)];
 };
 
 export default newsItems;
