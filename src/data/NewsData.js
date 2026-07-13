@@ -265,7 +265,7 @@ export const newsItems = [
     title: "Kerala Plus Two Say Result 2026 LIVE; Check +2 Say Exam Result 2026 Date @results.kite.kerala.gov.in",
     date: "Results Expected Today",
     publishedAt: "2026-07-12",
-    image: "https://images.unsplash.com/photo-1427504494785-319ce8372ac0?w=400&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKm-ybMVlIOM1r4TPkTiy7ByX9fNRxbYZLu0A6h1dN_ycp_QKOvo5eIXj&s=10",
     description: "The Directorate of Higher Secondary Education (DHSE), Kerala, is set to release the Plus Two Save A Year (SAY) and Improvement examination results. Students can check their updated scorecards directly on the official Kite Kerala portal once the link is activated.",
     eligibility: "Kerala DHSE Higher Secondary students who appeared for the SAY or Improvement exams in 2026.",
     applyLink: "https://results.kite.kerala.gov.in",
