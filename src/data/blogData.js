@@ -1,4 +1,93 @@
 export const blogArticles = {
+  "kcet-2026-round-1-provisional-seat-allotment-tomorrow": {
+    category: "News & Updates",
+    title: "KCET 2026 Round 1 Provisional Seat Allotment Tomorrow, Final Results on July 15",
+    author: "Vidyabhyasam Editorial",
+    date: "July 13, 2026",
+    readTime: "3 Min Read",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSIPjdbBk2rBxk2ouj2_tL0pSMVsM9j2ckoLjaoMg6TITnPFn5qnQfeVqA&s=10",
+    content: [
+      { text: "The Karnataka Examinations Authority (KEA) is set to release the KCET 2026 Round 1 provisional seat allotment on July 14. Candidates who participated in the option modification process, which concluded on July 9, can check their status on the official portal." },
+      { 
+        heading: "1. Provisional vs. Final Allotment", 
+        text: "The provisional allotment, expected after 10:00 AM on July 14, allows candidates to review their assigned seats. Following a brief window to raise objections, KEA will publish the final Round 1 real seat allotment on July 15, 2026, after 11:00 AM." 
+      },
+      { 
+        heading: "2. How to Check Your Allotment", 
+        text: "Candidates must log into the KEA portal (cetonline.karnataka.gov.in) using their CET application number. Under the 'Latest Announcements' section, click the link for the first round seat allotment to view your assigned college and course." 
+      },
+      { 
+        heading: "3. Prepare Your Documents", 
+        text: "If you secure a seat and choose to confirm it (Choice 1), you will need to prepare necessary admission documents, including your KCET 2026 Rank Card, SSLC/PUC marks memos, and the seat allotment letter downloaded from the portal." 
+      }
+    ],
+    cta: { 
+      title: "Targeting Top Karnataka Colleges?", 
+      description: "Review fee structures and campus facilities of the top-ranked engineering colleges in Karnataka before your final college reporting date.", 
+      buttonText: "View Engineering Colleges", 
+      link: "/articles/EngineeringCollegesKarnataka" 
+    }
+  },
+
+  "keam-2026-phase-1-final-seat-allotment-released": {
+    category: "Alerts & Notifications",
+    title: "KEAM 2026 Phase 1 Final Seat Allotment Released for B.Tech Admissions",
+    author: "Vidyabhyasam Editorial",
+    date: "July 13, 2026",
+    readTime: "3 Min Read",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtzxftvig4Axv1sELUO_RpSFVPZ9tNv7DSIPSnkKRp331we87MK5_LuvA&s=10",
+    content: [
+      { text: "The Commissioner for Entrance Examinations (CEE), Kerala, has officially released the Phase 1 final seat allotment results for undergraduate engineering programmes. The allotment is based on the candidate's KEAM rank, category, and choices submitted during option registration." },
+      { 
+        heading: "1. Download Your Allotment Memo", 
+        text: "Log in to the official CEE Kerala candidate portal (cee.kerala.gov.in) using your application number and password to view your result and download the allotment memo. This memo is a crucial document required during physical admission." 
+      },
+      { 
+        heading: "2. Mandatory Fee Payment", 
+        text: "To confirm your seat, you must complete the online admission fee payment specified in your allotment memo by July 12, 2026 (extended timelines apply to specific categories). Save a copy of your fee receipt for future requirements." 
+      },
+      { 
+        heading: "3. Retaining Seats for Phase 2", 
+        text: "Students who are satisfied with their current seat but wish to participate in upcoming counselling rounds for a higher preference can retain their current allotment by simply completing the initial fee payment online." 
+      }
+    ],
+    cta: { 
+      title: "Confused About the KEAM Centralised Allotment?", 
+      description: "Connect with our expert admission counselors to understand fee remittance, sliding processes, and Phase 2 option entries.", 
+      buttonText: "Get Counseling Support", 
+      link: "/GeneralEnquiry" 
+    }
+  },
+
+  "tnea-2026-general-category-counselling-choice-filling-begins": {
+    category: "News & Updates",
+    title: "TNEA 2026: General Category Counselling Choice Filling Begins on July 20",
+    author: "Vidyabhyasam Editorial",
+    date: "July 13, 2026",
+    readTime: "2 Min Read",
+    image: "https://image-upload.getmycollege.com/new-uploads/college/featured/everything-to-be-known-about-tnea-2025-featured-image-359.jpg",
+    content: [
+      { text: "The Directorate of Technical Education (DoTE), Tamil Nadu, has confirmed the schedule for the first round of TNEA 2026 academic counselling for general category students. The crucial choice-filling window is right around the corner." },
+      { 
+        heading: "1. Round 1 Eligibility & Dates", 
+        text: "Choice filling for the first round will commence on July 20, 2026, and run until July 22, 2026. This initial phase is strictly for candidates ranking between 1 and 37,976 on the state merit list, carrying cut-off marks between 200 and 171.333." 
+      },
+      { 
+        heading: "2. How to Lock Your Options", 
+        text: "Eligible students must log into the official portal (tneaonline.org) during the active window to arrange their preferred colleges and engineering branches. It is highly recommended to enter maximum choices to secure a guaranteed allotment." 
+      },
+      { 
+        heading: "3. Tentative Allotment Schedule", 
+        text: "After the choice-filling window closes on July 22, DoTE will generate the tentative allotment lists based on merit and community reservations. Students must actively confirm their tentative allotment to secure their admission." 
+      }
+    ],
+    cta: { 
+      title: "Looking for Top Colleges in Tamil Nadu?", 
+      description: "Explore the best engineering institutions across Chennai, Coimbatore, and Trichy before you finalize your TNEA choices.", 
+      buttonText: "View T.N. Engineering Colleges", 
+      link: "/articles/EngineeringCollegesTamilNadu" 
+    }
+  },
   "ap-icet-2026-phase-1-web-counselling-schedule-live": {
       category: "Alerts & Notifications",
       title: "AP ICET 2026 — MBA & MCA Phase 1 Counselling Schedule Expected Shortly",
@@ -84,7 +173,7 @@ export const blogArticles = {
     author: "Vidyabhyasam Editorial",
     date: "July 11, 2026",
     readTime: "2 Min Read",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIoYBz6Z5AdfOWLkGWN3-hywVJf4XKkeYf0Hvxmf7tiCczWDcug0j_-3Th&s=10",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKm-ybMVlIOM1r4TPkTiy7ByX9fNRxbYZLu0A6h1dN_ycp_QKOvo5eIXj&s=10",
     content: [
       { text: "The Directorate of Higher Secondary Education (DHSE), Kerala, is currently in the final stages of data compilation for the Plus Two Save A Year (SAY) and Improvement examinations held earlier this month. The official results are expected to be declared imminently." },
       { 
