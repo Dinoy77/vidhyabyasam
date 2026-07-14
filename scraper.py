@@ -4,24 +4,31 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-from newspaper import Article, Config  # <-- 1. IMPORTING YOUR ADVANCED SCRAPING ENGINE!
+from newspaper import Article, Config
 
 # ==========================================
 # 1. CONFIGURATION & STRICT STUDENT QUERIES
 # ==========================================
+# Upgraded: Replaced bare words like "NET" with exact terms like "UGC NET" to stop matching "Net profit"
 RSS_URL = (
     "https://news.google.com/rss/search?q="
-    "(KEAM+OR+TNEA+OR+EAMCET+OR+COMEDK+OR+KCET+OR+NIMHANS+OR+ICET+OR+NEET+OR+JEE+OR+NET+OR+GATE+OR+JoSAA)"
+    "(KEAM+OR+TNEA+OR+EAMCET+OR+COMEDK+OR+KCET+OR+NIMHANS+OR+ICET+OR+NEET+OR+JEE+OR+\"UGC+NET\"+OR+\"CSIR+NET\"+OR+\"GATE+exam\"+OR+JoSAA)"
     "+(allotment+OR+counselling+OR+results+OR+\"answer+key\"+OR+admission+OR+registration+OR+scorecard+OR+cutoff)"
     "+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
 )
 
 JSON_FILE_PATH = "src/data/NewsData.json"
 
-POLITICAL_NOISE_BLACKLIST = [
+# Expanded Blacklist: Blocks Politics, Crime, Corporate Finance, Stock Markets, and Company Q1/Q2 Results!
+NON_EDUCATIONAL_BLACKLIST = [
+    # Corporate & Finance Noise
+    "q1", "q2", "q3", "q4", "net profit", "dividend", "shares", "stock", "sensex", "nifty", 
+    "crore", " cr ", "cr,", "ebitda", "revenue", "hcltech", "tcs", "infosys", "wipro", 
+    "reliance", "adani", "investors", "market cap", "quarterly", "fiscal", "ipo",
+    # Political & Crime Noise
     "protest", "row", "strike", "appoints", "vice chancellor", "vc", "scam", 
     "minister", "court slams", "plea rejected", "clash", "union", "governor", 
-    "cabinet", "assembly", "sacked", "bjp", "congress", "cpm", "dmk", "arrest"
+    "cabinet", "assembly", "sacked", "bjp", "congress", "cpm", "dmk", "arrest", "police"
 ]
 
 
@@ -124,7 +131,6 @@ def fetch_article_content(url, title="", courses=None, action_type="counselling 
     # LAYERS 1, 2 & 3: REAL SCRAPING ATTEMPTS
     # ---------------------------------------------------------
     try:
-        # Use stealth browser headers to bypass basic publisher firewalls
         config = Config()
         config.browser_user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
         config.request_timeout = 6
@@ -150,19 +156,19 @@ def fetch_article_content(url, title="", courses=None, action_type="counselling 
         except Exception:
             pass
             
-        # 3. Try Layer 2: Meta Description Tag (SEO Description written by journalist)
+        # 3. Try Layer 2: Meta Description Tag
         if not real_desc or len(real_desc) < 60:
             if article.meta_description and len(article.meta_description) > 50:
                 real_desc = article.meta_description.strip()
                 
-        # 4. Try Layer 3: Raw Article Body Text (First clean paragraph)
+        # 4. Try Layer 3: Raw Article Body Text
         if not real_desc or len(real_desc) < 60:
             if article.text and len(article.text) > 100:
                 clean_text = article.text.replace("\n", " ").strip()
                 real_desc = clean_text[:250].rsplit('.', 1)[0] + '.'
                 
-        # If we successfully extracted a real summary from the webpage, return it!
-        if len(real_desc) > 60 and not "enable javascript" in real_desc.lower():
+        # Verify extracted text isn't a JavaScript warning or corporate disclaimer
+        if len(real_desc) > 60 and not any(bad in real_desc.lower() for bad in ["enable javascript", "dividend", "net profit", "crore"]):
             print(f"      [Scraped Real Text]: {real_desc[:60]}...")
             return img_url, real_desc
             
@@ -208,8 +214,9 @@ def fetch_latest_news():
         
         lower_title = title_text.lower()
         
-        # Skip political or administrative noise
-        if any(noise in lower_title for noise in POLITICAL_NOISE_BLACKLIST):
+        # FILTER: Skip corporate, financial, political, or administrative noise
+        if any(noise in lower_title for noise in NON_EDUCATIONAL_BLACKLIST):
+            print(f"   [Filtered Out Corporate/Political Noise]: {title_text[:45]}...")
             continue
 
         print(f"   -> Processing Alert: {title_text[:45]}...")
@@ -300,7 +307,7 @@ def fetch_latest_news():
             "date": "Action Required Now",
             "publishedAt": pub_date,
             "image": real_image_url,
-            "description": real_description,  # <-- 2. GUARANTEED UNIQUE DESCRIPTION!
+            "description": real_description,  # <-- GUARANTEED UNIQUE & ACADEMIC!
             "eligibility": f"Registered entrance exam aspirants updating dynamic {action_type} for current session criteria evaluation.",
             "applyLink": link_text,
             "courses": courses,
