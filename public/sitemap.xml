@@ -94,6 +94,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- News & Updates -->
   <url>
@@ -168,6 +173,41 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/kerala-plus-two-say-result-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/keam-engineering-2026-the-keam</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/re-neet-2026-omr-response-sheet</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-re-test-2026-result-this</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-answer-key-2026-released</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kcet-ugcet-2026-provisional-firs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-2026-result-date-time-liv</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-pg-registration-2026-one-w</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
