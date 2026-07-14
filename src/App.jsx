@@ -67,6 +67,9 @@ import GeneralEnquiry from './pages/GeneralEnquiry';
 import WebinarRegistration from './components/WebinarRegistration';
 import NewsFeedPage from './pages/NewsFeedPage';
 
+//collegepredictor
+import KeamPredictor from './pages/KeamPredictor';
+
 // Array of all dynamic routes configured in collegePageData.js
 const dynamicCollegeRoutes = [
   // --- NURSING ---
@@ -175,6 +178,9 @@ export default function App() {
               <Route path="/GeneralEnquiry" element={<GeneralEnquiry/>} />
               <Route path="/WebinarRegistration" element={<WebinarRegistration/>} />
               <Route path="/news" element={<NewsFeedPage />} />
+
+              //collegepredictor
+              <Route path="/keam-predictor" element={<KeamPredictor />} />
             </Routes>
           </main>
           
