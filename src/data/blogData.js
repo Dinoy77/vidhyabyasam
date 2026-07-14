@@ -1,4 +1,99 @@
 export const blogArticles = {
+  "tnea-choice-filling-strategy": {
+    category: "Admission Guide",
+    title: "How to Master TNEA 2026 Choice Filling: A Strategy Guide for Round 1",
+    author: "Vidyabhyasam Editorial",
+    date: "July 14, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "With the Tamil Nadu Engineering Admissions (TNEA) 2026 Round 1 choice filling scheduled to open on July 20 for students ranking between 1 and 37,976 [1.2.2], having a rock-solid preference strategy is crucial to securing a seat in a top-tier institution." },
+      { 
+        heading: "1. The 'Unlimited Choices' Rule", 
+        text: "Unlike some state counsellings, TNEA does not restrict the number of choices you can enter. You are strongly advised to enter as many college and branch combinations as possible. A common mistake high-ranking students make is entering only 5 to 10 choices, which can lead to zero allotments if those highly competitive seats are taken by students with slightly better cut-off marks." 
+      },
+      { 
+        heading: "2. The 'Dream, Realistic, Safe' Framework", 
+        text: "Organize your choice list into three tiers. Your top 15-20 choices should be your 'Dream' options—highly competitive colleges you aspire to join. The next 30-40 choices should be 'Realistic' options that perfectly align with your aggregate marks. Finally, add 20 'Safe' options that historically close at marks significantly lower than yours, guaranteeing a backup plan." 
+      },
+      { 
+        heading: "3. Branch vs. College Trade-off", 
+        text: "Decide early whether you prioritize the institution's brand value or the specific engineering branch. If you strictly want Computer Science, you must be willing to list lower-ranked colleges. If you want a premier institution like MIT Chennai, be prepared to list alternative core branches like Mechanical or Civil engineering." 
+      },
+      { 
+        heading: "4. The Upward Movement Advantage", 
+        text: "During the tentative allotment confirmation on July 24, you will have the option to select 'Accept and Upward'. This means if a vacancy arises in a choice you ranked higher than your allotted seat, TNEA will automatically upgrade you. Therefore, never place a college you dislike above a college you prefer in your choice list." 
+      }
+    ],
+    cta: { 
+      title: "Check TNEA Counselling Schedule", 
+      description: "Review the complete round-wise dates and aggregate mark ranges for TNEA 2026.", 
+      buttonText: "View TN Engineering Colleges", 
+      link: "/articles/EngineeringCollegesTamilNadu" 
+    }
+  },
+
+  "ap-eapcet-document-checklist": {
+    category: "Admission Guide",
+    title: "AP EAPCET 2026 Counselling: The Ultimate Document Verification Checklist",
+    author: "Vidyabhyasam Editorial",
+    date: "July 14, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+    content: [
+      { text: "As the AP EAPCET (formerly EAMCET) 2026 Phase 1 counselling registration prepares to kick off in mid-July [1.3.2], thousands of engineering and pharmacy aspirants must clear the crucial first hurdle: Certificate Verification. Here is exactly what you need to prepare." },
+      { 
+        heading: "1. Online vs. Offline Verification", 
+        text: "For the majority of candidates, certificate verification is conducted completely online. Once you pay the processing fee of ₹1,200 (₹600 for SC/ST), the system will attempt to verify your data using state databases. If successful, you can directly proceed to web options. If the system cannot verify your details automatically, you will be directed to visit a designated Help Line Centre (HLC) for physical verification." 
+      },
+      { 
+        heading: "2. The Mandatory Document Stack", 
+        text: "Whether uploading online or visiting an HLC, you must have original copies of: AP EAPCET 2026 Rank Card and Hall Ticket, Intermediate (10+2) Marks Memo, Transfer Certificate (TC), Class 6 to 12 Study Certificates (crucial for verifying local status), and a valid Aadhaar Card." 
+      },
+      { 
+        heading: "3. Income Certificate for Fee Waiver", 
+        text: "If you are aiming for a full or partial tuition fee waiver under government schemes, you must submit a valid Income Certificate issued by competent revenue authorities on or after January 1, 2021. Alternatively, a valid white ration card may be used to verify financial status." 
+      },
+      { 
+        heading: "4. MeeSeva Community Certificates", 
+        text: "For candidates claiming BC, SC, or ST reservations, an Integrated Community Certificate is mandatory. This document must be officially issued via the MeeSeva platform and digitally signed by authorized revenue officials. Failure to produce this will result in your allocation being processed under the Open/General category." 
+      }
+    ],
+  },
+
+  "kcet-choice-selection-guide": {
+    category: "Admission Guide",
+    title: "KCET 2026 Allotment: Decoding Choice 1, Choice 2, Choice 3, and Choice 4",
+    author: "Vidyabhyasam Editorial",
+    date: "July 14, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=80",
+    content: [
+      { text: "Following the publication of the KCET 2026 Round 1 Final Seat Allotment on July 15 [1.1.1], candidates must log into the KEA portal and officially declare their decision by selecting one of four distinct 'Choices'. Misunderstanding these options is the most common reason students accidentally forfeit their seats." },
+      { 
+        heading: "Choice 1: Absolute Acceptance", 
+        text: "Select Choice 1 only if you are 100% satisfied with the allotted college and course. By choosing this, you confirm the seat, pay the tuition fee, and download your admission order. You must then physically report to the college. Selecting Choice 1 permanently removes you from all subsequent KCET counselling rounds." 
+      },
+      { 
+        heading: "Choice 2: Hold and Upgrade (The Safest Route)", 
+        text: "Choice 2 is the equivalent of 'Float'. You accept the current allotted seat and pay the fee to hold it, but you also choose to participate in Round 2. If a higher-preference seat is allotted in the next round, your Round 1 seat is automatically cancelled. If no upgrade occurs, you safely retain your Round 1 seat." 
+      },
+      { 
+        heading: "Choice 3: Reject and Upgrade", 
+        text: "If you are completely dissatisfied with your allotted seat and do not wish to hold it, select Choice 3. This cancels your current allotment entirely, but allows you to participate in Round 2 with your previously entered higher options. This is riskier than Choice 2, as you enter Round 2 with zero backup." 
+      },
+      { 
+        heading: "Choice 4: Complete Withdrawal", 
+        text: "Select Choice 4 if you have secured admission elsewhere (like through COMEDK, JEE, or NEET) and wish to exit the KEA system completely. This cancels your allotted seat and permanently blocks you from participating in any further KCET counselling rounds for the year." 
+      }
+    ],
+    cta: { 
+      title: "Check KCET Allotment Status", 
+      description: "The KCET 2026 Round 1 Provisional Seat Allotment link is active. Log in to view your status.", 
+      buttonText: "View KCET Updates", 
+      link: "/news/kcet-ugcet-2026-provisional-firs" 
+    }
+  },
   "kcet-2026-round-1-provisional-seat-allotment-tomorrow": {
     category: "News & Updates",
     title: "KCET 2026 Round 1 Provisional Seat Allotment Tomorrow, Final Results on July 15",

@@ -4,8 +4,8 @@ import { articleRouteMap } from '../data/dropDownData';
 import { blogArticles } from '../data/blogData';
 import { getLatestNewsFeed, generateSlug } from '../data/NewsData';
 
-// Fetch the sorted news array once to be used across the Hero components
-const latestNews = getLatestNewsFeed();
+// Fetch the sorted news array once and limit to the LATEST 10 NEWS ITEMS
+const latestNews = getLatestNewsFeed().slice(0, 10);
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -23,6 +23,12 @@ function useMediaQuery(query) {
 
   return matches;
 }
+
+// --- HELPER FUNCTION TO LIMIT CHARACTERS ---
+const truncateText = (text, limit) => {
+  if (!text) return '';
+  return text.length > limit ? text.substring(0, limit).trim() + '...' : text;
+};
 // --------------------------------------
 
 // --- LOCALIZED HEADLINES ---
@@ -87,7 +93,6 @@ const slides = [
 function NewsScrollBar({ navigate }) {
   const [current, setCurrent] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const isMobile = useMediaQuery('(max-width: 768px)'); 
 
   useEffect(() => {
     if (latestNews.length === 0) return;
@@ -101,7 +106,6 @@ function NewsScrollBar({ navigate }) {
     return () => clearInterval(t);
   }, []);
 
-  const item = latestNews[current];
   return null; 
 }
 
@@ -134,10 +138,7 @@ function NewsTicker({ onViewDetails }) {
 
   return (
     <div
-      style={{
-        ...ns.box,
-        ...(isMobile ? { minHeight: 'auto' } : {})
-      }}
+      style={ns.box}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -161,7 +162,7 @@ function NewsTicker({ onViewDetails }) {
           background: current.bg,
           position: 'relative',
           overflow: 'hidden',
-          height: isMobile ? '160px' : '220px',
+          height: isMobile ? '160px' : '200px',
           minHeight: 'unset',
           padding: 0
         }}>
@@ -191,20 +192,29 @@ function NewsTicker({ onViewDetails }) {
         </div>
 
         <div style={ns.featuredBody}>
-          <p style={{ ...ns.featuredTitle, color: current.color, fontSize: '17px' }}>
-            {current.title}
-          </p>
-          <p style={ns.featuredDate}>🗓 {current.date}</p>
-          <p style={{ fontSize: '13px', color: '#4B5563', lineHeight: 1.6, marginTop: '4px' }}>
-            {current.description.slice(0, 120)}...
-          </p>
-          <div style={{ display: 'flex', gap: '8px', marginTop: '4px', flexWrap: 'wrap' }}>
-            {current.courses.map(c => (
-              <span key={c} style={{ fontSize: '11px', background: '#F3F4F6', color: '#374151', padding: '3px 10px', borderRadius: '20px', border: '1px solid #E5E7EB' }}>
-                {c}
-              </span>
-            ))}
+          <div style={{ minHeight: '120px' }}>
+            <p style={{ ...ns.featuredTitle, color: current.color }}>
+              {truncateText(current.title, 55)}
+            </p>
+            <p style={ns.featuredDate}>🗓 {current.date}</p>
+            
+            {/* 3-LINE CSS TRUNCATION APPLIED HERE */}
+            <p style={{ 
+              fontSize: '13px', color: '#4B5563', lineHeight: 1.5, marginTop: '4px',
+              display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden'
+            }}>
+              {current.description}
+            </p>
+            
+            <div style={{ display: 'flex', gap: '8px', marginTop: '8px', overflow: 'hidden', height: '24px' }}>
+              {current.courses.slice(0, 3).map(c => (
+                <span key={c} style={{ fontSize: '11px', background: '#F3F4F6', color: '#374151', padding: '3px 10px', borderRadius: '20px', border: '1px solid #E5E7EB', whiteSpace: 'nowrap' }}>
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
+          
           <button
             style={{ ...ns.enquireBtn, background: current.color }}
             onClick={() => onViewDetails(current)}
@@ -620,7 +630,7 @@ const ns = {
     border: '1px solid rgba(255,255,255,0.3)',
     borderRadius: '16px', overflow: 'hidden',
     display: 'flex', flexDirection: 'column',
-    minHeight: '70vh',
+    width: '100%',
   },
   header: {
     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
@@ -638,21 +648,25 @@ const ns = {
 
   featured: { display: 'flex', flexDirection: 'column' },
   featuredBg: {
-    minHeight: '300px',
     display: 'flex', justifyContent: 'space-between', alignItems: 'center',
     position: 'relative',
   },
   tagPill: {
     fontSize: '10px', fontWeight: 700, color: '#fff',
-    padding: '3px 1px', borderRadius: '20px', letterSpacing: '0.5px',
+    padding: '3px 6px', borderRadius: '20px', letterSpacing: '0.5px',
   },
-  bigEmoji: { fontSize: '32px', opacity: 0.3 },
-  featuredBody: { padding: '16px 18px 12px', display: 'flex', flexDirection: 'column', gap: '2px' },
-  featuredTitle: { fontSize: '17px', fontWeight: 700, lineHeight: 1.4 },
-  featuredDate: { fontSize: '11px', color: '#6B7280', fontWeight: 500 },
+  featuredBody: { 
+    padding: '16px 18px 12px', 
+    display: 'flex', flexDirection: 'column', 
+    justifyContent: 'space-between', flex: 1 
+  },
+  featuredTitle: { 
+    fontSize: '16px', fontWeight: 700, lineHeight: 1.4,
+  },
+  featuredDate: { fontSize: '11px', color: '#6B7280', fontWeight: 500, marginTop: '2px' },
 
   dots: {
-    display: 'flex', gap: '4px', padding: '2px 14px',
+    display: 'flex', gap: '4px', padding: '6px 14px',
     borderTop: '1px solid #E5E7EB',
     borderBottom: '1px solid #E5E7EB',
     alignItems: 'center',
@@ -661,11 +675,10 @@ const ns = {
     height: '6px', borderRadius: '3px',
     border: 'none', cursor: 'pointer',
     transition: 'all 0.3s ease', padding: 0, flexShrink: 0,
-    background: '#D1D5DB',
   },
 
   enquireBtn: {
-    marginTop: '14px',
+    marginTop: '10px',
     padding: '10px 16px',
     borderRadius: '10px',
     border: 'none',
@@ -683,7 +696,6 @@ const ns = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '8px 14px',
-    borderTop: '1px solid #E5E7EB',
   },
   arrowBtn: {
     background: '#F3F4F6',
