@@ -94,6 +94,92 @@ export const blogArticles = {
       link: "/news/kcet-ugcet-2026-provisional-firs" 
     }
   },
+    "btech-ai-vs-cse-2026": {
+    category: "Career Guide",
+    title: "B.Tech AI & Data Science vs Core CSE: Which Should You Choose in 2026?",
+    author: "Vidyabhyasam Editorial",
+    date: "July 15, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "With the rapid explosion of generative AI, almost every top engineering college in South India has introduced specialized B.Tech programs in Artificial Intelligence and Data Science (AI & DS). But should you choose this over the evergreen core Computer Science Engineering (CSE) branch? Here is a detailed breakdown to help you lock your web options." },
+      { 
+        heading: "1. Understanding the Syllabus Gap", 
+        text: "Core CSE covers the fundamental building blocks of computing: operating systems, compiler design, computer networks, and basic programming. B.Tech AI & DS skips some of these traditional hardware/networking subjects to make room for advanced mathematics, statistical modeling, machine learning algorithms, and deep learning from the second year onwards." 
+      },
+      { 
+        heading: "2. The Placement Scenario in 2026", 
+        text: "Currently, IT recruiters generally treat Core CSE and AI & DS students equally for entry-level Software Development Engineer (SDE) roles. However, AI & DS students often have a slight edge when applying for specialized data analyst or junior machine learning engineer roles, provided they have a strong portfolio." 
+      },
+      { 
+        heading: "3. Flexibility vs. Specialization", 
+        text: "Core CSE offers flexibility. If you realize in your third year that you prefer cybersecurity, cloud computing, or full-stack web development, pivoting is easy. AI & DS locks you into the data ecosystem early on, which is excellent if you are certain about your career path, but restrictive if you change your mind." 
+      },
+      { 
+        heading: "4. The Final Verdict", 
+        text: "If you love mathematics, statistics, and pattern recognition, AI & DS is a highly rewarding specialization. However, if you are unsure about your exact career trajectory, choose Core CSE. You can always learn AI concepts through electives or certifications later, but unlearning a hyper-specialized degree is much harder." 
+      }
+    ]
+  },
+
+  "kerala-paramedical-courses-guide": {
+    category: "Course Explorer",
+    title: "Beyond MBBS: Top Allied Health & Paramedical Courses in Kerala for 2026",
+    author: "Vidyabhyasam Editorial",
+    date: "July 15, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    content: [
+      { text: "The competition for MBBS seats via NEET UG grows steeper every year. However, the healthcare industry relies on much more than just doctors. For students who want a highly respected, well-paying career in healthcare without the grueling 5.5-year MBBS commitment, Kerala's Allied Health and Paramedical courses are the perfect alternative." },
+      { 
+        heading: "1. B.Sc Perfusion Technology & Cardiovascular Tech", 
+        text: "These are among the most highly paid allied health professions today. Perfusionists operate the heart-lung machines during critical cardiac surgeries. With the rise of specialized cardiac care centers across South India and the Middle East, graduates are in massive demand immediately after their 4-year degree." 
+      },
+      { 
+        heading: "2. B.Sc Nursing: The Global Passport", 
+        text: "A B.Sc Nursing degree remains one of the most reliable pathways to global employment. With severe nursing shortages in the UK, USA, Australia, and Germany, Kerala nursing graduates easily find lucrative international placements after completing a year or two of clinical experience and clearing the OET/IELTS exams." 
+      },
+      { 
+        heading: "3. B.Sc Medical Laboratory Technology (MLT)", 
+        text: "Modern medicine relies heavily on diagnostics. MLT graduates run the complex laboratory equipment that analyzes everything from blood cultures to genetic markers. It is a stable, high-growth career path with excellent opportunities in corporate hospital chains and diagnostic conglomerates." 
+      },
+      { 
+        heading: "4. The LBS Centre Admission Process", 
+        text: "Unlike MBBS/BDS which require NEET scores, admissions to government-approved paramedical degree courses in Kerala are largely managed by the LBS Centre for Science and Technology. Allotments are strictly based on the merit of your Plus Two (Class 12) Physics, Chemistry, and Biology marks." 
+      }
+    ]
+  },
+  "neet-aiq-vs-state-quota-counselling": {
+    category: "Admission Guide",
+    title: "NEET 2026 Counselling: Decoding the 15% AIQ vs 85% State Quota Matrix",
+    author: "Vidyabhyasam Editorial",
+    date: "July 15, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&q=80",
+    content: [
+      { text: "Congratulations on clearing NEET UG 2026! But cracking the exam is only half the battle; navigating the complex dual-counselling system is where many students make costly mistakes. Understanding the difference between the All India Quota (AIQ) and the State Quota is critical to maximizing your chances of securing a government medical seat." },
+      { 
+        heading: "1. The 15% All India Quota (AIQ) Explained", 
+        text: "The Medical Counselling Committee (MCC) conducts counselling for 15% of all government medical and dental college seats across India. The beauty of the AIQ is that it is completely 'domicile-free'. A student from Kerala can compete for a government seat in Tamil Nadu, Delhi, or Karnataka based purely on their All India Rank (AIR), without needing a local nativity certificate." 
+      },
+      { 
+        heading: "2. The 85% State Quota Explained", 
+        text: "The remaining 85% of government seats are surrendered strictly to the state's own counselling authority (e.g., CEE in Kerala, KEA in Karnataka, TN Medical Selection in Tamil Nadu). To claim these seats, you MUST be a verified domicile/native of that specific state. The cutoff ranks for state quotas are generally lower (easier to get in) for native students compared to AIQ cutoffs for the same college." 
+      },
+      { 
+        heading: "3. Can You Participate in Both?", 
+        text: "Absolutely. In fact, it is highly recommended. You should register on the MCC portal for the 15% AIQ, and simultaneously register on your home state's portal for the 85% State Quota. The schedules are designed to run in parallel phases (AIQ Round 1, followed by State Round 1, then AIQ Round 2, etc.), allowing you to float or upgrade between the two systems until you lock a seat." 
+      },
+      { 
+        heading: "4. The Exception: Deemed Universities & Central Institutes", 
+        text: "It is important to note that 100% of seats in AIIMS, JIPMER, AFMC, and all Private Deemed Universities (like Amrita, SRM, or Manipal) are counselled exclusively by the MCC at the national level. There is no 85% state quota or domicile reservation for these specific premier and deemed institutions." 
+      },
+      { 
+        heading: "5. A Crucial Warning on Category Certificates", 
+        text: "If you are claiming an OBC reservation, your caste must be listed in the Central OBC-NCL list to claim it under the 15% AIQ. If your caste is only recognized at the state level but not the central level, you will be treated as an Unreserved (General) candidate by the MCC, but you can still use your OBC status for your 85% state quota counselling." 
+      }
+    ]
+  },
   "kcet-2026-round-1-provisional-seat-allotment-tomorrow": {
     category: "News & Updates",
     title: "KCET 2026 Round 1 Provisional Seat Allotment Tomorrow, Final Results on July 15",
