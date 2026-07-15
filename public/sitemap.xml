@@ -95,12 +95,34 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
+    <loc>https://vidyabhyasam.com/articles/TopNursingSouthIndia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- News & Updates -->
+  <!-- Editorial Blogs -->
+  <url>
+    <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/neet-aiq-vs-state-quota-counselling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/kerala-paramedical-courses-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/btech-ai-vs-cse-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News & Live Admission Updates -->
   <url>
     <loc>https://vidyabhyasam.com/news/keam-2026-first-phase-seat-all</loc>
     <changefreq>weekly</changefreq>
@@ -208,6 +230,26 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/neet-pg-registration-2026-one-w</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-answer-key-2026-objecti</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/comedk-2026-mock-seat-allotment</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/checking-notice-day-and-night</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/surrender-seats-before-first-rou</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
