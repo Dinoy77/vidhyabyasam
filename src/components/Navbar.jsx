@@ -18,6 +18,14 @@ function useResponsive() {
   return { isMobile: width < 768, isTablet: width < 1024 };
 }
 
+// 🌟 EXTENSIBLE FEATURE LIST — add new tools/features here and they'll
+// automatically appear in the consolidated "More" menu (desktop) and the
+// mobile drawer, no other code changes needed.
+const siteFeatures = [
+  { label: 'KEAM Predictor', icon: '🎯', path: '/keam-predictor' },
+  // { label: 'Next Feature', icon: '✨', path: '/next-feature' },  ← just add more like this
+];
+
 const courseCategories = [
   {
     title: 'Pharmacy',
@@ -69,6 +77,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
 
   const [coursesOpen, setCoursesOpen] = useState(false);
   const [articlesOpen, setArticlesOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false); // consolidated Login/Signup + features menu
   const [showLoanPopup, setShowLoanPopup] = useState(false);
   const [showLoanEnquiry, setShowLoanEnquiry] = useState(false);
 
@@ -96,6 +105,7 @@ export default function Navbar({ onCourseSelect = () => { } }) {
         setCoursesOpen(false);
         setArticlesOpen(false);
         setShowDropdown(false);
+        setMoreOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -369,13 +379,42 @@ export default function Navbar({ onCourseSelect = () => { } }) {
                 </div>
               )}
             </div>
-          ) : (
-            !isTablet && (
-              <>
-                <button style={styles.loginBtn} onClick={() => setShowAuth('login')}>Log In</button>
-                <button style={styles.signupBtn} onClick={() => setShowAuth('signup')}>Sign Up</button>
-              </>
-            )
+          ) : null}
+
+          {/* Consolidated "More" menu — Login/Sign Up (when logged out) + all
+              extra features (KEAM Predictor, and anything added to
+              siteFeatures later). Always visible on desktop so features
+              stay reachable whether or not the user is logged in. */}
+          {!isTablet && (
+            <div style={{ position: 'relative' }}>
+              <button style={styles.moreBtn} onClick={() => setMoreOpen(o => !o)}>
+                ☰ More
+              </button>
+              {moreOpen && (
+                <div style={styles.moreDropdown} className="animate-slideDown">
+                  {!user && (
+                    <>
+                      <button style={styles.moreLoginBtn} onClick={() => { setShowAuth('login'); setMoreOpen(false); }}>Log In</button>
+                      <button style={styles.moreSignupBtn} onClick={() => { setShowAuth('signup'); setMoreOpen(false); }}>Sign Up</button>
+                      <hr style={styles.moreDivider} />
+                    </>
+                  )}
+                  {siteFeatures.map(f => (
+                    <button
+                      key={f.path}
+                      style={styles.moreFeatureItem}
+                      onClick={() => {
+                        setMoreOpen(false);
+                        navigate(f.path);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      <span>{f.icon}</span> {f.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           )}
           {isTablet && <button style={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? '✕' : '☰'}</button>}
         </div>
@@ -402,6 +441,18 @@ export default function Navbar({ onCourseSelect = () => { } }) {
           >
             🏦 Educational Loan
           </span>
+
+          {/* Extra features — same siteFeatures array used in the desktop
+              "More" menu, so new features only need to be added once. */}
+          {siteFeatures.map(f => (
+            <span
+              key={f.path}
+              style={{ ...styles.mobileLink, cursor: 'pointer', color: '#7C3AED' }}
+              onClick={() => { setMenuOpen(false); navigate(f.path); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            >
+              {f.icon} {f.label}
+            </span>
+          ))}
 
           <div>
             <button style={styles.mobileLinkBtn} onClick={() => { setCoursesOpen(!coursesOpen); if (!coursesOpen) setArticlesOpen(false); }}>
@@ -519,6 +570,14 @@ const getStyles = (isMobile, isTablet) => ({
   navRight: { display: 'flex', gap: '10px', alignItems: 'center', flexShrink: 0 },
   loginBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 500, background: 'transparent', border: '1.5px solid var(--deep)', color: 'var(--deep)', cursor: 'pointer' },
   signupBtn: { padding: '7px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer' },
+
+  // "More" menu — consolidated Login/Sign Up + feature links
+  moreBtn: { padding: '7px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: '#fff', border: '1.5px solid var(--border)', color: 'var(--deep)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' },
+  moreDropdown: { position: 'absolute', top: '48px', right: 0, background: '#fff', borderRadius: '12px', boxShadow: '0 8px 30px rgba(0,0,0,0.12)', border: '1px solid var(--border)', padding: '12px', minWidth: '210px', zIndex: 2100, display: 'flex', flexDirection: 'column', gap: '6px' },
+  moreLoginBtn: { width: '100%', padding: '10px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: 'transparent', border: '1.5px solid var(--deep)', color: 'var(--deep)', cursor: 'pointer' },
+  moreSignupBtn: { width: '100%', padding: '10px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 700, background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer' },
+  moreDivider: { border: 'none', borderTop: '1px solid var(--border)', margin: '4px 0' },
+  moreFeatureItem: { width: '100%', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 12px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, background: 'transparent', border: 'none', color: 'var(--deep)', cursor: 'pointer' },
   avatarBtn: { display: 'flex', alignItems: 'center', gap: '8px', background: 'transparent', border: '1.5px solid var(--border)', borderRadius: '40px', padding: '5px 12px 5px 5px', fontSize: '13px', fontWeight: 500, cursor: 'pointer' },
   avatarBtnMobile: { display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', border: 'none', padding: 0, margin: 0, cursor: 'pointer', outline: 'none' },
   avatarCircle: { width: '32px', height: '32px', borderRadius: '50%', background: 'var(--accent)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 700 },

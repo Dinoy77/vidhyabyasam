@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import AuthModal from './AuthModal';
+
+function useResponsive() {
+  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return width < 640;
+}
 
 /**
  * KeamEnquiryModal
@@ -11,13 +21,16 @@ import AuthModal from './AuthModal';
  * in, it shows the enquiry form pre-filled with their account details.
  *
  * Props:
- *   college  — the matched college object { collegeName, branch, openingRank, closingRank, ... }
+ *   college  — the matched college object { collegeName, branch, closingRank, ... }
  *   rank     — the KEAM rank the student entered
  *   category — the category the student selected
  *   onClose  — called to close the whole popup
  */
 export default function KeamEnquiryModal({ college, rank, category, onClose }) {
   const { user } = useAuth();
+  const isMobile = useResponsive();
+  const styles = getStyles(isMobile);
+
   const [showAuth, setShowAuth] = useState(false);
 
   const [name, setName] = useState(user?.name || '');
@@ -26,6 +39,12 @@ export default function KeamEnquiryModal({ college, rank, category, onClose }) {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState('');
+
+  // Lock background scroll while the modal is open (mainly helps on mobile)
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = 'unset'; };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +68,6 @@ export default function KeamEnquiryModal({ college, rank, category, onClose }) {
       category,
       branch: college.branch,
       collegeName: college.collegeName,
-      openingRank: college.openingRank,
       closingRank: college.closingRank,
     };
 
@@ -75,12 +93,12 @@ export default function KeamEnquiryModal({ college, rank, category, onClose }) {
   return (
     <div style={styles.overlay} onClick={onClose}>
       <div style={styles.modal} onClick={e => e.stopPropagation()}>
-        <button style={styles.closeBtn} onClick={onClose}>✕</button>
+        <button style={styles.closeBtn} onClick={onClose} aria-label="Close">✕</button>
 
         {/* --- NOT LOGGED IN: show login prompt --- */}
         {!user && (
           <div style={styles.authPrompt}>
-            <div style={{ fontSize: '32px' }}>🔒</div>
+            <div style={styles.iconCircle}>🔒</div>
             <h3 style={styles.title}>Log in to enquire</h3>
             <p style={styles.sub}>
               Please log in or create a free account to send an enquiry about{' '}
@@ -133,7 +151,7 @@ export default function KeamEnquiryModal({ college, rank, category, onClose }) {
         {/* --- SENT: confirmation --- */}
         {user && sent && (
           <div style={styles.authPrompt}>
-            <div style={{ fontSize: '32px' }}>✅</div>
+            <div style={styles.iconCircle}>✅</div>
             <h3 style={styles.title}>Enquiry sent!</h3>
             <p style={styles.sub}>
               Our team will contact you about <strong>{college.collegeName}</strong> shortly.
@@ -150,31 +168,64 @@ export default function KeamEnquiryModal({ college, rank, category, onClose }) {
   );
 }
 
-const styles = {
+const getStyles = (isMobile) => ({
   overlay: {
     position: 'fixed', inset: 0, background: 'rgba(15,23,42,0.55)',
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-    zIndex: 3000, padding: '16px',
+    display: 'flex', alignItems: isMobile ? 'flex-end' : 'center', justifyContent: 'center',
+    zIndex: 3000, padding: isMobile ? 0 : '16px',
   },
   modal: {
-    background: '#fff', borderRadius: '16px', padding: '28px',
-    maxWidth: '420px', width: '100%', position: 'relative',
-    boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
+    background: '#fff',
+    borderRadius: isMobile ? '20px 20px 0 0' : '16px',
+    padding: isMobile ? '24px 20px calc(20px + env(safe-area-inset-bottom))' : '28px',
+    maxWidth: isMobile ? '100%' : '420px',
+    width: '100%',
+    maxHeight: isMobile ? '90vh' : '85vh',
+    overflowY: 'auto',
+    position: 'relative',
+    boxShadow: '0 -8px 40px rgba(0,0,0,0.2), 0 20px 60px rgba(0,0,0,0.25)',
+    boxSizing: 'border-box',
   },
   closeBtn: {
-    position: 'absolute', top: '14px', right: '14px', background: 'transparent',
-    border: 'none', fontSize: '16px', cursor: 'pointer', color: 'var(--muted)',
+    position: 'absolute', top: isMobile ? '14px' : '14px', right: isMobile ? '16px' : '14px',
+    background: isMobile ? '#F1F5F9' : 'transparent',
+    border: 'none', borderRadius: '50%',
+    width: isMobile ? '32px' : '24px', height: isMobile ? '32px' : '24px',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    fontSize: '15px', cursor: 'pointer', color: 'var(--muted)',
   },
-  title: { fontFamily: 'Playfair Display, serif', fontSize: '19px', color: '#0F172A', margin: '8px 0 4px' },
-  collegeLine: { fontSize: '14px', fontWeight: 700, color: 'var(--deep)', margin: '4px 0 0' },
+  iconCircle: { fontSize: '30px', marginBottom: '4px' },
+  title: { fontFamily: 'Playfair Display, serif', fontSize: isMobile ? '18px' : '19px', color: '#0F172A', margin: '8px 0 4px', lineHeight: 1.3 },
+  collegeLine: { fontSize: '14px', fontWeight: 700, color: 'var(--deep)', margin: '4px 24px 0 0' },
   branchLine: { fontSize: '13px', color: 'var(--muted)', margin: '2px 0 16px' },
   sub: { color: 'var(--muted)', fontSize: '13px', lineHeight: 1.6, margin: '0 0 20px' },
   form: { display: 'flex', flexDirection: 'column', gap: '12px' },
-  input: { padding: '11px 14px', borderRadius: '10px', border: '1.5px solid var(--border)', fontSize: '14px', fontFamily: 'DM Sans, sans-serif' },
-  submitBtn: { padding: '12px', borderRadius: '10px', border: 'none', background: 'var(--accent)', color: '#fff', fontWeight: 700, fontSize: '14px', cursor: 'pointer' },
+  input: {
+    padding: isMobile ? '13px 14px' : '11px 14px',
+    borderRadius: '10px', border: '1.5px solid var(--border)',
+    fontSize: isMobile ? '16px' : '14px', // 16px on mobile prevents iOS auto-zoom on focus
+    fontFamily: 'DM Sans, sans-serif', width: '100%', boxSizing: 'border-box',
+  },
+  submitBtn: {
+    padding: isMobile ? '14px' : '12px', borderRadius: '10px', border: 'none',
+    background: 'var(--accent)', color: '#fff', fontWeight: 700,
+    fontSize: '14px', cursor: 'pointer', width: '100%',
+  },
   error: { color: '#DC2626', fontSize: '13px', margin: '4px 0 0' },
   authPrompt: { textAlign: 'center', padding: '10px 0' },
-  authBtnRow: { display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '8px' },
-  loginBtn: { padding: '10px 22px', borderRadius: '8px', border: '1.5px solid var(--deep)', color: 'var(--deep)', background: 'transparent', fontWeight: 600, fontSize: '13px', cursor: 'pointer' },
-  signupBtn: { padding: '10px 22px', borderRadius: '8px', border: 'none', color: '#fff', background: 'var(--accent)', fontWeight: 600, fontSize: '13px', cursor: 'pointer' },
-};
+  authBtnRow: {
+    display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '8px',
+    flexDirection: isMobile ? 'column' : 'row',
+  },
+  loginBtn: {
+    padding: isMobile ? '13px 22px' : '10px 22px', borderRadius: '8px',
+    border: '1.5px solid var(--deep)', color: 'var(--deep)', background: 'transparent',
+    fontWeight: 600, fontSize: '13px', cursor: 'pointer', width: isMobile ? '100%' : 'auto',
+    boxSizing: 'border-box',
+  },
+  signupBtn: {
+    padding: isMobile ? '13px 22px' : '10px 22px', borderRadius: '8px', border: 'none',
+    color: '#fff', background: 'var(--accent)', fontWeight: 600, fontSize: '13px',
+    cursor: 'pointer', width: isMobile ? '100%' : 'auto', boxSizing: 'border-box',
+  },
+});

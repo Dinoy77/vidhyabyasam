@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { keamCutoffs, keamCategories, keamBranches } from '../data/keamCutoffs';
 import KeamEnquiryModal from '../components/KeamEnquiryModal';
+import CustomSelect from '../components/CustomSelect';
 
 function useResponsive() {
   const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
@@ -12,19 +13,23 @@ function useResponsive() {
   return width < 768;
 }
 
-// Core prediction logic — swap thresholds / add multi-year averaging later
-function predictColleges(userRank, category, branch) {
+// Core prediction logic — swap thresholds / add multi-year averaging later.
+// Reads the closing rank for the selected category directly off each
+// college's `cutoffs` object; skips colleges with no seat allotted in
+// that category (cutoffs[category] === null) rather than guessing.
+function predictColleges(userRank, categoryCode, branch) {
   return keamCutoffs
-    .filter(c => c.category === category)
     .filter(c => (branch === 'All Branches' ? true : c.branch === branch))
+    .filter(c => c.cutoffs[categoryCode] !== null && c.cutoffs[categoryCode] !== undefined)
     .map(c => {
-      const margin = c.closingRank - userRank;
+      const closingRank = c.cutoffs[categoryCode];
+      const margin = closingRank - userRank;
       let chance, color;
       if (margin > 2000) { chance = 'High Chance'; color = '#059669'; }
       else if (margin >= 0) { chance = 'Moderate Chance'; color = '#D97706'; }
       else if (margin >= -1000) { chance = 'Slight Chance'; color = '#DC2626'; }
       else { chance = 'Unlikely'; color = '#94A3B8'; }
-      return { ...c, margin, chance, color };
+      return { ...c, closingRank, margin, chance, color };
     })
     .filter(c => c.chance !== 'Unlikely')
     .sort((a, b) => a.closingRank - b.closingRank);
@@ -35,7 +40,7 @@ export default function KeamPredictor() {
   const styles = getStyles(isMobile);
 
   const [rank, setRank] = useState('');
-  const [category, setCategory] = useState('General');
+  const [category, setCategory] = useState('SM');
   const [branch, setBranch] = useState('All Branches');
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
@@ -66,7 +71,7 @@ export default function KeamPredictor() {
         <h1 style={styles.heroTitle}>KEAM College Predictor</h1>
         <p style={styles.heroSub}>
           Enter your KEAM rank to see which engineering colleges you have a realistic
-          chance of getting into, based on previous years' allotment cutoffs.
+          chance of getting into, based on the 2025 First Phase Allotment cutoffs.
         </p>
       </div>
 
@@ -86,17 +91,20 @@ export default function KeamPredictor() {
 
           <div style={styles.field}>
             <label style={styles.label}>Category</label>
-            <select style={styles.input} value={category} onChange={e => setCategory(e.target.value)}>
-              {keamCategories.map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
+            <CustomSelect
+              value={category}
+              onChange={setCategory}
+              options={keamCategories.map(c => ({ value: c.code, label: `${c.code} — ${c.label}` }))}
+            />
           </div>
 
           <div style={styles.field}>
             <label style={styles.label}>Branch</label>
-            <select style={styles.input} value={branch} onChange={e => setBranch(e.target.value)}>
-              <option>All Branches</option>
-              {keamBranches.map(b => <option key={b} value={b}>{b}</option>)}
-            </select>
+            <CustomSelect
+              value={branch}
+              onChange={setBranch}
+              options={['All Branches', ...keamBranches]}
+            />
           </div>
 
           <button type="submit" style={styles.submitBtn}>Predict My Colleges</button>
@@ -114,7 +122,7 @@ export default function KeamPredictor() {
           {results.length === 0 && (
             <p style={styles.noResults}>
               Try a different category or branch — or your rank may be outside the range
-              of colleges currently in our database.
+              of colleges currently in our database (Government colleges, 4 branches only, for now).
             </p>
           )}
 
@@ -123,17 +131,13 @@ export default function KeamPredictor() {
               <div key={`${r.collegeId}-${r.branch}-${i}`} style={styles.resultCard}>
                 <div style={styles.cardTop}>
                   <span style={{ ...styles.badge, background: r.color }}>{r.chance}</span>
-                  <span style={styles.year}>{r.year} data</span>
+                  <span style={styles.year}>{r.year} · {r.round}</span>
                 </div>
                 <h3 style={styles.collegeName}>{r.collegeName}</h3>
                 <p style={styles.branchName}>{r.branch}</p>
                 <div style={styles.rankRow}>
                   <div>
-                    <span style={styles.rankLabel}>Opening Rank</span>
-                    <span style={styles.rankValue}>{r.openingRank.toLocaleString()}</span>
-                  </div>
-                  <div>
-                    <span style={styles.rankLabel}>Closing Rank</span>
+                    <span style={styles.rankLabel}>Closing Rank ({category})</span>
                     <span style={styles.rankValue}>{r.closingRank.toLocaleString()}</span>
                   </div>
                 </div>
@@ -150,9 +154,10 @@ export default function KeamPredictor() {
       )}
 
       <div style={styles.disclaimer}>
-        ⚠️ Predictions are based on previous years' allotment data and are indicative only.
-        Actual cutoffs vary year to year based on seat availability and applicant pool.
-        Always verify with official CEE Kerala publications before making decisions.
+        ⚠️ Predictions are based on the official CEE Kerala First Phase Allotment cutoffs
+        for 2025 (Government colleges only, 4 branches). Cutoffs vary by round and year —
+        later rounds (Second/Third Phase, Mop-Up) typically have lower closing ranks as more
+        seats fill. Always verify with official CEE Kerala publications before making decisions.
       </div>
 
       {/* Per-college enquiry popup — login-gated */}
@@ -174,12 +179,12 @@ const getStyles = (isMobile) => ({
   heroTitle: { fontFamily: 'Playfair Display, serif', fontSize: isMobile ? '28px' : '38px', color: '#0F172A', margin: '0 0 12px' },
   heroSub: { color: 'var(--muted)', fontSize: '15px', maxWidth: '600px', margin: '0 auto', lineHeight: 1.6 },
 
-  formCard: { background: '#fff', borderRadius: '16px', border: '1px solid var(--border)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', padding: isMobile ? '20px' : '28px', marginBottom: '40px' },
-  form: { display: 'flex', flexDirection: isMobile ? 'column' : 'row', gap: '16px', alignItems: isMobile ? 'stretch' : 'flex-end' },
-  field: { display: 'flex', flexDirection: 'column', gap: '6px', flex: 1 },
+  formCard: { background: '#fff', borderRadius: '16px', border: '1px solid var(--border)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', padding: isMobile ? '20px' : '28px', marginBottom: '40px', boxSizing: 'border-box' },
+  form: { display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end' },
+  field: { display: 'flex', flexDirection: 'column', gap: '6px', flex: '1 1 180px', minWidth: '160px' },
   label: { fontSize: '12px', fontWeight: 700, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.6px' },
-  input: { padding: '11px 14px', borderRadius: '10px', border: '1.5px solid var(--border)', fontSize: '14px', fontFamily: 'DM Sans, sans-serif', background: '#fff' },
-  submitBtn: { padding: '12px 24px', borderRadius: '10px', border: 'none', background: 'var(--accent)', color: '#fff', fontWeight: 700, fontSize: '14px', cursor: 'pointer', whiteSpace: 'nowrap' },
+  input: { padding: '11px 14px', borderRadius: '10px', border: '1.5px solid var(--border)', fontSize: '14px', fontFamily: 'DM Sans, sans-serif', background: '#fff', width: '100%', maxWidth: '100%', boxSizing: 'border-box' },
+  submitBtn: { padding: '12px 24px', borderRadius: '10px', border: 'none', background: 'var(--accent)', color: '#fff', fontWeight: 700, fontSize: '14px', cursor: 'pointer', whiteSpace: 'nowrap', flex: '0 0 auto' },
   error: { color: '#DC2626', fontSize: '13px', marginTop: '12px', marginBottom: 0 },
 
   resultsSection: { marginBottom: '40px' },
