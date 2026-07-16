@@ -1,4 +1,142 @@
 export const blogArticles = {
+  "neet-mds-counseling-schedule-2026": {
+    category: "Admission Guide",
+    title: "NEET MDS 2026 Counseling: Round-Wise Schedule & Seat Allotment Guide",
+    author: "Vidyabhyasam Editorial",
+    date: "July 16, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+    content: [
+      { text: "Following the declaration of the NEET MDS 2026 results, dental post-graduates are gearing up for the All India Quota (AIQ) and State-level counseling process. Administered by the Medical Counseling Committee (MCC), the admission process determines entry into premier government dental colleges and private deemed institutions across India." },
+      { 
+        heading: "1. The 4-Round Counseling Structure", 
+        text: "The MCC conducts counseling across four sequential rounds: Round 1, Round 2, Round 3 (previously Mop-Up), and the final Stray Vacancy Round. Eligible candidates must register online, deposit the non-refundable registration fee along with a refundable security deposit, and strategically arrange their specialty preferences before the choice locking window closes." 
+      },
+      { 
+        heading: "2. Strategic Choice Filling for Dental Specialties", 
+        text: "When selecting preferences, balance your clinical interest with historical cutoff data. High-demand branches like Conservative Dentistry & Endodontics, Oral & Maxillofacial Surgery, and Orthodontics close rapidly in Round 1. If your rank falls in the borderline zone, ensure you include broader specialties like Periodontology or Prosthodontics in well-established government dental colleges as safe alternatives." 
+      },
+      { 
+        heading: "3. Upgradation Rules & Security Deposit Forfeiture", 
+        text: "If you are allotted a seat in Round 1, you can opt for a free exit or choose to upgrade in Round 2 without losing your initial seat. However, once a seat is allotted and joined in Round 2 or Round 3, vacating it without following formal exit protocols will result in the immediate forfeiture of your security deposit (₹25,000 for AIQ/Central Universities and up to ₹2,00,000 for Deemed Universities)." 
+      },
+      { 
+        heading: "4. Mandatory Internship & Eligibility Cutoff", 
+        text: "To participate in choice filling, candidates must possess a recognized BDS degree, permanent or provisional registration with the State Dental Council, and must have completed their mandatory 12-month rotatory internship by the prescribed deadline. Verify your documents beforehand to prevent physical verification rejections at the reporting institute." 
+      }
+    ],
+    cta: { 
+      title: "Explore Post-Graduate Medical Pathways", 
+      description: "Review structural eligibility, counseling criteria, and advanced seat selection tips for post-graduate medical exams.", 
+      buttonText: "View NEET PG Exam Guide", 
+      link: "/articles/NeetPgGuide" 
+    }
+  },
+
+  "nimcet-seat-allotment-reporting-2026": {
+    category: "Admission Guide",
+    title: "NIMCET 2026 Counseling: Decoding NIT MCA Seat Allotment & Upgradation",
+    author: "Vidyabhyasam Editorial",
+    date: "July 16, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "Securing a seat in a National Institute of Technology (NIT) for an MCA program is a major milestone for computer application aspirants. With the round-wise seat allotment results rolling out, candidates must understand their admission confirmation options to avoid forfeiting their hard-earned ranks." },
+      { 
+        heading: "1. Understanding Seat Allotment Results", 
+        text: "NIMCET counseling is organized into three main rounds followed by a Special Round for vacant seats. Allotments are strictly generated based on your NIMCET 2026 All India Rank (AIR), category reservations, and the sequence of NIT preferences submitted during online choice filling. Once an allotment is released, you must log into the admission portal to download your official Provisional Allotment Letter." 
+      },
+      { 
+        heading: "2. The 'Freeze' vs. 'Float' Decision", 
+        text: "Upon receiving a seat, you must exercise one of two options online. Select 'Freeze' if you are completely satisfied with your allotted NIT (e.g., NIT Trichy, NIT Warangal, or NIT Surathkal) and do not wish to participate in further rounds. Select 'Float' if you wish to accept and hold the current seat while remaining eligible for an automatic upward upgrade to a higher-preference NIT in the subsequent round." 
+      },
+      { 
+        heading: "3. Online Reporting & Partial Admission Fee", 
+        text: "Whether you choose to Freeze or Float, completing online reporting within the stipulated deadline is mandatory. This involves uploading verification documents (10th/12th mark sheets, graduation memos, and category certificates) and paying the mandatory Partial Admission Fee (₹10,000) through the online payment gateway. Failing to pay this fee results in instant seat cancellation and disqualification from future rounds." 
+      },
+      { 
+        heading: "4. The Special Round Opportunity", 
+        text: "After the completion of the three regular rounds, participating NITs publish a list of residual vacant seats. A centralized Special Round is then conducted where fresh registrations and choice locking are permitted. This is a golden opportunity for moderate-rank holders to secure admissions into newer or mid-tier NITs without competing against high-rankers who have already frozen their seats." 
+      }
+    ],
+    cta: { 
+      title: "Review Computer Application Curriculums", 
+      description: "Deep dive into Master of Computer Applications syllabus specifications, project parameters, and job scopes.", 
+      buttonText: "Access MCA Course Guide", 
+      link: "/articles/McaCourseGuide" 
+    }
+  },
+
+  "clat-nlu-counseling-process-2026": {
+    category: "Admission Guide",
+    title: "CLAT 2026 Counseling: Master NLU Preference Lists & Merit Allocation",
+    author: "Vidyabhyasam Editorial",
+    date: "July 16, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
+    content: [
+      { text: "The centralized admissions counseling conducted by the Consortium of National Law Universities (NLUs) is the definitive pathway for undergraduate (5-year integrated LLB) and postgraduate (LLM) law admissions. With over 26 participating NLUs, executing a calculated choice-filling strategy across the five allotment rounds is critical." },
+      { 
+        heading: "1. The 5-Round Allotment Mechanism", 
+        text: "The Consortium releases up to five centralized merit allotment lists. To participate, invited candidates must log into the official portal, submit a mandatory counseling registration fee (₹30,000 for General/OBC and ₹20,000 for SC/ST), and arrange their complete NLU preference list. Seats are allocated strictly based on CLAT 2026 rank, category reservations, and university preference order." 
+      },
+      { 
+        heading: "2. The Tier-Based Preference List Strategy", 
+        text: "Never arrange your NLU preferences purely based on your rank; always arrange them in the absolute order of institution quality and brand prestige. Place Tier-1 NLUs (NLSIU Bangalore, NALSAR Hyderabad, WBNUJS Kolkata) at the very top, followed by Tier-2 and Tier-3 institutions. Placing a lower-ranked NLU above a top-tier institution will permanently block the system from upgrading you to the better college." 
+      },
+      { 
+        heading: "3. Decoding Freeze, Float, and Exit Options", 
+        text: "When allotted a seat in any round, you must actively choose an option. 'Freeze' locks your current NLU and exits the upgradation process. 'Float' secures your current seat while keeping you eligible for an upgrade to a higher-preference NLU in the next round. 'Exit' withdraws your candidature entirely. If you choose Freeze or Float, you must pay the mandatory confirmation fee within the round's deadline to avoid losing the seat." 
+      },
+      { 
+        heading: "4. Domicile & Horizontal Reservations", 
+        text: "Many NLUs offer significant state domicile reservations (ranging from 25% to 50% of total seats). Ensure you upload valid state residence certificates during counseling registration if you qualify. Additionally, cross-check horizontal reservation criteria for Women, PwD, and Wards of Armed Forces personnel, as these quotas can significantly boost your allotment chances in specific regional NLUs." 
+      }
+    ],
+    cta: { 
+      title: "Plan Your Campus Transit Logistics", 
+      description: "Locate premier national campus destinations situated within optimal proximity to major regional transport hubs.", 
+      buttonText: "View Strategic Institutional Map", 
+      link: "/articles/CollegesNearAirports" 
+    }
+  },
+  "mbbs-seat-matrix-2026-2027": {
+    category: "Admission Guide",
+    title: "MBBS Seat Matrix 2026-2027: State-Wise Government College Seats",
+    author: "Vidyabhyasam Editorial",
+    date: "July 16, 2026",
+    readTime: "8 Min Read",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    content: [
+      { text: "Navigating medical admissions in India requires strategic planning, and understanding the official MBBS seat matrix is the most critical step for NEET UG qualifiers. As students prepare for the 2026-2027 counseling cycle, the National Medical Commission (NMC) has released updated data detailing renewed seats and new infrastructure across government medical colleges." },
+      { 
+        heading: "1. What is the MBBS Seat Matrix for 2026-2027?", 
+        text: "The MBBS Seat Matrix is the official National Medical Commission (NMC) documentation detailing available medical seats for counseling. For 2026, core takeaways include a nationwide continuation of existing medical seat capacity (Stable Renewals), localized growth in states like Andhra Pradesh (Regional Expansion), and the critical importance of distinguishing between renewed versus newly established seats for ranking analysis." 
+      },
+      { 
+        heading: "2. Why the Seat Matrix Matters", 
+        text: "The MBBS seat matrix serves as the definitive blueprint for students participating in All India Quota (AIQ) and State Quota counseling. Analyzing seat counts helps aspirants accurately project cutoff fluctuations, evaluate regional competition, and select target colleges strategically during choice filling." 
+      },
+      { 
+        heading: "3. Strategic Counseling Blueprint", 
+        text: "When compiling your preference lists, prioritize well-established government medical colleges with high renewed capacities for clinical exposure and academic stability. For students with borderline ranks, newly established government colleges and private institutions with recently increased intake capacities present valuable opportunities to secure a medical seat without compromising on institutional recognition." 
+      },
+      { 
+        heading: "4. Counseling Alert for 2026", 
+        text: "The data published by educational bodies is based on initial NMC releases for the 2026 academic session. As seat approvals can undergo minor revisions prior to the commencement of choice filling, students are strictly advised to always cross-verify the final seat counts with the Medical Counseling Committee (MCC) or their respective State DME portals before locking their final preference list." 
+      },
+      {
+        heading: "5. How to Access and Download the Official Seat Matrix PDF",
+        text: "To download the official round-wise college distribution lists, you should follow two main channels. For the complete, country-wide list of approved colleges and seat allocations, visit the official NMC website (nmc.org.in), navigate to the Information Desk, and select 'List of Colleges Teaching MBBS'. For active All India Quota counseling matrices, go to the MCC portal (mcc.nic.in), select the 'UG Medical Counselling' tab, and look under the 'Current Events' panel for the active 'Seat Matrix' link to download the live PDF breakdown before choice locking."
+      }
+    ],
+    cta: { 
+      title: "Evaluate Your Admission Chances", 
+      description: "See more about NEET.", 
+      buttonText: "NEET-UG: The Gateway to Medicine", 
+      link: "/articles/NeetUgGuide" 
+    }
+  },
   "tnea-choice-filling-strategy": {
     category: "Admission Guide",
     title: "How to Master TNEA 2026 Choice Filling: A Strategy Guide for Round 1",

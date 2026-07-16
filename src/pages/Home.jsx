@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Hero from '../components/Hero';
-import LatestNewsGrid from '../components/LatestNewsGrid'; // <-- Imported new component
+import LatestNewsGrid from '../components/LatestNewsGrid'; 
 import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
 import Footer from '../components/Footer';
@@ -12,6 +12,9 @@ import { mba_colleges } from '../data/MBAdata';
 
 // Import your news helper function
 import { getLatestNewsFeed } from '../data/NewsData'; 
+
+// --- NEW: Import SEO Configurations ---
+import { seoConfigurations } from '../data/seoData';
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -33,6 +36,43 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   }, []);
 
   const styles = getStyles(isMobile);
+
+  // --- NEW: Homepage SEO & Schema Integration Effect ---
+  useEffect(() => {
+    const seo = seoConfigurations.home;
+    
+    // 1. Set Document Title
+    document.title = seo.title;
+
+    // 2. Helper function to set/create meta tags
+    const setMetaTag = (name, content) => {
+      let element = document.querySelector(`meta[name="${name}"]`);
+      if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute('name', name);
+        document.head.appendChild(element);
+      }
+      element.setAttribute('content', content);
+    };
+
+    setMetaTag('description', seo.description);
+    setMetaTag('keywords', seo.keywords);
+
+    // 3. Inject JSON-LD Structured Data Schema into <head>
+    let schemaScript = document.querySelector('#seo-schema-home');
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.type = 'application/ld+json';
+      schemaScript.id = 'seo-schema-home';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(seo.schemaData);
+
+    // 4. Clean up schema when leaving the homepage
+    return () => {
+      if (schemaScript) schemaScript.remove();
+    };
+  }, []);
 
   // Grab the top 6 most recent news items for the grid
   const latestNews = useMemo(() => {

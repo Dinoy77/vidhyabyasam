@@ -2,7 +2,7 @@ export const seoConfigurations = {
   home: {
     title: "Vidyabhyasam | Top Educational Portal for Medical & Engineering Admissions",
     description: "Discover top medical and engineering colleges in India. Get expert guidance on NEET UG, FMGE, INI CET, MBBS, BAMS, B.Sc Nursing, and admissions with Vidyabhyasam.",
-    keywords: "Vidyabhyasam, medical colleges India, engineering colleges, NEET UG guidance, MBBS admission, educational portal India, how to get mbbs admission in india, best college search portal, help me find a good engineering college, neet ug counselling guidance, find colleges for low neet score, medical admission consultants online",
+    keywords: "Vidyabhyasam, medical colleges India, engineering colleges, NEET UG guidance, MBBS admission, educational portal India, how to get mbbs admission in india, best college search portal, help me find a good engineering college, neet ug counselling guidance, find colleges for low neet score, medical admission consultants online, admissions 2026, entrance exam latest news, counselling schedule 2026, seat allotment result, application form details, exam notification, higher education india, admission portal, Vidyabhyasam news, kcet result, neet ranking, neet result, vidyabhyasam, neet 2026, reneet, kcet, comedk result, comedk, lbs, lbskerala2026, lbs kerala result, lbs result, lbs 2026, education portal, results, engineering colleges Kerala, best B.Tech colleges Karnataka, top medical colleges South India, nursing colleges Tamil Nadu, KEAM 2026, NEET 2026, KCET 2026, college admission guidance, Vidyabhyasam",
     url: "/",
     schemaData: {
       "@context": "https://schema.org",
@@ -35,7 +35,7 @@ export const seoConfigurations = {
   dynamicNews: (newsItem, slug) => ({
     title: `${newsItem.title} | Vidyabhyasam Education News`,
     description: newsItem.description,
-    keywords: `${newsItem.title.toLowerCase()}, ${newsItem.state} education news, ${newsItem.state} admission updates, ${newsItem.courses.join(", ")}, admissions 2026, entrance exam latest news, counselling schedule 2026, seat allotment result, application form details, exam notification, higher education india, admission portal, Vidyabhyasam news`,
+    keywords: `${newsItem.title.toLowerCase()}, ${newsItem.state} education news, ${newsItem.state} admission updates, ${newsItem.courses.join(", ")}, admissions 2026, entrance exam latest news, counselling schedule 2026, seat allotment result, application form details, exam notification, higher education india, admission portal, Vidyabhyasam news, kcet result, neet ranking, neet result, vidyabhyasam, neet 2026, reneet, kcet, comedk result, comedk, lbs, lbskerala2026, lbs kerala result, lbs result, lbs 2026, education portal, results`,
     url: `/news/${slug}`,
     schemaData: {
       "@context": "https://schema.org",
