@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Core Pages -->
   <url>
     <loc>https://vidyabhyasam.com/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://vidyabhyasam.com/keam-predictor</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
 
-  <!-- Articles & Guides -->
   <url>
     <loc>https://vidyabhyasam.com/articles/TopIndianMedicalColleges</loc>
     <changefreq>monthly</changefreq>
@@ -100,7 +103,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Editorial Blogs -->
   <url>
     <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
     <changefreq>monthly</changefreq>
@@ -122,39 +124,13 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- News & Live Admission Updates -->
   <url>
     <loc>https://vidyabhyasam.com/news/keam-2026-first-phase-seat-all</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vidyabhyasam.com/news/nimhans-2026-ug-admissions-pro</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/lbs-kerala-2026-nursing-para</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/kcet-2026-option-modification</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://vidyabhyasam.com/news/comedk-uget-2026-round-1-mock</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/tnea-2026-round-1-choice-filli</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/ap-eapcet-2026-phase-1-web-cou</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -169,17 +145,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://vidyabhyasam.com/news/ap-icet-2026-counselling-notific</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://vidyabhyasam.com/news/re-neet-2026-omr-sheet-pdf-live</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/ugc-net-answer-key-2026-shortly</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -190,11 +156,6 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/re-neet-2026-result-live-nta-ne</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://vidyabhyasam.com/news/kerala-plus-two-say-result-2026</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -250,6 +211,31 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/surrender-seats-before-first-rou</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kcet-2026-final-seat-allotment-r</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/re-neet-2026-omr-sheet-download</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kcet-2026-seat-allotment-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-omr-sheet-2026-released-at</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/kcet-final-seat-allotment-2026-o</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
