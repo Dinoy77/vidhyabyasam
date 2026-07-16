@@ -1,4 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { seoConfigurations } from '../data/seoData';
 import { keamCutoffs, keamCategories, keamBranches } from '../data/keamCutoffs';
 import KeamEnquiryModal from '../components/KeamEnquiryModal';
 import CustomSelect from '../components/CustomSelect';
@@ -12,6 +14,10 @@ function useResponsive() {
   }, []);
   return width < 768;
 }
+
+// SEO for this page now lives in the shared config: data/seoConfig.js →
+// seoConfigurations.keamPredictor (title, description, keywords, url, schemaData)
+const seo = seoConfigurations.keamPredictor;
 
 // Core prediction logic — swap thresholds / add multi-year averaging later.
 // Reads the closing rank for the selected category directly off each
@@ -67,6 +73,30 @@ export default function KeamPredictor() {
 
   return (
     <div style={styles.page}>
+      {/* --- SEO (sourced from data/seoConfig.js → seoConfigurations.keamPredictor) --- */}
+      <Helmet>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+        <link rel="canonical" href={`https://vidyabhyasam.com${seo.url}`} />
+
+        {/* Open Graph (Facebook/WhatsApp link previews) */}
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={`https://vidyabhyasam.com${seo.url}`} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter/X card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+
+        {/* Structured data (JSON-LD) so search engines understand this is a free tool */}
+        <script type="application/ld+json">
+          {JSON.stringify(seo.schemaData)}
+        </script>
+      </Helmet>
+
       <div style={styles.hero}>
         <h1 style={styles.heroTitle}>KEAM College Predictor</h1>
         <p style={styles.heroSub}>

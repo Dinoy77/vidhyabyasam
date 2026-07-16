@@ -51,6 +51,32 @@ export const seoConfigurations = {
     }
   }),
 
+  // --- NEW: KEAM College Predictor page ---
+  keamPredictor: {
+    title: "KEAM College Predictor 2026 | Check Your Rank-wise Engineering & Pharmacy College",
+    description: "Free KEAM College Predictor for Kerala. Enter your KEAM rank and category to instantly check which engineering and B.Pharm colleges you can get, based on official CEE Kerala cutoff data.",
+    keywords: "KEAM college predictor, KEAM rank predictor, KEAM 2026 predictor, which college will I get with my KEAM rank, KEAM cutoff 2026, KEAM engineering college predictor, KEAM b pharm predictor, KEAM rank wise colleges, CEE Kerala cutoff, KEAM category wise cutoff, KEAM SM cutoff, KEAM EWS cutoff, KEAM SC ST cutoff, best engineering college for my KEAM rank, KEAM CSE cutoff rank, KEAM ECE cutoff rank, KEAM mechanical cutoff, KEAM civil engineering cutoff, KEAM IT cutoff, government engineering colleges Kerala KEAM rank, private engineering colleges Kerala KEAM, KEAM last rank 2025, KEAM allotment prediction, KEAM counselling college list, KEAM rank vs college chart, will I get CET Trivandrum with my rank, will I get TKM Kollam, will I get Model Engineering College, KEAM Rajagiri cutoff, KEAM Saintgits cutoff, KEAM pharmacy colleges list, B.Pharm KEAM cutoff Kerala, KEAM predictor free, KEAM 2026 college finder",
+    url: "/keam-predictor",
+    schemaData: {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "KEAM College Predictor",
+      "url": "https://vidyabhyasam.com/keam-predictor",
+      "applicationCategory": "EducationApplication",
+      "description": "Enter your KEAM rank and category to see which Kerala engineering and B.Pharm colleges you have a realistic chance of getting, based on official CEE Kerala allotment cutoff data.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vidyabhyasam",
+        "url": "https://vidyabhyasam.com/"
+      }
+    }
+  },
+
   topIndianMedicalColleges: {
     title: "Top Medical Colleges in India | Rankings, Fees & Admissions",
     description: "Explore the comprehensive list of the top medical colleges in India. Compare rankings, fee structures, facilities, and admission criteria for MBBS.",
