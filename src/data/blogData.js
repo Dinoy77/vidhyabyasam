@@ -1,4 +1,105 @@
 export const blogArticles = {
+  "neet-ug-stray-vacancy-rules-2026": {
+    category: "Admission Guide",
+    title: "NEET UG 2026 Stray Vacancy Round: Crucial Rules and Eligibility Criteria",
+    author: "Vidyabhyasam Editorial",
+    date: "July 17, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    content: [
+      { text: "As the major regular rounds of NEET UG 2026 counseling draw to a close, the final frontier for MBBS and BDS seats is the centralized Stray Vacancy Round. While this round offers a vital final opportunity to secure a government medical seat, the Medical Counselling Committee (MCC) enforces strict rules designed to eliminate seat wastage." },
+      { 
+        heading: "1. Strict Eligibility: Who is Allowed?", 
+        text: "The Stray Vacancy Round is exclusively for candidates who have not been allotted any seat in the previous regular rounds (Round 1, Round 2, and Round 3) of AIQ or State Quota counseling. If you are already holding or have joined a seat anywhere in India, the centralized portal will automatically block you from participating." 
+      },
+      { 
+        heading: "2. The Choice Locking Mandatory Condition", 
+        text: "Unlike earlier rounds where choices might automatically lock, the Stray Vacancy Round requires candidates to actively submit and manually lock their preference lists. Furthermore, you should only enter choices for colleges you are genuinely prepared to join, as the system treats these entries as an absolute commitment." 
+      },
+      { 
+        heading: "3. Severe Penalties for Seat Non-Acceptance", 
+        text: "If you are allocated an MBBS or BDS seat during the Stray Vacancy Round and fail to report to the assigned institution, a heavy penalty is enforced. Not only will your refundable security deposit be permanently forfeited, but you will also be officially debarred from appearing for the NEET UG entrance exam for the entire subsequent academic year." 
+      },
+      { 
+        heading: "4. No Upgradation Provision", 
+        text: "There is no option to 'Float' or request an upgrade after the Stray Vacancy Round. The allotment generated is completely final. Upon publication of the results, candidates must immediately collect their original certificates and report physically to the designated medical college to conclude their admission formalities." 
+      }
+    ],
+    cta: { 
+      title: "Review NEET UG Essential Roadmap", 
+      description: "Understand the core scoring, documentation, and institutional entry parameters required for national medical admissions.", 
+      buttonText: "Access NEET UG Exam Guide", 
+      link: "/articles/NeetUgGuide" 
+    }
+  },
+
+  "comedk-choice-filling-tactics-2026": {
+    category: "Admission Guide",
+    title: "COMEDK UGET 2026: Master Choice Filling for Karnataka Private Engineering",
+    author: "Vidyabhyasam Editorial",
+    date: "July 17, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "Counselling for the Consortium of Medical, Engineering, and Dental Colleges of Karnataka (COMEDK) governs entry into some of the most prestigious private engineering institutes in the country. With lakhs of students competing for top tech branches across Bangalore and surrounding hubs, your preference list design dictates your final outcome." },
+      { 
+        heading: "1. The Mock Allotment Warning", 
+        text: "COMEDK releases a provisional mock allotment list to show you where you stand based on initial entries. Do not treat the mock results as a final guarantee. Instead, look at the closing rank trends and use the option modification window to intelligently add backup colleges if your dream choices look mathematically out of reach." 
+      },
+      { 
+        heading: "2. Formatting Your Institutional Hierarchy", 
+        text: "Always place elite institutions like RVCE, BMSCE, and MSRIT at the absolute top of your preference web entry structure, regardless of whether your rank perfectly matches their previous year cutoffs. The computer algorithm checks your choices sequentially from top to bottom, so nesting premier options first ensures you don't miss out on unexpected vacancy shifts." 
+      },
+      { 
+        heading: "3. Navigating the Bangalore IT Branch Premium", 
+        text: "If you are strictly focused on securing a placement in the tech sector, consider combining core Computer Science Engineering (CSE) with specialized alternatives such as Information Science (ISE) or Artificial Intelligence & Machine Learning (AIML) at higher-tier colleges, rather than dropping down to lower-tier institutions just for the core CSE tag." 
+      },
+      { 
+        heading: "4. Fee Commitment & Surrender Timelines", 
+        text: "COMEDK requires candidates to pay the total institutional tuition fee upfront via the online portal to hold an allotted seat into the next round. If you decide to exit the system later to take a seat via another entrance loop like KCET or JEE, you must strictly complete the seat surrender process before the Round 2 choice locking deadline to ensure a full fee refund." 
+      }
+    ],
+    cta: { 
+      title: "Browse Premier Karnataka Institutions", 
+      description: "Evaluate top-tier private and government-aided engineering options across Karnataka to streamline your counseling lists.", 
+      buttonText: "View Karnataka Engineering Options", 
+      link: "/articles/EngineeringCollegesKarnataka" 
+    }
+  },
+
+  "lbs-kerala-paramedical-options-2026": {
+    category: "Admission Guide",
+    title: "LBS Kerala 2026: Essential Guide to Nursing and Paramedical Option Entry",
+    author: "Vidyabhyasam Editorial",
+    date: "July 17, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80",
+    content: [
+      { text: "The LBS Centre for Science and Technology manages the highly sought-after centralized professional allotment process for B.Sc. Nursing, B.Pharm, and various paramedical degree streams in Kerala. Since allocations are structured entirely on Plus Two index marks, setting up an optimized option list is paramount." },
+      { 
+        heading: "1. The Trial Allotment Litmus Test", 
+        text: "Before the real seat distribution takes place, LBS triggers a trial allotment. This functions as an diagnostic check to let you see if your academic index score is competitive for high-demand government medical colleges. Use this phase to re-order your college preferences or add self-financing colleges if no seat shows up." 
+      },
+      { 
+        heading: "2. Understanding College Codes and Types", 
+        text: "Pay extreme attention to the college prefix codes during option entry. Government Medical Colleges have distinct codes and significantly lower fee structures compared to private self-financing institutions. Make sure you don't accidentally prioritize a self-financing option above a government seat unless you specifically intend to do so." 
+      },
+      { 
+        heading: "3. The Token Fee Payment Mandate", 
+        text: "When a seat is secured in the first real round, LBS requires you to pay a mandatory token fee at a designated bank branch or via the online payment gateway. Paying this token amount is the only way to retain your seat; if you skip this step, your option allocation is permanently cancelled, and you will be completely removed from subsequent rounds." 
+      },
+      { 
+        heading: "4. Multi-Stream Versatility", 
+        text: "Because the LBS portal permits you to apply for multiple courses simultaneously (B.Sc Nursing, Medical Laboratory Technology, Perfusion Technology, etc.), organize your list based on your priority of profession. If nursing is your ultimate target, place B.Sc. Nursing options across various districts ahead of alternative paramedical choices to maximize your core professional alignment." 
+      }
+    ],
+    cta: { 
+      title: "Evaluate B.Sc Nursing Course Parameters", 
+      description: "Deep dive into academic requirements, curriculum breakups, and global job prospects for nursing professionals.", 
+      buttonText: "Access B.Sc Nursing Guide", 
+      link: "/articles/BscNursingCourseGuide" 
+    }
+  },
   "neet-mds-counseling-schedule-2026": {
     category: "Admission Guide",
     title: "NEET MDS 2026 Counseling: Round-Wise Schedule & Seat Allotment Guide",
