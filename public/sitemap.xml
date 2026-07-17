@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://vidyabhyasam.com/</loc>
     <changefreq>daily</changefreq>
@@ -12,6 +13,7 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Articles & Guides -->
   <url>
     <loc>https://vidyabhyasam.com/articles/TopIndianMedicalColleges</loc>
     <changefreq>monthly</changefreq>
@@ -103,6 +105,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blogs -->
   <url>
     <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
     <changefreq>monthly</changefreq>
@@ -123,7 +126,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/neet-ug-stray-vacancy-rules-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/comedk-choice-filling-tactics-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/lbs-kerala-paramedical-options-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <!-- News & Updates -->
   <url>
     <loc>https://vidyabhyasam.com/news/keam-2026-first-phase-seat-all</loc>
     <changefreq>weekly</changefreq>
@@ -236,6 +255,26 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/kcet-final-seat-allotment-2026-o</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-result-2026-declared-13</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/nta-declares-re-neet-ug-2026-res</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/what-happens-after-josaa-2026-ro</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-final-answer-key-2026-ou</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
