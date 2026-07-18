@@ -66,28 +66,6 @@
     "state": "All India"
   },
   {
-    "id": 2607180406,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "NEET UG 2026: Alva's PU College records outstanding results",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-18",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for NEET UG 2026: Alva's PU College records outstanding results. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607180405,
     "icon": "🚨",
     "color": "#DC2626",
@@ -100,28 +78,6 @@
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
     "description": "Critical timeline update regarding Cutoff for medical admission likely to go up as NEET candidates level up. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
     "eligibility": "Registered entrance exam aspirants updating dynamic critical timeline modifications and absolute deadline warnings for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607180404,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "National Testing Agency declares results of NEET (UG) 2026 re-examination",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-18",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for National Testing Agency declares results of NEET (UG) 2026 re-examination. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
     "applyLink": "",
     "courses": [
       "MBBS",
