@@ -50,6 +50,41 @@ export const seoConfigurations = {
       }
     }
   }),
+  // --- NEW: Dynamic Blog configuration generator ---
+  dynamicBlog: (article, slug) => {
+    // Extract a description from the first text paragraph
+    const firstParagraph = article.content?.find(section => section.text)?.text || "";
+    const shortDescription = firstParagraph.length > 150 
+      ? firstParagraph.substring(0, 150) + "..." 
+      : firstParagraph || `Read ${article.title} on Vidyabhyasam.`;
+
+    return {
+      title: `${article.title} | Vidyabhyasam Blog`,
+      description: shortDescription,
+      keywords: `${article.category}, ${article.title.toLowerCase().replace(/[^a-z0-9 ]/g, ', ')}, education blog india, admission updates, Vidyabhyasam blog, btech admissions, mbbs admissions, keam, lbs, lbs2026, neet. neet ug, neet 2026, re neet, re-neet, comedk, comedk2026, admission guide`,
+      url: `/blog/${slug}`,
+      schemaData: {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": article.title,
+        "image": article.image,
+        "author": {
+          "@type": "Person",
+          "name": article.author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Vidyabhyasam",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://vidyabhyasam.com/logo.png" // Replace with your actual logo URL
+          }
+        },
+        "datePublished": article.date, // Make sure your blogData uses YYYY-MM-DD or valid ISO formats if possible
+        "description": shortDescription
+      }
+    };
+  },
 
   // --- NEW: KEAM College Predictor page ---
   keamPredictor: {
