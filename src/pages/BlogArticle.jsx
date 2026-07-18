@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'; // Or 'react-helmet' depending on your setup
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import EnquiryModal from '../components/EnquiryModal';
 import { blogArticles } from '../data/blogData';
+import { seoConfigurations } from '../data/seoData'; // Adjust path if necessary
 
 // --- CUSTOM HOOK FOR RESPONSIVENESS ---
 function useMediaQuery(query) {
@@ -87,8 +89,30 @@ export default function BlogArticle() {
     courses: ["B.Tech", "MBBS", "BCA / MCA", "B.Arch", "Other"]
   };
 
+  // Extract SEO Data dynamically
+  const seoData = seoConfigurations.dynamicBlog(article, slug);
+
   return (
     <div style={styles.pageContainer}>
+      {/* INJECT SEO METADATA */}
+      <Helmet>
+        <title>{seoData.title}</title>
+        <meta name="description" content={seoData.description} />
+        <meta name="keywords" content={seoData.keywords} />
+        
+        {/* Open Graph / Social Media */}
+        <meta property="og:title" content={seoData.title} />
+        <meta property="og:description" content={seoData.description} />
+        <meta property="og:image" content={article.image} />
+        <meta property="og:url" content={`https://vidyabhyasam.com${seoData.url}`} />
+        <meta property="og:type" content="article" />
+        
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(seoData.schemaData)}
+        </script>
+      </Helmet>
+
       <Navbar />
 
       <div style={styles.layoutWrapper}>
