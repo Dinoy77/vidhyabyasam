@@ -1,4 +1,105 @@
 export const blogArticles = {
+  "csab-special-rounds-nit-iiit-2026": {
+    category: "Admission Guide",
+    title: "CSAB 2026 Special Rounds: Strategy to Secure Vacant NIT and IIIT Seats",
+    author: "Vidyabhyasam Editorial",
+    date: "July 18, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
+    content: [
+      { text: "As the regular JoSAA counseling rounds conclude, the Central Seat Allocation Board (CSAB) opens its Special Rounds to fill residual vacant seats across National Institutes of Technology (NITs), IIITs, and GFTIs. For JEE Main qualifiers who missed out on their preferred tech branches or secured no allotment at all, this is the most critical window of the year." },
+      { 
+        heading: "1. Who Should Participate in CSAB?", 
+        text: "The CSAB Special Round is open to almost all JEE Main qualified candidates: those who were not allotted any seat in JoSAA, those who participated and accepted a seat but want to try for a major upward branch upgrade, and even candidates who cancelled or withdrew their JoSAA allotments earlier." 
+      },
+      { 
+        heading: "2. The Fresh Choice Filling Mandate", 
+        text: "Your previously submitted JoSAA choice list does not automatically carry over into the CSAB Special Rounds. All participating candidates must register afresh on the CSAB portal, pay the mandatory participation fee, and build an entirely new preference list from scratch based on the newly published vacant seat matrix." 
+      },
+      { 
+        heading: "3. Strategic Preference Ordering", 
+        text: "Because CSAB deals only with leftover vacancies, seat availability in core CSE or ECE branches at top-tier NITs (like NIT Trichy or NIT Surathkal) is highly volatile. Build a balanced list by interspersing high-demand core branches at mid-tier IIITs with specialized branches (such as Artificial Intelligence, Data Science, or VLSI Design) at premier NITs." 
+      },
+      { 
+        heading: "4. Understanding Security Deposit Adjustments", 
+        text: "If you already paid the Seat Acceptance Fee (SAF) and Partial Admission Fee (PAF) during JoSAA, the majority of that amount will be directly adjusted against your CSAB Special Round participation fee. However, be cautious: if you are allotted a new seat in CSAB Round 2 and fail to join, a substantial portion of your fee will be forfeited as a penalty." 
+      }
+    ],
+    cta: { 
+      title: "Explore Elite South Indian Engineering Campuses", 
+      description: "Compare rankings, infrastructure, and average placement packages for premier technical institutes across the southern states.", 
+      buttonText: "View Top Engineering Colleges", 
+      link: "/articles/TopIndianEngineeringColleges" 
+    }
+  },
+
+  "keam-phase-2-option-rearrangement-2026": {
+    category: "Admission Guide",
+    title: "KEAM 2026 Phase 2 Counselling: Smart Option Re-arrangement & Higher Order Strategies",
+    author: "Vidyabhyasam Editorial",
+    date: "July 18, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "Following the publication of the KEAM 2026 Phase 1 seat allotments by CEE Kerala, engineering aspirants enter the Phase 2 option confirmation and re-arrangement window. This phase is pivotal because your actions here determine whether you successfully upgrade to a better college or accidentally lose your existing seat." },
+      { 
+        heading: "1. The Golden Rule of Higher Options", 
+        text: "When you receive an allotment in Phase 1 (for example, Option #5), all options below it (Options #6, #7, etc.) are automatically cancelled by the system. Entering Phase 2, you only retain your allotted seat and your higher options (#1 to #4). You must strictly review these remaining higher options during the modification window." 
+      },
+      { 
+        heading: "2. Delete Unwanted Higher Options Immediately", 
+        text: "If there is a higher option on your list that you no longer wish to join over your currently allotted Phase 1 college, you must delete it. If CEE Kerala upgrades you to a higher option during Phase 2, your Phase 1 seat is instantly vacated and transferred to another student. You cannot reject a Phase 2 upgrade and ask for your old Phase 1 seat back." 
+      },
+      { 
+        heading: "3. Integrating Newly Added Colleges and Branches", 
+        text: "During Phase 2, CEE Kerala often adds newly approved self-financing engineering colleges or new emerging branches (like B.Tech in Cyber Security or AI & Data Science) to the option entry portal. You can freely add these newly introduced courses to any position in your preference hierarchy." 
+      },
+      { 
+        heading: "4. The Mandatory Fee Remittance Warning", 
+        text: "Before participating in Phase 2 option confirmation, ensure you have remitted the fee shown in your Phase 1 allotment memo to the Commissioner for Entrance Examinations (via online gateway or designated post offices) by the specified deadline. Failure to remit this fee results in the complete loss of your allotment and all existing higher options." 
+      }
+    ],
+    cta: { 
+      title: "Discover Kerala's Premier Engineering Institutes", 
+      description: "Browse our comprehensive directory of government, aided, and self-financing engineering colleges across Kerala.", 
+      buttonText: "Explore Kerala Engineering Colleges", 
+      link: "/articles/EngineeringCollegesKerala" 
+    }
+  },
+
+  "neet-ug-ayush-counselling-bams-bhms-2026": {
+    category: "Admission Guide",
+    title: "NEET UG 2026 AYUSH Counselling: All India Quota BAMS & BHMS Admission Roadmap",
+    author: "Vidyabhyasam Editorial",
+    date: "July 18, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&q=80",
+    content: [
+      { text: "While MBBS and BDS admissions command significant attention, thousands of NEET UG 2026 qualifiers build highly rewarding careers in traditional healthcare systems. Centralized admissions for BAMS (Ayurveda), BHMS (Homeopathy), BUMS (Unani), and BSMS (Siddha) are managed by the Ayush Admissions Central Counseling Committee (AACCC)." },
+      { 
+        heading: "1. The 15% AIQ vs. 85% State Quota Split", 
+        text: "Similar to modern medicine counseling, AACCC conducts online counseling for 15% of all All India Quota seats in government and government-aided AYUSH colleges nationwide, along with 100% of seats in National Institutes and Deemed Universities. The remaining 85% state quota seats are administered individually by respective state counseling authorities." 
+      },
+      { 
+        heading: "2. BAMS vs. BHMS Cutoff Dynamics", 
+        text: "In recent academic years, BAMS has surged in popularity due to expanding AYUSH hospital networks and wellness tourism, causing government Ayurveda closing ranks to trend very close to BDS cutoffs. BHMS (Homeopathy), while still competitive, generally offers a wider admission window for students with moderate NEET UG scores." 
+      },
+      { 
+        heading: "3. Choice Filling and Upgradation Protocols", 
+        text: "AACCC counseling operates across three main rounds followed by a Stray Vacancy round. A 'Free Exit' is permitted only in Round 1, meaning you can leave an allotted seat without penalty. However, if you accept a seat in Round 2 and subsequently vacate it without following formal exit rules, your security deposit will be forfeited." 
+      },
+      { 
+        heading: "4. Career Scopes and Practice Regulations", 
+        text: "Before locking your web preferences, understand the distinct legal practice scopes of each degree. Graduates of BAMS and BHMS are recognized as registered medical practitioners under the National Commission for Indian System of Medicine (NCISM) and National Commission for Homeopathy (NCH), opening pathways to government medical officer roles, private clinical practice, and specialized research." 
+      }
+    ],
+    cta: { 
+      title: "Deep Dive into Ayurvedic Medicine", 
+      description: "Explore complete BAMS course details, semester-wise syllabus structures, internship parameters, and salary expectations.", 
+      buttonText: "Access BAMS Course Guide", 
+      link: "/articles/BamsCourseGuide" 
+    }
+  },
   "neet-ug-stray-vacancy-rules-2026": {
     category: "Admission Guide",
     title: "NEET UG 2026 Stray Vacancy Round: Crucial Rules and Eligibility Criteria",
