@@ -318,7 +318,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-<url>
+  <url>
     <loc>https://vidyabhyasam.com/news/neet-ug-results-under-scrutiny-o</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -360,6 +360,36 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/ap-eamcet-2026-counselling-regis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-2026-odisha-toppers-list-p</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/andhra-pradesh-eamcet-counsellin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ss-counselling-delay-puts-s</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ap-eamcet-counselling-2026-regi</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-2026-results-students-a</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/nta-rebuts-unfair-evaluation-a</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
