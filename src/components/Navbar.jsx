@@ -23,6 +23,7 @@ function useResponsive() {
 // mobile drawer, no other code changes needed.
 const siteFeatures = [
   { label: 'KEAM Predictor', icon: '🎯', path: '/keam-predictor' },
+  { label: 'NEET Predictor', icon: '🎯', path: '/neet-predictor' },
   // { label: 'Next Feature', icon: '✨', path: '/next-feature' },  ← just add more like this
 ];
 

@@ -69,6 +69,7 @@ import NewsFeedPage from './pages/NewsFeedPage';
 
 //collegepredictor
 import KeamPredictor from './pages/KeamPredictor';
+import NeetCollegePredictor from './pages/NeetCollegePredictor';
 
 // Array of all dynamic routes configured in collegePageData.js
 const dynamicCollegeRoutes = [
@@ -181,6 +182,7 @@ export default function App() {
 
               //collegepredictor
               <Route path="/keam-predictor" element={<KeamPredictor />} />
+              <Route path="/neet-predictor" element={<NeetCollegePredictor />} />
             </Routes>
           </main>
           
