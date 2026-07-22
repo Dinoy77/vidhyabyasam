@@ -1,4 +1,168 @@
 export const blogArticles = {
+  "josaa-counselling-freeze-float-slide-2026": {
+    category: "Admission Guide",
+    title: "JoSAA 2026 Counselling: The Ultimate Guide to Freeze, Float, and Slide Options",
+    author: "Vidyabhyasam Editorial",
+    date: "July 22, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
+    content: [
+      { text: "Securing a rank in JEE Main or JEE Advanced is a massive achievement, but the real test of strategy happens during the Joint Seat Allocation Authority (JoSAA) counselling. Once a seat is allotted in an IIT, NIT, IIIT, or GFTI, you must exercise one of three critical options. Making the wrong choice here can cost you your dream campus." },
+      { 
+        heading: "1. The 'Freeze' Option: Absolute Confirmation", 
+        text: "Select 'Freeze' only if you are completely satisfied with the allotted academic program and the institute, and you do not want to participate in any further rounds of seat allocation. Once you freeze a seat, you are locked in and your name is removed from all future JoSAA upgradation algorithms." 
+      },
+      { 
+        heading: "2. The 'Float' Option: Upward Mobility", 
+        text: "This is the most commonly used option by strategic candidates. Choosing 'Float' means you accept the currently allotted seat, but you want to keep your options open for admission to an academic program of better preference across ANY institute. If a higher preference is allotted in a subsequent round, your current seat is automatically cancelled." 
+      },
+      { 
+        heading: "3. The 'Slide' Option: Institute Loyalty", 
+        text: "Select 'Slide' if you are happy with the institute you have been allotted (e.g., NIT Warangal) but want a better branch within that exact same institute. If an upgrade happens, you move to the better branch. If not, you safely retain your current seat. You will not be considered for upgrades to other institutes." 
+      },
+      { 
+        heading: "4. Seat Acceptance Fee and Document Upload", 
+        text: "Regardless of whether you choose Freeze, Float, or Slide, you MUST pay the Seat Acceptance Fee and upload your mandatory documents (Class 10/12 marks, category certificates, medical certificate) within the specified round deadline. Failing to do this results in instant cancellation of your allotment." 
+      }
+    ],
+    cta: { 
+      title: "Explore Premier Tech Institutes", 
+      description: "Compare the cutoff trends, campus facilities, and placement records of top NITs and IIITs.", 
+      buttonText: "View Top Engineering Colleges", 
+      link: "/articles/TopIndianEngineeringColleges" 
+    }
+  },
+
+  "barch-vs-btech-civil-engineering": {
+    category: "Career Comparison",
+    title: "B.Arch vs. B.Tech Civil Engineering: Which Career Path Should You Choose?",
+    author: "Vidyabhyasam Career Desk",
+    date: "July 23, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    content: [
+      { text: "For students fascinated by construction, infrastructure, and urban development, the choice often narrows down to two distinct professional degrees: a 5-year Bachelor of Architecture (B.Arch) or a 4-year B.Tech in Civil Engineering. While they work together on sites, their academic journeys and core responsibilities are completely different." },
+      { 
+        heading: "The B.Arch Experience: Design and Aesthetics", 
+        text: "Architecture is where art meets science. B.Arch students study design fundamentals, spatial utilization, environmental psychology, and architectural history. An architect's primary job is to conceptualize the visual design, functionality, and aesthetic appeal of a building.",
+        list: [
+          "Duration: 5 Years (including a mandatory internship semester).",
+          "Entrance Exams: NATA (National Aptitude Test in Architecture) or JEE Main Paper 2.",
+          "Core Focus: Creativity, drafting, 3D modeling, and sustainable design."
+        ]
+      },
+      { 
+        heading: "The B.Tech Civil Experience: Physics and Execution", 
+        text: "Civil Engineering is strictly rooted in physics, mathematics, and material science. A civil engineer takes the architect's conceptual drawings and figures out how to actually make them stand up. They calculate load-bearing capacities, select appropriate concrete mixes, and manage the actual site construction." 
+      },
+      { 
+        heading: "How to Decide", 
+        text: "If you have a strong portfolio of sketches, love design software, and think visually, choose B.Arch. If you are highly analytical, excel at calculus and physics, and want to manage massive infrastructure projects like dams, bridges, and highways, B.Tech Civil is the better fit." 
+      }
+    ],
+    cta: { 
+      title: "Browse Design and Engineering Colleges", 
+      description: "Find institutions approved by the Council of Architecture (CoA) and AICTE.", 
+      buttonText: "View College Directory", 
+      link: "/articles/TopIndianEngineeringColleges" 
+    }
+  },
+
+  "education-loan-vidya-lakshmi-portal": {
+    category: "Financial Aid",
+    title: "Funding Your Degree: How to Use the Vidya Lakshmi Portal for Education Loans",
+    author: "Vidyabhyasam Finance Desk",
+    date: "July 24, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80",
+    content: [
+      { text: "With the cost of higher education—especially private medical and engineering degrees—rising sharply, securing an education loan is a necessity for many families. To simplify this, the Government of India operates the Vidya Lakshmi Portal, a single-window platform for students to access education loans across multiple banks." },
+      { 
+        heading: "1. What is the Vidya Lakshmi Portal?", 
+        text: "Developed under the guidance of the Department of Financial Services and the Ministry of Education, this portal allows students to fill out a single Common Educational Loan Application Form (CELAF) and apply to multiple banks simultaneously without visiting physical branches." 
+      },
+      { 
+        heading: "2. The Collateral-Free Advantage", 
+        text: "Under standard IBA (Indian Banks' Association) guidelines, education loans up to ₹4 Lakhs do not require any collateral or third-party guarantor. Loans between ₹4 Lakhs and ₹7.5 Lakhs require a third-party guarantee, while loans above ₹7.5 Lakhs typically require tangible collateral." 
+      },
+      { 
+        heading: "3. Understanding the Moratorium Period", 
+        text: "One of the biggest advantages of a formal education loan is the moratorium period (or repayment holiday). You are not required to pay back the principal amount while studying. Repayment usually starts 1 year after course completion or 6 months after securing a job, whichever is earlier." 
+      },
+      { 
+        heading: "4. Claiming Interest Subsidies", 
+        text: "Students from Economically Weaker Sections (EWS) with an annual gross parental income of up to ₹4.5 Lakhs are eligible for the Central Scheme to Provide Interest Subsidy (CSIS). Under this scheme, the government pays the interest accumulated during the moratorium period for technical and professional courses." 
+      }
+    ]
+  },
+
+  "bsc-agriculture-icar-aieea-2026": {
+    category: "Emerging Courses",
+    title: "B.Sc. Agriculture: Riding the Agritech Boom via ICAR AIEEA 2026",
+    author: "Vidyabhyasam Agro-Tech Desk",
+    date: "July 25, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
+    content: [
+      { text: "Agriculture is no longer just traditional farming; it is a massive, highly technical sector heavily integrated with biotechnology, supply chain logistics, and IoT automation. A 4-year B.Sc. (Hons.) in Agriculture is rapidly becoming one of the most stable and heavily funded career tracks in India." },
+      { 
+        heading: "1. The ICAR Route", 
+        text: "While states conduct their own entrance exams (like KEAM or KCET) for state-run agricultural universities, the Indian Council of Agricultural Research (ICAR) previously conducted the AIEEA. For 2026, admissions to the 15% All India Quota seats in agricultural universities are predominantly mapped through the CUET (UG) examination. Choosing the right domain subjects (Physics, Chemistry, Biology/Agriculture) is mandatory." 
+      },
+      { 
+        heading: "2. The Modern Curriculum", 
+        text: "The syllabus has evolved significantly. Students now study genetics and plant breeding, soil microbiology, agricultural economics, drone-based farm automation, and climate-resilient crop modeling alongside traditional agronomy." 
+      },
+      { 
+        heading: "3. The Public Sector Security", 
+        text: "Agriculture remains one of the largest government employers. Graduates are heavily recruited as Agricultural Extension Officers, Rural Development Officers, and Specialist Officers (Agriculture) in major nationalized banks." 
+      },
+      { 
+        heading: "4. The Private Sector Agritech Boom", 
+        text: "Venture capital is flooding into Indian agritech startups. Private sector roles include supply chain optimization, fertilizer and seed R&D, and implementing precision agriculture technologies for massive corporate farming entities." 
+      }
+    ],
+    cta: { 
+      title: "Discover Allied Science Careers", 
+      description: "Explore opportunities in Agriculture, Veterinary Sciences, and Forestry.", 
+      buttonText: "Read Career Guides", 
+      link: "/articles/BscNursingCourseGuide" 
+    }
+  },
+
+  "mba-cat-vs-cmat-vs-kmat": {
+    category: "Post Graduate Admissions",
+    title: "MBA Admissions 2026: Decoding CAT, CMAT, and State-Level KMAT",
+    author: "Vidyabhyasam Editorial",
+    date: "July 26, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=800&q=80",
+    content: [
+      { text: "Pursuing a Master of Business Administration (MBA) is a proven way to accelerate your career, shift industries, or move into leadership roles. However, the sheer number of entrance exams can be confusing. Here is a breakdown of the three major tiers of MBA entrance exams you should target." },
+      { 
+        heading: "1. CAT (Common Admission Test): The Elite Gateway", 
+        text: "Conducted by the IIMs, CAT is the most prestigious and difficult management entrance exam in India. It is heavily focused on intense Quantitative Ability, Logical Reasoning, and Data Interpretation. A high CAT score is mandatory for all 21 IIMs, FMS Delhi, and top IIT MBA programs." 
+      },
+      { 
+        heading: "2. CMAT (Common Management Admission Test): The National Alternative", 
+        text: "Conducted by the NTA, CMAT is slightly less rigorous than CAT and includes a unique section on 'Innovation and Entrepreneurship'. Over 1,000 AICTE-approved B-Schools accept CMAT scores, making it an excellent backup if you miss the elite IIM cutoffs but still want a Tier-2 national institute." 
+      },
+      { 
+        heading: "3. KMAT / State-Level Exams: The Regional Strongholds", 
+        text: "If you want to pursue your MBA specifically in Kerala or Karnataka, exams like KMAT (Kerala) or KMAT (Karnataka) are your best route. These exams are generally considered easier than CAT and secure admissions into excellent state-university-affiliated private colleges that offer great local networking and placements." 
+      },
+      { 
+        heading: "4. ROI and Work Experience", 
+        text: "Before committing to any exam, evaluate the Return on Investment (ROI) of the target colleges. Spending ₹25 Lakhs at a mid-tier college may not yield the same starting salary as spending ₹2 Lakhs at a highly ranked government university. Additionally, having 1-3 years of work experience dramatically boosts your chances in the Personal Interview (PI) rounds." 
+      }
+    ],
+    cta: { 
+      title: "Explore Top B-Schools in South India", 
+      description: "Compare fee structures, specializations, and average placement packages of premier MBA colleges.", 
+      buttonText: "View MBA Colleges", 
+      link: "/articles/TopSouthIndianMBAColleges" 
+    }
+  },
   "csab-special-rounds-nit-iiit-2026": {
     category: "Admission Guide",
     title: "CSAB 2026 Special Rounds: Strategy to Secure Vacant NIT and IIIT Seats",
