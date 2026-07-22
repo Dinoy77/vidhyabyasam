@@ -1,4 +1,139 @@
 export const blogArticles = {
+  "neet-ug-mcc-counselling-schedule-2026": {
+    category: "Admission Guide",
+    title: "NEET UG 2026 Counselling: MCC Registration, Schedule & AIQ Process Explained",
+    author: "Vidyabhyasam Editorial",
+    date: "July 22, 2026",
+    readTime: "7 Min Read",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
+    content: [
+      { text: "With the National Testing Agency (NTA) officially declaring the final NEET UG 2026 results on July 16 following the June 21 re-exam, the admission focus now completely shifts to the Medical Counselling Committee (MCC). For the 11.21 lakh qualifying candidates, navigating the All India Quota (AIQ) counselling efficiently is the final hurdle to securing an MBBS or BDS seat." },
+      { 
+        heading: "1. Expected Registration Timeline", 
+        text: "Due to the re-exam pushing the academic calendar back, the MCC is expected to release the official counselling notification and commence Round 1 registrations by the last week of July or early August 2026. Students must actively monitor the official mcc.nic.in portal, as the choice-filling window usually remains open for only a few days." 
+      },
+      { 
+        heading: "2. The 15% AIQ vs. Deemed Universities", 
+        text: "MCC counselling manages the 15% All India Quota (AIQ) seats in state government medical colleges, alongside 100% of the seats in Central Universities (like BHU and AMU), AIIMS, JIPMER, AFMC, and all private Deemed Universities. Note that securing a rank qualifies you to apply, but separate online registration and fee payment on the MCC portal are mandatory." 
+      },
+      { 
+        heading: "3. Choice Locking and Flexibility", 
+        text: "During choice filling, you can enter as many college preferences as you wish. However, once you lock your choices (or if the system auto-locks them at the deadline), they cannot be altered for that specific round. Fill your preferences strictly in the order of your desired institutions, placing top colleges like AIIMS New Delhi or MAMC at the very top." 
+      },
+      { 
+        heading: "4. Documentation Preparation", 
+        text: "While the initial MCC registration is online, you will need original documents for physical reporting if a seat is allotted. Gather your NTA NEET 2026 Admit Card and Result Scorecard, Class 10 and 12 mark sheets, category certificates (must match central Govt. formats), and an original identity proof now to avoid last-minute panic." 
+      }
+    ],
+    cta: { 
+      title: "Evaluate Your College Options", 
+      description: "Analyze the top-tier government medical colleges across the country to optimize your choice-filling list.", 
+      buttonText: "View Top Govt Medical Colleges", 
+      link: "/articles/TopGovtMedicalColleges" 
+    }
+  },
+
+  "keam-phase-2-final-allotment-reporting-2026": {
+    category: "News & Updates",
+    title: "KEAM 2026 Phase 2 Engineering Allotment Published: Final Admission Deadlines",
+    author: "Vidyabhyasam Editorial",
+    date: "July 20, 2026",
+    readTime: "4 Min Read",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    content: [
+      { text: "The Commissioner for Entrance Examinations (CEE), Kerala, has officially released the Phase 2 Final Seat Allotment for Engineering courses and the Phase 1 Allotment for Architecture courses. With the lists now live, candidates must act swiftly to secure their allocated seats." },
+      { 
+        heading: "1. Download Your Allotment Memo", 
+        text: "Log into the KEAM candidate portal at cee.kerala.gov.in using your application number. You must immediately download and print your new Allotment Memo and Data Sheet. The memo contains critical information, including your allotted college, branch, and the exact fee amount to be remitted." 
+      },
+      { 
+        heading: "2. The Strict Fee Remission Deadline", 
+        text: "Candidates who have received a fresh allotment, or those who have an additional balance to pay due to a college upgrade, must remit the prescribed fee to the CEE via online payment between July 20 and July 24, 2026 (before 3:00 PM). Failing to pay this fee will result in the permanent cancellation of the allotment." 
+      },
+      { 
+        heading: "3. Mandatory Physical Reporting", 
+        text: "Unlike the first phase, ALL allotted students—even those whose Phase 1 engineering allotment remained unchanged—must physically report to their respective allotted colleges to finalize admission. You must bring your printed Allotment Memo, Data Sheet, and all original academic certificates. The deadline for physical reporting is July 24, 2026, at 4:00 PM." 
+      },
+      { 
+        heading: "4. What Happens if You Miss the Deadline?", 
+        text: "The CEE is extremely strict regarding admission timelines. If you fail to remit the fee or fail to report to the college by 4:00 PM on July 24, your seat will be automatically forfeited and passed into the vacancy pool for the next round of counselling." 
+      }
+    ],
+    cta: { 
+      title: "Targeting Kerala's Best Engineering Campuses?", 
+      description: "Review campus facilities, hostel availability, and exact locations for Kerala's top tech institutes before reporting.", 
+      buttonText: "Explore Kerala Engineering Colleges", 
+      link: "/articles/EngineeringCollegesKerala" 
+    }
+  },
+
+  "mcc-counselling-security-deposit-refund-rules-2026": {
+    category: "Financial Aid",
+    title: "NEET UG Counselling 2026: Understanding MCC Security Deposit and Refund Rules",
+    author: "Vidyabhyasam Finance Desk",
+    date: "July 22, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80",
+    content: [
+      { text: "When registering for the NEET UG Medical Counselling Committee (MCC) rounds, candidates are required to pay a non-refundable registration fee alongside a substantial refundable security deposit. Understanding exactly when this deposit is refunded—and when it gets confiscated—is crucial for your counselling strategy." },
+      { 
+        heading: "1. The Security Deposit Amounts", 
+        text: "The security deposit varies significantly based on the institutions you are targeting. For 15% AIQ and Central Universities, the deposit is ₹10,000 for UR/EWS and ₹5,000 for SC/ST/OBC. However, if you are opting to include Private Deemed Universities in your choice list, the refundable security deposit jumps to ₹2,00,000 for all categories." 
+      },
+      { 
+        heading: "2. The 'Free Exit' in Round 1", 
+        text: "If you are allotted a seat in MCC Round 1 but choose not to report to the college, it is considered a 'Free Exit'. Your security deposit remains completely safe, and you are automatically eligible to participate in Round 2." 
+      },
+      { 
+        heading: "3. When is the Deposit Forfeited?", 
+        text: "The rules tighten in Round 2 and beyond. If you are allotted a seat in Round 2, Round 3, or the Stray Vacancy round and you fail to join the allotted college, your entire security deposit will be permanently forfeited. Additionally, failing to join a Stray Vacancy seat may result in a one-year debarment from the NEET exam." 
+      },
+      { 
+        heading: "4. How and When the Refund is Processed", 
+        text: "If you join your allotted college, or if you are never allotted a seat across all rounds, the security deposit is fully refunded. The refund is always credited back to the exact same bank account or credit card used for the original transaction. This process usually takes 15 to 30 days after the complete conclusion of all MCC counselling rounds." 
+      }
+    ],
+    cta: { 
+      title: "Prepare for Medical Counselling", 
+      description: "Understand seat matrix distributions, cutoff trends, and comprehensive reporting rules.", 
+      buttonText: "Read NEET UG Guide", 
+      link: "/articles/NeetUgGuide" 
+    }
+  },
+
+  "bsc-nursing-aiims-admissions-2026": {
+    category: "Course Explorer",
+    title: "AIIMS B.Sc. Nursing 2026: Gateway to Elite Healthcare Careers",
+    author: "Vidyabhyasam Clinical Desk",
+    date: "July 21, 2026",
+    readTime: "6 Min Read",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHeBrE4I_TR4yGdKmSQ5hpSY2jzmR7_hjTdcGmAsIfIw&s=10",
+    content: [
+      { text: "While MBBS gets the majority of the spotlight, securing a B.Sc. (Hons.) Nursing seat at an All India Institute of Medical Sciences (AIIMS) is one of the most prestigious and highly competitive medical achievements in India. Unlike general state nursing colleges, an AIIMS nursing degree offers unparalleled clinical exposure." },
+      { 
+        heading: "1. The AIIMS Nursing Entrance Exam", 
+        text: "AIIMS does not use NEET UG scores for its B.Sc. (Hons.) Nursing admissions. Instead, the institute conducts its own dedicated national-level computer-based entrance examination. The exam tests physics, chemistry, biology, and general knowledge, demanding a deep conceptual understanding akin to early medical school modules." 
+      },
+      { 
+        heading: "2. Female-Only Eligibility", 
+        text: "It is important to note that the 4-year B.Sc. (Hons.) Nursing program across all AIIMS campuses is currently restricted exclusively to female candidates. Male candidates, however, are eligible to apply for the B.Sc. (Post-Basic) Nursing and various allied paramedical courses offered by the institute." 
+      },
+      { 
+        heading: "3. Zero-Cost Education & Stipends", 
+        text: "One of the greatest advantages of an AIIMS nursing degree is the financial structure. The tuition fee is practically negligible (often less than ₹1,000 per year), and students are provided with highly subsidized hostel accommodations. Furthermore, nursing cadets receive a monthly stipend during their intensive clinical internship phase." 
+      },
+      { 
+        heading: "4. Global and Domestic Placements", 
+        text: "Graduating from AIIMS virtually guarantees employment. The institute's rigorous training standards mean graduates easily clear the NORCET (Nursing Officer Recruitment Common Eligibility Test) for highly paid central government jobs, or easily transition into international roles in the UK, US, and Australia." 
+      }
+    ],
+    cta: { 
+      title: "Explore Nursing Career Pathways", 
+      description: "Compare curriculum details, international placement opportunities, and top state-level nursing colleges.", 
+      buttonText: "View B.Sc Nursing Guide", 
+      link: "/articles/BscNursingCourseGuide" 
+    }
+  },
   "josaa-counselling-freeze-float-slide-2026": {
     category: "Admission Guide",
     title: "JoSAA 2026 Counselling: The Ultimate Guide to Freeze, Float, and Slide Options",
