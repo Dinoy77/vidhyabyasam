@@ -144,6 +144,31 @@
 
   <!-- News & Updates -->
   <url>
+    <loc>https://vidyabhyasam.com/news/neet-2026-results-celebration-h</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mp-high-court-seeks-centre-s-rep</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-counselling-2026-date-when</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ts-eamcet-2026-phase-2-seat-allo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ap-eamcet-counselling-2026-regis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/news/neet-2026-result-out-live-update</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
