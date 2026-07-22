@@ -1,5 +1,27 @@
 [
   {
+    "id": 2607220449,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "Qualifying Marks for NEET 2026: Check Your Admission Chances",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-22",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official institutional release regarding Qualifying Marks for NEET 2026: Check Your Admission Chances. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2607220436,
     "icon": "🖥️",
     "color": "#7C3AED",
