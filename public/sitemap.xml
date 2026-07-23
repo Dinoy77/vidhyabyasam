@@ -144,6 +144,31 @@
 
   <!-- News & Updates -->
   <url>
+    <loc>https://vidyabhyasam.com/news/josaa-2026-pay-partial-admissio</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-results-declared-2-scor</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ts-eamcet-2026-round-2-seat-allo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/bengaluru-vidyapeeth-neet-result</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/tnea-2026-round-1-choice-filling</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/news/neet-2026-results-celebration-h</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
