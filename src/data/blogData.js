@@ -1,4 +1,107 @@
 export const blogArticles = {
+    "culinary-arts-hospitality-administration": {
+    category: "Hospitality & Culinary",
+    title: "Culinary Arts & Hotel Administration: Building a Global Career in Hospitality",
+    author: "Vidyabhyasam Hospitality Desk",
+    date: "July 20, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1555244162-803834f70033?w=1200&q=80",
+    content: [
+      { text: "Global tourism, luxury cruises, and cloud-kitchen ecosystems are driving a massive resurgence in the hospitality sector. For students who thrive in dynamic, fast-paced, and people-centric environments, a degree in Hotel Management or Culinary Arts offers immediate global mobility." },
+      { 
+        heading: "1. B.Sc. in Hospitality vs. B.A. in Culinary Arts", 
+        text: "While often grouped together, these tracks serve distinct career end-goals:",
+        list: [
+          "Hospitality & Hotel Administration (IHMs): Governed by the NCHMCT JEE entrance exam, this degree covers 360-degree resort operations—front office management, food & beverage service, housekeeping economics, and revenue accounting.",
+          "Culinary Arts: A hyper-specialized track focusing entirely on kitchen gastronomy, baking science, global cuisines, food styling, and kitchen ergonomics for aspiring Executive Chefs."
+        ]
+      },
+      { 
+        heading: "2. The Management Trainee (MT) Fast-Track", 
+        text: "The ultimate goal for any hospitality graduate is cracking the Management Trainee (MT) programs run by luxury hotel chains (like Taj, Oberoi, Marriott, or Hyatt). Selected trainees undergo intensive two-year rotational leadership training, fast-tracking them into Assistant General Manager roles much faster than standard corporate ladders." 
+      },
+      { 
+        heading: "3. Alternative Sectors: Cruise Lines & Aviation", 
+        text: "Hospitality graduates are not restricted to hotels. International luxury cruise liners and premier international airlines actively scout hospitality graduates for purser, guest relations, and in-flight service management roles due to their superior grooming and crisis-resolution training." 
+      }
+    ],
+    cta: { 
+      title: "Explore Premier Hospitality Campuses", 
+      description: "Compare top Institutes of Hotel Management (IHMs) and international culinary schools.", 
+      buttonText: "View Hospitality Guide", 
+      link: "/articles/TopSouthIndianMBAColleges" 
+    }
+  },
+
+  "ca-cs-cma-commerce-professional-tracks": {
+    category: "Commerce & Finance",
+    title: "CA vs. CS vs. CMA: Choosing the Right Professional Finance Certification",
+    author: "Vidyabhyasam Finance Desk",
+    date: "July 19, 2026",
+    readTime: "7 Min Read",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1200&q=80",
+    content: [
+      { text: "For commerce students, standard B.Com or B.B.A. degrees are often paired with professional statutory certifications to unlock top-tier corporate finance and auditing roles. Navigating the holy trinity of Indian commerce—CA, CS, and CMA—requires understanding their distinct legal authority and syllabi." },
+      { 
+        heading: "1. Chartered Accountancy (CA - ICAI)", 
+        text: "The CA qualification is the gold standard of financial auditing and accounting in India. Chartered Accountants hold the exclusive statutory monopoly to conduct financial audits of registered corporations. The journey involves clearing Foundation, Intermediate, and Final examinations, alongside a grueling 3-year practical articleship under a practicing CA." 
+      },
+      { 
+        heading: "2. Company Secretary (CS - ICSI)", 
+        text: "While a CA manages the numbers, a Company Secretary manages corporate governance and legal compliance. CS professionals are experts in company law, capital markets, securities regulations, and boardroom compliance. Every listed company with a designated paid-up capital is legally mandated to employ a full-time Company Secretary." 
+      },
+      { 
+        heading: "3. Cost and Management Accountancy (CMA - ICMAI)", 
+        text: "Formerly known as CWA, CMA focuses on strategic management accounting, supply chain economics, product costing, and budgeting. CMAs are heavily recruited by manufacturing conglomerates, public sector undertakings (PSUs), and pharmaceutical firms to optimize production efficiency and control operational waste.",
+        list: [
+          "CA: Focuses on Financial Accounting, Taxation, and Statutory Auditing.",
+          "CS: Focuses on Corporate Law, Board Governance, and Securities Compliance.",
+          "CMA: Focuses on Cost Calculation, Pricing Strategy, and Industrial Budgeting."
+        ]
+      }
+    ],
+    cta: { 
+      title: "Boost Your Finance Career", 
+      description: "Explore premier B.Com (Honors) and BBA colleges that offer integrated CA/CS foundation coaching.", 
+      buttonText: "Explore Commerce Colleges", 
+      link: "/articles/TopSouthIndianMBAColleges" 
+    }
+  },
+
+  "liberal-arts-interdisciplinary-education": {
+    category: "Liberal Arts & Humanities",
+    title: "Why the Future Belongs to Generalists: The Rise of Liberal Arts Degrees in India",
+    author: "Vidyabhyasam Editorial",
+    date: "July 18, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80",
+    content: [
+      { text: "For decades, Indian higher education forced 17-year-olds into rigid silos: you were either an engineer, a doctor, or a commerce graduate. However, the rise of automation and generative AI has placed a massive premium on uniquely human skills: critical thinking, ethical reasoning, and cross-disciplinary communication. Welcome to the Liberal Arts revolution." },
+      { 
+        heading: "1. What Exactly is a Liberal Arts Degree?", 
+        text: "A 4-year Bachelor of Liberal Arts does not mean studying only literature or history. It is an interdisciplinary framework where you can major in Computer Science while minoring in Philosophy and Psychology, or study Economics alongside Environmental Science. It teaches you how to think, articulate, and connect disparate concepts." 
+      },
+      { 
+        heading: "2. Where Do Liberal Arts Graduates Work?", 
+        text: "Because they are not pigeonholed into a single technical trade, generalists thrive in complex corporate roles:",
+        list: [
+          "Management Consulting: Firms like McKinsey, BCG, and Bain value graduates who can analyze data through a sociological and human lens.",
+          "Product Management: Bridging the gap between software engineers, UX designers, and end-consumer psychology.",
+          "Public Policy & Journalism: Analyzing socio-economic data to shape governmental policies and editorial narratives."
+        ]
+      },
+      { 
+        heading: "3. Top Institutions Leading the Change", 
+        text: "Private universities with global academic ties—such as Ashoka University, Krea University, Flame University, and Jindal School of Liberal Arts—have pioneered this model in India. Their entrance processes prioritize holistic essays, aptitude tests, and personal interviews over rote board examination marks." 
+      }
+    ],
+    cta: { 
+      title: "Explore Interdisciplinary Campuses", 
+      description: "Discover universities offering flexible major/minor structures and holistic campus experiences.", 
+      buttonText: "View University Directory", 
+      link: "/articles/TopSouthIndianMBAColleges" 
+    }
+  },
   "neet-ug-mcc-counselling-schedule-2026": {
     category: "Admission Guide",
     title: "NEET UG 2026 Counselling: MCC Registration, Schedule & AIQ Process Explained",
