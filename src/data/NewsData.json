@@ -1,27 +1,5 @@
 [
   {
-    "id": 2607240454,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "NEET Result Out: MCC AIQ Counselling Schedule 2026 PDF & Dates",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-24",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for NEET Result Out: MCC AIQ Counselling Schedule 2026 PDF & Dates. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607240452,
     "icon": "🎯",
     "color": "#059669",
@@ -54,28 +32,6 @@
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
     "description": "Results and performance tracking announcement for NEET 2026 Results: Top 20 Male Toppers List Released, Aryan Gupta Tops Re-NEET with AIR 1. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
     "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607240450,
-    "icon": "🎓",
-    "color": "#1B6CA8",
-    "bg": "#EBF5FF",
-    "tag": "LIVE UPDATE",
-    "title": "NEET 2026 State Toppers: Ladakh, Andaman & Lakshadweep Champions",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-24",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding NEET 2026 State Toppers: Ladakh, Andaman & Lakshadweep Champions. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
     "applyLink": "",
     "courses": [
       "MBBS",
@@ -146,49 +102,6 @@
       "B.E"
     ],
     "state": "Tamil Nadu"
-  },
-  {
-    "id": 2607240446,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "West Bengal JEE Counselling 2026 Round 3 Registration Begins Today; Seat Allotment On July 28",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-24",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official seat allotment update regarding West Bengal JEE Counselling 2026 Round 3 Registration Begins Today; Seat Allotment On July 28. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Arch candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Arch",
-      "Dual Degree"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607240445,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "NEET 2026 Results: Cut-Off Trends NEET 2024 vs NEET 2025 vs NEET 2026 results",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-24",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for NEET 2026 Results: Cut-Off Trends NEET 2024 vs NEET 2025 vs NEET 2026 results. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
   },
   {
     "id": 2607240444,
