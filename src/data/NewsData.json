@@ -1,5 +1,129 @@
 [
   {
+    "id": 2607240452,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA 2026 round 1 seat allotment out at tneaonline.org; confirm by July 25",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official seat allotment update regarding TNEA 2026 round 1 seat allotment out at tneaonline.org; confirm by July 25. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2607240451,
+    "icon": "📊",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Result Live",
+    "title": "NEET 2026 Results: Top 20 Male Toppers List Released, Aryan Gupta Tops Re-NEET with AIR 1",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Results and performance tracking announcement for NEET 2026 Results: Top 20 Male Toppers List Released, Aryan Gupta Tops Re-NEET with AIR 1. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2607240449,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "Delhi High Court: Admission can't be denied over CBSE-JoSAA schedule conflict",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Critical timeline update regarding Delhi High Court: Admission can't be denied over CBSE-JoSAA schedule conflict. Authorities have issued an official notification modifying the operational schedule and deadlines for B.Tech, B.Arch admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "B.Tech",
+      "B.Arch",
+      "Dual Degree"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2607240448,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "CSAB Counselling 2026: Hurry Up! Last opportunity to Restore Cancelled Category for JoSAA Aspir",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official institutional release regarding CSAB Counselling 2026: Hurry Up! Last opportunity to Restore Cancelled Category for JoSAA Aspirants. This major advisory impacts candidates participating in the current admission cycle for B.Tech, B.Arch. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "B.Tech",
+      "B.Arch",
+      "Dual Degree"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2607240447,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA 2026 Round 1 Tentative Seat Allotment Result Released; confirm your seat by July 25, direc",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official seat allotment update regarding TNEA 2026 Round 1 Tentative Seat Allotment Result Released; confirm your seat by July 25, direct link here. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2607240444,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA 2026 Seat Allotment Link: Check College Allotment & Download Order",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-24",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official seat allotment update regarding TNEA 2026 Seat Allotment Link: Check College Allotment & Download Order. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
     "id": 2607230456,
     "icon": "🎯",
     "color": "#059669",
