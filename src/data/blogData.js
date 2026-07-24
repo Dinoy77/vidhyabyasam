@@ -1,4 +1,111 @@
 export const blogArticles = {
+  "neet-category-rank-vs-all-india-rank-explained": {
+    category: "Medical Admissions",
+    title: "NEET Category Rank vs. All India Rank (AIR): How Counseling Reservation Actually Works",
+    author: "Vidyabhyasam Medical Desk",
+    date: "July 24, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
+    content: [
+      { text: "When the National Testing Agency (NTA) releases your NEET UG scorecard, you are greeted with multiple numbers: your overall score out of 720, your percentile, your All India Rank (AIR), and—if applicable—your All India Category Rank (AICR). Understanding how the Medical Counselling Committee (MCC) processes these two ranks is critical to securing the best possible college." },
+      { 
+        heading: "1. All India Rank (AIR) vs. Category Rank", 
+        text: "While both ranks appear on your scorecard, they serve entirely different functions during the seat allotment process:",
+        list: [
+          "All India Rank (AIR): Your absolute national standing among all qualified candidates. This is the universal metric used by MCC to allocate the 15% All India Quota (AIQ) seats in government colleges, as well as 100% of seats in Deemed Universities, AIIMS, and JIPMER.",
+          "All India Category Rank (AICR): Your relative performance purely within your applied reservation pool (OBC-NCL, SC, ST, or Gen-EWS). This determines your standing when reservation-specific seats are being distributed."
+        ]
+      },
+      { 
+        heading: "2. The Automated Dual-Benefit Algorithm", 
+        text: "A common myth is that you must choose whether to apply under your AIR or your Category Rank. In reality, the MCC seat allotment algorithm operates on an automatic dual-benefit model for reserved categories. When the system evaluates your choice list, it first checks if your overall AIR is high enough to win an Open (Unreserved) seat on merit alone. If not, it instantly switches to check your Category Rank against the reserved seat pool for that exact institution." 
+      },
+      { 
+        heading: "3. Critical Mistakes to Avoid During Choice Filling", 
+        text: "Many high-scoring candidates lose out on premier institutes due to simple technical errors during the registration window:",
+        list: [
+          "Entering Category Rank instead of AIR: When predictor tools or external portals ask for your rank, always enter your AIR. Using your category rank in an AIR field will result in wildly inaccurate predictions.",
+          "Expired Category Certificates: If your OBC-NCL or EWS certificate does not strictly adhere to the current financial year guidelines issued by the central government, your reservation will be nullified during document verification.",
+          "Sorting Choices by Odds Instead of Preference: Always arrange your college list in order of genuine desire, not by where you think you have the easiest chance of admission."
+        ]
+      }
+    ],
+    cta: { 
+      title: "Predict Your Medical College Chances", 
+      description: "Filter by institutional quota, compare closing AIRs, and simulate your exact MBBS admission probabilities using official MCC counseling data.", 
+      buttonText: "Launch NEET Predictor", 
+      link: "/neet-predictor" 
+    }
+  },
+
+  "deemed-vs-private-medical-colleges-guide": {
+    category: "MBBS Counselling",
+    title: "Deemed Universities vs. Private Medical Colleges: Fees, Cutoffs, and Admission Process",
+    author: "Vidyabhyasam Editorial Team",
+    date: "July 22, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=80",
+    content: [
+      { text: "For NEET UG aspirants scoring in the mid-range (300 to 520 marks), government medical colleges may be out of reach, making non-government institutions the primary focus. However, navigating the distinction between Deemed Medical Universities and State Private Colleges is vital to avoiding financial and procedural pitfalls." },
+      { 
+        heading: "1. Counselling Authority and Domicile Rules", 
+        text: "The fundamental difference lies in who conducts the admissions and who is eligible to apply for the seats:",
+        list: [
+          "Deemed Universities: 100% of seats are counseled centrally by the MCC (mcc.nic.in). There are no state domicile restrictions whatsoever—a student from Kerala has the exact same claim to a seat in Maharashtra as a local resident.",
+          "State Private Colleges: Admissions are strictly managed by respective State Counselling Authorities (such as KEA in Karnataka or CEE in Kerala). While some states offer open quota seats for non-domiciles, a significant portion is reserved exclusively for native residents."
+        ]
+      },
+      { 
+        heading: "2. Fee Structures and Hidden Liabilities", 
+        text: "While Deemed Universities typically command higher annual tuition fees (ranging from ₹14 Lakhs to ₹25 Lakhs per annum), State Private Colleges often have subsidized state-merit fees alongside management quotas. However, candidates must carefully review the fee agreements for mandatory annual fee escalations (5% to 10% yearly hikes), university development charges, and compulsory hostel dining tariffs before locking choices." 
+      },
+      { 
+        heading: "3. Strategy for Low-Score, High-Budget Aspirants", 
+        text: "If budget is not a constraint but your NEET score is hovering between 200 and 350, participating in the MCC Mop-Up and Stray Vacancy rounds for Deemed Universities offers the highest probability of securing an MCI/NMC-recognized MBBS degree without dropping another academic year." 
+      }
+    ],
+    cta: { 
+      title: "Explore Top Medical Institutions", 
+      description: "Review detailed infrastructure, clinical patient load, and historical rankings of India's premier medical colleges.", 
+      buttonText: "View Medical Colleges", 
+      link: "/articles/TopIndianMedicalColleges" 
+    }
+  },
+
+  "keam-college-predictor-last-rank-guide": {
+    category: "Engineering & Architecture",
+    title: "KEAM College Predictor Guide: How to Use Last Rank Details (LRD) Effectively",
+    author: "Vidyabhyasam Engineering Desk",
+    date: "July 18, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
+    content: [
+      { text: "With the Commissioner for Entrance Examinations (CEE) Kerala opening the centralized option registration portal, engineering aspirants face the daunting task of structuring dozens of college and branch preferences. Mastering historical Last Rank Details (LRD) is the secret to building an option list that maximizes your rank." },
+      { 
+        heading: "1. Understanding Kerala Institutional Tiers", 
+        text: "CEE classifies participating institutions into three distinct operational models, each carrying different fee scales and competition levels:",
+        list: [
+          "Government Engineering Colleges (GECs): Premier institutes like CET Trivandrum and TKM Kollam featuring highly subsidized tuition fees and elite placement records.",
+          "Government-Aided Colleges: Institutions managed by private trusts but heavily funded by the state, offering government-equivalent fee structures for merit seats.",
+          "Self-Financing Institutes (SFIs): Private colleges where cutoffs vary wildly between State Merit (SM) seats and Management Quota options."
+        ]
+      },
+      { 
+        heading: "2. How Community Reservation Shifts Cutoffs", 
+        text: "Unlike national examinations that use a unified category rank, KEAM seat allotment relies entirely on your general state rank combined with category seat matrices. Reservation categories such as Ezhava (EZ), Muslim (MU), Latin Catholic (LA), and Backward Harijan (BH) can shift closing ranks by thousands of positions, especially in top-tier computer science and electronics branches." 
+      },
+      { 
+        heading: "3. The 'Safety Net' Option Strategy", 
+        text: "When registering options on the portal, never restrict yourself only to colleges where your admission is guaranteed. Structure your list in three distinct zones: Dream Options (top institutions slightly above your rank), Realistic Options (colleges matching your exact LRD trend), and Safety Nets (institutes where historical cutoffs closed at least 5,000 ranks below yours)." 
+      }
+    ],
+    cta: { 
+      title: "Simulate Your KEAM Allotment", 
+      description: "Use our precision KEAM predictor to map your rank against official CEE Kerala last rank cutoffs across all engineering branches.", 
+      buttonText: "Open KEAM Predictor", 
+      link: "/keam-predictor" 
+    }
+  },
     "culinary-arts-hospitality-administration": {
     category: "Hospitality & Culinary",
     title: "Culinary Arts & Hotel Administration: Building a Global Career in Hospitality",
