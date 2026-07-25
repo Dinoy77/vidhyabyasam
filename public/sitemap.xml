@@ -149,6 +149,31 @@
 
   <!-- News & Updates -->
   <url>
+    <loc>https://vidyabhyasam.com/news/delay-in-releasing-ugc-net-answe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/nta-announces-neet-ug-2026-res</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/karnataka-ugneet-2026-registrati</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mcc-neet-ug-counselling-2026-ai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/qualifying-marks-for-neet-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/news/tnea-2026-seat-allotment-link-c</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
