@@ -66,28 +66,6 @@
     "state": "All India"
   },
   {
-    "id": 2607250432,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "NEET Result Out: MCC AIQ Counselling Schedule 2026 PDF & Dates",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-25",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for NEET Result Out: MCC AIQ Counselling Schedule 2026 PDF & Dates. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607250431,
     "icon": "📊",
     "color": "#059669",
@@ -100,28 +78,6 @@
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
     "description": "Results and performance tracking announcement for NTA announces NEET (UG) 2026 results with 11.21 lakh candidates qualifying. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
     "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607250430,
-    "icon": "📝",
-    "color": "#D97706",
-    "bg": "#FEF3C7",
-    "tag": "Answer Key Out",
-    "title": "With NTA's Revamp, UGC NET answer key for June 2026 session likely to be delayed further",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-25",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning With NTA's Revamp, UGC NET answer key for June 2026 session likely to be delayed further. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
     "applyLink": "",
     "courses": [
       "MBBS",
