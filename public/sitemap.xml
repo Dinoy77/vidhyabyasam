@@ -493,13 +493,38 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+<url>
     <loc>https://vidyabhyasam.com/news/neet-ug-2026-results-students-a</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/nta-rebuts-unfair-evaluation-a</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mcc-neet-ug-2026-counselling-sch</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/andhra-pradesh-eamcet-2026-couns</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/maharashtra-neet-counselling-202</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-counselling-2026-schedul</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/tamil-nadu-engineering-admission</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
