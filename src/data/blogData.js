@@ -1,4 +1,131 @@
-export const blogArticles = {"keam-rank-predictor-option-registration-guide": {
+export const blogArticles = {
+  "mcc-neet-ug-2026-counselling-guide": {
+    category: "Medical Counselling",
+    title: "MCC NEET UG 2026 Counselling: Step-by-Step AIQ Choice Filling & Seat Matrix Guide",
+    author: "Vidyabhyasam Medical Desk",
+    date: "July 26, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
+    content: [
+      { 
+        text: "With the Medical Counselling Committee (MCC) initiating online registrations on mcc.nic.in for NEET UG 2026, over 15 lakh candidates are preparing for 15% All India Quota (AIQ) seats across Central Universities, Deemed Institutes, AIIMS, and JIPMER campuses. Mastering the choice locking procedure is essential to secure top-tier MBBS and BDS seats." 
+      },
+      { 
+        heading: "1. Understanding Seat Quotas and Matrix Distribution", 
+        text: "MCC conducts four online rounds of counselling: Round 1, Round 2, Round 3 (formerly Mop-up), and the Online Stray Vacancy Round. Candidates can lock options across multiple seat categories:",
+        list: [
+          "15% All India Quota (AIQ): Government medical and dental colleges across all states with zero domicile restrictions.",
+          "100% Seats in AIIMS & JIPMER: Admission strictly governed by AIQ merit lists across 20+ national AIIMS institutes.",
+          "Central Universities (DU, BHU, AMU): Includes internal university quotas alongside general AIQ seats.",
+          "Deemed Universities: Open seats allotted on an all-India rank basis with university-specific annual fee structures."
+        ]
+      },
+      { 
+        heading: "2. Rules of Free Exit and Upgradation in 2026", 
+        text: "MCC's upgraded rules offer crucial flexibilities, but candidates must navigate security deposit forfeit rules carefully:",
+        list: [
+          "Round 1 Free Exit: Candidates allotted a seat in Round 1 can choose not to join without forfeiting their security deposit.",
+          "Round 2 Willingness to Upgrade: If you join a Round 1 college, you can submit willingness for Round 2 upgradation. However, exiting after joining Round 2 results in deposit forfeiture.",
+          "Round 3 Locking Rules: Once a seat is allotted and joined in Round 3, candidates are barred from participating in any state quota counselling."
+        ]
+      },
+      { 
+        heading: "3. Essential Documents Checklist for Physical Reporting", 
+        text: "Keep original certificates ready along with two attested sets of photocopies prior to institute reporting:",
+        list: [
+          "NEET UG 2026 Admit Card & Official Scorecard",
+          "Class 10 and Class 12 Marks Sheets & Passing Certificates",
+          "Government Photo ID (Aadhaar Card, Passport, or PAN Card)",
+          "Eight passport-size photos matching the NEET application photograph",
+          "Provisional Allotment Letter generated from the MCC portal",
+          "Valid Category / EWS / PwD Certificate issued by competent authorities (if applicable)"
+        ]
+      }
+    ],
+    cta: { 
+      title: "Predict Your NEET UG 2026 College", 
+      description: "Input your All India NEET Rank to instantly view eligible MBBS/BDS government and private colleges across AIQ and State quotas.", 
+      buttonText: "Launch NEET Predictor", 
+      link: "/neet-predictor" 
+    }
+  },
+
+  "tnea-2026-engineering-counselling-guide": {
+    category: "Engineering Admissions",
+    title: "TNEA 2026 Choice Filling Strategy: Cutoff Marks, Random Number & TFC Verification",
+    author: "Vidyabhyasam Engineering Desk",
+    date: "July 27, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80",
+    content: [
+      { 
+        text: "Directorate of Technical Education (DoTE) Tamil Nadu has released the rank list for TNEA 2026 admissions on tneaonline.org. Candidates aiming for Anna University departments, government colleges, and top self-financing institutes must strategically plan their choice filling window." 
+      },
+      { 
+        heading: "1. How TNEA Cutoff Marks (Out of 200) Are Calculated", 
+        text: "Unlike exams with entrance tests, TNEA engineering merit is computed entirely on standardized Board Class 12 marks out of a total cutoff score of 200:",
+        list: [
+          "Mathematics: Converted directly to 100 Marks (Maths Score ÷ Total × 100)",
+          "Physics: Converted to 50 Marks (Physics Score ÷ Total × 50)",
+          "Chemistry: Converted to 50 Marks (Chemistry Score ÷ Total × 50)",
+          "Total TNEA Cutoff = Maths (100) + Physics (50) + Chemistry (50) = 200 Marks"
+        ]
+      },
+      { 
+        heading: "2. Role of Random Numbers and Tie-Breaking Protocols", 
+        text: "When two or more candidates share the exact same 200-mark cutoff score, DoTE resolves ties using a strict sequential hierarchy: (1) Higher percentage in Mathematics, (2) Higher percentage in Physics, (3) Higher percentage in Optional subject, (4) Date of Birth (older candidate prioritized), and finally (5) Higher 10-digit TNEA Random Number." 
+      },
+      { 
+        heading: "3. TFC Document Verification & Upgradation Choices", 
+        text: "After choice locking, candidates receiving initial seat confirmation must select one of the following decisions within the portal window:",
+        list: [
+          "Accept and Join: Confirms the allotted seat and proceed to report to the college.",
+          "Accept and Upgrade: Secures the current seat while participating in subsequent rounds for a higher preference option.",
+          "Decline and Move Next: Rejects the allotted seat to enter the next round for fresh options."
+        ]
+      }
+    ],
+    cta: { 
+      title: "Need TNEA Choice-Filling Guidance?", 
+      description: "Confused about college preferences or Anna University cutoffs? Submit a general enquiry to get expert admission assistance from our engineering desk.", 
+      buttonText: "Submit Admission Enquiry", 
+      link: "/GeneralEnquiry"
+    }
+  },
+
+  "ap-eamcet-2026-web-options-guide": {
+    category: "Engineering Counselling",
+    title: "AP EAPCET (EAMCET) 2026 Web Options: Branch Preferences & Fee Reimbursement Norms",
+    author: "Vidyabhyasam Engineering Desk",
+    date: "July 27, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80",
+    content: [
+      { 
+        text: "The Department of Technical Education, Andhra Pradesh, has opened the web options registration portal for AP EAPCET 2026 (formerly AP EAMCET) engineering aspirants on eapcet-sche.aptonline.in. Setting up your options priority is crucial to securing preferred seats in top B.Tech institutes." 
+      },
+      { 
+        heading: "1. Important Rules for Exercising Web Options", 
+        text: "Candidates must complete online certificate verification before entering options. Here is how to structure your preferences:",
+        list: [
+          "No Upper Limit: Enter as many college and branch combinations as possible; there is no restriction on total option entries.",
+          "Option Freezing: Remember to save options daily. Unfrozen options automatically lock on the final deadline date.",
+          "District Preference: Sort institutes by local (AU / SVU) vs non-local region codes to maximize reservation benefits."
+        ]
+      },
+      { 
+        heading: "2. Understanding Jagananna Vidya Deevena (JVD) Eligibility", 
+        text: "Full tuition fee reimbursement under state government schemes applies strictly to candidates admitted under Convener Quota (A-Category) seats whose total family annual income meets designated guidelines and who hold valid rice cards/income certificates." 
+      }
+    ],
+    cta: { 
+      title: "Need Help with EAPCET Web Options?", 
+      description: "Have questions about option freezing, region codes, or fee reimbursement norms? Fill out our general enquiry form to connect with an admission counselor.", 
+      buttonText: "Enquire Now", 
+      link: "/GeneralEnquiry"
+    }
+  },
+  "keam-rank-predictor-option-registration-guide": {
     category: "Engineering Counselling",
     title: "How to Use a KEAM Rank Predictor to Master CEE Kerala Option Registration",
     author: "Vidyabhyasam Engineering Desk",
