@@ -42,28 +42,6 @@
     "state": "Karnataka"
   },
   {
-    "id": 2607290447,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "NEET SS 2025: SC orders restoration of 151 Tamil Nadu seats; MCC to complete counselling in 2 w",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-29",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding NEET SS 2025: SC orders restoration of 151 Tamil Nadu seats; MCC to complete counselling in 2 weeks. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607290446,
     "icon": "📊",
     "color": "#059669",
@@ -104,68 +82,6 @@
       "B.E"
     ],
     "state": "South India"
-  },
-  {
-    "id": 2607290444,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "TS ICET Counselling 2026: Phase-1 & Phase-2 Complete Schedule",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-29",
-    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
-    "description": "Critical timeline update regarding TS ICET Counselling 2026: Phase-1 & Phase-2 Complete Schedule. Authorities have issued an official notification modifying the operational schedule and deadlines for MBA, MCA admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBA",
-      "MCA"
-    ],
-    "state": "Telangana"
-  },
-  {
-    "id": 2607290443,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "NEET UG Counselling: Avoid These Mistakes Or Risk Losing Your Medical Seat",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-29",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding NEET UG Counselling: Avoid These Mistakes Or Risk Losing Your Medical Seat. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607290442,
-    "icon": "📝",
-    "color": "#D97706",
-    "bg": "#FEF3C7",
-    "tag": "Answer Key Out",
-    "title": "UGC NET June 2026 answer key: Expected release, challenge process and key dates candidates shou",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-29",
-    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Answer key and response sheet notification concerning UGC NET June 2026 answer key: Expected release, challenge process and key dates candidates should know. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for Ph.D. Eligibility, Junior Research Fellowship (JRF) can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "Ph.D. Eligibility",
-      "Junior Research Fellowship (JRF)"
-    ],
-    "state": "All India"
   },
   {
     "id": 2607280427,
