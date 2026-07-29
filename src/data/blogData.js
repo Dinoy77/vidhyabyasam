@@ -1,4 +1,131 @@
 export const blogArticles = {
+  "keam-bpharm-2026-option-registration-guide": {
+    category: "Pharmacy Counselling",
+    title: "KEAM B.Pharm 2026 Centralised Allotment (CAP): Online Option Registration & Choice Filling Guide",
+    author: "Vidyabhyasam Engineering & Pharmacy Desk",
+    date: "July 29, 2026",
+    readTime: "5 Min Read",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=80",
+    content: [
+      { 
+        text: "The Commissioner for Entrance Examinations (CEE) Kerala has officially initiated the Centralised Allotment Process (CAP) for B.Pharm Course Admissions 2026-27 on cee.kerala.gov.in. Qualified candidates must log in and submit their college preferences online before July 31, 2026, at 4:00 PM to compete for government and self-financing pharmacy seats." 
+      },
+      { 
+        heading: "1. Critical Option Registration Rules & Timeline", 
+        text: "The B.Pharm CAP operates on a strict Single Window System where your option list determines your seat allotment. Candidates must keep these crucial dates and rules in mind:",
+        list: [
+          "Option Entry Window: Opens July 28, 2026, and closes strictly on July 31, 2026, at 4:00 PM.",
+          "No Fresh Options Later: Choices entered during this window cannot be registered afresh in later phases; you can only rearrange or delete existing options.",
+          "Provisional & First Allotment: Provisional allotment will be published on August 1, followed by the First Phase Allotment on August 2, 2026.",
+          "Mandatory Fee Remittance: Allotted candidates must remit the CEE tuition fee online between August 3 and August 5, 2026 (4:00 PM) and report to their college."
+        ]
+      },
+      { 
+        heading: "2. Strategic Choice Filling for B.Pharm Colleges", 
+        text: "To avoid being left unallotted, structure your option entries across three categories:",
+        list: [
+          "Government Pharmacy Colleges: Put prestigious state colleges as your top preferences even if your rank is borderline.",
+          "Top Self-Financing Institutions: Place established private pharmacy colleges with strong lab infrastructure and placement records in the middle.",
+          "Safety Net Options: Add at least 15–20 lower-cutoff colleges at the bottom of your list to guarantee a Round 1 seat allocation."
+        ]
+      },
+      { 
+        heading: "3. Mandatory Reservation Principles", 
+        text: "Seat distribution across Government and Self-Financing Pharmacy Colleges adheres strictly to state reservation norms after setting apart All India Quota, Government of India Nominees, PwD, and supernumerary seats." 
+      }
+    ],
+    cta: { 
+      title: "Predict Your KEAM B.Pharm College", 
+      description: "Enter your KEAM Pharmacy Rank to instantly check your admission chances across top Kerala Government and Self-Financing Pharmacy colleges.", 
+      buttonText: "Launch KEAM Predictor", 
+      link: "/keam-predictor" 
+    }
+  },
+  "csab-2026-special-rounds-nit-counselling": {
+    category: "Engineering Counselling",
+    title: "CSAB Special Round 2026 Registration Open: How to Claim Vacant NIT, IIIT & GFTI Seats",
+    author: "Vidyabhyasam Engineering Desk",
+    date: "July 29, 2026",
+    readTime: "6 Min Read",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
+    content: [
+      { 
+        text: "The Central Seat Allocation Board (CSAB) has officially commenced online registration and choice filling for CSAB Special Rounds 2026 on csab.nic.in. This is the final opportunity for JEE Main aspirants to secure admission into vacant seats across NITs, IIITs, IIEST Shibpur, and GFTIs." 
+      },
+      { 
+        heading: "1. Key Dates and Mandatory Fresh Registration", 
+        text: "Even if you participated in JoSAA 2026, you must register afresh for the CSAB Special Rounds—your previous JoSAA choices will not be carried forward:",
+        list: [
+          "Registration & Fee Payment: Window runs from July 28, 2026, to August 3, 2026 (10:00 AM).",
+          "Choice Editing & Locking Deadline: Candidates can modify and lock their institute-branch preferences until August 5, 2026 (2:00 PM).",
+          "Special Round Enrolment Fee (SREF): Must be paid online during registration to activate choice filling."
+        ]
+      },
+      { 
+        heading: "2. Who Should Participate in CSAB Special Rounds?", 
+        text: "CSAB Special counselling is ideal for four specific candidate categories:",
+        list: [
+          "Unallotted Candidates: JEE Main rank holders who did not secure any seat during JoSAA Rounds 1–5.",
+          "Looking for Upgrades: Students who accepted a JoSAA seat but wish to compete for higher-preference NIT/IIIT branches using vacant seat pools.",
+          "First-Time Registrants: JEE Main qualified candidates who missed participating in JoSAA entirely.",
+          "Cancelled JoSAA Allotments: Students whose earlier allotments were cancelled due to non-reporting or document discrepancies."
+        ]
+      },
+      { 
+        heading: "3. Smart Choice-Locking Strategy for Vacant Seats", 
+        text: "Always check the official CSAB Vacant Seat Matrix released before choice filling. Focus on institutions where seat vacancies match your category rank, but include aspirational options at the top since special round cutoffs often fluctuate significantly." 
+      }
+    ],
+    cta: { 
+      title: "Need Help with CSAB Special Choice Filling?", 
+      description: "Confused about Special Round Enrolment Fees or vacant seat matrix trends? Reach out via our general enquiry form for expert help.", 
+      buttonText: "Submit Admission Enquiry", 
+      link: "/GeneralEnquiry" 
+    }
+  },
+  "cuet-ug-2026-university-cutoffs-admission-guide": {
+    category: "University Admissions",
+    title: "CUET UG 2026 Admissions: DU, BHU & AU Cutoff Trends and University Counselling Portals",
+    author: "Vidyabhyasam Admissions Desk",
+    date: "July 29, 2026",
+    readTime: "5 Min Read",
+    image: "https://img.prameyanews.com/FilesUpload/News7/Posts/2026/5/25/1779674161_CUET_UG_2026.webp",
+    content: [
+      { 
+        text: "With the National Testing Agency (NTA) declaring CUET UG 2026 scorecards, participating Central, State, and Deemed Universities have commenced their independent online counselling and cutoff releases. Understanding how individual university merit lists work is key to securing your undergraduate seat." 
+      },
+      { 
+        heading: "1. Why NTA Doesn't Release a Common Cutoff", 
+        text: "The NTA's role is strictly limited to conducting the exam and issuing normalised NTA scores and percentiles. Because each university has unique eligibility criteria, subject combination weights, and seat matrices, institutions like Delhi University (DU CSAS), Banaras Hindu University (BHU), and Allahabad University run separate counselling portals:",
+        list: [
+          "Delhi University (DU): Admissions are processed via the Common Seat Allocation System (CSAS), where cutoffs for top colleges (SRCC, St. Stephen's, Hindu) exceed the 98th–99th percentile for core programs.",
+          "Banaras Hindu University (BHU): Merit lists are calculated out of specific subject totals (e.g., General Test + Language + Domain subjects depending on B.A., B.Sc., or B.Com requirements).",
+          "Allahabad University & JMI: Releasing round-wise cutoffs on their individual admission portals for registered applicants."
+        ]
+      },
+      { 
+        heading: "2. Expected Category-Wise Cutoff Benchmarks (1250 Total Marks)", 
+        text: "Based on 2026 expert analysis for popular five-subject combinations (Total 1250 Marks), expected safe admission ranges for central universities are:",
+        list: [
+          "General (Unreserved): 970 – 1130 Marks",
+          "OBC (Non-Creamy Layer): 890 – 1060 Marks",
+          "Economically Weaker Section (EWS): 895 – 1065 Marks",
+          "Scheduled Caste (SC): 735 – 945 Marks",
+          "Scheduled Tribe (ST): 635 – 715 Marks"
+        ]
+      },
+      { 
+        heading: "3. Action Plan Following Scorecard Download", 
+        text: "Ensure you register separately on the admission portals of all target universities before their Phase 1 counselling deadlines expire. Keep your Class 10/12 marksheets, category certificates, and NTA scorecard ready for online document verification." 
+      }
+    ],
+    cta: { 
+      title: "Confused About CUET University Registrations?", 
+      description: "Need help calculating university-specific merit scores or choosing between DU, BHU, and AU programs? Submit an enquiry today.", 
+      buttonText: "Submit Admission Enquiry", 
+      link: "/GeneralEnquiry" 
+    }
+  },
   "mcc-neet-ug-2026-counselling-guide": {
     category: "Medical Counselling",
     title: "MCC NEET UG 2026 Counselling: Step-by-Step AIQ Choice Filling & Seat Matrix Guide",
