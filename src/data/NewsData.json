@@ -1,5 +1,24 @@
 [
   {
+    "id": 2807202601,
+    "icon": "💊",
+    "color": "#0284C7",
+    "bg": "#E0F2FE",
+    "tag": "Options Invited",
+    "title": "KEAM 2026 Centralised Allotment for Pharmacy Course: Online Option Registration Open",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-07-29",
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80",
+    "description": "The Commissioner for Entrance Examinations (CEE) Kerala has officially commenced the Centralised Allotment Process (CAP) for admission to the Pharmacy Course (B.Pharm) for 2026-27. Online options are now invited for seats across Government and Self-Financing Pharmacy Colleges. Qualified candidates must log in to the candidate portal at cee.kerala.gov.in and register their options by July 31, 2026, 4:00 PM. Options entered during this phase cannot be registered afresh later, and failure to submit options within the deadline will result in exclusion from the allotment process. Provisional allotment will be published on August 1, followed by the first phase allotment on August 2, 2026.",
+    "eligibility": "Candidates who have qualified for admission to the Kerala Pharmacy Course (KEAM B.Pharm) 2026 and are included in the official rank list.",
+    "applyLink": "https://cee.kerala.gov.in",
+    "courses": [
+      "B.Pharm"
+    ],
+    "state": "Kerala"
+  },
+  {
     "id": 2607290451,
     "icon": "🖥️",
     "color": "#7C3AED",
@@ -27,12 +46,12 @@
     "color": "#059669",
     "bg": "#ECFDF5",
     "tag": "Allotment Out",
-    "title": "COMEDK UGET 2026 Seat Allotment Result To Be OUT At 3 PM; Check Direct Link And Schedule Ahead",
+    "title": "COMEDK UGET 2026 Seat Allotment Result To Be OUT At 3 PM.",
     "isNotification": true,
     "date": "Action Required Now",
     "publishedAt": "2026-07-29",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official seat allotment update regarding COMEDK UGET 2026 Seat Allotment Result To Be OUT At 3 PM; Check Direct Link And Schedule Ahead. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "Official seat allotment update regarding COMEDK UGET 2026 Seat Allotment Result To Be OUT At 3 PM. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
     "applyLink": "",
     "courses": [
