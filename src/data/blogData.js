@@ -1,4 +1,83 @@
 export const blogArticles = {
+  "keam-2026-phase-3-option-registration-allotment": {
+    "category": "Engineering Counselling",
+    "title": "KEAM 2026 Phase 3 Counselling: Option Registration Closing Soon & Allotment Dates",
+    "author": "Vidyabhyasam Engineering & Pharmacy Desk",
+    "date": "July 30, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://www.mtu.edu/engineering/about/engineers/images/engineering-banner2400.jpg",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE) Kerala has commenced the Phase 3 option registration for Engineering courses. This is the final phase of centralized allotment for Engineering admissions to Government, Autonomous, and Private Self-Financing colleges for the 2026 academic year."
+      },
+      {
+        "heading": "1. Important Phase 3 Dates",
+        "text": "Candidates must take note of the fast-approaching deadlines for Phase 3:",
+        "list": [
+          "Option Registration Deadline: Closes today, July 30, 2026, at 11:59 PM [1.1.5].",
+          "Provisional Allotment: Scheduled to be published on August 3, 2026.",
+          "Final Allotment: The final phase 3 allotment list will be released on August 5, 2026."
+        ]
+      },
+      {
+        "heading": "2. Option Registration Rules",
+        "text": "Eligible candidates included in the Engineering rank list must log in to the cee.kerala.gov.in portal. Candidates can register for fresh options, delete unwanted options, or alter the priority of existing choices. A candidate is bound to accept an allotment as per the priority registered; failure to do so will result in losing the seat previously occupied."
+      },
+      {
+        "heading": "3. After Phase 3 Allotment",
+        "text": "Any seats remaining vacant after this third phase will be filled separately. For Government Colleges, the Director of Technical Education will handle vacancies, while private colleges will fill them at the institutional level adhering to KEAM 2026 prospectus guidelines."
+      }
+    ],
+    "cta": {
+      "title": "Predict Your KEAM Engineering College",
+      "description": "Enter your KEAM Rank to instantly check your admission chances across top Kerala Engineering colleges in the final phases.",
+      "buttonText": "Launch KEAM Predictor",
+      "link": "/keam-predictor"
+    }
+  },
+  "csab-special-round-2026-top-10-nit-predictor": {
+    "category": "NIT/IIIT Admissions",
+    "title": "CSAB Special Counselling 2026: Registration Begins for Vacant NIT, IIIT Seats",
+    "author": "Vidyabhyasam Engineering & Pharmacy Desk",
+    "date": "July 30, 2026",
+    "readTime": "6 Min Read",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80",
+    "content": [
+      {
+        "text": "The Central Seat Allocation Board (CSAB) Special Counselling 2026 registration is currently underway [2.1.1]. With the JoSAA rounds concluded, this is the final opportunity for candidates to secure vacant seats in the NIT+ system (NITs, IIITs, IIEST, SPAs, and GFTIs). IITs do not participate in CSAB special rounds."
+      },
+      {
+        "heading": "1. Critical Deadlines",
+        "text": "Candidates must adhere to the following schedule to participate in the special rounds:",
+        "list": [
+          "Registration & Fee Payment: Closes on August 3, 2026, at 10:00 AM [2.1.6].",
+          "Mock Seat Allocation: Displayed on July 30, 2026, based on choices submitted.",
+          "Choice Locking: Must be completed by August 5, 2026, at 2:00 PM.",
+          "Round 1 Seat Allotment: Results will be published on August 6, 2026, at 5:00 PM."
+        ]
+      },
+      {
+        "heading": "2. Top 10 Engineering Colleges in India (NIRF 2025/2026)",
+        "text": "While CSAB caters only to the NIT+ system, it is helpful to understand the national landscape. Based on the latest NIRF rankings, the top 10 engineering institutions are consistently dominated by the older IITs:",
+        "list": [
+          "1. IIT Madras [1.1.3]",
+          "2. IIT Delhi",
+          "3. IIT Bombay",
+          "4. IIT Kanpur",
+          "5. IIT Kharagpur",
+          "6. IIT Roorkee",
+          "7. IIT Hyderabad",
+          "8. IIT Guwahati",
+          "9. NIT Tiruchirappalli (The top-ranked NIT participating in CSAB)",
+          "10. IIT (BHU) Varanasi"
+        ]
+      },
+      {
+        "heading": "3. The CSAB Advantage",
+        "text": "Unlike JoSAA, previous registrations and choices are not carried forward; fresh registration and fee payment are mandatory. For candidates aiming for top-tier institutions like NIT Tiruchirappalli or NIT Surathkal (NIRF Rank 17), analyzing previous years' closing ranks is crucial for strategic choice filling."
+      }
+    ]
+  },
   "keam-bpharm-2026-option-registration-guide": {
     category: "Pharmacy Counselling",
     title: "KEAM B.Pharm 2026 Centralised Allotment (CAP): Online Option Registration & Choice Filling Guide",
@@ -39,6 +118,45 @@ export const blogArticles = {
       description: "Enter your KEAM Pharmacy Rank to instantly check your admission chances across top Kerala Government and Self-Financing Pharmacy colleges.", 
       buttonText: "Launch KEAM Predictor", 
       link: "/keam-predictor" 
+    }
+  },
+  "pharmd-vs-bpharm-course-guide-2026": {
+    "category": "Pharmacy Education",
+    "title": "Pharm.D vs B.Pharm: Which Pharmacy Career Path is Right for You in 2026?",
+    "author": "Vidyabhyasam Pharmacy Desk",
+    "date": "July 30, 2026",
+    "readTime": "6 Min Read",
+    "image": "https://images.unsplash.com/photo-1576602976047-174e57a47881?w=1200&q=80",
+    "content": [
+      {
+        "text": "With the healthcare sector expanding rapidly in India, pharmacy has become one of the most sought-after career choices for science students. However, candidates often find themselves confused between the two primary undergraduate pathways: Bachelor of Pharmacy (B.Pharm) and Doctor of Pharmacy (Pharm.D). Understanding the core differences is crucial before making your KEAM or state counselling choices."
+      },
+      {
+        "heading": "1. Course Duration and Core Focus",
+        "text": "While both courses revolve around medicines and healthcare, their academic structures are fundamentally different:",
+        "list": [
+          "B.Pharm (4 Years): An undergraduate degree that focuses heavily on industrial pharmacy. The curriculum is centered around drug discovery, formulation, manufacturing, pharmacology, and quality control.",
+          "Pharm.D (6 Years): An integrated doctoral program (5 years of academic study + 1 year of mandatory hospital internship). It focuses heavily on clinical pharmacy, patient care, ward rounds, and therapeutic drug monitoring."
+        ]
+      },
+      {
+        "heading": "2. Career Opportunities & Industry Scope",
+        "text": "Your long-term career goals should dictate your choice between the two degrees:",
+        "list": [
+          "Careers after B.Pharm: Ideal for students who want to work in the pharmaceutical industry. Roles include Drug Inspector, Quality Assurance/Quality Control (QA/QC) Officer, R&D Scientist, Medical Representative (MR), and Retail Pharmacist.",
+          "Careers after Pharm.D: Designed for students who want to work directly with patients in hospital settings. Roles include Clinical Pharmacist, Pharmacotherapy Specialist, Medical Writer, Pharmacovigilance Associate, and Research Coordinator."
+        ]
+      },
+      {
+        "heading": "3. Admissions and Higher Education",
+        "text": "In Kerala, B.Pharm admissions are strictly routed through the KEAM Centralised Allotment Process (CAP) based on Paper-1 (Physics & Chemistry) scores. After B.Pharm, students can pursue an M.Pharm or Pharm.D (Post Baccalaureate). Pharm.D admissions also follow state-level entrance protocols or merit-based counselling, but graduates are awarded a doctoral prefix ('Dr.') immediately upon completion."
+      }
+    ],
+    "cta": {
+      "title": "Explore Top Pharmacy Colleges",
+      "description": "Compare top-ranked B.Pharm and Pharm.D colleges in Kerala based on infrastructure, hospital tie-ups, and placement records.",
+      "buttonText": "View Pharmacy Colleges",
+      "link": "/articles/BPharmCourseGuide"
     }
   },
   "csab-2026-special-rounds-nit-counselling": {
