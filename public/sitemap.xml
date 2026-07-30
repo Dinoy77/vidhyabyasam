@@ -112,6 +112,16 @@
 
   <!-- Blogs -->
   <url>
+    <loc>https://vidyabhyasam.com/blog/keam-bpharm-2026-option-registration-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/keam-2026-phase-3-option-registration-allotment</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/blog/tnea-2026-general-category-counselling-choice-filling-begins</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -148,6 +158,36 @@
   </url>
 
   <!-- News & Updates -->
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-2026-major-changes-in-coun</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-counselling-2026-haryan</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/j-p-nadda-reviews-neet-ug-counse</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ss-2025-admission-deadlock</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/govt-committed-to-transparent-m</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://vidyabhyasam.com/news/keam-2026-centralised-allotment</loc>
     <lastmod>2026-07-29</lastmod>
@@ -523,7 +563,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-<url>
+  <url>
     <loc>https://vidyabhyasam.com/news/neet-ug-2026-results-students-a</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
