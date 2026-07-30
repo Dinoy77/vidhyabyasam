@@ -30,12 +30,9 @@ export const dropDownData = {
   "Popular Medical Courses": [
     "MBBS (Bachelor of Medicine, Bachelor of Surgery)",
     "BDS (Bachelor of Dental Surgery)",
-    "BAMS (Ayurvedic Medicine)",
     "BHMS Course Guide",
     "BSc Nursing",
-    "B.Pharm (Pharmacy)",
-    "Pharm D Course Details",
-    "B.Pharm vs Pharm D"
+    "B.Pharm (Pharmacy)"                                                                                                                                                  
   ],
   "Popular Engineering & IT Courses": [
     "B.Tech (Bachelor of Technology)",
