@@ -1,4 +1,174 @@
 export const blogArticles = {
+  "top-mbbs-alternatives-neet-2026": {
+    "category": "Medical Careers & NEET",
+    "title": "Top Alternatives to MBBS: Best Career Paths if You Don't Clear NEET 2026",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "July 31, 2026",
+    "readTime": "5 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "With the intense competition and recent controversies surrounding NEET UG 2026, many students are looking beyond traditional MBBS degrees. Fortunately, the healthcare sector is vast, offering numerous lucrative and fulfilling career paths that do not require clearing the absolute top NEET medical cutoffs."
+      },
+      {
+        "heading": "1. BDS (Bachelor of Dental Surgery)",
+        "text": "Dentistry remains one of the most popular and respected alternatives to MBBS. With growing awareness of oral hygiene and cosmetic dentistry in India, BDS graduates have excellent prospects in private practice, government hospitals, and clinical research."
+      },
+      {
+        "heading": "2. AYUSH Courses (BAMS & BHMS)",
+        "text": "Alternative medicine is seeing a massive resurgence globally and heavy backing from the Indian government.",
+        "list": [
+          "BAMS (Ayurveda): High demand for holistic wellness, lifestyle management, and natural treatments.",
+          "BHMS (Homeopathy): A steady career path with a dedicated patient base across tier-1 and tier-2 cities in India."
+        ]
+      },
+      {
+        "heading": "3. Allied Health & Paramedical Sciences",
+        "text": "The backbone of the modern healthcare system relies on specialized technicians and nurses. High-growth areas include:",
+        "list": [
+          "B.Sc. Nursing: Exceptional global demand, specifically in the US, UK, and Middle East, offering great job security.",
+          "B.Sc. Radiology & Imaging Technology: Crucial for modern diagnostics like MRIs and CT scans.",
+          "B.Sc. Cardiovascular Technology: Assisting cardiologists in complex surgical procedures."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Explore Allied Medical Courses",
+      "description": "Discover the top colleges for BDS, BAMS, and Paramedical courses across India.",
+      "buttonText": "View College List",
+      "link": "/articles/TopIndianMedicalColleges"
+    }
+  },
+  "pm-internship-scheme-2026-guide": {
+    "category": "Career & Internships",
+    "title": "A Complete Guide to the PM Internship Scheme 2026 for Graduates",
+    "author": "Vidyabhyasam Career Desk",
+    "date": "July 31, 2026",
+    "readTime": "6 Min Read",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Prime Minister Internship Scheme (PMIS) 2026 is a massive government initiative aimed at providing real-world industry experience to Indian youth. With 23,365 internship opportunities spanning over 20 sectors, it is an excellent opportunity for graduates and diploma holders to kickstart their careers."
+      },
+      {
+        "heading": "1. Eligibility Requirements",
+        "text": "Before applying, ensure you meet the strict eligibility criteria set by the Ministry of Corporate Affairs:",
+        "list": [
+          "Age Limit: Must be between 18 to 25 years old.",
+          "Education: Open to 10th pass, 12th pass, ITI certified, Diploma holders, and Graduates (BA, BSc, BCom, etc.). Note: Graduates from premier institutes like IITs or IIMs, and post-graduates are not eligible.",
+          "Employment Status: You cannot be currently engaged in a full-time job or full-time education.",
+          "Income: Family income for FY 2023-24 must be below ₹8 lakh."
+        ]
+      },
+      {
+        "heading": "2. Financial Benefits & Stipend",
+        "text": "One of the major highlights of PMIS 2026 is the financial support provided to interns:",
+        "list": [
+          "Monthly Stipend: ₹5,000 per month (₹4,500 transferred directly by the Government via DBT, and ₹500 paid by the host company).",
+          "Joining Grant: A one-time grant of ₹6,000 is provided by the Government upon joining to help with initial expenses.",
+          "Insurance: Interns are covered under PMJJBY and PMSBY insurance schemes."
+        ]
+      },
+      {
+        "heading": "3. Application Process",
+        "text": "The application process is entirely online and free of cost. Candidates must register on the official PM Internship portal (pminternship.mca.gov.in), complete their profile with Aadhaar and educational details, and can select up to 3 preferred companies or sectors. The shortlisting aims for diversity and social inclusivity."
+      }
+    ],
+    "cta": {
+      "title": "Apply for PM Internship Scheme",
+      "description": "Visit the official PMIS portal to register and apply for internship opportunities before the deadline.",
+      "buttonText": "Visit Official Portal",
+      "link": "https://pminternship.mca.gov.in/"
+    }
+  },
+   "btech-ai-vs-computer-science-scope-2026": {
+    "category": "Engineering Careers",
+    "title": "B.Tech AI vs. Computer Science: Which Has Better Scope in 2026?",
+    "author": "Vidyabhyasam Career Desk",
+    "date": "July 31, 2026",
+    "readTime": "6 Min Read",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "For years, a B.Tech in Computer Science Engineering (CSE) was the undisputed king of engineering degrees. However, in 2026, the rise of \"Agentic AI\"—AI that can autonomously carry out coding and operational tasks—has sparked a massive debate: Should students pivot to a specialized B.Tech in Artificial Intelligence (AI) and Machine Learning (ML), or does traditional CSE still hold the crown?"
+      },
+      {
+        "heading": "1. The Case for Traditional CSE",
+        "text": "Despite AI advancements, CSE remains the safest and broadest choice. While AI might automate basic coding, businesses still need software developers to build complex architectures, secure networks, and maintain cloud infrastructure.",
+        "list": [
+          "Broader Opportunities: CSE graduates can work in almost any sector, from app development to cybersecurity.",
+          "Higher Placement Volume: While AI salaries can peak higher, there are significantly more entry-level jobs available for traditional CSE graduates.",
+          "Average Starting Salary: ₹4 – ₹10 LPA, with immense room for growth as you specialize."
+        ]
+      },
+      {
+        "heading": "2. The Rise of Specialized B.Tech in AI",
+        "text": "A B.Tech in AI is no longer experimental; it's a direct response to a massive industry shortage. Global industry reports project that by 2026, India will need over 1 million AI specialists.",
+        "list": [
+          "Specialized Roles: Graduates are hired as Machine Learning Engineers, Data Scientists, and NLP Engineers.",
+          "Higher Peak Salaries: Because the skill set is niche (requiring advanced math and statistical modeling), AI roles command premium packages, often starting between ₹6 – ₹12 LPA.",
+          "Future-Proofing: AI graduates are directly building the technologies that are automating other industries."
+        ]
+      },
+      {
+        "heading": "3. The Verdict: How to Choose",
+        "text": "Your choice depends on your long-term goals and aptitude.",
+        "list": [
+          "Choose CSE if: You want a flexible career path, enjoy general programming and problem-solving, and prefer a higher volume of immediate job opportunities.",
+          "Choose AI if: You excel at mathematics, are fascinated by robotics and machine learning, and want to target specialized, high-paying, future-facing roles."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Compare Top Engineering Colleges",
+      "description": "Discover which colleges offer the best placement records for B.Tech AI versus traditional CSE.",
+      "buttonText": "View College Rankings",
+      "link": "/articles/TopIndianEngineeringColleges"
+    }
+  },
+  "neet-ug-2026-counselling-schedule-mcc": {
+    "category": "Medical Careers & NEET",
+    "title": "NEET UG 2026 Counselling: MCC Schedule Expected by August 7",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "July 31, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the intense scrutiny and recent legislative changes surrounding this year's medical entrance exams, the Medical Counselling Committee (MCC) is gearing up to launch the NEET UG 2026 counselling process. Here is what candidates need to know right now."
+      },
+      {
+        "heading": "1. Expected Timeline for 2026",
+        "text": "While the official notification is awaited on the mcc.nic.in portal, recent developments indicate a rapidly approaching start date:",
+        "list": [
+          "Schedule Release: The detailed timetable is expected by July 31st or the first week of August.",
+          "Counselling Commencement: The registration and choice-filling process for Round 1 is highly anticipated to begin by August 7, 2026.",
+          "Admission Deadline: Candidates allotted seats in the first round will likely need to complete admission formalities by August 31, 2026."
+        ]
+      },
+      {
+        "heading": "2. Government Preparedness",
+        "text": "In light of recent controversies, the process is under strict observation. Union Health Minister Jagat Prakash Nadda chaired a high-level review meeting on July 29 to assess digital infrastructure, cybersecurity, and grievance redressal mechanisms, ensuring a transparent and merit-driven process."
+      },
+      {
+        "heading": "3. Document Readiness Checklist",
+        "text": "Do not wait for the official dates to gather your paperwork. Ensure you have the following ready for immediate verification upon seat allotment:",
+        "list": [
+          "NEET UG 2026 Admit Card and Rank Letter/Scorecard.",
+          "Class 10 and Class 12 passing certificates and mark sheets.",
+          "Valid ID proof (Aadhaar, PAN, Passport).",
+          "Eight passport-size photographs.",
+          "Category or PwBD certificates (if applicable)."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track MCC Updates Live",
+      "description": "Bookmark our live tracker page for instant alerts the moment the MCC releases the official NEET UG 2026 schedule.",
+      "buttonText": "View Live Updates",
+      "link": "/news"
+    }
+  },
   "keam-2026-phase-3-option-registration-allotment": {
     "category": "Engineering Counselling",
     "title": "KEAM 2026 Phase 3 Counselling: Option Registration Closing Soon & Allotment Dates",
