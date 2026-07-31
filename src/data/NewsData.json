@@ -1,49 +1,5 @@
 [
   {
-    "id": 2607310465,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "No discrepancy found in evaluation of NEET results, HC dismisses 2 petitions",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for No discrepancy found in evaluation of NEET results, HC dismisses 2 petitions. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607310464,
-    "icon": "🎓",
-    "color": "#1B6CA8",
-    "bg": "#EBF5FF",
-    "tag": "LIVE UPDATE",
-    "title": "MBBS Admission 2026 Through NEET UG: Complete Process",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding MBBS Admission 2026 Through NEET UG: Complete Process. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607310461,
     "icon": "🖥️",
     "color": "#7C3AED",
@@ -106,28 +62,6 @@
     "state": "Andhra Pradesh"
   },
   {
-    "id": 2607310458,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "MCC Updates NEET UG Counselling 2026 Portal Amid Reforms",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding MCC Updates NEET UG Counselling 2026 Portal Amid Reforms. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
     "id": 2607310457,
     "icon": "🖥️",
     "color": "#7C3AED",
@@ -139,48 +73,6 @@
     "publishedAt": "2026-07-31",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
     "description": "Official institutional release regarding Govt. simplifies NEET-UG 2026 counselling process. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2607310456,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "AP EAMCET counselling 2026 phase 1 schedule revised; Registration deadline extended to August 1",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding AP EAMCET counselling 2026 phase 1 schedule revised; Registration deadline extended to August 1, seat all. Authorities have issued an official notification modifying the operational schedule and deadlines for B.Tech, B.Pharm admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2607310455,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "MCC NEET UG Counselling 2026: Major Changes Include No Physical Reporting, Online Resignation",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-07-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding MCC NEET UG Counselling 2026: Major Changes Include No Physical Reporting, Online Resignation. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
     "applyLink": "",
     "courses": [
