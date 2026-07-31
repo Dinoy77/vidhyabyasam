@@ -156,8 +156,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/neet-ug-2026-counselling-schedule-mcc</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/top-mbbs-alternatives-neet-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- News & Updates -->
+  <url>
+    <loc>https://vidyabhyasam.com/news/govt-simplifies-neet-ug-2026-co</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ap-eamcet-2026-counselling-phas</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/ugc-net-june-2026-answer-key-an</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-2026-counselling-mcc-in</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://vidyabhyasam.com/news/neet-2026-major-changes-in-coun</loc>
     <lastmod>2026-07-30</lastmod>
