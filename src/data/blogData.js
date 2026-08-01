@@ -1,4 +1,133 @@
 export const blogArticles = {
+  "tnea-counselling-round2-choice-filling-2026": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 1 Tentative Seat Allotment Released, Round 2 Approaching",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 1, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, has released the tentative seat allotment for Round 1 of the Tamil Nadu Engineering Admissions (TNEA) 2026."
+      },
+      {
+        "heading": "Round 1 Confirmation",
+        "text": "Candidates who received a tentative allotment were required to confirm their acceptance by July 25, 2026. Following confirmation, provisional allotment orders are issued. Failing to confirm by the deadline may result in the loss of the allotted seat."
+      },
+      {
+        "heading": "Looking Ahead to Round 2",
+        "text": "With Round 1 concluding, the focus now shifts to the subsequent rounds of counselling. Candidates should prepare their preferred choices by researching colleges, branches, and previous year cut-offs."
+      }
+    ],
+    "cta": {
+      "title": "Need Help with TNEA Counselling?",
+      "description": "Have questions about the choice filling process or document verification? Submit your query.",
+      "buttonText": "Submit General Enquiry",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "ap-eapcet-2026-counselling-revised-dates": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAMCET 2026: Phase 1 Revised Counselling Schedule Approaching Deadlines",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 1, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWneG-xsJC8D8J3rm3nO2r_aYtm_FwSVNfWJ4xX9LSW6A4JylsZboRPmw&s=10",
+    "content": [
+      {
+        "text": "The Andhra Pradesh State Council of Higher Education (APSCHE) released a revised schedule for Phase 1 of the AP EAMCET 2026 counselling. The online certificate verification, counselling registration, and fee payment window opened on July 20 and concludes on August 1, 2026."
+      },
+      {
+        "heading": "Important Deadlines Approaching",
+        "text": "Candidates actively participating in the process need to be aware of the upcoming deadlines:",
+        "list": [
+          "Online Registration & Fee Payment Ends: August 1, 2026.",
+          "Web Options Entry Closes: August 3, 2026.",
+          "Change of Web Options: August 4, 2026.",
+          "Seat Allotment Result Announcement: August 9, 2026."
+        ]
+      },
+      {
+        "heading": "Next Steps After Allotment",
+        "text": "Once the seat allotment results are declared on August 9, successful candidates must complete the self-joining process and report to their allotted colleges between August 10 and August 15, 2026. Academic classes are slated to commence on August 10, 2026."
+      }
+    ],
+    "cta": {
+      "title": "Have Questions About AP EAMCET?",
+      "description": "Need clarification on web options entry or the reporting process? Reach out to us.",
+      "buttonText": "Submit General Enquiry",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "tn-neet-ug-counselling-2026": {
+    "category": "Medical Admissions - Tamil Nadu",
+    "title": "Tamil Nadu NEET UG Counselling 2026: What to Expect for State Quota Admissions",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 1, 2026",
+    "readTime": "5 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Tamil Nadu NEET UG Counselling 2026 process, managed by the Selection Committee under the Directorate of Medical Education and Research (DMER), will soon commence for MBBS and BDS admissions. This state-level process handles admissions for participating government and private medical and dental colleges across Tamil Nadu."
+      },
+      {
+        "heading": "Counselling Process Overview",
+        "text": "The counselling involves several key stages:",
+        "list": [
+          "Online Registration and Application Form Completion.",
+          "Payment of Registration Fees and Document Uploading.",
+          "Document Verification.",
+          "Choice Filling and Locking.",
+          "Seat Allotment based on NEET UG score, State Merit Rank, and category."
+        ]
+      },
+       {
+        "heading": "Seat Matrix and Opportunities",
+        "text": "Tamil Nadu offers a substantial number of seats, with over 13,000 MBBS seats available across government and private institutions. Candidates are advised to prepare their necessary documents, including a valid Nativity Certificate for State Quota claims."
+      }
+    ],
+    "cta": {
+      "title": "Tamil Nadu Medical Counselling Queries?",
+      "description": "Unsure about eligibility, the registration process, or required documents? Ask our experts.",
+      "buttonText": "Submit General Enquiry",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "neet-ss-2026-round-2-revised-dates": {
+    "category": "Super Speciality & PG Updates",
+    "title": "NEET SS 2026 Counselling: Revised Round 2 Schedule Anticipated Following Supreme Court Order",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 1, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://media.collegedekho.com/media/img/news/Tough_Competition_for_NEET_1.png?height=253&width=380",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) is set to announce the revised dates for Round 2 of the NEET SS 2026 counselling on mcc.nic.in. This follows a crucial Supreme Court verdict that ended the deadlock by dismissing delay attempts and ordering the restoration of 151 vacant seats to the central pool."
+      },
+      {
+        "heading": "Impact of the Supreme Court Ruling",
+        "text": "The counselling process faced delays due to legal proceedings regarding the reversion of in-service medical seats in Tamil Nadu to the All India Quota. The recent ruling means:",
+        "list": [
+          "151 seats, including highly sought-after DM and MCh programs, are back in the Round 2 seat matrix.",
+          "The MCC must complete the pending counselling stages within a 14-day timeline as directed by the court."
+        ]
+      },
+      {
+        "heading": "Round 1 Resignation Update",
+        "text": "In a related move, the MCC has permitted candidates who were allotted seats in Round 1 to resign their seats without forfeiting their ₹2 lakh security deposit. The deadline to complete this resignation process is August 4, 2026."
+      },
+      {
+        "heading": "What Candidates Should Do Next",
+        "text": "With the seat matrix significantly altered by the addition of 151 seats, candidates who have already filled their choices may need to review and update their preferences once the new schedule and matrix are officially published."
+      }
+    ],
+    "cta": {
+      "title": "View NEET SS Latest News",
+      "description": "Check the updated availability of DM and MCh seats for Round 2 across participating institutions.",
+      "buttonText": "Check Latest News",
+      "link": "/news"
+    }
+  },
   "top-mbbs-alternatives-neet-2026": {
     "category": "Medical Careers & NEET",
     "title": "Top Alternatives to MBBS: Best Career Paths if You Don't Clear NEET 2026",

@@ -166,8 +166,42 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/ap-eapcet-2026-counselling-revised-dates</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/tnea-counselling-round2-choice-filling-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- News & Updates -->
+  <url>
+    <loc>https://vidyabhyasam.com/news/west-bengal-neet-ug-counselling</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mbbs-admission-2026-through-neet</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/bams-cut-off-for-ayurveda-govern</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ss-2026-counselling-round-2</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://vidyabhyasam.com/news/govt-simplifies-neet-ug-2026-co</loc>
     <lastmod>2026-07-31</lastmod>
