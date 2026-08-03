@@ -71,25 +71,29 @@ import NewsFeedPage from './pages/NewsFeedPage';
 import KeamPredictor from './pages/KeamPredictor';
 import NeetCollegePredictor from './pages/NeetCollegePredictor';
 
+//gap
+import ScrollToTop from './components/ScrollToTop';
+import AnalyticsTracker from './components/AnalyticsTracker';
+
 // Array of all dynamic routes configured in collegePageData.js
 const dynamicCollegeRoutes = [
   // --- NURSING ---
   "TopNursingSouthIndia", "TopGovtNursingColleges", "TopPrivateNursingSouthIndia",
-  "NursingCollegesKerala", "NursingCollegesKarnataka", "NursingCollegesTamilNadu", 
+  "NursingCollegesKerala", "NursingCollegesKarnataka", "NursingCollegesTamilNadu",
   "NursingCollegesKochi", "NursingCollegesTrivandrum", "NursingCollegesCalicut",
   "NursingCollegesBangalore", "NursingCollegesMysore", "NursingCollegesMangalore",
   "NursingCollegesChennai", "NursingCollegesCoimbatore", "NursingCollegesSalem",
-  
+
   // --- MEDICAL ---
   "MedicalCollegesBangalore", "MedicalCollegesMysore", "MedicalCollegesMangalore",
   "MedicalCollegesKochi", "MedicalCollegesTrivandrum", "MedicalCollegesCalicut",
   "MedicalCollegesChennai", "MedicalCollegesCoimbatore", "MedicalCollegesSalem",
-  
+
   // --- ENGINEERING ---
   "EngineeringCollegesBangalore", "EngineeringCollegesMysore", "EngineeringCollegesMangalore",
   "EngineeringCollegesKochi", "EngineeringCollegesTrivandrum", "EngineeringCollegesCalicut",
   "EngineeringCollegesChennai", "EngineeringCollegesCoimbatore", "EngineeringCollegesSalem",
- 
+
   //--- MBA ---
   "TopIndianMBAColleges", "TopSouthIndianMBAColleges"
 ];
@@ -101,6 +105,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <AnalyticsTracker />
         <AuthProvider>
           <Navbar onCourseSelect={(course) => {
             setSelectedCourse(course);
@@ -115,11 +120,11 @@ export default function App() {
               <Route path="/" element={<Home selectedCourse={selectedCourse} courseSelectCount={courseSelectCount} />} />
               <Route path="/college/:id" element={<CollegeDetail />} />
               <Route path="/news/:slug" element={<NewsDetail />} />
-              
+
               {/* Top Colleges Routes (Static Legacy) */}
               <Route path="/articles/TopKeralaMedicalColleges" element={<TopKeralaMedicalColleges />} />
               <Route path="/articles/TopTamilNaduMedicalColleges" element={<TopTamilNaduMedicalColleges />} />
-              <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />            
+              <Route path="/articles/TopKarnatakaMedicalColleges" element={<TopKarnatakaMedicalColleges />} />
               <Route path="/articles/TopIndianMedicalColleges" element={<TopIndianMedicalColleges />} />
               <Route path="/articles/TopGovtMedicalColleges" element={<TopGovtMedicalColleges />} />
               <Route path="/articles/TopIndianEngineeringColleges" element={<TopIndianEngineeringColleges />} />
@@ -131,10 +136,10 @@ export default function App() {
 
               {/* --- NEW: Dynamic Universal Routes Mapped Here --- */}
               {dynamicCollegeRoutes.map(pathKey => (
-                <Route 
-                  key={pathKey} 
-                  path={`/articles/${pathKey}`} 
-                  element={<UniversalCollegesLayout pageKey={pathKey} />} 
+                <Route
+                  key={pathKey}
+                  path={`/articles/${pathKey}`}
+                  element={<UniversalCollegesLayout pageKey={pathKey} />}
                 />
               ))}
 
@@ -171,13 +176,13 @@ export default function App() {
               <Route path="/articles/TopEmergingEngineeringCourses" element={<TopEmergingEngineeringCourses />} />
 
               <Route path="/articles/CollegesNearAirports" element={<CollegesNearAirports />} />
-              <Route path='/articles/EducationLoanDetail' element={<EducationLoanDetails/>} />
+              <Route path='/articles/EducationLoanDetail' element={<EducationLoanDetails />} />
 
               {/* Blogs Routes */}
               <Route path="/blog/:slug" element={<BlogArticle />} />
               <Route path="/blog" element={<BlogList />} />
-              <Route path="/GeneralEnquiry" element={<GeneralEnquiry/>} />
-              <Route path="/WebinarRegistration" element={<WebinarRegistration/>} />
+              <Route path="/GeneralEnquiry" element={<GeneralEnquiry />} />
+              <Route path="/WebinarRegistration" element={<WebinarRegistration />} />
               <Route path="/news" element={<NewsFeedPage />} />
 
               //collegepredictor
@@ -185,7 +190,7 @@ export default function App() {
               <Route path="/neet-predictor" element={<NeetCollegePredictor />} />
             </Routes>
           </main>
-          
+
           <WhatsAppButton />
           <ChatBot />
           <ScrollToTop />
