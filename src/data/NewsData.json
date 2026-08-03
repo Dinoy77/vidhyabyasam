@@ -10,9 +10,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-03",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding MCC NEET UG Counselling 2026 Schedule Released; Check Complete Round-wise Dates. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "The Medical Counselling Committee (MCC) has officially released the schedule for NEET UG Counselling 2026. Candidates can now check the complete round-wise dates for MBBS and BDS admissions, including crucial deadlines for option registration, document uploading, and fee payment.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://mcc.nic.in/",
     "courses": [
       "MBBS",
       "BDS",
@@ -32,9 +32,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-03",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official seat allotment update regarding COMEDK 2026 Counselling Dates (Out): Round-wise Choice Filling, Allotment Schedule. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "COMEDK 2026 counselling dates are now available. The examination authority has published the comprehensive round-wise choice filling and seat allotment schedule for B.Tech and B.E candidates. Students must review the timeline to ensure timely participation.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://www.comedk.org/",
     "courses": [
       "B.Tech",
       "B.E"
@@ -47,14 +47,14 @@
     "color": "#7C3AED",
     "bg": "#F5F0FF",
     "tag": "Counselling",
-    "title": "Telangana NEET-UG 2026 qualified candidates list released; MBBS, BDS admission registration ",
+    "title": "Telangana NEET-UG 2026 qualified candidates list released; MBBS, BDS admission registration",
     "isNotification": false,
     "date": "Action Required Now",
     "publishedAt": "2026-08-03",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding Telangana NEET-UG 2026 qualified candidates list released; MBBS, BDS admission registration notification to follow. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "The official list of qualified candidates for Telangana NEET-UG 2026 has been published. Detailed notifications and guidelines regarding the registration process for MBBS and BDS admissions are expected to follow shortly.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://knruhs.telangana.gov.in/",
     "courses": [
       "MBBS",
       "BDS",
@@ -74,9 +74,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-03",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding NEET UG 2026 counselling begins August 4; academic session to start Sept 8 | Check schedule here | Hindustan Times. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "NEET UG 2026 counselling is scheduled to commence on August 4, with the new academic session officially starting on September 8. Candidates must review the complete timeline and adhere to the strict deadlines for all admission formalities.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://mcc.nic.in/",
     "courses": [
       "MBBS",
       "BDS",
@@ -96,14 +96,33 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-03",
     "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Results and performance tracking announcement for No answer keys, no results: UGC-NET candidates left in limbo. The evaluation board has activated the official scorecard lookup links for Ph.D. Eligibility, Junior Research Fellowship (JRF) aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
+    "description": "UGC-NET candidates are currently facing delays as neither the official answer keys nor the final results have been released. Aspirants for Ph.D. Eligibility and Junior Research Fellowship (JRF) are advised to continuously monitor official channels for upcoming announcements.",
     "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://ugcnet.nta.nic.in/",
     "courses": [
       "Ph.D. Eligibility",
       "Junior Research Fellowship (JRF)"
     ],
     "state": "All India"
+  },
+  {
+    "id": 2608030470,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "KEAM 2026 First Phase B.Pharm Allotment List Published",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-03",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The KEAM 2026 First Phase B.Pharm allotment list has been officially published. Candidates must note that fee payment and college joining are scheduled strictly between August 3 and August 5, 2026 (before 4:00 PM). Check your status on the official CEE Kerala portal.",
+    "eligibility": "Registered candidates participating in the KEAM B.Pharm counselling and seat allotment process.",
+    "applyLink": "https://cee.kerala.gov.in/",
+    "courses": [
+      "B.Pharm"
+    ],
+    "state": "Kerala"
   },
   {
     "id": 2608010457,
@@ -183,28 +202,6 @@
     "description": "The Medical Counselling Committee (MCC) is expected to soon release the revised schedule for Round 2 of the NEET SS 2025 counselling. This follows a recent Supreme Court directive that resolved a deadlock by ordering the restoration of 151 vacant Super Speciality seats, including DM and MCh programs, to the central pool. Candidates are advised to regularly check the official MCC portal for the updated dates regarding choice filling, choice locking, and seat allotment.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
     "applyLink": "https://mcc.nic.in/super-speciality-counselling/",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2608010448,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "NEET SS 2026 Counselling Round 2 Revised Schedule Soon: Check Latest Updates",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-01",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding NEET SS 2026 Counselling Round 2 Revised Schedule Soon: Check Latest Updates. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
     "courses": [
       "MBBS",
       "BDS",

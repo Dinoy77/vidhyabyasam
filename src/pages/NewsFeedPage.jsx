@@ -56,7 +56,7 @@ export default function NewsFeedPage() {
   }, [activeState, searchQuery]);
 
   // 3. Pagination Logic
-  const totalPages = Math.ceil(filteredNews.length / NEWS_PER_PAGE);
+  const totalPages = Math.ceil(filteredNews.length / NEWS_PER_PAGE) || 1;
   const paginatedNews = filteredNews.slice(
     (currentPage - 1) * NEWS_PER_PAGE,
     currentPage * NEWS_PER_PAGE
@@ -166,7 +166,7 @@ export default function NewsFeedPage() {
               ))}
             </div>
 
-            {/* --- PAGINATION --- */}
+            {/* --- COMPACT PAGINATION (Prev | Page 1 of 10 | Next) --- */}
             {totalPages > 1 && (
               <div style={styles.pagination}>
                 <button
@@ -180,25 +180,8 @@ export default function NewsFeedPage() {
                   ← Prev
                 </button>
 
-                <div style={styles.pageNumbers}>
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((item) => (
-                    <button
-                      key={item}
-                      style={{
-                        ...styles.pageNum,
-                        background: currentPage === item ? '#2563EB' : '#fff',
-                        color: currentPage === item ? '#fff' : '#0F172A',
-                        borderColor: currentPage === item ? '#2563EB' : '#E2E8F0',
-                        fontWeight: currentPage === item ? 700 : 500,
-                      }}
-                      onClick={() => {
-                        setCurrentPage(item);
-                        window.scrollTo({ top: 300, behavior: 'smooth' });
-                      }}
-                    >
-                      {item}
-                    </button>
-                  ))}
+                <div style={styles.pageIndicator}>
+                  Page {currentPage} of {totalPages}
                 </div>
 
                 <button
@@ -394,7 +377,6 @@ const getStyles = (isMobile) => ({
     backgroundColor: '#FFFFFF',
     borderRadius: '50%',
     display: 'inline-block',
-    animation: 'pulse 1.5s infinite',
   },
   standardBadge: {
     display: 'inline-block',
@@ -471,9 +453,8 @@ const getStyles = (isMobile) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: isMobile ? '8px' : '12px',
+    gap: isMobile ? '12px' : '20px',
     marginTop: isMobile ? '32px' : '48px',
-    flexWrap: 'wrap',
   },
   pageBtn: {
     padding: isMobile ? '8px 16px' : '10px 20px',
@@ -484,23 +465,17 @@ const getStyles = (isMobile) => ({
     border: '1px solid #E2E8F0',
     cursor: 'pointer',
     color: '#0F172A',
+    transition: 'all 0.2s ease',
   },
-  pageNumbers: {
-    display: 'flex',
-    gap: isMobile ? '4px' : '8px',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  pageNum: {
-    width: isMobile ? '36px' : '40px',
-    height: isMobile ? '36px' : '40px',
+  pageIndicator: {
+    fontSize: isMobile ? '14px' : '15px',
+    fontWeight: '600',
+    color: '#475569',
+    backgroundColor: '#FFFFFF',
+    padding: isMobile ? '8px 14px' : '10px 18px',
     borderRadius: '8px',
-    fontSize: '14px',
-    border: '1px solid',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    border: '1px solid #E2E8F0',
+    textAlign: 'center',
   },
   emptyState: {
     textAlign: 'center',

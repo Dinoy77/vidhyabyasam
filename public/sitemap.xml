@@ -112,6 +112,16 @@
 
   <!-- Blogs -->
   <url>
+    <loc>https://vidyabhyasam.com/blog/keam-bpharm-phase1-allotment-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/comedk-round1-allotment-reporting-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://vidyabhyasam.com/blog/keam-bpharm-2026-option-registration-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -178,6 +188,42 @@
   </url>
 
   <!-- News & Updates -->
+  <url>
+    <loc>https://vidyabhyasam.com/news/keam-2026-first-phase-b-pharm-al</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/no-answer-keys-no-results-ugc</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-2026-counselling-begins</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/telangana-neet-ug-2026-qualified</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/comedk-2026-counselling-dates-o</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mcc-neet-ug-counselling-2026-sch</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://vidyabhyasam.com/news/west-bengal-neet-ug-counselling</loc>
     <lastmod>2026-08-01</lastmod>
