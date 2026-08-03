@@ -72,7 +72,6 @@ import KeamPredictor from './pages/KeamPredictor';
 import NeetCollegePredictor from './pages/NeetCollegePredictor';
 
 //gap
-import ScrollToTop from './components/ScrollToTop';
 import AnalyticsTracker from './components/AnalyticsTracker';
 
 // Array of all dynamic routes configured in collegePageData.js
