@@ -133,23 +133,22 @@ const getStyles = (isMobile, isTablet) => ({
   },
   cards: { 
     display: 'grid', 
-    // Always enforce 3 columns, forcing them side-by-side
     gridTemplateColumns: 'repeat(3, 1fr)', 
-    gap: isMobile ? '8px' : '20px', // Tight gap for mobile
+    gap: isMobile ? '8px' : '20px', 
     width: '100%'
   },
   card: {
     background: '#fff', 
     borderRadius: '12px', 
-    border: isMobile ? '1px solid' : '1.5px solid',
-    // Shrink padding massively on mobile
+    // FIX: Replaced 'border' shorthand with specific properties
+    borderWidth: isMobile ? '1px' : '1.5px',
+    borderStyle: 'solid',
     padding: isMobile ? '12px 6px' : '20px 16px', 
     cursor: 'pointer', 
     transition: 'all 0.2s ease', 
     position: 'relative', 
     overflow: 'hidden',
     display: 'flex', 
-    // Stack items vertically on mobile to save width
     flexDirection: isMobile ? 'column' : 'row', 
     alignItems: 'center', 
     textAlign: isMobile ? 'center' : 'left',
@@ -186,7 +185,6 @@ const getStyles = (isMobile, isTablet) => ({
     lineHeight: 1.2
   },
   regionDesc: { 
-    // Completely hide description on mobile
     display: isMobile ? 'none' : 'block',
     fontSize: '11px', 
     color: 'var(--muted)',
@@ -200,7 +198,6 @@ const getStyles = (isMobile, isTablet) => ({
     justifyContent: isMobile ? 'center' : 'flex-start', marginTop: '2px' 
   },
   badge: { 
-    // Micro-badge for mobile
     padding: isMobile ? '3px 6px' : '2px 8px', 
     borderRadius: '10px', 
     fontSize: isMobile ? '10px' : '11px', 
@@ -208,7 +205,6 @@ const getStyles = (isMobile, isTablet) => ({
     whiteSpace: 'nowrap'
   },
   cities: { 
-    // Completely hide cities list on mobile
     display: isMobile ? 'none' : 'block',
     fontSize: '10px', color: 'var(--muted)', lineHeight: 1.4, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
   },

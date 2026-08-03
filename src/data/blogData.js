@@ -1,4 +1,85 @@
 export const blogArticles = {
+  "neet-ug-counselling-2026-schedule-changes": {
+    "category": "Medical Admissions - All India",
+    "title": "NEET UG 2026 Counselling Begins August 4: Key Schedule and Rule Changes",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 3, 2026",
+    "readTime": "5 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) has officially released the schedule for NEET UG 2026 counselling. The first round of counselling for All India Quota (AIQ) seats will commence on August 4, 2026."
+      },
+      {
+        "heading": "Round 1 Timeline",
+        "text": "Candidates can begin their registration for the first round starting August 5, with the window remaining open until 3 PM on August 12. After choice filling concludes on August 13, the seat allotment results will be declared on August 17. Allotted candidates must report to their respective colleges by August 22."
+      },
+      {
+        "heading": "Major Rule Changes for 2026",
+        "text": "In a significant move to streamline the process, the MCC has introduced an online resignation facility. Furthermore, candidates who have opted for a seat upgrade in subsequent rounds are no longer required to physically report to the allotted college solely for admission formalities. The new academic session is slated to begin on September 8."
+      }
+    ],
+    "cta": {
+      "title": "Need Help with NEET Choice Filling?",
+      "description": "Get expert guidance on college preferences and MCC portal navigation.",
+      "buttonText": "Consult an Expert",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "comedk-round1-allotment-reporting-2026": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "COMEDK 2026 Round 1 Allotment Out: Final Days for Decision Making",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 3, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Consortium of Medical, Engineering, and Dental Colleges of Karnataka announced the COMEDK UGET 2026 seat allotment results for Round 1 on July 28 [1.3.2]. Candidates are currently in the crucial decision-making phase."
+      },
+      {
+        "heading": "Deadlines Approaching",
+        "text": "Candidates have until August 3, 2026, to confirm their choices, complete fee payments, and report to their allotted colleges. This is also the final deadline for the seat cancellation facility for candidates who accepted a seat during Round 1."
+      },
+      {
+        "heading": "Preparing for Round 2",
+        "text": "Once the Round 1 reporting window closes, the authorities will prepare for Round 2. Candidates looking for upgrades should start analyzing the seat matrix vacancies to refine their choice filling preferences for the upcoming phases."
+      }
+    ],
+    "cta": {
+      "title": "Confused About Seat Upgrades?",
+      "description": "Understand the accept, upgrade, and surrender rules for COMEDK 2026.",
+      "buttonText": "View COMEDK Guidelines",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "keam-bpharm-phase1-allotment-2026": {
+    "category": "Pharmacy Admissions - Kerala",
+    "title": "KEAM 2026: First Phase B.Pharm Allotment Published",
+    "author": "Vidyabhyasam Pharmacy Desk",
+    "date": "August 3, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE) Kerala has officially published the First Phase Allotment list for the B.Pharm program on the KEAM 2026 admission portal [1.2.2]."
+      },
+      {
+        "heading": "Immediate Action Required",
+        "text": "Candidates who have been allocated a seat must complete their fee payment and report to their respective allotted colleges between August 3 and August 5, 2026 (before 4:00 PM). Failing to remit the fee or join the college within this stipulated time will result in the forfeiture of the allotment."
+      },
+      {
+        "heading": "Document Checklist",
+        "text": "Students are advised to log into the CEE Kerala portal, download their official allotment memo, and carry all essential original documents, including academic mark sheets and category certificates, for verification during college joining."
+      }
+    ],
+    "cta": {
+      "title": "Track Kerala Pharmacy Cut-offs",
+      "description": "Check closing ranks and anticipate your chances in the next KEAM phase.",
+      "buttonText": "Check Allotment Status",
+      "link": "/GeneralEnquiry"
+    }
+  },
   "tnea-counselling-round2-choice-filling-2026": {
     "category": "Engineering Admissions - Tamil Nadu",
     "title": "TNEA 2026: Round 1 Tentative Seat Allotment Released, Round 2 Approaching",
