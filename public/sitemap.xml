@@ -186,6 +186,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+    <url>
+    <loc>https://vidyabhyasam.com/blog/keam-2026-bpharm-first-allotment-published</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/blog/cuet-ug-2026-admission-counselling-updates</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- News & Updates -->
   <url>
@@ -744,6 +754,31 @@
   </url>
   <url>
     <loc>https://vidyabhyasam.com/news/csab-vacant-seats-2026-after-jos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/choice-filling-for-second-round</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/mcc-releases-neet-ug-counselling</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/neet-ug-counselling-to-begin-on</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/keam-2026-phase-3-provisional-al</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vidyabhyasam.com/news/comedk-2026-counselling-schedule</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
