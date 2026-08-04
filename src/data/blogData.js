@@ -1,4 +1,85 @@
 export const blogArticles = {
+  "keam-2026-bpharm-first-allotment-published": {
+    "category": "Pharmacy Admissions - Kerala",
+    "title": "KEAM 2026: First Phase Allotment List for B.Pharm Course Published",
+    "author": "Vidyabhyasam Pharmacy Desk",
+    "date": "August 4, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://i.ytimg.com/vi/5tPaP0D9iAg/sddefault.jpg",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has officially published the First Phase Allotment List for admission to the B.Pharm course for the academic year 2026. Candidates who registered for the pharmacy stream can now check their allotment status."
+      },
+      {
+        "heading": "How to Check the Allotment List",
+        "text": "Students do not need to log in to view the generalized list. The official first phase allotment PDF has been made publicly accessible by CEE Kerala. Candidates can directly download and inspect the document using the link below."
+      },
+      {
+        "heading": "Next Steps for Allotted Candidates",
+        "text": "Candidates who have been allotted a seat in this phase must remit the fee shown in their allotment memo to the CEE through online payment or at designated Head Post Offices in Kerala. Failing to pay the fee within the stipulated timeframe will result in the cancellation of the allotted seat and the candidate will lose their current allotment."
+      }
+    ],
+    "cta": {
+      "title": "View the Official Allotment List",
+      "description": "Click below to directly open and download the KEAM 2026 B.Pharm First Phase Allotment PDF.",
+      "buttonText": "Open PDF List",
+      "link": "https://www.cee.kerala.gov.in/keam2026/list/allot/p1_bpharm.pdf"
+    }
+  },
+  "kerala-engineering-admissions-cs-trends-2026": {
+    "category": "Engineering Admissions - Kerala",
+    "title": "KEAM 2026: Computer Science & AI Continue to Dominate Engineering Choices",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 3, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "As the KEAM 2026 engineering allotments roll out, early data indicates a continuing, massive preference for Computer Science and Engineering (CSE), alongside emerging specializations like Artificial Intelligence and Data Science."
+      },
+      {
+        "heading": "Top Tier Colleges See Unprecedented Cutoffs",
+        "text": "Government engineering colleges, notably CET Thiruvananthapuram and GEC Thrissur, have witnessed State Merit (SM) cutoffs for CSE drop well below the 1,000 rank mark. This intense competition is forcing high-ranking students to look toward top-tier self-financing institutions like Rajagiri (RET) and Muthoot (MUT) for tech-related branches."
+      },
+      {
+        "heading": "The Rise of Specialized Branches",
+        "text": "This year marks a significant shift as specialized branches—such as Cyber Security, AI & Machine Learning, and Computer Science & Business Systems—are filling up faster than traditional core branches like Mechanical and Civil Engineering, even in tier-2 self-financing colleges."
+      }
+    ],
+    "cta": {
+      "title": "Predict Your Engineering Admission",
+      "description": "Use our advanced predictor to see your chances in top CSE and AI programs.",
+      "buttonText": "Try College Predictor",
+      "link": "/keam-predictor"
+    }
+  },
+  "cuet-ug-2026-admission-counselling-updates": {
+    "category": "Undergraduate Admissions - Central",
+    "title": "CUET UG 2026: Central Universities Begin Phase 1 Counselling Portal Registrations",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 4, 2026",
+    "readTime": "5 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO_F6dR4s8yrOgIOKDRDe56-c7qPWqkirn7Gs80eHpNg&s=10",
+    "content": [
+      {
+        "text": "Following the declaration of the CUET UG 2026 scorecards, major central universities including Delhi University (DU), Banaras Hindu University (BHU), and Central University of Kerala (CUK) have opened their individual admission portals for Phase 1 registrations."
+      },
+      {
+        "heading": "Understanding the CSAS Portal",
+        "text": "Delhi University has launched its Common Seat Allocation System (CSAS) for 2026. Candidates are required to map their CUET normalized scores to the specific program requirements. The choice-filling window is expected to be highly competitive, with over 1.2 million unique candidates vying for approximately 70,000 seats."
+      },
+      {
+        "heading": "Important Deadlines to Watch",
+        "text": "Students must complete their initial profile creation and document verification by August 14. Phase 2, which involves preference filling for courses and colleges, will activate immediately after the Phase 1 deadline. Document mismatches remain the highest cause for application rejection, so students are advised to use Digilocker verified documents where possible."
+      }
+    ],
+    "cta": {
+      "title": "Confused About CUET Preferences?",
+      "description": "Our experts can help you map your scores to the right university programs.",
+      "buttonText": "Book a Strategy Session",
+      "link": "/GeneralEnquiry"
+    }
+  },
   "neet-ug-counselling-2026-schedule-changes": {
     "category": "Medical Admissions - All India",
     "title": "NEET UG 2026 Counselling Begins August 4: Key Schedule and Rule Changes",

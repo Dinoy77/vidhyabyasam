@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import Hero from '../components/Hero';
+import TickerTape from '../components/TickerTape';
 import LatestNewsGrid from '../components/LatestNewsGrid'; 
 import RegionSection from '../components/RegionSection';
 import CollegeCard from '../components/CollegeCard';
@@ -190,6 +191,7 @@ export default function Home({ selectedCourse, courseSelectCount }) {
 
   return (
     <div style={{ background: '#F8FAFC' }}>
+      <TickerTape />
       <Hero onSearch={setSearchQuery} />
 
       {/* --- LATEST NEWS GRID SECTION --- */}
