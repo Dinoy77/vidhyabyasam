@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { seoConfigurations } from '../data/seoData';
-import { keamCutoffs, keamCategories, keamBranches } from '../data/keamCutoffs';
+import { keamCategories } from '../data/keamCutoffs'; // category labels only — small static list, not from DB
 import KeamEnquiryModal from '../components/KeamEnquiryModal';
 import CustomSelect from '../components/CustomSelect';
 
@@ -23,12 +23,14 @@ const seo = seoConfigurations.keamPredictor;
 // 1. Freely allows searching by college name/code without needing a rank.
 // 2. If searching by college name, shows ALL matching branches even if chance is 'Unlikely'.
 // 3. If predicting solely by rank (no college name filter), hides 'Unlikely' to keep results clean.
-function predictColleges(userRank, categoryCode, branch, searchTerm) {
+// `dataset` is now passed in (the cutoffs fetched from the database) instead
+// of being imported as a static file.
+function predictColleges(dataset, userRank, categoryCode, branch, searchTerm) {
   const hasValidRank = userRank && !isNaN(userRank) && userRank > 0;
   const hasSearchTerm = searchTerm && searchTerm.trim().length > 0;
   const query = searchTerm ? searchTerm.trim().toLowerCase() : '';
 
-  return keamCutoffs
+  return dataset
     .filter(c => (branch === 'All Branches' ? true : c.branch === branch))
     .filter(c => c.cutoffs[categoryCode] !== null && c.cutoffs[categoryCode] !== undefined)
     .filter(c => {
@@ -69,6 +71,33 @@ export default function KeamPredictor() {
   const isMobile = useResponsive();
   const styles = getStyles(isMobile);
 
+  // --- Data fetched from the database (via PHP) instead of a static import ---
+  const [allCutoffs, setAllCutoffs] = useState([]);
+  const [dataLoading, setDataLoading] = useState(true);
+  const [dataError, setDataError] = useState('');
+
+  useEffect(() => {
+    fetch('/get-keam-cutoffs.php')
+      .then(res => {
+        if (!res.ok) throw new Error('Server returned an error');
+        return res.json();
+      })
+      .then(data => {
+        setAllCutoffs(data);
+        setDataLoading(false);
+      })
+      .catch(() => {
+        setDataError('Could not load college data right now. Please refresh the page or try again shortly.');
+        setDataLoading(false);
+      });
+  }, []); // runs once when the page first loads
+
+  // Branch list is now derived from the fetched data instead of a static export
+  const keamBranches = useMemo(
+    () => [...new Set(allCutoffs.map(c => c.branch))].sort(),
+    [allCutoffs]
+  );
+
   const [rank, setRank] = useState('');
   const [category, setCategory] = useState('SM');
   const [branch, setBranch] = useState('All Branches');
@@ -81,8 +110,8 @@ export default function KeamPredictor() {
 
   const results = useMemo(() => {
     if (!showResults) return [];
-    return predictColleges(Number(rank), category, branch, collegeSearch);
-  }, [showResults, rank, category, branch, collegeSearch]);
+    return predictColleges(allCutoffs, Number(rank), category, branch, collegeSearch);
+  }, [showResults, allCutoffs, rank, category, branch, collegeSearch]);
 
   // Handle Free College Name Search (Top Bar)
   const handleCollegeSearch = (e) => {
@@ -137,7 +166,7 @@ export default function KeamPredictor() {
       <div style={styles.hero}>
         <div style={styles.headerRow}>
           <h1 style={styles.heroTitle}>KEAM College Predictor</h1>
-          
+
           {/* Top Bar: Free College Search without Rank */}
           <form onSubmit={handleCollegeSearch} style={styles.headerSearchForm}>
             <div style={styles.searchContainer}>
@@ -148,6 +177,7 @@ export default function KeamPredictor() {
                 onChange={e => setCollegeSearch(e.target.value)}
                 style={styles.headerSearchInput}
                 aria-label="Search college names"
+                disabled={dataLoading}
               />
               {collegeSearch && (
                 <button
@@ -160,7 +190,7 @@ export default function KeamPredictor() {
                 </button>
               )}
             </div>
-            <button type="submit" style={styles.headerSearchBtn}>
+            <button type="submit" style={styles.headerSearchBtn} disabled={dataLoading}>
               Search
             </button>
           </form>
@@ -170,6 +200,14 @@ export default function KeamPredictor() {
           by name above to instantly inspect its official Previous Allotment cutoffs.
         </p>
       </div>
+
+      {/* Loading / error states for the database fetch */}
+      {dataLoading && (
+        <div style={styles.loadingBanner}>Loading the latest college data…</div>
+      )}
+      {dataError && (
+        <div style={styles.errorBanner}>{dataError}</div>
+      )}
 
       <div style={styles.formCard}>
         <form onSubmit={handleRankSubmit} style={styles.form}>
@@ -204,7 +242,9 @@ export default function KeamPredictor() {
           </div>
 
           <div style={styles.buttonWrapper}>
-            <button type="submit" style={styles.submitBtn}>Predict My Colleges</button>
+            <button type="submit" style={styles.submitBtn} disabled={dataLoading}>
+              {dataLoading ? 'Loading data…' : 'Predict My Colleges'}
+            </button>
           </div>
         </form>
         {error && <p style={styles.error}>{error}</p>}
@@ -271,18 +311,21 @@ export default function KeamPredictor() {
 
 const getStyles = (isMobile) => ({
   page: { background: '#F8FAFC', minHeight: '80vh', padding: isMobile ? '24px 16px 60px' : '40px 48px 80px', maxWidth: '1100px', margin: '0 auto' },
-  
+
   hero: { marginBottom: '32px' },
   headerRow: { display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'center', gap: isMobile ? '14px' : '20px', marginBottom: '12px' },
   heroTitle: { fontFamily: 'Playfair Display, serif', fontSize: isMobile ? '28px' : '38px', color: '#0F172A', margin: 0 },
-  
+
   headerSearchForm: { display: 'flex', gap: '8px', width: isMobile ? '100%' : 'auto', alignItems: 'center' },
   searchContainer: { position: 'relative', display: 'flex', alignItems: 'center', width: isMobile ? '100%' : '240px' },
   headerSearchInput: { padding: '9px 32px 9px 16px', borderRadius: '20px', border: '1.5px solid var(--border)', fontSize: '13px', fontFamily: 'DM Sans, sans-serif', background: '#fff', width: '100%', outline: 'none', transition: 'all 0.2s ease', boxShadow: '0 2px 6px rgba(0,0,0,0.03)', boxSizing: 'border-box' },
   clearBtn: { position: 'absolute', right: '10px', background: 'none', border: 'none', fontSize: '18px', color: 'var(--muted)', cursor: 'pointer', padding: '0 4px', display: 'flex', alignItems: 'center', lineHeight: 1 },
   headerSearchBtn: { padding: '9px 18px', borderRadius: '20px', border: 'none', background: '#0F172A', color: '#fff', fontWeight: 600, fontSize: '13px', cursor: 'pointer', whiteSpace: 'nowrap', transition: 'all 0.2s ease' },
-  
+
   heroSub: { color: 'var(--muted)', fontSize: '15px', maxWidth: '650px', margin: 0, lineHeight: 1.6 },
+
+  loadingBanner: { background: '#EFF6FF', border: '1px solid #BFDBFE', color: '#1D4ED8', fontSize: '13px', padding: '10px 16px', borderRadius: '10px', marginBottom: '20px' },
+  errorBanner: { background: '#FEF2F2', border: '1px solid #FECACA', color: '#DC2626', fontSize: '13px', padding: '10px 16px', borderRadius: '10px', marginBottom: '20px' },
 
   formCard: { background: '#fff', borderRadius: '16px', border: '1px solid var(--border)', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', padding: isMobile ? '20px' : '28px', marginBottom: '40px', boxSizing: 'border-box' },
   form: { display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '16px', alignItems: 'flex-end' },
