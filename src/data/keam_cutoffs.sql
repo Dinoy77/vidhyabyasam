@@ -6145,4 +6145,7 @@ VALUES
 ('wes-thrissur', NULL, 'Westfort College of Pharmacy, Thrissur', 'Self-Financing', 'B.Pharm', 2025, 'Second Phase Allotment', 'EZ', 31253),
 ('wes-thrissur', NULL, 'Westfort College of Pharmacy, Thrissur', 'Self-Financing', 'B.Pharm', 2025, 'Second Phase Allotment', 'MU', 23931),
 ('wes-thrissur', NULL, 'Westfort College of Pharmacy, Thrissur', 'Self-Financing', 'B.Pharm', 2025, 'Second Phase Allotment', 'SC', 26961),
-('wes-thrissur', NULL, 'Westfort College of Pharmacy, Thrissur', 'Self-Financing', 'B.Pharm', 2025, 'Second Phase Allotment', 'EW', 27189);
+('wes-thrissur', NULL, 'Westfort College of Pharmacy, Thrissur', 'Self-Financing', 'B.Pharm', 2025, 'Second Phase Allotment', 'EW', 27189),
+('kab-kerala-academy-of-pharmacy', NULL, 'Kerala Academy of Pharmacy', 'Self-Financing', 'B.Pharm', 2025, 'Special Allotment List', 'SM', 25650),
+('kab-kerala-academy-of-pharmacy', NULL, 'Kerala Academy of Pharmacy', 'Self-Financing', 'B.Pharm', 2025, 'Special Allotment List', 'MU', 25653),
+('kab-kerala-academy-of-pharmacy', NULL, 'Kerala Academy of Pharmacy', 'Self-Financing', 'B.Pharm', 2025, 'Special Allotment List', 'SC', 29071);
