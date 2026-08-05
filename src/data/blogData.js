@@ -1,4 +1,85 @@
 export const blogArticles = {
+  "csab-special-counselling-2026-choice-filling-opens": {
+    "category": "Engineering Admissions - National",
+    "title": "CSAB Special Counselling 2026: Choice Filling Window Opens Today for NITs, IIITs",
+    "author": "Engineering Admissions Desk",
+    "date": "August 5, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Central Seat Allocation Board (CSAB) has officially activated the choice filling and locking facility for the CSAB Special Counselling 2026 [1.1.2]. This special round is crucial for candidates aiming to secure vacant seats in NITs, IIITs, and other GFTIs after the conclusion of the regular JoSAA rounds."
+      },
+      {
+        "heading": "Choice Filling and Locking Deadlines",
+        "text": "Registered candidates must log in to the official CSAB portal starting today, August 5, to arrange their college and branch preferences. The window for submitting choices is strictly time-bound, and candidates are advised to lock their final preferences before the deadline to ensure they are considered for the allocation."
+      },
+      {
+        "heading": "Seat Allotment and Next Steps",
+        "text": "Following the conclusion of the choice filling process, the CSAB Special Round 1 seat allotment result is scheduled to be released on August 6, 2026. Candidates who are allocated a seat must exercise their willingness options and complete the necessary formalities between August 6 and August 10, 2026."
+      }
+    ],
+    "cta": {
+      "title": "Start Choice Filling",
+      "description": "Access the official CSAB portal to submit and lock your college preferences for the special round.",
+      "buttonText": "Visit CSAB Portal",
+      "link": "https://csab.nic.in"
+    }
+  },
+  "ugc-net-june-2026-provisional-answer-key-updates": {
+    "category": "Higher Education Exams - National",
+    "title": "UGC NET June 2026: NTA Set to Release Provisional Answer Key Shortly",
+    "author": "Academic Careers Desk",
+    "date": "August 5, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Candidates awaiting the results for the UGC NET June 2026 cycle can expect movement soon. The National Testing Agency (NTA) is preparing to release the provisional answer key, alongside candidate response sheets and question papers [1.3.1]."
+      },
+      {
+        "heading": "How to Calculate Your Score",
+        "text": "Once the 'UGC NET June 2026 Provisional Answer Key' link is live on the official website, candidates can log in using their Application Number and Date of Birth to access their response sheets. By comparing their recorded responses against the provisional key, applicants can accurately calculate their probable scores before the final results are declared."
+      },
+      {
+        "heading": "Challenge Window",
+        "text": "Following standard NTA procedure, a brief objection window will open alongside the release of the key. Candidates who spot discrepancies in the provisional answers can challenge them by paying a non-refundable processing fee per question."
+      }
+    ],
+    "cta": {
+      "title": "Check the NTA Portal",
+      "description": "Keep an eye on the official UGC NET website for the immediate activation of the answer key link.",
+      "buttonText": "Visit ugcnet.nta.nic.in",
+      "link": "https://ugcnet.nta.nic.in"
+    }
+  },
+  "cuet-ug-2026-delhi-university-csas-counselling": {
+    "category": "University Admissions - Central",
+    "title": "CUET UG 2026: Top Central Universities Accelerate Counselling Processes",
+    "author": "University Admissions Desk",
+    "date": "August 5, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "With the CUET UG 2026 results now public, the admission landscape has shifted entirely to the individual participating universities. Institutions are actively rolling out their respective counselling schedules to fill undergraduate seats."
+      },
+      {
+        "heading": "Navigating the DU CSAS Portal",
+        "text": "For the University of Delhi, admissions are strictly processed through the three-stage Common Seat Allocation System (CSAS). Following initial registrations, candidates must now focus on accurately filling out their college and course combinations. Cutoffs for top programs like B.Com Hons. and B.A. Eco Hons. are expected to remain fiercely competitive, often requiring scores well above 750 for top-tier colleges."
+      },
+      {
+        "heading": "Updates from BHU and JNU",
+        "text": "Other major central institutions are matching pace. Banaras Hindu University (BHU) and Jawaharlal Nehru University (JNU) are processing candidate applications based purely on the normalized CUET scores provided by the NTA to generate merit lists for their respective programs."
+      }
+    ],
+    "cta": {
+      "title": "Explore CUET Counselling Guide",
+      "description": "Review the specific registration dates, seat matrices, and portal links for India's top central universities.",
+      "buttonText": "For Counselling Details",
+      "link": "/GeneralEnquiry"
+    }
+  },
   "keam-2026-bpharm-first-allotment-published": {
     "category": "Pharmacy Admissions - Kerala",
     "title": "KEAM 2026: First Phase Allotment List for B.Pharm Course Published",
