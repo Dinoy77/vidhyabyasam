@@ -20925,6 +20925,33 @@ export const rawKeamCutoffs = [
         "cutoffs": { "SM": 22186, "EZ": 31253, "MU": 23931, "LA": null, "DV": null, "VK": null, "BH": null, "BX": null, "KN": null, "KU": null, "SC": 26961, "ST": null, "EW": 27189 }
       }
     ]
+  },
+  {
+    "collegeId": "kab-kerala-academy-of-pharmacy",
+    "collegeName": "Kerala Academy of Pharmacy",
+    "collegeType": "Self-Financing",
+    "year": 2025,
+    "round": "Special Allotment List",
+    "courses": [
+      {
+        "courseName": "B.Pharm",
+        "cutoffs": { 
+          "SM": 25650, 
+          "EZ": null, 
+          "MU": 25653, 
+          "LA": null, 
+          "DV": null, 
+          "VK": null, 
+          "BH": null, 
+          "BX": null, 
+          "KN": null, 
+          "KU": null, 
+          "SC": 29071, 
+          "ST": null, 
+          "EW": null 
+        }
+      }
+    ]
   }
 ]
 
