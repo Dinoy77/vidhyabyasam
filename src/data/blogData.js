@@ -1,4 +1,93 @@
 export const blogArticles = {
+  "keam-2026-phase-3-engineering-phase-2-architecture-allotments": {
+    "category": "Engineering & Architecture Admissions - Kerala",
+    "title": "KEAM 2026: Phase 3 Engineering & Phase 2 Architecture Allotments Released",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 6, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtzxftvig4Axv1sELUO_RpSFVPZ9tNv7DSIPSnkKRp331we87MK5_LuvA&s=10",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has officially released the Third Phase Centralized Allotment for Engineering courses and the Second Phase Centralized Allotment for Architecture courses for the 2026 academic year. Candidates can now log in to the portal to verify their seat status."
+      },
+      {
+        "heading": "Critical Deadlines You Cannot Miss",
+        "text": "Candidates allotted seats in Architecture (Phase 2) must complete online fee payment by August 8, 2026 (3:00 PM) and report to college before 4:00 PM on the same day. For Engineering (Phase 3), the deadline for online fee payment is August 10, 2026 (3:00 PM), with physical college reporting required before 4:00 PM on August 10. Failure to meet these exact deadlines will result in immediate seat cancellation."
+      },
+      {
+        "heading": "Action Plan: Next Steps for Allotted Candidates",
+        "text": "Allotted candidates must download and print their Allotment Memo and Data Sheet from the homepage menu. Pay any required CEE fees strictly via the online payment portal before reporting physically to the designated college with all mandatory academic and identity documents."
+      },
+      {
+        "heading": "Crucial Update: Spot Allotments for Engineering",
+        "text": "This Phase 3 allotment serves as the final centralized allotment conducted by CEE for Engineering this year. Remaining vacant seats in Government Colleges will be filled by the Director of Technical Education (DTE) through Spot Allotments, while private self-financing institutions will fill vacancies individually per government guidelines."
+      }
+    ],
+    "cta": {
+      "title": "Check Your Allotment Status",
+      "description": "Log in to the official CEE Kerala candidate portal to download your Allotment Memo and complete fee payment.",
+      "buttonText": "Visit CEE Portal",
+      "link": "https://www.cee.kerala.gov.in"
+    }
+  },
+  "next-gen-neet-two-stage-digital-evaluation-matrix": {
+    "category": "Medical Entrance Exams - National",
+    "title": "Next-Gen NEET: Analyzing the Blueprint for a Two-Stage, Digital Evaluation Matrix",
+    "author": "National Exams Desk",
+    "date": "August 6, 2026",
+    "readTime": "5 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "In a landmark affidavit submitted to the Supreme Court, the Central Government has revealed that India's NEET-UG medical entrance examination is under evaluation for a major transition into a JEE-style two-stage exam (Screening + Merit) and a shift toward Computer-Based Testing (CBT)."
+      },
+      {
+        "heading": "A New Era of Fair Play: What's Changing?",
+        "text": "The proposed reform aims to shift from the traditional pen-and-paper OMR format to a multi-session digital testing architecture. A high-powered task force—comprising leaders from academia, technology, and administration—is actively designing an equity-first roadmap to ensure secure, tamper-proof examinations across the country."
+      },
+      {
+        "heading": "Why This Benefits Aspirants",
+        "text": "Transitioning to a two-stage evaluation mitigates single-day exam pressure and reduces vulnerability to paper leaks. Furthermore, a computer-based format eliminates common OMR bubble shading errors and provides a more streamlined testing environment for candidates."
+      },
+      {
+        "heading": "Focus on Equity for Rural Students and Women",
+        "text": "Acknowledging that a significant portion of NEET-UG candidates come from rural areas and female demographics, the Centre emphasized that any structural shifts will undergo thorough stress-testing. Ample advance notice will be provided to all candidates before any changes take effect."
+      }
+    ],
+    "cta": {
+      "title": "Predict Your NEET Rank & College",
+      "description": "Use our advanced predictor tools to analyze expected rank cutoffs across national and state medical colleges.",
+      "buttonText": "Try NEET Predictor",
+      "link": "/neet-predictor"
+    }
+  },
+  "gate-2027-registration-guide": {
+    "category": "Engineering Exams - National",
+    "title": "GATE 2027: IIT Madras Releases Information Brochure, Registration Starts August 14",
+    "author": "Engineering Exams Desk",
+    "date": "August 6, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The wait is over for postgraduate engineering aspirants, as IIT Madras has officially released the Information Brochure for GATE 2027. The much-anticipated online registration process is set to commence shortly on August 14, 2026."
+      },
+      {
+        "heading": "Important Dates and Application Process",
+        "text": "Eligible candidates can submit their applications online through the GOAPS portal starting August 14, with the deadline to register without a late fee set for September 21, 2026. The GATE 2027 examination will be conducted across six days in February 2027 and will feature 30 test papers, including the newly introduced Robotics & Automation (RA) paper."
+      },
+      {
+        "heading": "Eligibility and Required Documents",
+        "text": "Students currently in their third year or higher of a four-year undergraduate degree, as well as those who have already completed their qualifying degree, are eligible to apply. Applicants are advised to prepare scanned copies of their passport-size photograph, signature, valid photo ID, and relevant category certificates before the registration window opens."
+      }
+    ],
+    "cta": {
+      "title": "View GATE 2027 Brochure",
+      "description": "Read the official information brochure and prepare for your registration on the GOAPS portal.",
+      "buttonText": "Visit Official Portal",
+      "link": "https://gate2027.iitm.ac.in"
+    }
+  },
   "csab-special-counselling-2026-choice-filling-opens": {
     "category": "Engineering Admissions - National",
     "title": "CSAB Special Counselling 2026: Choice Filling Window Opens Today for NITs, IIITs",
