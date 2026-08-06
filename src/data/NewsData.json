@@ -1,5 +1,90 @@
 [
   {
+    "id": 2608060448,
+    "icon": "📝",
+    "color": "#D97706",
+    "bg": "#FEF3C7",
+    "tag": "Answer Key Out",
+    "title": "UGC NET June 2026 Answer Key: Over A Month On, No Update From Exam Body NTA",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-06",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Answer key and response sheet notification concerning UGC NET June 2026: Over a month after the exam concluded, the NTA is yet to release the provisional answer keys, leaving candidates anxious about score estimation and PhD admission timelines. Once released, candidates will be able to review their responses and submit formal objections by paying a non-refundable processing fee of Rs 200 per challenged question.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
+    "applyLink": "https://ugcnet.nta.ac.in/",
+    "courses": [
+      "Ph.D. Eligibility",
+      "Junior Research Fellowship (JRF)",
+      "Assistant Professor"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608060447,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "MCC NEET 2026 Counselling Round 1 Seat Matrix OUT Today: College-wise MBBS And BDS Seats",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-06",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official update regarding MCC NEET 2026 Counselling Round 1 Seat Matrix. The Medical Counselling Committee (MCC) is set to release the round 1 seat matrix today, August 6, on mcc.nic.in. The official document will list the total number of vacancies available for MBBS and BDS courses across AIIMS, JIPMER, central universities, and deemed universities, allowing candidates to proceed with their round 1 choice filling.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608060442,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET-UG 2026: Over 1.39 Lakh MBBS Seats Up For Grabs Counselling Begins",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-06",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official institutional release regarding NEET-UG 2026 Counselling. The Medical Counselling Committee (MCC) has initiated the All India Quota (15%) counselling, with state quota (85%) set to begin on August 13. Approximately 11.21 lakh qualifying candidates will compete for over 1.39 lakh MBBS seats and 28,000 BDS seats globally. Candidates must complete their registration, document verification, and choice locking within the stipulated deadlines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608060439,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "TNEA Round 2 Vacancy List 2026: College-Wise Vacant Seats",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-06",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official update regarding TNEA Round 2 Vacancy List 2026. The Directorate of Technical Education (DoTE) has published the college-wise and branch-wise vacant seats matrix after the completion of Round 1. Candidates can visit the official portal at tneaonline.org to download the vacancy list PDF without logging in, helping them make informed choices for available seats in Government, Government-Aided, and Self-Financed Engineering Colleges.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "https://www.tneaonline.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
     "id": 2608050446,
     "icon": "🖥️",
     "color": "#7C3AED",
