@@ -22,7 +22,7 @@ function useResponsive() {
   return width < 768;
 }
 
-// SEO configuration sourced from your shared config
+// SEO configuration
 const seo = seoConfigurations?.neetPredictor || {
   title: 'NEET UG College Predictor 2026 | Medical & Dental Cutoffs — Vidyabhyasam',
   description: 'Predict your admission chances in AIIMS, JIPMER, State Govt, and Deemed Medical & Dental colleges based on your NEET All India Rank (AIR).',
@@ -39,35 +39,50 @@ const seo = seoConfigurations?.neetPredictor || {
 };
 
 /**
- * Core NEET prediction logic with dynamic eligibility margin & chance indicators.
+ * Core NEET prediction logic supporting both Predictor Mode and Direct Search Mode
  */
-function predictNeetColleges(userRank, categoryCode, branch, deemedOption) {
+function predictNeetColleges(userRank, categoryCode, branch, deemedOption, activeSearch) {
   return neetCutoffs
     .filter(c => {
-      // 1. Deemed / Non-Deemed Institution Filter
+      // 1. Ensure the category cutoff exists for the college
+      const closingRank = c.cutoffs[categoryCode];
+      if (closingRank === null || closingRank === undefined) return false;
+
+      // 2. Institution Type Filter
       if (deemedOption === 'DEEMED' && !c.isDeemed) return false;
       if (deemedOption === 'NON_DEEMED' && c.isDeemed) return false;
 
-      // 2. Branch / Course Filter
+      // 3. Branch / Course Filter
       if (branch !== 'All Courses' && branch !== 'ALL' && c.branch !== branch) return false;
 
-      // 3. Category cutoff exists check
-      const closingRank = c.cutoffs[categoryCode];
-      return closingRank !== null && closingRank !== undefined;
+      // 4. College Name Text Search Filter
+      if (activeSearch && !c.collegeName.toLowerCase().includes(activeSearch.toLowerCase())) {
+        return false;
+      }
+
+      return true;
     })
     .map(c => {
       const closingRank = c.cutoffs[categoryCode];
-      const margin = closingRank - userRank;
       let chance, color;
+
+      // Calculate chances if rank is provided (works in both Search and Predictor mode)
+      if (userRank > 0) {
+        const margin = closingRank - userRank;
+        if (margin > 3000) { chance = 'High Chance'; color = '#059669'; }
+        else if (margin >= 0) { chance = 'Moderate Chance'; color = '#D97706'; }
+        else if (margin >= -1500) { chance = 'Slight Chance'; color = '#DC2626'; }
+        else { chance = 'Unlikely'; color = '#94A3B8'; }
+      } else {
+        // No rank entered yet, default blue badge for search records
+        chance = 'College Record';
+        color = '#3B82F6';
+      }
       
-      if (margin > 3000) { chance = 'High Chance'; color = '#059669'; }
-      else if (margin >= 0) { chance = 'Moderate Chance'; color = '#D97706'; }
-      else if (margin >= -1500) { chance = 'Slight Chance'; color = '#DC2626'; }
-      else { chance = 'Unlikely'; color = '#94A3B8'; }
-      
-      return { ...c, closingRank, margin, chance, color };
+      return { ...c, closingRank, chance, color };
     })
-    .filter(c => c.chance !== 'Unlikely')
+    // In search mode, show the college even if "Unlikely". In predictor mode, hide "Unlikely".
+    .filter(c => activeSearch ? true : c.chance !== 'Unlikely')
     .sort((a, b) => a.closingRank - b.closingRank);
 }
 
@@ -75,6 +90,7 @@ export default function NeetPredictor() {
   const isMobile = useResponsive();
   const styles = getStyles(isMobile);
 
+  // Predictor States
   const [rank, setRank] = useState('');
   const [category, setCategory] = useState('UR');
   const [branch, setBranch] = useState('All Courses');
@@ -82,13 +98,41 @@ export default function NeetPredictor() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
 
+  // Text Search States
+  const [searchInput, setSearchInput] = useState('');
+  const [activeSearch, setActiveSearch] = useState('');
+
   // Per-college enquiry modal state
   const [enquiryCollege, setEnquiryCollege] = useState(null);
 
   const results = useMemo(() => {
-    if (!submitted || !rank) return [];
-    return predictNeetColleges(Number(rank), category, branch, deemedOption);
-  }, [submitted, rank, category, branch, deemedOption]);
+    const rankNum = Number(rank) || 0;
+
+    // If searching, evaluate with rank if provided, but filter specifically by the search term
+    if (activeSearch) {
+      return predictNeetColleges(rankNum, category, branch, deemedOption, activeSearch);
+    }
+    
+    // If not submitted or no rank, show nothing
+    if (!submitted || !rankNum) return [];
+    
+    // Global Predictor Mode
+    return predictNeetColleges(rankNum, category, branch, deemedOption, '');
+  }, [submitted, rank, category, branch, deemedOption, activeSearch]);
+
+  const handleRankChange = (e) => {
+    setRank(e.target.value);
+    // Note: We deliberately DO NOT clear the search here. 
+    // This allows the user to see the chance for the searched college dynamically.
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (!searchInput.trim()) return;
+    setActiveSearch(searchInput.trim());
+    setSubmitted(false); // Switch to search view mode
+    setError('');
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,8 +143,14 @@ export default function NeetPredictor() {
       return;
     }
     setError('');
+    
+    // Clear the search fields to show global results based entirely on rank
+    setActiveSearch(''); 
+    setSearchInput('');
     setSubmitted(true);
   };
+
+  const showResults = submitted || activeSearch;
 
   return (
     <div style={styles.page}>
@@ -111,26 +161,35 @@ export default function NeetPredictor() {
         <meta name="keywords" content={seo.keywords} />
         <link rel="canonical" href={`https://vidyabhyasam.com${seo.url}`} />
 
-        {/* Open Graph / Social Previews */}
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
         <meta property="og:url" content={`https://vidyabhyasam.com${seo.url}`} />
         <meta property="og:type" content="website" />
 
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={seo.title} />
         <meta name="twitter:description" content={seo.description} />
 
-        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(seo.schemaData)}
         </script>
       </Helmet>
 
-      {/* Hero Banner */}
+      {/* Hero Banner with Parallel Heading and Search Bar */}
       <div style={styles.hero}>
-        <h1 style={styles.heroTitle}>NEET UG College Predictor</h1>
+        <div style={styles.heroHeaderRow}>
+          <h1 style={styles.heroTitle}>NEET UG College Predictor</h1>
+          <form onSubmit={handleSearchSubmit} style={styles.searchForm}>
+            <input
+              type="text"
+              placeholder="Search college by name..."
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+              style={styles.searchInput}
+            />
+            <button type="submit" style={styles.searchBtn}>Search</button>
+          </form>
+        </div>
         <p style={styles.heroSub}>
           Enter your All India Rank (AIR) to discover eligible Medical & Dental colleges 
           across AIQ, State Quotas, Central Institutes, and Deemed Universities.
@@ -147,7 +206,7 @@ export default function NeetPredictor() {
               min="1"
               placeholder="e.g. 12500"
               value={rank}
-              onChange={e => setRank(e.target.value)}
+              onChange={handleRankChange}
               style={styles.input}
             />
           </div>
@@ -185,17 +244,17 @@ export default function NeetPredictor() {
       </div>
 
       {/* Results Display */}
-      {submitted && (
+      {showResults && (
         <div style={styles.resultsSection}>
           <h2 style={styles.resultsTitle}>
             {results.length > 0
-              ? `${results.length} colleges match your rank`
-              : 'No matching colleges found'}
+              ? `${results.length} ${activeSearch ? 'records' : 'colleges'} match your criteria`
+              : 'No matching records found'}
           </h2>
           {results.length === 0 && (
             <p style={styles.noResults}>
-              No eligible colleges match your rank under the selected criteria. Try switching 
-              categories, changing institution types, or selecting "All Courses" to widen your search.
+              No eligible colleges match your {activeSearch ? 'search query' : 'rank'}. Try switching 
+              categories, clearing your search, or selecting "All Courses" to widen your search.
             </p>
           )}
 
@@ -261,7 +320,7 @@ export default function NeetPredictor() {
   );
 }
 
-// Standardized Styles matching the KEAM Predictor theme
+// Standardized Styles
 const getStyles = (isMobile) => ({
   page: { 
     background: '#F8FAFC', 
@@ -271,21 +330,57 @@ const getStyles = (isMobile) => ({
     margin: '0 auto' 
   },
   hero: { 
-    textAlign: 'center', 
     marginBottom: '32px' 
+  },
+  heroHeaderRow: {
+    display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'space-between',
+    alignItems: isMobile ? 'flex-start' : 'center',
+    gap: '16px',
+    marginBottom: '12px'
   },
   heroTitle: { 
     fontFamily: 'Playfair Display, serif', 
-    fontSize: isMobile ? '28px' : '38px', 
+    fontSize: isMobile ? '28px' : '36px', 
     color: '#0F172A', 
-    margin: '0 0 12px' 
+    margin: 0,
+    textAlign: 'left'
+  },
+  searchForm: {
+    display: 'flex',
+    gap: '8px',
+    width: isMobile ? '100%' : '340px'
+  },
+  searchInput: {
+    flex: '1 1 auto',
+    padding: '10px 14px',
+    borderRadius: '8px',
+    border: '1px solid var(--border, #CBD5E1)',
+    outline: 'none',
+    fontSize: '14px',
+    fontFamily: 'DM Sans, sans-serif',
+    background: '#fff'
+  },
+  searchBtn: {
+    flex: '0 0 auto',
+    padding: '10px 18px',
+    borderRadius: '8px',
+    background: '#0F172A',
+    color: '#fff',
+    border: 'none',
+    fontWeight: 600,
+    fontSize: '14px',
+    cursor: 'pointer',
+    transition: 'background 0.2s ease'
   },
   heroSub: { 
     color: 'var(--muted, #64748B)', 
     fontSize: '15px', 
-    maxWidth: '650px', 
-    margin: '0 auto', 
-    lineHeight: 1.6 
+    maxWidth: isMobile ? '100%' : '650px', 
+    margin: 0, 
+    lineHeight: 1.6,
+    textAlign: 'left'
   },
 
   formCard: { 
