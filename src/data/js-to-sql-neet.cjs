@@ -1,18 +1,18 @@
 /**
  * js-to-sql-neet.js
  *
- * Converts src/data/neetCutoffs.js (or wherever your NEET data file lives)
- * into a MySQL .sql file ready to import via phpMyAdmin.
+ * Converts src/data/neetCutoffs.js into a MySQL .sql file ready to
+ * import via phpMyAdmin.
  *
- * Same approach as js-to-sql.cjs (used for KEAM) — loads your REAL file
- * as an actual JS module rather than fragile text-parsing, so it always
- * matches your source data exactly. Re-run any time you update
- * neetCutoffs.js to regenerate a fresh SQL import.
+ * v2: now strips any `import ...` lines from the top of the file before
+ * processing — so it keeps working even if the source file later adds
+ * unrelated imports (icons, helper functions, etc.) that plain Node
+ * can't resolve outside of a bundler like Vite.
  *
  * USAGE:
  *   1. Place this file in the SAME folder as neetCutoffs.js
  *   2. Rename it to js-to-sql-neet.cjs if your project uses
- *      "type": "module" in package.json (same issue as before)
+ *      "type": "module" in package.json
  *   3. From your terminal, in that folder, run:
  *        node js-to-sql-neet.cjs
  *   4. It creates neet_cutoffs.sql in the same folder.
@@ -27,13 +27,25 @@ const OUTPUT_FILE = path.join(__dirname, 'neet_cutoffs.sql');
 
 // --- Step 1: Load the real neetCutoffs.js as an actual JS module ---
 let source = fs.readFileSync(SOURCE_FILE, 'utf8');
+
+// Strip out any `import ... from '...';` lines — we only need the plain
+// data (arrays/objects), not any UI-related imports (icons, components,
+// etc.) that might get added to this file over time and that plain
+// Node can't resolve outside of a bundler.
+source = source.replace(/^import\s+.*from\s+.*;?\s*$/gm, '');
+
 source = source.replace(/export const/g, 'const');
 source += '\nmodule.exports = { neetCutoffs };';
 
 const TEMP_FILE = path.join(__dirname, '__temp_neetCutoffs.cjs');
 fs.writeFileSync(TEMP_FILE, source);
-const { neetCutoffs } = require(TEMP_FILE);
-fs.unlinkSync(TEMP_FILE);
+
+let neetCutoffs;
+try {
+  ({ neetCutoffs } = require(TEMP_FILE));
+} finally {
+  fs.unlinkSync(TEMP_FILE); // clean up temp file even if require() throws
+}
 
 console.log(`Loaded ${neetCutoffs.length} college/branch/quota/round rows from neetCutoffs.js`);
 
@@ -49,7 +61,7 @@ for (const item of neetCutoffs) {
   if (!cutoffs) continue;
 
   for (const [category, closingRank] of Object.entries(cutoffs)) {
-    if (closingRank === null || closingRank === undefined) continue; // skip "no seat allotted"
+    if (closingRank === null || closingRank === undefined) continue;
     rows.push({
       collegeId: collegeId || null,
       collegeName,
