@@ -1,4 +1,73 @@
 export const blogArticles = {
+  "cee-kerala-neet-counselling-2026": {
+    "category": "Medical Admissions - Kerala",
+    "title": "CEE Kerala NEET UG 2026: State Quota Counselling Registration Open",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 7, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has activated the online submission portal for NEET-UG 2026 state quota medical and dental counselling. Eligible candidates who wish to secure MBBS and BDS seats in government and self-financing medical colleges across Kerala must register promptly."
+      },
+      {
+        "heading": "Registration and Document Upload",
+        "text": "Candidates must log into the KEAM candidate portal to verify their NEET scores and upload mandatory documents, including nativity proof and category certificates. The deadline for completing the profile verification and fee payment is expected to close by the middle of next week."
+      }
+    ],
+    "cta": {
+      "title": "Register for Kerala State Quota",
+      "description": "Access the official CEE Kerala candidate portal to submit your NEET UG 2026 scores.",
+      "buttonText": "Visit CEE Portal",
+      "link": "https://www.cee.kerala.gov.in"
+    }
+  },
+  "tnea-2026-round-1-allotment": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 1 Provisional Seat Allotment Results Published",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 7, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, has officially released the provisional seat allotment results for Round 1 of the Tamil Nadu Engineering Admissions (TNEA) 2026. Top-tier institutions like Anna University (CEG Campus) and MIT Chennai continue to witness exceptionally high cutoffs for Computer Science and IT branches."
+      },
+      {
+        "heading": "Seat Confirmation Process",
+        "text": "Candidates allotted seats in this phase must log in to their TNEA dashboard to confirm their allotment before the stipulated deadline. Options include accepting and joining, accepting and upward sliding, or declining and upward sliding. Failure to confirm will result in the automatic cancellation of the allotted seat."
+      }
+    ],
+    "cta": {
+      "title": "Check TNEA Allotment",
+      "description": "Log in to the official TNEA portal to view and confirm your Round 1 engineering seat.",
+      "buttonText": "Check Result",
+      "link": "https://www.tneaonline.org"
+    }
+  },
+  "kcet-2026-first-round-results": {
+    "category": "Engineering & Pharmacy Admissions - Karnataka",
+    "title": "KEA UGCET 2026: KCET First Round Seat Allotment Results Announced",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 7, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examination Authority (KEA) has declared the much-awaited UGCET 2026 First Round Seat Allotment results. Engineering, Architecture, Agriculture, and Pharmacy aspirants can now check their allocation status on the official KEA website."
+      },
+      {
+        "heading": "Exercising Choices and Fee Payment",
+        "text": "Candidates are required to exercise their choices (Choice 1, 2, 3, or 4) strictly within the given timeframe. Those satisfied with their allotted seat (Choice 1) must download their challan, remit the requisite fees, and report to their assigned college with original documents to complete the admission process."
+      }
+    ],
+    "cta": {
+      "title": "View KCET Seat Allotment",
+      "description": "Navigate to the KEA official portal to check your first-round allotment status and exercise your choice.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
   "keam-2026-phase-3-engineering-phase-2-architecture-allotments": {
     "category": "Engineering & Architecture Admissions - Kerala",
     "title": "KEAM 2026: Phase 3 Engineering & Phase 2 Architecture Allotments Released",
