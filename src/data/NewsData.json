@@ -1,5 +1,109 @@
 [
   {
+    "id": 2608080315,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "COMEDK 2026 Round 2 Seat Allotment Result Released at comedk.org; Direct Link Here",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-08",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "Official seat allotment update regarding COMEDK 2026 Round 2. The Consortium of Medical, Engineering and Dental Colleges of Karnataka (COMEDK) has released the Round 2 seat allotment results for Kalyana Karnataka Region (KKR/HKR) candidates. Eligible students must log into the decision-making portal to check their assigned college, accept the seat, pay the required fee, and download their allotment letter before the deadline.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.comedk.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Karnataka"
+  },
+  {
+    "id": 2608080312,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET UG Counselling 2026: MCC Issues Important Notice For PwBD Candidates",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-08",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has issued a critical notice for candidates seeking MBBS/BDS admission under the Persons with Benchmark Disabilities (PwBD) category. Eligible candidates must possess a Permanent UDID Card and undergo a mandatory functional ability assessment at one of the 61 designated MCC Medical Assessment Boards to obtain the required Eligibility Certificate for choice filling.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608080310,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "AP EAMCET 2026 Seat Allotment Expected Release Time as per Previous Years' Trends",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-08",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The APSCHE is set to announce the AP EAMCET 2026 Phase 1 seat allotment result on August 9. Based on previous years' trends, the allotment status is expected to be published on the official portal between 4 PM and 6 PM. Candidates should keep their login credentials ready to access their assigned college and complete the subsequent self-joining process.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://cets.apsche.ap.gov.in/",
+    "courses": [
+      "B.Tech",
+      "B.Pharm"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
+    "id": 2608080309,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "MCC begins round 1 choice filling for NEET counselling 2026",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-08",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has officially commenced the Round 1 choice filling and locking process for NEET UG Counselling 2026. Registered candidates for MBBS and BDS admissions must log into the MCC portal to submit and lock their preferred choices of colleges and courses before the stipulated deadline to ensure their consideration for seat allocation.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608080306,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA 2026 counselling: Tentative allotments given to over 79,000 students in second round",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-08",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "At the end of the second round of choice-filling for Tamil Nadu Engineering Admissions (TNEA) 2026, the Directorate of Technical Education (DoTE) has issued tentative allotments to 79,403 candidates. Students must immediately log into the candidate portal to confirm their tentatively assigned institute within the given timeframe to secure their admission.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.tneaonline.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
     "id": 2608070416,
     "icon": "🖥️",
     "color": "#7C3AED",
