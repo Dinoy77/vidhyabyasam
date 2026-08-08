@@ -1,4 +1,73 @@
 export const blogArticles = {
+  "neet-pg-2026-admit-card": {
+    "category": "Medical Entrance - National",
+    "title": "NEET PG 2026 Admit Card Released: Download Link and Exam Guidelines",
+    "author": "Medical Exam Desk",
+    "date": "August 8, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The National Board of Examinations in Medical Sciences (NBEMS) has officially released the admit cards for NEET PG 2026. Candidates appearing for the postgraduate medical entrance examination can now download their hall tickets from the official NBE website using their login credentials."
+      },
+      {
+        "heading": "Important Exam Day Instructions",
+        "text": "Students are advised to print a clear copy of the admit card and affix a recent passport-sized photograph. It is mandatory to carry a valid government-issued photo ID to the examination center. Late entry will strictly not be permitted under any circumstances."
+      }
+    ],
+    "cta": {
+      "title": "Download Your Admit Card",
+      "description": "Access the official NBEMS portal to securely download your NEET PG 2026 hall ticket.",
+      "buttonText": "Visit NBE Portal",
+      "link": "https://nbe.edu.in"
+    }
+  },
+  "du-csas-first-allocation-list-2026": {
+    "category": "University Admissions",
+    "title": "Delhi University UG Admissions 2026: First CSAS Seat Allocation List Declared",
+    "author": "University Updates Team",
+    "date": "August 8, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtHoLmfxUFUFcLCK_wvoLGOkrdrbV6S1wjQlkmtEQWaD8UOqiR7rm3iz0&s=10",
+    "content": [
+      {
+        "text": "Delhi University has published the highly anticipated first seat allocation list for undergraduate admissions through the Common Seat Allocation System (CSAS) 2026. Students who registered based on their CUET UG scores can now check their allotted colleges and courses on their personal dashboards."
+      },
+      {
+        "heading": "Acceptance and Fee Payment",
+        "text": "Candidates must accept the allocated seat by the specified deadline to remain in the admission process. Following the acceptance, respective colleges will verify the submitted documents, after which students will need to process the online fee payment to confirm their admission."
+      }
+    ],
+    "cta": {
+      "title": "Check Your Allotment Status",
+      "description": "Log in to the DU CSAS portal to view your seat allocation and proceed with the admission steps.",
+      "buttonText": "Visit DU CSAS Portal",
+      "link": "https://admission.uod.ac.in"
+    }
+  },
+  "upsc-cse-mains-schedule-2026": {
+    "category": "Competitive Exams",
+    "title": "UPSC Civil Services Mains 2026: Detailed Subject-Wise Timetable Released",
+    "author": "Career & Prep Desk",
+    "date": "August 8, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Union Public Service Commission (UPSC) has officially published the detailed timetable for the Civil Services (Main) Examination 2026. Candidates who successfully cleared the preliminary round can now view the schedule for the essay, general studies, and optional subject papers."
+      },
+      {
+        "heading": "Preparation and Admit Card Details",
+        "text": "With the examinations scheduled to commence in late September, candidates are urged to intensify their revision and answer-writing practice. The e-Admit cards for the Mains examination will be made available for download approximately three weeks prior to the first paper."
+      }
+    ],
+    "cta": {
+      "title": "View the Official Timetable",
+      "description": "Download the complete UPSC CSE Mains 2026 examination schedule from the official website.",
+      "buttonText": "Visit UPSC Portal",
+      "link": "https://upsc.gov.in"
+    }
+  },
   "cee-kerala-neet-counselling-2026": {
     "category": "Medical Admissions - Kerala",
     "title": "CEE Kerala NEET UG 2026: State Quota Counselling Registration Open",
