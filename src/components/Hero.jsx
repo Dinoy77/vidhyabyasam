@@ -302,6 +302,13 @@ export default function Hero({ onSearch }) {
     document.getElementById('colleges')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const closeMainPopup = () => {
+    setShowNewsPopup(false);
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('mainNewsClosed'));
+    }
+  };
+
   const quickLinks = ['B.Pharm', 'M.Pharm', 'Nursing', 'GNM', 'Government'];
 
   return (
@@ -489,13 +496,16 @@ export default function Hero({ onSearch }) {
       </div>
 
       {showNewsPopup && latestNews.length > 0 && (
-        <div style={{
-          position: 'fixed', inset: 0, zIndex: 2000,
-          background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          padding: '16px',
-        }} onClick={() => setShowNewsPopup(false)}>
-
+        <div 
+          id="main-news-modal"
+          style={{
+            position: 'fixed', inset: 0, zIndex: 2000,
+            background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(6px)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: '16px',
+          }} 
+          onClick={closeMainPopup}
+        >
           <div
             onClick={e => e.stopPropagation()}
             style={{
@@ -508,7 +518,7 @@ export default function Hero({ onSearch }) {
             }}
           >
             <button
-              onClick={() => { setShowNewsPopup(false);}}
+              onClick={closeMainPopup}
               style={{
                 position: 'absolute', top: '12px', right: '12px', zIndex: 10,
                 width: '30px', height: '30px', borderRadius: '50%',
@@ -551,7 +561,7 @@ export default function Hero({ onSearch }) {
                 {latestNews.slice(0, 4).map(item => (
                   <div
                     key={item.id}
-                    onClick={() => { navigate(`/news/${generateSlug(item.title)}`); setShowNewsPopup(false); }}
+                    onClick={() => { navigate(`/news/${generateSlug(item.title)}`); closeMainPopup(); }}
                     style={{
                       display: 'flex', alignItems: 'center', gap: '12px',
                       padding: '10px 12px', borderRadius: '10px',
@@ -574,7 +584,7 @@ export default function Hero({ onSearch }) {
                 ))}
               </div>
               <button
-                onClick={() => { setShowNewsPopup(false);}}
+                onClick={closeMainPopup}
                 style={{
                   width: '100%', padding: '12px',
                   borderRadius: '10px', border: 'none',
@@ -586,7 +596,7 @@ export default function Hero({ onSearch }) {
                 Explore Colleges →
               </button>
               <p style={{ textAlign: 'center', fontSize: '11px', color: '#9CA3AF', marginTop: '10px', cursor: 'pointer' }}
-                onClick={() => { setShowNewsPopup(false); }}>
+                onClick={closeMainPopup}>
                 Skip for now
               </p>
             </div>

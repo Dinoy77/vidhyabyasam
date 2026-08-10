@@ -16,6 +16,7 @@ import { getLatestNewsFeed } from '../data/NewsData';
 
 // --- NEW: Import SEO Configurations ---
 import { seoConfigurations } from '../data/seoData';
+import LatestUpdatePopup from '../components/LatestUpdatePopup';
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -190,7 +191,13 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   );
 
   return (
-    <div style={{ background: '#F8FAFC' }}>
+    <div style={{ background: '#F8FAFC', position: 'relative' }}>
+      {/* 
+        Popup overlays rendered at the root level of the screen 
+        so they sit on top of all other content
+      */}
+      <LatestUpdatePopup />
+      
       <TickerTape />
       <Hero onSearch={setSearchQuery} />
 
