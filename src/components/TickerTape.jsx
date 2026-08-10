@@ -4,16 +4,23 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
-    text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE First Phase Allotment List is published.",
-    link: "https://www.cee.kerala.gov.in/keam2026/list/allot/p1_bpharm.pdf",
+    text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE Second Phase Allotment List is published.",
+    link: "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf",
     isNew: true
   },
   {
     id: 2,
+    text: "KEAM 2026 - ALLOTMENT TO Engineering COURSE Third Phase Allotment List is published.",
+    link: "https://cee.kerala.gov.in/keam2026/list/allot/p3_engg_provi2.pdf",
+    isNew: true
+  },
+  {
+    id: 3,
     text: "KEAM College Predictor: Enter your rank to predict admission chances!",
     link: "/keam-predictor",
     isNew: true
   },
+  
 ];
 
 export default function TickerTape({ announcements = MOCK_ANNOUNCEMENTS }) {

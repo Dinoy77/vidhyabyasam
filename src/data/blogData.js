@@ -1,4 +1,102 @@
 export const blogArticles = {
+  "keam-bpharm-second-allotment-2026-published": {
+    "category": "Pharmacy Admissions - State",
+    "title": "KEAM B.Pharm 2026: Second Phase Seat Allotment Published",
+    "author": "Vidyabhyasam Pharmacy Desk",
+    "date": "August 10, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has officially released the Second Phase Provisional Allotment list for B.Pharm course admissions for the 2026-27 academic session. Candidates who participated in the Centralised Allotment Process (CAP) can now check their seat allocation status based on their KEAM Pharmacy ranks and submitted college options."
+      },
+      {
+        "heading": "Important Next Steps for Allotted Candidates",
+        "text": "Students who have received a fresh allotment or an upgrade to their previously allotted seat must take immediate action to secure their admission:",
+        "list": [
+          "Download Allotment Memo: Log in to the candidate portal to download your official phase 2 allotment memo.",
+          "Fee Payment: Remit the required tuition fee or balance fee as specified in the memo via the online payment gateway or at designated Head Post Offices.",
+          "College Reporting: Physically report to the newly allotted pharmacy college with all original academic and category certificates for verification before the stipulated deadline.",
+          "Note on Non-Joining: Failure to pay the fee or report to the college within the given timeframe will result in the immediate cancellation of the allotment and the candidate's existing options."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "View KEAM B.Pharm Second Allotment List",
+      "description": "Access the official CEE Kerala PDF to instantly view the college-wise seat allotments and rank cutoffs for the second phase of B.Pharm admissions.",
+      "buttonText": "View Allotment PDF",
+      "link": "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf"
+    }
+  },
+  "mcc-neet-ug-counselling-round-1-2026": {
+    "category": "Medical Admissions - National",
+    "title": "MCC NEET UG 2026 Counselling: Round 1 Registration and Choice Filling Underway",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 10, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) started the Round 1 registration process for NEET UG Counselling 2026 on August 5, 2026, for All India Quota (AIQ) seats. Eligible candidates must complete their registration by August 12, 2026. The online choice-filling facility, which opened on August 6, will also conclude on August 13."
+      },
+      {
+        "heading": "Important Deadlines and Fees",
+        "text": "Candidates have until August 13 to lock their choices, after which the processing of seat allotment will occur. The Round 1 seat allotment result is scheduled to be declared on August 17, 2026. While registering, UR/EWS candidates must pay a non-refundable fee of Rs. 1000, while reserved category candidates pay Rs. 500, alongside the requisite refundable security deposits based on the institution type."
+      }
+    ],
+    "cta": {
+      "title": "MCC NEET UG Official Portal",
+      "description": "Visit the official Medical Counselling Committee (MCC) website to complete your registration, choice filling, and access seat allotment results.",
+      "buttonText": "Visit MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
+  "csab-special-round-1-allotment-reporting-2026": {
+    "category": "Engineering Admissions - National",
+    "title": "CSAB Special Counselling 2026: Round 1 Online Reporting Closes Tomorrow",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 10, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Central Seat Allocation Board (CSAB) declared the Special Round 1 seat allotment result on August 6 for admissions to the NIT+ system, which includes NITs, IIITs, IIEST, and GFTIs. Candidates who have been allotted a seat must complete their online reporting, document upload, and Institute Admission Fee (IAF-II) payment by August 11, 2026."
+      },
+      {
+        "heading": "What's Next After Round 1?",
+        "text": "Following the August 11 deadline for resolving any document verification queries, CSAB is scheduled to release the Round 2 seat allotment result on August 12, 2026, at 5:00 PM. Candidates holding confirmed seats after Round 2 must physically report to their respective allotted institutes between August 13 and August 18, 2026."
+      }
+    ],
+    "cta": {
+      "title": "CSAB Official Portal",
+      "description": "Access the Central Seat Allocation Board (CSAB) official portal for special round results, document verification, and IAF payment.",
+      "buttonText": "Visit CSAB Portal",
+      "link": "https://csab.nic.in/"
+    }
+  },
+  "keam-2026-phase-3-engineering-allotment": {
+    "category": "Engineering Admissions - State",
+    "title": "KEAM 2026: Deadline Today for Phase 3 Engineering Allotment Admission",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 10, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXuWnFGAvnwwwsU28MA5_FEtr2gFvoJXYYDW4-wFbpDvCG3xIyOqDqLsU&s=10",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, recently published the Third Phase Centralized Allotment for Engineering courses and Phase 2 for Architecture [1.3.1]. Candidates allotted a seat in the Phase 3 engineering allotment must complete their admission formalities by today, August 10, 2026."
+      },
+      {
+        "heading": "Mandatory Reporting Checklist",
+        "text": "Students must log in to the candidate portal to download their Allotment Memo and Data Sheet. It is critical to pay any required CEE fee online by 3:00 PM today, and physically report to the allotted engineering college with all original documents before 4:00 PM. Failure to meet these deadlines will lead to immediate cancellation of the allotment."
+      }
+    ],
+    "cta": {
+      "title": "CEE Kerala Official Portal",
+      "description": "Log in to the Commissioner for Entrance Examinations (CEE) Kerala portal to download your allotment memo and pay the required fees.",
+      "buttonText": "Visit CEE Portal",
+      "link": "https://cee.kerala.gov.in/"
+    }
+  },
   "neet-pg-2026-admit-card": {
     "category": "Medical Entrance - National",
     "title": "NEET PG 2026 Admit Card Released: Download Link and Exam Guidelines",
