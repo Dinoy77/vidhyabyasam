@@ -10,69 +10,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-10",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Round 1 Seat Allotment 2026 Out: Download Allotment Order at cap.apcfss.in. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has officially declared the AP EAMCET 2026 Round 1 seat allotment results. Candidates can check their provisional allotment on the official portal (cap.apcfss.in) using their Hall Ticket Number, Registration Number, and Date of Birth. Shortlisted students must complete online self-reporting and physical reporting to their assigned colleges by August 15, 2026, to secure their admission.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608100333,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "Andhra Pradesh EAMCET 2026 Round 1 Seat Allotment Today: Here's What To Do Next?",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding Andhra Pradesh EAMCET 2026 Round 1 Seat Allotment Today: Here's What To Do Next?. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Telangana"
-  },
-  {
-    "id": 2608100332,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET Seat Allotment 2026 Link (OUT) Live – APSCHE Allotment Result",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Seat Allotment 2026 Link (OUT) Live – APSCHE Allotment Result. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608100329,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET Seat allotment 2026 Phase 1 result out today @cets.apsche.ap.gov.in; Check the detail",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Seat allotment 2026 Phase 1 result out today @cets.apsche.ap.gov.in; Check the details here. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://cap.apcfss.in",
     "courses": [
       "B.Tech",
       "B.Pharm"
@@ -90,9 +30,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-10",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official institutional release regarding Over 60,000 students allotted seats in TNEA second round of counselling. This major advisory impacts candidates participating in the current admission cycle for B.Tech, B.E. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "description": "Around 60,508 students have received allotment orders in the second round of Tamil Nadu Engineering Admissions (TNEA) counselling for BE and BTech courses. Candidates with provisional allotments must report to their allotted colleges directly, while those with tentative allotments must visit TFC centres to submit original certificates and pay the tuition fees by August 13. Failure to report by the deadline will result in forfeiting the seat.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://www.tneaonline.org",
     "courses": [
       "B.Tech",
       "B.E"
@@ -100,64 +40,23 @@
     "state": "Tamil Nadu"
   },
   {
-    "id": 2608100325,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
+    "id": 2608100335,
+    "icon": "⚕️",
+    "color": "#2563EB",
+    "bg": "#EFF6FF",
     "tag": "Allotment Out",
-    "title": "AP EAMCET Seat Allotment 2026: Check steps to check result, direct link, cutoff, reporting and ",
+    "title": "KEAM 2026: Pharmacy/ B.Pharm Second provisional allotment result published",
     "isNotification": true,
     "date": "Action Required Now",
     "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Seat Allotment 2026: Check steps to check result, direct link, cutoff, reporting and fees dates. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+    "description": "The Commissioner for Entrance Examinations (CEE), Kerala, has successfully published the second provisional allotment list for KEAM B.Pharm 2026 admissions. Candidates who applied for pharmacy courses can navigate to the official CEE Kerala candidate portal to verify their latest allotment status. Shortlisted candidates must proceed with the required admission protocols and fee payments to confirm their allotted seats within the stipulated window.",
+    "eligibility": "Candidates registered for the KEAM 2026 examination seeking admission into the B.Pharm program.",
+    "applyLink": "https://cee.kerala.gov.in/keam2026/",
     "courses": [
-      "B.Tech",
       "B.Pharm"
     ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608100324,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "Andhra Pradesh EAMCET 2026 Phase 1 Seat Allotment Result Out: Direct Link Here",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding Andhra Pradesh EAMCET 2026 Phase 1 Seat Allotment Result Out: Direct Link Here. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Telangana"
-  },
-  {
-    "id": 2608100323,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET Seat Allotment 2026 Date & Time Out",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-10",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Seat Allotment 2026 Date & Time Out. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
+    "state": "Kerala"
   },
   {
     "id": 2608080315,
