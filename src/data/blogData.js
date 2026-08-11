@@ -28,6 +28,90 @@ export const blogArticles = {
       "link": "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf"
     }
   },
+  "neet-pg-2026-city-intimation-slip-released": {
+    "category": "Medical Admissions - National",
+    "title": "NEET PG 2026: City Intimation Slip Released Ahead of August 30 Exam",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 11, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The National Board of Examinations in Medical Sciences (NBEMS) is scheduled to release the NEET PG 2026 city intimation slip today, August 11, 2026 [1.1.1]. This critical document informs candidates about their allotted examination city, helping them make necessary travel arrangements well in advance of the test scheduled for August 30."
+      },
+      {
+        "heading": "Admit Card & Exam Day Guidelines",
+        "text": "While the city slip helps candidates prepare, it is not a substitute for the official admit card. The actual admit card, detailing the exact venue address and entry timings, will be published on August 27, 2026. Key details for candidates include:",
+        "list": [
+          "Record Registrations: Over 2.73 lakh candidates have registered this year, marking a 12.5% increase from previous cycles [1.1.1].",
+          "Exam Pattern Update: The exam now features 180 multiple-choice questions across five mandatory, time-locked sections of 42 minutes each.",
+          "How to Download: Candidates must log in using their application number and password at the official NBE portal to access the slip."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download NEET PG City Slip",
+      "description": "Log into the official NBEMS portal to securely download your NEET PG 2026 City Intimation Slip and check your allotted test city.",
+      "buttonText": "Visit NBEMS Portal",
+      "link": "https://natboard.edu.in/"
+    }
+  },
+  "csab-special-round-1-reporting-deadline-2026": {
+    "category": "Engineering Admissions - National",
+    "title": "CSAB 2026: Round 1 Online Reporting and Document Upload Closes Today",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 11, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Central Seat Allocation Board (CSAB) concludes its Round 1 online reporting phase today, August 11, 2026, at 5:00 PM [1.3.2]. Candidates allotted a seat in the NIT+ system must finalize their willingness options (Freeze, Float, Slide, Surrender, or Withdraw), upload mandatory documents, and pay the Institute Admission Fee (IAF-II)."
+      },
+      {
+        "heading": "Next Steps & Round 2 Schedule",
+        "text": "Failure to complete online reporting by today's deadline will result in immediate seat cancellation. Candidates navigating the CSAB process should anticipate the following schedule:",
+        "list": [
+          "Round 2 Allotment: The second and final CSAB seat allotment result is slated for publication tomorrow, August 12, 2026, at 5:00 PM [1.3.2].",
+          "Willingness Options: In Round 2, all seat allocations are automatically treated as 'Freeze' with no further upgradation available.",
+          "Physical Reporting: Candidates holding confirmed seats must physically report to their allotted institutes with original documents between August 13 and August 18, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "CSAB Official Portal",
+      "description": "Access the Central Seat Allocation Board (CSAB) portal to complete your Round 1 online reporting or respond to document verification queries.",
+      "buttonText": "Visit CSAB Portal",
+      "link": "https://csab.nic.in/"
+    }
+  },
+  "mcc-neet-ug-counselling-round-1-choice-filling-2026": {
+    "category": "Medical Admissions - National",
+    "title": "MCC NEET UG 2026: Round 1 Choice Filling Closing Soon",
+    "author": "Vidyabhyasam Admissions Desk",
+    "date": "August 11, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) is actively processing Round 1 of the NEET UG 2026 Counselling for All India Quota (AIQ) seats. The registration window will officially close tomorrow, August 12, 2026, at 3:00 PM, while the online choice-filling facility will conclude shortly after on August 13."
+      },
+      {
+        "heading": "New Upgradation Rules for 2026",
+        "text": "To streamline the admission process across 31,728 AIQ seats, MCC has introduced a dynamic new 'Freeze and Float' system this year. Candidates must understand these options prior to seat allotment:",
+        "list": [
+          "Freeze Option: Choose this if you are completely satisfied with your Round 1 allotted seat and do not wish to be considered for an upgrade [1.2.3].",
+          "Float Option: Select this to secure your current allotted seat while remaining eligible for an upgrade to a higher preference in Round 2.",
+          "Seat Allotment Results: The provisional seat allotment outcome for Round 1 is expected to be declared on August 17, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "MCC NEET UG Official Portal",
+      "description": "Visit the official Medical Counselling Committee (MCC) website to finalize your registration and securely lock your MBBS/BDS college choices.",
+      "buttonText": "Visit MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
   "mcc-neet-ug-counselling-round-1-2026": {
     "category": "Medical Admissions - National",
     "title": "MCC NEET UG 2026 Counselling: Round 1 Registration and Choice Filling Underway",
