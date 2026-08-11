@@ -1,43 +1,23 @@
 [
   {
-    "id": 2608110325,
+    "id": 2608110321,
     "icon": "🎯",
     "color": "#059669",
     "bg": "#ECFDF5",
     "tag": "Allotment Out",
-    "title": "Andhra Pradesh EAMCET 2026 Round 1 Seat Allotment Today: Here's What To Do Next?",
+    "title": "AP EAMCET seat allotment result 2026 released for Phase 1 at cap.apcfss.in, direct link.",
     "isNotification": true,
-    "date": "Action Required Now",
+    "date": "2026-08-11",
     "publishedAt": "2026-08-11",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding Andhra Pradesh EAMCET 2026 Round 1 Seat Allotment Today: Here's What To Do Next?. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has declared the Phase 1 seat allotment results for AP EAPCET (EAMCET) 2026 counselling. Candidates who applied for B.Tech and B.Pharm admissions can now check their allotted institutes by logging into the official portal using their hall ticket number and date of birth. Selected students must download their allotment order and complete the self-reporting process within the stipulated deadline to confirm their admission.",
+    "eligibility": "Registered AP EAPCET/EAMCET 2026 candidates waiting for Phase 1 B.Tech/B.Pharm seat allotments.",
+    "applyLink": "https://cap.apcfss.in/",
     "courses": [
       "B.Tech",
       "B.Pharm"
     ],
-    "state": "Telangana"
-  },
-  {
-    "id": 2608110324,
-    "icon": "📝",
-    "color": "#D97706",
-    "bg": "#FEF3C7",
-    "tag": "Answer Key Out",
-    "title": "‘Thank you for your patience’: UGC-NET, ICAR, CSIR aspirants await answer keys",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Answer key and response sheet notification concerning ‘Thank you for your patience’: UGC-NET, ICAR, CSIR aspirants await answer keys. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for Ph.D. Eligibility, Junior Research Fellowship (JRF) can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "Ph.D. Eligibility",
-      "Junior Research Fellowship (JRF)"
-    ],
-    "state": "All India"
+    "state": "Andhra Pradesh"
   },
   {
     "id": 2608110323,
@@ -47,17 +27,16 @@
     "tag": "Answer Key Out",
     "title": "UGC-NET June 2026 Provisional Answer Key To Be Out This Week: NTA",
     "isNotification": true,
-    "date": "Action Required Now",
+    "date": "2026-08-11",
     "publishedAt": "2026-08-11",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning UGC-NET June 2026 Provisional Answer Key To Be Out This Week: NTA. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
+    "description": "The National Testing Agency (NTA) is set to release the provisional answer key and candidate response sheets for the UGC NET June 2026 examination shortly. Candidates who appeared for the exam across 87 subjects will be able to download the answer key from the official website and calculate their expected scores. A designated challenge window will also be activated, allowing candidates to raise formal objections by paying a processing fee of ₹200 per question before the final results are finalized.",
+    "eligibility": "Candidates who appeared for the UGC NET June 2026 examination seeking JRF or Assistant Professor eligibility.",
+    "applyLink": "https://ugcnet.nta.ac.in/",
     "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "JRF",
+      "Assistant Professor",
+      "Ph.D."
     ],
     "state": "All India"
   },
@@ -69,123 +48,17 @@
     "tag": "Result Live",
     "title": "TN NEET UG 2026 Rank List Released for MBBS, BDS Admissions; Check Steps to Download",
     "isNotification": true,
-    "date": "Action Required Now",
+    "date": "2026-08-11",
     "publishedAt": "2026-08-11",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for TN NEET UG 2026 Rank List Released for MBBS, BDS Admissions; Check Steps to Download. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
+    "description": "The Directorate of Medical Education and Research (DMER), Tamil Nadu, has officially published the TN NEET UG 2026 rank list for MBBS and BDS admissions. Candidates can now visit the official medical selection portal to download the provisional merit lists for Government Quota (including the 7.5% school quota) and Management Quota seats. Eligible students featured in these rank lists are now qualified to participate in the upcoming Tamil Nadu state medical counselling and choice-filling process.",
+    "eligibility": "NEET UG 2026 qualified candidates who registered for Tamil Nadu State Quota or Management Quota medical counselling.",
+    "applyLink": "https://tnmedicalselection.net/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
-  },
-  {
-    "id": 2608110321,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET seat allotment result 2026 released for Phase 1 at cap.apcfss.in, direct link to chec",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET seat allotment result 2026 released for Phase 1 at cap.apcfss.in, direct link to check here. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608110319,
-    "icon": "🖥️",
-    "color": "#7C3AED",
-    "bg": "#F5F0FF",
-    "tag": "Counselling",
-    "title": "NEET UG Counselling 2026: Lock Your Choices Before This Date",
-    "isNotification": false,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding NEET UG Counselling 2026: Lock Your Choices Before This Date. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2608110318,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET 2026 Phase 1 Seat Allotment Result Out at cap.apcfss.in, Check Allotment Order",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET 2026 Phase 1 Seat Allotment Result Out at cap.apcfss.in, Check Allotment Order. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608110317,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "AP EAMCET Seat Allotment 2026 Link (OUT) Live – APSCHE Allotment Result",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding AP EAMCET Seat Allotment 2026 Link (OUT) Live – APSCHE Allotment Result. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.Pharm candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.Pharm"
-    ],
-    "state": "Andhra Pradesh"
-  },
-  {
-    "id": 2608110316,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "UGC-NET results this week: NTA",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-11",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for UGC-NET results this week: NTA. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
+    "state": "Tamil Nadu"
   },
   {
     "id": 2608100334,
