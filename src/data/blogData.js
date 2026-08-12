@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "neet-pg-2026-city-intimation-slip": {
+    "category": "Medical Admissions - National",
+    "title": "NEET PG 2026: City Intimation Slip Released at natboard.edu.in",
+    "author": "Vidyabhyasam Medical Desk",
+    "date": "August 12, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The National Board of Examinations in Medical Sciences (NBEMS) has officially released the NEET PG 2026 city intimation slip for registered candidates. This document allows medical aspirants to check their allotted examination city to make prior travel arrangements ahead of the exam scheduled for August 30, 2026."
+      },
+      {
+        "heading": "Important Next Steps and Guidelines",
+        "text": "Candidates must log into the official portal using their User ID and Password to access the slip. Here are the key points to remember:",
+        "list": [
+          "Check Allotted City: The slip only indicates the city of the exam; the exact venue will be provided in the admit card releasing on August 27, 2026.",
+          "Email Updates: NBEMS is also sending city allotment updates directly to candidates' registered email IDs.",
+          "Image Correction Window: A final selective edit window is open from August 12 to August 15, 2026, for candidates needing to correct deficient photographs, signatures, or thumb impressions."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download NEET PG City Slip",
+      "description": "Access the official NBEMS portal to securely log in and check your allotted examination city for NEET PG 2026.",
+      "buttonText": "View City Slip",
+      "link": "https://natboard.edu.in/"
+    }
+  },
+  "ap-eamcet-2026-round-1-allotment": {
+    "category": "Engineering Admissions - State",
+    "title": "AP EAMCET 2026: Round 1 Seat Allotment Results Declared",
+    "author": "Vidyabhyasam Engineering Desk",
+    "date": "August 12, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Andhra Pradesh State Council of Higher Education (APSCHE) has announced the Phase 1 seat allotment results for AP EAMCET 2026 counselling. Engineering and pharmacy aspirants can now view their allotted seats by logging into the official portal with their hall ticket number and date of birth."
+      },
+      {
+        "heading": "Post-Allotment Procedures for Candidates",
+        "text": "Once a seat is allotted, candidates must follow the mandatory reporting protocols to secure their admission:",
+        "list": [
+          "Seat Confirmation: Log in to download the Provisional Seat Allotment Letter and complete the online self-reporting process.",
+          "Physical Reporting: Candidates must report to their assigned college by the final deadline of August 15, 2026, to confirm their admission.",
+          "Rules for PWD Candidates: The August 15 deadline is strictly applicable to PWD candidates as well, and failure to report physically will lead to seat cancellation."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "View AP EAMCET Seat Allotment",
+      "description": "Navigate to the official APSCHE counselling portal to check your Round 1 engineering or pharmacy seat allotment status.",
+      "buttonText": "Check Allotment Result",
+      "link": "https://cap.apcfss.in"
+    }
+  },
+  "tg-icet-2026-phase-1-allotment": {
+    "category": "Management Admissions - State",
+    "title": "TG ICET 2026: Phase 1 Seat Allotment Results Published Today",
+    "author": "Vidyabhyasam Management Desk",
+    "date": "August 12, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Telangana Council of Higher Education (TGCHE) has officially rolled out the Phase-1 Seat Allotment Results for the Telangana ICET 2026 counselling. Candidates who applied for MBA and MCA courses can now securely check their seat allocation status on the official website."
+      },
+      {
+        "heading": "Action Plan for Allotted Students",
+        "text": "To finalize their admission for the 2026 academic session, students need to follow these immediate steps:",
+        "list": [
+          "Download Allotment Order: Access your candidate dashboard to generate your official Phase 1 allotment memo.",
+          "Fee Payment & Reporting: Complete the required tuition fee payment and finalize the online self-reporting process by August 14, 2026.",
+          "Document Verification: Keep all original academic records ready for physical verification at the allotted institution."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check TG ICET Seat Allotment",
+      "description": "Log into the official Telangana ICET web counselling portal to verify your Phase 1 MBA or MCA allotment.",
+      "buttonText": "View Allotment Status",
+      "link": "https://tgicet.nic.in/"
+    }
+  },
   "keam-bpharm-second-allotment-2026-published": {
     "category": "Pharmacy Admissions - State",
     "title": "KEAM B.Pharm 2026: Second Phase Seat Allotment Published",
