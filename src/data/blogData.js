@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "csab-counselling-round-2-seat-allotment-2026": {
+    "category": "Engineering Admissions - National",
+    "title": "CSAB 2026 Round 2 Seat Allotment Result Declared at csab.nic.in",
+    "author": "Engineering Admissions Desk",
+    "date": "August 13, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Central Seat Allocation Board (CSAB) has officially announced the Round 2 seat allotment result for CSAB Counselling 2026 on August 12 [1.4.1]. Candidates who participated in the special rounds can now check their seat allocation status on the official portal."
+      },
+      {
+        "heading": "Important Next Steps for Candidates",
+        "text": "Candidates allotted a seat in Round 2 must log in with their credentials to proceed. Keep the following guidelines in mind:",
+        "list": [
+          "Online Reporting: Complete document verification, fee payment, and willingness submission between August 12 and August 14, 2026 [1.4.2].",
+          "Institute Reporting: Shortlisted candidates must physically report to their allotted institutes between August 13 and August 18, 2026.",
+          "Who Benefits?: CSAB special rounds are crucial for students seeking vacant seats in NITs, IIITs, and GFTIs after the conclusion of JoSAA counselling."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check CSAB Round 2 Result",
+      "description": "Log into the official CSAB portal to view your seat allotment status and complete online reporting.",
+      "buttonText": "View Allotment",
+      "link": "https://csab.nic.in/"
+    }
+  },
+  "cat-2026-registration-open": {
+    "category": "Management Admissions - National",
+    "title": "CAT 2026 Registration Opens: Apply Now for IIMs and Top B-Schools",
+    "author": "MBA Education Desk",
+    "date": "August 13, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The registration process for the Common Admission Test (CAT) 2026 is officially underway. Convened by IIM Indore this year, the application window opened on August 3 and will remain active until September 15, 2026, for aspirants seeking admission to top management programs."
+      },
+      {
+        "heading": "Exam Highlights and Important Details",
+        "text": "The CAT 2026 exam is scheduled to be held on Sunday, November 29, 2026, across three shifts. Here is what applicants need to know:",
+        "list": [
+          "Eligibility: Candidates must hold a Bachelor's degree with a minimum of 50% marks (45% for reserved categories) [1.3.1]. Final-year students are also eligible to apply provisionally.",
+          "Application Fee: The registration fee is Rs 2,700 for General/EWS/NC-OBC candidates, and Rs 1,350 for SC/ST/PwD categories.",
+          "Exam Pattern: The computer-based test will feature three sections—VARC, DILR, and QA—with a total of 68 questions to be completed in 120 minutes."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for CAT 2026",
+      "description": "Visit the official IIM CAT website to complete your application and secure your exam slot.",
+      "buttonText": "Apply Now",
+      "link": "https://iimcat.ac.in/"
+    }
+  },
+  "cuet-ug-2026-counselling-update": {
+    "category": "Undergraduate Admissions - National",
+    "title": "CUET UG 2026: University Counselling and Merit List Updates",
+    "author": "University Admissions Desk",
+    "date": "August 13, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://www.collegeaccessprogram.in/wp-content/uploads/2026/01/Blog_Images_CAP-2026-01-24T174056.636.webp",
+    "content": [
+      {
+        "text": "Following the declaration of the CUET UG 2026 results in late June, participating central and state universities are actively conducting their counselling and admission processes [1.2.2]. The academic sessions are expected to commence by the end of August."
+      },
+      {
+        "heading": "Counselling and Admission Guidelines",
+        "text": "Unlike centralized processes, CUET UG counselling is decentralized, meaning candidates must apply to individual universities. Here are the latest updates:",
+        "list": [
+          "Merit Lists: Universities are publishing individual cut-offs and merit lists on their respective portals based on normalized NTA scores [1.2.3].",
+          "Seat Allotment: Students must register on the admission portals of their chosen universities to undergo document verification and lock in their seats.",
+          "Final Deadlines: The admission processes across most participating universities are wrapping up in August to facilitate the timely commencement of classes."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track CUET Updates",
+      "description": "Keep an eye on individual university portals to check merit lists and final admission deadlines.",
+      "buttonText": "Check NTA CUET",
+      "link": "https://cuet.nta.nic.in/"
+    }
+  },
   "neet-pg-2026-city-intimation-slip": {
     "category": "Medical Admissions - National",
     "title": "NEET PG 2026: City Intimation Slip Released at natboard.edu.in",
