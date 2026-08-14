@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "kcet-2026-round-2-counselling": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Option Entry Closes, Provisional Allotment on Aug 19",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 14, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) concluded the Round 2 option entry window for KCET 2026 on August 13 [1.1.1]. Eligible candidates seeking admission into engineering, architecture, and allied courses utilized this window to modify or rearrange their college and course preferences based on the vacant seat matrix."
+      },
+      {
+        "heading": "Upcoming Important Dates",
+        "text": "With the choice filling process now closed, candidates should prepare for the upcoming seat allotment results. Keep these dates in mind:",
+        "list": [
+          "Provisional Allotment: The provisional Round 2 seat allotment result will be released on August 19, 2026, after 10:00 AM [1.1.1].",
+          "Final Allotment: The final seat allotment result for Round 2 will be published in late August 2026.",
+          "Next Steps: Following the final allotment, candidates must complete choice selection, pay the necessary fees, and report to their allotted colleges by September 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track KCET Allotment Status",
+      "description": "Keep an eye on the official KEA portal to check your Round 2 seat allotment result on August 19.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "tnea-2026-round-3-counselling": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 3 Counselling Choice Filling Commences August 17",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 14, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, is set to commence the third and final round of the general TNEA 2026 counselling [1.1.3]. This crucial round aims to fill remaining engineering seats across participating colleges in the state."
+      },
+      {
+        "heading": "Round 3 Counselling Guidelines",
+        "text": "Round 3 is specifically dedicated to candidates with TNEA ranks ranging from 131,094 to 233,812. Here is the detailed schedule for the upcoming events:",
+        "list": [
+          "Choice Filling Window: Eligible candidates can fill their preferences online from August 17 to August 19, 2026 [1.3.2].",
+          "Tentative Allotment: The release of the tentative allotment list is scheduled for August 21, 2026.",
+          "Allotment Confirmation: Candidates must confirm their tentative allotment between August 21 and August 22, 2026, to secure their desired seats."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Prepare for TNEA Choice Filling",
+      "description": "Log into the official TNEA portal starting August 17 to submit your college and branch preferences.",
+      "buttonText": "Go to TNEA Online",
+      "link": "https://www.tneaonline.org/"
+    }
+  },
+  "keam-2026-round-3-allotment": {
+    "category": "Engineering Admissions - Kerala",
+    "title": "KEAM 2026: Round 3 Choice Filling Process Underway for Engineering Admissions",
+    "author": "Kerala Admissions Desk",
+    "date": "August 14, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, is proceeding with the Round 3 counselling and seat allotment process for KEAM 2026 [1.4.1]. This round allows candidates to secure admissions into engineering, architecture, and pharmacy programs across government and private institutions in the state."
+      },
+      {
+        "heading": "Process and Next Steps",
+        "text": "Candidates participating in the third phase of counselling must adhere to the ongoing schedule to ensure a smooth admission process:",
+        "list": [
+          "Web Option Entry: The choice-filling and modification window for Round 3 is actively open throughout August 2026 [1.4.1].",
+          "Provisional Allotment: Based on the web options submitted, the Round 3 provisional seat allotment results will be declared later this month.",
+          "Final Admissions: Once allotted, candidates will have to promptly pay the requisite fees and report to their respective colleges to finalize their admission."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Participate in KEAM Round 3",
+      "description": "Visit the official CEE Kerala portal to complete your choice filling and track seat allotment updates.",
+      "buttonText": "Check CEE Kerala",
+      "link": "https://cee.kerala.gov.in/"
+    }
+  },
   "csab-counselling-round-2-seat-allotment-2026": {
     "category": "Engineering Admissions - National",
     "title": "CSAB 2026 Round 2 Seat Allotment Result Declared at csab.nic.in",
