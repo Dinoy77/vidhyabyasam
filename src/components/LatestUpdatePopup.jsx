@@ -3,6 +3,15 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
+    text: "TNEA 2026: Round 3 Choice Filling Closes Tomorrow; Submit Preferences Now.",
+    link: "/blog/tnea-2026-round-3-closing-soon",
+    isNew: true,
+    tag: "Allotment Out",
+    color: "#326ada", 
+    image: "https://i.postimg.cc/66M0Q8qS/3-ea0b0f06b7.jpg",
+  },
+  {
+    id: 2,
     text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE Second Phase Allotment List is published.",
     link: "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf",
     isNew: true,

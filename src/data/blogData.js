@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "kcet-2026-round-2-mock-allotment": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Mock Allotment Released, Provisional Result on August 19",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 18, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) has officially published the KCET Round 2 mock seat allotment on August 17, 2026 [1.1.3]. Candidates who participated in the choice filling process, which concluded on August 13, can now check their mock allotments and expected cutoffs on the official portal."
+      },
+      {
+        "heading": "Important Updates and Upcoming Schedule",
+        "text": "With the mock allotment released, the final stages of the Round 2 counselling process are underway. Keep these key dates in mind:",
+        "list": [
+          "Provisional Allotment: The provisional Round 2 seat allotment result is scheduled to be released on August 19, 2026, after 10:00 AM [1.1.1].",
+          "Cutoff Information: Round 2 mock cutoffs have also been made available online for candidates to analyze their chances.",
+          "Final Result: The final Round 2 seat allotment result will be published in late August 2026, followed by fee payment and college reporting."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KCET Allotment Status",
+      "description": "Log in to the official KEA portal to view your mock allotment and track the upcoming provisional result.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "tnea-2026-round-3-closing-soon": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 3 Choice Filling Closes Tomorrow; Submit Preferences Now",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 18, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, commenced the TNEA 2026 Round 3 choice-filling process on August 17 [1.2.1]. Eligible candidates must finalize and submit their preferred colleges and engineering branches before the window closes tomorrow, August 19, 2026, at 5 PM."
+      },
+      {
+        "heading": "Counselling Guidelines for Round 3",
+        "text": "This phase is crucial for a large segment of engineering aspirants. Here is what you need to know to complete the process smoothly:",
+        "list": [
+          "Eligibility Criteria: Round 3 is dedicated to candidates with general ranks from 1,31,094 to 2,33,812 (aggregate marks range 135.5 to 77.500) [1.2.1].",
+          "Order of Preference: Ensure you arrange your choices carefully, as seat allotment is based strictly on rank, community, and preference order.",
+          "Tentative Allotment: The tentative seat allotment result for Round 3 will be released on August 21, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Complete TNEA Choice Filling",
+      "description": "Log into the official TNEA online portal before 5 PM on August 19 to lock your engineering college preferences.",
+      "buttonText": "Go to TNEA Online",
+      "link": "https://www.tneaonline.org/"
+    }
+  },
+  "ap-eapcet-2026-final-phase": {
+    "category": "Engineering & Agriculture Admissions - Andhra Pradesh",
+    "title": "AP EAPCET 2026: Final Phase Counselling Registrations and BiPC Web Options Open",
+    "author": "AP Education Desk",
+    "date": "August 18, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Andhra Pradesh State Council of Higher Education (APSCHE) has opened the registration for the AP EAPCET (EAMCET) 2026 final phase counselling starting August 17, 2026 [1.4.2]. Meanwhile, the BiPC stream students are actively participating in their Phase 1 choice filling."
+      },
+      {
+        "heading": "Important Deadlines and Schedule",
+        "text": "Candidates must strictly adhere to the updated schedule for both the MPC final phase and the BiPC phase 1 rounds:",
+        "list": [
+          "BiPC Document Verification: The online document verification for BiPC Phase 1 candidates concludes today, August 18, 2026 [1.4.2].",
+          "BiPC Web Options: The choice-filling window for the BiPC stream remains active until August 19, 2026.",
+          "Final Phase Allotment: The final phase seat allotment results for AP EAPCET 2026 are scheduled to be declared on August 26, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for AP EAPCET Final Phase",
+      "description": "Visit the official APSCHE portal to register for the final phase or to complete your BiPC choice filling.",
+      "buttonText": "Check APSCHE Portal",
+      "link": "https://cets.apsche.ap.gov.in/"
+    }
+  },
   "kcet-2026-round-2-counselling": {
     "category": "Engineering Admissions - Karnataka",
     "title": "KCET 2026: Round 2 Option Entry Closes, Provisional Allotment on Aug 19",

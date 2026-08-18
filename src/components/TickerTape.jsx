@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
-    text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE Second Phase Allotment List is published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf",
+    text: "TNEA 2026: Round 3 Choice Filling Closes Tomorrow; Submit Preferences Now.",
+    link: "/blog/tnea-2026-round-3-closing-soon",
     isNew: true
   },
   {
     id: 2,
-    text: "KEAM 2026 - ALLOTMENT TO Engineering COURSE Third Phase Allotment List is published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/p3_engg_provi2.pdf",
+    text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE Second Phase Allotment List is published.",
+    link: "https://cee.kerala.gov.in/keam2026/list/allot/p2_bpharm_provi.pdf",
     isNew: true
   },
   {
