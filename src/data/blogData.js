@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "keam-2026-bpharm-third-phase-allotment": {
+    "category": "Pharmacy Admissions - Kerala",
+    "title": "KEAM 2026: Provisional Third Phase Allotment List for BPharm Course Released",
+    "author": "Kerala Admissions Desk",
+    "date": "August 19, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has published the provisional Third Phase Allotment list for admission to the BPharm course under KEAM 2026 [1.1.2]. Candidates who participated in the counselling process can now check their allotment status on the official portal."
+      },
+      {
+        "heading": "Important Guidelines for Allotted Candidates",
+        "text": "Since this is a provisional list, candidates should wait for the final allotment details before proceeding to the colleges. Key points include:",
+        "list": [
+          "Check Allotment: Log in to the CEE Kerala portal to view your provisional seat allotment status for the BPharm course [1.1.2].",
+          "Final Allotment: The final third phase allotment list will be published shortly, followed by detailed instructions for fee payment and admission.",
+          "Reporting: Once the final allotment is declared, candidates must report to the allotted institutions within the stipulated timeline to secure their admission."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KEAM BPharm Allotment",
+      "description": "Visit the official CEE Kerala portal to download the provisional third phase allotment list for BPharm.",
+      "buttonText": "View Allotment",
+      "link": "https://cee.kerala.gov.in/keam2026/list/allot/p3_bpharm_provi.pdf"
+    }
+  },
+  "kcet-2026-round-2-provisional-allotment": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Provisional Seat Allotment Result Declared Today",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 19, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) is set to release the KCET 2026 Round 2 provisional seat allotment result today, August 19, 2026 [1.2.2]. Candidates can check their status on the official KEA portal, with the link expected to activate between 2 PM and 5 PM."
+      },
+      {
+        "heading": "Next Steps After Allotment",
+        "text": "Once the provisional list is out, candidates must carefully review their allotted seats and decide on the available choices:",
+        "list": [
+          "Choice 1: Confirm the accepted seat, pay the tuition fees online, and report to the allotted college before the deadline [1.2.3].",
+          "Choice 2: Accept the allotted seat but hold it while opting to participate in higher order options in Round 3.",
+          "Choice 3: Reject the currently allotted seat and participate in Round 3 with fresh hopes for higher options."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KCET Round 2 Result",
+      "description": "Log into the official KEA portal using your CET Number to access your provisional allotment letter.",
+      "buttonText": "View Allotment",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "tnea-2026-round-3-choice-filling-ends": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 3 Choice Filling Concludes Today at 5 PM",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 19, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "Attention engineering aspirants in Tamil Nadu: The choice-filling window for TNEA 2026 Round 3 counselling will officially close today, August 19, 2026, at 5:00 PM [1.3.1]. Candidates with general ranks between 1,31,094 and 2,33,812 must finalize their preferences immediately."
+      },
+      {
+        "heading": "Upcoming Important Dates",
+        "text": "Once the choice filling concludes, the Directorate of Technical Education (DoTE) will proceed with the seat allotment process based on rank, community, and preference order:",
+        "list": [
+          "Tentative Allotment: The tentative seat allotment list will be published on August 21, 2026 [1.3.1].",
+          "Allotment Confirmation: Candidates must confirm their tentative allotment online between August 21 and August 22, 2026.",
+          "Provisional Allotment: The final provisional allotment for Round 3 will be released on August 23, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Finalize TNEA Choices",
+      "description": "Log in to the TNEA portal immediately to lock your college and branch preferences before the 5 PM deadline.",
+      "buttonText": "Go to TNEA Portal",
+      "link": "https://www.tneaonline.org/"
+    }
+  },
   "kcet-2026-round-2-mock-allotment": {
     "category": "Engineering Admissions - Karnataka",
     "title": "KCET 2026: Round 2 Mock Allotment Released, Provisional Result on August 19",
