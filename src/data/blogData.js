@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "kcet-2026-round-2-option-entry-extended": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Web Options Modification Extended Till August 20",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 20, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) has extended the deadline for candidates to modify their web options for the KCET 2026 Round 2 counselling [1.2.3]. Eligible candidates can add, delete, or rearrange their college and course preferences until August 20, 2026."
+      },
+      {
+        "heading": "Impact on Seat Allotment Schedule",
+        "text": "Due to the extension of the option entry window, the release of the provisional seat allotment result has been postponed. Here is what you need to know:",
+        "list": [
+          "Deadline: Make sure to finalize and submit your updated web options before the portal closes on August 20, 2026 [1.2.3].",
+          "Provisional Result: The KCET Round 2 provisional seat allotment result, originally expected on August 19, will now be published after August 20.",
+          "Final Check: Remember that the mock allotment published earlier was only indicative. Utilize this window to refine your choices based on the mock cutoffs."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Modify KCET Web Options",
+      "description": "Log into the official KEA portal immediately to adjust your Round 2 choices before the deadline expires.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "ap-eapcet-2026-bipc-change-options": {
+    "category": "Pharmacy & Agriculture Admissions - Andhra Pradesh",
+    "title": "AP EAPCET 2026: BiPC Phase 1 Change of Options Window Opens Today",
+    "author": "AP Education Desk",
+    "date": "August 20, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Andhra Pradesh State Council of Higher Education (APSCHE) has activated the 'Change of Options' facility for BiPC stream candidates participating in the AP EAPCET 2026 Phase 1 counselling. This one-day window is available only on August 20, 2026."
+      },
+      {
+        "heading": "Upcoming Counselling Schedule",
+        "text": "This is the final opportunity for students to alter their preferred Agriculture and Pharmacy colleges before the seat allocation is processed. Keep these dates in mind:",
+        "list": [
+          "Modification Window: Make any necessary changes to your web options by the end of today, August 20, 2026 [1.4.3].",
+          "Seat Allotment: The Phase 1 seat allotment results for the BiPC stream will be officially declared on August 23, 2026.",
+          "College Reporting: Allotted candidates must self-report online and physically join their designated colleges between August 24 and August 27, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Update BiPC Web Options",
+      "description": "Log in to the official AP EAPCET counselling portal to finalize or modify your college preferences today.",
+      "buttonText": "Check APSCHE Portal",
+      "link": "https://cets.apsche.ap.gov.in/"
+    }
+  },
+  "ap-eapcet-2026-mpc-final-phase-deadline": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAPCET 2026: MPC Final Phase Counselling Registration Concludes Today",
+    "author": "Engineering Admissions Desk",
+    "date": "August 20, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Today, August 20, 2026, is the final day for engineering aspirants to register and pay the processing fee for the AP EAPCET (MPC) Final Phase counselling [1.4.2]. Candidates who missed the first phase or wish to participate again must complete their registration immediately."
+      },
+      {
+        "heading": "Final Phase Timeline",
+        "text": "Following the registration closure, the final phase will progress rapidly to ensure timely admissions. Ensure you follow these upcoming steps:",
+        "list": [
+          "Document Verification: Online and offline document verification for newly registered candidates will conclude on August 21, 2026 [1.4.2].",
+          "Web Options Entry: The choice-filling window for the final phase is actively open and will remain accessible until August 22, 2026.",
+          "Final Allotment Result: The seat allotment result for this concluding phase will be published on August 26, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Complete MPC Registration",
+      "description": "Visit the APSCHE portal before the end of the day to register and pay the fee for the Final Phase counselling.",
+      "buttonText": "Register Now",
+      "link": "https://cets.apsche.ap.gov.in/"
+    }
+  },
   "keam-2026-bpharm-third-phase-allotment": {
     "category": "Pharmacy Admissions - Kerala",
     "title": "KEAM 2026: Provisional Third Phase Allotment List for BPharm Course Released",
