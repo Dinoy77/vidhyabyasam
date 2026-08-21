@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "tnea-2026-round-3-tentative-allotment": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 3 Tentative Seat Allotment Result Released Today",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, has officially released the tentative seat allotment result for the third round of TNEA 2026 counselling today, August 21, 2026 [1.1.2]. Candidates who participated in the choice-filling window can now view their allotment status online."
+      },
+      {
+        "heading": "Next Steps for Allotted Candidates",
+        "text": "Candidates with general ranks between 1,31,094 and 2,33,812 must carefully review their allotted seats. Keep these guidelines in mind:",
+        "list": [
+          "Allotment Confirmation: Candidates must confirm their tentative allotment online by tomorrow, August 22, 2026, before 5 PM to avoid seat cancellation [1.1.2].",
+          "Provisional Allotment: The provisional allotment for candidates who accept or opt for upward movement will be released on August 23, 2026.",
+          "Reporting Dates: Final reporting and joining at the allotted colleges are scheduled from August 23 to August 27, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check TNEA Round 3 Allotment",
+      "description": "Log into the official TNEA portal to view your tentative seat allotment and submit your confirmation.",
+      "buttonText": "Go to TNEA Online",
+      "link": "https://www.tneaonline.org/"
+    }
+  },
+  "ap-eapcet-2026-final-phase-verification": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAPCET 2026: Final Phase Certificate Verification Ends Today, Web Options Active",
+    "author": "AP Education Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "For engineering aspirants participating in the AP EAPCET 2026 final phase counselling, today, August 21, 2026, marks the final day to complete the online certificate verification process [1.3.1]. Simultaneously, the web options entry portal is actively accepting college preferences."
+      },
+      {
+        "heading": "Crucial Deadlines for Final Phase",
+        "text": "The final phase counselling is progressing rapidly. Candidates must ensure they meet the upcoming deadlines:",
+        "list": [
+          "Web Options Entry: The choice-filling window remains active until August 22, 2026 [1.3.1]. Ensure you save your preferences on the cap.apcfss.in portal.",
+          "Options Modification: A final opportunity to modify the already exercised web options will be available for one day on August 23, 2026.",
+          "Final Allotment: The final phase seat allotment results are scheduled to be published on August 26, 2026, after 6:00 PM."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Enter AP EAPCET Web Options",
+      "description": "Visit the official APSCHE counselling portal to verify your document status and lock your college preferences.",
+      "buttonText": "Check APSCHE Portal",
+      "link": "https://cap.apcfss.in/"
+    }
+  },
+  "kcet-2026-round-2-provisional-awaited": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Option Modification Closes, Provisional Result Awaited",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) concluded the extended option modification window for KCET 2026 Round 2 counselling at 9 AM on August 20, 2026 [1.2.1]. Candidates are now awaiting the declaration of the provisional seat allotment results."
+      },
+      {
+        "heading": "Anticipated Schedule and Updates",
+        "text": "Following the closure of the web options entry, the seat allotment process is underway. Here is the current status:",
+        "list": [
+          "Provisional Allotment Delay: Originally scheduled for August 19, the Round 2 provisional seat allotment was postponed due to the extension of the option entry deadline [1.2.1].",
+          "Expected Release: The provisional allotment result is expected to be released shortly. Candidates should actively monitor the KEA portal.",
+          "Next Steps: Once the final allotment is declared, candidates must exercise their choices (Choice 1 or 2), pay the required tuition fees, and download their confirmation slips."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track KCET Seat Allotment",
+      "description": "Keep an eye on the official KEA portal to check for live updates regarding the Round 2 provisional allotment.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
   "kcet-2026-round-2-option-entry-extended": {
     "category": "Engineering Admissions - Karnataka",
     "title": "KCET 2026: Round 2 Web Options Modification Extended Till August 20",
@@ -61,7 +145,7 @@ export const blogArticles = {
     "author": "Engineering Admissions Desk",
     "date": "August 20, 2026",
     "readTime": "3 Min Read",
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2400&q=80",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
     "content": [
       {
         "text": "Today, August 20, 2026, is the final day for engineering aspirants to register and pay the processing fee for the AP EAPCET (MPC) Final Phase counselling [1.4.2]. Candidates who missed the first phase or wish to participate again must complete their registration immediately."
