@@ -1,4 +1,172 @@
 export const blogArticles = {
+  "ap-eamcet-2026-final-phase-seat-allotment": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAMCET 2026: Final Phase Seat Allotment Released, College Reporting Begins Today",
+    "author": "AP Education Desk",
+    "date": "August 27, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://education.sakshi.com/sites/default/files/images/2022/07/11/ap-eamcet-1657525909.jpg",
+    "content": [
+      {
+        "text": "The Andhra Pradesh State Council of Higher Education (APSCHE) has officially declared the AP EAMCET 2026 final phase seat allotment results on August 26 [1.2.1]. Candidates who participated in the final phase counselling can now download their provisional allotment letters from the official cap.apcfss.in portal."
+      },
+      {
+        "heading": "Self-Reporting and Admission Deadlines",
+        "text": "With the final seat allocations published, candidates must quickly proceed to confirm their admissions to avoid losing their seats. Here are the immediate next steps:",
+        "list": [
+          "Online Self-Reporting: Candidates must complete the self-reporting process online between August 27 and August 31, 2026 [1.2.1].",
+          "Physical College Reporting: Along with the online confirmation, students have to physically report to their allotted colleges with all original documents by August 31, 2026.",
+          "Required Documents: Ensure you carry your AP EAMCET rank card, hall ticket, allotment letter, marks memos, and caste certificates for verification."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download AP EAMCET Allotment",
+      "description": "Log into the official APSCHE portal using your hall ticket number and date of birth to check your final phase allotment.",
+      "buttonText": "Check Allotment",
+      "link": "https://cap.apcfss.in/"
+    }
+  },
+  "kcet-2026-round-2-fee-payment": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Fee Payment Ends Today, Last Chance to Confirm Seats",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 27, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the declaration of the KCET Round 2 final seat allotment result by the Karnataka Examinations Authority (KEA), today marks the last day for candidates to pay their seat acceptance fees [1.3.1]. The window for online and challan payments will strictly close on August 27, 2026."
+      },
+      {
+        "heading": "Choice Selection and Admission Order",
+        "text": "For this round, KEA only allowed Choice 1 (accept and freeze) or Choice 4 (exit the process). If you have been allotted a seat:",
+        "list": [
+          "Fee Payment Deadline: Candidates who opted for Choice 1 must complete the fee payment by the end of banking hours today, August 27 [1.3.1].",
+          "Download Admission Order: Only after successful fee payment can you download the official Admission Order from the KEA dashboard.",
+          "Final Reporting: The absolute final deadline to physically report to the allotted institute with all original documents is August 28, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Pay KCET Round 2 Fees",
+      "description": "Access the KEA portal immediately to make your choice, process the payment, and download your final admission order.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "kerala-neet-ug-2026-round-1-allotment": {
+    "category": "Medical Admissions - Kerala",
+    "title": "Kerala NEET UG 2026: Final Round 1 Seat Allotment Declared Today",
+    "author": "Kerala Admissions Desk",
+    "date": "August 27, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has released the final Round 1 seat allotment list for Kerala NEET UG 2026 admissions today, August 27, 2026 [1.4.1]. This follows the provisional allotment published on August 25 and the subsequent grievance resolution period."
+      },
+      {
+        "heading": "Admission Guidelines for Round 1",
+        "text": "Over 5,800 candidates have been allotted seats across government and private medical and dental colleges in the state. Allotted candidates must now proceed with the final admission formalities:",
+        "list": [
+          "Final Allotment Letter: Candidates can log in to the CEE Kerala portal to view their definitive college assignment and download the allotment memo.",
+          "Fee Remittance: As per the schedule, candidates must remit the requisite fee to CEE online or through designated post offices to secure their seats.",
+          "Physical Joining: Students must report to the allotted medical or dental colleges within the timeframe specified in the allotment memo to complete document verification."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check Kerala NEET Allotment",
+      "description": "Log into the official CEE Kerala candidate portal to download your final Round 1 seat allotment memo.",
+      "buttonText": "View Allotment",
+      "link": "https://cee.kerala.gov.in/"
+    }
+  },
+  "tnea-2026-round-3-tentative-allotment": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Round 3 Tentative Seat Allotment Result Released Today",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, has officially released the tentative seat allotment result for the third round of TNEA 2026 counselling today, August 21, 2026 [1.1.2]. Candidates who participated in the choice-filling window can now view their allotment status online."
+      },
+      {
+        "heading": "Next Steps for Allotted Candidates",
+        "text": "Candidates with general ranks between 1,31,094 and 2,33,812 must carefully review their allotted seats. Keep these guidelines in mind:",
+        "list": [
+          "Allotment Confirmation: Candidates must confirm their tentative allotment online by tomorrow, August 22, 2026, before 5 PM to avoid seat cancellation [1.1.2].",
+          "Provisional Allotment: The provisional allotment for candidates who accept or opt for upward movement will be released on August 23, 2026.",
+          "Reporting Dates: Final reporting and joining at the allotted colleges are scheduled from August 23 to August 27, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check TNEA Round 3 Allotment",
+      "description": "Log into the official TNEA portal to view your tentative seat allotment and submit your confirmation.",
+      "buttonText": "Go to TNEA Online",
+      "link": "https://www.tneaonline.org/"
+    }
+  },
+  "ap-eapcet-2026-final-phase-verification": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAPCET 2026: Final Phase Certificate Verification Ends Today, Web Options Active",
+    "author": "AP Education Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "For engineering aspirants participating in the AP EAPCET 2026 final phase counselling, today, August 21, 2026, marks the final day to complete the online certificate verification process [1.3.1]. Simultaneously, the web options entry portal is actively accepting college preferences."
+      },
+      {
+        "heading": "Crucial Deadlines for Final Phase",
+        "text": "The final phase counselling is progressing rapidly. Candidates must ensure they meet the upcoming deadlines:",
+        "list": [
+          "Web Options Entry: The choice-filling window remains active until August 22, 2026 [1.3.1]. Ensure you save your preferences on the cap.apcfss.in portal.",
+          "Options Modification: A final opportunity to modify the already exercised web options will be available for one day on August 23, 2026.",
+          "Final Allotment: The final phase seat allotment results are scheduled to be published on August 26, 2026, after 6:00 PM."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Enter AP EAPCET Web Options",
+      "description": "Visit the official APSCHE counselling portal to verify your document status and lock your college preferences.",
+      "buttonText": "Check APSCHE Portal",
+      "link": "https://cap.apcfss.in/"
+    }
+  },
+  "kcet-2026-round-2-provisional-awaited": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 2 Option Modification Closes, Provisional Result Awaited",
+    "author": "Karnataka Admissions Desk",
+    "date": "August 21, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) concluded the extended option modification window for KCET 2026 Round 2 counselling at 9 AM on August 20, 2026 [1.2.1]. Candidates are now awaiting the declaration of the provisional seat allotment results."
+      },
+      {
+        "heading": "Anticipated Schedule and Updates",
+        "text": "Following the closure of the web options entry, the seat allotment process is underway. Here is the current status:",
+        "list": [
+          "Provisional Allotment Delay: Originally scheduled for August 19, the Round 2 provisional seat allotment was postponed due to the extension of the option entry deadline [1.2.1].",
+          "Expected Release: The provisional allotment result is expected to be released shortly. Candidates should actively monitor the KEA portal.",
+          "Next Steps: Once the final allotment is declared, candidates must exercise their choices (Choice 1 or 2), pay the required tuition fees, and download their confirmation slips."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track KCET Seat Allotment",
+      "description": "Keep an eye on the official KEA portal to check for live updates regarding the Round 2 provisional allotment.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
   "kcet-2026-round-2-option-entry-extended": {
     "category": "Engineering Admissions - Karnataka",
     "title": "KCET 2026: Round 2 Web Options Modification Extended Till August 20",
@@ -61,7 +229,7 @@ export const blogArticles = {
     "author": "Engineering Admissions Desk",
     "date": "August 20, 2026",
     "readTime": "3 Min Read",
-    "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2400&q=80",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
     "content": [
       {
         "text": "Today, August 20, 2026, is the final day for engineering aspirants to register and pay the processing fee for the AP EAPCET (MPC) Final Phase counselling [1.4.2]. Candidates who missed the first phase or wish to participate again must complete their registration immediately."
