@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "neet-ug-2026-round-1-reporting": {
+    "category": "Medical Admissions - National",
+    "title": "NEET UG 2026: Round 1 Counselling College Reporting Concludes Today",
+    "author": "Medical Admissions Desk",
+    "date": "August 31, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) is set to conclude the institute reporting process for the NEET UG 2026 Round 1 counselling today, August 31, 2026 [1.2.1]. Candidates who secured a seat in the first round must complete their admission formalities by the end of the day to avoid forfeiture."
+      },
+      {
+        "heading": "Reporting Guidelines and Next Steps",
+        "text": "Candidates must physically report to their allotted medical or dental colleges. Here are the essential requirements:",
+        "list": [
+          "Document Verification: Carry all original documents, including the NEET UG admit card, scorecard, MCC seat allotment letter, and class 10/12 mark sheets [1.2.3].",
+          "Admission Formalities: Complete all remaining admission procedures and pay the requisite college fees as instructed by the allotted institute.",
+          "Round 2 Updates: Candidates aiming for seat upgrades or those who missed out in Round 1 should await the official schedule for MCC NEET UG Round 2 counselling, which will be announced shortly."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check MCC Updates",
+      "description": "Visit the official MCC portal for the latest announcements regarding Round 2 counselling and reporting extensions.",
+      "buttonText": "Visit MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
+  "tnea-2026-supplementary-registration": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Supplementary Counselling Registration Ends Today",
+    "author": "Tamil Nadu Education Desk",
+    "date": "August 31, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, will close the registration window for the TNEA 2026 Supplementary Counselling today, August 31, 2026 [1.4.1]. With approximately 54,000 engineering seats remaining vacant after the three main rounds, this phase offers a crucial final opportunity for eligible aspirants."
+      },
+      {
+        "heading": "Eligibility and Registration Details",
+        "text": "The supplementary round is specifically designed for candidates who missed earlier opportunities. Key details include:",
+        "list": [
+          "Who Can Apply: Students who missed the general counselling registration, those who passed supplementary 12th exams, or candidates who failed to secure a seat in previous rounds [1.4.2].",
+          "Online Registration: The application link is currently active at suppl.tneaonline.org. Make sure to complete the process before the midnight deadline.",
+          "Upcoming Schedule: DoTE will announce the dates for choice filling and seat allotment for the supplementary round shortly after registration concludes."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for TNEA Supplementary",
+      "description": "Access the TNEA supplementary portal immediately to complete your registration before the window closes today.",
+      "buttonText": "Apply Now",
+      "link": "https://suppl.tneaonline.org/"
+    }
+  },
+  "mht-cet-2026-cap-round-4": {
+    "category": "Engineering Admissions - Maharashtra",
+    "title": "MHT CET 2026: CAP Round 4 Option Entry Open for B.Tech Admissions",
+    "author": "State Admissions Desk",
+    "date": "August 31, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Maharashtra State CET Cell has initiated the option entry process for MHT CET 2026 CAP Round 4 counselling [1.1.2]. With over 23,000 vacant seats available, this round provides engineering and technology aspirants another chance to secure admissions in participating institutes."
+      },
+      {
+        "heading": "Option Entry Timeline and Process",
+        "text": "Candidates must carefully exercise their web options to maximize their chances of securing a preferred seat. Keep the following timeline in mind:",
+        "list": [
+          "Option Entry Window: The choice filling portal is active from August 30 and will close on September 1, 2026 [1.1.2].",
+          "Provisional Allotment: The seat allotment result for CAP Round 4 is scheduled to be declared on September 3, 2026.",
+          "Seat Acceptance: Allotted candidates must confirm their seats and report to the respective institutes between September 4 and September 7, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Complete MHT CET Option Entry",
+      "description": "Log into the official Maharashtra CET Cell portal to finalize and lock your college choices for CAP Round 4.",
+      "buttonText": "Submit Options",
+      "link": "https://cetcell.mahacet.org/"
+    }
+  },
   "ap-eamcet-2026-final-phase-seat-allotment": {
     "category": "Engineering Admissions - Andhra Pradesh",
     "title": "AP EAMCET 2026: Final Phase Seat Allotment Released, College Reporting Begins Today",
