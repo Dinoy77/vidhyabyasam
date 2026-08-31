@@ -1,5 +1,89 @@
 [
   {
+    "id": 2608290251,
+    "icon": "📊",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Result Live",
+    "title": "NTA Declares UGC NET June 2026 Results for 84 Subjects; Download Scorecard",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-28",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The National Testing Agency (NTA) has officially declared the UGC NET June 2026 results for 84 subjects. Candidates who appeared for the CBT exam can now download their official scorecards from the official website using their application number and date of birth. Note that the results for English, Commerce, and Sociology are delayed as their re-examination is scheduled for September 9 and 10, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
+    "applyLink": "https://ugcnet.nta.ac.in/",
+    "courses": [
+      "Ph.D. Eligibility",
+      "Junior Research Fellowship (JRF)",
+      "Assistant Professor"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608210250,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA 2026 Round 3 Seat Allotment Link Live: How to Check Result",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-21",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Directorate of Technical Education (DoTE), Tamil Nadu, has officially released the tentative seat allotment result for Round 3 of TNEA 2026 counselling. Engineering candidates who participated in the choice-filling window can check their allotment status on the official portal. Allotted candidates must confirm their seats by August 22, 2026, to avoid cancellation.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.tneaonline.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2608210249,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "NEET 2026 Round 1 Provisional Seat Allotment Result Out at mcc.nic.in",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-21",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has published the provisional seat allotment result for Round 1 of NEET UG Counselling 2026. Candidates seeking 15% All India Quota (AIQ) seats in MBBS and BDS programs can download the allotment PDF from the official website. Students must report any discrepancies through the MCC grievance portal before the final seat allotment is declared.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2608210246,
+    "icon": "📝",
+    "color": "#D97706",
+    "bg": "#FEF3C7",
+    "tag": "Answer Key Out",
+    "title": "NTA clarifies UGC-NET 2026 answer key challenge and fee refund rules",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-08-21",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The National Testing Agency (NTA) has issued an official clarification regarding the UGC-NET June 2026 answer key challenge process. The NTA stated that if a single candidate's challenge is accepted by subject experts, the revised answer key will benefit all candidates across the board. Additionally, the ₹200 processing fee paid per challenged question will be fully refunded for valid objections.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
+    "applyLink": "https://ugcnet.nta.ac.in/",
+    "courses": [
+      "Ph.D. Eligibility",
+      "Junior Research Fellowship (JRF)",
+      "Assistant Professor"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2608271149,
     "icon": "🖥️",
     "color": "#7C3AED",
