@@ -10,16 +10,16 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-31",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding Maharashtra NEET UG Round 1 Seat Allotment Result 2026 Released; Download Allotment Letter. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The State Common Entrance Test Cell, Maharashtra, has officially released the NEET UG Round 1 seat allotment result for MBBS and BDS admissions. Candidates can download the selection list PDF and their individual allotment letters from the official portal at cetcell.mahacet.org. Allotted students must physically report to their respective colleges to complete document verification and fee payment between September 1 and September 5, 2026.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://cetcell.mahacet.org/",
     "courses": [
       "MBBS",
       "BDS",
       "BAMS",
       "BHMS"
     ],
-    "state": "All India"
+    "state": "Maharashtra"
   },
   {
     "id": 2608310721,
@@ -32,38 +32,16 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-31",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding Tripura NEET 2026 Counselling Round 1 Seat Allotment Result (August 31): Direct Link. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The Directorate of Medical Education (DME) Tripura and TRMCC are processing the Round 1 seat allotment results for state-quota undergraduate medical admissions. Candidates who completed their choice filling can log into trmcc.admissions.nic.in to check their provisional allocation status. Selected candidates will have to accept their seats online and report to their allotted medical or dental institutions with original documents before the final admission deadline.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://trmcc.admissions.nic.in/",
     "courses": [
       "MBBS",
       "BDS",
       "BAMS",
       "BHMS"
     ],
-    "state": "All India"
-  },
-  {
-    "id": 2608310720,
-    "icon": "📝",
-    "color": "#D97706",
-    "bg": "#FEF3C7",
-    "tag": "Answer Key Out",
-    "title": "NEET PG 2026 Answer Key Soon; Check Marking Scheme, Tie-Breaking Rules",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning NEET PG 2026 Answer Key Soon; Check Marking Scheme, Tie-Breaking Rules. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
+    "state": "Tripura"
   },
   {
     "id": 2608310719,
@@ -76,9 +54,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-31",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning NEET PG Answer Key Update: Re Exam Date Announced for 2,445 Candidates | Here's Why?. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
+    "description": "The National Board of Examinations in Medical Sciences (NBEMS) has released an important update regarding the NEET PG 2026 examination. A re-examination has been officially scheduled for 2,445 specific candidates due to technical anomalies logged during their initial testing session. Affected candidates must download their revised admit cards from natboard.edu.in. The provisional answer keys for all remaining candidates will be published shortly after this re-examination concludes.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://natboard.edu.in/",
     "courses": [
       "MBBS",
       "BDS",
@@ -98,9 +76,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-31",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding NEET UG Counselling 2026: MCC asks float candidates to upload documents by Aug 31. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "The Medical Counselling Committee (MCC) has issued a strict deadline for NEET UG 2026 candidates who opted for the 'Float' (upgradation) option in Round 1. These candidates must submit their willingness and upload all required essential documents on the MCC portal by 2:00 PM on August 31, 2026. Furthermore, physical reporting at the allotted institute must be completed by 5:00 PM on the same day to prevent seat cancellation.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://mcc.nic.in/",
     "courses": [
       "MBBS",
       "BDS",
@@ -120,9 +98,9 @@
     "date": "Action Required Now",
     "publishedAt": "2026-08-31",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official institutional release regarding TNEA 2026 Supplementary Counselling Registration Closes Today; 53668 Across 422 Colleges. This major advisory impacts candidates participating in the current admission cycle for B.Tech, B.E. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "description": "The Directorate of Technical Education (DoTE), Tamil Nadu, will close the registration window for TNEA 2026 Supplementary Counselling today. Candidates who missed the general counselling rounds can apply for the remaining vacant B.E and B.Tech seats across 422 participating engineering colleges. Interested applicants must complete their registration, document upload, and fee payment on tneaonline.org before the deadline to participate in the upcoming supplementary choice-filling phase.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://www.tneaonline.org/",
     "courses": [
       "B.Tech",
       "B.E"
@@ -130,68 +108,44 @@
     "state": "Tamil Nadu"
   },
   {
-    "id": 2608310716,
-    "icon": "🎓",
-    "color": "#1B6CA8",
-    "bg": "#EBF5FF",
-    "tag": "LIVE UPDATE",
-    "title": "Maharashtra NEET UG 2026 Round 1 offers MBBS and BDS admission to 10,509 students across state ",
+    "id": 2608300254,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "Maharashtra NEET UG Counselling 2026: Round 1 Choice Filling Concludes; Allotment Soon",
     "isNotification": false,
     "date": "Action Required Now",
-    "publishedAt": "2026-08-31",
+    "publishedAt": "2026-08-30",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding Maharashtra NEET UG 2026 Round 1 offers MBBS and BDS admission to 10,509 students across state quota; che. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
-    "applyLink": "",
+    "description": "The State Common Entrance Test Cell, Maharashtra, has officially concluded the Round 1 choice and preference filling window for NEET UG 2026 counselling, which closed on August 29, 2026, at 5:30 PM. The examination authority is now processing the CAP Round 1 seat allotments for MBBS and BDS candidates. Aspirants are advised to monitor the official portal closely, as the provisional allotment results will be published shortly.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://cetcell.mahacet.org/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
+    "state": "Maharashtra"
   },
   {
-    "id": 2608310714,
+    "id": 2608290253,
     "icon": "🎯",
     "color": "#059669",
     "bg": "#ECFDF5",
     "tag": "Allotment Out",
-    "title": "West Bengal NEET Counselling 2026 Round 1 Seat Allotment Result OUT Today: Direct Link at wbmcc",
+    "title": "KEA UGCET 2026 Round 2 Result Out: Seat Allotment Link Active",
     "isNotification": true,
     "date": "Action Required Now",
-    "publishedAt": "2026-08-31",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding West Bengal NEET Counselling 2026 Round 1 Seat Allotment Result OUT Today: Direct Link at wbmcc.nic.in. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "publishedAt": "2026-08-29",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Karnataka Examinations Authority (KEA) has officially released the UGCET 2026 Round 2 seat allotment results. Candidates who awaited their KCET rank-based allotment can now check whether they have secured a seat in their preferred course and college on the official portal. Students must download their allotment order, remit the required fees, and report to their assigned institutes before the deadline.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://cetonline.karnataka.gov.in/kea/",
     "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "B.Tech",
+      "B.E"
     ],
-    "state": "All India"
-  },
-  {
-    "id": 2608310713,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "UGC-NET results out: 97,434 qualify for PhD, over 4,200 qualify for research fellowship",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-08-31",
-    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Results and performance tracking announcement for UGC-NET results out: 97,434 qualify for PhD, over 4,200 qualify for research fellowship. The evaluation board has activated the official scorecard lookup links for Ph.D. Eligibility, Junior Research Fellowship (JRF) aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "Ph.D. Eligibility",
-      "Junior Research Fellowship (JRF)"
-    ],
-    "state": "All India"
+    "state": "Karnataka"
   },
   {
     "id": 2608290251,
