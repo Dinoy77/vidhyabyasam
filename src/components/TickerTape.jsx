@@ -4,18 +4,24 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
-    text: "KEAM 2026 - ALLOTMENT TO BPHARM COURSE Third Phase Allotment List is published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/p3_bpharm_provi.pdf",
-    isNew: true
+    text: "KEAM 2026 - ALLOTMENT TO MBBS & BDS COURSES: First Phase Centralised Allotment List is published.",
+    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p1.pdf",
+    isNew: true,
   },
   {
     id: 2,
-    text: "TNEA 2026: Round 3 Choice Filling Closes Tomorrow; Submit Preferences Now.",
-    link: "/blog/tnea-2026-round-3-closing-soon",
-    isNew: true
+    text: "KCET 2026: Round 1 Seat Allotment Result Declared; Download Allotment Order.",
+    link: "https://keaonline.karnataka.gov.in/main/checkresult.php",
+    isNew: true,
   },
+  // {
+  //   id: 3,
+  //   text: "Tamil Nadu AYUSH & BNYS 2026: Official Merit & Rank List Released; Counselling Begins Sept 3.",
+  //   link: "https://tnhealth.tn.gov.in/",
+  //   isNew: true,
+  // },
   {
-    id: 3,
+    id: 4,
     text: "KEAM College Predictor: Enter your rank to predict admission chances!",
     link: "/keam-predictor",
     isNew: true

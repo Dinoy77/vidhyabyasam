@@ -1,4 +1,88 @@
 export const blogArticles = {
+  "keam-2026-mbbs-phase-1-allotment": {
+    "category": "Medical Admissions - Kerala",
+    "title": "KEAM 2026: Phase 1 MBBS/BDS Seat Allotment Result Declared",
+    "author": "Kerala Admissions Desk",
+    "date": "September 1, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has published the Phase 1 provisional seat allotment list for MBBS and BDS admissions under KEAM 2026. Medical aspirants can now verify their allotment status online."
+      },
+      {
+        "heading": "Next Steps for Allotted Candidates",
+        "text": "Candidates can check the official allotment list PDF to verify their status. Here are the immediate requirements to secure your admission:",
+        "list": [
+          "Check Allotment: Download the official Phase 1 allotment PDF from the CEE Kerala portal to find your rank and allotted college.",
+          "Fee Remittance: Candidates must pay the required token fee online to the Commissioner for Entrance Examinations to confirm their allotted seat.",
+          "College Reporting: Physically report to the allotted medical or dental college for document verification and final admission procedures as per the notified schedule."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download KEAM Phase 1 Allotment List",
+      "description": "Access the official CEE Kerala PDF to check your MBBS/BDS seat allotment status.",
+      "buttonText": "View Allotment PDF",
+      "link": "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p1.pdf"
+    }
+  },
+  "ap-eamcet-2026-classes-commence": {
+    "category": "Engineering Admissions - Andhra Pradesh",
+    "title": "AP EAMCET 2026: Engineering Colleges Commence Academic Session Today",
+    "author": "AP Education Desk",
+    "date": "September 1, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "With the conclusion of the final phase of college reporting on August 31, participating engineering and pharmacy colleges across Andhra Pradesh are officially commencing their academic sessions for the 2026-27 batch today, September 1, 2026."
+      },
+      {
+        "heading": "Important Information for Freshers",
+        "text": "Students who have confirmed their admissions are advised to report to their respective campuses. Here is what to expect in the coming days:",
+        "list": [
+          "Orientation Week: Most colleges will conduct induction and orientation programs this week to familiarize students with the curriculum, faculty, and campus facilities.",
+          "Document Submission: Ensure all pending original documents, photographs, and anti-ragging affidavits are submitted to the college administration office.",
+          "Spot Admissions: Institutes with vacant seats remaining after the final phase of APSCHE counselling may announce spot admission notifications later this week."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check Spot Admission Updates",
+      "description": "Keep an eye on the official APSCHE portal and individual college websites for upcoming spot admission notifications.",
+      "buttonText": "Check APSCHE Portal",
+      "link": "https://cets.apsche.ap.gov.in/"
+    }
+  },
+  "kcet-2026-round-1-seat-allotment": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Round 1 Seat Allotment Result Declared at kea.kar.nic.in",
+    "author": "Karnataka Admissions Desk",
+    "date": "September 1, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Karnataka Examinations Authority (KEA) has officially declared the Round 1 seat allotment results for the Karnataka Common Entrance Test (KCET) 2026. Engineering, agriculture, and pharmacy aspirants can check their allotted colleges on the KEA portal."
+      },
+      {
+        "heading": "Choice Selection and Post-Allotment Process",
+        "text": "Candidates allotted seats in the first round must log into their KEA dashboard and carefully exercise one of the four available choices:",
+        "list": [
+          "Choice 1: Accept the allotted seat, pay the tuition fee, and download the admission order to report to the college. You cannot participate in further rounds.",
+          "Choice 2: Accept the seat but hold it while participating in the next round for better options (upgradation).",
+          "Choice 3 & 4: Reject the seat to either participate in the next round with fresh options or exit the counselling process entirely."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KCET Round 1 Result",
+      "description": "Log into the official KEA portal using your CET number to view your allotment and exercise your choices.",
+      "buttonText": "View Allotment",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
   "neet-ug-2026-round-1-reporting": {
     "category": "Medical Admissions - National",
     "title": "NEET UG 2026: Round 1 Counselling College Reporting Concludes Today",
