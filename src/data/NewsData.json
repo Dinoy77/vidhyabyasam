@@ -1,5 +1,104 @@
 [
   {
+    "id": 2609020560,
+    "icon": "📊",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Result Live",
+    "title": "Andhra Pradesh NEET Counselling 2026 Round 1 Result SOON: Direct Link at drntr.uhsap.in",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-02",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Dr. YSR University of Health Sciences (YSRUHS), Andhra Pradesh, is set to release the Round 1 provisional seat allotment results for AP NEET UG 2026 state quota admissions. Candidates who submitted their web options can check their college-wise allotment status on drntr.uhsap.in using their NEET roll number and registration credentials. Shortlisted applicants must download the allotment letter and prepare documents for reporting.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
+    "applyLink": "https://drntr.uhsap.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
+    "id": 2609020559,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "COMEDK Round 4 Seat Allotment 2026 Out at comedk.org; Direct Link Here",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-02",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Consortium of Medical, Engineering, and Dental Colleges of Karnataka has declared the COMEDK UGET 2026 extended/Round 4 seat allotment results. Candidates can log into their applicant dashboard at comedk.org to review their assigned engineering institution. Candidates must confirm their decision, pay the necessary tuition fees online, and report to their allotted colleges within the stipulated deadline.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.comedk.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Karnataka"
+  },
+  {
+    "id": 2609020551,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "Telangana NEET Counselling 2026 Round 1 Seat Allotment Result: Direct Link",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-02",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Kaloji Narayana Rao University of Health Sciences (KNRUHS) has announced the provisional seat allotment results for Telangana NEET UG 2026 Round 1 Competent Authority Quota. Candidates can view the college-wise allotment lists directly on knruhs.telangana.gov.in. Selected students must pay the university registration fee online, download their allotment order, and complete physical reporting at their allotted medical or dental college.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.knruhs.telangana.gov.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Telangana"
+  },
+  {
+    "id": 2609020554,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET counselling 2026: MCC opens seat resignation facility for round 1 freeze candidates",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-02",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has officially enabled the seat resignation facility for candidates who joined during Round 1 of NEET UG 2026 Counselling. Aspirants wishing to vacate their allotted AIQ seats without penalty must generate an online resignation letter through the allotted college portal. After the specified deadline, resignations will be treated as forfeiture of security deposit as per counselling guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609020553,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "NEET MDS Counselling 2026 Round 1 Seat Allotment Result PDF Released @mcc.nic.in; 1521 Seats Al",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-02",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has published the Round 1 final seat allotment result PDF for NEET MDS 2026 Counselling across 1,521 postgraduate dental seats. Qualified dental surgeons can verify their roll numbers and allotted dental institutions on mcc.nic.in. Shortlisted candidates must download their provisional allotment memo and physically report to their respective dental colleges to complete admissions.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MDS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2609010431,
     "icon": "🎯",
     "color": "#059669",
@@ -62,7 +161,7 @@
     ],
     "state": "Andhra Pradesh"
   },
- {
+  {
     "id": 2609010427,
     "icon": "🎯",
     "color": "#059669",
