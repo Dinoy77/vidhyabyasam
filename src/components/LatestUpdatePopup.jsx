@@ -12,7 +12,7 @@ const MOCK_ANNOUNCEMENTS = [
   },
 ];
 
-export default function LatestUpdatePopup({ announcements = MOCK_ANNOUNCEMENTS }) {
+export default function LatestUpdatePopup({ announcements = MOCK_ANNOUNCEMENTS, onClose }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // Grab the specific update
@@ -44,9 +44,12 @@ export default function LatestUpdatePopup({ announcements = MOCK_ANNOUNCEMENTS }
     };
   }, [latestNews]);
 
-  const handleClose = () => {
-    setIsOpen(false);
-  };
+const handleClose = () => {
+  setIsOpen(false);
+  if (onClose) {
+    onClose();
+  }
+};
 
   if (!isOpen || !latestNews) return null;
 
