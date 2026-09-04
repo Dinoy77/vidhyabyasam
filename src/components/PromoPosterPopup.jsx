@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 export default function PromoPosterPopup({ 
-  imageUrl = "https://i.postimg.cc/52Vn5rtp/Chat-GPT-Image-Sep-2-2026-11-59-15-AM.png", 
-  blogLink = "/blog/aviation-courses-reality-check",
+  imageUrl = "https://i.postimg.cc/k5nB7RxW/Chat-GPT-Image-Sep-4-2026-03-40-52-PM.png", 
+  blogLink = "/news/tnea-supplementary-counselling-2",
   delayMs = 1500 // 1.5 second delay before popping up
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function PromoPosterPopup({
     },
     modal: {
       position: 'relative',
-      maxWidth: '500px', // Adjust this based on your poster's aspect ratio
+      maxWidth: '900px', // Adjust this based on your poster's aspect ratio
       width: '100%',
       animation: 'posterPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)', // Bouncy pop effect
       borderRadius: '12px',
