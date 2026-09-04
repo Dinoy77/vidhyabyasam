@@ -1,4 +1,61 @@
 export const blogArticles = {
+  "neet-ug-2026-round-2-registration-live": {
+    "category": "Medical Admissions - National",
+    "title": "NEET UG 2026 Round 2 Counselling Registration Commences on MCC Portal",
+    "author": "National Admissions Desk",
+    "date": "September 4, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) has commenced the Round 2 registration process for NEET UG 2026 counselling as of September 3, 2026. Candidates seeking admission to undergraduate medical programs must submit their applications before the window closes on September 8, 2026."
+      },
+      {
+        "heading": "Important Dates and Deadlines",
+        "text": "Applicants must adhere to the official schedule to avoid missing out on seat allocations.",
+        "list": [
+          "Registration Window: Open from September 3 until September 8, 2026.",
+          "Choice Filling & Locking: Choice filling concludes on September 9, 2026, with the locking window opening on September 8.",
+          "Seat Allotment Result: The provisional Round 2 allotment results will be published on September 11, 2026.",
+          "College Reporting: Allotted candidates must report to their respective institutions between September 12 and September 18, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for NEET Round 2",
+      "description": "Visit the official MCC portal to complete your registration, fee payment, and choice filling.",
+      "buttonText": "Visit MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
+  "aaccc-ayush-neet-2026-round-1": {
+    "category": "Medical Admissions - AYUSH",
+    "title": "AACCC AYUSH NEET UG 2026: Round 1 Registration Begins",
+    "author": "AYUSH Admissions Desk",
+    "date": "September 4, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the central medical counselling, the Ayush Admissions Central Counseling Committee (AACCC) has officially started the Round 1 registration for AYUSH NEET UG 2026. This counselling covers admissions for BAMS, BUMS, BSMS, and BHMS programs."
+      },
+      {
+        "heading": "Application Guidelines",
+        "text": "Eligible candidates who qualified in the NEET UG 2026 examination can apply online through the official portal.",
+        "list": [
+          "Portal Access: Applications must be submitted directly via the AACCC official website at aaccc.gov.in.",
+          "Eligibility: All candidates who have successfully passed the NEET UG examination are eligible to participate.",
+          "Video Tutorials: The committee provides detailed video tutorials to assist candidates with the registration procedure and choice-filling process."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Apply for AYUSH Counselling",
+      "description": "Log into the AACCC portal to begin your application for Ayurveda, Unani, Siddha, and Homeopathy programs.",
+      "buttonText": "Go to AACCC",
+      "link": "https://aaccc.gov.in/"
+    }
+  },
     "forensic-science-scope-future": {
     "category": "Career Guidance - Sciences",
     "title": "BSc and MSc in Forensic Science: Future Scope and Career Opportunities",
