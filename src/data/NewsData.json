@@ -1,5 +1,126 @@
 [
   {
+    "id": 2609040543,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "KCET 2026 Round 3 Counselling Registration Begins: Option Entry Open Till September 3, Check Dates",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Karnataka Examinations Authority (KEA) has commenced the web option entry and registration process for the subsequent rounds of KCET 2026 counselling. Candidates aspiring for vacant seats in B.E and B.Tech courses across state engineering colleges can log in with their CET number to rearrange, add, or delete college preferences before the portal closes for seat allotment processing.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://cetonline.karnataka.gov.in/kea/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Karnataka"
+  },
+  {
+    "id": 2609040542,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "Karnataka NEET Counselling 2026: KEA Extends UGNEET Round 1 Deadline; Check Revised Reporting Dates",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Karnataka Examinations Authority (KEA) has officially extended the reporting and document submission deadline for UGNEET 2026 Round 1 medical and dental admissions. Candidates who secured an MBBS or BDS seat in Karnataka colleges now have additional time to pay tuition fees, collect original admission orders, and report to their allotted medical institutions.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://cetonline.karnataka.gov.in/kea/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Karnataka"
+  },
+  {
+    "id": 2609040540,
+    "icon": "📝",
+    "color": "#D97706",
+    "bg": "#FEF3C7",
+    "tag": "Answer Key Out",
+    "title": "NEET PG 2026 answer key: Check out marking scheme, tie breaker criteria",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The National Board of Examinations in Medical Sciences (NBEMS) is set to release the provisional answer key for NEET PG 2026. Aspirants can evaluate their scores using the standard marking scheme (+4 for correct answers, -1 for incorrect responses). NBEMS has also highlighted updated tie-breaking rules based on higher correct responses and candidate age for the upcoming rank list declaration.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
+    "applyLink": "https://natboard.edu.in/",
+    "courses": [
+      "MD",
+      "MS",
+      "PG Diploma"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609040539,
+    "icon": "📊",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Result Live",
+    "title": "TNEA Supplementary Counselling 2026 Rank List Out; Choice Filling Starts",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Directorate of Technical Education (DoTE), Tamil Nadu, has released the TNEA 2026 Supplementary Counselling rank list on tneaonline.org. Candidates seeking admission into vacant engineering seats across state colleges can check their general rank and immediately begin choice filling through the candidate portal to secure admission.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
+    "applyLink": "https://www.tneaonline.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2609040537,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET UG Counselling 2026 Round 2 PwD Assessment Schedule",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has published the schedule for disability assessment for PwD candidates participating in NEET UG 2026 Round 2. Eligible candidates must visit designated disability certification centers nationwide to obtain an online disability certificate before the Round 2 choice filling closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609040534,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "MCC NEET Counselling 2026 Round 2 Live: Seat Matrix OUT, Registration Link OUT, Choice Filling",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-04",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has officially commenced Round 2 of NEET UG 2026 Counselling on mcc.nic.in. The comprehensive seat matrix for the 15% All India Quota (AIQ), deemed universities, and central institutes is now live. New candidates can register, pay the counselling fee, and begin locking their college preferences for MBBS and BDS seats.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2609030612,
     "icon": "📊",
     "color": "#059669",
