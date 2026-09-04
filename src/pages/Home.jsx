@@ -17,6 +17,7 @@ import { getLatestNewsFeed } from '../data/NewsData';
 // --- NEW: Import SEO Configurations ---
 import { seoConfigurations } from '../data/seoData';
 import LatestUpdatePopup from '../components/LatestUpdatePopup';
+import PromoPosterPopup from '../components/PromoPosterPopup'; // <-- NEW IMPORT
 
 export default function Home({ selectedCourse, courseSelectCount }) {
   const [activeRegion, setActiveRegion] = useState('All');
@@ -26,6 +27,9 @@ export default function Home({ selectedCourse, courseSelectCount }) {
   const [sortBy, setSortBy] = useState('rating');
   const [currentPage, setCurrentPage] = useState(1);
   const COLLEGES_PER_PAGE = 12;
+
+  // <-- NEW STATE: Tracks when the first popup is closed so we can show the poster -->
+  const [showPromo, setShowPromo] = useState(false);
 
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
   const isMobile = windowWidth < 768;
@@ -192,11 +196,17 @@ export default function Home({ selectedCourse, courseSelectCount }) {
 
   return (
     <div style={{ background: '#F8FAFC', position: 'relative' }}>
+      
       {/* 
-        Popup overlays rendered at the root level of the screen 
-        so they sit on top of all other content
+        1. When LatestUpdatePopup closes, it sets showPromo to true
       */}
-      <LatestUpdatePopup />
+      <LatestUpdatePopup onClose={() => setShowPromo(true)} />
+      
+      {/* 
+        2. Only render PromoPosterPopup AFTER showPromo is true. 
+           Add your actual image URL and Blog Link here.
+      */}
+      {showPromo && <PromoPosterPopup />}
       
       <TickerTape />
       <Hero onSearch={setSearchQuery} />
