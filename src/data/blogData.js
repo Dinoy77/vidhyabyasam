@@ -1,4 +1,87 @@
 export const blogArticles = {
+  "cat-2026-registration-deadline": {
+    "category": "Management Admissions",
+    "title": "CAT 2026 Registration Deadline Approaching: Don't Miss the September 15 Cutoff",
+    "author": "Management Desk",
+    "date": "September 8, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The registration window for the Common Admission Test (CAT) 2026 will close strictly on September 15, 2026, at 5:00 PM. With the deadline fast approaching, candidates are urged to complete their applications promptly on the official portal, iimcat.ac.in, to avoid last-minute server timeouts or payment failures."
+      },
+      {
+        "heading": "Important Application Steps",
+        "text": "Make sure you have all required documents and details ready before you start the final submission process:",
+        "list": [
+          "Required Documents: Keep your Class 10 and 12 marksheets, graduation certificates, and a recent passport-size photograph in the prescribed format ready.",
+          "No Guaranteed Extension: While past years occasionally saw deadline extensions, there is no guarantee for 2026; treat September 15 as the firm deadline.",
+          "Correction Window: A brief correction window may open later in September to allow registered candidates to fix image or signature uploads, but academic details cannot be edited."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for CAT 2026",
+      "description": "Log into the official IIM CAT portal to submit your application and pay the registration fee.",
+      "buttonText": "Visit iimcat.ac.in",
+      "link": "https://iimcat.ac.in/"
+    }
+  },
+  "nmms-scholarship-deadline-extended": {
+    "category": "Scholarships & Financial Aid",
+    "title": "NMMS Scholarship 2026-27: Education Ministry Extends Deadline to September 30",
+    "author": "Education News Desk",
+    "date": "September 8, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Ministry of Education has officially extended the application deadline for the National Means-cum-Merit Scholarship Scheme (NMMS) 2026-27 to September 30, 2026. The scheme offers one lakh fresh scholarships annually, providing Rs 12,000 per year to meritorious students from economically weaker sections to prevent dropouts after Class 8."
+      },
+      {
+        "heading": "Eligibility and Verification Updates",
+        "text": "Eligible students must first complete a One-Time Registration (OTR) on the National Scholarship Portal (NSP).",
+        "list": [
+          "Income Criteria: Students' family income must not exceed Rs 3.50 lakh per year, and they must have secured at least 55% marks in Class 7.",
+          "Verification Deadlines: The Institute Nodal Officer (INO) verification deadline is now October 15, and District Nodal Officer (DNO) verification can be completed until October 31."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Apply on the National Scholarship Portal",
+      "description": "Register and submit your NMMS application via the official government portal before the September 30 deadline.",
+      "buttonText": "Go to NSP",
+      "link": "https://scholarships.gov.in/"
+    }
+  },
+  "neet-ug-2026-round-2-choice-filling": {
+    "category": "Medical Admissions - National",
+    "title": "NEET UG 2026 Round 2 Counselling: Choice Filling Deadline Approaching",
+    "author": "Medical Admissions Desk",
+    "date": "September 8, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Candidates participating in Round 2 of the NEET UG 2026 Counselling must finalize their preferences soon, as the choice-filling window is scheduled to close on September 9, 2026. The Medical Counselling Committee (MCC) also noted that choice locking will take place between September 8 and September 9."
+      },
+      {
+        "heading": "Crucial Dates for Medical Aspirants",
+        "text": "Ensure you adhere to the revised schedule to secure your All India Quota (AIQ) or Deemed University seats.",
+        "list": [
+          "Seat Allotment: The final seat allotment result for Round 2 is scheduled to be declared on September 11, 2026.",
+          "Reporting Phase: Allotted candidates must report to their respective institutions between September 12 and September 18, 2026.",
+          "Next Steps: Round 3 counselling is tentatively scheduled to begin on September 10 for state authorities, with the AIQ stray vacancy round set for late September."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Complete Choice Filling on MCC",
+      "description": "Log into the MCC portal immediately to select and lock your college preferences before the deadline.",
+      "buttonText": "Go to MCC",
+      "link": "https://mcc.nic.in/"
+    }
+  },
   "neet-ug-2026-round-2-registration-live": {
     "category": "Medical Admissions - National",
     "title": "NEET UG 2026 Round 2 Counselling Registration Commences on MCC Portal",
