@@ -5,14 +5,14 @@
     "color": "#059669",
     "bg": "#ECFDF5",
     "tag": "Allotment Out",
-    "title": "KCET Round 3 2026 Final Seat Allotment Results Declared; Get Direct Link to Check Status here",
+    "title": "KCET Round 3 Final Seat Allotment 2026 (Out): Check Allotment Result Link & Admission Details",
     "isNotification": true,
     "date": "Action Required Now",
     "publishedAt": "2026-09-08",
     "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official seat allotment update regarding KCET Round 3 2026 Final Seat Allotment Results Declared; Get Direct Link to Check Status here. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The Karnataka Examinations Authority (KEA) has officially declared the Round 3 final seat allotment results for KCET 2026. Engineering and architecture candidates can log into the KEA portal using their CET number to check their allotted institute. Selected students must download their allotment order, remit the required fees, and complete the admission formalities before the reporting window closes.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://cetonline.karnataka.gov.in/kea/",
     "courses": [
       "B.Tech",
       "B.E"
@@ -30,16 +30,14 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-08",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding UP NEET UG Round 1 Allotment 2026 Today: Time, Link to Check. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The Directorate General of Medical Education and Training (DGME), Uttar Pradesh, has released the Round 1 seat allotment results for UP NEET UG 2026. Candidates who participated in the state counselling can view their allotment status on upneet.gov.in. Shortlisted candidates are required to download their allotment letters and complete the admission process at their assigned medical or dental colleges between September 8 and September 14, 2026.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://upneet.gov.in/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
+    "state": "Uttar Pradesh"
   },
   {
     "id": 2609080442,
@@ -52,36 +50,15 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-08",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning NBEMS to publish NEET PG 2026 provisional answer key, response sheet soon; details here. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
+    "description": "The National Board of Examinations in Medical Sciences (NBEMS) is expected to publish the NEET PG 2026 provisional answer key and candidate response sheets shortly. Medical graduates who appeared for the postgraduate entrance exam can download the PDFs from natboard.edu.in. Following the release, a formal objection window will be opened for candidates to challenge the provisional keys before the final results are evaluated.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://natboard.edu.in/",
     "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "MD",
+      "MS",
+      "PG Diploma"
     ],
     "state": "All India"
-  },
-  {
-    "id": 2609080441,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "KCET Round 3 Final Seat Allotment 2026 (Out): Check Allotment Result Link, College & Admission ",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-09-08",
-    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    "description": "Official seat allotment update regarding KCET Round 3 Final Seat Allotment 2026 (Out): Check Allotment Result Link, College & Admission Details. The examination authority has officially published the latest provisional allocation listings for B.Tech, B.E candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "B.Tech",
-      "B.E"
-    ],
-    "state": "Karnataka"
   },
   {
     "id": 2609080439,
@@ -94,16 +71,14 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-08",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding MP NEET UG Round 2 Counselling 2026: Dates, Fees & Process. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "The Directorate of Medical Education (DME), Madhya Pradesh, has commenced the Round 2 choice filling and locking process for MP NEET UG 2026 counselling. Eligible candidates, including fresh registrants and Round 1 admitted candidates opting for upgradation, must submit their college preferences by 11:59 PM on September 9, 2026. The Round 2 seat allotment results are scheduled to be published on September 11, 2026.",
     "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://dme.mponline.gov.in/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
+    "state": "Madhya Pradesh"
   },
   {
     "id": 2609070629,
