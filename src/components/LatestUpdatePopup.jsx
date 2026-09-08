@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const MOCK_ANNOUNCEMENTS = [
-{
+  {
     id: 1,
-    text: "KEAM 2026 - ALLOTMENT TO MBBS & BDS COURSES: First Phase Centralised Allotment List is published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p1.pdf",
+    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO MBBS/BDS COURSES: Online Option Confirmation & Registration Window Commenced.",
+    link: "https://cee.kerala.gov.in/keam2026/noti_view/251/Upload1",
     isNew: true,
-    tag: "Allotment Out",
-    color: "#059669",
+    tag: "Option Entry",
+    color: "#7C3AED",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
-  },
+  }
 ];
 
 export default function LatestUpdatePopup({ announcements = MOCK_ANNOUNCEMENTS, onClose }) {
