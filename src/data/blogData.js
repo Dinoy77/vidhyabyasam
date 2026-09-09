@@ -1,4 +1,90 @@
 export const blogArticles = {
+  "keam-2026-stray-vacancy-allotment": {
+    "category": "Engineering & Medical Admissions - Kerala",
+    "title": "KEAM 2026: Updates on Stray Vacancy Filling Allotment Rounds",
+    "author": "Kerala Admissions Desk",
+    "date": "September 9, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the completion of the first three phases of allotments, the Commissioner for Entrance Examinations (CEE), Kerala, is proceeding with the Stray Vacancy Filling Allotment for KEAM 2026."
+      },
+      {
+        "heading": "Important Allotment Information",
+        "text": "Candidates seeking seats in engineering, architecture, pharmacy, and medical courses should keep track of the latest announcements on the official portal:",
+        "list": [
+          "The final KEAM 2026 Round 3 seat allotment results were previously published online on August 5, 2026.",
+          "CEE Kerala has now introduced Stray Vacancy Filling Allotment rounds (Round 1 and Round 2) to fill the remaining vacant seats across institutions.",
+          "Candidates must log in to the official CEE Kerala website using their application number and password to check their allotment status.",
+          "If allotted a seat, students must download their allotment memo, take a printout, and report to the respective colleges to secure their admission."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KEAM Seat Allotment Results",
+      "description": "Visit the official CEE Kerala website to view the latest allotment lists and stray vacancy updates.",
+      "buttonText": "Visit CEE Kerala",
+      "link": "https://cee.kerala.gov.in/keam2026/allotlist"
+    }
+  },
+  "tnea-2026-supplementary-final-allotment": {
+    "category": "Engineering Admissions - Tamil Nadu",
+    "title": "TNEA 2026: Supplementary Counselling Final Provisional Allotment Released Today",
+    "author": "Tamil Nadu Education Desk",
+    "date": "September 9, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yxeVAzeJ-GIVW130s7P8l_cpSEy54uRpbJUzHjDL00ggU4uiTUkaZzZa&s=10",
+    "content": [
+      {
+        "text": "The Directorate of Technical Education (DoTE), Tamil Nadu, has officially released the final provisional allotment orders for the TNEA 2026 supplementary counselling today, September 9, 2026. This follows the tentative allotment and confirmation window that concluded on September 7."
+      },
+      {
+        "heading": "Immediate Next Steps for Students",
+        "text": "Candidates who confirmed their tentative seats can now access their final admission letters. Ensure you complete the following procedures:",
+        "list": [
+          "Download Allotment Order: Log into the TNEA supplementary portal using your registered email ID and password to download the final provisional allotment order.",
+          "College Reporting: Candidates must report physically to their allotted engineering college with all original academic documents, transfer certificates, and identity proofs.",
+          "Fee Payment: Complete the admission fee payment at the respective college within the deadline mentioned on the allotment order to secure your seat."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download Final Allotment Order",
+      "description": "Visit the official TNEA supplementary portal to view and print your finalized college admission order.",
+      "buttonText": "Go to TNEA Portal",
+      "link": "https://suppl.tneaonline.org/"
+    }
+  },
+  "emerging-btech-specializations-2026": {
+    "category": "Career Guidance - Engineering",
+    "title": "Top Emerging Engineering Courses for 2026: Moving Beyond Traditional B.Tech",
+    "author": "Career Insights Desk",
+    "date": "September 9, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "As the 2026 admission season wraps up across South Indian states like Karnataka, Tamil Nadu, and Kerala, a definitive trend has emerged. Students are shifting their focus from traditional core engineering disciplines to specialized, future-proof branches. B.Tech programs in Artificial Intelligence (AI), Data Science, and Cybersecurity are seeing the highest cutoff margins this year."
+      },
+      {
+        "heading": "Why Specialized Engineering is in High Demand",
+        "text": "Industry demand and rapid digital transformation are the primary drivers reshaping technical education. Here are the most sought-after emerging fields:",
+        "list": [
+          "AI & Machine Learning: With tech giants and startups heavily investing in AI infrastructure, this specialization currently offers the fastest career growth and highest starting salaries in the IT sector.",
+          "Robotics & Automation: Modernizing the manufacturing sector, students who combine traditional Mechanical Engineering with Mechatronics or Robotics are finding exceptional placement opportunities in automation and electric vehicle (EV) industries.",
+          "Data Science & Analytics: Often referred to as the 'new oil,' data engineering is critical across finance, healthcare, and e-commerce, making it one of the most recession-proof career choices available today.",
+          "Smart Infrastructure & IoT: Blending Electrical and Civil engineering with the Internet of Things (IoT), this field focuses on sustainable energy grids and smart city planning."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Explore Modern B.Tech Specializations",
+      "description": "Read our comprehensive guide comparing core engineering branches with new-age technology specializations to plan your career path.",
+      "buttonText": "Compare Courses",
+      "link": "/articles/TopEmergingEngineeringCourses"
+    }
+  },
   "cat-2026-registration-deadline": {
     "category": "Management Admissions",
     "title": "CAT 2026 Registration Deadline Approaching: Don't Miss the September 15 Cutoff",
