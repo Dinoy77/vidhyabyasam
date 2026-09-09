@@ -1,5 +1,109 @@
 [
   {
+    "id": 2609090550,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "AP ICET Allotment Result 2026 Link OUT at cap.apcfss.in; Self Reporting Available until Sep 14",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-09",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has officially declared the AP ICET 2026 Phase 1 seat allotment results for MBA and MCA programs. Candidates can access their provisional allotment status and download their allotment orders directly from the official counselling portal. Selected students must confirm their seats and complete the physical reporting process at their allotted colleges between September 10 and September 14, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://cets.apsche.ap.gov.in/",
+    "courses": [
+      "MBA",
+      "MCA"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
+    "id": 2609090546,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "AP EAMCET 2026: Round 3 Final Phase MPC Counselling Registration Begins Today; Find Direct link",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-09",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has commenced the Phase 3 final counselling registration for the AP EAPCET 2026 MPC stream. Eligible engineering and pharmacy aspirants can complete their online registration, fee payment, and web options entry on the official portal between September 9 and September 12, 2026. The Phase 3 seat allotment results will be officially declared on September 16, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://cets.apsche.ap.gov.in/",
+    "courses": [
+      "B.Tech",
+      "B.Pharm"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
+    "id": 2609090543,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "Maharashtra MBBS, BDS Admission 2026: Round 2 Preference Submission Starts",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-09",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Maharashtra State Common Entrance Test Cell has opened the online choice and preference filling window for NEET UG 2026 CAP Round 2 admissions. Candidates seeking MBBS and BDS seats must submit and lock their college preferences on the official portal by 11:59 PM on September 10, 2026. The Round 2 selection list is scheduled to be published on September 12, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "https://cetcell.mahacet.org/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Maharashtra"
+  },
+  {
+    "id": 2609090542,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "UP NEET-UG 2026 Round 1 Seat Allotment Released",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-09",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Directorate General of Medical Education and Training (DGME), Uttar Pradesh, has released the Round 1 seat allotment results for UP NEET UG 2026. Shortlisted candidates must download their allotment letters from the official portal and proceed with the mandatory physical reporting and document verification process at their designated nodal centers within the stipulated admission window.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://upneet.gov.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  {
+    "id": 2609090541,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "Odisha NEET UG Round 2 Registration 2026 Begins, Check Merit List Date",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-09",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Odisha Joint Entrance Examination (OJEE) Board has published the revised state merit list for Odisha NEET UG 2026 Round 2 counselling. Candidates whose names appear on the merit list can participate in the choice filling and locking process, which remains active until September 10, 2026. The provisional seat allotment result for the second round will be officially announced on September 11, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://ojee.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "Odisha"
+  },
+  {
     "id": 2609080447,
     "icon": "🎯",
     "color": "#059669",
