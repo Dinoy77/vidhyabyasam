@@ -1,4 +1,89 @@
 export const blogArticles = {
+  "kcet-2026-mop-up-round-counselling": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026 Mop-Up Round Counselling: Schedule and Key Guidelines",
+    "author": "Karnataka Admissions Desk",
+    "date": "September 10, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the conclusion of the Round 2 option entry and seat allotment phases in late August, the Karnataka Examinations Authority (KEA) is gearing up for the KCET 2026 Mop-Up Round (Round 3) counselling this September. This round offers a final centralized opportunity for engineering and pharmacy aspirants to secure vacant seats."
+      },
+      {
+        "heading": "Important Information for Mop-Up Round",
+        "text": "Candidates who remained unallotted in the previous rounds or those who forfeited their seats are eligible to participate. Keep these key steps in mind:",
+        "list": [
+          "Fresh Option Entry: Eligible candidates will be allowed to modify, add, or reorder their college choices on the KEA portal once the mop-up window opens.",
+          "Caution Deposit: KEA may require candidates to pay a caution deposit to participate in the mop-up round, which will be adjusted against tuition fees upon allotment or refunded if no seat is allotted.",
+          "Finality of Allotment: Seats allotted during the mop-up round are binding. Candidates must report to the allotted college immediately, as no further centralized rounds will be conducted."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Track KEA Mop-Up Schedule",
+      "description": "Stay updated with the latest KEA announcements to ensure you don't miss the option entry window.",
+      "buttonText": "Visit KEA Portal",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
+  "bpharm-vs-pharmd-career-scope": {
+    "category": "Career Guidance - Pharmacy",
+    "title": "B.Pharm vs Pharm.D: Why Bachelor of Pharmacy Remains the Most Versatile Choice",
+    "author": "Career Insights Desk",
+    "date": "September 10, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "While pharmacy education offers several degree options, the 4-year Bachelor of Pharmacy (B.Pharm) continues to be the gold standard and most versatile qualification for aspiring pharmaceutical professionals. Unlike highly clinical pathways that require a 6-year commitment, B.Pharm provides an optimal balance between course duration, tuition investment, and immediate employability across global industries."
+      },
+      {
+        "heading": "Why B.Pharm Delivers the Highest Return on Investment",
+        "text": "A B.Pharm degree opens diverse career paths beyond hospital wards, giving graduates direct entry into India’s booming pharmaceutical manufacturing and corporate sectors:",
+        "list": [
+          "Faster Career Start: At 4 years, B.Pharm enables students to start earning, gain industry experience, or pursue specialized post-graduation (like M.Pharm or MBA) two full years ahead of 6-year programs.",
+          "Core Industrial Dominance: Pharmaceutical giants recruit B.Pharm graduates for Formulation & Development (F&D), Quality Assurance (QA), Quality Control (QC), and Production units—areas where clinical degrees have limited scope.",
+          "Corporate & Regulatory Opportunities: High-demand roles in Pharmacovigilance, Medical Writing, Regulatory Affairs, and Clinical Data Management consistently favor the balanced scientific foundation of B.Pharm graduates.",
+          "Entrepreneurship & Retail: A B.Pharm degree provides the necessary regulatory eligibility to secure a drug license, enabling graduates to launch retail pharmacies, wholesale distribution networks, or contract manufacturing units."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Apply for B.Pharm Admissions",
+      "description": "Explore recognized colleges, merit-based seat allotments, and transparent admission guidance for the Bachelor of Pharmacy program.",
+      "buttonText": "Explore B.Pharm Admissions",
+      "link": "/GeneralEnquiry"
+    }
+  },
+  "medical-writing-pharmacovigilance-careers": {
+    "category": "Career Guidance - Life Sciences",
+    "title": "Beyond the Dispensary: Exploring High-Paying Corporate Pharmacy Roles",
+    "author": "Healthcare Careers Desk",
+    "date": "September 10, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Pharmacy graduates are increasingly stepping out of traditional hospital dispensaries to explore lucrative corporate roles. With India solidifying its position as a global pharmaceutical hub, sectors like Pharmacovigilance (PV) and Medical Writing are seeing massive hiring surges from global giants."
+      },
+      {
+        "heading": "Why PV and Medical Writing are Trending",
+        "text": "These specialized fields offer excellent corporate work environments, strong starting salaries, and rapid career progression:",
+        "list": [
+          "Pharmacovigilance (Drug Safety): PV professionals are the 'silent guardians' of healthcare who track and evaluate the safety of drugs. Starting salaries typically range from ₹4-6 LPA, quickly scaling up to ₹8-12 LPA or higher for experienced managers in regulatory affairs.",
+          "Medical Writing: Ideal for graduates with strong communication skills, medical writers create regulatory documents, clinical trial reports, and scientific publications, with freshers earning around ₹4-5 LPA.",
+          "Skill Enhancement: Graduates who pursue specialized certifications in ICH-GCP or SAS programming alongside their pharmacy degrees gain a massive competitive edge in securing these corporate roles."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Start with a Bachelor of Pharmacy (B.Pharm)",
+      "description": "Explore course details, curriculum, and admission opportunities for our 4-Year B.Pharm program—the foundational degree for corporate healthcare careers.",
+      "buttonText": "Explore B.Pharm Course",
+      "link": "/articles/BPharmCourseGuide"
+    }
+  },
   "keam-2026-stray-vacancy-allotment": {
     "category": "Engineering & Medical Admissions - Kerala",
     "title": "KEAM 2026: Updates on Stray Vacancy Filling Allotment Rounds",
