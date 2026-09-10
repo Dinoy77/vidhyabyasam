@@ -1,5 +1,126 @@
 [
   {
+    "id": 2609100521,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "Haryana NEET UG Round 2 Counselling 2026 Dates Announced; Check Registration, Choice Filling",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Directorate of Medical Education & Research (DMER), Haryana, has officially released the schedule for Round 2 of Haryana NEET UG Counselling 2026. Eligible candidates can complete their fresh registration and choice-filling process for MBBS and BDS admissions on the official portal. Applicants are advised to review the revised seat matrix before locking their college preferences.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://uhsrugcounselling.com/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Haryana"
+  },
+  {
+    "id": 2609100519,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "AP ICET 2026 Round 1 allotment result out: MBA, MCA candidates report to college by Sept 14",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has officially declared the Phase 1 seat allotment results for AP ICET 2026. Candidates can download their provisional allotment orders for MBA and MCA courses via the official portal. Selected students must complete the self-reporting process online and physically report to their designated colleges by September 14, 2026, to secure their admission.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://cets.apsche.ap.gov.in/",
+    "courses": [
+      "MBA",
+      "MCA"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
+    "id": 2609100516,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "UP NEET UG Round 1 MBBS Cutoff 2026 Out: Check Government & Private College Closing Ranks",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Directorate General of Medical Education and Training (DGME), Uttar Pradesh, has released the official category-wise cutoff marks and closing ranks for the UP NEET UG Round 1 Counselling 2026. Aspirants can check the detailed PDF on upneet.gov.in to evaluate the minimum qualifying scores required for admission into state government and private medical colleges for MBBS and BDS courses.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "https://upneet.gov.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  {
+    "id": 2609100515,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET Counselling: BFUHS restores Punjab quota candidature of 2 students, debars 1",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Baba Farid University of Health Sciences (BFUHS), Punjab, has issued an important notification regarding NEET UG 2026 state quota admissions. Following document scrutiny, the university has successfully restored the Punjab domicile quota candidature of two MBBS aspirants while debarring one candidate for submitting discrepancies in their residential claims.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://bfuhs.ac.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Punjab"
+  },
+  {
+    "id": 2609100514,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "TNEA supplementary counselling: Around 9000 students receive provisional allotment",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    "description": "The Directorate of Technical Education (DoTE), Tamil Nadu, has issued provisional seat allotments to approximately 9,000 engineering aspirants during the TNEA 2026 supplementary counselling round. Candidates who participated in the choice-filling phase can download their allotment orders from tneaonline.org. Allotted students must report to their assigned engineering colleges with original documents within the stipulated time.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://www.tneaonline.org/",
+    "courses": [
+      "B.Tech",
+      "B.E"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2609100513,
+    "icon": "📝",
+    "color": "#D97706",
+    "bg": "#FEF3C7",
+    "tag": "Answer Key Out",
+    "title": "NEET PG 2026 Answer Key Link Live: NBEMS Provisional Answer Key, Response Sheet at natboard.edu",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-10",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The National Board of Examinations in Medical Sciences (NBEMS) has officially activated the link for the NEET PG 2026 provisional answer key and candidate response sheets. Medical graduates can log in to natboard.edu.in using their credentials to download the documents, calculate their estimated scores, and submit challenges against any discrepancies through the official objection window.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
+    "applyLink": "https://natboard.edu.in/",
+    "courses": [
+      "MD",
+      "MS",
+      "PG Diploma"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2609090550,
     "icon": "🎯",
     "color": "#059669",
