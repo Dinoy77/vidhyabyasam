@@ -1,5 +1,106 @@
 [
   {
+    "id": 2609110627,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "NEET UG Counselling 2026: Round 2 Provisional Seat Allotment Out, Check Final Result Date",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-11",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Medical Counselling Committee (MCC) has released the provisional seat allotment result for NEET UG 2026 Round 2 counselling. Candidates applying for 15% All India Quota (AIQ), Deemed, and Central University seats can check their status on mcc.nic.in. The final allotment result will be published after reviewing candidate grievances, following which the official physical reporting window will commence.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BSc Nursing"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609110623,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "NEET UG 2026: All India Quota Round 2 Closing Rank Falls to 25,655; AIIMS Seat Available at 4,377",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-11",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Following the NEET UG 2026 Round 2 provisional allotment, cutoff trends show the closing rank for general category MBBS seats dropping to 25,655. Notably, the cutoff for AIIMS institutions closed at 4,377. Candidates can analyze the opening and closing rank PDFs on the MCC portal to evaluate their chances for Round 3 or state quota medical counselling.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "https://mcc.nic.in/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609110620,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET Counselling 2026: Tamil Nadu Round 2 Adds 250 New MBBS Seats in 3 Colleges",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-11",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "The Directorate of Medical Education and Research (DMER), Tamil Nadu, has officially added 250 new MBBS seats across three medical colleges for the state's NEET UG 2026 Round 2 counselling. This addition provides a significant boost for state-quota aspirants. Eligible candidates must ensure they update their web options to include these newly approved institutions before the choice-filling deadline.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://tnmedicalselection.net/",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Tamil Nadu"
+  },
+  {
+    "id": 2609110619,
+    "icon": "📝",
+    "color": "#D97706",
+    "bg": "#FEF3C7",
+    "tag": "Answer Key Out",
+    "title": "UGC NET June 2026 re-exam provisional answer key out at ugcnet.nta.nic.in: Direct link to download",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-11",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "The National Testing Agency (NTA) has released the provisional answer keys and question papers for the UGC NET June 2026 re-examination held for English, Commerce, and Sociology. Candidates can log into the NTA portal to download their response sheets and submit challenges by paying a non-refundable processing fee of ₹200 per question before the objection window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
+    "applyLink": "https://ugcnet.nta.ac.in/",
+    "courses": [
+      "Ph.D. Eligibility",
+      "Junior Research Fellowship (JRF)"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2609110618,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "AP ICET Phase 1 Counselling 2026: Physical Reporting Last Date Sep 14, Phase 2 Admission Dates Soon",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-11",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+    "description": "The Andhra Pradesh State Council of Higher Education (APSCHE) has reminded MBA and MCA candidates allotted seats in AP ICET Phase 1 that the strict deadline for physical reporting is September 14, 2026. Failure to report at the designated college with original documents will result in seat cancellation. Details for the Phase 2 (Final Phase) counselling schedule will be officially notified shortly.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "https://cets.apsche.ap.gov.in/",
+    "courses": [
+      "MBA",
+      "MCA"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  {
     "id": 2609100521,
     "icon": "🖥️",
     "color": "#7C3AED",
