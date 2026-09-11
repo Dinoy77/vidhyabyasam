@@ -1,4 +1,89 @@
 export const blogArticles = {
+  "neet-ug-2026-round-2-provisional-allotment": {
+    "category": "Medical Admissions - National",
+    "title": "NEET UG 2026: MCC Round 2 Provisional Seat Allotment Result Out Today",
+    "author": "National Admissions Desk",
+    "date": "September 11, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) is releasing the provisional seat allotment result for NEET UG 2026 Round 2 today, September 11, 2026. Additionally, the MCC has released a list of 135 candidates whose category has been provisionally converted to NRI for this round of undergraduate medical counselling."
+      },
+      {
+        "heading": "Reporting Schedule and Next Steps",
+        "text": "Candidates must follow the MCC guidelines closely once the allotment status is verified online.",
+        "list": [
+          "Candidates who receive a seat in the second round must complete the admission process at their allotted college.",
+          "The reporting and joining window for Round 2 is scheduled from September 12 to September 18, 2026.",
+          "Candidates allotted NRI seats must carry the original documents they submitted for NRI category scrutiny during the admission process."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check MCC Provisional Allotment",
+      "description": "Log into the official MCC portal to check your Round 2 seat allotment status and next steps.",
+      "buttonText": "Visit MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
+  "keam-2026-phase-2-mbbs-allotment": {
+    "category": "Medical Admissions - Kerala",
+    "title": "KEAM 2026 Phase 2 MBBS/BDS Provisional Allotment Announced Today",
+    "author": "Kerala Admissions Desk",
+    "date": "September 11, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has announced the publication of the Phase 2 provisional allotment for MBBS and BDS courses today, September 11, 2026. The deadline for option confirmation and rearrangement was 10:00 AM today, and the final Phase 2 allotment is scheduled for September 12, 2026."
+      },
+      {
+        "heading": "Admission and Joining Guidelines",
+        "text": "Medical and dental aspirants must adhere to strict timelines to confirm their state quota seats.",
+        "list": [
+          "Admitted students must report to their respective colleges between September 14 and September 18, 2026, before 4:00 PM.",
+          "Students allotted to Government Medical or Dental colleges must remit their full fee directly to the CEE.",
+          "Azeezia College of Dental Sciences and Research in Kollam has been newly added and opened for option registration in this phase.",
+          "Failing to secure admission within the stipulated timeline will lead to the cancellation of the allotment and ousting from all subsequent centralized allotments."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check KEAM Phase 2 Allotment",
+      "description": "Visit the CEE Kerala portal to view your provisional allotment status for medical and dental courses.",
+      "buttonText": "Go to CEE Kerala",
+      "link": "https://cee.kerala.gov.in/"
+    }
+  },
+  "kcet-2026-round-3-reporting-deadline": {
+    "category": "Engineering Admissions - Karnataka",
+    "title": "KCET 2026: Final Day for Round 3 College Reporting",
+    "author": "Karnataka Admissions Desk",
+    "date": "September 11, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "For engineering and pharmacy aspirants participating in the Karnataka Common Entrance Test (KCET) counselling, today, September 11, 2026, marks the final deadline for reporting to their allotted colleges for Round 3. The final seat allotment result for this round was announced earlier on September 7, 2026."
+      },
+      {
+        "heading": "Final Reminders for Admitted Students",
+        "text": "Students must complete their physical reporting and document submission today to finalize their admission.",
+        "list": [
+          "Candidates must report to their allotted colleges by September 11, 2026, as missing the deadline could create complications regarding their seats.",
+          "The fee payment and admission order download process was scheduled between September 8 and September 10, 2026.",
+          "The classes for candidates who are allotted a seat in the final allotment will commence from September 11, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "KCET Portal Updates",
+      "description": "Log into the KEA portal for any final updates on your admission order or fee receipts.",
+      "buttonText": "Visit KEA",
+      "link": "https://cetonline.karnataka.gov.in/kea/"
+    }
+  },
   "kcet-2026-mop-up-round-counselling": {
     "category": "Engineering Admissions - Karnataka",
     "title": "KCET 2026 Mop-Up Round Counselling: Schedule and Key Guidelines",
