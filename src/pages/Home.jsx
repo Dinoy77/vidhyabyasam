@@ -200,7 +200,8 @@ export default function Home({ selectedCourse, courseSelectCount }) {
       {/* 
         1. When LatestUpdatePopup closes, it sets showPromo to true
       */}
-      <LatestUpdatePopup onClose={() => setShowPromo(true)} />
+      <LatestUpdatePopup />
+      {/* <LatestUpdatePopup onClose={() => setShowPromo(true)} /> */}
       
       {/* 
         2. Only render PromoPosterPopup AFTER showPromo is true. 

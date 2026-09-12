@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 // You can customize the content and link here
 const MOCK_ANNOUNCEMENTS = [
   {
-  id: 1,
-  text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO MBBS/BDS COURSES: Facility for Online Option Confirmation & Registration Commenced.",
-  link: "https://cee.kerala.gov.in/keam2026/noti_view/251/Upload1",
-  isNew: true,
+    id: 1,
+    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO MBBS/BDS COURSES: Provisional Allotment List Published.",
+    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p2_provi.pdf",
+    isNew: true,
   },
   {
     id: 2,

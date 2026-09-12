@@ -1,4 +1,33 @@
 export const blogArticles = {
+  "keam-2026-mbbs-bds-second-phase-provisional-allotment": {
+    "category": "Medical Admissions - Kerala",
+    "title": "KEAM 2026: Medical (MBBS/BDS) Second Phase Provisional Allotment Published",
+    "author": "Kerala Admissions Desk",
+    "date": "September 12, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Commissioner for Entrance Examinations (CEE), Kerala, has released the provisional seat allotment list for the Second Phase of MBBS and BDS admissions under KEAM 2026. Candidates who registered, confirmed, or rearranged their options can now verify their provisional allotment status online."
+      },
+      {
+        "heading": "Important Guidelines & Next Steps",
+        "text": "Medical and dental aspirants must verify their rank, allotted college, and category details in the provisional list:",
+        "list": [
+          "Check Allotment Status: Candidates can verify their application number, roll number, NEET rank, and allotted institution in the official provisional allotment PDF.",
+          "Resolution of Grievances: Since this is a provisional allotment list, any genuine complaints or discrepancies regarding the allotment must be submitted to the CEE before the final list is issued.",
+          "Fee Remittance & Reporting: Once the final allotment is published, candidates must remit the required fee online to CEE and physically report to their allotted medical/dental colleges between September 14 and September 18, 2026 (before 4:00 PM).",
+          "Mandatory Joining: Candidates who do not remit the required tuition fee or fail to join the allotted college within the deadline will forfeit their seat and will be ousted from subsequent centralized allotment rounds."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Download KEAM Phase 2 Provisional Allotment PDF",
+      "description": "Access the official CEE Kerala provisional allotment PDF to check your second-phase MBBS/BDS allotment status.",
+      "buttonText": "View Provisional Allotment PDF",
+      "link": "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p2_provi.pdf"
+    }
+  },
   "neet-ug-2026-round-2-provisional-allotment": {
     "category": "Medical Admissions - National",
     "title": "NEET UG 2026: MCC Round 2 Provisional Seat Allotment Result Out Today",
