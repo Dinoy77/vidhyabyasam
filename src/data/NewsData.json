@@ -1,4 +1,24 @@
 [
+   {
+    "id": 2609120614,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "KEAM 2026 Medical: Second Phase Provisional Seat Allotment Published for MBBS & BDS",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-09-12",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+    "description": "The Commissioner for Entrance Examinations (CEE), Kerala, has officially published the Second Phase Provisional Allotment list for MBBS and BDS courses under KEAM 2026. Candidates who confirmed and rearranged their higher-order options can log in to their candidate portal at cee.kerala.gov.in to verify their provisional allocation status. The final allotment list will be released following grievance reviews, after which candidates must remit tuition fees and physically join their allotted medical colleges between September 14 and September 18, 2026.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "https://cee.kerala.gov.in/keam2026/allotlist",
+    "courses": [
+      "MBBS",
+      "BDS"
+    ],
+    "state": "Kerala"
+  },
   {
     "id": 2609120613,
     "icon": "🎯",
@@ -10,16 +30,14 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-12",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding MP NEET UG Round 2 Seat Allotment Result 2026 Released @dme.mponline.gov.in; Download PDF. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "description": "The Directorate of Medical Education (DME), Madhya Pradesh, has officially published the Round 2 seat allotment result list for MP state NEET UG 2026 counselling. Candidates can access the college-wise allotment PDF directly on dme.mponline.gov.in. Allotted students must download their formal allotment letters and physically report to their assigned medical or dental colleges for document verification and fee payment between September 13 and September 17, 2026.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://dme.mponline.gov.in/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
+    "state": "Madhya Pradesh"
   },
   {
     "id": 2609120612,
@@ -32,14 +50,13 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-12",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official institutional release regarding NEET PG 2026: Assess MD, MS admission chances using AIQ college predictor. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "description": "In anticipation of the upcoming NEET PG 2026 centralised counselling, medical aspirants are assessing expected opening and closing cutoffs across clinical and non-clinical specialisations. Candidates are advised to review the Medical Counselling Committee's (MCC) previous year 50% All India Quota (AIQ) round-wise seat matrix and closing ranks to shortlist preferred MD, MS, and DNB institutions ahead of choice filling.",
     "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://mcc.nic.in/",
     "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "MD",
+      "MS",
+      "PG Diploma"
     ],
     "state": "All India"
   },
@@ -54,58 +71,14 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-12",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Critical timeline update regarding AP NEET Merit List 2026 Out: 3,837 Candidates, Check PDF. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "description": "Dr. YSR University of Health Sciences (YSRUHS) has released the provisional merit list for Andhra Pradesh NEET UG 2026 Competent Authority Quota admissions, featuring 3,837 verified candidates. Aspirants can download the merit list PDF from drntr.uhsap.in to check their state rank and category eligibility. The university will soon notify the schedule for exercising web options for MBBS and BDS seat allocations.",
     "eligibility": "Registered entrance exam aspirants updating dynamic critical timeline modifications and absolute deadline warnings for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://drntr.uhsap.in/",
     "courses": [
       "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "BDS"
     ],
-    "state": "All India"
-  },
-  {
-    "id": 2609120609,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "DME MP NEET UG 2026 Round 2 Result Today: Direct Link to Check",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-09-12",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Results and performance tracking announcement for DME MP NEET UG 2026 Round 2 Result Today: Direct Link to Check. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2609120608,
-    "icon": "📊",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Result Live",
-    "title": "CSIR-UGC NET June 2026 Results Declared",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-09-12",
-    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Results and performance tracking announcement for CSIR-UGC NET June 2026 Results Declared. The evaluation board has activated the official scorecard lookup links for Ph.D. Eligibility, Junior Research Fellowship (JRF) aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "Ph.D. Eligibility",
-      "Junior Research Fellowship (JRF)"
-    ],
-    "state": "All India"
+    "state": "Andhra Pradesh"
   },
   {
     "id": 2609120607,
@@ -113,41 +86,18 @@
     "color": "#D97706",
     "bg": "#FEF3C7",
     "tag": "Answer Key Out",
-    "title": "NEET PG 2026 Answer Key Soon: Response Sheet to Be Released for the First Time; Here's How to C",
+    "title": "NEET PG 2026 Answer Key Soon: Response Sheet to Be Released for the First Time; Here's How to Check",
     "isNotification": true,
     "date": "Action Required Now",
     "publishedAt": "2026-09-12",
     "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning NEET PG 2026 Answer Key Soon: Response Sheet to Be Released for the First Time; Here's How to Check. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
+    "description": "The National Board of Examinations in Medical Sciences (NBEMS) is preparing to release candidate response sheets alongside the provisional answer keys for the NEET PG 2026 examination. Once live on natboard.edu.in, candidates will be able to verify their recorded answers against the master question paper and file challenges during a designated objection window before final scores and merit ranks are published.",
     "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://natboard.edu.in/",
     "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2609120606,
-    "icon": "📝",
-    "color": "#D97706",
-    "bg": "#FEF3C7",
-    "tag": "Answer Key Out",
-    "title": "NEET PG 2026 answer key to be released soon",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-09-12",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Answer key and response sheet notification concerning NEET PG 2026 answer key to be released soon. The testing agency has released the provisional solutions and candidate OMR sheets online. Aspirants applying for MBBS, BDS can now cross-verify their recorded responses against the official key, calculate their estimated scores, and submit formal objections through the challenge window within the stipulated deadline.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional answer key evaluation scripts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "MD",
+      "MS",
+      "PG Diploma"
     ],
     "state": "All India"
   },
@@ -162,34 +112,13 @@
     "date": "Action Required Now",
     "publishedAt": "2026-09-12",
     "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "Results and performance tracking announcement for CSIR-UGC NET results declared, 1,413 candidates make the cut for JRF. The evaluation board has activated the official scorecard lookup links for Ph.D. Eligibility, Junior Research Fellowship (JRF) aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
+    "description": "The National Testing Agency (NTA) has officially announced the Joint CSIR-UGC NET June 2026 results across five science disciplines. A total of 1,413 candidates have qualified for the prestigious Junior Research Fellowship (JRF), while thousands more earned eligibility for Assistant Professorship and PhD admissions. Candidates can log in with their application number and date of birth at csirnet.nta.ac.in to view and download their scorecards.",
     "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
-    "applyLink": "",
+    "applyLink": "https://csirnet.nta.ac.in/",
     "courses": [
       "Ph.D. Eligibility",
-      "Junior Research Fellowship (JRF)"
-    ],
-    "state": "All India"
-  },
-  {
-    "id": 2609120604,
-    "icon": "🎯",
-    "color": "#059669",
-    "bg": "#ECFDF5",
-    "tag": "Allotment Out",
-    "title": "MP NEET 2026 Counselling Round 2 Seat Allotment Result OUT Today: Direct Link",
-    "isNotification": true,
-    "date": "Action Required Now",
-    "publishedAt": "2026-09-12",
-    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
-    "description": "Official seat allotment update regarding MP NEET 2026 Counselling Round 2 Seat Allotment Result OUT Today: Direct Link. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
-    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
-    "applyLink": "",
-    "courses": [
-      "MBBS",
-      "BDS",
-      "BAMS",
-      "BHMS"
+      "Junior Research Fellowship (JRF)",
+      "Assistant Professor"
     ],
     "state": "All India"
   },
