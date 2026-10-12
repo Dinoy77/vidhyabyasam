@@ -1,4 +1,90 @@
 export const blogArticles = {
+  "bpharm-career-scope-guide": {
+    "category": "Career Guidance - Pharmacy",
+    "title": "Why B.Pharm Remains One of the Most Recession-Proof Degrees Today",
+    "author": "Career Insights Desk",
+    "date": "October 12, 2026",
+    "readTime": "4 Min Read",
+    "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Bachelor of Pharmacy (B.Pharm) continues to stand out as one of the most reliable and versatile professional healthcare degrees in India. Unlike general science programs, a 4-year B.Pharm blends organic chemistry, pharmacology, biochemistry, and industrial formulation, giving graduates direct entry into a sector that thrives regardless of broader economic fluctuations."
+      },
+      {
+        "heading": "Top Career Pathways After Graduation",
+        "text": "A pharmacy degree extends far beyond hospital dispensary desks, opening lucrative doors across global healthcare sectors:",
+        "list": [
+          "Formulation & Industrial Manufacturing: Direct placement in production, Quality Control (QC), and Quality Assurance (QA) divisions of multinational pharmaceutical companies.",
+          "Pharmacovigilance & Drug Safety: High-demand corporate desk roles focused on tracking adverse drug events and maintaining international safety compliance.",
+          "Clinical Research & Data Management: Coordinating clinical trials, managing study protocols, and working with contract research organizations (CROs).",
+          "Drug Licensing & Retail Ownership: Eligibility to obtain a registered pharmacist license to establish retail medical chains, wholesale distribution hubs, or pharmaceutical agencies."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Explore B.Pharm Admissions",
+      "description": "Learn about course curriculum details, eligibility criteria, and admission guidance for the 4-year B.Pharm program.",
+      "buttonText": "View B.Pharm Course",
+      "link": "/articles/BPharmCourseGuide"
+    }
+  },
+  "neet-pg-2026-counselling-round-1": {
+    "category": "Medical Admissions - National",
+    "title": "NEET PG 2026 Counselling: Round 1 Registration Commences Today",
+    "author": "National Admissions Desk",
+    "date": "October 12, 2026",
+    "readTime": "3 Min Read",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "The Medical Counselling Committee (MCC) has officially opened the registration window for Round 1 of the NEET PG 2026 counselling today, October 12, 2026. Over 2 lakh qualified medical graduates are expected to participate in the centralized counselling process for admission to MD, MS, diploma, and DNB courses."
+      },
+      {
+        "heading": "Crucial Dates and Guidelines",
+        "text": "Candidates must adhere to the MCC schedule to secure their postgraduate medical seats:",
+        "list": [
+          "Registration Window: The online registration and fee payment window will remain open until October 21, 2026.",
+          "Choice Filling: Candidates can begin filling and locking their college and course preferences from October 13 to October 22, 2026.",
+          "Seat Allotment: The Round 1 seat allotment result will be published on October 24, 2026.",
+          "College Reporting: Allotted candidates must physically report to their respective institutions between October 26 and November 2, 2026."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Register for NEET PG Counselling",
+      "description": "Visit the official MCC portal to complete your registration, fee payment, and choice filling for postgraduate medical admissions.",
+      "buttonText": "Go to MCC Portal",
+      "link": "https://mcc.nic.in/"
+    }
+  },
+  "kerala-neet-ug-round-3-reporting": {
+    "category": "Medical Admissions - Kerala",
+    "title": "Kerala NEET UG 2026: Round 3 College Reporting Window Closes Soon",
+    "author": "Kerala Admissions Desk",
+    "date": "October 12, 2026",
+    "readTime": "2 Min Read",
+    "image": "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?auto=format&fit=crop&w=2400&q=80",
+    "content": [
+      {
+        "text": "Following the publication of the final Round 3 allotment list on October 9, the Commissioner for Entrance Examinations (CEE), Kerala, has reminded medical and dental aspirants that the physical reporting and admission window is actively ongoing and will conclude shortly."
+      },
+      {
+        "heading": "Admission Formalities for Admitted Candidates",
+        "text": "Candidates allotted MBBS and BDS seats in the state's third phase of counselling must finalize their admissions:",
+        "list": [
+          "Reporting Deadline: Allotted students must physically report to their designated medical or dental colleges by October 14, 2026, before 4:00 PM.",
+          "Required Documents: Students must carry their allotment memo, NEET UG scorecard, Class 10 & 12 certificates, valid photo ID, and original category documents.",
+          "Mandatory Action: Failure to complete the admission formalities and fee payments within the stipulated timeframe will result in the forfeiture of the seat."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Check CEE Kerala Updates",
+      "description": "Log into the UG Medical Candidate Portal on the CEE website to download your final allotment memo and verify reporting instructions.",
+      "buttonText": "Visit CEE Kerala",
+      "link": "https://cee.kerala.gov.in/"
+    }
+  },
   "keam-2026-mbbs-bds-second-phase-provisional-allotment": {
     "category": "Medical Admissions - Kerala",
     "title": "KEAM 2026: Medical (MBBS/BDS) Second Phase Provisional Allotment Published",

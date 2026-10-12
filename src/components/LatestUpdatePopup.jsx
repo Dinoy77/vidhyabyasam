@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
-    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO MBBS/BDS COURSES: Provisional Allotment List Published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p2_provi.pdf",
+    text: "KEAM 2026 - THIRD PHASE ALLOTMENT TO MBBS/BDS COURSES: Final Allotment List Published.",
+    link: "https://cee.kerala.gov.in/keam2026/notification",
     isNew: true,
     tag: "Allotment Out",
     color: "#059669",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
-  }
+  },
 ];
 
 export default function LatestUpdatePopup({ announcements = MOCK_ANNOUNCEMENTS, onClose }) {
