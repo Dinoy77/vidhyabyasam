@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react';
 const MOCK_ANNOUNCEMENTS = [
   {
     id: 1,
-    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO MBBS/BDS COURSES: Provisional Allotment List Published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p2_provi.pdf",
+    text: "KEAM 2026 - THIRD PHASE ALLOTMENT TO MBBS/BDS COURSES: Final Allotment List Published.",
+    link: "https://cee.kerala.gov.in/keam2026/noti_view/309/Upload1",
     isNew: true,
   },
   {
     id: 2,
-    text: "KEAM 2026 - ALLOTMENT TO MBBS & BDS COURSES: First Phase Centralised Allotment List is published.",
-    link: "https://cee.kerala.gov.in/keam2026/list/allot/mmmd_p1.pdf",
+    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO AYUSH & MEDICAL ALLIED COURSES: Final Allotment Published.",
+    link: "https://cee.kerala.gov.in/keam2026/noti_view/308/Upload1",
     isNew: true,
   },
   {
