@@ -1,5 +1,115 @@
 [
   {
+    "id": 2610170510,
+    "icon": "📊",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Result Live",
+    "title": "AP NEET UG 2026 MBBS CQ Phase-III: Provisional Result Published",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-17",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Results and performance tracking announcement for AP NEET UG 2026 MBBS CQ Phase-III: Provisional Result Published. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic official examination results scorecards for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2610170505,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET PG Counselling 2026 Seat Matrix Out: Check AIQ, DNB and Deemed University Seats",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-17",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official institutional release regarding NEET PG Counselling 2026 Seat Matrix Out: Check AIQ, DNB and Deemed University Seats. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2610170503,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "MCC tells medical colleges to verify NEET PG counselling 2026 seat matrix, report discrepancies",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-17",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official institutional release regarding MCC tells medical colleges to verify NEET PG counselling 2026 seat matrix, report discrepancies, details. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2610170502,
+    "icon": "🚨",
+    "color": "#DC2626",
+    "bg": "#FFF0F0",
+    "tag": "Urgent Alert",
+    "title": "Maharashtra NEET UG 2026: Check MBBS, BDS stray vacancy round dates and admission deadlines",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-17",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Critical timeline update regarding Maharashtra NEET UG 2026: Check MBBS, BDS stray vacancy round dates and admission deadlines. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic critical timeline modifications and absolute deadline warnings for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2610170501,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "AP NEET UG 2026 Mop-Up Round: Seat Allotment, Fees & Joining Rules",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-17",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official seat allotment update regarding AP NEET UG 2026 Mop-Up Round: Seat Allotment, Fees & Joining Rules. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2610160464,
     "icon": "🎯",
     "color": "#059669",
