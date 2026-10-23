@@ -2,25 +2,28 @@ import React, { useState, useEffect } from 'react';
 
 // You can customize the content and link here
 const MOCK_ANNOUNCEMENTS = [
-  {
-    id: 1,
-    text: "KEAM 2026 - THIRD PHASE ALLOTMENT TO MBBS/BDS COURSES: Final Allotment List Published.",
-    link: "https://cee.kerala.gov.in/keam2026/noti_view/309/Upload1",
-    isNew: true,
-  },
-  {
-    id: 2,
-    text: "KEAM 2026 - SECOND PHASE ALLOTMENT TO AYUSH & MEDICAL ALLIED COURSES: Final Allotment Published.",
-    link: "https://cee.kerala.gov.in/keam2026/noti_view/308/Upload1",
-    isNew: true,
-  },
+  
+    {
+      id: 1,
+      text: "KEAM 2026 - ADMISSION TO MBBS/BDS COURSES STRAY VACANCY ALLOTMENT PUBLISHED.",
+      link: "https://cee.kerala.gov.in/keam2026/notification",
+      isNew: true,
+    },
+    
+    {
+      id: 2,
+      text: "KEAM 2026 - ADMISSION TO MBBS/BDS COURSES: PROVISIONAL STRAY VACANCY ALLOTMENT PUBLISHED.",
+      link: "https://cee.kerala.gov.in/keam2026/notification",
+      isNew: true,
+    },
+  
   {
     id: 3,
     text: "KEAM College Predictor: Enter your rank to predict admission chances!",
     link: "/keam-predictor",
     isNew: true
   },
-  
+
 ];
 
 export default function TickerTape({ announcements = MOCK_ANNOUNCEMENTS }) {
@@ -139,8 +142,8 @@ export default function TickerTape({ announcements = MOCK_ANNOUNCEMENTS }) {
         <div style={styles.labelWrapper}>
           ⚡ LATEST
         </div>
-        
-        <div 
+
+        <div
           style={styles.scrollArea}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -151,9 +154,9 @@ export default function TickerTape({ announcements = MOCK_ANNOUNCEMENTS }) {
             {announcements.map((item, index) => (
               <div key={`${item.id}-${index}`} style={styles.announcementItem}>
                 <span style={styles.bullet}>•</span>
-                <a 
-                  href={item.link} 
-                  target="_blank" 
+                <a
+                  href={item.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="ticker-link"
                   style={styles.link}
@@ -163,14 +166,14 @@ export default function TickerTape({ announcements = MOCK_ANNOUNCEMENTS }) {
                 </a>
               </div>
             ))}
-            
+
             {/* Duplicate array for seamless infinite scroll effect if list is short */}
             {announcements.map((item, index) => (
               <div key={`dup-${item.id}-${index}`} style={styles.announcementItem}>
                 <span style={styles.bullet}>•</span>
-                <a 
-                  href={item.link} 
-                  target="_blank" 
+                <a
+                  href={item.link}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="ticker-link"
                   style={styles.link}
