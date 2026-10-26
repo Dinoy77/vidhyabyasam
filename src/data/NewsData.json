@@ -1,5 +1,49 @@
 [
   {
+    "id": 2610260435,
+    "icon": "🚨",
+    "color": "#DC2626",
+    "bg": "#FFF0F0",
+    "tag": "Urgent Alert",
+    "title": "AP seeks extension of MBBS admission deadline and reduction in NEET UG percentile",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-26",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Critical timeline update regarding AP seeks extension of MBBS admission deadline and reduction in NEET UG percentile. Authorities have issued an official notification modifying the operational schedule and deadlines for MBBS, BDS admissions. Applicants must strictly note these revised dates for option registration, document uploading, and fee payment to ensure their candidature is not rejected during the final processing phase.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic critical timeline modifications and absolute deadline warnings for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2610260434,
+    "icon": "🎓",
+    "color": "#1B6CA8",
+    "bg": "#EBF5FF",
+    "tag": "LIVE UPDATE",
+    "title": "Bihar NEET Stray Vacancy Round Rank Card 2026 Released @bceceboard.bihar.gov.in; Check UGMAC Se",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-10-26",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Results and performance tracking announcement for Bihar NEET Stray Vacancy Round Rank Card 2026 Released @bceceboard.bihar.gov.in; Check UGMAC Seat Al. The evaluation board has activated the official scorecard lookup links for MBBS, BDS aspirants. Candidates are advised to keep their registration number and date of birth ready to access their individual rank status, verify qualifying cutoff marks, and print their provisional mark sheets for upcoming verification rounds.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic counselling data tracking for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2610250636,
     "icon": "🎯",
     "color": "#059669",
