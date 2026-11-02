@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 
 // You can customize the content and link here
 const MOCK_ANNOUNCEMENTS = [
-  
-    {
-      id: 1,
-      text: "KEAM 2026 - ADMISSION TO MBBS/BDS COURSES STRAY VACANCY ALLOTMENT PUBLISHED.",
-      link: "https://cee.kerala.gov.in/keam2026/notification",
-      isNew: true,
-    },
-    
-    {
-      id: 2,
-      text: "KEAM 2026 - ADMISSION TO MBBS/BDS COURSES: PROVISIONAL STRAY VACANCY ALLOTMENT PUBLISHED.",
-      link: "https://cee.kerala.gov.in/keam2026/notification",
-      isNew: true,
-    },
-  
+
+  {
+    id: 1,
+    text: "KEAM 2026 - ADMISSION TO AYURVEDA/HOMOEO/SIDDHA/UNANI/MEDICAL ALLIED COURSES: THIRD PHASE FINAL ALLOTMENT PUBLISHED.",
+    link: "https://cee.kerala.gov.in/keam2026/notification",
+    isNew: true,
+  },
+
+  {
+    id: 2,
+    text: "KEAM 2026 - AYUSH/ALLIED COURSES: LIST OF INELIGIBLE CANDIDATES ADMITTED UNDER AIQ PUBLISHED.",
+    link: "https://cee.kerala.gov.in/keam2026/notification",
+    isNew: true,
+  },
+
   {
     id: 3,
     text: "KEAM College Predictor: Enter your rank to predict admission chances!",
