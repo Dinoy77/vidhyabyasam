@@ -1,5 +1,49 @@
 [
   {
+    "id": 2611130523,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "West Bengal NEET UG 2026 Special Stray Round Seat Allotment Result Out Today @wbmcc.nic.in",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-11-13",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official seat allotment update regarding West Bengal NEET UG 2026 Special Stray Round Seat Allotment Result Out Today @wbmcc.nic.in. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2611130515,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "AYUSH NEET Stray Round 1 Result 2026 Out; Download AACCC UG Seat Allotment Result PDF Here",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-11-13",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official seat allotment update regarding AYUSH NEET Stray Round 1 Result 2026 Out; Download AACCC UG Seat Allotment Result PDF Here. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2611120529,
     "icon": "🎯",
     "color": "#059669",
