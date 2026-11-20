@@ -5,27 +5,20 @@ const MOCK_ANNOUNCEMENTS = [
 
   {
     id: 1,
-    text: "KEAM 2026 - ADMISSION TO MBBS COURSES: SPECIAL STRAY VACANCY FILLING PHASE-2 NOTIFICATION PUBLISHED.",
+    text: "KEAM 2026 - SIXTH ROUND ALLOTMENT TO BDS COURSES: FACILITY TO REGISTER NEW OPTIONS OPENED.",
     link: "https://cee.kerala.gov.in/keam2026/notification",
     isNew: true,
   },
 
   {
     id: 2,
-    text: "KEAM 2026 - AYUSH & MEDICAL ALLIED COURSES: STRAY VACANCY ALLOTMENT (SVR-1) OPTION REGISTRATION STARTED.",
-    link: "https://cee.kerala.gov.in/keam2026/notification",
-    isNew: true,
-  },
-  
-  {
-    id: 3,
-    text: "KEAM 2026 - AYUSH COURSES: REVISED FINAL RANK LIST & CATEGORY LIST PUBLISHED.",
+    text: "KEAM 2026 - ADMISSION TO AYURVEDA/HOMOEO/SIDDHA/UNANI/MEDICAL ALLIED COURSES: STRAY VACANCY ALLOTMENT (SVR-1) PUBLISHED.",
     link: "https://cee.kerala.gov.in/keam2026/notification",
     isNew: true,
   },
 
   {
-    id: 4,
+    id: 3,
     text: "KEAM College Predictor: Enter your rank to predict admission chances!",
     link: "/keam-predictor",
     isNew: true
