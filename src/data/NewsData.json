@@ -1,5 +1,71 @@
 [
   {
+    "id": 2611220825,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "NEET PG Round 2 counselling result 2026 NOT releasing today: Seat allotment result put on hold,",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-11-22",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official seat allotment update regarding NEET PG Round 2 counselling result 2026 NOT releasing today: Seat allotment result put on hold, MCC cites. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2611220824,
+    "icon": "🎯",
+    "color": "#059669",
+    "bg": "#ECFDF5",
+    "tag": "Allotment Out",
+    "title": "MCC Declares NEET PG 2026 Round 2 Allotment Result, Candidates Must Report by November 25",
+    "isNotification": true,
+    "date": "Action Required Now",
+    "publishedAt": "2026-11-22",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official seat allotment update regarding MCC Declares NEET PG 2026 Round 2 Allotment Result, Candidates Must Report by November 25. The examination authority has officially published the latest provisional allocation listings for MBBS, BDS candidates. Students must immediately log into the candidate portal using their application credentials to check their assigned institute, review fee remittance deadlines, and download their official allotment memo before the reporting window closes.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic provisional seat allotment configuration charts for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
+    "id": 2611220823,
+    "icon": "🖥️",
+    "color": "#7C3AED",
+    "bg": "#F5F0FF",
+    "tag": "Counselling",
+    "title": "NEET PG 2026: 10,105 Medical Seats Flagged as Blocked, Government May Examine Float Counselling",
+    "isNotification": false,
+    "date": "Action Required Now",
+    "publishedAt": "2026-11-22",
+    "image": "https://t3.ftcdn.net/jpg/05/74/27/88/360_F_574278839_xIZoXlQS8fnbf65nhwfFpGa6UKVAEbl6.jpg",
+    "description": "Official institutional release regarding NEET PG 2026: 10,105 Medical Seats Flagged as Blocked, Government May Examine Float Counselling Policy. This major advisory impacts candidates participating in the current admission cycle for MBBS, BDS. Students and parents are instructed to review the full notification via the official portal to ensure complete compliance with updated eligibility criteria and regulatory guidelines.",
+    "eligibility": "Registered entrance exam aspirants updating dynamic web option entry configurations and portal registrations for current session criteria evaluation.",
+    "applyLink": "",
+    "courses": [
+      "MBBS",
+      "BDS",
+      "BAMS",
+      "BHMS"
+    ],
+    "state": "All India"
+  },
+  {
     "id": 2611210542,
     "icon": "📊",
     "color": "#059669",
